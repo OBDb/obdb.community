@@ -117,4 +117,18 @@ def get_css_styles():
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             max-width: 300px;
         }
+        .tabulator-row.tabulator-group:hover {
+            background-color: #f0f0f0 !important;
+        }
+        /* Disable row hover highlight */
+        .tabulator-row.tabulator-selectable:hover {
+            cursor: default !important;
+        }
+        /* Preserve alternating colors on hover */
+        .tabulator-row.tabulator-row-even:hover {
+            background-color: #fff !important;
+        }
+        .tabulator-row.tabulator-row-odd:hover {
+            background-color: #f6f6f6 !important;
+        }
     '''
