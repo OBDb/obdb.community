@@ -109,6 +109,14 @@ def generate_html(matrix_data, output_dir):
             top: 0;
             z-index: 100;
         }
+        .tabulator-row.tabulator-group {
+            background-color: #f8f9fa !important;
+            border-bottom: 2px solid #ddd;
+            cursor: pointer;
+        }
+        .tabulator-row.tabulator-group:hover {
+            background-color: #f0f0f0 !important;
+        }
         .signal-cell {
             white-space: pre-wrap;
             font-size: 0.9em;
@@ -199,6 +207,12 @@ def generate_html(matrix_data, output_dir):
             columns: columns,
             height: "85vh",
             tooltips: false,
+            groupBy: "make",
+            groupHeader: function(value, count, data, group){
+                return `${value} <span style="color: #666; font-size: 0.9em;">(${count} models)</span>`;
+            },
+            groupToggleElement: "header",
+            groupStartOpen: false,
         });
 
         // Custom tooltip handler
