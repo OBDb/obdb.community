@@ -33444,8 +33444,74 @@ const matrixData = [
     "750_2115": [],
     "750_2116": [],
     "750_2130": [],
-    "750_221004": [],
-    "750_221005": [],
+    "750_221004": [
+      {
+        "id": "RAV4_TT_1",
+        "name": "Rear right tire temperature",
+        "unit": "celsius",
+        "suggestedMetric": "",
+        "scaling": "raw+-40 clamped to [-30, 100]",
+        "path": "Tires"
+      },
+      {
+        "id": "RAV4_TT_2",
+        "name": "Rear left tire temperature",
+        "unit": "celsius",
+        "suggestedMetric": "",
+        "scaling": "raw+-40 clamped to [-30, 100]",
+        "path": "Tires"
+      },
+      {
+        "id": "RAV4_TT_3",
+        "name": "Front right tire temperature",
+        "unit": "celsius",
+        "suggestedMetric": "",
+        "scaling": "raw+-40 clamped to [-30, 100]",
+        "path": "Tires"
+      },
+      {
+        "id": "RAV4_TT_4",
+        "name": "Front left tire temperature",
+        "unit": "celsius",
+        "suggestedMetric": "",
+        "scaling": "raw+-40 clamped to [-30, 100]",
+        "path": "Tires"
+      }
+    ],
+    "750_221005": [
+      {
+        "id": "RAV4_TP_1",
+        "name": "Rear right tire pressure",
+        "unit": "psi",
+        "suggestedMetric": "rearRightTirePressure",
+        "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+        "path": "Tires"
+      },
+      {
+        "id": "RAV4_TP_2",
+        "name": "Rear left tire pressure",
+        "unit": "psi",
+        "suggestedMetric": "rearLeftTirePressure",
+        "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+        "path": "Tires"
+      },
+      {
+        "id": "RAV4_TP_3",
+        "name": "Front right tire pressure",
+        "unit": "psi",
+        "suggestedMetric": "frontRightTirePressure",
+        "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+        "path": "Tires"
+      },
+      {
+        "id": "RAV4_TP_4",
+        "name": "Front left tire pressure",
+        "unit": "psi",
+        "suggestedMetric": "frontLeftTirePressure",
+        "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+        "path": "Tires"
+      }
+    ],
     "750_222021": [],
     "753_221022": [],
     "760_223201": [],
