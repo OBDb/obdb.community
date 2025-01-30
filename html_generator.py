@@ -131,8 +131,17 @@ def generate_html(matrix_data, output_dir):
             width: 8px;
             margin-left: -4px;
         }
-        .tabulator-col-resize-handle:hover {
-            background-color: #0066cc;
+        .tabulator-col.column-hidden {
+            width: 0 !important;
+            min-width: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            pointer-events: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .tabulator-col:not(.column-hidden) {
+            transition: all 0.3s ease;
         }
         .tabulator-row.tabulator-group {
             background-color: #f8f9fa !important;
@@ -229,7 +238,10 @@ def generate_html(matrix_data, output_dir):
         // Add ECU group columns
         Object.entries(ecuGroups).forEach(([ecu, pidColumns]) => {
             columns.push({
-                title: ecu,
+                title: `<div class="ecu-header">
+                    <button class="ecu-toggle" data-ecu="${ecu}">[-]</button>
+                    <span class="ecu-name">${ecu}</span>
+                </div>`,
                 columns: pidColumns,
                 resizable: true,
             });
@@ -248,6 +260,33 @@ def generate_html(matrix_data, output_dir):
             },
             groupToggleElement: "header",
             groupStartOpen: false,
+        });
+
+        // Handle ECU column group toggling
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('ecu-toggle')) {
+                const ecuName = e.target.dataset.ecu;
+                const button = e.target;
+                const isExpanded = button.textContent === '[-]';
+                
+                // Get all columns for this ECU
+                const ecuColumns = table.getColumns().filter(col => 
+                    col.getField() && col.getField().startsWith(`${ecuName}_`)
+                );
+                
+                // Toggle visibility using CSS
+                ecuColumns.forEach(col => {
+                    const element = col.getElement();
+                    if (isExpanded) {
+                        element.classList.add('column-hidden');
+                    } else {
+                        element.classList.remove('column-hidden');
+                    }
+                });
+                
+                // Update button text
+                button.textContent = isExpanded ? '[+]' : '[-]';
+            }
         });
 
         // Custom tooltip handler
