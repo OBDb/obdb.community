@@ -181,9 +181,11 @@ def generate_html(matrix_data, output_dir):
 <body>
     <h1>OBD Parameter Matrix</h1>
     
-    <div id="filters">
+                <div id="filters">
         <input type="text" id="makeFilter" placeholder="Filter by make...">
         <input type="text" id="modelFilter" placeholder="Filter by model...">
+        <input type="text" id="parameterFilter" placeholder="Filter by parameter ID...">
+        <input type="text" id="metricFilter" placeholder="Filter by suggested metric...">
         <button onclick="resetFilters()">Reset Filters</button>
     </div>
     
@@ -193,16 +195,20 @@ def generate_html(matrix_data, output_dir):
         // Function to format signal cell content
         function formatSignalCell(cell) {
             const signals = cell.getValue() || [];
+            const row = cell.getRow().getData();
             if (signals.length === 0) return "";
             
             return signals.map(signal => {
                 const metric = signal.suggestedMetric ? 
                     `[${signal.suggestedMetric}]` : 
                     signal.unit ? `[${signal.unit}]` : '';
+                const githubLink = `https://github.com/OBDb/${row.make}-${row.model}/blob/main/signalsets/v3/default.json`;
                 return `<div class="signal-item" 
                     data-scaling="${signal.scaling}"
                     data-name="${signal.name}"
-                    data-path="${signal.path}">
+                    data-path="${signal.path}"
+                    onclick="window.open('${githubLink}', '_blank')"
+                    style="cursor: pointer;">
                     ${signal.id} ${metric}
                 </div>`;
             }).join('');
@@ -334,12 +340,32 @@ def generate_html(matrix_data, output_dir):
         });
 
         // Filter functions
-        document.getElementById("makeFilter").addEventListener("input", function(e) {
-            table.setFilter("make", "like", e.target.value);
-        });
-
-        document.getElementById("modelFilter").addEventListener("input", function(e) {
-            table.setFilter("model", "like", e.target.value);
+        const filters = ["make", "model", "parameter", "metric"];
+        filters.forEach(filter => {
+            document.getElementById(filter + "Filter").addEventListener("input", function(e) {
+                let filterField;
+                let value = e.target.value;
+                
+                switch(filter) {
+                    case "metric":
+                        table.setFilter(function(data) {
+                            return data.signals.some(signal => 
+                                signal.suggestedMetric && 
+                                signal.suggestedMetric.toLowerCase().includes(value.toLowerCase())
+                            );
+                        });
+                        break;
+                    case "parameter":
+                        table.setFilter(function(data) {
+                            return data.signals.some(signal => 
+                                signal.id.toLowerCase().includes(value.toLowerCase())
+                            );
+                        });
+                        break;
+                    default:
+                        table.setFilter(filter, "like", value);
+                }
+            });
         });
 
         function resetFilters() {

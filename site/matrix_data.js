@@ -18,7 +18,7 @@ const matrixData = [
         "name": "HV battery charge",
         "unit": "percent",
         "suggestedMetric": "stateOfCharge",
-        "scaling": "raw/2",
+        "scaling": "value = (raw/2) clamped to: ...100",
         "path": "Battery"
       },
       {
@@ -26,7 +26,7 @@ const matrixData = [
         "name": "EVSE target current",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/10",
+        "scaling": "value = (raw/10) clamped to: ...6553",
         "path": "Battery"
       },
       {
@@ -42,7 +42,7 @@ const matrixData = [
         "name": "EVSE target voltage",
         "unit": "amps",
         "suggestedMetric": "",
-        "scaling": "raw/10",
+        "scaling": "value = (raw/10) clamped to: ...6553",
         "path": "Battery"
       },
       {
@@ -74,7 +74,7 @@ const matrixData = [
         "name": "Front left tire pressure",
         "unit": "psi",
         "suggestedMetric": "frontLeftTirePressure",
-        "scaling": "raw/5",
+        "scaling": "value = (raw/5) clamped to: ...51",
         "path": "Tires"
       },
       {
@@ -82,7 +82,7 @@ const matrixData = [
         "name": "Front right tire pressure",
         "unit": "psi",
         "suggestedMetric": "frontRightTirePressure",
-        "scaling": "raw/5",
+        "scaling": "value = (raw/5) clamped to: ...51",
         "path": "Tires"
       },
       {
@@ -90,7 +90,7 @@ const matrixData = [
         "name": "Rear left tire pressure",
         "unit": "psi",
         "suggestedMetric": "rearLeftTirePressure",
-        "scaling": "raw/5",
+        "scaling": "value = (raw/5) clamped to: ...51",
         "path": "Tires"
       },
       {
@@ -98,7 +98,7 @@ const matrixData = [
         "name": "Rear right tire pressure",
         "unit": "psi",
         "suggestedMetric": "rearRightTirePressure",
-        "scaling": "raw/5",
+        "scaling": "value = (raw/5) clamped to: ...51",
         "path": "Tires"
       }
     ],
@@ -233,7 +233,7 @@ const matrixData = [
         "name": "HV battery charge (dash)",
         "unit": "percent",
         "suggestedMetric": "stateOfCharge",
-        "scaling": "raw*0.5",
+        "scaling": "value = (raw*0.5) clamped to: ...100",
         "path": "Battery"
       }
     ],
@@ -243,7 +243,7 @@ const matrixData = [
         "name": "HV battery module 001 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.001"
       },
       {
@@ -251,7 +251,7 @@ const matrixData = [
         "name": "HV battery module 002 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.002"
       },
       {
@@ -259,7 +259,7 @@ const matrixData = [
         "name": "HV battery module 003 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.003"
       },
       {
@@ -267,7 +267,7 @@ const matrixData = [
         "name": "HV battery module 004 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.004"
       },
       {
@@ -275,7 +275,7 @@ const matrixData = [
         "name": "HV battery module 005 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.005"
       },
       {
@@ -283,7 +283,7 @@ const matrixData = [
         "name": "HV battery module 006 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.006"
       },
       {
@@ -291,7 +291,7 @@ const matrixData = [
         "name": "HV battery module 007 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.007"
       },
       {
@@ -299,7 +299,7 @@ const matrixData = [
         "name": "HV battery module 008 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.008"
       },
       {
@@ -307,7 +307,7 @@ const matrixData = [
         "name": "HV battery module 009 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.009"
       },
       {
@@ -315,7 +315,7 @@ const matrixData = [
         "name": "HV battery module 010 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.010"
       },
       {
@@ -323,7 +323,7 @@ const matrixData = [
         "name": "HV battery module 011 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.011"
       },
       {
@@ -331,7 +331,7 @@ const matrixData = [
         "name": "HV battery module 012 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.012"
       },
       {
@@ -339,7 +339,7 @@ const matrixData = [
         "name": "HV battery module 013 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.013"
       },
       {
@@ -347,7 +347,7 @@ const matrixData = [
         "name": "HV battery module 014 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.014"
       },
       {
@@ -355,7 +355,7 @@ const matrixData = [
         "name": "HV battery module 015 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.015"
       },
       {
@@ -363,7 +363,7 @@ const matrixData = [
         "name": "HV battery module 016 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.016"
       },
       {
@@ -371,7 +371,7 @@ const matrixData = [
         "name": "HV battery module 017 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.017"
       },
       {
@@ -379,7 +379,7 @@ const matrixData = [
         "name": "HV battery module 018 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.018"
       },
       {
@@ -387,7 +387,7 @@ const matrixData = [
         "name": "HV battery module 019 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.019"
       },
       {
@@ -395,7 +395,7 @@ const matrixData = [
         "name": "HV battery module 020 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.020"
       },
       {
@@ -403,7 +403,7 @@ const matrixData = [
         "name": "HV battery module 021 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.021"
       },
       {
@@ -411,7 +411,7 @@ const matrixData = [
         "name": "HV battery module 022 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.022"
       },
       {
@@ -419,7 +419,7 @@ const matrixData = [
         "name": "HV battery module 023 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.023"
       },
       {
@@ -427,7 +427,7 @@ const matrixData = [
         "name": "HV battery module 024 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.024"
       },
       {
@@ -435,7 +435,7 @@ const matrixData = [
         "name": "HV battery module 025 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.025"
       },
       {
@@ -443,7 +443,7 @@ const matrixData = [
         "name": "HV battery module 026 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.026"
       },
       {
@@ -451,7 +451,7 @@ const matrixData = [
         "name": "HV battery module 027 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.027"
       },
       {
@@ -459,7 +459,7 @@ const matrixData = [
         "name": "HV battery module 028 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.028"
       },
       {
@@ -467,7 +467,7 @@ const matrixData = [
         "name": "HV battery module 029 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.029"
       },
       {
@@ -475,7 +475,7 @@ const matrixData = [
         "name": "HV battery module 030 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.030"
       },
       {
@@ -483,7 +483,7 @@ const matrixData = [
         "name": "HV battery module 031 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.031"
       },
       {
@@ -491,7 +491,7 @@ const matrixData = [
         "name": "HV battery module 032 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.032"
       }
     ],
@@ -501,7 +501,7 @@ const matrixData = [
         "name": "HV battery module 033 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.033"
       },
       {
@@ -509,7 +509,7 @@ const matrixData = [
         "name": "HV battery module 034 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.034"
       },
       {
@@ -517,7 +517,7 @@ const matrixData = [
         "name": "HV battery module 035 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.035"
       },
       {
@@ -525,7 +525,7 @@ const matrixData = [
         "name": "HV battery module 036 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.036"
       },
       {
@@ -533,7 +533,7 @@ const matrixData = [
         "name": "HV battery module 037 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.037"
       },
       {
@@ -541,7 +541,7 @@ const matrixData = [
         "name": "HV battery module 038 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.038"
       },
       {
@@ -549,7 +549,7 @@ const matrixData = [
         "name": "HV battery module 039 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.039"
       },
       {
@@ -557,7 +557,7 @@ const matrixData = [
         "name": "HV battery module 040 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.040"
       },
       {
@@ -565,7 +565,7 @@ const matrixData = [
         "name": "HV battery module 041 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.041"
       },
       {
@@ -573,7 +573,7 @@ const matrixData = [
         "name": "HV battery module 042 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.042"
       },
       {
@@ -581,7 +581,7 @@ const matrixData = [
         "name": "HV battery module 043 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.043"
       },
       {
@@ -589,7 +589,7 @@ const matrixData = [
         "name": "HV battery module 044 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.044"
       },
       {
@@ -597,7 +597,7 @@ const matrixData = [
         "name": "HV battery module 045 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.045"
       },
       {
@@ -605,7 +605,7 @@ const matrixData = [
         "name": "HV battery module 046 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.046"
       },
       {
@@ -613,7 +613,7 @@ const matrixData = [
         "name": "HV battery module 047 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.047"
       },
       {
@@ -621,7 +621,7 @@ const matrixData = [
         "name": "HV battery module 048 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.048"
       },
       {
@@ -629,7 +629,7 @@ const matrixData = [
         "name": "HV battery module 049 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.049"
       },
       {
@@ -637,7 +637,7 @@ const matrixData = [
         "name": "HV battery module 050 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.050"
       },
       {
@@ -645,7 +645,7 @@ const matrixData = [
         "name": "HV battery module 051 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.051"
       },
       {
@@ -653,7 +653,7 @@ const matrixData = [
         "name": "HV battery module 052 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.052"
       },
       {
@@ -661,7 +661,7 @@ const matrixData = [
         "name": "HV battery module 053 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.053"
       },
       {
@@ -669,7 +669,7 @@ const matrixData = [
         "name": "HV battery module 054 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.054"
       },
       {
@@ -677,7 +677,7 @@ const matrixData = [
         "name": "HV battery module 055 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.055"
       },
       {
@@ -685,7 +685,7 @@ const matrixData = [
         "name": "HV battery module 056 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.056"
       },
       {
@@ -693,7 +693,7 @@ const matrixData = [
         "name": "HV battery module 057 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.057"
       },
       {
@@ -701,7 +701,7 @@ const matrixData = [
         "name": "HV battery module 058 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.058"
       },
       {
@@ -709,7 +709,7 @@ const matrixData = [
         "name": "HV battery module 059 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.059"
       },
       {
@@ -717,7 +717,7 @@ const matrixData = [
         "name": "HV battery module 060 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.060"
       },
       {
@@ -725,7 +725,7 @@ const matrixData = [
         "name": "HV battery module 061 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.061"
       },
       {
@@ -733,7 +733,7 @@ const matrixData = [
         "name": "HV battery module 062 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.062"
       },
       {
@@ -741,7 +741,7 @@ const matrixData = [
         "name": "HV battery module 063 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.063"
       },
       {
@@ -749,7 +749,7 @@ const matrixData = [
         "name": "HV battery module 064 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.064"
       }
     ],
@@ -759,7 +759,7 @@ const matrixData = [
         "name": "HV battery module 065 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.065"
       },
       {
@@ -767,7 +767,7 @@ const matrixData = [
         "name": "HV battery module 066 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.066"
       },
       {
@@ -775,7 +775,7 @@ const matrixData = [
         "name": "HV battery module 067 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.067"
       },
       {
@@ -783,7 +783,7 @@ const matrixData = [
         "name": "HV battery module 068 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.068"
       },
       {
@@ -791,7 +791,7 @@ const matrixData = [
         "name": "HV battery module 069 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.069"
       },
       {
@@ -799,7 +799,7 @@ const matrixData = [
         "name": "HV battery module 070 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.070"
       },
       {
@@ -807,7 +807,7 @@ const matrixData = [
         "name": "HV battery module 071 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.071"
       },
       {
@@ -815,7 +815,7 @@ const matrixData = [
         "name": "HV battery module 072 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.072"
       },
       {
@@ -823,7 +823,7 @@ const matrixData = [
         "name": "HV battery module 073 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.073"
       },
       {
@@ -831,7 +831,7 @@ const matrixData = [
         "name": "HV battery module 074 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.074"
       },
       {
@@ -839,7 +839,7 @@ const matrixData = [
         "name": "HV battery module 075 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.075"
       },
       {
@@ -847,7 +847,7 @@ const matrixData = [
         "name": "HV battery module 076 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.076"
       },
       {
@@ -855,7 +855,7 @@ const matrixData = [
         "name": "HV battery module 077 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.077"
       },
       {
@@ -863,7 +863,7 @@ const matrixData = [
         "name": "HV battery module 078 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.078"
       },
       {
@@ -871,7 +871,7 @@ const matrixData = [
         "name": "HV battery module 079 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.079"
       },
       {
@@ -879,7 +879,7 @@ const matrixData = [
         "name": "HV battery module 080 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.080"
       },
       {
@@ -887,7 +887,7 @@ const matrixData = [
         "name": "HV battery module 081 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.081"
       },
       {
@@ -895,7 +895,7 @@ const matrixData = [
         "name": "HV battery module 082 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.082"
       },
       {
@@ -903,7 +903,7 @@ const matrixData = [
         "name": "HV battery module 083 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.083"
       },
       {
@@ -911,7 +911,7 @@ const matrixData = [
         "name": "HV battery module 084 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.084"
       },
       {
@@ -919,7 +919,7 @@ const matrixData = [
         "name": "HV battery module 085 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.085"
       },
       {
@@ -927,7 +927,7 @@ const matrixData = [
         "name": "HV battery module 086 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.086"
       },
       {
@@ -935,7 +935,7 @@ const matrixData = [
         "name": "HV battery module 087 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.087"
       },
       {
@@ -943,7 +943,7 @@ const matrixData = [
         "name": "HV battery module 088 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.088"
       },
       {
@@ -951,7 +951,7 @@ const matrixData = [
         "name": "HV battery module 089 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.089"
       },
       {
@@ -959,7 +959,7 @@ const matrixData = [
         "name": "HV battery module 090 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.090"
       },
       {
@@ -967,7 +967,7 @@ const matrixData = [
         "name": "HV battery module 091 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.091"
       },
       {
@@ -975,7 +975,7 @@ const matrixData = [
         "name": "HV battery module 092 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.092"
       },
       {
@@ -983,7 +983,7 @@ const matrixData = [
         "name": "HV battery module 093 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.093"
       },
       {
@@ -991,7 +991,7 @@ const matrixData = [
         "name": "HV battery module 094 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.094"
       },
       {
@@ -999,7 +999,7 @@ const matrixData = [
         "name": "HV battery module 095 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.095"
       },
       {
@@ -1007,7 +1007,7 @@ const matrixData = [
         "name": "HV battery module 096 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.096"
       }
     ],
@@ -1017,7 +1017,7 @@ const matrixData = [
         "name": "HV battery state of health",
         "unit": "percent",
         "suggestedMetric": "stateOfHealth",
-        "scaling": "raw/10",
+        "scaling": "value = (raw/10) clamped to: ...100",
         "path": "Battery"
       },
       {
@@ -1025,7 +1025,7 @@ const matrixData = [
         "name": "HV battery remaining energy",
         "unit": "kilowattHours",
         "suggestedMetric": "",
-        "scaling": "raw*2 /1000",
+        "scaling": "value = (raw*2 /1000) clamped to: ...100",
         "path": "Battery"
       },
       {
@@ -1033,7 +1033,7 @@ const matrixData = [
         "name": "HV battery charge",
         "unit": "percent",
         "suggestedMetric": "stateOfCharge",
-        "scaling": "raw*0.5",
+        "scaling": "value = (raw*0.5) clamped to: ...100",
         "path": "Battery"
       }
     ],
@@ -1043,7 +1043,7 @@ const matrixData = [
         "name": "HV battery module 097 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.097"
       },
       {
@@ -1051,7 +1051,7 @@ const matrixData = [
         "name": "HV battery module 098 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.098"
       },
       {
@@ -1059,7 +1059,7 @@ const matrixData = [
         "name": "HV battery module 099 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.099"
       },
       {
@@ -1067,7 +1067,7 @@ const matrixData = [
         "name": "HV battery module 100 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.100"
       },
       {
@@ -1075,7 +1075,7 @@ const matrixData = [
         "name": "HV battery module 101 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.101"
       },
       {
@@ -1083,7 +1083,7 @@ const matrixData = [
         "name": "HV battery module 102 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.102"
       },
       {
@@ -1091,7 +1091,7 @@ const matrixData = [
         "name": "HV battery module 103 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.103"
       },
       {
@@ -1099,7 +1099,7 @@ const matrixData = [
         "name": "HV battery module 104 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.104"
       },
       {
@@ -1107,7 +1107,7 @@ const matrixData = [
         "name": "HV battery module 105 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.105"
       },
       {
@@ -1115,7 +1115,7 @@ const matrixData = [
         "name": "HV battery module 106 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.106"
       },
       {
@@ -1123,7 +1123,7 @@ const matrixData = [
         "name": "HV battery module 107 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.107"
       },
       {
@@ -1131,7 +1131,7 @@ const matrixData = [
         "name": "HV battery module 108 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.108"
       },
       {
@@ -1139,7 +1139,7 @@ const matrixData = [
         "name": "HV battery module 109 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.109"
       },
       {
@@ -1147,7 +1147,7 @@ const matrixData = [
         "name": "HV battery module 110 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.110"
       },
       {
@@ -1155,7 +1155,7 @@ const matrixData = [
         "name": "HV battery module 111 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.111"
       },
       {
@@ -1163,7 +1163,7 @@ const matrixData = [
         "name": "HV battery module 112 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.112"
       },
       {
@@ -1171,7 +1171,7 @@ const matrixData = [
         "name": "HV battery module 113 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.113"
       },
       {
@@ -1179,7 +1179,7 @@ const matrixData = [
         "name": "HV battery module 114 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.114"
       },
       {
@@ -1187,7 +1187,7 @@ const matrixData = [
         "name": "HV battery module 115 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.115"
       },
       {
@@ -1195,7 +1195,7 @@ const matrixData = [
         "name": "HV battery module 116 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.116"
       },
       {
@@ -1203,7 +1203,7 @@ const matrixData = [
         "name": "HV battery module 117 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.117"
       },
       {
@@ -1211,7 +1211,7 @@ const matrixData = [
         "name": "HV battery module 118 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.118"
       },
       {
@@ -1219,7 +1219,7 @@ const matrixData = [
         "name": "HV battery module 119 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.119"
       },
       {
@@ -1227,7 +1227,7 @@ const matrixData = [
         "name": "HV battery module 120 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.120"
       },
       {
@@ -1235,7 +1235,7 @@ const matrixData = [
         "name": "HV battery module 121 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.121"
       },
       {
@@ -1243,7 +1243,7 @@ const matrixData = [
         "name": "HV battery module 122 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.122"
       },
       {
@@ -1251,7 +1251,7 @@ const matrixData = [
         "name": "HV battery module 123 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.123"
       },
       {
@@ -1259,7 +1259,7 @@ const matrixData = [
         "name": "HV battery module 124 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.124"
       },
       {
@@ -1267,7 +1267,7 @@ const matrixData = [
         "name": "HV battery module 125 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.125"
       },
       {
@@ -1275,7 +1275,7 @@ const matrixData = [
         "name": "HV battery module 126 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.126"
       },
       {
@@ -1283,7 +1283,7 @@ const matrixData = [
         "name": "HV battery module 127 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.127"
       },
       {
@@ -1291,7 +1291,7 @@ const matrixData = [
         "name": "HV battery module 128 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.128"
       }
     ],
@@ -1301,7 +1301,7 @@ const matrixData = [
         "name": "HV battery module 129 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.129"
       },
       {
@@ -1309,7 +1309,7 @@ const matrixData = [
         "name": "HV battery module 130 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.130"
       },
       {
@@ -1317,7 +1317,7 @@ const matrixData = [
         "name": "HV battery module 131 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.131"
       },
       {
@@ -1325,7 +1325,7 @@ const matrixData = [
         "name": "HV battery module 132 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.132"
       },
       {
@@ -1333,7 +1333,7 @@ const matrixData = [
         "name": "HV battery module 133 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.133"
       },
       {
@@ -1341,7 +1341,7 @@ const matrixData = [
         "name": "HV battery module 134 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.134"
       },
       {
@@ -1349,7 +1349,7 @@ const matrixData = [
         "name": "HV battery module 135 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.135"
       },
       {
@@ -1357,7 +1357,7 @@ const matrixData = [
         "name": "HV battery module 136 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.136"
       },
       {
@@ -1365,7 +1365,7 @@ const matrixData = [
         "name": "HV battery module 137 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.137"
       },
       {
@@ -1373,7 +1373,7 @@ const matrixData = [
         "name": "HV battery module 138 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.138"
       },
       {
@@ -1381,7 +1381,7 @@ const matrixData = [
         "name": "HV battery module 139 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.139"
       },
       {
@@ -1389,7 +1389,7 @@ const matrixData = [
         "name": "HV battery module 140 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.140"
       },
       {
@@ -1397,7 +1397,7 @@ const matrixData = [
         "name": "HV battery module 141 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.141"
       },
       {
@@ -1405,7 +1405,7 @@ const matrixData = [
         "name": "HV battery module 142 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.142"
       },
       {
@@ -1413,7 +1413,7 @@ const matrixData = [
         "name": "HV battery module 143 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.143"
       },
       {
@@ -1421,7 +1421,7 @@ const matrixData = [
         "name": "HV battery module 144 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.144"
       },
       {
@@ -1429,7 +1429,7 @@ const matrixData = [
         "name": "HV battery module 145 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.145"
       },
       {
@@ -1437,7 +1437,7 @@ const matrixData = [
         "name": "HV battery module 146 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.146"
       },
       {
@@ -1445,7 +1445,7 @@ const matrixData = [
         "name": "HV battery module 147 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.147"
       },
       {
@@ -1453,7 +1453,7 @@ const matrixData = [
         "name": "HV battery module 148 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.148"
       },
       {
@@ -1461,7 +1461,7 @@ const matrixData = [
         "name": "HV battery module 149 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.149"
       },
       {
@@ -1469,7 +1469,7 @@ const matrixData = [
         "name": "HV battery module 150 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.150"
       },
       {
@@ -1477,7 +1477,7 @@ const matrixData = [
         "name": "HV battery module 151 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.151"
       },
       {
@@ -1485,7 +1485,7 @@ const matrixData = [
         "name": "HV battery module 152 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.152"
       },
       {
@@ -1493,7 +1493,7 @@ const matrixData = [
         "name": "HV battery module 153 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.153"
       },
       {
@@ -1501,7 +1501,7 @@ const matrixData = [
         "name": "HV battery module 154 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.154"
       },
       {
@@ -1509,7 +1509,7 @@ const matrixData = [
         "name": "HV battery module 155 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.155"
       },
       {
@@ -1517,7 +1517,7 @@ const matrixData = [
         "name": "HV battery module 156 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.156"
       },
       {
@@ -1525,7 +1525,7 @@ const matrixData = [
         "name": "HV battery module 157 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.157"
       },
       {
@@ -1533,7 +1533,7 @@ const matrixData = [
         "name": "HV battery module 158 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.158"
       },
       {
@@ -1541,7 +1541,7 @@ const matrixData = [
         "name": "HV battery module 159 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.159"
       },
       {
@@ -1549,7 +1549,7 @@ const matrixData = [
         "name": "HV battery module 160 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.160"
       }
     ],
@@ -1559,7 +1559,7 @@ const matrixData = [
         "name": "HV battery module 161 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.161"
       },
       {
@@ -1567,7 +1567,7 @@ const matrixData = [
         "name": "HV battery module 162 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.162"
       },
       {
@@ -1575,7 +1575,7 @@ const matrixData = [
         "name": "HV battery module 163 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.163"
       },
       {
@@ -1583,7 +1583,7 @@ const matrixData = [
         "name": "HV battery module 164 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.164"
       },
       {
@@ -1591,7 +1591,7 @@ const matrixData = [
         "name": "HV battery module 165 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.165"
       },
       {
@@ -1599,7 +1599,7 @@ const matrixData = [
         "name": "HV battery module 166 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.166"
       },
       {
@@ -1607,7 +1607,7 @@ const matrixData = [
         "name": "HV battery module 167 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.167"
       },
       {
@@ -1615,7 +1615,7 @@ const matrixData = [
         "name": "HV battery module 168 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.168"
       },
       {
@@ -1623,7 +1623,7 @@ const matrixData = [
         "name": "HV battery module 169 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.169"
       },
       {
@@ -1631,7 +1631,7 @@ const matrixData = [
         "name": "HV battery module 170 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.170"
       },
       {
@@ -1639,7 +1639,7 @@ const matrixData = [
         "name": "HV battery module 171 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.171"
       },
       {
@@ -1647,7 +1647,7 @@ const matrixData = [
         "name": "HV battery module 172 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.172"
       },
       {
@@ -1655,7 +1655,7 @@ const matrixData = [
         "name": "HV battery module 173 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.173"
       },
       {
@@ -1663,7 +1663,7 @@ const matrixData = [
         "name": "HV battery module 174 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.174"
       },
       {
@@ -1671,7 +1671,7 @@ const matrixData = [
         "name": "HV battery module 175 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.175"
       },
       {
@@ -1679,7 +1679,7 @@ const matrixData = [
         "name": "HV battery module 176 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.176"
       },
       {
@@ -1687,7 +1687,7 @@ const matrixData = [
         "name": "HV battery module 177 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.177"
       },
       {
@@ -1695,7 +1695,7 @@ const matrixData = [
         "name": "HV battery module 178 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.178"
       },
       {
@@ -1703,7 +1703,7 @@ const matrixData = [
         "name": "HV battery module 179 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.179"
       },
       {
@@ -1711,7 +1711,7 @@ const matrixData = [
         "name": "HV battery module 180 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.180"
       },
       {
@@ -1719,7 +1719,7 @@ const matrixData = [
         "name": "HV battery module 181 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.181"
       },
       {
@@ -1727,7 +1727,7 @@ const matrixData = [
         "name": "HV battery module 182 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.182"
       },
       {
@@ -1735,7 +1735,7 @@ const matrixData = [
         "name": "HV battery module 183 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.183"
       },
       {
@@ -1743,7 +1743,7 @@ const matrixData = [
         "name": "HV battery module 184 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.184"
       },
       {
@@ -1751,7 +1751,7 @@ const matrixData = [
         "name": "HV battery module 185 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.185"
       },
       {
@@ -1759,7 +1759,7 @@ const matrixData = [
         "name": "HV battery module 186 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.186"
       },
       {
@@ -1767,7 +1767,7 @@ const matrixData = [
         "name": "HV battery module 187 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.187"
       },
       {
@@ -1775,7 +1775,7 @@ const matrixData = [
         "name": "HV battery module 188 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.188"
       },
       {
@@ -1783,7 +1783,7 @@ const matrixData = [
         "name": "HV battery module 189 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.189"
       },
       {
@@ -1791,7 +1791,7 @@ const matrixData = [
         "name": "HV battery module 190 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.190"
       },
       {
@@ -1799,7 +1799,7 @@ const matrixData = [
         "name": "HV battery module 191 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.191"
       },
       {
@@ -1807,7 +1807,7 @@ const matrixData = [
         "name": "HV battery module 192 voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...5.1",
         "path": "Battery.Modules.192"
       }
     ]
@@ -2064,7 +2064,7 @@ const matrixData = [
         "name": "Calculated engine load",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       }
     ],
@@ -2074,7 +2074,7 @@ const matrixData = [
         "name": "Engine coolant temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Engine.Generic"
       }
     ],
@@ -2084,7 +2084,7 @@ const matrixData = [
         "name": "Short term fuel trim (bank 1)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.2",
         "path": "Engine.Generic"
       }
     ],
@@ -2094,7 +2094,7 @@ const matrixData = [
         "name": "Long term fuel trim (bank 1)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.2",
         "path": "Engine.Generic"
       }
     ],
@@ -2104,7 +2104,7 @@ const matrixData = [
         "name": "Short term fuel trim (bank 2)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.2",
         "path": "Engine.Generic"
       },
       {
@@ -2112,7 +2112,7 @@ const matrixData = [
         "name": "Short term fuel trim (bank 4)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.2",
         "path": "Engine.Generic"
       }
     ],
@@ -2122,7 +2122,7 @@ const matrixData = [
         "name": "Long term fuel trim (bank 2)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.2",
         "path": "Engine.Generic"
       },
       {
@@ -2130,7 +2130,7 @@ const matrixData = [
         "name": "Long term fuel trim (bank 4)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.2",
         "path": "Engine.Generic"
       }
     ],
@@ -2140,7 +2140,7 @@ const matrixData = [
         "name": "Fuel pressure",
         "unit": "kilopascal",
         "suggestedMetric": "",
-        "scaling": "raw*3",
+        "scaling": "value = (raw*3) clamped to: ...765",
         "path": "Engine.Generic"
       }
     ],
@@ -2160,7 +2160,7 @@ const matrixData = [
         "name": "Engine RPM",
         "unit": "rpm",
         "suggestedMetric": "",
-        "scaling": "raw/4",
+        "scaling": "value = (raw/4) clamped to: ...16383.75",
         "path": "Engine.Generic"
       }
     ],
@@ -2180,7 +2180,7 @@ const matrixData = [
         "name": "Timing advance",
         "unit": "degrees",
         "suggestedMetric": "",
-        "scaling": "raw/2 +-64",
+        "scaling": "value = (raw/2 +-64) clamped to: -64...63.5",
         "path": "Engine.Generic"
       }
     ],
@@ -2190,7 +2190,7 @@ const matrixData = [
         "name": "Intake air temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Engine.Generic"
       }
     ],
@@ -2200,7 +2200,7 @@ const matrixData = [
         "name": "Air flow rate from mass air flow sensor",
         "unit": "gramsPerSecond",
         "suggestedMetric": "",
-        "scaling": "raw/100",
+        "scaling": "value = (raw/100) clamped to: ...655.35",
         "path": "Engine.Generic"
       }
     ],
@@ -2210,7 +2210,7 @@ const matrixData = [
         "name": "Absolute throttle position",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Control.Generic"
       }
     ],
@@ -2296,7 +2296,7 @@ const matrixData = [
         "name": "O2S Output Voltage Bank 1, Sensor 1",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/200",
+        "scaling": "value = (raw/200) clamped to: ...1.275",
         "path": "Engine.Generic.OxygenSensors"
       },
       {
@@ -2304,7 +2304,7 @@ const matrixData = [
         "name": "SHRTFT associated with O2S11",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.22",
         "path": "Engine.Generic.OxygenSensors"
       }
     ],
@@ -2314,7 +2314,7 @@ const matrixData = [
         "name": "O2S Output Voltage Bank 1, Sensor 2",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/200",
+        "scaling": "value = (raw/200) clamped to: ...1.275",
         "path": "Engine.Generic.OxygenSensors"
       },
       {
@@ -2322,7 +2322,7 @@ const matrixData = [
         "name": "SHRTFT associated with O2S12",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.22",
         "path": "Engine.Generic.OxygenSensors"
       }
     ],
@@ -2438,7 +2438,7 @@ const matrixData = [
         "name": "Fuel pressure relative to manifold vacuum",
         "unit": "kilopascal",
         "suggestedMetric": "",
-        "scaling": "raw*0.079",
+        "scaling": "value = (raw*0.079) clamped to: ...5177.27",
         "path": "Engine.Generic"
       }
     ],
@@ -2448,7 +2448,7 @@ const matrixData = [
         "name": "Fuel rail pressure",
         "unit": "kilopascal",
         "suggestedMetric": "",
-        "scaling": "raw*10",
+        "scaling": "value = (raw*10) clamped to: ...655350",
         "path": "Engine.Generic"
       }
     ],
@@ -2458,7 +2458,7 @@ const matrixData = [
         "name": "Lambda value, Equivalence Ratio Bank 1, Sensor 1",
         "unit": "scalar",
         "suggestedMetric": "",
-        "scaling": "raw/32768",
+        "scaling": "value = (raw/32768) clamped to: ...1.99",
         "path": "Engine.Generic.OxygenSensors"
       },
       {
@@ -2466,7 +2466,7 @@ const matrixData = [
         "name": "Wide Range O2S Voltage, O2 Sensor Bank 1, Sensor 1",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/8196",
+        "scaling": "value = (raw/8196) clamped to: ...7.999",
         "path": "Engine.Generic.OxygenSensors"
       }
     ],
@@ -2476,7 +2476,7 @@ const matrixData = [
         "name": "Commanded EGR",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       }
     ],
@@ -2486,7 +2486,7 @@ const matrixData = [
         "name": "EGR error",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.22",
         "path": "Engine.Generic"
       }
     ],
@@ -2496,7 +2496,7 @@ const matrixData = [
         "name": "Commanded evaporative purge",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       }
     ],
@@ -2506,7 +2506,7 @@ const matrixData = [
         "name": "Fuel tank level",
         "unit": "percent",
         "suggestedMetric": "fuelTankLevel",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Fuel.Generic"
       }
     ],
@@ -2536,7 +2536,7 @@ const matrixData = [
         "name": "Evap system vapor pressure",
         "unit": "kilopascal",
         "suggestedMetric": "",
-        "scaling": "raw/4000 +-8192",
+        "scaling": "value = (raw/4000) clamped to: -8192...8191.75",
         "path": "Engine.Generic"
       }
     ],
@@ -2556,7 +2556,7 @@ const matrixData = [
         "name": "Catalyst temperature bank 1, sensor 1",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw/10 +-40",
+        "scaling": "value = (raw/10 +-40) clamped to: -40...6513.5",
         "path": "Engine.Generic"
       }
     ],
@@ -2566,7 +2566,7 @@ const matrixData = [
         "name": "Catalyst temperature bank 2, sensor 1",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw/10 +-40",
+        "scaling": "value = (raw/10 +-40) clamped to: -40...6513.5",
         "path": "Engine.Generic"
       }
     ],
@@ -2576,7 +2576,7 @@ const matrixData = [
         "name": "Catalyst temperature bank 1, sensor 2",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw/10 +-40",
+        "scaling": "value = (raw/10 +-40) clamped to: -40...6513.5",
         "path": "Engine.Generic"
       }
     ],
@@ -2586,7 +2586,7 @@ const matrixData = [
         "name": "Catalyst temperature bank 2, sensor 2",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw/10 +-40",
+        "scaling": "value = (raw/10 +-40) clamped to: -40...6513.5",
         "path": "Engine.Generic"
       }
     ],
@@ -2782,7 +2782,7 @@ const matrixData = [
         "name": "Control module voltage",
         "unit": "volts",
         "suggestedMetric": "starterBatteryVoltage",
-        "scaling": "raw/1000",
+        "scaling": "value = (raw/1000) clamped to: ...65535",
         "path": "Battery.Generic"
       }
     ],
@@ -2792,7 +2792,7 @@ const matrixData = [
         "name": "Absolute load value",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...25700",
         "path": "Engine.Generic"
       }
     ],
@@ -2802,7 +2802,7 @@ const matrixData = [
         "name": "Commanded equivalence ratio",
         "unit": "scalar",
         "suggestedMetric": "",
-        "scaling": "raw*2 /65535",
+        "scaling": "value = (raw*2 /65535) clamped to: ...1.99",
         "path": "Engine.Generic"
       }
     ],
@@ -2812,7 +2812,7 @@ const matrixData = [
         "name": "Relative throttle position",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Control.Generic"
       }
     ],
@@ -2822,7 +2822,7 @@ const matrixData = [
         "name": "Ambient air temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Climate.Generic"
       }
     ],
@@ -2832,7 +2832,7 @@ const matrixData = [
         "name": "Absolute throttle position B",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Control.Generic"
       }
     ],
@@ -2842,7 +2842,7 @@ const matrixData = [
         "name": "Absolute throttle position C",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Control.Generic"
       }
     ],
@@ -2852,7 +2852,7 @@ const matrixData = [
         "name": "Accelerator pedal position D",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Control.Pedals.Generic"
       }
     ],
@@ -2862,7 +2862,7 @@ const matrixData = [
         "name": "Accelerator pedal position E",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Control.Pedals.Generic"
       }
     ],
@@ -2872,7 +2872,7 @@ const matrixData = [
         "name": "Accelerator pedal position F",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Control.Pedals.Generic"
       }
     ],
@@ -2882,7 +2882,7 @@ const matrixData = [
         "name": "Commanded throttle actuator control",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       }
     ],
@@ -2936,7 +2936,7 @@ const matrixData = [
         "name": "Maximum value for intake manifold absolute pressure (MAP)",
         "unit": "kilopascal",
         "suggestedMetric": "",
-        "scaling": "raw*10",
+        "scaling": "value = (raw*10) clamped to: ...2550",
         "path": "Engine.Generic.Internal"
       }
     ],
@@ -2946,7 +2946,7 @@ const matrixData = [
         "name": "Maximum value for air flow rate from mass air flow sensor",
         "unit": "gramsPerSecond",
         "suggestedMetric": "",
-        "scaling": "raw*10",
+        "scaling": "value = (raw*10) clamped to: ...2550",
         "path": "Engine.Generic.Internal"
       }
     ],
@@ -2966,7 +2966,7 @@ const matrixData = [
         "name": "Alcohol fuel percentage",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Fuel.Generic"
       }
     ],
@@ -2976,7 +2976,7 @@ const matrixData = [
         "name": "Absolute evap system vapor pressure",
         "unit": "kilopascal",
         "suggestedMetric": "",
-        "scaling": "raw/200",
+        "scaling": "value = (raw/200) clamped to: ...327.675",
         "path": "Engine.Generic"
       }
     ],
@@ -2986,7 +2986,7 @@ const matrixData = [
         "name": "Evap system vapor pressure (wide)",
         "unit": "kilopascal",
         "suggestedMetric": "",
-        "scaling": "raw/1000 +-32767",
+        "scaling": "value = (raw/1000) clamped to: -32767...32768",
         "path": "Engine.Generic"
       }
     ],
@@ -2996,7 +2996,7 @@ const matrixData = [
         "name": "Short term secondary O2 sensor fuel trim (bank 1)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.22",
         "path": "Engine.Generic"
       }
     ],
@@ -3006,7 +3006,7 @@ const matrixData = [
         "name": "Long term secondary O2 sensor fuel trim (bank 1)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.22",
         "path": "Engine.Generic"
       }
     ],
@@ -3016,7 +3016,7 @@ const matrixData = [
         "name": "Short term secondary O2 sensor fuel trim (bank 2)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.22",
         "path": "Engine.Generic"
       }
     ],
@@ -3026,7 +3026,7 @@ const matrixData = [
         "name": "Long term secondary O2 sensor fuel trim (bank 2)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.22",
         "path": "Engine.Generic"
       }
     ],
@@ -3036,7 +3036,7 @@ const matrixData = [
         "name": "Fuel rail pressure (absolute)",
         "unit": "kilopascal",
         "suggestedMetric": "",
-        "scaling": "raw*10",
+        "scaling": "value = (raw*10) clamped to: ...655350",
         "path": "Engine.Generic"
       }
     ],
@@ -3046,7 +3046,7 @@ const matrixData = [
         "name": "Accelerator pedal position\u00a0(relative)",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Control.Pedals.Generic"
       }
     ],
@@ -3056,7 +3056,7 @@ const matrixData = [
         "name": "Hybrid battery pack remaining charge",
         "unit": "percent",
         "suggestedMetric": "stateOfCharge",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Battery.Generic"
       }
     ],
@@ -3066,7 +3066,7 @@ const matrixData = [
         "name": "Engine oil temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...210",
         "path": "Engine.Generic"
       }
     ],
@@ -3076,7 +3076,7 @@ const matrixData = [
         "name": "Fuel injection timing",
         "unit": "degrees",
         "suggestedMetric": "",
-        "scaling": "raw/128 +-210",
+        "scaling": "value = (raw/128 +-38665) clamped to: -210...301.992",
         "path": "Engine.Generic"
       }
     ],
@@ -3086,7 +3086,7 @@ const matrixData = [
         "name": "Engine fuel rate",
         "unit": "liters",
         "suggestedMetric": "",
-        "scaling": "raw/20",
+        "scaling": "value = (raw/20) clamped to: ...3212.75",
         "path": "Fuel.Generic"
       }
     ],
@@ -3106,7 +3106,7 @@ const matrixData = [
         "name": "Driver's demand engine torque",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw+-125",
+        "scaling": "value = (raw+-125) clamped to: -125...130",
         "path": "Engine.Generic"
       }
     ],
@@ -3116,7 +3116,7 @@ const matrixData = [
         "name": "Actual engine torque",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw+-125",
+        "scaling": "value = (raw+-125) clamped to: -125...130",
         "path": "Engine.Generic"
       }
     ],
@@ -3136,7 +3136,7 @@ const matrixData = [
         "name": "Engine Percent Torque At Idle, Point 1",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw+-125",
+        "scaling": "value = (raw+-125) clamped to: -125...130",
         "path": "Engine.Generic.Internal"
       },
       {
@@ -3144,7 +3144,7 @@ const matrixData = [
         "name": "Engine Percent Torque At Point 2",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw+-125",
+        "scaling": "value = (raw+-125) clamped to: -125...130",
         "path": "Engine.Generic.Internal"
       },
       {
@@ -3152,7 +3152,7 @@ const matrixData = [
         "name": "Engine Percent Torque At Point 3",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw+-125",
+        "scaling": "value = (raw+-125) clamped to: -125...130",
         "path": "Engine.Generic.Internal"
       },
       {
@@ -3160,7 +3160,7 @@ const matrixData = [
         "name": "Engine Percent Torque At Point 4",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw+-125",
+        "scaling": "value = (raw+-125) clamped to: -125...130",
         "path": "Engine.Generic.Internal"
       },
       {
@@ -3168,7 +3168,7 @@ const matrixData = [
         "name": "Engine Percent Torque At Point 5",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw+-125",
+        "scaling": "value = (raw+-125) clamped to: -125...130",
         "path": "Engine.Generic.Internal"
       }
     ],
@@ -3276,7 +3276,7 @@ const matrixData = [
         "name": "Mass Air Flow Sensor A",
         "unit": "gramsPerSecond",
         "suggestedMetric": "",
-        "scaling": "raw/32",
+        "scaling": "value = (raw/32) clamped to: ...2047.96875",
         "path": "Engine.Generic"
       },
       {
@@ -3284,7 +3284,7 @@ const matrixData = [
         "name": "Mass Air Flow Sensor B",
         "unit": "gramsPerSecond",
         "suggestedMetric": "",
-        "scaling": "raw/32",
+        "scaling": "value = (raw/32) clamped to: ...2047.96875",
         "path": "Engine.Generic"
       }
     ],
@@ -3310,7 +3310,7 @@ const matrixData = [
         "name": "Engine coolant temperature 1",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Engine.Generic"
       },
       {
@@ -3318,7 +3318,7 @@ const matrixData = [
         "name": "Engine coolant temperature 2",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Engine.Generic"
       }
     ],
@@ -3376,7 +3376,7 @@ const matrixData = [
         "name": "Commanded EGR A Duty Cycle/Position",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       },
       {
@@ -3384,7 +3384,7 @@ const matrixData = [
         "name": "Actual EGR A Duty Cycle/Position",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       },
       {
@@ -3392,7 +3392,7 @@ const matrixData = [
         "name": "EGR A error",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.22",
         "path": "Engine.Generic"
       },
       {
@@ -3400,7 +3400,7 @@ const matrixData = [
         "name": "Commanded EGR B Duty Cycle/Position",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       },
       {
@@ -3408,7 +3408,7 @@ const matrixData = [
         "name": "Actual EGR B Duty Cycle/Position",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       },
       {
@@ -3416,7 +3416,7 @@ const matrixData = [
         "name": "EGR B error",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /128 +-100",
+        "scaling": "value = (raw*100 /128 +-100) clamped to: -100...99.22",
         "path": "Engine.Generic"
       }
     ],
@@ -3458,7 +3458,7 @@ const matrixData = [
         "name": "Commanded Throttle Actuator A Control",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       },
       {
@@ -3466,7 +3466,7 @@ const matrixData = [
         "name": "Relative Throttle A Position",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       },
       {
@@ -3474,7 +3474,7 @@ const matrixData = [
         "name": "Commanded Throttle Actuator B Control",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       },
       {
@@ -3482,7 +3482,7 @@ const matrixData = [
         "name": "Relative Throttle B Position",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       }
     ],
@@ -3542,7 +3542,7 @@ const matrixData = [
         "name": "Manifold surface temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Engine.Generic"
       }
     ],
@@ -3552,7 +3552,7 @@ const matrixData = [
         "name": "Absolute Throttle Position G",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Engine.Generic"
       }
     ],
@@ -3562,7 +3562,7 @@ const matrixData = [
         "name": "Engine Friction - Percent Torque",
         "unit": "percent",
         "suggestedMetric": "",
-        "scaling": "raw+-125",
+        "scaling": "value = (raw+-125) clamped to: -125...130",
         "path": "Engine.Generic"
       }
     ],
@@ -3604,7 +3604,7 @@ const matrixData = [
         "name": "Hybrid/EV Battery System Voltage",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/64",
+        "scaling": "value = (raw/64) clamped to: ...1023.98",
         "path": "Battery.Generic"
       },
       {
@@ -3612,7 +3612,7 @@ const matrixData = [
         "name": "Hybrid/EV Battery System Current",
         "unit": "volts",
         "suggestedMetric": "",
-        "scaling": "raw/10 +-3276.8",
+        "scaling": "value = (raw/10) clamped to: -3276.8...3276.7",
         "path": "Battery.Generic"
       },
       {
@@ -3638,7 +3638,7 @@ const matrixData = [
         "name": "Engine fuel rate (alternate)",
         "unit": "gramsPerSecond",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...1310.7",
         "path": "Fuel.Generic"
       },
       {
@@ -3646,7 +3646,7 @@ const matrixData = [
         "name": "Vehicle fuel rate",
         "unit": "gramsPerSecond",
         "suggestedMetric": "",
-        "scaling": "raw/50",
+        "scaling": "value = (raw/50) clamped to: ...1310.7",
         "path": "Fuel.Generic"
       }
     ],
@@ -3656,7 +3656,7 @@ const matrixData = [
         "name": "Engine exhaust flow rate",
         "unit": "kilogramsPerHour",
         "suggestedMetric": "",
-        "scaling": "raw/5",
+        "scaling": "value = (raw/5) clamped to: ...13107",
         "path": "Fuel.Generic"
       }
     ],
@@ -3666,7 +3666,7 @@ const matrixData = [
         "name": "Odometer",
         "unit": "kilometers",
         "suggestedMetric": "odometer",
-        "scaling": "raw/10",
+        "scaling": "value = (raw/10) clamped to: ...429496729.5",
         "path": "Trips.Generic"
       }
     ],
@@ -3686,7 +3686,7 @@ const matrixData = [
         "name": "Traction battery pack State of Health",
         "unit": "kilometersPerHour",
         "suggestedMetric": "",
-        "scaling": "raw*100 /255",
+        "scaling": "value = (raw*100 /255) clamped to: ...100",
         "path": "Battery.Generic"
       }
     ],
@@ -3696,7 +3696,7 @@ const matrixData = [
         "name": "Engine odometer",
         "unit": "kilometers",
         "suggestedMetric": "",
-        "scaling": "raw/10",
+        "scaling": "value = (raw/10) clamped to: ...429496729.5",
         "path": "Trips.Generic"
       }
     ],
@@ -3728,7 +3728,7 @@ const matrixData = [
         "name": "Rear left tire pressure",
         "unit": "psi",
         "suggestedMetric": "rearLeftTirePressure",
-        "scaling": "raw/5",
+        "scaling": "value = (raw/5) clamped to: ...51",
         "path": "Tires"
       },
       {
@@ -3736,7 +3736,7 @@ const matrixData = [
         "name": "Rear right tire pressure",
         "unit": "psi",
         "suggestedMetric": "rearRightTirePressure",
-        "scaling": "raw/5",
+        "scaling": "value = (raw/5) clamped to: ...51",
         "path": "Tires"
       },
       {
@@ -3744,7 +3744,7 @@ const matrixData = [
         "name": "Front right tire pressure",
         "unit": "psi",
         "suggestedMetric": "frontRightTirePressure",
-        "scaling": "raw/5",
+        "scaling": "value = (raw/5) clamped to: ...51",
         "path": "Tires"
       },
       {
@@ -3752,7 +3752,7 @@ const matrixData = [
         "name": "Front left tire pressure",
         "unit": "psi",
         "suggestedMetric": "frontLeftTirePressure",
-        "scaling": "raw/5",
+        "scaling": "value = (raw/5) clamped to: ...51",
         "path": "Tires"
       }
     ],
@@ -3876,7 +3876,7 @@ const matrixData = [
         "name": "Front left tire temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Tires"
       },
       {
@@ -3884,7 +3884,7 @@ const matrixData = [
         "name": "Front right tire temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Tires"
       },
       {
@@ -3892,7 +3892,7 @@ const matrixData = [
         "name": "Rear left tire temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Tires"
       },
       {
@@ -3900,7 +3900,7 @@ const matrixData = [
         "name": "Rear right tire temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Tires"
       },
       {
@@ -3908,7 +3908,7 @@ const matrixData = [
         "name": "Spare tire temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "value = (raw+-40) clamped to: -40...215",
         "path": "Tires"
       }
     ],
@@ -3918,7 +3918,7 @@ const matrixData = [
         "name": "Front left tire pressure",
         "unit": "bars",
         "suggestedMetric": "frontLeftTirePressure",
-        "scaling": "raw/58",
+        "scaling": "value = (raw/58 +-0.5) clamped to: ...4",
         "path": "Tires"
       },
       {
@@ -3926,7 +3926,7 @@ const matrixData = [
         "name": "Front right tire pressure",
         "unit": "bars",
         "suggestedMetric": "frontRightTirePressure",
-        "scaling": "raw/58",
+        "scaling": "value = (raw/58 +-0.5) clamped to: ...4",
         "path": "Tires"
       },
       {
@@ -3934,7 +3934,7 @@ const matrixData = [
         "name": "Rear left tire pressure",
         "unit": "bars",
         "suggestedMetric": "rearLeftTirePressure",
-        "scaling": "raw/58",
+        "scaling": "value = (raw/58 +-0.5) clamped to: ...4",
         "path": "Tires"
       },
       {
@@ -3942,7 +3942,7 @@ const matrixData = [
         "name": "Rear right tire pressure",
         "unit": "bars",
         "suggestedMetric": "rearRightTirePressure",
-        "scaling": "raw/58",
+        "scaling": "value = (raw/58 +-0.5) clamped to: ...4",
         "path": "Tires"
       },
       {
@@ -3950,7 +3950,7 @@ const matrixData = [
         "name": "Spare tire pressure",
         "unit": "bars",
         "suggestedMetric": "",
-        "scaling": "raw/58",
+        "scaling": "value = (raw/58 +-0.5) clamped to: ...4",
         "path": "Tires"
       }
     ],
@@ -3965,7 +3965,7 @@ const matrixData = [
         "name": "Front right wheel speed",
         "unit": "kilometersPerHour",
         "suggestedMetric": "",
-        "scaling": "raw*256 /200",
+        "scaling": "value = (raw*256 /200) clamped to: ...326.4",
         "path": "Movement"
       },
       {
@@ -3973,7 +3973,7 @@ const matrixData = [
         "name": "Front left wheel speed",
         "unit": "kilometersPerHour",
         "suggestedMetric": "",
-        "scaling": "raw*256 /200",
+        "scaling": "value = (raw*256 /200) clamped to: ...326.4",
         "path": "Movement"
       },
       {
@@ -3981,7 +3981,7 @@ const matrixData = [
         "name": "Rear right wheel speed",
         "unit": "kilometersPerHour",
         "suggestedMetric": "",
-        "scaling": "raw*256 /200",
+        "scaling": "value = (raw*256 /200) clamped to: ...326.4",
         "path": "Movement"
       },
       {
@@ -3989,7 +3989,7 @@ const matrixData = [
         "name": "Rear left wheel speed",
         "unit": "kilometersPerHour",
         "suggestedMetric": "",
-        "scaling": "raw*256 /200",
+        "scaling": "value = (raw*256 /200) clamped to: ...326.4",
         "path": "Movement"
       }
     ],
@@ -4113,7 +4113,7 @@ const matrixData = [
         "name": "Rear right tire temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-30",
+        "scaling": "value = (raw+-40) clamped to: -30...100",
         "path": "Tires"
       },
       {
@@ -4121,7 +4121,7 @@ const matrixData = [
         "name": "Rear left tire temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-30",
+        "scaling": "value = (raw+-40) clamped to: -30...100",
         "path": "Tires"
       },
       {
@@ -4129,7 +4129,7 @@ const matrixData = [
         "name": "Front right tire temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-30",
+        "scaling": "value = (raw+-40) clamped to: -30...100",
         "path": "Tires"
       },
       {
@@ -4137,7 +4137,7 @@ const matrixData = [
         "name": "Front left tire temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-30",
+        "scaling": "value = (raw+-40) clamped to: -30...100",
         "path": "Tires"
       }
     ],
@@ -4147,7 +4147,7 @@ const matrixData = [
         "name": "Rear right tire pressure",
         "unit": "psi",
         "suggestedMetric": "rearRightTirePressure",
-        "scaling": "raw/4.125",
+        "scaling": "value = (raw/4.125 +-5.6969697) clamped to: ...56.8",
         "path": "Tires"
       },
       {
@@ -4155,7 +4155,7 @@ const matrixData = [
         "name": "Rear left tire pressure",
         "unit": "psi",
         "suggestedMetric": "rearLeftTirePressure",
-        "scaling": "raw/4.125",
+        "scaling": "value = (raw/4.125 +-5.6969697) clamped to: ...56.8",
         "path": "Tires"
       },
       {
@@ -4163,7 +4163,7 @@ const matrixData = [
         "name": "Front right tire pressure",
         "unit": "psi",
         "suggestedMetric": "frontRightTirePressure",
-        "scaling": "raw/4.125",
+        "scaling": "value = (raw/4.125 +-5.6969697) clamped to: ...56.8",
         "path": "Tires"
       },
       {
@@ -4171,7 +4171,7 @@ const matrixData = [
         "name": "Front left tire pressure",
         "unit": "psi",
         "suggestedMetric": "frontLeftTirePressure",
-        "scaling": "raw/4.125",
+        "scaling": "value = (raw/4.125 +-5.6969697) clamped to: ...56.8",
         "path": "Tires"
       }
     ],
@@ -4337,7 +4337,7 @@ const matrixData = [
         "name": "Front right wheel speed",
         "unit": "kilometersPerHour",
         "suggestedMetric": "",
-        "scaling": "raw*256 /200",
+        "scaling": "value = (raw*256 /200) clamped to: ...326.4",
         "path": "Movement"
       },
       {
@@ -4345,7 +4345,7 @@ const matrixData = [
         "name": "Front left wheel speed",
         "unit": "kilometersPerHour",
         "suggestedMetric": "",
-        "scaling": "raw*256 /200",
+        "scaling": "value = (raw*256 /200) clamped to: ...326.4",
         "path": "Movement"
       },
       {
@@ -4353,7 +4353,7 @@ const matrixData = [
         "name": "Rear right wheel speed",
         "unit": "kilometersPerHour",
         "suggestedMetric": "",
-        "scaling": "raw*256 /200",
+        "scaling": "value = (raw*256 /200) clamped to: ...326.4",
         "path": "Movement"
       },
       {
@@ -4361,7 +4361,7 @@ const matrixData = [
         "name": "Rear left wheel speed",
         "unit": "kilometersPerHour",
         "suggestedMetric": "",
-        "scaling": "raw*256 /200",
+        "scaling": "value = (raw*256 /200) clamped to: ...326.4",
         "path": "Movement"
       }
     ],
@@ -4372,7 +4372,7 @@ const matrixData = [
         "name": "Fuel level (volume)",
         "unit": "liters",
         "suggestedMetric": "",
-        "scaling": "raw/2",
+        "scaling": "value = (raw/2) clamped to: ...127.5",
         "path": "Fuel"
       }
     ],
@@ -4485,7 +4485,7 @@ const matrixData = [
         "name": "Previous trip distance",
         "unit": "kilometers",
         "suggestedMetric": "",
-        "scaling": "raw/100",
+        "scaling": "value = (raw/100) clamped to: ...655.35",
         "path": "Trips"
       },
       {
@@ -4493,7 +4493,7 @@ const matrixData = [
         "name": "Variable valve timing oil temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "",
         "path": "Engine"
       },
       {
@@ -4501,7 +4501,7 @@ const matrixData = [
         "name": "Engine oil temperature",
         "unit": "celsius",
         "suggestedMetric": "",
-        "scaling": "raw+-40",
+        "scaling": "",
         "path": "Engine"
       }
     ],

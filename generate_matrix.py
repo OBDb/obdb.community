@@ -43,10 +43,17 @@ def parse_signalset(file_path):
                         components.append(f"*{fmt['mul']}")
                     if 'div' in fmt:
                         components.append(f"/{fmt['div']}")
-                    if 'min' in fmt:
-                        components.append(f"+{fmt['min']}")
+                    if 'add' in fmt:
+                        components.append(f"+{fmt['add']}")
                     if components:
-                        scaling = f"raw{' '.join(components)}"
+                        scaling = f"value = (raw{' '.join(components)})"
+                        if 'min' in fmt or 'max' in fmt:
+                            scaling += " clamped to: "
+                            if 'min' in fmt:
+                                scaling += f"{fmt['min']}"
+                            scaling += "..."
+                            if 'max' in fmt:
+                                scaling += f"{fmt['max']}"
                 
                 parameters.append({
                     'hdr': hdr,
