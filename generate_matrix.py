@@ -7,8 +7,52 @@ from pathlib import Path
 import argparse
 from html_generator import generate_html
 
+import multiprocessing
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import subprocess
+from pathlib import Path
+import argparse
+import json
+import os
+from html_generator import generate_html
+
+def handle_repo(org_name, repo, workspace_dir):
+    """Clone or update a single repository."""
+    repo_path = Path(workspace_dir) / repo
+    try:
+        if not repo_path.exists():
+            # Clone new repository
+            subprocess.run(
+                ['gh', 'repo', 'clone', f'{org_name}/{repo}', str(repo_path)],
+                check=True,
+                capture_output=True,
+                text=True
+            )
+            print(f"Cloned {repo}")
+        else:
+            # Update existing repository
+            subprocess.run(
+                ['git', 'fetch', '--all'],
+                check=True,
+                cwd=str(repo_path),
+                capture_output=True,
+                text=True
+            )
+            subprocess.run(
+                ['git', 'reset', '--hard', 'origin/main'],
+                check=True,
+                cwd=str(repo_path),
+                capture_output=True,
+                text=True
+            )
+            print(f"Updated {repo}")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"Error processing {repo}: {e.stderr}")
+        return False
+
 def clone_repos(org_name, workspace_dir):
-    """Clone all repositories from a GitHub organization."""
+    """Clone all repositories from a GitHub organization using parallel processing."""
     # Create workspace directory if it doesn't exist
     Path(workspace_dir).mkdir(parents=True, exist_ok=True)
     
@@ -35,18 +79,39 @@ def clone_repos(org_name, workspace_dir):
         if repo != 'SAEJ1979' and not repo.startswith('.')
     ]
     
-    print(f"Found {len(filtered_repos)} repositories to clone")
+    print(f"Found {len(filtered_repos)} repositories to process")
     
-    # Clone each repository
-    for repo in filtered_repos:
-        repo_path = Path(workspace_dir) / repo
-        if not repo_path.exists():
+    # Determine optimal number of workers based on CPU cores
+    num_workers = min(32, multiprocessing.cpu_count() * 2)  # Cap at 32 workers
+    
+    # Process repositories in parallel
+    successful = 0
+    failed = 0
+    
+    with ThreadPoolExecutor(max_workers=num_workers) as executor:
+        # Submit all tasks
+        future_to_repo = {
+            executor.submit(handle_repo, org_name, repo, workspace_dir): repo 
+            for repo in filtered_repos
+        }
+        
+        # Process completed tasks
+        for future in as_completed(future_to_repo):
+            repo = future_to_repo[future]
             try:
-                subprocess.run(['gh', 'repo', 'clone', f'{org_name}/{repo}', str(repo_path)], check=True)
-                print(f"Cloned {repo}")
-            except subprocess.CalledProcessError:
-                print(f"Error cloning {repo}")
-                continue
+                if future.result():
+                    successful += 1
+                else:
+                    failed += 1
+            except Exception as e:
+                print(f"Error processing {repo}: {str(e)}")
+                failed += 1
+    
+    print(f"\nProcessing completed:")
+    print(f"Successfully processed: {successful}")
+    print(f"Failed: {failed}")
+    if failed > 0:
+        print("Check the error messages above for details about failed repositories.")
 
 def parse_signalset(file_path):
     """Parse a signalset JSON file and extract parameter information."""
