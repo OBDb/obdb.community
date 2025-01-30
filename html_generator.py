@@ -120,8 +120,20 @@ def generate_html(matrix_data, output_dir):
             overflow-x: auto;
             min-width: 100%;
         }
-        .tabulator-col {
-            background-color: #f8f9fa;
+        .tabulator-col.column-hidden,
+        .tabulator-cell.column-hidden {
+            width: 0 !important;
+            min-width: 0 !important;
+            max-width: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            pointer-events: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .tabulator-col:not(.column-hidden),
+        .tabulator-cell:not(.column-hidden) {
+            transition: all 0.3s ease;
         }
         .tabulator-col-group {
             background-color: #e9ecef;
@@ -341,32 +353,137 @@ def generate_html(matrix_data, output_dir):
 
         // Filter functions
         const filters = ["make", "model", "parameter", "metric"];
+        
+        function updateColumnVisibility() {
+            // Get current filter values
+            const filterValues = {
+                metric: document.getElementById('metricFilter').value.toLowerCase(),
+                parameter: document.getElementById('parameterFilter').value.toLowerCase()
+            };
+
+            // Get all visible rows
+            const visibleRows = table.getRows("active");
+            
+            // Get all signal columns (excluding make/model)
+            const signalColumns = table.getColumns().filter(col => {
+                const field = col.getField();
+                return field && field.includes('_');
+            });
+            
+            // Helper function to check if a signal matches current filters
+            function signalMatchesFilters(signal) {
+                if (filterValues.metric) {
+                    if (!signal.suggestedMetric || 
+                        !signal.suggestedMetric.toLowerCase().includes(filterValues.metric)) {
+                        return false;
+                    }
+                }
+                if (filterValues.parameter) {
+                    if (!signal.id.toLowerCase().includes(filterValues.parameter)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            // Check each column
+            signalColumns.forEach(col => {
+                const field = col.getField();
+                
+                // Check if any visible row has matching content in this column
+                const hasContent = visibleRows.some(row => {
+                    const signals = row.getData()[field];
+                    return signals && signals.some(signalMatchesFilters);
+                });
+                
+                // Get all elements related to this column (header and cells)
+                const colElement = col.getElement();
+                const cells = visibleRows.map(row => row.getCell(field));
+                
+                if (hasContent) {
+                    colElement.classList.remove('column-hidden');
+                    cells.forEach(cell => {
+                        if (cell && cell.getElement()) {
+                            cell.getElement().classList.remove('column-hidden');
+                        }
+                    });
+                } else {
+                    colElement.classList.add('column-hidden');
+                    cells.forEach(cell => {
+                        if (cell && cell.getElement()) {
+                            cell.getElement().classList.add('column-hidden');
+                        }
+                    });
+                }
+                
+                // Update parent group visibility
+                const parentGroup = colElement.closest('.tabulator-col-group');
+                if (parentGroup) {
+                    const siblingCols = parentGroup.querySelectorAll('.tabulator-col');
+                    const allHidden = Array.from(siblingCols).every(col => 
+                        col.classList.contains('column-hidden')
+                    );
+                    
+                    if (allHidden) {
+                        parentGroup.classList.add('column-hidden');
+                    } else {
+                        parentGroup.classList.remove('column-hidden');
+                    }
+                }
+            });
+        }
+
         filters.forEach(filter => {
             document.getElementById(filter + "Filter").addEventListener("input", function(e) {
-                let filterField;
-                let value = e.target.value;
+                let value = e.target.value.toLowerCase();
                 
                 switch(filter) {
                     case "metric":
-                        table.setFilter(function(data) {
-                            return data.signals.some(signal => 
-                                signal.suggestedMetric && 
-                                signal.suggestedMetric.toLowerCase().includes(value.toLowerCase())
-                            );
-                        });
-                        break;
                     case "parameter":
-                        table.setFilter(function(data) {
-                            return data.signals.some(signal => 
-                                signal.id.toLowerCase().includes(value.toLowerCase())
-                            );
+                        table.setFilter(function(row) {
+                            // Search through all columns that contain signals
+                            return Object.entries(row).some(([key, signals]) => {
+                                // Skip non-signal columns like make/model
+                                if (!Array.isArray(signals)) return false;
+                                
+                                return signals.some(signal => {
+                                    if (filter === "metric") {
+                                        return signal.suggestedMetric && 
+                                               signal.suggestedMetric.toLowerCase().includes(value);
+                                    } else { // parameter
+                                        return signal.id.toLowerCase().includes(value);
+                                    }
+                                });
+                            });
                         });
+                        
+                        // Update column visibility after a small delay to ensure filter is applied
+                        setTimeout(updateColumnVisibility, 100);
                         break;
                     default:
                         table.setFilter(filter, "like", value);
+                        setTimeout(updateColumnVisibility, 100);
                 }
             });
         });
+
+        function resetFilters() {
+            filters.forEach(filter => {
+                document.getElementById(filter + "Filter").value = "";
+            });
+            table.clearFilter();
+            
+            // Remove all column-hidden classes
+            document.querySelectorAll('.column-hidden').forEach(el => {
+                el.classList.remove('column-hidden');
+            });
+        }
+
+        // Subscribe to tableBuilt event to ensure everything is initialized
+        table.on("tableBuilt", function(){
+            updateColumnVisibility();
+        });
+
 
         function resetFilters() {
             document.getElementById("makeFilter").value = "";
