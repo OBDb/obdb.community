@@ -112,6 +112,28 @@ def generate_html(matrix_data, output_dir):
             top: 0;
             z-index: 100;
         }
+        .tabulator {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        .tabulator-tableholder {
+            overflow-x: auto;
+            min-width: 100%;
+        }
+        .tabulator-col {
+            background-color: #f8f9fa;
+        }
+        .tabulator-col-group {
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+        .tabulator-col-resize-handle {
+            width: 8px;
+            margin-left: -4px;
+        }
+        .tabulator-col-resize-handle:hover {
+            background-color: #0066cc;
+        }
         .tabulator-row.tabulator-group {
             background-color: #f8f9fa !important;
             border-bottom: 2px solid #ddd;
@@ -174,10 +196,16 @@ def generate_html(matrix_data, output_dir):
             }).join('');
         }
 
-        // Create column definitions
+        // Create column definitions starting with make/model
         const columns = [
-            {title: "Make", field: "make", frozen: true, width: 120},
-            {title: "Model", field: "model", frozen: true, width: 120},
+            {
+                title: "Vehicle",
+                frozen: true,
+                columns: [
+                    {title: "Make", field: "make", width: 120, resizable: true, minWidth: 50},
+                    {title: "Model", field: "model", width: 120, resizable: true, minWidth: 50}
+                ]
+            }
         ];
 
         // Group columns by ECU
@@ -192,6 +220,9 @@ def generate_html(matrix_data, output_dir):
                 formatter: formatSignalCell,
                 headerSort: false,
                 width: 150,
+                resizable: true,
+                minWidth: 50,
+                maxWidth: 500,
             });
         });
 
@@ -199,14 +230,15 @@ def generate_html(matrix_data, output_dir):
         Object.entries(ecuGroups).forEach(([ecu, pidColumns]) => {
             columns.push({
                 title: ecu,
-                columns: pidColumns
+                columns: pidColumns,
+                resizable: true,
             });
         });
 
         // Initialize Tabulator
         const table = new Tabulator("#matrix", {
             data: matrixData,
-            layout: "fitDataTable",
+            layout: "fitColumns",
             columns: columns,
             height: "85vh",
             tooltips: false,
