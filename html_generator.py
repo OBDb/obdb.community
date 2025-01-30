@@ -120,7 +120,13 @@ def generate_html(matrix_data, output_dir):
             overflow-x: auto;
             min-width: 100%;
         }
-        .tabulator-col.column-hidden,
+        .tabulator-row {
+            transition: all 0.3s ease;
+        }
+        .tabulator-cell {
+            height: auto !important;
+            transition: all 0.3s ease;
+        }
         .tabulator-cell.column-hidden {
             width: 0 !important;
             min-width: 0 !important;
@@ -129,11 +135,9 @@ def generate_html(matrix_data, output_dir):
             border: none !important;
             pointer-events: none;
             opacity: 0;
-            transition: all 0.3s ease;
-        }
-        .tabulator-col:not(.column-hidden),
-        .tabulator-cell:not(.column-hidden) {
-            transition: all 0.3s ease;
+            height: 0 !important;
+            overflow: hidden;
+            margin: 0 !important;
         }
         .tabulator-col-group {
             background-color: #e9ecef;
@@ -272,12 +276,6 @@ def generate_html(matrix_data, output_dir):
             columns: columns,
             height: "85vh",
             tooltips: false,
-            groupBy: "make",
-            groupHeader: function(value, count, data, group){
-                return `${value} <span style="color: #666; font-size: 0.9em;">(${count} models)</span>`;
-            },
-            groupToggleElement: "header",
-            groupStartOpen: false,
         });
 
         // Handle ECU column group toggling
@@ -431,6 +429,14 @@ def generate_html(matrix_data, output_dir):
                     }
                 }
             });
+
+            // Force row height recalculation after all columns are processed
+            visibleRows.forEach(row => {
+                table.rowManager.resetRowHeights([row]);
+            });
+            
+            // Ensure table layout is updated
+            table.redraw(true);
         }
 
         filters.forEach(filter => {

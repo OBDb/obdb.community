@@ -12,14 +12,41 @@ def clone_repos(org_name, workspace_dir):
     # Create workspace directory if it doesn't exist
     Path(workspace_dir).mkdir(parents=True, exist_ok=True)
     
-    # Get list of repositories using GitHub API
-    cmd = f'gh repo list {org_name} --json name -q ".[].name"'
-    repos = subprocess.check_output(cmd, shell=True).decode().strip().split('\n')
+    # Get all repo names using GitHub API with pagination
+    cmd = [
+        'gh', 'api',
+        '-H', 'Accept: application/vnd.github+json',
+        '-H', 'X-GitHub-Api-Version: 2022-11-28',
+        f'/orgs/{org_name}/repos',
+        '--jq', '.[].name',
+        '-X', 'GET',
+        '--paginate'
+    ]
     
-    for repo in repos:
+    try:
+        repos = subprocess.check_output(cmd).decode().strip().split('\n')
+    except subprocess.CalledProcessError as e:
+        print(f"Error fetching repositories: {e}")
+        return
+    
+    # Filter out excluded repos
+    filtered_repos = [
+        repo for repo in repos 
+        if repo != 'SAEJ1979' and not repo.startswith('.')
+    ]
+    
+    print(f"Found {len(filtered_repos)} repositories to clone")
+    
+    # Clone each repository
+    for repo in filtered_repos:
         repo_path = Path(workspace_dir) / repo
         if not repo_path.exists():
-            subprocess.run(['gh', 'repo', 'clone', f'{org_name}/{repo}', str(repo_path)], check=True)
+            try:
+                subprocess.run(['gh', 'repo', 'clone', f'{org_name}/{repo}', str(repo_path)], check=True)
+                print(f"Cloned {repo}")
+            except subprocess.CalledProcessError:
+                print(f"Error cloning {repo}")
+                continue
 
 def parse_signalset(file_path):
     """Parse a signalset JSON file and extract parameter information."""
@@ -45,15 +72,17 @@ def parse_signalset(file_path):
                         components.append(f"/{fmt['div']}")
                     if 'add' in fmt:
                         components.append(f"+{fmt['add']}")
-                    if components:
-                        scaling = f"value = (raw{' '.join(components)})"
-                        if 'min' in fmt or 'max' in fmt:
-                            scaling += " clamped to: "
-                            if 'min' in fmt:
-                                scaling += f"{fmt['min']}"
-                            scaling += "..."
-                            if 'max' in fmt:
-                                scaling += f"{fmt['max']}"
+                        
+                    scaling = f"raw{' '.join(components)}"
+                    
+                    # Add clamping if min/max are specified
+                    if 'min' in fmt or 'max' in fmt:
+                        clamping = []
+                        if 'min' in fmt:
+                            clamping.append(str(fmt['min']))
+                        if 'max' in fmt:
+                            clamping.append(str(fmt['max']))
+                        scaling += f" clamped to [{', '.join(clamping)}]"
                 
                 parameters.append({
                     'hdr': hdr,
