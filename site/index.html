@@ -105,22 +105,22 @@
 
         // Create column definitions
         const columns = [
-            {title: "Make", field: "make", frozen: true},
-            {title: "Model", field: "model", frozen: true},
+            {title: "Make", field: "make", frozen: true, width: 120},
+            {title: "Model", field: "model", frozen: true, width: 120},
         ];
 
         // Group columns by ECU
         const ecuGroups = {};
-        ecuPidCombos.forEach(([ecu, pid]) => {
+        ecuPidCombos.forEach(([ecu, paramId]) => {
             if (!ecuGroups[ecu]) {
                 ecuGroups[ecu] = [];
             }
             ecuGroups[ecu].push({
-                title: pid,
-                field: `${ecu}_${pid}`,
+                title: paramId,
+                field: `${ecu}_${paramId}`,
                 formatter: formatSignalCell,
                 headerSort: false,
-                width: 200,
+                width: 150,
             });
         });
 

@@ -2,7 +2,7 @@ const matrixData = [
   {
     "make": "Hyundai",
     "model": "IONIQ-5",
-    "744_22": [
+    "744_22E001": [
       {
         "id": "IONIQ5_DC_CHRG_STATE",
         "name": "DC charging state",
@@ -10,7 +10,9 @@ const matrixData = [
         "suggestedMetric": "isCharging",
         "scaling": "",
         "path": "Battery"
-      },
+      }
+    ],
+    "744_22E003": [
       {
         "id": "IONIQ5_HVBAT_SOC_VCMS",
         "name": "HV battery charge",
@@ -60,10 +62,13 @@ const matrixData = [
         "path": "Battery"
       }
     ],
-    "750_21": [],
-    "750_22": [],
-    "753_22": [],
-    "7A0_22": [
+    "750_2116": [],
+    "750_2130": [],
+    "750_221004": [],
+    "750_221005": [],
+    "750_222021": [],
+    "753_221022": [],
+    "7A0_22C00B": [
       {
         "id": "IONIQ5_TP_FL",
         "name": "Front left tire pressure",
@@ -97,8 +102,8 @@ const matrixData = [
         "path": "Tires"
       }
     ],
-    "7B0_21": [],
-    "7B3_22": [
+    "7B0_2103": [],
+    "7B3_220100": [
       {
         "id": "IONIQ5_VSS",
         "name": "Vehicle speed",
@@ -108,8 +113,8 @@ const matrixData = [
         "path": "Movement"
       }
     ],
-    "7C0_21": [],
-    "7C6_22": [
+    "7C0_2129": [],
+    "7C6_22B002": [
       {
         "id": "IONIQ5_ODO_KM",
         "name": "Odometer (Metric)",
@@ -127,9 +132,102 @@ const matrixData = [
         "path": "Trips"
       }
     ],
-    "7E0_01": [],
-    "7E0_21": [],
-    "7E4_22": [
+    "7E0_0101": [],
+    "7E0_0102": [],
+    "7E0_0103": [],
+    "7E0_0104": [],
+    "7E0_0105": [],
+    "7E0_0106": [],
+    "7E0_0107": [],
+    "7E0_0108": [],
+    "7E0_0109": [],
+    "7E0_010A": [],
+    "7E0_010B": [],
+    "7E0_010C": [],
+    "7E0_010D": [],
+    "7E0_010E": [],
+    "7E0_010F": [],
+    "7E0_0110": [],
+    "7E0_0111": [],
+    "7E0_0112": [],
+    "7E0_0113": [],
+    "7E0_0114": [],
+    "7E0_0115": [],
+    "7E0_011C": [],
+    "7E0_011D": [],
+    "7E0_011E": [],
+    "7E0_011F": [],
+    "7E0_0121": [],
+    "7E0_0122": [],
+    "7E0_0123": [],
+    "7E0_0124": [],
+    "7E0_012C": [],
+    "7E0_012D": [],
+    "7E0_012E": [],
+    "7E0_012F": [],
+    "7E0_0130": [],
+    "7E0_0131": [],
+    "7E0_0132": [],
+    "7E0_0133": [],
+    "7E0_013C": [],
+    "7E0_013D": [],
+    "7E0_013E": [],
+    "7E0_013F": [],
+    "7E0_0141": [],
+    "7E0_0142": [],
+    "7E0_0143": [],
+    "7E0_0144": [],
+    "7E0_0145": [],
+    "7E0_0146": [],
+    "7E0_0147": [],
+    "7E0_0148": [],
+    "7E0_0149": [],
+    "7E0_014A": [],
+    "7E0_014B": [],
+    "7E0_014C": [],
+    "7E0_014D": [],
+    "7E0_014E": [],
+    "7E0_014F": [],
+    "7E0_0150": [],
+    "7E0_0151": [],
+    "7E0_0152": [],
+    "7E0_0153": [],
+    "7E0_0154": [],
+    "7E0_0155": [],
+    "7E0_0156": [],
+    "7E0_0157": [],
+    "7E0_0158": [],
+    "7E0_0159": [],
+    "7E0_015A": [],
+    "7E0_015B": [],
+    "7E0_015C": [],
+    "7E0_015D": [],
+    "7E0_015E": [],
+    "7E0_015F": [],
+    "7E0_0161": [],
+    "7E0_0162": [],
+    "7E0_0163": [],
+    "7E0_0164": [],
+    "7E0_0165": [],
+    "7E0_0166": [],
+    "7E0_0167": [],
+    "7E0_0169": [],
+    "7E0_016C": [],
+    "7E0_017F": [],
+    "7E0_0184": [],
+    "7E0_018D": [],
+    "7E0_018E": [],
+    "7E0_019A": [],
+    "7E0_019D": [],
+    "7E0_019E": [],
+    "7E0_01A6": [],
+    "7E0_01AA": [],
+    "7E0_01B2": [],
+    "7E0_01D3": [],
+    "7E0_2128": [],
+    "7E0_2151": [],
+    "7E0_2185": [],
+    "7E4_220101": [
       {
         "id": "IONIQ5_HVBAT_SOC",
         "name": "HV battery charge (dash)",
@@ -137,7 +235,9 @@ const matrixData = [
         "suggestedMetric": "stateOfCharge",
         "scaling": "raw*0.5",
         "path": "Battery"
-      },
+      }
+    ],
+    "7E4_220102": [
       {
         "id": "IONIQ5_HVBAT_CMU001_VOLT",
         "name": "HV battery module 001 voltage",
@@ -393,7 +493,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/50",
         "path": "Battery.Modules.032"
-      },
+      }
+    ],
+    "7E4_220103": [
       {
         "id": "IONIQ5_HVBAT_CMU033_VOLT",
         "name": "HV battery module 033 voltage",
@@ -649,7 +751,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/50",
         "path": "Battery.Modules.064"
-      },
+      }
+    ],
+    "7E4_220104": [
       {
         "id": "IONIQ5_HVBAT_CMU065_VOLT",
         "name": "HV battery module 065 voltage",
@@ -905,7 +1009,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/50",
         "path": "Battery.Modules.096"
-      },
+      }
+    ],
+    "7E4_220105": [
       {
         "id": "IONIQ5_HVBAT_SOH",
         "name": "HV battery state of health",
@@ -929,7 +1035,9 @@ const matrixData = [
         "suggestedMetric": "stateOfCharge",
         "scaling": "raw*0.5",
         "path": "Battery"
-      },
+      }
+    ],
+    "7E4_22010A": [
       {
         "id": "IONIQ5_HVBAT_CMU097_VOLT",
         "name": "HV battery module 097 voltage",
@@ -1185,7 +1293,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/50",
         "path": "Battery.Modules.128"
-      },
+      }
+    ],
+    "7E4_22010B": [
       {
         "id": "IONIQ5_HVBAT_CMU129_VOLT",
         "name": "HV battery module 129 voltage",
@@ -1441,7 +1551,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/50",
         "path": "Battery.Modules.160"
-      },
+      }
+    ],
+    "7E4_22010C": [
       {
         "id": "IONIQ5_HVBAT_CMU161_VOLT",
         "name": "HV battery module 161 voltage",
@@ -1703,16 +1815,20 @@ const matrixData = [
   {
     "make": "SAEJ1979",
     "model": "",
-    "744_22": [],
-    "750_21": [],
-    "750_22": [],
-    "753_22": [],
-    "7A0_22": [],
-    "7B0_21": [],
-    "7B3_22": [],
-    "7C0_21": [],
-    "7C6_22": [],
-    "7E0_01": [
+    "744_22E001": [],
+    "744_22E003": [],
+    "750_2116": [],
+    "750_2130": [],
+    "750_221004": [],
+    "750_221005": [],
+    "750_222021": [],
+    "753_221022": [],
+    "7A0_22C00B": [],
+    "7B0_2103": [],
+    "7B3_220100": [],
+    "7C0_2129": [],
+    "7C6_22B002": [],
+    "7E0_0101": [
       {
         "id": "MIL",
         "name": "Malfunction indicator lamp",
@@ -1912,7 +2028,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "Mapped values: {'0': {'description': 'Spark ignition monitors supported', 'value': 'SPARK'}, '1': {'description': 'Compression ignition monitors supported', 'value': 'COMPRESSION'}}",
         "path": "DTCs.Generic.Support"
-      },
+      }
+    ],
+    "7E0_0102": [
       {
         "id": "DTCFRZF",
         "name": "DTC that caused required freeze frame data storage",
@@ -1920,7 +2038,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "DTCs.Generic"
-      },
+      }
+    ],
+    "7E0_0103": [
       {
         "id": "FUELSYS1",
         "name": "Fuel system 1 status",
@@ -1936,7 +2056,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "Mapped values: {'0': {'description': 'Engine is off', 'value': 'OFF'}, '1': {'description': 'Open loop - has not yet satisfied conditions to go closed loop', 'value': 'OL'}, '128': {'description': 'Open loop - due to detected system fault (Bank 2)', 'value': 'OL-Fault B2'}, '16': {'description': 'Closed loop, but fault with at least one oxygen sensor - may be using single oxygen sensor for fuel control', 'value': 'CL-Fault'}, '2': {'description': 'Closed loop - using oxygen sensor(s) as feedback for fuel control', 'value': 'CL'}, '32': {'description': 'Open loop - has not yet satisfied conditions to go closed loop (Bank 2)', 'value': 'OL B2'}, '4': {'description': 'Open loop due to driving conditions (e.g. power enrichment, deceleration enleanment)', 'value': 'OL-Drive'}, '64': {'description': 'Open loop due to driving conditions (Bank 2) (e.g. power enrichment, deceleration enleanment, cylinder deactivation)', 'value': 'OL-Drive B2'}, '8': {'description': 'Open loop - due to detected system fault', 'value': 'OL-Fault'}}",
         "path": "Fuel.Generic"
-      },
+      }
+    ],
+    "7E0_0104": [
       {
         "id": "LOAD_PCT",
         "name": "Calculated engine load",
@@ -1944,7 +2066,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0105": [
       {
         "id": "ECT",
         "name": "Engine coolant temperature",
@@ -1952,7 +2076,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-40",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0106": [
       {
         "id": "SHRTFT1",
         "name": "Short term fuel trim (bank 1)",
@@ -1960,7 +2086,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0107": [
       {
         "id": "LONGFT1",
         "name": "Long term fuel trim (bank 1)",
@@ -1968,7 +2096,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0108": [
       {
         "id": "SHRTFT2",
         "name": "Short term fuel trim (bank 2)",
@@ -1984,7 +2114,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0109": [
       {
         "id": "LONGFT2",
         "name": "Long term fuel trim (bank 2)",
@@ -2000,7 +2132,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_010A": [
       {
         "id": "FP",
         "name": "Fuel pressure",
@@ -2008,7 +2142,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*3",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_010B": [
       {
         "id": "MAP",
         "name": "Intake manifold absolute pressure",
@@ -2016,7 +2152,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_010C": [
       {
         "id": "RPM",
         "name": "Engine RPM",
@@ -2024,7 +2162,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/4",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_010D": [
       {
         "id": "VSS",
         "name": "Vehicle speed",
@@ -2032,7 +2172,9 @@ const matrixData = [
         "suggestedMetric": "speed",
         "scaling": "",
         "path": "Movement.Generic"
-      },
+      }
+    ],
+    "7E0_010E": [
       {
         "id": "SPARKADV",
         "name": "Timing advance",
@@ -2040,7 +2182,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/2 +-64",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_010F": [
       {
         "id": "IAT",
         "name": "Intake air temperature",
@@ -2048,7 +2192,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-40",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0110": [
       {
         "id": "MAF",
         "name": "Air flow rate from mass air flow sensor",
@@ -2056,7 +2202,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0111": [
       {
         "id": "TP",
         "name": "Absolute throttle position",
@@ -2064,7 +2212,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Control.Generic"
-      },
+      }
+    ],
+    "7E0_0112": [
       {
         "id": "AIR_STAT",
         "name": "Commanded secondary air status",
@@ -2072,7 +2222,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "Mapped values: {'1': {'description': 'Upstream of first catalytic converter', 'value': 'UPS'}, '2': {'description': 'Downstream of first catalytic converter inlet', 'value': 'DNS'}, '4': {'description': 'Atmosphere / off', 'value': 'OFF'}, '8': {'description': 'Pump commanded on for diagnostics', 'value': 'DIAG'}}",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0113": [
       {
         "id": "O2S24_EXISTS",
         "name": "02S Bank 2, Sensor 4 present",
@@ -2136,7 +2288,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Engine.Generic.OxygenSensors"
-      },
+      }
+    ],
+    "7E0_0114": [
       {
         "id": "O2S11",
         "name": "O2S Output Voltage Bank 1, Sensor 1",
@@ -2152,7 +2306,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic.OxygenSensors"
-      },
+      }
+    ],
+    "7E0_0115": [
       {
         "id": "O2S12",
         "name": "O2S Output Voltage Bank 1, Sensor 2",
@@ -2168,7 +2324,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic.OxygenSensors"
-      },
+      }
+    ],
+    "7E0_011C": [
       {
         "id": "OBDSUP",
         "name": "OBD requirements to which vehicle is designed",
@@ -2176,7 +2334,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "Mapped values: {'1': {'description': 'OBD II (California ARB)', 'value': 'OBD II'}, '10': {'description': 'JOBD', 'value': 'JOBD'}, '11': {'description': 'JOBD & OBD II', 'value': 'JOBD & OBD II'}, '12': {'description': 'JOBD & EOBD', 'value': 'JOBD & EOBD'}, '13': {'description': 'JOBD, EOBD, OBD II', 'value': 'JOBD, EOBD, OBD II'}, '14': {'description': 'Heavy duty vehicles (EURO IV) B1', 'value': 'EURO IV B1'}, '15': {'description': 'Heavy duty vehicles (EURO V) B2', 'value': 'EURO V B2'}, '16': {'description': 'Heavy duty vehicles (EURO EEC) C (gas engines)', 'value': 'EURO C'}, '17': {'description': 'Engine manufacturer diagnostics (EMD)', 'value': 'EMD'}, '18': {'description': 'Engine Manufacturer Diagnostics Enhanced (EMD+)', 'value': 'EMD+'}, '19': {'description': 'Heavy Duty On-Board Diagnostics (Child/Partial)', 'value': 'HD OBD-C'}, '2': {'description': 'OBD (Federal EPA)', 'value': 'OBD'}, '20': {'description': 'Heavy Duty On-Board Diagnostics', 'value': 'HD OBD'}, '21': {'description': 'World Wide Harmonized OBD', 'value': 'WWH OBD'}, '23': {'description': 'Heavy Duty Euro OBD Stage I without NOx Control', 'value': 'HD EOBD-I'}, '24': {'description': 'Heavy Duty Euro OBD Stage I with NOx Control', 'value': 'HD EOBD-I N'}, '25': {'description': 'Heavy Duty Euro OBD Stage II without NOx Control', 'value': 'HD EOBD-II'}, '26': {'description': 'Heavy Duty Euro OBD Stage II with NOx Control', 'value': 'HD EOBD-II N'}, '27': {'description': 'Heavy Duty ZEV', 'value': 'HD-ZEV'}, '28': {'description': 'Brazil OBD Phase 1', 'value': 'OBDBr-1'}, '29': {'description': 'Brazil OBD Phase 2 and Phase 2+', 'value': 'OBDBr-2'}, '3': {'description': 'OBD & OBD II', 'value': 'OBD & OBD II'}, '30': {'description': 'Korean OBD', 'value': 'KOBD'}, '31': {'description': 'India BS4 OBD I', 'value': 'IOBD-I-BS4'}, '32': {'description': 'India BS4 OBD II', 'value': 'IOBD-II-BS4'}, '33': {'description': 'Euro VI', 'value': 'HD EOBD-VI'}, '34': {'description': 'OBD, OBD II and HD OBD', 'value': 'OBD, OBD II and HD OBD'}, '35': {'description': 'Brazil OBD Phase 3', 'value': 'OBDBr-3'}, '36': {'description': 'Motorcycle, Euro OBD-I', 'value': 'MC EOBD-I'}, '37': {'description': 'Motorcycle, Euro OBD-II', 'value': 'MC EOBD-II'}, '38': {'description': 'Motorcycle, China OBD-I', 'value': 'MC COBD-I'}, '39': {'description': 'Motorcycle, Taiwan OBD-I', 'value': 'MC TOBD-I'}, '4': {'description': 'OBD I', 'value': 'OBD I'}, '40': {'description': 'Motorcycle, Japan OBD-I', 'value': 'MC JOBD-I'}, '41': {'description': 'China Nationwide Stage 6', 'value': 'CN-OBD-6'}, '42': {'description': 'Brazil OBD Phase 7', 'value': 'OBDBr-P7'}, '43': {'description': 'China Heavy Duty VI', 'value': 'CN-HDOBD-VI'}, '44': {'description': 'India BS6 OBD I', 'value': 'IOBD-I-BS6'}, '45': {'description': 'India BS6 OBD II', 'value': 'IOBD-II-BS6'}, '46': {'description': 'India BSVI HD OBD', 'value': 'IHDOBD-BSVI'}, '47': {'description': 'Brazil OBD Phase 8', 'value': 'OBDBr-P8'}, '48': {'description': 'Japan Heavy Duty OBD-II', 'value': 'HD-JOBD-II'}, '49': {'description': 'Korea Heavy Duty OBD-II', 'value': 'HD-KOBD-II'}, '5': {'description': 'Not OBD compliant', 'value': 'NO OBD'}, '50': {'description': 'China Off-Road IV OBD', 'value': 'CN-OROBD-IV'}, '51': {'description': 'Light Duty ZEV, ACC-II', 'value': 'CARB ACC-II'}, '52': {'description': 'Motorcycle, Japan OBD-II', 'value': 'MC JOBD-II'}, '53': {'description': 'Motorcycle, California (CARB) OBD', 'value': 'MC CARB OBD'}, '54': {'description': 'Motorcycle, Federal (EPA) OBD', 'value': 'MC EPA OBD'}, '55': {'description': 'Motorcycle, 50-State (CARB & EPA) OBD', 'value': 'MC CARB & EPA OBD'}, '56': {'description': 'Heavy Duty ZEV, CARB ZEP', 'value': 'HD ZEV CARB ZEP'}, '57': {'description': 'Light Duty ZEV, CARB ACC-II and EPA Tier 4 (GTR 22)', 'value': 'CARB ACC-II & EPA TIER4'}, '58': {'description': 'Light Duty ZEV, EPA Tier 4 (GTR 22)', 'value': 'EPA TIER4'}, '59': {'description': 'EPA HD OBD', 'value': 'EPA HD'}, '6': {'description': 'EOBD', 'value': 'EOBD'}, '7': {'description': 'EOBD & OBD II', 'value': 'EOBD & OBD II'}, '8': {'description': 'EOBD & OBD', 'value': 'EOBD & OBD'}, '9': {'description': 'EOBD, OBD, OBD II', 'value': 'EOBD, OBD, OBD II'}}",
         "path": "OBD.Generic"
-      },
+      }
+    ],
+    "7E0_011D": [
       {
         "id": "O2S42_EXISTS",
         "name": "02S Bank 4, Sensor 2 present",
@@ -2240,7 +2400,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_011E": [
       {
         "id": "PTO_STAT",
         "name": "Power take off (PTO) status",
@@ -2248,7 +2410,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_011F": [
       {
         "id": "RUNTM",
         "name": "Time since engine start",
@@ -2256,7 +2420,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Clocks.Generic"
-      },
+      }
+    ],
+    "7E0_0121": [
       {
         "id": "MIL_DIST",
         "name": "Distance travelled while MIL was activated",
@@ -2264,7 +2430,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "DTCs.Generic"
-      },
+      }
+    ],
+    "7E0_0122": [
       {
         "id": "FRP_REL",
         "name": "Fuel pressure relative to manifold vacuum",
@@ -2272,7 +2440,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*0.079",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0123": [
       {
         "id": "FRP",
         "name": "Fuel rail pressure",
@@ -2280,7 +2450,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*10",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0124": [
       {
         "id": "LAMBDA11_WIDE",
         "name": "Lambda value, Equivalence Ratio Bank 1, Sensor 1",
@@ -2296,7 +2468,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/8196",
         "path": "Engine.Generic.OxygenSensors"
-      },
+      }
+    ],
+    "7E0_012C": [
       {
         "id": "EGR_PCT",
         "name": "Commanded EGR",
@@ -2304,7 +2478,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_012D": [
       {
         "id": "EGR_ERR",
         "name": "EGR error",
@@ -2312,7 +2488,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_012E": [
       {
         "id": "EVAP_PCT",
         "name": "Commanded evaporative purge",
@@ -2320,7 +2498,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_012F": [
       {
         "id": "FLI",
         "name": "Fuel tank level",
@@ -2328,7 +2508,9 @@ const matrixData = [
         "suggestedMetric": "fuelTankLevel",
         "scaling": "raw*100 /255",
         "path": "Fuel.Generic"
-      },
+      }
+    ],
+    "7E0_0130": [
       {
         "id": "WARM_UPS",
         "name": "Number of warm-ups since diagnostic trouble codes cleared",
@@ -2336,7 +2518,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "DTCs.Generic"
-      },
+      }
+    ],
+    "7E0_0131": [
       {
         "id": "CLR_DIST",
         "name": "Distance traveled since diagnostic trouble codes cleared",
@@ -2344,7 +2528,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "DTCs.Generic"
-      },
+      }
+    ],
+    "7E0_0132": [
       {
         "id": "EVAP_VP",
         "name": "Evap system vapor pressure",
@@ -2352,7 +2538,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/4000 +-8192",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0133": [
       {
         "id": "BARO",
         "name": "Barometric pressure",
@@ -2360,7 +2548,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_013C": [
       {
         "id": "CATEMP11",
         "name": "Catalyst temperature bank 1, sensor 1",
@@ -2368,7 +2558,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/10 +-40",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_013D": [
       {
         "id": "CATEMP21",
         "name": "Catalyst temperature bank 2, sensor 1",
@@ -2376,7 +2568,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/10 +-40",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_013E": [
       {
         "id": "CATEMP12",
         "name": "Catalyst temperature bank 1, sensor 2",
@@ -2384,7 +2578,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/10 +-40",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_013F": [
       {
         "id": "CATEMP22",
         "name": "Catalyst temperature bank 2, sensor 2",
@@ -2392,7 +2588,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/10 +-40",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0141": [
       {
         "id": "CCM_CMPL",
         "name": "Comprehensive component monitoring completed",
@@ -2576,7 +2774,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "Mapped values: {'0': {'description': 'Spark ignition monitors supported', 'value': 'SPARK'}, '1': {'description': 'Compression ignition monitors supported', 'value': 'COMPRESSION'}}",
         "path": "DTCs.Generic.Support"
-      },
+      }
+    ],
+    "7E0_0142": [
       {
         "id": "VPWR",
         "name": "Control module voltage",
@@ -2584,7 +2784,9 @@ const matrixData = [
         "suggestedMetric": "starterBatteryVoltage",
         "scaling": "raw/1000",
         "path": "Battery.Generic"
-      },
+      }
+    ],
+    "7E0_0143": [
       {
         "id": "LOAD_ABS",
         "name": "Absolute load value",
@@ -2592,7 +2794,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0144": [
       {
         "id": "EQ_RAT",
         "name": "Commanded equivalence ratio",
@@ -2600,7 +2804,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*2 /65535",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0145": [
       {
         "id": "TP_R",
         "name": "Relative throttle position",
@@ -2608,7 +2814,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Control.Generic"
-      },
+      }
+    ],
+    "7E0_0146": [
       {
         "id": "AAT",
         "name": "Ambient air temperature",
@@ -2616,7 +2824,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-40",
         "path": "Climate.Generic"
-      },
+      }
+    ],
+    "7E0_0147": [
       {
         "id": "TP_B",
         "name": "Absolute throttle position B",
@@ -2624,7 +2834,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Control.Generic"
-      },
+      }
+    ],
+    "7E0_0148": [
       {
         "id": "TP_C",
         "name": "Absolute throttle position C",
@@ -2632,7 +2844,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Control.Generic"
-      },
+      }
+    ],
+    "7E0_0149": [
       {
         "id": "APP_D",
         "name": "Accelerator pedal position D",
@@ -2640,7 +2854,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Control.Pedals.Generic"
-      },
+      }
+    ],
+    "7E0_014A": [
       {
         "id": "APP_E",
         "name": "Accelerator pedal position E",
@@ -2648,7 +2864,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Control.Pedals.Generic"
-      },
+      }
+    ],
+    "7E0_014B": [
       {
         "id": "APP_F",
         "name": "Accelerator pedal position F",
@@ -2656,7 +2874,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Control.Pedals.Generic"
-      },
+      }
+    ],
+    "7E0_014C": [
       {
         "id": "TAC_PCT",
         "name": "Commanded throttle actuator control",
@@ -2664,7 +2884,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_014D": [
       {
         "id": "MIL_TIME",
         "name": "Time run by the engine while MIL was activated",
@@ -2672,7 +2894,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "DTCs.Generic"
-      },
+      }
+    ],
+    "7E0_014E": [
       {
         "id": "CLR_TIME",
         "name": "Engine run time since diagnostic trouble codes cleared",
@@ -2680,7 +2904,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "DTCs.Generic"
-      },
+      }
+    ],
+    "7E0_014F": [
       {
         "id": "MAX_EQ_RAT",
         "name": "Maximum value for equivalence ratio",
@@ -2712,7 +2938,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*10",
         "path": "Engine.Generic.Internal"
-      },
+      }
+    ],
+    "7E0_0150": [
       {
         "id": "MAX_MAF",
         "name": "Maximum value for air flow rate from mass air flow sensor",
@@ -2720,7 +2948,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*10",
         "path": "Engine.Generic.Internal"
-      },
+      }
+    ],
+    "7E0_0151": [
       {
         "id": "FUEL_TYP",
         "name": "Type of fuel currently being used by the vehicle",
@@ -2728,7 +2958,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "Mapped values: {'1': {'description': 'Gasoline/petrol', 'value': 'GAS'}, '10': {'description': 'Bi-fuel vehicle using methanol', 'value': 'BI_METH'}, '11': {'description': 'Bi-fuel vehicle using ethanol', 'value': 'BI_ETH'}, '12': {'description': 'Bi-fuel vehicle using LPG', 'value': 'BI_LPG'}, '13': {'description': 'Bi-fuel vehicle using CNG', 'value': 'BI_CNG'}, '14': {'description': 'Bi-fuel vehicle using propane', 'value': 'BI_PROP'}, '15': {'description': 'Bi-fuel vehicle using battery', 'value': 'BI_ELEC'}, '16': {'description': 'Bi-fuel vehicle using battery and combustion engine for propulsion', 'value': 'BI_MIX'}, '17': {'description': 'Hybrid vehicle using gasoline engine for propulsion', 'value': 'HYB_GAS'}, '18': {'description': 'Hybrid vehicle using gasoline engine on ethanol for propulsion', 'value': 'HYB_ETH'}, '19': {'description': 'Hybrid vehicle using diesel engine for propulsion', 'value': 'HYB_DSL'}, '2': {'description': 'Methanol', 'value': 'METH'}, '20': {'description': 'Hybrid vehicle using battery for propulsion', 'value': 'HYB_ELEC'}, '21': {'description': 'Hybrid vehicle using battery and combustion engine for propulsion', 'value': 'HYB_MIX'}, '22': {'description': 'Hybrid vehicle in regeneration mode', 'value': 'HYB_REG'}, '23': {'description': 'Bi-fuel vehicle using diesel', 'value': 'BI_DSL'}, '24': {'description': 'Bi-fuel vehicle using natural gas', 'value': 'BI_NG'}, '25': {'description': 'Bi-fuel vehicle using diesel', 'value': 'BI_DSL'}, '26': {'description': 'Natural gas', 'value': 'NG'}, '27': {'description': 'Dual fuel vehicle using diesel and CNG', 'value': 'DSL_CNG'}, '28': {'description': 'Dual fuel vehicle using diesel and LNG', 'value': 'DSL_LNG'}, '29': {'description': 'Fuel cell utilizing hydrogen', 'value': 'FC_H2'}, '3': {'description': 'Ethanol', 'value': 'ETH'}, '30': {'description': 'Hydrogen Internal Combustion Engine', 'value': 'HICE_HHO'}, '31': {'description': 'Kerosene', 'value': 'KERO'}, '32': {'description': 'Heavy Fuel Oil', 'value': 'HFO'}, '4': {'description': 'Diesel', 'value': 'DSL'}, '5': {'description': 'Liquefied petroleum gas', 'value': 'LPG'}, '6': {'description': 'Compressed natural gas', 'value': 'CNG'}, '7': {'description': 'Propane', 'value': 'PROP'}, '8': {'description': 'Battery/electric', 'value': 'ELEC'}, '9': {'description': 'Bi-fuel vehicle using gasoline/petrol', 'value': 'BI_GAS'}}",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0152": [
       {
         "id": "ALCH_PCT",
         "name": "Alcohol fuel percentage",
@@ -2736,7 +2968,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Fuel.Generic"
-      },
+      }
+    ],
+    "7E0_0153": [
       {
         "id": "EVAP_VPA",
         "name": "Absolute evap system vapor pressure",
@@ -2744,7 +2978,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/200",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0154": [
       {
         "id": "EVAP_VP_WIDE",
         "name": "Evap system vapor pressure (wide)",
@@ -2752,7 +2988,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/1000 +-32767",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0155": [
       {
         "id": "STSO2FT1",
         "name": "Short term secondary O2 sensor fuel trim (bank 1)",
@@ -2760,7 +2998,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0156": [
       {
         "id": "LGSO2FT1",
         "name": "Long term secondary O2 sensor fuel trim (bank 1)",
@@ -2768,7 +3008,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0157": [
       {
         "id": "STSO2FT2",
         "name": "Short term secondary O2 sensor fuel trim (bank 2)",
@@ -2776,7 +3018,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0158": [
       {
         "id": "LGSO2FT2",
         "name": "Long term secondary O2 sensor fuel trim (bank 2)",
@@ -2784,7 +3028,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0159": [
       {
         "id": "FRP_ABS",
         "name": "Fuel rail pressure (absolute)",
@@ -2792,7 +3038,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*10",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_015A": [
       {
         "id": "APP_R",
         "name": "Accelerator pedal position\u00a0(relative)",
@@ -2800,7 +3048,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Control.Pedals.Generic"
-      },
+      }
+    ],
+    "7E0_015B": [
       {
         "id": "BAT_SOC",
         "name": "Hybrid battery pack remaining charge",
@@ -2808,7 +3058,9 @@ const matrixData = [
         "suggestedMetric": "stateOfCharge",
         "scaling": "raw*100 /255",
         "path": "Battery.Generic"
-      },
+      }
+    ],
+    "7E0_015C": [
       {
         "id": "EOT",
         "name": "Engine oil temperature",
@@ -2816,7 +3068,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-40",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_015D": [
       {
         "id": "FUEL_TIMING",
         "name": "Fuel injection timing",
@@ -2824,7 +3078,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/128 +-210",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_015E": [
       {
         "id": "FUEL_RATE",
         "name": "Engine fuel rate",
@@ -2832,7 +3088,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/20",
         "path": "Fuel.Generic"
-      },
+      }
+    ],
+    "7E0_015F": [
       {
         "id": "EMIS_SUP",
         "name": "Emission requirements to which vehicle is designed",
@@ -2840,7 +3098,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "Mapped values: {'14': {'description': 'Heavy duty vehicles (EURO IV) B1', 'value': 'EURO IV B1'}, '15': {'description': 'Heavy duty vehicles (EURO V) B2', 'value': 'EURO V B2'}, '16': {'description': 'Heavy duty vehicles (EURO EEV) C', 'value': 'EURO C'}, '17': {'description': 'Heavy Duty Vehicles (Euro VI)', 'value': 'EURO VI'}}",
         "path": "Emissions.Generic"
-      },
+      }
+    ],
+    "7E0_0161": [
       {
         "id": "TQ_DD",
         "name": "Driver's demand engine torque",
@@ -2848,7 +3108,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-125",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0162": [
       {
         "id": "TQ_ACT",
         "name": "Actual engine torque",
@@ -2856,7 +3118,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-125",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0163": [
       {
         "id": "TQ_REF",
         "name": "Engine reference torque",
@@ -2864,7 +3128,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0164": [
       {
         "id": "TQ_MAX1",
         "name": "Engine Percent Torque At Idle, Point 1",
@@ -2904,7 +3170,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-125",
         "path": "Engine.Generic.Internal"
-      },
+      }
+    ],
+    "7E0_0165": [
       {
         "id": "GEAR_SUP",
         "name": "Recommended gear supported",
@@ -2984,7 +3252,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Engine.Generic.AuxInputs"
-      },
+      }
+    ],
+    "7E0_0166": [
       {
         "id": "MAFB_SUP",
         "name": "MAF Sensor B supported",
@@ -3016,7 +3286,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/32",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0167": [
       {
         "id": "ECT 2_SUP",
         "name": "Is ECT sensor 2 supported?",
@@ -3048,7 +3320,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-40",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0169": [
       {
         "id": "EGR_B_ERR_SUP",
         "name": "EGR A error support status",
@@ -3144,7 +3418,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /128 +-100",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_016C": [
       {
         "id": "RTP_B_SUP",
         "name": "Relative Throttle B Position data supported?",
@@ -3208,7 +3484,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_017F": [
       {
         "id": "PTO_TIME_SUP",
         "name": "Total Run Time With PTO Active supported?",
@@ -3256,7 +3534,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_0184": [
       {
         "id": "MST",
         "name": "Manifold surface temperature",
@@ -3264,7 +3544,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-40",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_018D": [
       {
         "id": "TP_G",
         "name": "Absolute Throttle Position G",
@@ -3272,7 +3554,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_018E": [
       {
         "id": "TQ_FR",
         "name": "Engine Friction - Percent Torque",
@@ -3280,7 +3564,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-125",
         "path": "Engine.Generic"
-      },
+      }
+    ],
+    "7E0_019A": [
       {
         "id": "EHEV_MODE_SUP",
         "name": "Enhanced Hybrid/EV Vehicle Charging State supported?",
@@ -3344,7 +3630,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "Mapped values: {'0': {'description': 'Charge sustaining mode', 'value': 'CSM'}, '1': {'description': 'Charge depleting mode', 'value': 'CDM'}, '2': {'description': 'Charge increasing mode', 'value': 'CIM'}}",
         "path": "Battery.Generic"
-      },
+      }
+    ],
+    "7E0_019D": [
       {
         "id": "FUEL_RATE_ALT",
         "name": "Engine fuel rate (alternate)",
@@ -3360,7 +3648,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/50",
         "path": "Fuel.Generic"
-      },
+      }
+    ],
+    "7E0_019E": [
       {
         "id": "EXH_RATE",
         "name": "Engine exhaust flow rate",
@@ -3368,7 +3658,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw/5",
         "path": "Fuel.Generic"
-      },
+      }
+    ],
+    "7E0_01A6": [
       {
         "id": "ODO",
         "name": "Odometer",
@@ -3376,7 +3668,9 @@ const matrixData = [
         "suggestedMetric": "odometer",
         "scaling": "raw/10",
         "path": "Trips.Generic"
-      },
+      }
+    ],
+    "7E0_01AA": [
       {
         "id": "V_SET",
         "name": "Maximum current vehicle speed limit",
@@ -3384,7 +3678,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "",
         "path": "Movement.Generic"
-      },
+      }
+    ],
+    "7E0_01B2": [
       {
         "id": "BAT_SOH",
         "name": "Traction battery pack State of Health",
@@ -3392,7 +3688,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw*100 /255",
         "path": "Battery.Generic"
-      },
+      }
+    ],
+    "7E0_01D3": [
       {
         "id": "ODO_ENG",
         "name": "Engine odometer",
@@ -3402,16 +3700,29 @@ const matrixData = [
         "path": "Trips.Generic"
       }
     ],
-    "7E0_21": [],
-    "7E4_22": []
+    "7E0_2128": [],
+    "7E0_2151": [],
+    "7E0_2185": [],
+    "7E4_220101": [],
+    "7E4_220102": [],
+    "7E4_220103": [],
+    "7E4_220104": [],
+    "7E4_220105": [],
+    "7E4_22010A": [],
+    "7E4_22010B": [],
+    "7E4_22010C": []
   },
   {
     "make": "Subaru",
     "model": "WRX",
-    "744_22": [],
-    "750_21": [],
-    "750_22": [],
-    "753_22": [
+    "744_22E001": [],
+    "744_22E003": [],
+    "750_2116": [],
+    "750_2130": [],
+    "750_221004": [],
+    "750_221005": [],
+    "750_222021": [],
+    "753_221022": [
       {
         "id": "WRX_TP_RL",
         "name": "Rear left tire pressure",
@@ -3445,20 +3756,121 @@ const matrixData = [
         "path": "Tires"
       }
     ],
-    "7A0_22": [],
-    "7B0_21": [],
-    "7B3_22": [],
-    "7C0_21": [],
-    "7C6_22": [],
-    "7E0_01": [],
-    "7E0_21": [],
-    "7E4_22": []
+    "7A0_22C00B": [],
+    "7B0_2103": [],
+    "7B3_220100": [],
+    "7C0_2129": [],
+    "7C6_22B002": [],
+    "7E0_0101": [],
+    "7E0_0102": [],
+    "7E0_0103": [],
+    "7E0_0104": [],
+    "7E0_0105": [],
+    "7E0_0106": [],
+    "7E0_0107": [],
+    "7E0_0108": [],
+    "7E0_0109": [],
+    "7E0_010A": [],
+    "7E0_010B": [],
+    "7E0_010C": [],
+    "7E0_010D": [],
+    "7E0_010E": [],
+    "7E0_010F": [],
+    "7E0_0110": [],
+    "7E0_0111": [],
+    "7E0_0112": [],
+    "7E0_0113": [],
+    "7E0_0114": [],
+    "7E0_0115": [],
+    "7E0_011C": [],
+    "7E0_011D": [],
+    "7E0_011E": [],
+    "7E0_011F": [],
+    "7E0_0121": [],
+    "7E0_0122": [],
+    "7E0_0123": [],
+    "7E0_0124": [],
+    "7E0_012C": [],
+    "7E0_012D": [],
+    "7E0_012E": [],
+    "7E0_012F": [],
+    "7E0_0130": [],
+    "7E0_0131": [],
+    "7E0_0132": [],
+    "7E0_0133": [],
+    "7E0_013C": [],
+    "7E0_013D": [],
+    "7E0_013E": [],
+    "7E0_013F": [],
+    "7E0_0141": [],
+    "7E0_0142": [],
+    "7E0_0143": [],
+    "7E0_0144": [],
+    "7E0_0145": [],
+    "7E0_0146": [],
+    "7E0_0147": [],
+    "7E0_0148": [],
+    "7E0_0149": [],
+    "7E0_014A": [],
+    "7E0_014B": [],
+    "7E0_014C": [],
+    "7E0_014D": [],
+    "7E0_014E": [],
+    "7E0_014F": [],
+    "7E0_0150": [],
+    "7E0_0151": [],
+    "7E0_0152": [],
+    "7E0_0153": [],
+    "7E0_0154": [],
+    "7E0_0155": [],
+    "7E0_0156": [],
+    "7E0_0157": [],
+    "7E0_0158": [],
+    "7E0_0159": [],
+    "7E0_015A": [],
+    "7E0_015B": [],
+    "7E0_015C": [],
+    "7E0_015D": [],
+    "7E0_015E": [],
+    "7E0_015F": [],
+    "7E0_0161": [],
+    "7E0_0162": [],
+    "7E0_0163": [],
+    "7E0_0164": [],
+    "7E0_0165": [],
+    "7E0_0166": [],
+    "7E0_0167": [],
+    "7E0_0169": [],
+    "7E0_016C": [],
+    "7E0_017F": [],
+    "7E0_0184": [],
+    "7E0_018D": [],
+    "7E0_018E": [],
+    "7E0_019A": [],
+    "7E0_019D": [],
+    "7E0_019E": [],
+    "7E0_01A6": [],
+    "7E0_01AA": [],
+    "7E0_01B2": [],
+    "7E0_01D3": [],
+    "7E0_2128": [],
+    "7E0_2151": [],
+    "7E0_2185": [],
+    "7E4_220101": [],
+    "7E4_220102": [],
+    "7E4_220103": [],
+    "7E4_220104": [],
+    "7E4_220105": [],
+    "7E4_22010A": [],
+    "7E4_22010B": [],
+    "7E4_22010C": []
   },
   {
     "make": "Toyota",
     "model": "Camry",
-    "744_22": [],
-    "750_21": [
+    "744_22E001": [],
+    "744_22E003": [],
+    "750_2116": [
       {
         "id": "CAMRY_TT_FL",
         "name": "Front left tire temperature",
@@ -3498,7 +3910,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-40",
         "path": "Tires"
-      },
+      }
+    ],
+    "750_2130": [
       {
         "id": "CAMRY_TP_FL",
         "name": "Front left tire pressure",
@@ -3540,10 +3954,12 @@ const matrixData = [
         "path": "Tires"
       }
     ],
-    "750_22": [],
-    "753_22": [],
-    "7A0_22": [],
-    "7B0_21": [
+    "750_221004": [],
+    "750_221005": [],
+    "750_222021": [],
+    "753_221022": [],
+    "7A0_22C00B": [],
+    "7B0_2103": [
       {
         "id": "CAMRY_TIRE_FR_SPD",
         "name": "Front right wheel speed",
@@ -3577,19 +3993,121 @@ const matrixData = [
         "path": "Movement"
       }
     ],
-    "7B3_22": [],
-    "7C0_21": [],
-    "7C6_22": [],
-    "7E0_01": [],
-    "7E0_21": [],
-    "7E4_22": []
+    "7B3_220100": [],
+    "7C0_2129": [],
+    "7C6_22B002": [],
+    "7E0_0101": [],
+    "7E0_0102": [],
+    "7E0_0103": [],
+    "7E0_0104": [],
+    "7E0_0105": [],
+    "7E0_0106": [],
+    "7E0_0107": [],
+    "7E0_0108": [],
+    "7E0_0109": [],
+    "7E0_010A": [],
+    "7E0_010B": [],
+    "7E0_010C": [],
+    "7E0_010D": [],
+    "7E0_010E": [],
+    "7E0_010F": [],
+    "7E0_0110": [],
+    "7E0_0111": [],
+    "7E0_0112": [],
+    "7E0_0113": [],
+    "7E0_0114": [],
+    "7E0_0115": [],
+    "7E0_011C": [],
+    "7E0_011D": [],
+    "7E0_011E": [],
+    "7E0_011F": [],
+    "7E0_0121": [],
+    "7E0_0122": [],
+    "7E0_0123": [],
+    "7E0_0124": [],
+    "7E0_012C": [],
+    "7E0_012D": [],
+    "7E0_012E": [],
+    "7E0_012F": [],
+    "7E0_0130": [],
+    "7E0_0131": [],
+    "7E0_0132": [],
+    "7E0_0133": [],
+    "7E0_013C": [],
+    "7E0_013D": [],
+    "7E0_013E": [],
+    "7E0_013F": [],
+    "7E0_0141": [],
+    "7E0_0142": [],
+    "7E0_0143": [],
+    "7E0_0144": [],
+    "7E0_0145": [],
+    "7E0_0146": [],
+    "7E0_0147": [],
+    "7E0_0148": [],
+    "7E0_0149": [],
+    "7E0_014A": [],
+    "7E0_014B": [],
+    "7E0_014C": [],
+    "7E0_014D": [],
+    "7E0_014E": [],
+    "7E0_014F": [],
+    "7E0_0150": [],
+    "7E0_0151": [],
+    "7E0_0152": [],
+    "7E0_0153": [],
+    "7E0_0154": [],
+    "7E0_0155": [],
+    "7E0_0156": [],
+    "7E0_0157": [],
+    "7E0_0158": [],
+    "7E0_0159": [],
+    "7E0_015A": [],
+    "7E0_015B": [],
+    "7E0_015C": [],
+    "7E0_015D": [],
+    "7E0_015E": [],
+    "7E0_015F": [],
+    "7E0_0161": [],
+    "7E0_0162": [],
+    "7E0_0163": [],
+    "7E0_0164": [],
+    "7E0_0165": [],
+    "7E0_0166": [],
+    "7E0_0167": [],
+    "7E0_0169": [],
+    "7E0_016C": [],
+    "7E0_017F": [],
+    "7E0_0184": [],
+    "7E0_018D": [],
+    "7E0_018E": [],
+    "7E0_019A": [],
+    "7E0_019D": [],
+    "7E0_019E": [],
+    "7E0_01A6": [],
+    "7E0_01AA": [],
+    "7E0_01B2": [],
+    "7E0_01D3": [],
+    "7E0_2128": [],
+    "7E0_2151": [],
+    "7E0_2185": [],
+    "7E4_220101": [],
+    "7E4_220102": [],
+    "7E4_220103": [],
+    "7E4_220104": [],
+    "7E4_220105": [],
+    "7E4_22010A": [],
+    "7E4_22010B": [],
+    "7E4_22010C": []
   },
   {
     "make": "Toyota",
     "model": "Corolla-Hybrid",
-    "744_22": [],
-    "750_21": [],
-    "750_22": [
+    "744_22E001": [],
+    "744_22E003": [],
+    "750_2116": [],
+    "750_2130": [],
+    "750_221004": [
       {
         "id": "COROLLAHYBRID_TT_1",
         "name": "Rear right tire temperature",
@@ -3621,7 +4139,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-30",
         "path": "Tires"
-      },
+      }
+    ],
+    "750_221005": [
       {
         "id": "COROLLAHYBRID_TP_1",
         "name": "Rear right tire pressure",
@@ -3653,7 +4173,9 @@ const matrixData = [
         "suggestedMetric": "frontLeftTirePressure",
         "scaling": "raw/4.125",
         "path": "Tires"
-      },
+      }
+    ],
+    "750_222021": [
       {
         "id": "COROLLAHYBRID_TID_1",
         "name": "Tire 1 position",
@@ -3687,25 +4209,129 @@ const matrixData = [
         "path": "Tires"
       }
     ],
-    "753_22": [],
-    "7A0_22": [],
-    "7B0_21": [],
-    "7B3_22": [],
-    "7C0_21": [],
-    "7C6_22": [],
-    "7E0_01": [],
-    "7E0_21": [],
-    "7E4_22": []
+    "753_221022": [],
+    "7A0_22C00B": [],
+    "7B0_2103": [],
+    "7B3_220100": [],
+    "7C0_2129": [],
+    "7C6_22B002": [],
+    "7E0_0101": [],
+    "7E0_0102": [],
+    "7E0_0103": [],
+    "7E0_0104": [],
+    "7E0_0105": [],
+    "7E0_0106": [],
+    "7E0_0107": [],
+    "7E0_0108": [],
+    "7E0_0109": [],
+    "7E0_010A": [],
+    "7E0_010B": [],
+    "7E0_010C": [],
+    "7E0_010D": [],
+    "7E0_010E": [],
+    "7E0_010F": [],
+    "7E0_0110": [],
+    "7E0_0111": [],
+    "7E0_0112": [],
+    "7E0_0113": [],
+    "7E0_0114": [],
+    "7E0_0115": [],
+    "7E0_011C": [],
+    "7E0_011D": [],
+    "7E0_011E": [],
+    "7E0_011F": [],
+    "7E0_0121": [],
+    "7E0_0122": [],
+    "7E0_0123": [],
+    "7E0_0124": [],
+    "7E0_012C": [],
+    "7E0_012D": [],
+    "7E0_012E": [],
+    "7E0_012F": [],
+    "7E0_0130": [],
+    "7E0_0131": [],
+    "7E0_0132": [],
+    "7E0_0133": [],
+    "7E0_013C": [],
+    "7E0_013D": [],
+    "7E0_013E": [],
+    "7E0_013F": [],
+    "7E0_0141": [],
+    "7E0_0142": [],
+    "7E0_0143": [],
+    "7E0_0144": [],
+    "7E0_0145": [],
+    "7E0_0146": [],
+    "7E0_0147": [],
+    "7E0_0148": [],
+    "7E0_0149": [],
+    "7E0_014A": [],
+    "7E0_014B": [],
+    "7E0_014C": [],
+    "7E0_014D": [],
+    "7E0_014E": [],
+    "7E0_014F": [],
+    "7E0_0150": [],
+    "7E0_0151": [],
+    "7E0_0152": [],
+    "7E0_0153": [],
+    "7E0_0154": [],
+    "7E0_0155": [],
+    "7E0_0156": [],
+    "7E0_0157": [],
+    "7E0_0158": [],
+    "7E0_0159": [],
+    "7E0_015A": [],
+    "7E0_015B": [],
+    "7E0_015C": [],
+    "7E0_015D": [],
+    "7E0_015E": [],
+    "7E0_015F": [],
+    "7E0_0161": [],
+    "7E0_0162": [],
+    "7E0_0163": [],
+    "7E0_0164": [],
+    "7E0_0165": [],
+    "7E0_0166": [],
+    "7E0_0167": [],
+    "7E0_0169": [],
+    "7E0_016C": [],
+    "7E0_017F": [],
+    "7E0_0184": [],
+    "7E0_018D": [],
+    "7E0_018E": [],
+    "7E0_019A": [],
+    "7E0_019D": [],
+    "7E0_019E": [],
+    "7E0_01A6": [],
+    "7E0_01AA": [],
+    "7E0_01B2": [],
+    "7E0_01D3": [],
+    "7E0_2128": [],
+    "7E0_2151": [],
+    "7E0_2185": [],
+    "7E4_220101": [],
+    "7E4_220102": [],
+    "7E4_220103": [],
+    "7E4_220104": [],
+    "7E4_220105": [],
+    "7E4_22010A": [],
+    "7E4_22010B": [],
+    "7E4_22010C": []
   },
   {
     "make": "Toyota",
     "model": "RAV4",
-    "744_22": [],
-    "750_21": [],
-    "750_22": [],
-    "753_22": [],
-    "7A0_22": [],
-    "7B0_21": [
+    "744_22E001": [],
+    "744_22E003": [],
+    "750_2116": [],
+    "750_2130": [],
+    "750_221004": [],
+    "750_221005": [],
+    "750_222021": [],
+    "753_221022": [],
+    "7A0_22C00B": [],
+    "7B0_2103": [
       {
         "id": "RAV4_TIRE_FR_SPD",
         "name": "Front right wheel speed",
@@ -3739,8 +4365,8 @@ const matrixData = [
         "path": "Movement"
       }
     ],
-    "7B3_22": [],
-    "7C0_21": [
+    "7B3_220100": [],
+    "7C0_2129": [
       {
         "id": "RAV4_FLI_VOL",
         "name": "Fuel level (volume)",
@@ -3750,9 +4376,100 @@ const matrixData = [
         "path": "Fuel"
       }
     ],
-    "7C6_22": [],
-    "7E0_01": [],
-    "7E0_21": [
+    "7C6_22B002": [],
+    "7E0_0101": [],
+    "7E0_0102": [],
+    "7E0_0103": [],
+    "7E0_0104": [],
+    "7E0_0105": [],
+    "7E0_0106": [],
+    "7E0_0107": [],
+    "7E0_0108": [],
+    "7E0_0109": [],
+    "7E0_010A": [],
+    "7E0_010B": [],
+    "7E0_010C": [],
+    "7E0_010D": [],
+    "7E0_010E": [],
+    "7E0_010F": [],
+    "7E0_0110": [],
+    "7E0_0111": [],
+    "7E0_0112": [],
+    "7E0_0113": [],
+    "7E0_0114": [],
+    "7E0_0115": [],
+    "7E0_011C": [],
+    "7E0_011D": [],
+    "7E0_011E": [],
+    "7E0_011F": [],
+    "7E0_0121": [],
+    "7E0_0122": [],
+    "7E0_0123": [],
+    "7E0_0124": [],
+    "7E0_012C": [],
+    "7E0_012D": [],
+    "7E0_012E": [],
+    "7E0_012F": [],
+    "7E0_0130": [],
+    "7E0_0131": [],
+    "7E0_0132": [],
+    "7E0_0133": [],
+    "7E0_013C": [],
+    "7E0_013D": [],
+    "7E0_013E": [],
+    "7E0_013F": [],
+    "7E0_0141": [],
+    "7E0_0142": [],
+    "7E0_0143": [],
+    "7E0_0144": [],
+    "7E0_0145": [],
+    "7E0_0146": [],
+    "7E0_0147": [],
+    "7E0_0148": [],
+    "7E0_0149": [],
+    "7E0_014A": [],
+    "7E0_014B": [],
+    "7E0_014C": [],
+    "7E0_014D": [],
+    "7E0_014E": [],
+    "7E0_014F": [],
+    "7E0_0150": [],
+    "7E0_0151": [],
+    "7E0_0152": [],
+    "7E0_0153": [],
+    "7E0_0154": [],
+    "7E0_0155": [],
+    "7E0_0156": [],
+    "7E0_0157": [],
+    "7E0_0158": [],
+    "7E0_0159": [],
+    "7E0_015A": [],
+    "7E0_015B": [],
+    "7E0_015C": [],
+    "7E0_015D": [],
+    "7E0_015E": [],
+    "7E0_015F": [],
+    "7E0_0161": [],
+    "7E0_0162": [],
+    "7E0_0163": [],
+    "7E0_0164": [],
+    "7E0_0165": [],
+    "7E0_0166": [],
+    "7E0_0167": [],
+    "7E0_0169": [],
+    "7E0_016C": [],
+    "7E0_017F": [],
+    "7E0_0184": [],
+    "7E0_018D": [],
+    "7E0_018E": [],
+    "7E0_019A": [],
+    "7E0_019D": [],
+    "7E0_019E": [],
+    "7E0_01A6": [],
+    "7E0_01AA": [],
+    "7E0_01B2": [],
+    "7E0_01D3": [],
+    "7E0_2128": [
       {
         "id": "RAV4_ODO",
         "name": "Odometer",
@@ -3760,7 +4477,9 @@ const matrixData = [
         "suggestedMetric": "odometer",
         "scaling": "",
         "path": "Trips"
-      },
+      }
+    ],
+    "7E0_2151": [
       {
         "id": "RAV4_PREV_TRIP_DST",
         "name": "Previous trip distance",
@@ -3784,7 +4503,9 @@ const matrixData = [
         "suggestedMetric": "",
         "scaling": "raw+-40",
         "path": "Engine"
-      },
+      }
+    ],
+    "7E0_2185": [
       {
         "id": "RAV4_GEAR",
         "name": "Gear",
@@ -3794,56 +4515,479 @@ const matrixData = [
         "path": "Engine"
       }
     ],
-    "7E4_22": []
+    "7E4_220101": [],
+    "7E4_220102": [],
+    "7E4_220103": [],
+    "7E4_220104": [],
+    "7E4_220105": [],
+    "7E4_22010A": [],
+    "7E4_22010B": [],
+    "7E4_22010C": []
   }
 ];
 const ecuPidCombos = [
   [
     "744",
-    "22"
+    "22E001"
+  ],
+  [
+    "744",
+    "22E003"
   ],
   [
     "750",
-    "21"
+    "2116"
   ],
   [
     "750",
-    "22"
+    "2130"
+  ],
+  [
+    "750",
+    "221004"
+  ],
+  [
+    "750",
+    "221005"
+  ],
+  [
+    "750",
+    "222021"
   ],
   [
     "753",
-    "22"
+    "221022"
   ],
   [
     "7A0",
-    "22"
+    "22C00B"
   ],
   [
     "7B0",
-    "21"
+    "2103"
   ],
   [
     "7B3",
-    "22"
+    "220100"
   ],
   [
     "7C0",
-    "21"
+    "2129"
   ],
   [
     "7C6",
-    "22"
+    "22B002"
   ],
   [
     "7E0",
-    "01"
+    "0101"
   ],
   [
     "7E0",
-    "21"
+    "0102"
+  ],
+  [
+    "7E0",
+    "0103"
+  ],
+  [
+    "7E0",
+    "0104"
+  ],
+  [
+    "7E0",
+    "0105"
+  ],
+  [
+    "7E0",
+    "0106"
+  ],
+  [
+    "7E0",
+    "0107"
+  ],
+  [
+    "7E0",
+    "0108"
+  ],
+  [
+    "7E0",
+    "0109"
+  ],
+  [
+    "7E0",
+    "010A"
+  ],
+  [
+    "7E0",
+    "010B"
+  ],
+  [
+    "7E0",
+    "010C"
+  ],
+  [
+    "7E0",
+    "010D"
+  ],
+  [
+    "7E0",
+    "010E"
+  ],
+  [
+    "7E0",
+    "010F"
+  ],
+  [
+    "7E0",
+    "0110"
+  ],
+  [
+    "7E0",
+    "0111"
+  ],
+  [
+    "7E0",
+    "0112"
+  ],
+  [
+    "7E0",
+    "0113"
+  ],
+  [
+    "7E0",
+    "0114"
+  ],
+  [
+    "7E0",
+    "0115"
+  ],
+  [
+    "7E0",
+    "011C"
+  ],
+  [
+    "7E0",
+    "011D"
+  ],
+  [
+    "7E0",
+    "011E"
+  ],
+  [
+    "7E0",
+    "011F"
+  ],
+  [
+    "7E0",
+    "0121"
+  ],
+  [
+    "7E0",
+    "0122"
+  ],
+  [
+    "7E0",
+    "0123"
+  ],
+  [
+    "7E0",
+    "0124"
+  ],
+  [
+    "7E0",
+    "012C"
+  ],
+  [
+    "7E0",
+    "012D"
+  ],
+  [
+    "7E0",
+    "012E"
+  ],
+  [
+    "7E0",
+    "012F"
+  ],
+  [
+    "7E0",
+    "0130"
+  ],
+  [
+    "7E0",
+    "0131"
+  ],
+  [
+    "7E0",
+    "0132"
+  ],
+  [
+    "7E0",
+    "0133"
+  ],
+  [
+    "7E0",
+    "013C"
+  ],
+  [
+    "7E0",
+    "013D"
+  ],
+  [
+    "7E0",
+    "013E"
+  ],
+  [
+    "7E0",
+    "013F"
+  ],
+  [
+    "7E0",
+    "0141"
+  ],
+  [
+    "7E0",
+    "0142"
+  ],
+  [
+    "7E0",
+    "0143"
+  ],
+  [
+    "7E0",
+    "0144"
+  ],
+  [
+    "7E0",
+    "0145"
+  ],
+  [
+    "7E0",
+    "0146"
+  ],
+  [
+    "7E0",
+    "0147"
+  ],
+  [
+    "7E0",
+    "0148"
+  ],
+  [
+    "7E0",
+    "0149"
+  ],
+  [
+    "7E0",
+    "014A"
+  ],
+  [
+    "7E0",
+    "014B"
+  ],
+  [
+    "7E0",
+    "014C"
+  ],
+  [
+    "7E0",
+    "014D"
+  ],
+  [
+    "7E0",
+    "014E"
+  ],
+  [
+    "7E0",
+    "014F"
+  ],
+  [
+    "7E0",
+    "0150"
+  ],
+  [
+    "7E0",
+    "0151"
+  ],
+  [
+    "7E0",
+    "0152"
+  ],
+  [
+    "7E0",
+    "0153"
+  ],
+  [
+    "7E0",
+    "0154"
+  ],
+  [
+    "7E0",
+    "0155"
+  ],
+  [
+    "7E0",
+    "0156"
+  ],
+  [
+    "7E0",
+    "0157"
+  ],
+  [
+    "7E0",
+    "0158"
+  ],
+  [
+    "7E0",
+    "0159"
+  ],
+  [
+    "7E0",
+    "015A"
+  ],
+  [
+    "7E0",
+    "015B"
+  ],
+  [
+    "7E0",
+    "015C"
+  ],
+  [
+    "7E0",
+    "015D"
+  ],
+  [
+    "7E0",
+    "015E"
+  ],
+  [
+    "7E0",
+    "015F"
+  ],
+  [
+    "7E0",
+    "0161"
+  ],
+  [
+    "7E0",
+    "0162"
+  ],
+  [
+    "7E0",
+    "0163"
+  ],
+  [
+    "7E0",
+    "0164"
+  ],
+  [
+    "7E0",
+    "0165"
+  ],
+  [
+    "7E0",
+    "0166"
+  ],
+  [
+    "7E0",
+    "0167"
+  ],
+  [
+    "7E0",
+    "0169"
+  ],
+  [
+    "7E0",
+    "016C"
+  ],
+  [
+    "7E0",
+    "017F"
+  ],
+  [
+    "7E0",
+    "0184"
+  ],
+  [
+    "7E0",
+    "018D"
+  ],
+  [
+    "7E0",
+    "018E"
+  ],
+  [
+    "7E0",
+    "019A"
+  ],
+  [
+    "7E0",
+    "019D"
+  ],
+  [
+    "7E0",
+    "019E"
+  ],
+  [
+    "7E0",
+    "01A6"
+  ],
+  [
+    "7E0",
+    "01AA"
+  ],
+  [
+    "7E0",
+    "01B2"
+  ],
+  [
+    "7E0",
+    "01D3"
+  ],
+  [
+    "7E0",
+    "2128"
+  ],
+  [
+    "7E0",
+    "2151"
+  ],
+  [
+    "7E0",
+    "2185"
   ],
   [
     "7E4",
-    "22"
+    "220101"
+  ],
+  [
+    "7E4",
+    "220102"
+  ],
+  [
+    "7E4",
+    "220103"
+  ],
+  [
+    "7E4",
+    "220104"
+  ],
+  [
+    "7E4",
+    "220105"
+  ],
+  [
+    "7E4",
+    "22010A"
+  ],
+  [
+    "7E4",
+    "22010B"
+  ],
+  [
+    "7E4",
+    "22010C"
   ]
 ];

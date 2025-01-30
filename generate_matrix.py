@@ -51,6 +51,7 @@ def parse_signalset(file_path):
                 parameters.append({
                     'hdr': hdr,
                     'pid': pid,
+                    'cmd': cmd.get('cmd', {}),
                     'id': signal.get('id', ''),
                     'name': signal.get('name', ''),
                     'unit': fmt.get('unit', ''),

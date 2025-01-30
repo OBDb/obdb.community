@@ -6,25 +6,28 @@ from collections import defaultdict
 
 def transform_matrix_data(matrix_data):
     """Transform data into a format suitable for horizontal ECU+PID layout."""
-    # First, collect all unique ECU+PID combinations
-    ecu_pid_combos = set()
+    # First, collect all unique ECU+Parameter combinations
+    ecu_param_combos = set()
     vehicles = set()
     for entry in matrix_data:
-        ecu_pid_combos.add((entry['hdr'], entry['pid']))
+        # Create full parameter ID from cmd dictionary
+        param_id = ''.join(f"{k}{v}" for k, v in entry['cmd'].items())
+        ecu_param_combos.add((entry['hdr'], param_id))
         vehicles.add((entry['make'], entry['model']))
     
-    # Sort ECU+PID combinations
-    ecu_pid_combos = sorted(ecu_pid_combos)
+    # Sort ECU+Parameter combinations
+    ecu_param_combos = sorted(ecu_param_combos)
     vehicles = sorted(vehicles)
     
     # Create lookup for easy access
     data_lookup = defaultdict(dict)
     for entry in matrix_data:
         vehicle_key = (entry['make'], entry['model'])
-        ecu_pid_key = (entry['hdr'], entry['pid'])
-        if ecu_pid_key not in data_lookup[vehicle_key]:
-            data_lookup[vehicle_key][ecu_pid_key] = []
-        data_lookup[vehicle_key][ecu_pid_key].append({
+        param_id = ''.join(f"{k}{v}" for k, v in entry['cmd'].items())
+        ecu_param_key = (entry['hdr'], param_id)
+        if ecu_param_key not in data_lookup[vehicle_key]:
+            data_lookup[vehicle_key][ecu_param_key] = []
+        data_lookup[vehicle_key][ecu_param_key].append({
             'id': entry['id'],
             'name': entry['name'],
             'unit': entry['unit'],
@@ -33,20 +36,20 @@ def transform_matrix_data(matrix_data):
             'path': entry['path']
         })
     
-    # Transform into row-based format
+            # Transform into row-based format
     transformed_data = []
     for make, model in vehicles:
         row = {
             'make': make,
             'model': model
         }
-        for hdr, pid in ecu_pid_combos:
-            key = f"{hdr}_{pid}"
-            signals = data_lookup[(make, model)].get((hdr, pid), [])
+        for hdr, param_id in ecu_param_combos:
+            key = f"{hdr}_{param_id}"
+            signals = data_lookup[(make, model)].get((hdr, param_id), [])
             row[key] = signals
         transformed_data.append(row)
     
-    return transformed_data, ecu_pid_combos
+    return transformed_data, ecu_param_combos
 
 def generate_html(matrix_data, output_dir):
     """Generate interactive HTML visualization of OBD parameter matrix."""
@@ -173,22 +176,22 @@ def generate_html(matrix_data, output_dir):
 
         // Create column definitions
         const columns = [
-            {title: "Make", field: "make", frozen: true},
-            {title: "Model", field: "model", frozen: true},
+            {title: "Make", field: "make", frozen: true, width: 120},
+            {title: "Model", field: "model", frozen: true, width: 120},
         ];
 
         // Group columns by ECU
         const ecuGroups = {};
-        ecuPidCombos.forEach(([ecu, pid]) => {
+        ecuPidCombos.forEach(([ecu, paramId]) => {
             if (!ecuGroups[ecu]) {
                 ecuGroups[ecu] = [];
             }
             ecuGroups[ecu].push({
-                title: pid,
-                field: `${ecu}_${pid}`,
+                title: paramId,
+                field: `${ecu}_${paramId}`,
                 formatter: formatSignalCell,
                 headerSort: false,
-                width: 200,
+                width: 150,
             });
         });
 
