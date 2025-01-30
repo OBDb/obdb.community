@@ -214,20 +214,17 @@ def generate_html(matrix_data, output_dir):
             const row = cell.getRow().getData();
             if (signals.length === 0) return "";
             
-            return signals.map(signal => {
-                const metric = signal.suggestedMetric ? 
-                    `[${signal.suggestedMetric}]` : 
-                    signal.unit ? `[${signal.unit}]` : '';
-                const githubLink = `https://github.com/OBDb/${row.make}-${row.model}/blob/main/signalsets/v3/default.json`;
-                return `<div class="signal-item" 
-                    data-scaling="${signal.scaling}"
-                    data-name="${signal.name}"
-                    data-path="${signal.path}"
-                    onclick="window.open('${githubLink}', '_blank')"
-                    style="cursor: pointer;">
-                    ${signal.id} ${metric}
-                </div>`;
-            }).join('');
+                            return signals.map(signal => {
+                    const githubLink = `https://github.com/OBDb/${row.make}-${row.model}/blob/main/signalsets/v3/default.json`;
+                    return `<div class="signal-item" 
+                        data-scaling="${signal.scaling}"
+                        data-name="${signal.name}"
+                        data-path="${signal.path}"
+                        onclick="window.open('${githubLink}', '_blank')"
+                        style="cursor: pointer;">
+                        ${signal.id}
+                    </div>`;
+                }).join('');
         }
 
         // Create column definitions starting with make/model

@@ -192,15 +192,23 @@ def main():
     parser.add_argument('--org', default='OBDb', help='GitHub organization name')
     parser.add_argument('--workspace', default='workspace', help='Workspace directory for cloning repos')
     parser.add_argument('--output', default='site', help='Output directory for generated website')
+    parser.add_argument('--fetch', action='store_true', help='Fetch/update repositories before generating site')
     args = parser.parse_args()
     
-    # Clone repositories
-    clone_repos(args.org, args.workspace)
+    # Only clone/update repositories if --fetch is specified
+    if args.fetch:
+        print("Fetching repositories...")
+        clone_repos(args.org, args.workspace)
+    elif not Path(args.workspace).exists():
+        print(f"Error: Workspace directory '{args.workspace}' does not exist. Use --fetch to clone repositories.")
+        return
     
     # Generate matrix data
+    print("Generating matrix data...")
     matrix_data = generate_matrix_data(args.workspace)
     
     # Generate HTML visualization using the imported module
+    print("Generating HTML visualization...")
     generate_html(matrix_data, args.output)
     
     print(f"Website generated in {args.output} directory")
