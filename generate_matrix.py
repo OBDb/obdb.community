@@ -76,7 +76,7 @@ def clone_repos(org_name, workspace_dir):
     # Filter out excluded repos
     filtered_repos = [
         repo for repo in repos 
-        if repo != 'SAEJ1979' and not repo.startswith('.')
+        if '.' not in repo
     ]
     
     print(f"Found {len(filtered_repos)} repositories to process")
