@@ -40428,40 +40428,7 @@ const matrixData = [
         "path": "Tires"
       }
     ],
-    "750_221005": [
-      {
-        "id": "RAV4_TP_1",
-        "name": "Rear right tire pressure",
-        "unit": "psi",
-        "suggestedMetric": "rearRightTirePressure",
-        "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-        "path": "Tires"
-      },
-      {
-        "id": "RAV4_TP_2",
-        "name": "Rear left tire pressure",
-        "unit": "psi",
-        "suggestedMetric": "rearLeftTirePressure",
-        "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-        "path": "Tires"
-      },
-      {
-        "id": "RAV4_TP_3",
-        "name": "Front right tire pressure",
-        "unit": "psi",
-        "suggestedMetric": "frontRightTirePressure",
-        "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-        "path": "Tires"
-      },
-      {
-        "id": "RAV4_TP_4",
-        "name": "Front left tire pressure",
-        "unit": "psi",
-        "suggestedMetric": "frontLeftTirePressure",
-        "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-        "path": "Tires"
-      }
-    ],
+    "750_221005": [],
     "750_222021": [],
     "753_221022": [],
     "760_223201": [],
