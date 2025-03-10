@@ -3,6 +3,13 @@ import React, { useState, useEffect } from 'react';
 import dataService from '../services/dataService';
 import BitMappingVisualizer from '../components/BitMappingVisualizer';
 import TablePagination from '../components/TablePagination';
+import SearchFilter from '../components/SearchFilter';
+import LoadingSpinner from '../components/LoadingSpinner';
+import ErrorAlert from '../components/ErrorAlert';
+import PageHeader from '../components/PageHeader';
+import StatusBadge from '../components/StatusBadge';
+import DataTable from '../components/DataTable';
+import EmptyState from '../components/EmptyState';
 
 const Commands = () => {
   const [commands, setCommands] = useState([]);
@@ -91,218 +98,196 @@ const Commands = () => {
       .join(' ');
   };
 
+  // Define filter fields for the SearchFilter component
+  const filterFields = [
+    {
+      name: 'hdr',
+      label: 'ECU Header',
+      type: 'select',
+      options: headers,
+      className: 'w-full sm:w-64'
+    },
+    {
+      name: 'parameterId',
+      label: 'Filter by Parameter ID',
+      type: 'text',
+      placeholder: 'Enter parameter ID...',
+      className: 'flex-grow'
+    }
+  ];
+
+  // Define columns for the DataTable component
+  const columns = [
+    {
+      key: 'hdr',
+      header: 'ECU Header',
+      cellClassName: 'font-mono font-medium text-gray-900'
+    },
+    {
+      key: 'cmd',
+      header: 'Command',
+      render: (row) => formatCommand(row.cmd),
+      cellClassName: 'font-mono text-gray-900'
+    },
+    {
+      key: 'vehicleCount',
+      header: 'Vehicle Coverage',
+      render: (row) => (
+        <StatusBadge
+          text={`${row.vehicleCount} vehicles`}
+          variant={row.vehicleCount > 5 ? 'primary' : 'default'}
+        />
+      )
+    },
+    {
+      key: 'parameters',
+      header: 'Parameters',
+      render: (row) => (
+        <StatusBadge
+          text={`${row.parameters.length} parameters`}
+          variant={row.parameters.length > 5 ? 'secondary' : 'default'}
+        />
+      )
+    }
+  ];
+
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">OBD Commands</h1>
+      <PageHeader
+        title="OBD Commands"
+        description={!loading && !error && `${commands.length} commands found`}
+      />
 
-      <div className="bg-white shadow-sm rounded-lg p-4 mb-6">
-        <div className="flex flex-wrap gap-4">
-          <div className="w-full sm:w-64">
-            <label htmlFor="hdr" className="block text-sm font-medium text-gray-700 mb-1">
-              ECU Header
-            </label>
-            <select
-              id="hdr"
-              name="hdr"
-              value={filters.hdr}
-              onChange={handleFilterChange}
-              className="input text-sm py-1"
-            >
-              <option value="">All Headers</option>
-              {headers.map(header => (
-                <option key={header} value={header}>
-                  {header}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="flex-grow">
-            <label htmlFor="parameterId" className="block text-sm font-medium text-gray-700 mb-1">
-              Filter by Parameter ID
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                id="parameterId"
-                name="parameterId"
-                value={filters.parameterId}
-                onChange={handleFilterChange}
-                placeholder="Enter parameter ID..."
-                className="input text-sm py-1 pl-8"
-              />
-              <div className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
-                <svg className="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SearchFilter
+        filters={filters}
+        onFilterChange={handleFilterChange}
+        fields={filterFields}
+        className="mb-6"
+      />
 
       {loading ? (
-        <div className="flex justify-center py-10">
-          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary-600"></div>
-        </div>
+        <LoadingSpinner size="md" centered={true} />
       ) : error ? (
-        <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <svg className="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <div className="ml-3">
-              <p className="text-sm text-red-700">{error}</p>
-            </div>
-          </div>
-        </div>
+        <ErrorAlert message={error} />
       ) : (
         <div>
-          <div className="flex justify-between items-center mb-4">
-            <div className="text-sm text-gray-600">
-              {commands.length} commands found
-            </div>
-          </div>
-
-          <div className="bg-white shadow overflow-hidden border border-gray-200 sm:rounded-lg">
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200 table-compact">
-                <thead>
-                  <tr className="bg-gray-50">
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      ECU Header
-                    </th>
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Command
-                    </th>
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Vehicle Coverage
-                    </th>
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Parameters
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {commands
-                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    .map((command) => (
-                      <React.Fragment key={command.id}>
-                        <tr
-                          className={`hover:bg-gray-50 cursor-pointer ${expandedCommand === command.id ? 'bg-gray-50' : ''}`}
-                          onClick={() => handleExpandCommand(command.id)}
-                        >
-                          <td className="px-3 py-2 text-xs font-mono font-medium text-gray-900">
-                            {command.hdr}
-                          </td>
-                          <td className="px-3 py-2 text-xs font-mono text-gray-900">
-                            {formatCommand(command.cmd)}
-                          </td>
-                          <td className="px-3 py-2">
-                            <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
-                              command.vehicleCount > 5
-                              ? 'bg-primary-100 text-primary-800'
-                              : 'bg-gray-100 text-gray-800'
-                            }`}>
-                              {command.vehicleCount} vehicles
-                            </span>
-                          </td>
-                          <td className="px-3 py-2">
-                            <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
-                              command.parameters.length > 5
-                              ? 'bg-secondary-100 text-secondary-800'
-                              : 'bg-gray-100 text-gray-800'
-                            }`}>
-                              {command.parameters.length} parameters
-                            </span>
-                          </td>
-                        </tr>
-                        {expandedCommand === command.id && (
-                          <tr>
-                            <td colSpan="4" className="px-0 py-0 border-t border-gray-100">
-                              <div className="p-3 bg-gray-50">
-                                {/* Bit Mapping Visualization */}
-                                {command.parameters.length > 0 && (
-                                  <BitMappingVisualizer
-                                    command={command}
-                                    onBitSelected={handleSignalSelected}
-                                  />
-                                )}
-
-                                <div className="mb-3">
-                                  <h4 className="text-xs font-medium text-gray-500 mb-2">
-                                    Vehicles using this command:
-                                  </h4>
-                                  <div className="flex flex-wrap gap-1 mb-2">
-                                    {command.vehicles.slice(0, 12).map(vehicle => {
-                                      const [make, model] = vehicle.split('-');
-                                      return (
-                                        <span key={vehicle} className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
-                                          {make} {model}
-                                        </span>
-                                      );
-                                    })}
-                                    {command.vehicles.length > 12 && (
-                                      <span className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
-                                        +{command.vehicles.length - 12} more
-                                      </span>
-                                    )}
-                                  </div>
-                                </div>
-
-                                <div>
-                                  <h4 className="text-xs font-medium text-gray-500 mb-2">
-                                    Parameters:
-                                  </h4>
-                                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-                                    {command.parameters.map(param => (
-                                      <div
-                                        key={`${param.make}-${param.model}-${param.id}`}
-                                        className={`text-xs p-1 rounded ${selectedSignal?.id === param.id ? 'bg-blue-50 border border-blue-200' : ''}`}
-                                        onClick={(e) => {
-                                          e.stopPropagation();
-                                          handleSignalSelected(param);
-                                        }}
-                                      >
-                                        <span className="font-medium">{param.id}:</span> {param.name}
-                                        <div className="text-gray-500 text-xs">
-                                          Bits: {param.bitOffset}-{param.bitOffset + param.bitLength - 1}
-                                        </div>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        )}
-                      </React.Fragment>
-                    ))}
-                  {commands.length === 0 && (
-                    <tr>
-                      <td colSpan="4" className="px-3 py-4 text-sm text-gray-500 text-center">
-                        No commands found matching the current filters.
-                      </td>
+          {commands.length === 0 ? (
+            <EmptyState
+              title="No commands found"
+              message="No commands found matching the current filters."
+            />
+          ) : (
+            <div className="bg-white shadow overflow-hidden border border-gray-200 sm:rounded-lg">
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 table-compact">
+                  <thead>
+                    <tr className="bg-gray-50">
+                      {columns.map(column => (
+                        <th key={column.key} className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          {column.header}
+                        </th>
+                      ))}
                     </tr>
-                  )}
-                </tbody>
-              </table>
-            </div>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {commands
+                      .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                      .map((command) => (
+                        <React.Fragment key={command.id}>
+                          <tr
+                            className={`hover:bg-gray-50 cursor-pointer ${expandedCommand === command.id ? 'bg-gray-50' : ''}`}
+                            onClick={() => handleExpandCommand(command.id)}
+                          >
+                            {columns.map((column) => (
+                              <td key={column.key} className={`px-3 py-2 text-xs ${column.cellClassName || ''}`}>
+                                {column.render ? column.render(command) : command[column.key]}
+                              </td>
+                            ))}
+                          </tr>
+                          {expandedCommand === command.id && (
+                            <tr>
+                              <td colSpan="4" className="px-0 py-0 border-t border-gray-100">
+                                <div className="p-3 bg-gray-50">
+                                  {/* Bit Mapping Visualization */}
+                                  {command.parameters.length > 0 && (
+                                    <BitMappingVisualizer
+                                      command={command}
+                                      onBitSelected={handleSignalSelected}
+                                    />
+                                  )}
 
-            {commands.length > 0 && (
-              <TablePagination
-                totalItems={commands.length}
-                itemsPerPage={rowsPerPage}
-                currentPage={page}
-                onPageChange={setPage}
-                onRowsPerPageChange={(e) => {
-                  setRowsPerPage(parseInt(e.target.value, 10));
-                  setPage(0);
-                }}
-              />
-            )}
-          </div>
+                                  <div className="mb-3">
+                                    <h4 className="text-xs font-medium text-gray-500 mb-2">
+                                      Vehicles using this command:
+                                    </h4>
+                                    <div className="flex flex-wrap gap-1 mb-2">
+                                      {command.vehicles.slice(0, 12).map(vehicle => {
+                                        const [make, model] = vehicle.split('-');
+                                        return (
+                                          <StatusBadge
+                                            key={vehicle}
+                                            text={`${make} ${model}`}
+                                            variant="default"
+                                            rounded="md"
+                                          />
+                                        );
+                                      })}
+                                      {command.vehicles.length > 12 && (
+                                        <StatusBadge
+                                          text={`+${command.vehicles.length - 12} more`}
+                                          variant="default"
+                                          rounded="md"
+                                        />
+                                      )}
+                                    </div>
+                                  </div>
+
+                                  <div>
+                                    <h4 className="text-xs font-medium text-gray-500 mb-2">
+                                      Parameters:
+                                    </h4>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                                      {command.parameters.map(param => (
+                                        <div
+                                          key={`${param.make}-${param.model}-${param.id}`}
+                                          className={`text-xs p-1 rounded ${selectedSignal?.id === param.id ? 'bg-blue-50 border border-blue-200' : ''}`}
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleSignalSelected(param);
+                                          }}
+                                        >
+                                          <span className="font-medium">{param.id}:</span> {param.name}
+                                          <div className="text-gray-500 text-xs">
+                                            Bits: {param.bitOffset}-{param.bitOffset + param.bitLength - 1}
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          )}
+                        </React.Fragment>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {commands.length > 0 && (
+                <TablePagination
+                  totalItems={commands.length}
+                  itemsPerPage={rowsPerPage}
+                  currentPage={page}
+                  onPageChange={setPage}
+                  onRowsPerPageChange={(e) => {
+                    setRowsPerPage(parseInt(e.target.value, 10));
+                    setPage(0);
+                  }}
+                />
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>
