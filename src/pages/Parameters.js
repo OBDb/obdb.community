@@ -8,8 +8,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorAlert from '../components/ErrorAlert';
 import PageHeader from '../components/PageHeader';
 import StatusBadge from '../components/StatusBadge';
-import DataTable from '../components/DataTable';
-import EmptyState from '../components/EmptyState';
+import CommandDetailsPanel from '../components/CommandDetailsPanel'; // Import the CommandDetailsPanel
 
 const Parameters = () => {
   const [parameters, setParameters] = useState([]);
@@ -25,6 +24,10 @@ const Parameters = () => {
   });
   const [orderBy, setOrderBy] = useState('id');
   const [order, setOrder] = useState('asc');
+  // New state variables for command details
+  const [expandedParameterId, setExpandedParameterId] = useState(null);
+  const [commandData, setCommandData] = useState(null);
+  const [selectedSignal, setSelectedSignal] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -79,18 +82,6 @@ const Parameters = () => {
 
   const sortParameters = (params, property, direction) => {
     const stabilizedThis = params.map((item, index) => [item, index]);
-    const sortedArray = stabilizedThis.sort((a, b) => {
-      const aValue = a[0][property];
-      const bValue = b[0][property];
-
-      const compareResult =
-        typeof aValue === 'string' && typeof bValue === 'string'
-          ? aValue.localeCompare(bValue)
-          : (aValue < bValue ? -1 : aValue > bValue ? 1 : 0);
-
-      return direction === 'asc' ? compareResult : -compareResult;
-    });
-
     return stabilizedThis.map((el) => el[0]);
   };
 
@@ -113,10 +104,6 @@ const Parameters = () => {
     });
   };
 
-  const handleChangePage = (newPage) => {
-    setPage(newPage);
-  };
-
   const handleChangeRowsPerPage = (e) => {
     setRowsPerPage(parseInt(e.target.value, 10));
     setPage(0);
@@ -128,6 +115,60 @@ const Parameters = () => {
       const url = `https://github.com/OBDb/${instance.make}-${instance.model}/blob/main/signalsets/v3/default.json`;
       window.open(url, '_blank');
     }
+  };
+
+  const handleExpandParameter = async (parameter) => {
+    if (expandedParameterId === parameter.id) {
+      // Collapse if already expanded
+      setExpandedParameterId(null);
+      setCommandData(null);
+      setSelectedSignal(null);
+      return;
+    }
+
+    try {
+      // We need to get the command details for this parameter
+      // For this example, we'll look at the first instance of the parameter
+      if (parameter.instances && parameter.instances.length > 0) {
+        const instance = parameter.instances[0];
+
+        // Fetch all commands for the header/command combination
+        const commands = await dataService.getCommands({
+          hdr: instance.hdr
+        });
+
+        // Find the specific command that contains this parameter
+        const cmdFormatted = Object.entries(instance.cmd)
+          .map(([key, value]) => `${key}${value}`)
+          .join('');
+
+        const matchingCommand = commands.find(cmd => {
+          const cmdKeyFormatted = Object.entries(cmd.cmd)
+            .map(([key, value]) => `${key}${value}`)
+            .join('');
+          return cmdKeyFormatted === cmdFormatted && cmd.hdr === instance.hdr;
+        });
+
+        if (matchingCommand) {
+          setCommandData(matchingCommand);
+          // Find this specific parameter in the command parameters
+          const paramInCommand = matchingCommand.parameters.find(p => p.id === parameter.id);
+          if (paramInCommand) {
+            setSelectedSignal(paramInCommand);
+          }
+          setExpandedParameterId(parameter.id);
+        } else {
+          // Handle the case where we can't find the command
+          console.error('Could not find matching command for parameter', parameter.id);
+        }
+      }
+    } catch (err) {
+      console.error('Error fetching command details', err);
+    }
+  };
+
+  const handleSignalSelected = (signal) => {
+    setSelectedSignal(signal);
   };
 
   // Define filter fields for the SearchFilter component
@@ -205,7 +246,10 @@ const Parameters = () => {
       cellClassName: 'text-center',
       render: (row) => (
         <button
-          onClick={() => openGitHubRepo(row)}
+          onClick={(e) => {
+            e.stopPropagation(); // Prevent row click
+            openGitHubRepo(row);
+          }}
           className="text-gray-600 hover:text-primary-600"
           title="View on GitHub"
         >
@@ -261,14 +305,70 @@ const Parameters = () => {
               </div>
             </div>
 
-            <DataTable
-              columns={columns}
-              data={displayedParameters.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)}
-              emptyMessage="No parameters found matching the current filters."
-              sortConfig={{ key: orderBy, direction: order }}
-              onSort={handleRequestSort}
-              isCompact={true}
-            />
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200 table-compact">
+                <thead>
+                  <tr className="bg-gray-50">
+                    {columns.map((column) => (
+                      <th
+                        key={column.key}
+                        className={`px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ${column.sortable ? 'cursor-pointer' : ''} ${column.className || ''}`}
+                        onClick={column.sortable ? () => handleRequestSort(column.key) : undefined}
+                      >
+                        <div className="flex items-center">
+                          {column.header}
+                          {orderBy === column.key && (
+                            <span className="ml-1">
+                              {order === 'asc' ? '↑' : '↓'}
+                            </span>
+                          )}
+                        </div>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {displayedParameters
+                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                    .map((parameter) => (
+                      <React.Fragment key={parameter.id}>
+                        <tr
+                          className={`hover:bg-gray-50 cursor-pointer ${expandedParameterId === parameter.id ? 'bg-gray-50' : ''}`}
+                          onClick={() => handleExpandParameter(parameter)}
+                        >
+                          {columns.map((column) => (
+                            <td
+                              key={`${parameter.id}-${column.key}`}
+                              className={`px-3 py-1.5 text-xs ${column.cellClassName || ''}`}
+                            >
+                              {column.render ? column.render(parameter) : parameter[column.key]}
+                            </td>
+                          ))}
+                        </tr>
+                        {expandedParameterId === parameter.id && commandData && (
+                          <tr>
+                            <td colSpan={columns.length} className="px-0 py-0 border-t border-gray-100">
+                              <CommandDetailsPanel
+                                command={commandData}
+                                highlightedParameterId={parameter.id}
+                                onSignalSelected={handleSignalSelected}
+                                showVehicles={true}
+                              />
+                            </td>
+                          </tr>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  {displayedParameters.length === 0 && (
+                    <tr>
+                      <td colSpan={columns.length} className="px-3 py-4 text-sm text-gray-500 text-center">
+                        No parameters found matching the current filters.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
 
             {displayedParameters.length > 0 && (
               <TablePagination

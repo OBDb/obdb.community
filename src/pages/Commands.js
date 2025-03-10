@@ -73,15 +73,6 @@ const Commands = () => {
     });
   };
 
-  const handleChangePage = (newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (e) => {
-    setRowsPerPage(parseInt(e.target.value, 10));
-    setPage(0);
-  };
-
   const handleExpandCommand = (commandId) => {
     setExpandedCommand(expandedCommand === commandId ? null : commandId);
     setSelectedSignal(null); // Reset selected signal when toggling command
