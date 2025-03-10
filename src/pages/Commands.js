@@ -40,7 +40,7 @@ const Commands = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(50);
   const [filters, setFilters] = useState({
     hdr: '',
     parameterId: '',
