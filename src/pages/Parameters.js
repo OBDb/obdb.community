@@ -1,5 +1,6 @@
 // src/pages/Parameters.js
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import dataService from '../services/dataService';
 
 const Parameters = () => {
@@ -16,7 +17,6 @@ const Parameters = () => {
   });
   const [orderBy, setOrderBy] = useState('id');
   const [order, setOrder] = useState('asc');
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -283,9 +283,25 @@ const Parameters = () => {
                           )}
                         </td>
                         <td className="px-3 py-1.5">
-                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                            {param.vehicleCount}
-                          </span>
+                          {param.vehicles.length > 0 && param.vehicles[0] ? (
+                            (() => {
+                              const [make, model] = param.vehicles[0].split('-');
+                              return (
+                                <Link
+                                  to={`/vehicles/${make}/${model}`}
+                                  className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 hover:bg-primary-100 hover:text-primary-800 transition-colors"
+                                >
+                                  <svg className="h-3 w-3 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                                    <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1v-1h3.05a2.5 2.5 0 014.9 0H19a1 1 0 001-1v-2a4 4 0 00-4-4h-3V4a1 1 0 00-1-1H3z" />
+                                  </svg>
+                                  {make} {model}
+                                </Link>
+                              );
+                            })()
+                          ) : (
+                            <span className="text-xs text-gray-500">No vehicle</span>
+                          )}
                         </td>
                         <td className="px-3 py-1.5 text-center">
                           <button
