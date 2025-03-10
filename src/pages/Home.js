@@ -1,105 +1,135 @@
 // src/pages/Home.js
 import React from 'react';
-import {
-  Typography,
-  Container,
-  Grid,
-  Card,
-  CardContent,
-  CardActions,
-  Button,
-  Box
-} from '@mui/material';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import ListAltIcon from '@mui/icons-material/ListAlt';
-import CodeIcon from '@mui/icons-material/Code';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <Container maxWidth="lg">
-      <Box sx={{ my: 4, textAlign: 'center' }}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Welcome to OBDb Explorer
-        </Typography>
-        <Typography variant="h5" color="text.secondary" paragraph>
+    <div>
+      <div className="mb-6 text-center">
+        <h1 className="text-3xl font-bold mb-2">OBDb Explorer</h1>
+        <p className="text-gray-600">
           Explore vehicle OBD parameters, commands, and vehicle-specific mappings
-        </Typography>
-      </Box>
+        </p>
+      </div>
 
-      <Grid container spacing={4} justifyContent="center">
-        <Grid item xs={12} sm={6} md={4}>
-          <Card elevation={3} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1, textAlign: 'center', pt: 4 }}>
-              <DirectionsCarIcon sx={{ fontSize: 60, color: 'primary.main', mb: 2 }} />
-              <Typography gutterBottom variant="h5" component="h2">
-                Browse Vehicles
-              </Typography>
-              <Typography>
-                Explore all available vehicles and see which OBD parameters are mapped for each make and model.
-              </Typography>
-            </CardContent>
-            <CardActions sx={{ justifyContent: 'center', pb: 3 }}>
-              <Button size="large" component={RouterLink} to="/vehicles" variant="contained">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-4 py-5 sm:p-6">
+            <div className="flex items-center mb-4">
+              <svg
+                className="h-8 w-8 text-primary-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <h2 className="ml-3 text-lg font-medium text-gray-900">Browse Vehicles</h2>
+            </div>
+            <p className="text-gray-600 mb-4 text-sm">
+              Explore all available vehicles and see which OBD parameters are mapped for each make and model.
+            </p>
+            <div className="mt-2">
+              <Link
+                to="/vehicles"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+              >
                 View Vehicles
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+              </Link>
+            </div>
+          </div>
+        </div>
 
-        <Grid item xs={12} sm={6} md={4}>
-          <Card elevation={3} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1, textAlign: 'center', pt: 4 }}>
-              <ListAltIcon sx={{ fontSize: 60, color: 'primary.main', mb: 2 }} />
-              <Typography gutterBottom variant="h5" component="h2">
-                Parameters Database
-              </Typography>
-              <Typography>
-                Search and filter through all OBD parameters across all vehicles to find specific signals.
-              </Typography>
-            </CardContent>
-            <CardActions sx={{ justifyContent: 'center', pb: 3 }}>
-              <Button size="large" component={RouterLink} to="/parameters" variant="contained">
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-4 py-5 sm:p-6">
+            <div className="flex items-center mb-4">
+              <svg
+                className="h-8 w-8 text-primary-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+              <h2 className="ml-3 text-lg font-medium text-gray-900">Parameters Database</h2>
+            </div>
+            <p className="text-gray-600 mb-4 text-sm">
+              Search and filter through all OBD parameters across all vehicles to find specific signals.
+            </p>
+            <div className="mt-2">
+              <Link
+                to="/parameters"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+              >
                 Explore Parameters
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+              </Link>
+            </div>
+          </div>
+        </div>
 
-        <Grid item xs={12} sm={6} md={4}>
-          <Card elevation={3} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1, textAlign: 'center', pt: 4 }}>
-              <CodeIcon sx={{ fontSize: 60, color: 'primary.main', mb: 2 }} />
-              <Typography gutterBottom variant="h5" component="h2">
-                OBD Commands
-              </Typography>
-              <Typography>
-                View all available OBD commands and which vehicles support each command.
-              </Typography>
-            </CardContent>
-            <CardActions sx={{ justifyContent: 'center', pb: 3 }}>
-              <Button size="large" component={RouterLink} to="/commands" variant="contained">
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-4 py-5 sm:p-6">
+            <div className="flex items-center mb-4">
+              <svg
+                className="h-8 w-8 text-primary-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+              <h2 className="ml-3 text-lg font-medium text-gray-900">OBD Commands</h2>
+            </div>
+            <p className="text-gray-600 mb-4 text-sm">
+              View all available OBD commands and which vehicles support each command.
+            </p>
+            <div className="mt-2">
+              <Link
+                to="/commands"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+              >
                 View Commands
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      </Grid>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <Box sx={{ my: 6, textAlign: 'center' }}>
-        <Typography variant="h5" gutterBottom>
-          About OBDb Explorer
-        </Typography>
-        <Typography variant="body1" paragraph>
-          This tool is designed to make it easy to visualize and explore the complete set of OBD parameters
-          that have been mapped for every vehicle in the OBDb GitHub organization.
-        </Typography>
-        <Typography variant="body1">
-          Each vehicle repository contains a signalset definition that follows the OBDb specification, and this
-          explorer helps identify commonalities in these mappings across different vehicles.
-        </Typography>
-      </Box>
-    </Container>
+      <div className="bg-white shadow rounded-lg p-6 mb-8">
+        <h2 className="text-lg font-medium text-gray-900 mb-4">About OBDb Explorer</h2>
+        <div className="text-sm text-gray-600 space-y-2">
+          <p>
+            This tool is designed to make it easy to visualize and explore the complete set of OBD parameters
+            that have been mapped for every vehicle in the OBDb GitHub organization.
+          </p>
+          <p>
+            Each vehicle repository contains a signalset definition that follows the OBDb specification, and this
+            explorer helps identify commonalities in these mappings across different vehicles.
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-gray-50 rounded-lg border border-gray-200 p-6">
+        <h2 className="text-lg font-medium text-gray-900 mb-4">Quick Links</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Link to="/vehicles" className="text-primary-600 hover:text-primary-700 text-sm">
+            Browse All Vehicles
+          </Link>
+          <Link to="/parameters" className="text-primary-600 hover:text-primary-700 text-sm">
+            Parameter Database
+          </Link>
+          <Link to="/commands" className="text-primary-600 hover:text-primary-700 text-sm">
+            OBD Commands
+          </Link>
+          <a href="https://github.com/OBDb" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 text-sm">
+            OBDb GitHub
+          </a>
+        </div>
+      </div>
+    </div>
   );
 };
 

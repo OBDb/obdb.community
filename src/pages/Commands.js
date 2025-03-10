@@ -1,37 +1,5 @@
 // src/pages/Commands.js
 import React, { useState, useEffect } from 'react';
-import {
-  Container,
-  Typography,
-  Grid,
-  TextField,
-  InputAdornment,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Box,
-  Divider,
-  CircularProgress,
-  Alert,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  TablePagination,
-  Chip,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  List,
-  ListItem,
-  ListItemText,
-} from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import dataService from '../services/dataService';
 
 const Commands = () => {
@@ -89,19 +57,20 @@ const Commands = () => {
     searchCommands();
   }, [filters]);
 
-  const handleFilterChange = (field) => (event) => {
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
     setFilters({
       ...filters,
-      [field]: event.target.value,
+      [name]: value,
     });
   };
 
-  const handleChangePage = (event, newPage) => {
+  const handleChangePage = (newPage) => {
     setPage(newPage);
   };
 
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
+  const handleChangeRowsPerPage = (e) => {
+    setRowsPerPage(parseInt(e.target.value, 10));
     setPage(0);
   };
 
@@ -116,205 +85,309 @@ const Commands = () => {
   };
 
   return (
-    <Container maxWidth="lg">
-      <Typography variant="h4" component="h1" gutterBottom>
-        OBD Commands
-      </Typography>
+    <div>
+      <h1 className="text-2xl font-bold mb-6">OBD Commands</h1>
 
-      <Box sx={{ mb: 4 }}>
-        <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} sm={6} md={4}>
-            <FormControl fullWidth variant="outlined">
-              <InputLabel id="header-label">ECU Header</InputLabel>
-              <Select
-                labelId="header-label"
-                value={filters.hdr}
-                onChange={handleFilterChange('hdr')}
-                label="ECU Header"
-              >
-                <MenuItem value="">
-                  <em>All Headers</em>
-                </MenuItem>
-                {headers.map(header => (
-                  <MenuItem key={header} value={header}>
-                    {header}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} sm={6} md={8}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Filter by Parameter ID"
-              value={filters.parameterId}
-              onChange={handleFilterChange('parameterId')}
-              placeholder="Enter parameter ID..."
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </Grid>
-        </Grid>
-      </Box>
-
-      <Divider sx={{ mb: 4 }} />
+      <div className="bg-white shadow-sm rounded-lg p-4 mb-6">
+        <div className="flex flex-wrap gap-4">
+          <div className="w-full sm:w-64">
+            <label htmlFor="hdr" className="block text-sm font-medium text-gray-700 mb-1">
+              ECU Header
+            </label>
+            <select
+              id="hdr"
+              name="hdr"
+              value={filters.hdr}
+              onChange={handleFilterChange}
+              className="input text-sm py-1"
+            >
+              <option value="">All Headers</option>
+              {headers.map(header => (
+                <option key={header} value={header}>
+                  {header}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="flex-grow">
+            <label htmlFor="parameterId" className="block text-sm font-medium text-gray-700 mb-1">
+              Filter by Parameter ID
+            </label>
+            <div className="relative">
+              <input
+                type="text"
+                id="parameterId"
+                name="parameterId"
+                value={filters.parameterId}
+                onChange={handleFilterChange}
+                placeholder="Enter parameter ID..."
+                className="input text-sm py-1 pl-8"
+              />
+              <div className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
+                <svg className="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {loading ? (
-        <Box sx={{ display: 'flex', justifyContent: 'center', my: 4 }}>
-          <CircularProgress />
-        </Box>
+        <div className="flex justify-center py-10">
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary-600"></div>
+        </div>
       ) : error ? (
-        <Alert severity="error" sx={{ mb: 4 }}>
-          {error}
-        </Alert>
+        <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
+          <div className="flex">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <p className="text-sm text-red-700">{error}</p>
+            </div>
+          </div>
+        </div>
       ) : (
-        <>
-          <Typography variant="h6" sx={{ mb: 2 }}>
-            {commands.length} commands found
-          </Typography>
+        <div>
+          <div className="flex justify-between items-center mb-4">
+            <div className="text-sm text-gray-600">
+              {commands.length} commands found
+            </div>
+          </div>
 
-          <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-            <TableContainer sx={{ maxHeight: 600 }}>
-              <Table stickyHeader aria-label="commands table">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>ECU Header</TableCell>
-                    <TableCell>Command</TableCell>
-                    <TableCell>Vehicle Coverage</TableCell>
-                    <TableCell>Parameters</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
+          <div className="bg-white shadow overflow-hidden border border-gray-200 sm:rounded-lg">
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200 table-compact">
+                <thead>
+                  <tr className="bg-gray-50">
+                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      ECU Header
+                    </th>
+                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Command
+                    </th>
+                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Vehicle Coverage
+                    </th>
+                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Parameters
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
                   {commands
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((command) => (
                       <React.Fragment key={command.id}>
-                        <TableRow
-                          hover
+                        <tr
+                          className={`hover:bg-gray-50 cursor-pointer ${expandedCommand === command.id ? 'bg-gray-50' : ''}`}
                           onClick={() => handleExpandCommand(command.id)}
-                          sx={{ cursor: 'pointer' }}
                         >
-                          <TableCell>
-                            <Typography variant="body2" fontFamily="monospace" sx={{ fontWeight: 'bold' }}>
-                              {command.hdr}
-                            </Typography>
-                          </TableCell>
-                          <TableCell>
-                            <Typography variant="body2" fontFamily="monospace">
-                              {formatCommand(command.cmd)}
-                            </Typography>
-                          </TableCell>
-                          <TableCell>
-                            <Chip
-                              label={`${command.vehicleCount} vehicles`}
-                              size="small"
-                              color="primary"
-                              variant={command.vehicleCount > 5 ? "default" : "outlined"}
-                            />
-                          </TableCell>
-                          <TableCell>
-                            <Chip
-                              label={`${command.parameters.length} parameters`}
-                              size="small"
-                              color="secondary"
-                              variant={command.parameters.length > 5 ? "default" : "outlined"}
-                            />
-                          </TableCell>
-                        </TableRow>
+                          <td className="px-3 py-2 text-xs font-mono font-medium text-gray-900">
+                            {command.hdr}
+                          </td>
+                          <td className="px-3 py-2 text-xs font-mono text-gray-900">
+                            {formatCommand(command.cmd)}
+                          </td>
+                          <td className="px-3 py-2">
+                            <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
+                              command.vehicleCount > 5
+                              ? 'bg-primary-100 text-primary-800'
+                              : 'bg-gray-100 text-gray-800'
+                            }`}>
+                              {command.vehicleCount} vehicles
+                            </span>
+                          </td>
+                          <td className="px-3 py-2">
+                            <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
+                              command.parameters.length > 5
+                              ? 'bg-secondary-100 text-secondary-800'
+                              : 'bg-gray-100 text-gray-800'
+                            }`}>
+                              {command.parameters.length} parameters
+                            </span>
+                          </td>
+                        </tr>
                         {expandedCommand === command.id && (
-                          <TableRow>
-                            <TableCell colSpan={4} sx={{ py: 0 }}>
-                              <Box sx={{ p: 2, bgcolor: 'action.hover' }}>
-                                <Typography variant="subtitle2" gutterBottom>
-                                  Vehicles using this command:
-                                </Typography>
-                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
-                                  {command.vehicles.slice(0, 10).map(vehicle => {
-                                    const [make, model] = vehicle.split('-');
-                                    return (
-                                      <Chip
-                                        key={vehicle}
-                                        label={`${make} ${model}`}
-                                        size="small"
-                                        variant="outlined"
-                                      />
-                                    );
-                                  })}
-                                  {command.vehicles.length > 10 && (
-                                    <Chip
-                                      label={`+${command.vehicles.length - 10} more`}
-                                      size="small"
-                                    />
-                                  )}
-                                </Box>
+                          <tr>
+                            <td colSpan="4" className="px-0 py-0 border-t border-gray-100">
+                              <div className="p-3 bg-gray-50">
+                                <div className="mb-3">
+                                  <h4 className="text-xs font-medium text-gray-500 mb-2">
+                                    Vehicles using this command:
+                                  </h4>
+                                  <div className="flex flex-wrap gap-1 mb-2">
+                                    {command.vehicles.slice(0, 12).map(vehicle => {
+                                      const [make, model] = vehicle.split('-');
+                                      return (
+                                        <span key={vehicle} className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
+                                          {make} {model}
+                                        </span>
+                                      );
+                                    })}
+                                    {command.vehicles.length > 12 && (
+                                      <span className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
+                                        +{command.vehicles.length - 12} more
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
 
-                                <Typography variant="subtitle2" gutterBottom>
-                                  Parameters:
-                                </Typography>
-                                <List dense>
-                                  {command.parameters.slice(0, 8).map(param => (
-                                    <ListItem key={`${param.make}-${param.model}-${param.id}`} disablePadding>
-                                      <ListItemText
-                                        primary={param.id}
-                                        secondary={param.name}
-                                        primaryTypographyProps={{
-                                          variant: 'body2',
-                                          fontWeight: 'medium'
-                                        }}
-                                        secondaryTypographyProps={{
-                                          variant: 'body2'
-                                        }}
-                                      />
-                                    </ListItem>
-                                  ))}
-                                  {command.parameters.length > 8 && (
-                                    <ListItem>
-                                      <ListItemText
-                                        primary={`+ ${command.parameters.length - 8} more parameters...`}
-                                        primaryTypographyProps={{
-                                          variant: 'body2',
-                                          fontStyle: 'italic',
-                                          color: 'text.secondary'
-                                        }}
-                                      />
-                                    </ListItem>
-                                  )}
-                                </List>
-                              </Box>
-                            </TableCell>
-                          </TableRow>
+                                <div>
+                                  <h4 className="text-xs font-medium text-gray-500 mb-2">
+                                    Parameters:
+                                  </h4>
+                                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                                    {command.parameters.slice(0, 12).map(param => (
+                                      <div key={`${param.make}-${param.model}-${param.id}`} className="text-xs">
+                                        <span className="font-medium">{param.id}:</span> {param.name}
+                                      </div>
+                                    ))}
+                                    {command.parameters.length > 12 && (
+                                      <div className="text-xs text-gray-500 italic">
+                                        + {command.parameters.length - 12} more parameters...
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
                         )}
                       </React.Fragment>
                     ))}
                   {commands.length === 0 && (
-                    <TableRow>
-                      <TableCell colSpan={4} align="center">
+                    <tr>
+                      <td colSpan="4" className="px-3 py-4 text-sm text-gray-500 text-center">
                         No commands found matching the current filters.
-                      </TableCell>
-                    </TableRow>
+                      </td>
+                    </tr>
                   )}
-                </TableBody>
-              </Table>
-            </TableContainer>
-            <TablePagination
-              rowsPerPageOptions={[10, 25, 50, 100]}
-              component="div"
-              count={commands.length}
-              rowsPerPage={rowsPerPage}
-              page={page}
-              onPageChange={handleChangePage}
-              onRowsPerPageChange={handleChangeRowsPerPage}
-            />
-          </Paper>
-        </>
+                </tbody>
+              </table>
+            </div>
+
+            {commands.length > 0 && (
+              <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+                <div className="flex-1 flex justify-between sm:hidden">
+                  <button
+                    onClick={() => handleChangePage(page - 1)}
+                    disabled={page === 0}
+                    className={`relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md ${
+                      page === 0
+                        ? 'text-gray-300 bg-gray-50'
+                        : 'text-gray-700 bg-white hover:bg-gray-50'
+                    }`}
+                  >
+                    Previous
+                  </button>
+                  <button
+                    onClick={() => handleChangePage(page + 1)}
+                    disabled={page >= Math.ceil(commands.length / rowsPerPage) - 1}
+                    className={`ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md ${
+                      page >= Math.ceil(commands.length / rowsPerPage) - 1
+                        ? 'text-gray-300 bg-gray-50'
+                        : 'text-gray-700 bg-white hover:bg-gray-50'
+                    }`}
+                  >
+                    Next
+                  </button>
+                </div>
+                <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                  <div>
+                    <p className="text-sm text-gray-700">
+                      Showing{' '}
+                      <span className="font-medium">
+                        {page * rowsPerPage + 1}
+                      </span>{' '}
+                      to{' '}
+                      <span className="font-medium">
+                        {Math.min((page + 1) * rowsPerPage, commands.length)}
+                      </span>{' '}
+                      of{' '}
+                      <span className="font-medium">{commands.length}</span> results
+                    </p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div>
+                      <label htmlFor="rows-per-page-desktop" className="text-xs text-gray-600">
+                        Rows:
+                      </label>
+                      <select
+                        id="rows-per-page-desktop"
+                        value={rowsPerPage}
+                        onChange={handleChangeRowsPerPage}
+                        className="ml-1 text-xs border-gray-300 rounded py-1"
+                      >
+                        {[10, 25, 50, 100].map((value) => (
+                          <option key={value} value={value}>
+                            {value}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                      <button
+                        onClick={() => handleChangePage(page - 1)}
+                        disabled={page === 0}
+                        className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium ${
+                          page === 0
+                            ? 'text-gray-300'
+                            : 'text-gray-500 hover:bg-gray-50'
+                        }`}
+                      >
+                        <span className="sr-only">Previous</span>
+                        <svg
+                          className="h-5 w-5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        onClick={() => handleChangePage(page + 1)}
+                        disabled={page >= Math.ceil(commands.length / rowsPerPage) - 1}
+                        className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium ${
+                          page >= Math.ceil(commands.length / rowsPerPage) - 1
+                            ? 'text-gray-300'
+                            : 'text-gray-500 hover:bg-gray-50'
+                        }`}
+                      >
+                        <span className="sr-only">Next</span>
+                        <svg
+                          className="h-5 w-5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       )}
-    </Container>
+    </div>
   );
 };
 

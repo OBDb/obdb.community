@@ -1,118 +1,116 @@
 // src/components/Navbar.js
-import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  Container,
-  Box,
-  useMediaQuery,
-  IconButton,
-  Menu,
-  MenuItem,
-} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const menuItems = [
-    { label: 'Home', path: '/' },
-    { label: 'Vehicles', path: '/vehicles' },
-    { label: 'Parameters', path: '/parameters' },
-    { label: 'Commands', path: '/commands' },
+  const navigation = [
+    { name: 'Home', path: '/' },
+    { name: 'Vehicles', path: '/vehicles' },
+    { name: 'Parameters', path: '/parameters' },
+    { name: 'Commands', path: '/commands' },
   ];
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <DirectionsCarIcon sx={{ mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component={RouterLink}
-            to="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            OBDb Explorer
-          </Typography>
+    <nav className="bg-primary-600 shadow-md">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-14">
+          <div className="flex">
+            <div className="flex-shrink-0 flex items-center">
+              <Link to="/" className="text-white font-bold text-xl">
+                OBDb Explorer
+              </Link>
+            </div>
+          </div>
 
-          {isMobile ? (
-            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                onClick={handleMenu}
+          {/* Desktop navigation */}
+          <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+            {navigation.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) =>
+                  isActive
+                    ? 'px-3 py-2 text-sm font-medium text-white bg-primary-700 rounded-md'
+                    : 'px-3 py-2 text-sm font-medium text-primary-100 hover:text-white hover:bg-primary-500 rounded-md'
+                }
               >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
+                {item.name}
+              </NavLink>
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="flex items-center md:hidden">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center p-2 rounded-md text-primary-200 hover:text-white hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <span className="sr-only">Open main menu</span>
+              {/* Icon when menu is closed */}
+              <svg
+                className={`${isMenuOpen ? 'hidden' : 'block'} h-6 w-6`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
               >
-                {menuItems.map((item) => (
-                  <MenuItem
-                    key={item.path}
-                    component={RouterLink}
-                    to={item.path}
-                    onClick={handleClose}
-                  >
-                    {item.label}
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-          ) : (
-            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
-              {menuItems.map((item) => (
-                <Button
-                  key={item.path}
-                  component={RouterLink}
-                  to={item.path}
-                  sx={{ color: 'white', mx: 1 }}
-                >
-                  {item.label}
-                </Button>
-              ))}
-            </Box>
-          )}
-        </Toolbar>
-      </Container>
-    </AppBar>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              {/* Icon when menu is open */}
+              <svg
+                className={`${isMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <div
+        className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-primary-700`}
+        id="mobile-menu"
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1">
+          {navigation.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                isActive
+                  ? 'block px-3 py-2 text-base font-medium text-white bg-primary-800 rounded-md'
+                  : 'block px-3 py-2 text-base font-medium text-primary-200 hover:text-white hover:bg-primary-500 rounded-md'
+              }
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 };
 
