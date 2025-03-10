@@ -25,6 +25,7 @@ import {
   Chip,
   IconButton,
   Tooltip,
+  TableSortLabel,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import InfoIcon from '@mui/icons-material/Info';
@@ -33,15 +34,18 @@ import dataService from '../services/dataService';
 
 const Parameters = () => {
   const [parameters, setParameters] = useState([]);
+  const [displayedParameters, setDisplayedParameters] = useState([]);
   const [suggestedMetrics, setSuggestedMetrics] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(50);
   const [filters, setFilters] = useState({
     query: '',
     metric: '',
   });
+  const [orderBy, setOrderBy] = useState('id');
+  const [order, setOrder] = useState('asc');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,6 +59,10 @@ const Parameters = () => {
         // Search parameters with no filters initially
         const result = await dataService.searchParameters({});
         setParameters(result);
+
+        // Sort the parameters by ID initially
+        const sortedResult = sortParameters(result, 'id', 'asc');
+        setDisplayedParameters(sortedResult);
 
         setLoading(false);
       } catch (err) {
@@ -73,6 +81,11 @@ const Parameters = () => {
         setLoading(true);
         const result = await dataService.searchParameters(filters);
         setParameters(result);
+
+        // Apply current sorting to the filtered results
+        const sortedResult = sortParameters(result, orderBy, order);
+        setDisplayedParameters(sortedResult);
+
         setPage(0); // Reset to first page when filters change
         setLoading(false);
       } catch (err) {
@@ -84,6 +97,34 @@ const Parameters = () => {
 
     searchParams();
   }, [filters]);
+
+  const sortParameters = (params, property, direction) => {
+    const stabilizedThis = params.map((item, index) => [item, index]);
+    const sortedArray = stabilizedThis.sort((a, b) => {
+      const aValue = a[0][property];
+      const bValue = b[0][property];
+
+      const compareResult =
+        typeof aValue === 'string' && typeof bValue === 'string'
+          ? aValue.localeCompare(bValue)
+          : (aValue < bValue ? -1 : aValue > bValue ? 1 : 0);
+
+      return direction === 'asc' ? compareResult : -compareResult;
+    });
+
+    return stabilizedThis.map((el) => el[0]);
+  };
+
+  const handleRequestSort = (property) => {
+    const isAsc = orderBy === property && order === 'asc';
+    const newOrder = isAsc ? 'desc' : 'asc';
+    setOrder(newOrder);
+    setOrderBy(property);
+
+    // Apply sorting to parameters
+    const sortedParams = sortParameters(parameters, property, newOrder);
+    setDisplayedParameters(sortedParams);
+  };
 
   const handleFilterChange = (field) => (event) => {
     setFilters({
@@ -174,15 +215,39 @@ const Parameters = () => {
               <Table stickyHeader aria-label="parameters table">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Parameter ID</TableCell>
-                    <TableCell>Name</TableCell>
+                    <TableCell>
+                      <TableSortLabel
+                        active={orderBy === 'id'}
+                        direction={orderBy === 'id' ? order : 'asc'}
+                        onClick={() => handleRequestSort('id')}
+                      >
+                        Parameter ID
+                      </TableSortLabel>
+                    </TableCell>
+                    <TableCell>
+                      <TableSortLabel
+                        active={orderBy === 'name'}
+                        direction={orderBy === 'name' ? order : 'asc'}
+                        onClick={() => handleRequestSort('name')}
+                      >
+                        Name
+                      </TableSortLabel>
+                    </TableCell>
                     <TableCell>Suggested Metric</TableCell>
-                    <TableCell>Vehicles</TableCell>
+                    <TableCell>
+                      <TableSortLabel
+                        active={orderBy === 'vehicleCount'}
+                        direction={orderBy === 'vehicleCount' ? order : 'asc'}
+                        onClick={() => handleRequestSort('vehicleCount')}
+                      >
+                        Vehicles
+                      </TableSortLabel>
+                    </TableCell>
                     <TableCell align="center">Actions</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {parameters
+                  {displayedParameters
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((param) => (
                       <TableRow key={param.id} hover>
@@ -234,7 +299,7 @@ const Parameters = () => {
                         </TableCell>
                       </TableRow>
                     ))}
-                  {parameters.length === 0 && (
+                  {displayedParameters.length === 0 && (
                     <TableRow>
                       <TableCell colSpan={5} align="center">
                         No parameters found matching the current filters.
@@ -247,7 +312,7 @@ const Parameters = () => {
             <TablePagination
               rowsPerPageOptions={[10, 25, 50, 100]}
               component="div"
-              count={parameters.length}
+              count={displayedParameters.length}
               rowsPerPage={rowsPerPage}
               page={page}
               onPageChange={handleChangePage}
