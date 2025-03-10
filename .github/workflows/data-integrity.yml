@@ -1,0 +1,165 @@
+name: Data Integrity Check
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Run weekly on Sunday at midnight UTC
+  workflow_dispatch:     # Allow manual triggering
+
+jobs:
+  validate-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install jsonschema
+
+      - name: Check data file exists
+        run: |
+          if [ ! -f "public/data/matrix_data.json" ]; then
+            echo "❌ matrix_data.json file not found!"
+            exit 1
+          fi
+
+          # Check file size
+          FILE_SIZE=$(stat -c%s "public/data/matrix_data.json")
+          echo "📊 matrix_data.json size: $FILE_SIZE bytes"
+
+          if [ "$FILE_SIZE" -lt 1000 ]; then
+            echo "⚠️ Warning: File size is suspiciously small!"
+          fi
+
+      - name: Validate JSON structure
+        run: |
+          # First check if it's valid JSON
+          echo "🔍 Checking if file is valid JSON..."
+          python -c "import json; json.load(open('public/data/matrix_data.json'))" || {
+            echo "❌ Invalid JSON format detected!"
+            exit 1
+          }
+
+          # Then validate against schema
+          echo "🔍 Validating against schema..."
+          python scripts/validate_json.py --input public/data/matrix_data.json --output /tmp/validated.json
+
+          # Check the number of entries
+          ENTRY_COUNT=$(python -c "import json; print(len(json.load(open('/tmp/validated.json'))))")
+          echo "📊 Number of parameter entries: $ENTRY_COUNT"
+
+          if [ "$ENTRY_COUNT" -lt 100 ]; then
+            echo "⚠️ Warning: Very few parameter entries detected. This might indicate data loss."
+          fi
+
+      - name: Check consistency with validation script
+        run: |
+          # Compare the original file with the validated version
+          ORIGINAL_HASH=$(sha256sum public/data/matrix_data.json | cut -d' ' -f1)
+          VALIDATED_HASH=$(sha256sum /tmp/validated.json | cut -d' ' -f1)
+
+          if [ "$ORIGINAL_HASH" != "$VALIDATED_HASH" ]; then
+            echo "⚠️ Format inconsistency detected - file would be changed by validation script"
+
+            # Find differences
+            echo "📊 Differences found:"
+            diff -u <(python -c "import json; print(json.dumps(json.load(open('public/data/matrix_data.json')), indent=2))" 2>/dev/null) <(python -c "import json; print(json.dumps(json.load(open('/tmp/validated.json')), indent=2))" 2>/dev/null) | head -n 20
+
+            # Create an issue if this is not a manual run
+            if [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+              echo "🔄 Creating an issue for data inconsistency..."
+
+              gh issue create \
+                --title "Data inconsistency detected in matrix_data.json" \
+                --body "The weekly data integrity check found inconsistencies in the matrix_data.json file. Please run the validation script to normalize the data format." \
+                --label "data,bug" || echo "Failed to create issue"
+            fi
+          else
+            echo "✅ Data format is consistent with validation rules"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create data summary report
+        if: always()
+        run: |
+          # Create a summary of the data structure
+          echo "# Data Integrity Report" > data_report.md
+          echo "Generated on: $(date)" >> data_report.md
+          echo "" >> data_report.md
+
+          if [ -f "public/data/matrix_data.json" ]; then
+            echo "## File Information" >> data_report.md
+            echo "- Size: $(stat -c%s "public/data/matrix_data.json") bytes" >> data_report.md
+
+            # Get file metadata using python
+            python -c "
+import json, os
+from datetime import datetime
+from pathlib import Path
+
+file_path = 'public/data/matrix_data.json'
+file_stats = os.stat(file_path)
+
+# Extract creation/modification times
+created = datetime.fromtimestamp(file_stats.st_ctime).strftime('%Y-%m-%d %H:%M:%S')
+modified = datetime.fromtimestamp(file_stats.st_mtime).strftime('%Y-%m-%d %H:%M:%S')
+
+# Try to read the generated date from the file contents
+generated_date = 'Unknown'
+with open(file_path, 'r') as f:
+    first_line = f.readline().strip()
+    if first_line.startswith('// Generated on:'):
+        generated_date = first_line.replace('// Generated on:', '').strip()
+
+print(f'- Generated date: {generated_date}')
+print(f'- Last modified: {modified}')
+
+# Load and analyze the data
+try:
+    with open(file_path, 'r') as f:
+        # Skip comment lines at the beginning
+        content = ''
+        for line in f:
+            if not line.strip().startswith('//'):
+                content += line
+        data = json.loads(content)
+
+    # Count by make
+    makes = {}
+    for item in data:
+        make = item.get('make', 'unknown')
+        if make not in makes:
+            makes[make] = 0
+        makes[make] += 1
+
+    # Sort makes by count
+    sorted_makes = sorted(makes.items(), key=lambda x: x[1], reverse=True)
+
+    print(f'- Total parameters: {len(data)}')
+    print(f'- Total makes: {len(makes)}')
+    print('\\n## Parameters by Make')
+    for make, count in sorted_makes:
+        print(f'- {make}: {count}')
+except Exception as e:
+    print(f'\\n## Error analyzing data')
+    print(f'- {str(e)}')
+" >> data_report.md
+          else
+            echo "## Error" >> data_report.md
+            echo "- matrix_data.json file not found" >> data_report.md
+          fi
+
+          cat data_report.md
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: data-integrity-report
+          path: data_report.md

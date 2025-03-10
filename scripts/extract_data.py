@@ -7,6 +7,8 @@ import argparse
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import multiprocessing
+import hashlib
+import sys
 
 def handle_repo(org_name, repo, workspace_dir):
     """Clone or update a single repository."""
@@ -157,9 +159,19 @@ def parse_signalset(file_path, make, model):
 
     return parameters
 
-def extract_data(workspace_dir, output_dir):
+def calculate_hash(data):
+    """Calculate a hash from the sorted and normalized data for easy comparison."""
+    # Sort the data deterministically
+    data_copy = sorted(data, key=lambda x: (x['make'], x['model'], x['hdr'], x['id']))
+    # Convert to a string and hash
+    data_str = json.dumps(data_copy, sort_keys=True)
+    return hashlib.sha256(data_str.encode()).hexdigest()
+
+def extract_data(workspace_dir, output_dir, force=False):
     """Extract matrix data from all repositories."""
     matrix_data = []
+    temp_output_path = Path(output_dir) / 'matrix_data_temp.json'
+    final_output_path = Path(output_dir) / 'matrix_data.json'
 
     # Process each repository
     for repo_dir in Path(workspace_dir).iterdir():
@@ -180,13 +192,51 @@ def extract_data(workspace_dir, output_dir):
 
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
-    output_path = Path(output_dir) / 'matrix_data.json'
 
-    # Save raw matrix data
-    with open(output_path, 'w') as f:
-        json.dump(matrix_data, f, indent=2)
+    # Check if we need to update the file
+    current_hash = calculate_hash(matrix_data)
 
-    print(f"Saved matrix data to {output_path} ({len(matrix_data)} parameters total)")
+    # Write to temporary file first
+    with open(temp_output_path, 'w') as f:
+        json.dump(matrix_data, f, indent=2, sort_keys=True)
+
+    # Run the validation and normalization process
+    print("Running validation and normalization...")
+    validate_script = Path(__file__).parent / 'validate_json.py'
+
+    if not validate_script.exists():
+        print(f"Warning: validate_json.py not found at {validate_script}, skipping validation")
+        shutil.move(temp_output_path, final_output_path)
+    else:
+        try:
+            # Use the validation script for consistent outputs
+            subprocess.run([
+                sys.executable,
+                str(validate_script),
+                '--input', str(temp_output_path),
+                '--output', str(final_output_path)
+            ], check=True)
+
+            # Clean up temp file
+            os.remove(temp_output_path)
+        except subprocess.CalledProcessError as e:
+            print(f"Error validating JSON: {e}")
+            # Fall back to raw output if validation fails
+            shutil.move(temp_output_path, final_output_path)
+
+    print(f"Saved matrix data to {final_output_path} ({len(matrix_data)} parameters total)")
+
+    # Compare with previous version if it exists
+    if final_output_path.exists() and not force:
+        with open(final_output_path) as f:
+            old_data = json.load(f)
+        old_hash = calculate_hash(old_data)
+
+        if old_hash == current_hash:
+            print("No changes detected in the data.")
+        else:
+            print("Changes detected in the matrix data.")
+
     return matrix_data
 
 def main():
@@ -195,6 +245,7 @@ def main():
     parser.add_argument('--workspace', default='workspace', help='Workspace directory for cloning repos')
     parser.add_argument('--output', default='public/data', help='Output directory for JSON data')
     parser.add_argument('--fetch', action='store_true', help='Fetch/update repositories before extraction')
+    parser.add_argument('--force', action='store_true', help='Force update even if no changes detected')
     args = parser.parse_args()
 
     # Only clone/update repositories if --fetch is specified
@@ -207,7 +258,7 @@ def main():
 
     # Extract data from the repositories
     print("Extracting data from repositories...")
-    extract_data(args.workspace, args.output)
+    extract_data(args.workspace, args.output, args.force)
 
     print(f"Data extraction complete. The JSON file is ready for use in the React application.")
 

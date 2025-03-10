@@ -1,0 +1,47 @@
+name: Verify JSON Structure
+
+on:
+  pull_request:
+    paths:
+      - 'public/data/matrix_data.json'
+      - 'scripts/extract_data.py'
+      - 'scripts/validate_json.py'
+  workflow_dispatch:
+
+jobs:
+  verify-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install jsonschema
+
+      - name: Create temp directory
+        run: mkdir -p /tmp/verify
+
+      - name: Verify JSON structure and formatting
+        run: |
+          python scripts/validate_json.py --input public/data/matrix_data.json --output /tmp/verify/validated.json
+
+          # Compare hash of before and after to ensure consistent formatting
+          ORIGINAL_HASH=$(sha256sum public/data/matrix_data.json | cut -d' ' -f1)
+          VALIDATED_HASH=$(sha256sum /tmp/verify/validated.json | cut -d' ' -f1)
+
+          echo "Original hash: $ORIGINAL_HASH"
+          echo "Validated hash: $VALIDATED_HASH"
+
+          if [ "$ORIGINAL_HASH" != "$VALIDATED_HASH" ]; then
+            echo "❌ JSON structure is not consistently formatted!"
+            echo "Run 'python scripts/validate_json.py --input public/data/matrix_data.json --output public/data/matrix_data.json' locally and commit the changes."
+            exit 1
+          else
+            echo "✅ JSON structure is valid and consistently formatted."
+          fi

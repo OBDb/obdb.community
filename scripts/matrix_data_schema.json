@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "hdr": {
+        "type": "string",
+        "description": "ECU header"
+      },
+      "pid": {
+        "type": "string",
+        "description": "Parameter ID"
+      },
+      "cmd": {
+        "type": "object",
+        "description": "Command object"
+      },
+      "id": {
+        "type": "string",
+        "description": "Signal identifier"
+      },
+      "name": {
+        "type": "string",
+        "description": "Signal name"
+      },
+      "unit": {
+        "type": ["string", "null"],
+        "description": "Signal unit"
+      },
+      "suggestedMetric": {
+        "type": ["string", "null"],
+        "description": "Suggested metric for this signal"
+      },
+      "scaling": {
+        "type": "string",
+        "description": "Human-readable scaling formula"
+      },
+      "path": {
+        "type": ["string", "null"],
+        "description": "Optional signal path"
+      },
+      "make": {
+        "type": "string",
+        "description": "Vehicle make"
+      },
+      "model": {
+        "type": "string",
+        "description": "Vehicle model"
+      }
+    },
+    "required": [
+      "hdr",
+      "pid",
+      "cmd",
+      "id",
+      "name",
+      "scaling",
+      "make",
+      "model"
+    ]
+  }
+}

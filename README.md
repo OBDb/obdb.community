@@ -19,6 +19,7 @@ OBDb Explorer is a web application that provides an improved interface for explo
 - **Vehicle Detail View**: Explore all parameters available for a specific vehicle, organized by ECU or metric
 - **Responsive Design**: Works well on desktop and mobile devices
 - **Fast and Efficient**: Quick filtering and searching capabilities without performance issues
+- **Data Consistency**: Ensures consistent data formatting and validation ([Learn more](docs/DATA_CONSISTENCY.md))
 
 ## Project Structure
 
@@ -43,7 +44,9 @@ obdb-explorer/
 │   ├── App.js                  # Main application component
 │   └── index.js                # Entry point
 └── scripts/
-    └── extract_data.py         # Data extraction script
+    ├── extract_data.py         # Data extraction script
+    ├── validate_json.py        # JSON validation script
+    └── matrix_data_schema.json # Schema for data validation
 ```
 
 ## Getting Started
@@ -99,19 +102,12 @@ npm run build
 
 The build files will be available in the `build/` directory and can be deployed to any static hosting service.
 
-## Data Extraction
-
-The `extract_data.py` script handles:
-
-1. Cloning/updating all repositories from the OBDb GitHub organization
-2. Parsing the signalset definition files (default.json) from each repository
-3. Extracting parameter information including ECU headers, commands, IDs, names, etc.
-4. Generating a consolidated JSON file with all parameter data
+## Data Extraction and Validation
 
 ### Script Options
 
 ```
-usage: extract_data.py [-h] [--org ORG] [--workspace WORKSPACE] [--output OUTPUT] [--fetch]
+usage: extract_data.py [-h] [--org ORG] [--workspace WORKSPACE] [--output OUTPUT] [--fetch] [--force]
 
 Extract OBD parameter data for the OBDb Explorer
 
@@ -121,6 +117,23 @@ optional arguments:
   --workspace WORKSPACE Workspace directory for cloning repos (default: workspace)
   --output OUTPUT       Output directory for JSON data (default: public/data)
   --fetch               Fetch/update repositories before extraction
+  --force               Force update even if no changes detected
+```
+
+### JSON Validation
+
+To validate and normalize existing JSON data:
+
+```
+usage: validate_json.py [-h] --input INPUT --output OUTPUT [--schema SCHEMA]
+
+Validate and normalize JSON data for consistent output
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --input INPUT    Input JSON file path
+  --output OUTPUT  Output normalized JSON file path
+  --schema SCHEMA  JSON schema file path for validation
 ```
 
 ## Contributing

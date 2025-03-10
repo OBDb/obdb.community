@@ -27,6 +27,10 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Install dependencies
+        run: |
+          pip install jsonschema
+
       - name: Install GitHub CLI
         run: |
           type -p curl >/dev/null || apt install curl -y
@@ -63,16 +67,48 @@ jobs:
       - name: Run data extraction script
         run: |
           python scripts/extract_data.py --fetch --workspace workspace --output public/data
+        id: extract_data
+
+      - name: Check for changes in data
+        id: check_changes
+        run: |
+          # Check if the file exists
+          if [ ! -f "public/data/matrix_data.json" ]; then
+            echo "File does not exist yet, will create it"
+            echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # First verify that the file is valid JSON
+          python -c "import json; json.load(open('public/data/matrix_data.json'))" || {
+            echo "Invalid JSON detected, will regenerate"
+            echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
+          }
+
+          # Check if there are changes to commit
+          if git diff --quiet public/data/matrix_data.json; then
+            echo "No changes detected in matrix_data.json"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected in matrix_data.json"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Configure Git
+        if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
       - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
         run: |
+          # Run validation script one more time to ensure consistent formatting
+          python scripts/validate_json.py --input public/data/matrix_data.json --output public/data/matrix_data.json
+
           git add public/data/matrix_data.json
-          git commit -m "Update matrix data from OBDb repositories [skip ci]" || echo "No changes to commit"
+          git commit -m "Update matrix data from OBDb repositories [skip ci]"
           git push
           echo "commit_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
