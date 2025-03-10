@@ -1,15 +1,14 @@
 // src/pages/Commands.js
 import React, { useState, useEffect } from 'react';
 import dataService from '../services/dataService';
-import BitMappingVisualizer from '../components/BitMappingVisualizer';
 import TablePagination from '../components/TablePagination';
 import SearchFilter from '../components/SearchFilter';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorAlert from '../components/ErrorAlert';
 import PageHeader from '../components/PageHeader';
 import StatusBadge from '../components/StatusBadge';
-import DataTable from '../components/DataTable';
 import EmptyState from '../components/EmptyState';
+import CommandDetailsPanel from '../components/CommandDetailsPanel';
 
 const Commands = () => {
   const [commands, setCommands] = useState([]);
@@ -89,7 +88,7 @@ const Commands = () => {
   };
 
   const handleSignalSelected = (signal) => {
-    setSelectedSignal(signal.id === selectedSignal?.id ? null : signal);
+    setSelectedSignal(signal);
   };
 
   const formatCommand = (cmd) => {
@@ -207,64 +206,12 @@ const Commands = () => {
                           {expandedCommand === command.id && (
                             <tr>
                               <td colSpan="4" className="px-0 py-0 border-t border-gray-100">
-                                <div className="p-3 bg-gray-50">
-                                  {/* Bit Mapping Visualization */}
-                                  {command.parameters.length > 0 && (
-                                    <BitMappingVisualizer
-                                      command={command}
-                                      onBitSelected={handleSignalSelected}
-                                    />
-                                  )}
-
-                                  <div className="mb-3">
-                                    <h4 className="text-xs font-medium text-gray-500 mb-2">
-                                      Vehicles using this command:
-                                    </h4>
-                                    <div className="flex flex-wrap gap-1 mb-2">
-                                      {command.vehicles.slice(0, 12).map(vehicle => {
-                                        const [make, model] = vehicle.split('-');
-                                        return (
-                                          <StatusBadge
-                                            key={vehicle}
-                                            text={`${make} ${model}`}
-                                            variant="default"
-                                            rounded="md"
-                                          />
-                                        );
-                                      })}
-                                      {command.vehicles.length > 12 && (
-                                        <StatusBadge
-                                          text={`+${command.vehicles.length - 12} more`}
-                                          variant="default"
-                                          rounded="md"
-                                        />
-                                      )}
-                                    </div>
-                                  </div>
-
-                                  <div>
-                                    <h4 className="text-xs font-medium text-gray-500 mb-2">
-                                      Parameters:
-                                    </h4>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-                                      {command.parameters.map(param => (
-                                        <div
-                                          key={`${param.make}-${param.model}-${param.id}`}
-                                          className={`text-xs p-1 rounded ${selectedSignal?.id === param.id ? 'bg-blue-50 border border-blue-200' : ''}`}
-                                          onClick={(e) => {
-                                            e.stopPropagation();
-                                            handleSignalSelected(param);
-                                          }}
-                                        >
-                                          <span className="font-medium">{param.id}:</span> {param.name}
-                                          <div className="text-gray-500 text-xs">
-                                            Bits: {param.bitOffset}-{param.bitOffset + param.bitLength - 1}
-                                          </div>
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </div>
-                                </div>
+                                {/* Use the new CommandDetailsPanel component */}
+                                <CommandDetailsPanel
+                                  command={command}
+                                  onSignalSelected={handleSignalSelected}
+                                  showVehicles={true}
+                                />
                               </td>
                             </tr>
                           )}
