@@ -1,7 +1,9 @@
 // src/components/BitMappingVisualizer.js
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 
 const BitMappingVisualizer = ({ command, onBitSelected }) => {
+  const [hoveredSignalId, setHoveredSignalId] = useState(null);
+
   // Extract signals from command
   const signals = command.parameters.map(param => ({
     id: param.id,
@@ -54,6 +56,22 @@ const BitMappingVisualizer = ({ command, onBitSelected }) => {
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   };
 
+  // Get highlighted style for a bit cell based on whether its signal is hovered
+  const getHighlightedStyle = (signal) => {
+    if (!signal) return {};
+
+    const isHighlighted = hoveredSignalId === signal.id;
+    if (isHighlighted) {
+      return {
+        border: '2px solid #3b82f6',
+        zIndex: 10,
+        transform: 'scale(1.05)',
+        transition: 'all 0.15s ease'
+      };
+    }
+    return {};
+  };
+
   return (
     <div className="bg-gray-100 rounded-lg p-4 my-4">
       <h3 className="text-sm font-medium mb-3">Bit Mapping Visualization</h3>
@@ -94,7 +112,9 @@ const BitMappingVisualizer = ({ command, onBitSelected }) => {
                       }`}
                       style={{
                         backgroundColor: signal ? colorForSignal(signal) : 'rgba(209, 213, 219, 0.2)',
-                        border: '1px solid rgba(156, 163, 175, 0.5)'
+                        border: '1px solid rgba(156, 163, 175, 0.5)',
+                        position: 'relative',
+                        ...getHighlightedStyle(signal)
                       }}
                       onClick={() => signal && onBitSelected(signal)}
                     >
@@ -119,10 +139,16 @@ const BitMappingVisualizer = ({ command, onBitSelected }) => {
                   key={signal.id}
                   className="flex items-center cursor-pointer hover:bg-gray-50 p-1 rounded"
                   onClick={() => onBitSelected(signal)}
+                  onMouseEnter={() => setHoveredSignalId(signal.id)}
+                  onMouseLeave={() => setHoveredSignalId(null)}
                 >
                   <div
                     className="w-5 h-5 mr-2 border border-black"
-                    style={{ backgroundColor: colorForSignal(signal) }}
+                    style={{
+                      backgroundColor: colorForSignal(signal),
+                      boxShadow: hoveredSignalId === signal.id ? '0 0 0 2px #3b82f6' : 'none',
+                      transition: 'box-shadow 0.15s ease'
+                    }}
                   ></div>
 
                   <div className="flex flex-col">
