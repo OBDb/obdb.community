@@ -24,7 +24,6 @@ const Parameters = () => {
   });
   const [orderBy, setOrderBy] = useState('id');
   const [order, setOrder] = useState('asc');
-  // New state variables for command details
   const [expandedParameterId, setExpandedParameterId] = useState(null);
   const [commandData, setCommandData] = useState(null);
   const [selectedSignal, setSelectedSignal] = useState(null);
