@@ -50,9 +50,6 @@ jobs:
           CI: false # This prevents the build from failing on warnings
           PUBLIC_URL: "https://obdb.community"
 
-      - name: Copy 404.html to build folder
-        run: cp public/404.html build/
-
       - name: Create .nojekyll file
         run: touch build/.nojekyll
 
