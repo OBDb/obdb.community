@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import dataService from '../services/dataService';
 import BitMappingVisualizer from '../components/BitMappingVisualizer';
+import TablePagination from '../components/TablePagination';
 
 const Commands = () => {
   const [commands, setCommands] = useState([]);
@@ -290,118 +291,16 @@ const Commands = () => {
             </div>
 
             {commands.length > 0 && (
-              <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-                <div className="flex-1 flex justify-between sm:hidden">
-                  <button
-                    onClick={() => handleChangePage(page - 1)}
-                    disabled={page === 0}
-                    className={`relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md ${
-                      page === 0
-                        ? 'text-gray-300 bg-gray-50'
-                        : 'text-gray-700 bg-white hover:bg-gray-50'
-                    }`}
-                  >
-                    Previous
-                  </button>
-                  <button
-                    onClick={() => handleChangePage(page + 1)}
-                    disabled={page >= Math.ceil(commands.length / rowsPerPage) - 1}
-                    className={`ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md ${
-                      page >= Math.ceil(commands.length / rowsPerPage) - 1
-                        ? 'text-gray-300 bg-gray-50'
-                        : 'text-gray-700 bg-white hover:bg-gray-50'
-                    }`}
-                  >
-                    Next
-                  </button>
-                </div>
-                <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-                  <div>
-                    <p className="text-sm text-gray-700">
-                      Showing{' '}
-                      <span className="font-medium">
-                        {page * rowsPerPage + 1}
-                      </span>{' '}
-                      to{' '}
-                      <span className="font-medium">
-                        {Math.min((page + 1) * rowsPerPage, commands.length)}
-                      </span>{' '}
-                      of{' '}
-                      <span className="font-medium">{commands.length}</span> results
-                    </p>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div>
-                      <label htmlFor="rows-per-page-desktop" className="text-xs text-gray-600">
-                        Rows:
-                      </label>
-                      <select
-                        id="rows-per-page-desktop"
-                        value={rowsPerPage}
-                        onChange={handleChangeRowsPerPage}
-                        className="ml-1 text-xs border-gray-300 rounded py-1"
-                      >
-                        {[10, 25, 50, 100].map((value) => (
-                          <option key={value} value={value}>
-                            {value}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-                      <button
-                        onClick={() => handleChangePage(page - 1)}
-                        disabled={page === 0}
-                        className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium ${
-                          page === 0
-                            ? 'text-gray-300'
-                            : 'text-gray-500 hover:bg-gray-50'
-                        }`}
-                      >
-                        <span className="sr-only">Previous</span>
-                        <svg
-                          className="h-5 w-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                      <button
-                        onClick={() => handleChangePage(page + 1)}
-                        disabled={page >= Math.ceil(commands.length / rowsPerPage) - 1}
-                        className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium ${
-                          page >= Math.ceil(commands.length / rowsPerPage) - 1
-                            ? 'text-gray-300'
-                            : 'text-gray-500 hover:bg-gray-50'
-                        }`}
-                      >
-                        <span className="sr-only">Next</span>
-                        <svg
-                          className="h-5 w-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                    </nav>
-                  </div>
-                </div>
-              </div>
+              <TablePagination
+                totalItems={commands.length}
+                itemsPerPage={rowsPerPage}
+                currentPage={page}
+                onPageChange={setPage}
+                onRowsPerPageChange={(e) => {
+                  setRowsPerPage(parseInt(e.target.value, 10));
+                  setPage(0);
+                }}
+              />
             )}
           </div>
         </div>
