@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import dataService from '../services/dataService';
+import TablePagination from '../components/TablePagination';
 
 const Parameters = () => {
   const [parameters, setParameters] = useState([]);
@@ -328,128 +329,16 @@ const Parameters = () => {
             </div>
 
             {displayedParameters.length > 0 && (
-              <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-                <div className="flex-1 flex justify-between sm:hidden">
-                  <button
-                    onClick={() => handleChangePage(page - 1)}
-                    disabled={page === 0}
-                    className={`relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md ${
-                      page === 0
-                        ? 'text-gray-300 bg-gray-50'
-                        : 'text-gray-700 bg-white hover:bg-gray-50'
-                    }`}
-                  >
-                    Previous
-                  </button>
-                  <button
-                    onClick={() => handleChangePage(page + 1)}
-                    disabled={page >= Math.ceil(displayedParameters.length / rowsPerPage) - 1}
-                    className={`ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md ${
-                      page >= Math.ceil(displayedParameters.length / rowsPerPage) - 1
-                        ? 'text-gray-300 bg-gray-50'
-                        : 'text-gray-700 bg-white hover:bg-gray-50'
-                    }`}
-                  >
-                    Next
-                  </button>
-                </div>
-                <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-                  <div>
-                    <p className="text-sm text-gray-700">
-                      Showing{' '}
-                      <span className="font-medium">
-                        {page * rowsPerPage + 1}
-                      </span>{' '}
-                      to{' '}
-                      <span className="font-medium">
-                        {Math.min((page + 1) * rowsPerPage, displayedParameters.length)}
-                      </span>{' '}
-                      of{' '}
-                      <span className="font-medium">{displayedParameters.length}</span> results
-                    </p>
-                  </div>
-                  <div>
-                    <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-                      <button
-                        onClick={() => handleChangePage(page - 1)}
-                        disabled={page === 0}
-                        className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium ${
-                          page === 0
-                            ? 'text-gray-300'
-                            : 'text-gray-500 hover:bg-gray-50'
-                        }`}
-                      >
-                        <span className="sr-only">Previous</span>
-                        <svg
-                          className="h-5 w-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                      {/* Page number buttons - show up to 5 pages */}
-                      {[...Array(Math.min(5, Math.ceil(displayedParameters.length / rowsPerPage))).keys()]
-                        .map(i => {
-                          // Show pages around current page
-                          let pageNum = page;
-                          if (page < 2) pageNum = i; // At start
-                          else if (page >= Math.ceil(displayedParameters.length / rowsPerPage) - 3)
-                            pageNum = Math.ceil(displayedParameters.length / rowsPerPage) - 5 + i; // At end
-                          else pageNum = page - 2 + i; // In the middle
-
-                          // Ensure page is in range
-                          if (pageNum < 0 || pageNum >= Math.ceil(displayedParameters.length / rowsPerPage))
-                            return null;
-
-                          return (
-                            <button
-                              key={pageNum}
-                              onClick={() => handleChangePage(pageNum)}
-                              className={`relative inline-flex items-center px-4 py-2 border ${
-                                page === pageNum
-                                  ? 'z-10 bg-primary-50 border-primary-500 text-primary-600'
-                                  : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
-                              } text-sm font-medium`}
-                            >
-                              {pageNum + 1}
-                            </button>
-                          );
-                        })}
-                      <button
-                        onClick={() => handleChangePage(page + 1)}
-                        disabled={page >= Math.ceil(displayedParameters.length / rowsPerPage) - 1}
-                        className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium ${
-                          page >= Math.ceil(displayedParameters.length / rowsPerPage) - 1
-                            ? 'text-gray-300'
-                            : 'text-gray-500 hover:bg-gray-50'
-                        }`}
-                      >
-                        <span className="sr-only">Next</span>
-                        <svg
-                          className="h-5 w-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                    </nav>
-                  </div>
-                </div>
-              </div>
+              <TablePagination
+                totalItems={displayedParameters.length}
+                itemsPerPage={rowsPerPage}
+                currentPage={page}
+                onPageChange={setPage}
+                onRowsPerPageChange={(e) => {
+                  setRowsPerPage(parseInt(e.target.value, 10));
+                  setPage(0);
+                }}
+              />
             )}
           </div>
         </div>
