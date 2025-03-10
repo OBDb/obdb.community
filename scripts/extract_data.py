@@ -143,6 +143,10 @@ def parse_signalset(file_path, make, model):
                             clamping.append(str(fmt['max']))
                         scaling += f" clamped to [{', '.join(clamping)}]"
 
+                # Extract bit information
+                bit_offset = fmt.get('bix', 0)  # bit index/offset
+                bit_length = fmt.get('len', 8)  # bit length, default to 8 if not specified
+
                 parameters.append({
                     'hdr': hdr,
                     'pid': pid,
@@ -154,7 +158,9 @@ def parse_signalset(file_path, make, model):
                     'scaling': scaling,
                     'path': signal.get('path', ''),
                     'make': make,
-                    'model': model
+                    'model': model,
+                    'bitOffset': bit_offset,
+                    'bitLength': bit_length
                 })
 
     return parameters

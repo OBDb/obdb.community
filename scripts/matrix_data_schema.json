@@ -48,6 +48,16 @@
       "model": {
         "type": "string",
         "description": "Vehicle model"
+      },
+      "bitOffset": {
+        "type": "integer",
+        "description": "Bit offset/index for the signal",
+        "minimum": 0
+      },
+      "bitLength": {
+        "type": "integer",
+        "description": "Number of bits used by the signal",
+        "minimum": 1
       }
     },
     "required": [
@@ -58,7 +68,9 @@
       "name",
       "scaling",
       "make",
-      "model"
+      "model",
+      "bitOffset",
+      "bitLength"
     ]
   }
 }

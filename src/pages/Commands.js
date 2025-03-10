@@ -1,6 +1,7 @@
 // src/pages/Commands.js
 import React, { useState, useEffect } from 'react';
 import dataService from '../services/dataService';
+import BitMappingVisualizer from '../components/BitMappingVisualizer';
 
 const Commands = () => {
   const [commands, setCommands] = useState([]);
@@ -14,6 +15,7 @@ const Commands = () => {
     parameterId: '',
   });
   const [expandedCommand, setExpandedCommand] = useState(null);
+  const [selectedSignal, setSelectedSignal] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +29,6 @@ const Commands = () => {
         // Get commands with no filters initially
         const result = await dataService.getCommands({});
         setCommands(result);
-
         setLoading(false);
       } catch (err) {
         setError('Failed to load command data. Please try again later.');
@@ -76,6 +77,11 @@ const Commands = () => {
 
   const handleExpandCommand = (commandId) => {
     setExpandedCommand(expandedCommand === commandId ? null : commandId);
+    setSelectedSignal(null); // Reset selected signal when toggling command
+  };
+
+  const handleSignalSelected = (signal) => {
+    setSelectedSignal(signal.id === selectedSignal?.id ? null : signal);
   };
 
   const formatCommand = (cmd) => {
@@ -215,6 +221,14 @@ const Commands = () => {
                           <tr>
                             <td colSpan="4" className="px-0 py-0 border-t border-gray-100">
                               <div className="p-3 bg-gray-50">
+                                {/* Bit Mapping Visualization */}
+                                {command.parameters.length > 0 && (
+                                  <BitMappingVisualizer
+                                    command={command}
+                                    onBitSelected={handleSignalSelected}
+                                  />
+                                )}
+
                                 <div className="mb-3">
                                   <h4 className="text-xs font-medium text-gray-500 mb-2">
                                     Vehicles using this command:
@@ -241,16 +255,21 @@ const Commands = () => {
                                     Parameters:
                                   </h4>
                                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-                                    {command.parameters.slice(0, 12).map(param => (
-                                      <div key={`${param.make}-${param.model}-${param.id}`} className="text-xs">
+                                    {command.parameters.map(param => (
+                                      <div
+                                        key={`${param.make}-${param.model}-${param.id}`}
+                                        className={`text-xs p-1 rounded ${selectedSignal?.id === param.id ? 'bg-blue-50 border border-blue-200' : ''}`}
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          handleSignalSelected(param);
+                                        }}
+                                      >
                                         <span className="font-medium">{param.id}:</span> {param.name}
+                                        <div className="text-gray-500 text-xs">
+                                          Bits: {param.bitOffset}-{param.bitOffset + param.bitLength - 1}
+                                        </div>
                                       </div>
                                     ))}
-                                    {command.parameters.length > 12 && (
-                                      <div className="text-xs text-gray-500 italic">
-                                        + {command.parameters.length - 12} more parameters...
-                                      </div>
-                                    )}
                                   </div>
                                 </div>
                               </div>
