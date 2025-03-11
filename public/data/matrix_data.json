@@ -18516,23 +18516,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "2201"
-    },
-    "hdr": "DAEF",
-    "id": "ACCORD_GEAR_1",
-    "make": "Honda",
-    "model": "Accord",
-    "name": "Current gear variant 1",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "2354"
     },
     "hdr": "715",
@@ -19004,23 +18987,6 @@
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "fuelTankLevel",
     "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "7028"
-    },
-    "hdr": "DA60",
-    "id": "ACCORD_AAT",
-    "make": "Honda",
-    "model": "Accord",
-    "name": "Outside air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -20619,23 +20585,6 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "3083"
-    },
-    "hdr": "DB33",
-    "id": "ACCORD_ATF",
-    "make": "Honda",
-    "model": "Accord",
-    "name": "ATF temperature",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-50, 200]",
-    "suggestedMetric": "",
-    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -23274,6 +23223,23 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "7028"
+    },
+    "hdr": "DA60",
+    "id": "ACCORD_AAT",
+    "make": "Honda",
+    "model": "Accord",
+    "name": "Outside air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 144,
     "cmd": {
       "21": "02"
@@ -25583,23 +25549,6 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 160,
-    "cmd": {
-      "22": "3086"
-    },
-    "hdr": "DB33",
-    "id": "ACCORD_GEAR_2",
-    "make": "Honda",
-    "model": "Accord",
-    "name": "Transmission gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "Mapped values: {'0': {'description': 'Park', 'value': 'P'}, '1': {'description': 'Drive 1', 'value': 'D1'}, '2': {'description': 'Drive 2', 'value': 'D2'}, '3': {'description': 'Drive 3', 'value': 'D3'}, '4': {'description': 'Drive 4', 'value': 'D4'}, '5': {'description': 'Drive 5', 'value': 'D5'}, '6': {'description': 'Drive 6', 'value': 'D6'}, '7': {'description': 'Drive 7', 'value': 'D7'}, '8': {'description': 'Drive 8', 'value': 'D8'}, '9': {'description': 'Drive 9', 'value': 'D9'}, '14': {'description': 'Neutral', 'value': 'N'}, '15': {'description': 'Reverse', 'value': 'R'}}",
-    "suggestedMetric": "",
-    "unit": ""
   },
   {
     "bitLength": 8,
