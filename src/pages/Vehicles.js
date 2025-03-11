@@ -331,14 +331,20 @@ const Vehicles = () => {
   // Vehicle card component
   const VehicleCard = ({ make, model }) => {
     const isSelected = selectedVehicles.some(v => v.make === make && v.model === model);
+    const navigate = useNavigate();
+
+    const handleCardClick = () => {
+      navigate(`/vehicles/${make}/${model}`);
+    };
 
     return (
       <div
-        className={`bg-white border rounded-md p-3 transition-colors ${
+        className={`bg-white border rounded-md p-3 transition-colors cursor-pointer ${
           isSelected
             ? 'border-primary-500 bg-primary-50'
             : 'border-gray-200 hover:bg-gray-50 hover:border-primary-300'
         }`}
+        onClick={handleCardClick}
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -350,17 +356,12 @@ const Vehicles = () => {
           </div>
 
           <div className="flex items-center space-x-2">
-            <Link
-              to={`/vehicles/${make}/${model}`}
-              className="text-xs text-primary-600 hover:text-primary-800"
-              onClick={(e) => e.stopPropagation()}
-            >
-              View
-            </Link>
-
             <button
               type="button"
-              onClick={() => toggleVehicleSelection(make, model)}
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleVehicleSelection(make, model);
+              }}
               className={`h-5 w-5 rounded-full border flex items-center justify-center focus:outline-none ${
                 isSelected
                   ? 'bg-primary-500 border-primary-500 text-white'
