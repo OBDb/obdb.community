@@ -18,22 +18,51 @@ const VehicleDetail = () => {
   const [ecuHeaders, setEcuHeaders] = useState([]);
   const [expandedParameterId, setExpandedParameterId] = useState(null);
   const [commandData, setCommandData] = useState(null);
+  // New state to handle special cases
+  const [isSpecialCase, setIsSpecialCase] = useState(false);
 
   useEffect(() => {
     const fetchVehicleData = async () => {
       try {
         setLoading(true);
-        const params = await dataService.getVehicleParameters(make, model);
-        setParameters(params);
 
-        // Extract unique ECU headers
-        const headers = [...new Set(params.map(param => param.hdr))].sort();
-        setEcuHeaders(headers);
+        // Handle the special case like SAEJ1979 that doesn't have a model
+        if (make && !model) {
+          setIsSpecialCase(true);
 
-        setFilteredParams(params);
+          // For SAEJ1979 or other special cases, we'll fetch data differently
+          // This would need to be adapted based on your actual data structure
+          const params = await dataService.getSpecialCaseParameters(make);
+
+          if (params && params.length > 0) {
+            setParameters(params);
+
+            // Extract unique ECU headers
+            const headers = [...new Set(params.map(param => param.hdr))].sort();
+            setEcuHeaders(headers);
+
+            setFilteredParams(params);
+          } else {
+            setError(`No data found for ${make}`);
+          }
+        } else {
+          // Standard make/model case
+          const params = await dataService.getVehicleParameters(make, model);
+          setParameters(params);
+
+          // Extract unique ECU headers
+          const headers = [...new Set(params.map(param => param.hdr))].sort();
+          setEcuHeaders(headers);
+
+          setFilteredParams(params);
+        }
+
         setLoading(false);
       } catch (err) {
-        setError(`Failed to load data for ${make} ${model}.`);
+        const errorMsg = model
+          ? `Failed to load data for ${make} ${model}.`
+          : `Failed to load data for ${make}.`;
+        setError(errorMsg);
         setLoading(false);
         console.error(err);
       }
@@ -69,7 +98,14 @@ const VehicleDetail = () => {
   };
 
   const openGitHubRepo = () => {
-    const url = `https://github.com/OBDb/${make}-${model}/blob/main/signalsets/v3/default.json`;
+    let url;
+    if (isSpecialCase) {
+      // For special cases like SAEJ1979
+      url = `https://github.com/OBDb/${make}/blob/main/signalsets/v3/default.json`;
+    } else {
+      // For regular make-model
+      url = `https://github.com/OBDb/${make}-${model}/blob/main/signalsets/v3/default.json`;
+    }
     window.open(url, '_blank');
   };
 
@@ -214,25 +250,40 @@ const VehicleDetail = () => {
     }
   ];
 
+  // Get appropriate title based on whether it's a special case or regular make/model
+  const getTitle = () => {
+    if (isSpecialCase) {
+      return make;  // Just use the make for special cases
+    }
+    return `${make} ${model}`;  // Use make + model for regular cases
+  };
+
+  // Adjust breadcrumbs based on special case status
+  const getBreadcrumbs = () => (
+    <>
+      <Link to="/" className="hover:text-primary-600">Home</Link>
+      <svg className="mx-2 h-4 w-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+      </svg>
+      <Link to="/vehicles" className="hover:text-primary-600">Vehicles</Link>
+      <svg className="mx-2 h-4 w-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+      </svg>
+      <span className="text-gray-700">{getTitle()}</span>
+    </>
+  );
+
   return (
     <div>
       <div className="flex flex-wrap items-center justify-between mb-6">
         <div>
           {/* Breadcrumbs */}
           <div className="flex items-center text-sm text-gray-500 mb-2">
-            <Link to="/" className="hover:text-primary-600">Home</Link>
-            <svg className="mx-2 h-4 w-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-            </svg>
-            <Link to="/vehicles" className="hover:text-primary-600">Vehicles</Link>
-            <svg className="mx-2 h-4 w-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-            </svg>
-            <span className="text-gray-700">{make} {model}</span>
+            {getBreadcrumbs()}
           </div>
 
           <h1 className="text-2xl font-bold flex items-center">
-            <span>{make} {model}</span>
+            <span>{getTitle()}</span>
             <button
               onClick={openGitHubRepo}
               className="ml-2 text-gray-500 hover:text-primary-600"

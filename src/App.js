@@ -21,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/vehicles" element={<Vehicles />} />
             <Route path="/vehicles/:make/:model" element={<VehicleDetail />} />
+            <Route path="/vehicles/:make" element={<VehicleDetail />} />
             <Route path="/parameters" element={<Parameters />} />
             <Route path="/commands" element={<Commands />} />
           </Routes>

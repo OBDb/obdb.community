@@ -32,11 +32,51 @@ const transformData = (rawData) => {
     }));
   });
 
+  // Add special cases (if they exist in the data)
+  // This could be adapted based on the actual structure of your data
+  const specialCases = ['SAEJ1979'];
+  specialCases.forEach(specialCase => {
+    if (!vehicles.some(v => v.make === specialCase)) {
+      // Check if there's any data for this special case
+      const hasData = rawData.some(item =>
+        item.make === specialCase || // If it's stored directly as make
+        (item.specialCase && item.specialCase === specialCase) // Or if there's a specialCase field
+      );
+
+      if (hasData) {
+        vehicles.push({
+          make: specialCase,
+          model: '',
+          id: specialCase,
+          isSpecialCase: true
+        });
+      }
+    }
+  });
+
   // Create parameter lookup by vehicle
   const parametersByVehicle = {};
   vehicles.forEach(vehicle => {
-    parametersByVehicle[vehicle.id] = rawData.filter(
-      item => item.make === vehicle.make && item.model === vehicle.model
+    if (vehicle.isSpecialCase) {
+      // For special cases like SAEJ1979
+      parametersByVehicle[vehicle.id] = rawData.filter(
+        item => item.make === vehicle.make ||
+               (item.specialCase && item.specialCase === vehicle.make)
+      );
+    } else {
+      // For regular make-model vehicles
+      parametersByVehicle[vehicle.id] = rawData.filter(
+        item => item.make === vehicle.make && item.model === vehicle.model
+      );
+    }
+  });
+
+  // Create parameter lookup by special case
+  const parametersBySpecialCase = {};
+  specialCases.forEach(specialCase => {
+    parametersBySpecialCase[specialCase] = rawData.filter(
+      item => item.make === specialCase ||
+             (item.specialCase && item.specialCase === specialCase)
     );
   });
 
@@ -67,7 +107,12 @@ const transformData = (rawData) => {
       };
     }
 
-    commands[commandId].vehicles.add(`${item.make}-${item.model}`);
+    // Add vehicle ID, handling special cases
+    if (item.specialCase) {
+      commands[commandId].vehicles.add(item.specialCase);
+    } else {
+      commands[commandId].vehicles.add(`${item.make}-${item.model}`);
+    }
 
     // Add parameter if not already added (avoid duplicates)
     const paramExists = commands[commandId].parameters.some(
@@ -99,7 +144,13 @@ const transformData = (rawData) => {
       };
     }
 
-    parametersByName[item.id].vehicles.add(`${item.make}-${item.model}`);
+    // Add vehicle ID, handling special cases
+    if (item.specialCase) {
+      parametersByName[item.id].vehicles.add(item.specialCase);
+    } else {
+      parametersByName[item.id].vehicles.add(`${item.make}-${item.model}`);
+    }
+
     parametersByName[item.id].instances.push(item);
   });
 
@@ -119,6 +170,7 @@ const transformData = (rawData) => {
     suggestedMetrics,
     vehicles,
     parametersByVehicle,
+    parametersBySpecialCase,
     parametersByMetric,
     commands: Object.values(commands),
     parameters: Object.values(parametersByName)
@@ -257,11 +309,33 @@ const getVehicleParameters = async (make, model) => {
   return data.parametersByVehicle[vehicleId] || [];
 };
 
+/**
+ * Gets parameters for special cases like SAEJ1979
+ */
+const getSpecialCaseParameters = async (specialCase) => {
+  const data = await loadMatrixData();
+
+  // First check if it's in our dedicated special case data structure
+  if (data.parametersBySpecialCase && data.parametersBySpecialCase[specialCase]) {
+    return data.parametersBySpecialCase[specialCase];
+  }
+
+  // As a fallback, check if there are any parameters with this make directly
+  const makeParams = data.rawData.filter(item => item.make === specialCase);
+  if (makeParams.length > 0) {
+    return makeParams;
+  }
+
+  // If we can't find any parameters, return an empty array
+  return [];
+};
+
 export default {
   loadMatrixData,
   searchParameters,
   getVehicles,
   getCommands,
   getMakes,
-  getVehicleParameters
+  getVehicleParameters,
+  getSpecialCaseParameters
 };
