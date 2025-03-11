@@ -57,4 +57,22 @@
   .badge-secondary {
     @apply bg-gray-100 text-gray-800;
   }
+
+  /* Vehicle selection styles */
+  .vehicle-card {
+    @apply transition-all duration-150;
+  }
+
+  .vehicle-card.selected {
+    @apply border-primary-500 bg-primary-50 ring-2 ring-primary-200;
+  }
+
+  /* Parameter comparison table styles */
+  .comparison-table th {
+    @apply sticky top-0 bg-white z-10;
+  }
+
+  .comparison-highlight {
+    @apply bg-yellow-50;
+  }
 }
