@@ -141,12 +141,27 @@ const VehicleDetail = () => {
 
       if (matchingCommand) {
         setCommandData(matchingCommand);
-        setExpandedParameterId(parameter.id);
       } else {
         console.error('Could not find matching command for parameter', parameter.id);
+        // If we can't find a matching command, create a simple command object with the parameter
+        setCommandData({
+          id: parameter.id,
+          hdr: parameter.hdr,
+          cmd: parameter.cmd,
+          parameters: [parameter],
+          vehicles: []
+        });
       }
     } catch (err) {
       console.error('Error fetching command details', err);
+      // Still provide basic parameter details if command data fetch fails
+      setCommandData({
+        id: parameter.id,
+        hdr: parameter.hdr,
+        cmd: parameter.cmd,
+        parameters: [parameter],
+        vehicles: []
+      });
     }
   };
 

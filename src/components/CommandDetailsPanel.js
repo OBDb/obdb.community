@@ -25,12 +25,18 @@ const CommandDetailsPanel = ({
   }, [highlightedParameterId, command.parameters]);
 
   const handleSignalSelected = (signal) => {
-    // Update local state
-    setSelectedSignal(signal.id === selectedSignal?.id ? null : signal);
+    const enhancedSignal = {
+      ...signal,
+      hdr: command.hdr,
+      cmd: command.cmd
+    };
+
+    // Update local state with the selected signal or null if already selected
+    setSelectedSignal(signal.id === selectedSignal?.id ? null : enhancedSignal);
 
     // Call parent handler if provided
     if (onSignalSelected) {
-      onSignalSelected(signal.id === selectedSignal?.id ? null : signal);
+      onSignalSelected(signal.id === selectedSignal?.id ? null : enhancedSignal);
     }
   };
 

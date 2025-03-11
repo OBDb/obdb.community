@@ -126,16 +126,20 @@ const Parameters = () => {
       if (parameter.instances && parameter.instances.length > 0) {
         const instance = parameter.instances[0];
 
+        // Set expanded parameter ID early for better UX
+        setExpandedParameterId(parameter.id);
+
         // Fetch all commands for the header/command combination
         const commands = await dataService.getCommands({
           hdr: instance.hdr
         });
 
-        // Find the specific command that contains this parameter
+        // Format the command for matching
         const cmdFormatted = Object.entries(instance.cmd)
           .map(([key, value]) => `${key}${value}`)
           .join('');
 
+        // Find the specific command that contains this parameter
         const matchingCommand = commands.find(cmd => {
           const cmdKeyFormatted = Object.entries(cmd.cmd)
             .map(([key, value]) => `${key}${value}`)
@@ -145,13 +149,25 @@ const Parameters = () => {
 
         if (matchingCommand) {
           setCommandData(matchingCommand);
-          setExpandedParameterId(parameter.id);
         } else {
           console.error('Could not find matching command for parameter', parameter.id);
+          // Create a simple command object with the parameter's instance data
+          setCommandData({
+            id: parameter.id,
+            hdr: instance.hdr,
+            cmd: instance.cmd,
+            parameters: [instance],
+            vehicles: parameter.vehicles || []
+          });
         }
+      } else {
+        // If no instances, just set the parameter ID
+        setExpandedParameterId(parameter.id);
       }
     } catch (err) {
       console.error('Error fetching command details', err);
+      // Still expand the parameter even if command lookup fails
+      setExpandedParameterId(parameter.id);
     }
   };
 

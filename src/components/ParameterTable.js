@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import StatusBadge from './StatusBadge';
 import CommandDetailsPanel from './CommandDetailsPanel';
+import SignalDetails from './SignalDetails';
 
 const ParameterTable = ({
   parameters,
@@ -18,6 +19,7 @@ const ParameterTable = ({
   // Use prop values if provided, otherwise manage state internally
   const [expandedParameterId, setExpandedParameterId] = useState(propExpandedId);
   const [commandData, setCommandData] = useState(propCommandData);
+  const [selectedSignal, setSelectedSignal] = useState(null);
 
   // Update internal state when props change
   React.useEffect(() => {
@@ -28,7 +30,6 @@ const ParameterTable = ({
       setCommandData(propCommandData);
     }
   }, [propExpandedId, propCommandData]);
-  const [selectedSignal, setSelectedSignal] = useState(null);
 
   // Define default columns for the table
   const defaultColumns = [
@@ -97,10 +98,16 @@ const ParameterTable = ({
       if (!propCommandData) {
         setCommandData(null);
       }
+
+      // If we're collapsing, clear selected signal
+      if (expandedParameterId === parameter.id) {
+        setSelectedSignal(null);
+      }
     }
   };
 
   const handleSignalSelected = (signal) => {
+    // When signal selected from CommandDetailsPanel
     setSelectedSignal(signal);
   };
 
@@ -134,15 +141,29 @@ const ParameterTable = ({
                     </td>
                   ))}
                 </tr>
-                {expandedParameterId === parameter.id && commandData && (
+                {expandedParameterId === parameter.id && (
                   <tr>
                     <td colSpan={columns.length} className="px-0 py-0 border-t border-gray-100">
-                      <CommandDetailsPanel
-                        command={commandData}
-                        highlightedParameterId={parameter.id}
-                        onSignalSelected={handleSignalSelected}
-                        showVehicles={showVehicles}
-                      />
+                      {/* If we have detailed command data, show the CommandDetailsPanel */}
+                      {commandData ? (
+                        <CommandDetailsPanel
+                          command={commandData}
+                          highlightedParameterId={parameter.id}
+                          onSignalSelected={handleSignalSelected}
+                          showVehicles={showVehicles}
+                        />
+                      ) : (
+                        /* Otherwise just show the basic signal details */
+                        <div className="p-3 bg-gray-50">
+                          {parameter.hdr && parameter.cmd && (
+                            <SignalDetails signal={{
+                              ...parameter,
+                              hdr: parameter.hdr,
+                              cmd: parameter.cmd
+                            }} />
+                          )}
+                        </div>
+                      )}
                     </td>
                   </tr>
                 )}

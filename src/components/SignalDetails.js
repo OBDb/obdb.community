@@ -25,6 +25,15 @@ const SignalDetails = ({ signal }) => {
     );
   };
 
+  // Format the command for display
+  const formatCommand = () => {
+    if (!signal.cmd) return null;
+
+    return Object.entries(signal.cmd)
+      .map(([key, value]) => `${key}${value}`)
+      .join('');
+  };
+
   // Format scaling information in a readable way
   const formatScaling = () => {
     if (!signal.fmt) return null;
@@ -95,8 +104,24 @@ const SignalDetails = ({ signal }) => {
           </div>
 
           <div>
-            <h4 className="text-sm font-medium mb-2">Technical Details</h4>
-            {renderProperty("Format Configuration", signal.fmt, true)}
+            {/* Display ECU header and command information */}
+            {signal.hdr && (
+              <div className="mt-3 p-2 bg-gray-50 rounded border border-gray-200">
+                <h5 className="text-xs font-medium text-gray-700 mb-1">Command Invocation</h5>
+                <div className="flex items-center">
+                  <div className="mr-2">
+                    <span className="text-xs text-gray-500">ECU Header:</span>
+                    <span className="text-xs font-mono font-medium ml-1">{signal.hdr}</span>
+                  </div>
+                  {signal.cmd && (
+                    <div>
+                      <span className="text-xs text-gray-500">Command:</span>
+                      <span className="text-xs font-mono font-medium ml-1">{formatCommand()}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
