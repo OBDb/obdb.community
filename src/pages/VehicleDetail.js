@@ -2,9 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import dataService from '../services/dataService';
-import CommandDetailsPanel from '../components/CommandDetailsPanel';
+import ParameterTable from '../components/ParameterTable';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorAlert from '../components/ErrorAlert';
+import TabPanel from '../components/TabPanel';
 
 const VehicleDetail = () => {
   const { make, model } = useParams();
@@ -17,7 +18,6 @@ const VehicleDetail = () => {
   const [ecuHeaders, setEcuHeaders] = useState([]);
   const [expandedParameterId, setExpandedParameterId] = useState(null);
   const [commandData, setCommandData] = useState(null);
-  const [selectedSignal, setSelectedSignal] = useState(null);
 
   useEffect(() => {
     const fetchVehicleData = async () => {
@@ -78,9 +78,11 @@ const VehicleDetail = () => {
       // Collapse if already expanded
       setExpandedParameterId(null);
       setCommandData(null);
-      setSelectedSignal(null);
       return;
     }
+
+    // Always set the expanded parameter ID immediately for better UX
+    setExpandedParameterId(parameter.id);
 
     try {
       // Find the command details for this parameter
@@ -103,11 +105,6 @@ const VehicleDetail = () => {
 
       if (matchingCommand) {
         setCommandData(matchingCommand);
-        // Find this specific parameter in the command parameters
-        const paramInCommand = matchingCommand.parameters.find(p => p.id === parameter.id);
-        if (paramInCommand) {
-          setSelectedSignal(paramInCommand);
-        }
         setExpandedParameterId(parameter.id);
       } else {
         console.error('Could not find matching command for parameter', parameter.id);
@@ -115,10 +112,6 @@ const VehicleDetail = () => {
     } catch (err) {
       console.error('Error fetching command details', err);
     }
-  };
-
-  const handleSignalSelected = (signal) => {
-    setSelectedSignal(signal);
   };
 
   // Group parameters by ECU for the ECU tab
@@ -137,6 +130,89 @@ const VehicleDetail = () => {
 
   const metricGroups = Object.entries(paramsByMetric)
     .sort(([a], [b]) => a === 'Other' ? 1 : b === 'Other' ? -1 : a.localeCompare(b));
+
+  // Columns for the All Parameters tab
+  const allParamsColumns = [
+    {
+      key: 'hdr',
+      header: 'ECU',
+      cellClassName: 'font-mono text-gray-900'
+    },
+    {
+      key: 'id',
+      header: 'Parameter ID',
+      cellClassName: 'font-medium text-gray-900'
+    },
+    {
+      key: 'name',
+      header: 'Name',
+      cellClassName: 'text-gray-900'
+    },
+    {
+      key: 'suggestedMetric',
+      header: 'Suggested Metric',
+      render: (row) => row.suggestedMetric ? (
+        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
+          {row.suggestedMetric}
+        </span>
+      ) : (
+        <span className="text-xs text-gray-500">—</span>
+      )
+    },
+    {
+      key: 'unit',
+      header: 'Unit',
+      render: (row) => row.unit || '—'
+    }
+  ];
+
+  // Columns for the ECU tab (no ECU column needed)
+  const ecuParamsColumns = [
+    {
+      key: 'id',
+      header: 'Parameter ID',
+      cellClassName: 'font-medium text-gray-900'
+    },
+    {
+      key: 'name',
+      header: 'Name',
+      cellClassName: 'text-gray-900'
+    },
+    {
+      key: 'suggestedMetric',
+      header: 'Suggested Metric',
+      render: (row) => row.suggestedMetric || '—'
+    },
+    {
+      key: 'unit',
+      header: 'Unit',
+      render: (row) => row.unit || '—'
+    }
+  ];
+
+  // Columns for the Metric tab
+  const metricParamsColumns = [
+    {
+      key: 'hdr',
+      header: 'ECU',
+      cellClassName: 'font-mono text-gray-900'
+    },
+    {
+      key: 'id',
+      header: 'Parameter ID',
+      cellClassName: 'font-medium text-gray-900'
+    },
+    {
+      key: 'name',
+      header: 'Name',
+      cellClassName: 'text-gray-900'
+    },
+    {
+      key: 'unit',
+      header: 'Unit',
+      render: (row) => row.unit || '—'
+    }
+  ];
 
   return (
     <div>
@@ -198,105 +274,27 @@ const VehicleDetail = () => {
       ) : error ? (
         <ErrorAlert message={error} />
       ) : (
-        <div className="bg-white shadow overflow-hidden border border-gray-200 rounded-lg">
-          {/* Tabs */}
-          <div className="border-b border-gray-200">
-            <nav className="flex -mb-px">
-              {["All Parameters", "By ECU", "By Metric"].map((tab, index) => (
-                <button
-                  key={tab}
-                  className={`${
-                    tabValue === index
-                      ? 'border-primary-500 text-primary-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                  } whitespace-nowrap py-3 px-4 border-b-2 font-medium text-sm`}
-                  onClick={() => handleTabChange(index)}
-                >
-                  {tab}
-                </button>
-              ))}
-            </nav>
-          </div>
-
+        <TabPanel
+          tabs={["All Parameters", "By ECU", "By Metric"]}
+          activeTab={tabValue}
+          onTabChange={handleTabChange}
+        >
           {/* All Parameters Tab */}
           {tabValue === 0 && (
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200 table-compact">
-                <thead>
-                  <tr className="bg-gray-50">
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      ECU
-                    </th>
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Parameter ID
-                    </th>
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Name
-                    </th>
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Suggested Metric
-                    </th>
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Unit
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {filteredParams.map((param) => (
-                    <React.Fragment key={`${param.hdr}_${param.id}`}>
-                      <tr
-                        className={`hover:bg-gray-50 cursor-pointer ${expandedParameterId === param.id ? 'bg-gray-50' : ''}`}
-                        onClick={() => handleExpandParameter(param)}
-                      >
-                        <td className="px-3 py-1.5 text-xs font-mono text-gray-900">
-                          {param.hdr}
-                        </td>
-                        <td className="px-3 py-1.5 text-xs font-medium text-gray-900">
-                          {param.id}
-                        </td>
-                        <td className="px-3 py-1.5 text-xs text-gray-900">{param.name}</td>
-                        <td className="px-3 py-1.5">
-                          {param.suggestedMetric ? (
-                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
-                              {param.suggestedMetric}
-                            </span>
-                          ) : (
-                            <span className="text-xs text-gray-500">—</span>
-                          )}
-                        </td>
-                        <td className="px-3 py-1.5 text-xs text-gray-900">
-                          {param.unit || '—'}
-                        </td>
-                      </tr>
-                      {expandedParameterId === param.id && commandData && (
-                        <tr>
-                          <td colSpan="5" className="px-0 py-0 border-t border-gray-100">
-                            <CommandDetailsPanel
-                              command={commandData}
-                              highlightedParameterId={param.id}
-                              onSignalSelected={handleSignalSelected}
-                              showVehicles={false} // Hide vehicles since we're already on the vehicle page
-                            />
-                          </td>
-                        </tr>
-                      )}
-                    </React.Fragment>
-                  ))}
-                  {filteredParams.length === 0 && (
-                    <tr>
-                      <td colSpan="5" className="px-3 py-4 text-sm text-gray-500 text-center">
-                        No parameters found matching "{searchQuery}".
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            </div>
+            <ParameterTable
+              parameters={filteredParams}
+              columns={allParamsColumns}
+              expandedParameterId={expandedParameterId}
+              commandData={commandData}
+              onParameterClick={handleExpandParameter}
+              showPagination={false}
+              showVehicles={false}
+            />
           )}
 
           {/* By ECU Tab */}
           {tabValue === 1 && (
-            <div className="p-4">
+            <div>
               {Object.entries(paramsByEcu).map(([header, ecuParams]) => (
                 ecuParams.length > 0 && (
                   <div key={header} className="mb-6">
@@ -308,57 +306,15 @@ const VehicleDetail = () => {
                         {ecuParams.length} parameters
                       </span>
                     </div>
-                    <div className="bg-white overflow-hidden border border-gray-200 rounded-md">
-                      <table className="min-w-full divide-y divide-gray-200 table-compact">
-                        <thead>
-                          <tr className="bg-gray-50">
-                            <th className="px-3 py-1.5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                              Parameter ID
-                            </th>
-                            <th className="px-3 py-1.5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                              Name
-                            </th>
-                            <th className="px-3 py-1.5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                              Suggested Metric
-                            </th>
-                            <th className="px-3 py-1.5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                              Unit
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-200">
-                          {ecuParams.map((param) => (
-                            <React.Fragment key={`${header}_${param.id}`}>
-                              <tr
-                                className={`hover:bg-gray-50 cursor-pointer ${expandedParameterId === param.id ? 'bg-gray-50' : ''}`}
-                                onClick={() => handleExpandParameter(param)}
-                              >
-                                <td className="px-3 py-1 text-xs font-medium text-gray-900">
-                                  {param.id}
-                                </td>
-                                <td className="px-3 py-1 text-xs text-gray-900">{param.name}</td>
-                                <td className="px-3 py-1 text-xs text-gray-900">
-                                  {param.suggestedMetric || '—'}
-                                </td>
-                                <td className="px-3 py-1 text-xs text-gray-900">{param.unit || '—'}</td>
-                              </tr>
-                              {expandedParameterId === param.id && commandData && (
-                                <tr>
-                                  <td colSpan="4" className="px-0 py-0 border-t border-gray-100">
-                                    <CommandDetailsPanel
-                                      command={commandData}
-                                      highlightedParameterId={param.id}
-                                      onSignalSelected={handleSignalSelected}
-                                      showVehicles={false}
-                                    />
-                                  </td>
-                                </tr>
-                              )}
-                            </React.Fragment>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
+                    <ParameterTable
+                      parameters={ecuParams}
+                      columns={ecuParamsColumns}
+                      expandedParameterId={expandedParameterId}
+                      commandData={commandData}
+                      onParameterClick={handleExpandParameter}
+                      showPagination={false}
+                      showVehicles={false}
+                    />
                   </div>
                 )
               ))}
@@ -374,7 +330,7 @@ const VehicleDetail = () => {
 
           {/* By Metric Tab */}
           {tabValue === 2 && (
-            <div className="p-4">
+            <div>
               {metricGroups.map(([metric, metricParams]) => (
                 <div key={metric} className="mb-6">
                   <div className="flex items-center mb-2">
@@ -385,57 +341,15 @@ const VehicleDetail = () => {
                       {metricParams.length} parameters
                     </span>
                   </div>
-                  <div className="bg-white overflow-hidden border border-gray-200 rounded-md">
-                    <table className="min-w-full divide-y divide-gray-200 table-compact">
-                      <thead>
-                        <tr className="bg-gray-50">
-                          <th className="px-3 py-1.5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            ECU
-                          </th>
-                          <th className="px-3 py-1.5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Parameter ID
-                          </th>
-                          <th className="px-3 py-1.5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Name
-                          </th>
-                          <th className="px-3 py-1.5 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Unit
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-gray-200">
-                        {metricParams.map((param) => (
-                          <React.Fragment key={`${metric}_${param.hdr}_${param.id}`}>
-                            <tr
-                              className={`hover:bg-gray-50 cursor-pointer ${expandedParameterId === param.id ? 'bg-gray-50' : ''}`}
-                              onClick={() => handleExpandParameter(param)}
-                            >
-                              <td className="px-3 py-1 text-xs font-mono text-gray-900">
-                                {param.hdr}
-                              </td>
-                              <td className="px-3 py-1 text-xs font-medium text-gray-900">
-                                {param.id}
-                              </td>
-                              <td className="px-3 py-1 text-xs text-gray-900">{param.name}</td>
-                              <td className="px-3 py-1 text-xs text-gray-900">{param.unit || '—'}</td>
-                            </tr>
-                            {expandedParameterId === param.id && commandData && (
-                              <tr>
-                                <td colSpan="4" className="px-0 py-0 border-t border-gray-100">
-                                  <CommandDetailsPanel
-                                    command={commandData}
-                                    highlightedParameterId={param.id}
-                                    onSignalSelected={handleSignalSelected}
-                                    showVehicles={false}
-                                  />
-                                </td>
-                              </tr>
-                            )}
-                          </React.Fragment>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
+                  <ParameterTable
+                    parameters={metricParams}
+                    columns={metricParamsColumns}
+                    expandedParameterId={expandedParameterId}
+                    commandData={commandData}
+                    onParameterClick={handleExpandParameter}
+                    showPagination={false}
+                    showVehicles={false}
+                  />
                 </div>
               ))}
               {metricGroups.length === 0 && (
@@ -447,7 +361,7 @@ const VehicleDetail = () => {
               )}
             </div>
           )}
-        </div>
+        </TabPanel>
       )}
     </div>
   );

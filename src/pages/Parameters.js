@@ -2,13 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import dataService from '../services/dataService';
-import TablePagination from '../components/TablePagination';
-import SearchFilter from '../components/SearchFilter';
-import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorAlert from '../components/ErrorAlert';
-import PageHeader from '../components/PageHeader';
-import StatusBadge from '../components/StatusBadge';
-import CommandDetailsPanel from '../components/CommandDetailsPanel'; // Import the CommandDetailsPanel
+import ParameterTable from '../components/ParameterTable';
+import DataPageLayout from '../components/DataPageLayout';
 
 const Parameters = () => {
   const [parameters, setParameters] = useState([]);
@@ -26,7 +21,6 @@ const Parameters = () => {
   const [order, setOrder] = useState('asc');
   const [expandedParameterId, setExpandedParameterId] = useState(null);
   const [commandData, setCommandData] = useState(null);
-  const [selectedSignal, setSelectedSignal] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -77,22 +71,25 @@ const Parameters = () => {
     };
 
     searchParams();
-  }, [filters]);
+  }, [filters, orderBy, order]);
 
   const sortParameters = (params, property, direction) => {
-    const stabilizedThis = params.map((item, index) => [item, index]);
-    return stabilizedThis.map((el) => el[0]);
-  };
+    const sortedParams = [...params].sort((a, b) => {
+      const valueA = a[property] || '';
+      const valueB = b[property] || '';
 
-  const handleRequestSort = (property) => {
-    const isAsc = orderBy === property && order === 'asc';
-    const newOrder = isAsc ? 'desc' : 'asc';
-    setOrder(newOrder);
-    setOrderBy(property);
+      if (typeof valueA === 'string' && typeof valueB === 'string') {
+        return direction === 'asc'
+          ? valueA.localeCompare(valueB)
+          : valueB.localeCompare(valueA);
+      }
 
-    // Apply sorting to parameters
-    const sortedParams = sortParameters(parameters, property, newOrder);
-    setDisplayedParameters(sortedParams);
+      return direction === 'asc'
+        ? valueA - valueB
+        : valueB - valueA;
+    });
+
+    return sortedParams;
   };
 
   const handleFilterChange = (e) => {
@@ -103,7 +100,7 @@ const Parameters = () => {
     });
   };
 
-  const handleChangeRowsPerPage = (e) => {
+  const handleRowsPerPageChange = (e) => {
     setRowsPerPage(parseInt(e.target.value, 10));
     setPage(0);
   };
@@ -121,13 +118,11 @@ const Parameters = () => {
       // Collapse if already expanded
       setExpandedParameterId(null);
       setCommandData(null);
-      setSelectedSignal(null);
       return;
     }
 
     try {
       // We need to get the command details for this parameter
-      // For this example, we'll look at the first instance of the parameter
       if (parameter.instances && parameter.instances.length > 0) {
         const instance = parameter.instances[0];
 
@@ -150,24 +145,14 @@ const Parameters = () => {
 
         if (matchingCommand) {
           setCommandData(matchingCommand);
-          // Find this specific parameter in the command parameters
-          const paramInCommand = matchingCommand.parameters.find(p => p.id === parameter.id);
-          if (paramInCommand) {
-            setSelectedSignal(paramInCommand);
-          }
           setExpandedParameterId(parameter.id);
         } else {
-          // Handle the case where we can't find the command
           console.error('Could not find matching command for parameter', parameter.id);
         }
       }
     } catch (err) {
       console.error('Error fetching command details', err);
     }
-  };
-
-  const handleSignalSelected = (signal) => {
-    setSelectedSignal(signal);
   };
 
   // Define filter fields for the SearchFilter component
@@ -188,7 +173,7 @@ const Parameters = () => {
     }
   ];
 
-  // Define columns for the DataTable component
+  // Custom columns with GitHub link action
   const columns = [
     {
       key: 'id',
@@ -206,10 +191,9 @@ const Parameters = () => {
       key: 'suggestedMetric',
       header: 'Suggested Metric',
       render: (row) => row.suggestedMetric ? (
-        <StatusBadge
-          text={row.suggestedMetric}
-          variant="primary"
-        />
+        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
+          {row.suggestedMetric}
+        </span>
       ) : (
         <span className="text-xs text-gray-500">—</span>
       )
@@ -217,26 +201,7 @@ const Parameters = () => {
     {
       key: 'vehicleCount',
       header: 'Vehicles',
-      sortable: true,
-      render: (row) => {
-        if (row.vehicles.length > 0 && row.vehicles[0]) {
-          const [make, model] = row.vehicles[0].split('-');
-          return (
-            <Link
-              to={`/vehicles/${make}/${model}`}
-              className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 hover:bg-primary-100 hover:text-primary-800 transition-colors"
-            >
-              <svg className="h-3 w-3 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1v-1h3.05a2.5 2.5 0 014.9 0H19a1 1 0 001-1v-2a4 4 0 00-4-4h-3V4a1 1 0 00-1-1H3z" />
-              </svg>
-              {make} {model}
-            </Link>
-          );
-        } else {
-          return <span className="text-xs text-gray-500">No vehicle</span>;
-        }
-      }
+      sortable: true
     },
     {
       key: 'actions',
@@ -253,135 +218,45 @@ const Parameters = () => {
           title="View on GitHub"
         >
           <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-            <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+            <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.606-.015 2.896-.015 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
           </svg>
         </button>
       )
     }
   ];
 
+  // Render the parameter table with command details
+  const renderParameterTable = (data) => (
+    <ParameterTable
+      parameters={data}
+      page={page}
+      rowsPerPage={rowsPerPage}
+      columns={columns}
+      expandedParameterId={expandedParameterId}
+      commandData={commandData}
+      onParameterClick={handleExpandParameter}
+      showVehicles={true}
+    />
+  );
+
   return (
-    <div>
-      <PageHeader
-        title="OBD Parameters Database"
-        description={!loading && !error && `${displayedParameters.length} parameters found`}
-      />
-
-      <SearchFilter
-        filters={filters}
-        onFilterChange={handleFilterChange}
-        fields={filterFields}
-        className="mb-6"
-      />
-
-      {loading ? (
-        <LoadingSpinner size="md" centered={true} />
-      ) : error ? (
-        <ErrorAlert message={error} />
-      ) : (
-        <div>
-          <div className="bg-white shadow overflow-hidden border border-gray-200 sm:rounded-lg">
-            <div className="flex justify-between items-center p-3 bg-gray-50 border-b border-gray-200">
-              <div className="text-sm text-gray-600">
-                {displayedParameters.length} parameters found
-              </div>
-              <div className="flex items-center space-x-2">
-                <label htmlFor="rows-per-page" className="text-xs text-gray-600">
-                  Rows per page:
-                </label>
-                <select
-                  id="rows-per-page"
-                  value={rowsPerPage}
-                  onChange={handleChangeRowsPerPage}
-                  className="text-xs border-gray-300 rounded"
-                >
-                  {[10, 25, 50, 100].map((value) => (
-                    <option key={value} value={value}>
-                      {value}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200 table-compact">
-                <thead>
-                  <tr className="bg-gray-50">
-                    {columns.map((column) => (
-                      <th
-                        key={column.key}
-                        className={`px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ${column.sortable ? 'cursor-pointer' : ''} ${column.className || ''}`}
-                        onClick={column.sortable ? () => handleRequestSort(column.key) : undefined}
-                      >
-                        <div className="flex items-center">
-                          {column.header}
-                          {orderBy === column.key && (
-                            <span className="ml-1">
-                              {order === 'asc' ? '↑' : '↓'}
-                            </span>
-                          )}
-                        </div>
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {displayedParameters
-                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    .map((parameter) => (
-                      <React.Fragment key={parameter.id}>
-                        <tr
-                          className={`hover:bg-gray-50 cursor-pointer ${expandedParameterId === parameter.id ? 'bg-gray-50' : ''}`}
-                          onClick={() => handleExpandParameter(parameter)}
-                        >
-                          {columns.map((column) => (
-                            <td
-                              key={`${parameter.id}-${column.key}`}
-                              className={`px-3 py-1.5 text-xs ${column.cellClassName || ''}`}
-                            >
-                              {column.render ? column.render(parameter) : parameter[column.key]}
-                            </td>
-                          ))}
-                        </tr>
-                        {expandedParameterId === parameter.id && commandData && (
-                          <tr>
-                            <td colSpan={columns.length} className="px-0 py-0 border-t border-gray-100">
-                              <CommandDetailsPanel
-                                command={commandData}
-                                highlightedParameterId={parameter.id}
-                                onSignalSelected={handleSignalSelected}
-                                showVehicles={true}
-                              />
-                            </td>
-                          </tr>
-                        )}
-                      </React.Fragment>
-                    ))}
-                  {displayedParameters.length === 0 && (
-                    <tr>
-                      <td colSpan={columns.length} className="px-3 py-4 text-sm text-gray-500 text-center">
-                        No parameters found matching the current filters.
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            </div>
-
-            {displayedParameters.length > 0 && (
-              <TablePagination
-                totalItems={displayedParameters.length}
-                itemsPerPage={rowsPerPage}
-                currentPage={page}
-                onPageChange={setPage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
-              />
-            )}
-          </div>
-        </div>
-      )}
-    </div>
+    <DataPageLayout
+      title="OBD Parameters Database"
+      description={`${displayedParameters.length} parameters found`}
+      filters={filters}
+      onFilterChange={handleFilterChange}
+      filterFields={filterFields}
+      loading={loading}
+      error={error}
+      data={displayedParameters}
+      emptyTitle="No parameters found"
+      emptyMessage="No parameters found matching the current filters."
+      renderData={renderParameterTable}
+      page={page}
+      rowsPerPage={rowsPerPage}
+      onPageChange={setPage}
+      onRowsPerPageChange={handleRowsPerPageChange}
+    />
   );
 };
 

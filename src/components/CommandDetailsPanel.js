@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BitMappingVisualizer from './BitMappingVisualizer';
 import StatusBadge from './StatusBadge';
+import SignalDetails from './SignalDetails';
 
 const CommandDetailsPanel = ({
   command,
@@ -11,16 +12,6 @@ const CommandDetailsPanel = ({
   onSignalSelected = null
 }) => {
   const [selectedSignal, setSelectedSignal] = useState(null);
-
-  const handleSignalSelected = (signal) => {
-    // Update local state
-    setSelectedSignal(signal.id === selectedSignal?.id ? null : signal);
-
-    // Call parent handler if provided
-    if (onSignalSelected) {
-      onSignalSelected(signal.id === selectedSignal?.id ? null : signal);
-    }
-  };
 
   // If a parameter ID is highlighted (e.g., when coming from Parameters page)
   // initialize the selected signal
@@ -33,8 +24,23 @@ const CommandDetailsPanel = ({
     }
   }, [highlightedParameterId, command.parameters]);
 
+  const handleSignalSelected = (signal) => {
+    // Update local state
+    setSelectedSignal(signal.id === selectedSignal?.id ? null : signal);
+
+    // Call parent handler if provided
+    if (onSignalSelected) {
+      onSignalSelected(signal.id === selectedSignal?.id ? null : signal);
+    }
+  };
+
   return (
     <div className="p-3 bg-gray-50">
+      {/* Display detailed info about the selected signal if any */}
+      {selectedSignal && (
+        <SignalDetails signal={selectedSignal} />
+      )}
+
       {/* Bit Mapping Visualization */}
       {command.parameters.length > 0 && (
         <BitMappingVisualizer
@@ -81,7 +87,7 @@ const CommandDetailsPanel = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
           {command.parameters.map(param => (
             <div
-              key={`${param.make}-${param.model}-${param.id}`}
+              key={`${param.id}-${param.make || ''}-${param.model || ''}`}
               className={`text-xs p-2 rounded cursor-pointer
                 ${selectedSignal?.id === param.id ? 'bg-blue-50 border border-blue-200' : 'hover:bg-gray-100'}`}
               onClick={(e) => {
