@@ -253,11 +253,7 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose }) => {
                             )}
                           </div>
                         ) : (
-                          <StatusBadge
-                            text="Not Available"
-                            variant="default"
-                            size="sm"
-                          />
+                          null
                         )}
                       </td>
                     ))}
