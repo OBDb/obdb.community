@@ -41,7 +41,11 @@ const Vehicles = () => {
 
     for (let i = 0; i < pairs.length; i++) {
       const pair = pairs[i].split('=');
-      result[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+      // Ensure the key is properly decoded
+      const key = decodeURIComponent(pair[0]);
+      // Ensure the value is properly decoded - don't decode it again when processing
+      const value = pair[1] ? decodeURIComponent(pair[1]) : '';
+      result[key] = value;
     }
 
     return result;
@@ -49,6 +53,7 @@ const Vehicles = () => {
 
   // Update URL with comparison parameters
   const updateUrlWithComparison = (selectedVehiclesList) => {
+    // Create a comma-separated list of vehicles in Make-Model format, then URL encode the entire string
     const compareParam = selectedVehiclesList.map(v => `${v.make}-${v.model}`).join(',');
     navigate(`/vehicles?compare=${encodeURIComponent(compareParam)}`, { replace: true });
   };
@@ -71,10 +76,19 @@ const Vehicles = () => {
         // Check if URL has comparison parameters
         const queryParams = parseQueryString();
         if (queryParams.compare) {
+          // Split by ',' to get individual vehicle IDs, avoid re-decoding
           const vehiclesToCompare = queryParams.compare.split(',').map(id => {
-            const [make, model] = id.split('-');
-            return { make, model, id };
-          });
+            // Split by '-' to get make and model
+            const parts = id.split('-');
+            if (parts.length >= 2) {
+              // The make is the first part, the model is the rest joined with '-'
+              // This handles cases where model names might contain hyphens
+              const make = parts[0];
+              const model = parts.slice(1).join('-');
+              return { make, model, id };
+            }
+            return null;
+          }).filter(v => v !== null); // Filter out any invalid entries
 
           // Validate that these vehicles exist
           const validVehicles = vehiclesToCompare.filter(v =>
@@ -106,10 +120,19 @@ const Vehicles = () => {
     const handleHashChange = () => {
       const queryParams = parseQueryString();
       if (queryParams.compare && vehicles.length > 0) {
+        // Split by ',' to get individual vehicle IDs, avoid re-decoding
         const vehiclesToCompare = queryParams.compare.split(',').map(id => {
-          const [make, model] = id.split('-');
-          return { make, model, id };
-        });
+          // Split by '-' to get make and model
+          const parts = id.split('-');
+          if (parts.length >= 2) {
+            // The make is the first part, the model is the rest joined with '-'
+            // This handles cases where model names might contain hyphens
+            const make = parts[0];
+            const model = parts.slice(1).join('-');
+            return { make, model, id };
+          }
+          return null;
+        }).filter(v => v !== null); // Filter out any invalid entries
 
         // Validate that these vehicles exist
         const validVehicles = vehiclesToCompare.filter(v =>
@@ -259,7 +282,9 @@ const Vehicles = () => {
   // Create a shareable link for the current comparison
   const getShareableLink = () => {
     const baseUrl = window.location.origin + window.location.pathname;
+    // Create a comma-separated list of vehicles in Make-Model format
     const compareParam = selectedVehicles.map(v => `${v.make}-${v.model}`).join(',');
+    // Ensure the entire compare parameter is properly URL encoded
     return `${baseUrl}#/vehicles?compare=${encodeURIComponent(compareParam)}`;
   };
 
