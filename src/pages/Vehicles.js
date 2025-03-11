@@ -1,6 +1,6 @@
 // src/pages/Vehicles.js
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import dataService from '../services/dataService';
 import SearchFilter from '../components/SearchFilter';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -10,6 +10,9 @@ import EmptyState from '../components/EmptyState';
 import VehicleComparisonTable from '../components/VehicleComparisonTable';
 
 const Vehicles = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const [vehicles, setVehicles] = useState([]);
   const [makes, setMakes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,6 +26,38 @@ const Vehicles = () => {
   const [comparisonParameters, setComparisonParameters] = useState([]);
   const [loadingComparison, setLoadingComparison] = useState(false);
 
+  // Parse URL query parameters
+  const parseQueryString = () => {
+    // For hash router, we need to parse the portion after the hash and route
+    const hashPart = window.location.hash; // e.g., "/#/vehicles?compare=Honda-Accord,Honda-CR-V"
+
+    // Extract the query string part (everything after the '?')
+    const queryStringMatch = hashPart.match(/\?(.+)$/);
+    if (!queryStringMatch) return {};
+
+    const queryString = queryStringMatch[1];
+    const pairs = queryString.split('&');
+    const result = {};
+
+    for (let i = 0; i < pairs.length; i++) {
+      const pair = pairs[i].split('=');
+      result[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+    }
+
+    return result;
+  };
+
+  // Update URL with comparison parameters
+  const updateUrlWithComparison = (selectedVehiclesList) => {
+    const compareParam = selectedVehiclesList.map(v => `${v.make}-${v.model}`).join(',');
+    navigate(`/vehicles?compare=${encodeURIComponent(compareParam)}`, { replace: true });
+  };
+
+  // Clear comparison from URL
+  const clearComparisonFromUrl = () => {
+    navigate('/vehicles', { replace: true });
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,6 +67,29 @@ const Vehicles = () => {
 
         const vehicles = await dataService.getVehicles();
         setVehicles(vehicles);
+
+        // Check if URL has comparison parameters
+        const queryParams = parseQueryString();
+        if (queryParams.compare) {
+          const vehiclesToCompare = queryParams.compare.split(',').map(id => {
+            const [make, model] = id.split('-');
+            return { make, model, id };
+          });
+
+          // Validate that these vehicles exist
+          const validVehicles = vehiclesToCompare.filter(v =>
+            vehicles.some(existingVehicle =>
+              existingVehicle.make === v.make && existingVehicle.model === v.model
+            )
+          );
+
+          if (validVehicles.length >= 2) {
+            setSelectedVehicles(validVehicles);
+            // Trigger comparison (will be executed after loading is complete)
+            setTimeout(() => startComparison(validVehicles), 0);
+          }
+        }
+
         setLoading(false);
       } catch (err) {
         setError('Failed to load vehicle data. Please try again later.');
@@ -42,6 +100,45 @@ const Vehicles = () => {
 
     fetchData();
   }, []);
+
+  // Also listen for hash changes to handle direct navigation to comparison URLs
+  useEffect(() => {
+    const handleHashChange = () => {
+      const queryParams = parseQueryString();
+      if (queryParams.compare && vehicles.length > 0) {
+        const vehiclesToCompare = queryParams.compare.split(',').map(id => {
+          const [make, model] = id.split('-');
+          return { make, model, id };
+        });
+
+        // Validate that these vehicles exist
+        const validVehicles = vehiclesToCompare.filter(v =>
+          vehicles.some(existingVehicle =>
+            existingVehicle.make === v.make && existingVehicle.model === v.model
+          )
+        );
+
+        if (validVehicles.length >= 2) {
+          setSelectedVehicles(validVehicles);
+          // Trigger comparison
+          startComparison(validVehicles);
+        }
+      }
+    };
+
+    // Add event listener for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Initial check on mount if we already have vehicles loaded
+    if (vehicles.length > 0) {
+      handleHashChange();
+    }
+
+    // Clean up
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, [vehicles]);
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
@@ -85,17 +182,22 @@ const Vehicles = () => {
   };
 
   // Start comparison of selected vehicles
-  const startComparison = async () => {
-    if (selectedVehicles.length < 2) return;
+  const startComparison = async (vehiclesToCompare = null) => {
+    const vehiclesToProcess = vehiclesToCompare || selectedVehicles;
+
+    if (vehiclesToProcess.length < 2) return;
 
     try {
       setLoadingComparison(true);
+
+      // Update URL with comparison parameters
+      updateUrlWithComparison(vehiclesToProcess);
 
       // Import utility functions for parameter processing
       const signalUtils = await import('../utils/signalUtils').then(module => module.default);
 
       // Load parameters for each selected vehicle
-      const parametersPromises = selectedVehicles.map(vehicle =>
+      const parametersPromises = vehiclesToProcess.map(vehicle =>
         dataService.getVehicleParameters(vehicle.make, vehicle.model)
       );
 
@@ -113,8 +215,8 @@ const Vehicles = () => {
             bitOffset,
             bitLength,
             // Add vehicle information for display purposes
-            vehicleMake: selectedVehicles[vehicleIndex].make,
-            vehicleModel: selectedVehicles[vehicleIndex].model
+            vehicleMake: vehiclesToProcess[vehicleIndex].make,
+            vehicleModel: vehiclesToProcess[vehicleIndex].model
           };
         });
       });
@@ -133,6 +235,7 @@ const Vehicles = () => {
   const endComparison = () => {
     setIsComparing(false);
     setComparisonParameters([]);
+    clearComparisonFromUrl();
   };
 
   // Define filter fields for the SearchFilter component
@@ -153,6 +256,26 @@ const Vehicles = () => {
     }
   ];
 
+  // Create a shareable link for the current comparison
+  const getShareableLink = () => {
+    const baseUrl = window.location.origin + window.location.pathname;
+    const compareParam = selectedVehicles.map(v => `${v.make}-${v.model}`).join(',');
+    return `${baseUrl}#/vehicles?compare=${encodeURIComponent(compareParam)}`;
+  };
+
+  // Copy shareable link to clipboard
+  const copyShareableLink = () => {
+    const link = getShareableLink();
+    navigator.clipboard.writeText(link)
+      .then(() => {
+        // You could add a toast notification here
+        alert('Link copied to clipboard!');
+      })
+      .catch(err => {
+        console.error('Failed to copy link: ', err);
+      });
+  };
+
   // Actions for the page header (comparison button)
   const pageActions = (
     <>
@@ -162,7 +285,7 @@ const Vehicles = () => {
             {selectedVehicles.length} vehicle{selectedVehicles.length !== 1 ? 's' : ''} selected
           </span>
           <button
-            onClick={startComparison}
+            onClick={() => startComparison()}
             disabled={selectedVehicles.length < 2 || loadingComparison}
             className={`btn ${selectedVehicles.length >= 2 && !loadingComparison ? 'btn-primary' : 'bg-gray-300 cursor-not-allowed'}`}
           >
@@ -189,6 +312,20 @@ const Vehicles = () => {
         </button>
       )}
     </>
+  );
+
+  // Comparison view actions
+  const comparisonActions = (
+    <button
+      onClick={copyShareableLink}
+      className="btn btn-secondary flex items-center"
+      title="Copy shareable link to clipboard"
+    >
+      <svg className="h-4 w-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+      </svg>
+      Share Comparison
+    </button>
   );
 
   // Vehicle card component
@@ -253,7 +390,7 @@ const Vehicles = () => {
               : 'Select up to 4 vehicles to compare parameters.'
           }`
         }
-        actions={pageActions}
+        actions={isComparing ? comparisonActions : pageActions}
       />
 
       {isComparing ? (
