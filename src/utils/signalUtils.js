@@ -78,8 +78,11 @@ export const normalizeParameterName = (name, make, model) => {
   return name.replace(prefixPattern, '');
 };
 
-export default {
+// Create a named export
+const signalUtils = {
   generateSignalSignature,
   extractBitInfo,
   normalizeParameterName
 };
+
+export default signalUtils;

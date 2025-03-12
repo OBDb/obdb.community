@@ -330,7 +330,8 @@ const getSpecialCaseParameters = async (specialCase) => {
   return [];
 };
 
-export default {
+// Create a named export
+const dataService = {
   loadMatrixData,
   searchParameters,
   getVehicles,
@@ -339,3 +340,5 @@ export default {
   getVehicleParameters,
   getSpecialCaseParameters
 };
+
+export default dataService;
