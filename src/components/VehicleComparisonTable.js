@@ -155,6 +155,7 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
         if (sourceVehicleIndex === -1) return;
         
         const sourceParam = selectedParam.vehicles[sourceVehicleIndex];
+        const sourceVehicle = vehicles[sourceVehicleIndex];
         
         // For each target vehicle, collect parameters to be transferred
         targetVehiclesForTransfer.forEach(targetIndex => {
@@ -163,25 +164,60 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
             // Clean up the parameter for transfer
             const { vehicleMake, vehicleModel, bitOffset, bitLength, ...baseParam } = sourceParam;
             
-            // Create a clean parameter object
+            const targetVehicle = vehicles[targetIndex];
+            
+            // Create a clean parameter object with adjusted ID for the target vehicle
             const cleanParam = {
               ...baseParam,
-              id: baseParam.id,
-              name: baseParam.name,
-              hdr: baseParam.hdr || '',
-              cmd: baseParam.cmd || {},
+              // Modify the ID to reflect the target vehicle's model
+              id: adjustParameterIdForVehicle(baseParam.id, sourceVehicle, targetVehicle),
             };
             
-            // Add optional fields only if they exist
-            if (baseParam.fmt) cleanParam.fmt = baseParam.fmt;
-            if (baseParam.unit) cleanParam.unit = baseParam.unit;
-            if (baseParam.suggestedMetric) cleanParam.suggestedMetric = baseParam.suggestedMetric;
+            // Store target vehicle info for reference
+            const paramWithMetadata = {
+              ...cleanParam,
+              __targetMake: targetVehicle.make,
+              __targetModel: targetVehicle.model,
+              __isNewParameter: true,
+              __sourceMake: sourceVehicle.make,
+              __sourceModel: sourceVehicle.model,
+              __sourceId: baseParam.id
+            };
             
             // Add to transfer mapping
-            transferMapping[targetIndex].push(cleanParam);
+            transferMapping[targetIndex].push(paramWithMetadata);
           }
         });
       });
+      
+      // Helper function to adjust parameter ID for the target vehicle
+      function adjustParameterIdForVehicle(originalId, sourceVehicle, targetVehicle) {
+        // Common patterns for OBDb: MODELNAME_PARAMETER_TYPE
+        
+        // Convert model names to uppercase with no spaces or special chars
+        const sourceModelPrefix = sourceVehicle.model.toUpperCase().replace(/[^A-Z0-9]/g, '');
+        const targetModelPrefix = targetVehicle.model.toUpperCase().replace(/[^A-Z0-9]/g, '');
+        
+        // Check if the original ID starts with the source model prefix
+        if (originalId.startsWith(`${sourceModelPrefix}_`)) {
+          // Replace source model prefix with target model prefix
+          return originalId.replace(`${sourceModelPrefix}_`, `${targetModelPrefix}_`);
+        }
+        
+        // For other formats, try to parse the ID parts and replace the model reference
+        const parts = originalId.split('_');
+        
+        if (parts.length > 1) {
+          // Check if first part matches the source model
+          if (parts[0] === sourceModelPrefix) {
+            parts[0] = targetModelPrefix;
+            return parts.join('_');
+          }
+        }
+        
+        // If we can't identify a clear pattern, prefix with the target model
+        return `${targetModelPrefix}_${originalId}`;
+      }
       
       // Create output organized by vehicle
       const vehicleOutputs = {};
@@ -206,13 +242,268 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
         Object.entries(vehicleOutputs).forEach(([key, data]) => {
           const { vehicle, parameters } = data;
           
-          // Format parameters as JSON
-          const paramsJson = parameters.map(p => JSON.stringify(p, null, 2)).join(',\n\n');
+          // Get existing parameters for this vehicle (from the comparison data)
+          const vehicleIndex = vehicles.findIndex(v => 
+            v.make === vehicle.make && v.model === vehicle.model);
           
-          const code = `// For ${vehicle.make} ${vehicle.model}:
-// Copy these parameters to add to your vehicle's existing parameters array:
+          // Extract existing parameters by command from the comparison data
+          const commandGroups = {};
+          
+          // Group existing parameters by hdr/cmd combination
+          displayParams.forEach(param => {
+            if (param.vehicles[vehicleIndex]) {
+              const paramData = param.vehicles[vehicleIndex];
+              
+              // Skip parameters without hdr/cmd
+              if (!paramData.hdr || !paramData.cmd) return;
+              
+              const paramHdr = paramData.hdr;
+              const paramCmd = JSON.stringify(paramData.cmd);
+              const groupKey = `${paramHdr}:${paramCmd}`;
+              
+              if (!commandGroups[groupKey]) {
+                // Collect all command-level properties
+                const { 
+                  hdr, cmd, freq,
+                  rax, eax, tst, fcm1, dbg, // Preserve special command-level properties
+                  ...rest
+                } = paramData;
 
-${paramsJson}`;
+                const commandProps = {
+                  hdr,
+                  cmd,
+                  freq: freq || 0.5
+                };
+
+                // Add any extra command-level properties that exist
+                if (rax) commandProps.rax = rax;
+                if (eax) commandProps.eax = eax;
+                if (tst) commandProps.tst = tst;
+                if (fcm1) commandProps.fcm1 = fcm1;
+                if (dbg) commandProps.dbg = dbg;
+                
+                // Add any other command properties that might exist
+                Object.entries(rest).forEach(([key, value]) => {
+                  // Skip vehicle-specific metadata and signal-specific properties
+                  if (key !== 'vehicleMake' && key !== 'vehicleModel' && 
+                      key !== 'bitOffset' && key !== 'bitLength' && 
+                      !key.startsWith('__') &&
+                      key !== 'id' && key !== 'name' && key !== 'path' && 
+                      key !== 'fmt' && key !== 'unit' && key !== 'suggestedMetric') {
+                    commandProps[key] = value;
+                  }
+                });
+
+                commandGroups[groupKey] = {
+                  ...commandProps,
+                  signals: []
+                };
+              }
+              
+              // Clean up the parameter for JSON - only keep signal-level properties
+              const {
+                // Remove command-level properties
+                hdr: signalHdr, cmd: signalCmd, freq: signalFreq,
+                rax: signalRax, eax: signalEax, tst: signalTst, fcm1: signalFcm1, dbg: signalDbg,
+                // Remove metadata
+                vehicleMake, vehicleModel, bitOffset, bitLength, 
+                // Remove other metadata properties
+                make, model, pid, scaling,
+                ...signalProps 
+              } = paramData;
+
+              // Remove any properties that start with __ (metadata markers)
+              const cleanSignalProps = Object.entries(signalProps).reduce((acc, [key, value]) => {
+                if (!key.startsWith('__')) {
+                  acc[key] = value;
+                }
+                return acc;
+              }, {});
+              
+              // Add to appropriate command group
+              commandGroups[groupKey].signals.push(cleanSignalProps);
+            }
+          });
+          
+          // Check each new parameter and place it in the correct command group
+          parameters.forEach(param => {
+            const paramHdr = param.hdr;
+            const paramCmd = JSON.stringify(param.cmd);
+            const groupKey = `${paramHdr}:${paramCmd}`;
+            
+            // Create new command group if doesn't exist
+            if (!commandGroups[groupKey]) {
+              // Extract command-level properties
+              const {
+                hdr, cmd, freq,
+                rax, eax, tst, fcm1, dbg, // Preserve special command-level properties
+                ...rest
+              } = param;
+
+              const commandProps = {
+                hdr: paramHdr,
+                cmd: param.cmd,
+                freq: param.freq || 0.5
+              };
+
+              // Add any extra command-level properties that exist
+              if (param.rax) commandProps.rax = param.rax;
+              if (param.eax) commandProps.eax = param.eax;
+              if (param.tst) commandProps.tst = param.tst;
+              if (param.fcm1) commandProps.fcm1 = param.fcm1;
+              if (param.dbg) commandProps.dbg = param.dbg;
+
+              commandGroups[groupKey] = {
+                ...commandProps,
+                signals: []
+              };
+            }
+            
+            // Clean up the parameter for JSON
+            const { 
+              // Remove metadata
+              __isNewParameter, __targetMake, __targetModel, __sourceMake, __sourceModel, __sourceId,
+              vehicleMake, vehicleModel, bitOffset, bitLength, 
+              // Remove command-level properties
+              hdr: signalHdr, cmd: signalCmd, freq: signalFreq,
+              rax: signalRax, eax: signalEax, tst: signalTst, fcm1: signalFcm1, dbg: signalDbg,
+              // Remove non-standard properties
+              make, model, pid, scaling,
+              ...signalProps 
+            } = param;
+
+            // Remove any properties that start with __ (metadata markers)
+            const cleanSignalProps = Object.entries(signalProps).reduce((acc, [key, value]) => {
+              if (!key.startsWith('__')) {
+                acc[key] = value;
+              }
+              return acc;
+            }, {});
+            
+            // Add marker for new parameters
+            const signalWithMarker = {
+              ...cleanSignalProps,
+              __isNewParameter: true
+            };
+            
+            // Add to appropriate command group
+            commandGroups[groupKey].signals.push(signalWithMarker);
+          });
+          
+          // Format the commands array
+          const commands = Object.values(commandGroups);
+          
+          // Format as a complete JSON structure for signalsets/v3/default.json
+          const formattedCommands = commands.map(command => {
+            // Extract __isNewParameter flag if the entire command is new
+            const isEntireCommandNew = command.signals.every(signal => signal.__isNewParameter === true);
+            
+            // Format signals in this command
+            const formattedSignals = command.signals.map((signal, index) => {
+              const isNew = signal.__isNewParameter === true;
+              
+              // Remove metadata
+              const { __isNewParameter, ...cleanSignal } = signal;
+              
+              // Convert any string-based formatting into proper fmt objects if needed
+              if (typeof cleanSignal.scaling === 'string' && !cleanSignal.fmt) {
+                cleanSignal.fmt = convertScalingStringToFmtObject(cleanSignal.scaling);
+                delete cleanSignal.scaling;
+              }
+              
+              // Apply correct indentation for the RAV4 format
+              const signalString = JSON.stringify(cleanSignal, null, 2);
+              
+              // Add marker for new parameters with proper indentation
+              if (isNew) {
+                return `    // === NEW PARAMETER ===\n    ${signalString.replace(/\n  /g, '\n    ')}${index < command.signals.length - 1 ? ',' : ''}`;
+              }
+              
+              return `    ${signalString.replace(/\n  /g, '\n    ')}${index < command.signals.length - 1 ? ',' : ''}`;
+            }).join('\n');
+            
+            // Format the command properly
+            let commandString = '  {\n';
+            
+            // Add new command marker if needed
+            if (isEntireCommandNew) {
+              commandString = '  // === NEW COMMAND ===\n  {\n';
+            }
+            
+            // Extract command properties (excluding signals)
+            const { signals, ...commandProps } = command;
+            
+            // Add command properties with proper formatting
+            Object.entries(commandProps).forEach(([key, value], idx, arr) => {
+              const comma = idx < arr.length - 1 ? ',' : '';
+              if (typeof value === 'object') {
+                commandString += `    "${key}": ${JSON.stringify(value)}${comma}\n`;
+              } else if (typeof value === 'number') {
+                commandString += `    "${key}": ${value}${comma}\n`;
+              } else if (typeof value === 'boolean') {
+                commandString += `    "${key}": ${value}${comma}\n`;
+              } else {
+                commandString += `    "${key}": "${value}"${comma}\n`;
+              }
+            });
+            
+            // Add signals array
+            commandString += `    "signals": [\n${formattedSignals}\n    ]\n  }`;
+            
+            return commandString;
+          }).join(',\n');
+          
+          // Helper function to convert scaling string to fmt object
+          function convertScalingStringToFmtObject(scalingString) {
+            const fmt = {};
+            
+            // Default length
+            fmt.len = 8;
+            
+            // Parse the scaling string
+            // Example: "raw*100 /255 clamped to [100]"
+            // Example: "raw/58 +-0.5 clamped to [4]"
+            // Example: "raw*1.28 clamped to [326]"
+            
+            if (scalingString.includes('*')) {
+              const mulMatch = scalingString.match(/raw\s*\*\s*([\d.]+)/);
+              if (mulMatch) {
+                fmt.mul = parseFloat(mulMatch[1]);
+              }
+            }
+            
+            if (scalingString.includes('/')) {
+              const divMatch = scalingString.match(/raw\s*\/\s*([\d.]+)/);
+              if (divMatch) {
+                fmt.div = parseFloat(divMatch[1]);
+              }
+            }
+            
+            if (scalingString.includes('+-')) {
+              const addMatch = scalingString.match(/\+-\s*([\d.]+)/);
+              if (addMatch) {
+                fmt.add = parseFloat(addMatch[1]) * (scalingString.includes('+-') ? -1 : 1);
+              }
+            }
+            
+            if (scalingString.includes('clamped to')) {
+              const maxMatch = scalingString.match(/clamped to \[([\d.]+)\]/);
+              if (maxMatch) {
+                fmt.max = parseFloat(maxMatch[1]);
+              }
+            }
+            
+            return fmt;
+          }
+          
+          // Build the complete JSON structure
+          const code = `// For ${vehicle.make} ${vehicle.model}:
+// Replace the content of signalsets/v3/default.json with this:
+
+{ "commands": [
+${formattedCommands}
+]
+}`;
           
           generatedCodes[key] = code;
         });
@@ -236,7 +527,7 @@ ${paramsJson}`;
     if (codeToCopy) {
       navigator.clipboard.writeText(codeToCopy)
         .then(() => {
-          alert('Parameter data copied to clipboard!');
+          alert('Parameter data copied to clipboard! Paste it into your vehicle JSON file.');
         })
         .catch(err => {
           console.error('Failed to copy: ', err);
@@ -246,11 +537,11 @@ ${paramsJson}`;
 
   // Copy all generated code to clipboard
   const copyAllToClipboard = () => {
-    const allCode = Object.values(generatedCode).join('\n\n// ----------------------------------------\n\n');
+    const allCode = Object.values(generatedCode).join('\n\n// ========================================\n\n');
     
     navigator.clipboard.writeText(allCode)
       .then(() => {
-        alert('All parameter data copied to clipboard!');
+        alert('All parameter data copied to clipboard! The data is separated by dividers for each vehicle.');
       })
       .catch(err => {
         console.error('Failed to copy: ', err);
@@ -650,16 +941,31 @@ ${paramsJson}`;
                   </pre>
                 </div>
                 
-                <div className="text-sm text-blue-600 mb-4">
-                  <p className="flex items-start">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                    </svg>
-                    <span>
-                      Copy these parameters and add them to your vehicle's JSON file in your GitHub fork.
-                      You can switch between tabs to see parameters for each vehicle.
-                    </span>
-                  </p>
+                <div className="bg-blue-50 p-4 rounded-md mb-4">
+                  <h4 className="text-sm font-medium text-blue-700 mb-2">How to use this data:</h4>
+                  <ul className="text-sm text-blue-700 space-y-2 list-disc pl-5">
+                    <li>
+                      This is a complete OBDb vehicle signal definition formatted to match the official standard.
+                    </li>
+                    <li>
+                      Copy the entire JSON content and replace your <code className="bg-blue-100 px-1 rounded">signalsets/v3/default.json</code> file.
+                    </li>
+                    <li>
+                      New parameters are marked with <code className="bg-blue-100 px-1 rounded">// === NEW PARAMETER ===</code> for easy identification.
+                    </li>
+                    <li>
+                      Signal definitions use the proper <code className="bg-blue-100 px-1 rounded">fmt</code> object format with properties like <code className="bg-blue-100 px-1 rounded">len</code>, <code className="bg-blue-100 px-1 rounded">max</code>, <code className="bg-blue-100 px-1 rounded">mul</code>, <code className="bg-blue-100 px-1 rounded">div</code>, etc.
+                    </li>
+                    <li>
+                      All command-level properties like <code className="bg-blue-100 px-1 rounded">hdr</code>, <code className="bg-blue-100 px-1 rounded">cmd</code>, <code className="bg-blue-100 px-1 rounded">freq</code>, <code className="bg-blue-100 px-1 rounded">rax</code>, etc. are preserved in the correct positions.
+                    </li>
+                    <li>
+                      Parameters are organized by commands and parameter IDs have been adjusted to match each target vehicle's model.
+                    </li>
+                    <li>
+                      Switch between tabs to see parameters for different vehicles.
+                    </li>
+                  </ul>
                 </div>
                 
                 <div className="flex justify-end gap-2">
