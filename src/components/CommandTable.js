@@ -11,7 +11,6 @@ const CommandTable = ({
   showActions = true
 }) => {
   const [expandedCommand, setExpandedCommand] = useState(expandedCommandId);
-  const [selectedSignal, setSelectedSignal] = useState(null);
 
   // Update internal state when props change
   React.useEffect(() => {
@@ -26,12 +25,7 @@ const CommandTable = ({
       onCommandClick(command);
     } else {
       setExpandedCommand(expandedCommand === commandId ? null : commandId);
-      setSelectedSignal(null); // Reset selected signal when toggling command
     }
-  };
-
-  const handleSignalSelected = (signal) => {
-    setSelectedSignal(signal);
   };
 
   const formatCommand = (cmd) => {
@@ -106,7 +100,6 @@ const CommandTable = ({
                       <td colSpan="4" className="px-0 py-0 border-t border-gray-100">
                         <CommandDetailsPanel
                           command={command}
-                          onSignalSelected={handleSignalSelected}
                           showVehicles={true}
                         />
                       </td>

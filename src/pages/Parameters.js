@@ -1,12 +1,10 @@
 // src/pages/Parameters.js
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import dataService from '../services/dataService';
 import ParameterTable from '../components/ParameterTable';
 import DataPageLayout from '../components/DataPageLayout';
 
 const Parameters = () => {
-  const [parameters, setParameters] = useState([]);
   const [displayedParameters, setDisplayedParameters] = useState([]);
   const [suggestedMetrics, setSuggestedMetrics] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,8 +15,8 @@ const Parameters = () => {
     query: '',
     metric: '',
   });
-  const [orderBy, setOrderBy] = useState('id');
-  const [order, setOrder] = useState('asc');
+  const [orderBy] = useState('id');
+  const [order] = useState('asc');
   const [expandedParameterId, setExpandedParameterId] = useState(null);
   const [commandData, setCommandData] = useState(null);
 
@@ -26,47 +24,47 @@ const Parameters = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-
-        // Load matrix data
-        const data = await dataService.loadMatrixData();
-        setSuggestedMetrics(data.suggestedMetrics);
-
         // Search parameters with no filters initially
         const result = await dataService.searchParameters({});
-        setParameters(result);
 
         // Sort the parameters by ID initially
-        const sortedResult = sortParameters(result, 'id', 'asc');
-        setDisplayedParameters(sortedResult);
+        const sortedParams = sortParameters(result, orderBy, order);
+        setDisplayedParameters(sortedParams);
+
+        // Extract suggested metrics for filtering
+        const metrics = [...new Set(result
+          .filter(p => p.suggestedMetric)
+          .map(p => p.suggestedMetric))]
+          .sort((a, b) => a.localeCompare(b));
+        setSuggestedMetrics(metrics);
 
         setLoading(false);
       } catch (err) {
-        setError('Failed to load parameter data. Please try again later.');
+        console.error("Error fetching parameters:", err);
+        setError(err.toString());
         setLoading(false);
-        console.error(err);
       }
     };
 
+    // Initial fetch
     fetchData();
-  }, []);
+  }, [orderBy, order]);
 
+  // Apply filtering and sorting when filters change
   useEffect(() => {
     const searchParams = async () => {
       try {
         setLoading(true);
         const result = await dataService.searchParameters(filters);
-        setParameters(result);
 
         // Apply current sorting to the filtered results
-        const sortedResult = sortParameters(result, orderBy, order);
-        setDisplayedParameters(sortedResult);
-
-        setPage(0); // Reset to first page when filters change
+        const sortedParams = sortParameters(result, orderBy, order);
+        setDisplayedParameters(sortedParams);
         setLoading(false);
       } catch (err) {
-        setError('Error searching parameters.');
+        console.error("Error searching parameters:", err);
+        setError(err.toString());
         setLoading(false);
-        console.error(err);
       }
     };
 
@@ -74,22 +72,22 @@ const Parameters = () => {
   }, [filters, orderBy, order]);
 
   const sortParameters = (params, property, direction) => {
-    const sortedParams = [...params].sort((a, b) => {
-      const valueA = a[property] || '';
-      const valueB = b[property] || '';
+    return [...params].sort((a, b) => {
+      let aValue = a[property];
+      let bValue = b[property];
 
-      if (typeof valueA === 'string' && typeof valueB === 'string') {
-        return direction === 'asc'
-          ? valueA.localeCompare(valueB)
-          : valueB.localeCompare(valueA);
+      // Handle null values
+      if (aValue === null) return 1;
+      if (bValue === null) return -1;
+
+      // Handle different types
+      if (typeof aValue === 'string' && typeof bValue === 'string') {
+        return direction === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
       }
 
-      return direction === 'asc'
-        ? valueA - valueB
-        : valueB - valueA;
+      // For numeric values
+      return direction === 'asc' ? aValue - bValue : bValue - aValue;
     });
-
-    return sortedParams;
   };
 
   const handleFilterChange = (e) => {

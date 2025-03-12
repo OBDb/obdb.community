@@ -1,6 +1,6 @@
 // src/pages/Vehicles.js
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import dataService from '../services/dataService';
 import SearchFilter from '../components/SearchFilter';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -8,9 +8,9 @@ import ErrorAlert from '../components/ErrorAlert';
 import PageHeader from '../components/PageHeader';
 import EmptyState from '../components/EmptyState';
 import VehicleComparisonTable from '../components/VehicleComparisonTable';
+import VehicleSelectionModal from '../components/VehicleSelectionModal';
 
 const Vehicles = () => {
-  const location = useLocation();
   const navigate = useNavigate();
 
   const [vehicles, setVehicles] = useState([]);
@@ -25,6 +25,8 @@ const Vehicles = () => {
   const [isComparing, setIsComparing] = useState(false);
   const [comparisonParameters, setComparisonParameters] = useState([]);
   const [loadingComparison, setLoadingComparison] = useState(false);
+  const [showVehicleSelectionModal, setShowVehicleSelectionModal] = useState(false);
+  const [vehicleSelectionMode, setVehicleSelectionMode] = useState('add'); // 'add' or 'change'
 
   // Parse URL query parameters
   const parseQueryString = () => {
@@ -51,161 +53,14 @@ const Vehicles = () => {
     return result;
   };
 
-  // Update URL with comparison parameters
-  const updateUrlWithComparison = (selectedVehiclesList) => {
-    // Create a comma-separated list of vehicles in Make-Model format, then URL encode the entire string
-    const compareParam = selectedVehiclesList.map(v => `${v.make}-${v.model}`).join(',');
-    navigate(`/vehicles?compare=${encodeURIComponent(compareParam)}`, { replace: true });
-  };
-
   // Clear comparison from URL
   const clearComparisonFromUrl = () => {
     navigate('/vehicles', { replace: true });
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const makes = await dataService.getMakes();
-        setMakes(makes);
-
-        const vehicles = await dataService.getVehicles();
-        setVehicles(vehicles);
-
-        // Check if URL has comparison parameters
-        const queryParams = parseQueryString();
-        if (queryParams.compare) {
-          // Split by ',' to get individual vehicle IDs, avoid re-decoding
-          const vehiclesToCompare = queryParams.compare.split(',').map(id => {
-            // Split by '-' to get make and model
-            const parts = id.split('-');
-            if (parts.length >= 2) {
-              // The make is the first part, the model is the rest joined with '-'
-              // This handles cases where model names might contain hyphens
-              const make = parts[0];
-              const model = parts.slice(1).join('-');
-              return { make, model, id };
-            }
-            return null;
-          }).filter(v => v !== null); // Filter out any invalid entries
-
-          // Validate that these vehicles exist
-          const validVehicles = vehiclesToCompare.filter(v =>
-            vehicles.some(existingVehicle =>
-              existingVehicle.make === v.make && existingVehicle.model === v.model
-            )
-          );
-
-          if (validVehicles.length >= 2) {
-            setSelectedVehicles(validVehicles);
-            // Trigger comparison (will be executed after loading is complete)
-            setTimeout(() => startComparison(validVehicles), 0);
-          }
-        }
-
-        setLoading(false);
-      } catch (err) {
-        setError('Failed to load vehicle data. Please try again later.');
-        setLoading(false);
-        console.error(err);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  // Also listen for hash changes to handle direct navigation to comparison URLs
-  useEffect(() => {
-    const handleHashChange = () => {
-      const queryParams = parseQueryString();
-      if (queryParams.compare && vehicles.length > 0) {
-        // Split by ',' to get individual vehicle IDs, avoid re-decoding
-        const vehiclesToCompare = queryParams.compare.split(',').map(id => {
-          // Split by '-' to get make and model
-          const parts = id.split('-');
-          if (parts.length >= 2) {
-            // The make is the first part, the model is the rest joined with '-'
-            // This handles cases where model names might contain hyphens
-            const make = parts[0];
-            const model = parts.slice(1).join('-');
-            return { make, model, id };
-          }
-          return null;
-        }).filter(v => v !== null); // Filter out any invalid entries
-
-        // Validate that these vehicles exist
-        const validVehicles = vehiclesToCompare.filter(v =>
-          vehicles.some(existingVehicle =>
-            existingVehicle.make === v.make && existingVehicle.model === v.model
-          )
-        );
-
-        if (validVehicles.length >= 2) {
-          setSelectedVehicles(validVehicles);
-          // Trigger comparison
-          startComparison(validVehicles);
-        }
-      }
-    };
-
-    // Add event listener for hash changes
-    window.addEventListener('hashchange', handleHashChange);
-
-    // Initial check on mount if we already have vehicles loaded
-    if (vehicles.length > 0) {
-      handleHashChange();
-    }
-
-    // Clean up
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, [vehicles]);
-
-  const handleFilterChange = (e) => {
-    const { name, value } = e.target;
-    setFilters({
-      ...filters,
-      [name]: value,
-    });
-  };
-
-  // Filter vehicles based on the current filters
-  const filteredVehicles = vehicles.filter(vehicle => {
-    if (filters.make && vehicle.make !== filters.make) {
-      return false;
-    }
-    if (filters.model && !vehicle.model.toLowerCase().includes(filters.model.toLowerCase())) {
-      return false;
-    }
-    return true;
-  });
-
-  // Group vehicles by make for more compact display
-  const vehiclesByMake = filteredVehicles.reduce((acc, vehicle) => {
-    if (!acc[vehicle.make]) {
-      acc[vehicle.make] = [];
-    }
-    acc[vehicle.make].push(vehicle);
-    return acc;
-  }, {});
-
-  // Toggle selection of a vehicle
-  const toggleVehicleSelection = (make, model) => {
-    const vehicleId = `${make}-${model}`;
-
-    if (selectedVehicles.some(v => v.id === vehicleId)) {
-      setSelectedVehicles(selectedVehicles.filter(v => v.id !== vehicleId));
-    } else {
-      if (selectedVehicles.length < 4) {  // Limit to 4 vehicles for comparison
-        setSelectedVehicles([...selectedVehicles, { make, model, id: vehicleId }]);
-      }
-    }
-  };
-
   // Start comparison of selected vehicles
-  const startComparison = async (vehiclesToCompare = null) => {
+  // Wrap in useCallback to prevent unnecessary re-renders
+  const startComparison = React.useCallback(async (vehiclesToCompare = null) => {
     const vehiclesToProcess = vehiclesToCompare || selectedVehicles;
 
     if (vehiclesToProcess.length < 2) return;
@@ -213,8 +68,9 @@ const Vehicles = () => {
     try {
       setLoadingComparison(true);
 
-      // Update URL with comparison parameters
-      updateUrlWithComparison(vehiclesToProcess);
+      // Update URL with comparison parameters - moved inside the callback
+      const compareParam = vehiclesToProcess.map(v => `${v.make}-${v.model}`).join(',');
+      navigate(`/vehicles?compare=${encodeURIComponent(compareParam)}`, { replace: true });
 
       // Import utility functions for parameter processing
       const signalUtils = await import('../utils/signalUtils').then(module => module.default);
@@ -251,6 +107,209 @@ const Vehicles = () => {
       setError('Failed to load parameters for comparison.');
       setLoadingComparison(false);
       console.error(err);
+    }
+  }, [selectedVehicles, navigate]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const makes = await dataService.getMakes();
+        setMakes(makes);
+
+        const vehicles = await dataService.getVehicles();
+        setVehicles(vehicles);
+
+        // Check if URL has comparison parameters
+        const queryParams = parseQueryString();
+        if (queryParams.compare) {
+          // Split by ',' to get individual vehicle IDs, avoid re-decoding
+          const vehiclesToCompare = queryParams.compare.split(',').map(id => {
+            // Split by '-' to get make and model
+            const parts = id.split('-');
+            if (parts.length >= 2) {
+              // The make is the first part, the model is the rest joined with '-'
+              // This handles cases where model names might contain hyphens
+              const make = parts[0];
+              const model = parts.slice(1).join('-');
+              // Only include make and model - removed id to be consistent with the rest of the app
+              return { make, model };
+            }
+            return null;
+          }).filter(v => v !== null); // Filter out any invalid entries
+
+          // Validate that these vehicles exist
+          const validVehicles = vehiclesToCompare.filter(v =>
+            vehicles.some(existingVehicle =>
+              existingVehicle.make === v.make && existingVehicle.model === v.model
+            )
+          );
+
+          if (validVehicles.length >= 2) {
+            setSelectedVehicles(validVehicles);
+            // Trigger comparison (will be executed after loading is complete)
+            setTimeout(() => startComparison(validVehicles), 0);
+          }
+        }
+
+        setLoading(false);
+      } catch (err) {
+        setError('Failed to load vehicle data. Please try again later.');
+        setLoading(false);
+        console.error(err);
+      }
+    };
+
+    fetchData();
+  }, [startComparison]);
+
+  // Also listen for hash changes to handle direct navigation to comparison URLs
+  useEffect(() => {
+    const handleHashChange = () => {
+      const queryParams = parseQueryString();
+      if (queryParams.compare && vehicles.length > 0) {
+        const vehiclesToCompare = queryParams.compare.split(',').map(vehicleString => {
+          // Split by '-' instead of ':' to match how the URL is generated
+          const parts = vehicleString.split('-');
+          if (parts.length >= 2) {
+            // The make is the first part, the model is the rest joined with '-'
+            // This handles cases where model names might contain hyphens
+            const make = parts[0];
+            const model = parts.slice(1).join('-');
+            return { make, model };
+          }
+          return null;
+        }).filter(v => v !== null); // Filter out any invalid entries
+        
+        // Make sure we have valid vehicles to compare
+        if (vehiclesToCompare.length >= 2) {
+          startComparison(vehiclesToCompare);
+        }
+      }
+    };
+
+    // Set up listener
+    window.addEventListener('hashchange', handleHashChange);
+    // Also check on first mount
+    handleHashChange();
+
+    // Clean up
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, [vehicles, startComparison]);
+
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    setFilters({
+      ...filters,
+      [name]: value,
+    });
+  };
+
+  // Filter vehicles based on the current filters
+  const filteredVehicles = vehicles.filter(vehicle => {
+    if (filters.make && vehicle.make !== filters.make) {
+      return false;
+    }
+    if (filters.model && !vehicle.model.toLowerCase().includes(filters.model.toLowerCase())) {
+      return false;
+    }
+    return true;
+  });
+
+  // Group vehicles by make for more compact display
+  const vehiclesByMake = filteredVehicles.reduce((acc, vehicle) => {
+    if (!acc[vehicle.make]) {
+      acc[vehicle.make] = [];
+    }
+    acc[vehicle.make].push(vehicle);
+    return acc;
+  }, {});
+
+  // Toggle selection of a vehicle
+  const toggleVehicleSelection = (make, model) => {
+    // Create a vehicle object with make and model only to be consistent
+    const newVehicle = { make, model };
+    
+    // Check if this vehicle is already selected
+    const isSelected = selectedVehicles.some(v => 
+      v.make === make && v.model === model
+    );
+
+    if (isSelected) {
+      setSelectedVehicles(selectedVehicles.filter(v => 
+        !(v.make === make && v.model === model)
+      ));
+    } else {
+      if (selectedVehicles.length < 4) {  // Limit to 4 vehicles for comparison
+        setSelectedVehicles([...selectedVehicles, newVehicle]);
+      }
+    }
+  };
+
+  // Open vehicle selection modal
+  const openVehicleSelectionModal = (mode) => {
+    setVehicleSelectionMode(mode);
+    setShowVehicleSelectionModal(true);
+  };
+
+  // Handle adding a vehicle to comparison
+  const handleAddVehicle = () => {
+    // Only allow adding if we're under the 4 vehicle limit
+    if (selectedVehicles.length < 4) {
+      openVehicleSelectionModal('add');
+    }
+  };
+
+  // Handle changing vehicles in comparison
+  const handleChangeVehicles = () => {
+    openVehicleSelectionModal('change');
+  };
+
+  // Handle vehicle selection from modal
+  const handleVehicleSelectConfirm = async (selectedVehiclesList) => {
+    // Close the modal
+    setShowVehicleSelectionModal(false);
+
+    // Process differently based on mode
+    if (vehicleSelectionMode === 'add') {
+      // Add new vehicles to the current selection
+      const updatedVehicles = [...selectedVehicles];
+      
+      // Only add vehicles that aren't already in the comparison
+      selectedVehiclesList.forEach(newVehicle => {
+        // Check if this vehicle is already in the comparison
+        const alreadySelected = updatedVehicles.some(v => 
+          v.make === newVehicle.make && v.model === newVehicle.model
+        );
+        
+        if (!alreadySelected && updatedVehicles.length < 4) {
+          // Add vehicle with consistent structure (just make and model)
+          updatedVehicles.push({
+            make: newVehicle.make,
+            model: newVehicle.model
+          });
+        }
+      });
+      
+      // Update state and trigger comparison
+      if (updatedVehicles.length !== selectedVehicles.length) {
+        setSelectedVehicles(updatedVehicles);
+        startComparison(updatedVehicles);
+      }
+    } else if (vehicleSelectionMode === 'change') {
+      // Replace current vehicles with new selection
+      if (selectedVehiclesList.length >= 2) {
+        // Create vehicle objects with consistent structure
+        const newVehicles = selectedVehiclesList.map(vehicle => ({
+          make: vehicle.make,
+          model: vehicle.model
+        }));
+        
+        setSelectedVehicles(newVehicles);
+        startComparison(newVehicles);
+      }
     }
   };
 
@@ -358,6 +417,16 @@ const Vehicles = () => {
     const isSelected = selectedVehicles.some(v => v.make === make && v.model === model);
     const navigate = useNavigate();
 
+    // Generate image URLs for make and model
+    const makeImageUrl = `https://raw.githubusercontent.com/ClutchEngineering/sidecar.clutch.engineering/main/site/gfx/make/${make.toLowerCase()}.svg`;
+    // Update the model image URL to use the correct filename format from the repo
+    const modelSanitized = model.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
+    const modelImageUrl = `https://raw.githubusercontent.com/ClutchEngineering/sidecar.clutch.engineering/main/site/gfx/model/${modelSanitized}.svg`;
+    
+    // State to track if images loaded successfully
+    const [makeImageLoaded, setMakeImageLoaded] = useState(true);
+    const [modelImageLoaded, setModelImageLoaded] = useState(true);
+
     const handleCardClick = () => {
       navigate(`/vehicles/${make}/${model}`);
     };
@@ -371,16 +440,44 @@ const Vehicles = () => {
         }`}
         onClick={handleCardClick}
       >
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <svg className="h-4 w-4 text-primary-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-              <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1v-1h3.05a2.5 2.5 0 014.9 0H19a1 1 0 001-1v-2a4 4 0 00-4-4h-3V4a1 1 0 00-1-1H3z" />
-            </svg>
-            <span className="text-sm font-medium">{model}</span>
+        <div className="flex flex-col">
+          {/* Make logo */}
+          <div className="flex items-center justify-center mb-2 h-8">
+            {makeImageLoaded ? (
+              <img 
+                src={makeImageUrl} 
+                alt={make} 
+                className="h-6 object-contain"
+                onError={() => setMakeImageLoaded(false)}
+              />
+            ) : (
+              <span className="text-xs font-medium text-gray-700">{make}</span>
+            )}
           </div>
+          
+          {/* Vehicle model image */}
+          <div className="flex items-center justify-center mb-2 h-24">
+            {modelImageLoaded ? (
+              <img 
+                src={modelImageUrl} 
+                alt={`${make} ${model}`} 
+                className="max-h-24 max-w-full object-contain"
+                onError={() => setModelImageLoaded(false)}
+              />
+            ) : (
+              <div className="flex items-center">
+                <svg className="h-4 w-4 text-primary-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                  <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1v-1h3.05a2.5 2.5 0 014.9 0H19a1 1 0 001-1v-2a4 4 0 00-4-4h-3V4a1 1 0 00-1-1H3z" />
+                </svg>
+                <span className="text-sm font-medium">{model}</span>
+              </div>
+            )}
+          </div>
+          
+          <div className="flex items-center justify-between mt-auto">
+            <span className="text-sm font-medium">{model}</span>
 
-          <div className="flex items-center space-x-2">
             <button
               type="button"
               onClick={(e) => {
@@ -424,6 +521,8 @@ const Vehicles = () => {
           vehicles={selectedVehicles}
           parameters={comparisonParameters}
           onClose={endComparison}
+          onAddVehicle={selectedVehicles.length < 4 ? handleAddVehicle : null}
+          onChangeVehicles={handleChangeVehicles}
         />
       ) : (
         <>
@@ -462,6 +561,18 @@ const Vehicles = () => {
             </div>
           )}
         </>
+      )}
+
+      {/* Vehicle Selection Modal */}
+      {showVehicleSelectionModal && (
+        <VehicleSelectionModal
+          allVehicles={vehicles}
+          currentSelection={vehicleSelectionMode === 'change' ? [] : selectedVehicles}
+          mode={vehicleSelectionMode}
+          onConfirm={handleVehicleSelectConfirm}
+          onCancel={() => setShowVehicleSelectionModal(false)}
+          maxSelections={4}
+        />
       )}
     </div>
   );

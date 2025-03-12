@@ -19,7 +19,6 @@ const ParameterTable = ({
   // Use prop values if provided, otherwise manage state internally
   const [expandedParameterId, setExpandedParameterId] = useState(propExpandedId);
   const [commandData, setCommandData] = useState(propCommandData);
-  const [selectedSignal, setSelectedSignal] = useState(null);
 
   // Update internal state when props change
   React.useEffect(() => {
@@ -98,17 +97,7 @@ const ParameterTable = ({
       if (!propCommandData) {
         setCommandData(null);
       }
-
-      // If we're collapsing, clear selected signal
-      if (expandedParameterId === parameter.id) {
-        setSelectedSignal(null);
-      }
     }
-  };
-
-  const handleSignalSelected = (signal) => {
-    // When signal selected from CommandDetailsPanel
-    setSelectedSignal(signal);
   };
 
   const displayParameters = showPagination && page !== undefined && rowsPerPage !== undefined
@@ -149,7 +138,6 @@ const ParameterTable = ({
                         <CommandDetailsPanel
                           command={commandData}
                           highlightedParameterId={parameter.id}
-                          onSignalSelected={handleSignalSelected}
                           showVehicles={showVehicles}
                         />
                       ) : (
