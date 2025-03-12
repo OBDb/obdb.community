@@ -776,11 +776,7 @@ ${Object.values(parameters).map(command => {
                             )}
                           </div>
                         ) : (
-                          <StatusBadge
-                            text="Not Available"
-                            variant="default"
-                            size="sm"
-                          />
+                          null
                         )}
                       </td>
                     ))}
