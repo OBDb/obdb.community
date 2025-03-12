@@ -103,6 +103,57 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B00"
+    },
+    "hdr": "760",
+    "id": "FOCUS_PARKING_BRAKE",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Focus Parking Brake State",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "407E"
+    },
+    "hdr": "726",
+    "id": "FOCUS_EXTERIOR_LIGHT_STATE",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Focus Exterior Lighting State",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '0', 'value': '0'}, '216': {'description': '1', 'value': '1'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C154"
+    },
+    "hdr": "726",
+    "id": "FOCUS_HOOD_OPEN",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Hood Ajar?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 1,
     "cmd": {
       "01": "13"
@@ -222,6 +273,23 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 11,
+    "cmd": {
+      "22": "C150"
+    },
+    "hdr": "726",
+    "id": "FOCUS_TRUNK_OPEN",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Trunk Ajar?",
+    "path": "Doors & Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 12,
     "cmd": {
       "01": "01"
@@ -273,6 +341,23 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 12,
+    "cmd": {
+      "22": "C150"
+    },
+    "hdr": "726",
+    "id": "FOCUS_RRD_OPEN",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Rear Right Door Ajar?",
+    "path": "Doors & Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 13,
     "cmd": {
       "01": "01"
@@ -318,6 +403,23 @@
     "name": "Manual Trans Neutral Gear Status",
     "path": "Engine.Generic.AuxInputs",
     "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 13,
+    "cmd": {
+      "22": "C150"
+    },
+    "hdr": "726",
+    "id": "FOCUS_RLD_OPEN",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Rear Left Door Ajar?",
+    "path": "Doors & Windows",
+    "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
@@ -630,6 +732,23 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "C150"
+    },
+    "hdr": "726",
+    "id": "FOCUS_DRIVER_DOOR_OPEN",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Driver Door Ajar",
+    "path": "Doors & Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 17,
     "cmd": {
       "01": "01"
@@ -658,6 +777,23 @@
     "name": "Oxygen sensor heater monitoring",
     "path": "DTCs.Generic.Status",
     "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 17,
+    "cmd": {
+      "22": "C150"
+    },
+    "hdr": "726",
+    "id": "FOCUS_PASSENGER_DOOR_OPEN",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Passenger Door Ajar?",
+    "path": "Doors & Windows",
+    "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
@@ -3813,6 +3949,23 @@
     "cmd": {
       "22": "1E1C"
     },
+    "hdr": "7DF",
+    "id": "FOCUS_TOT",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Transmission oil temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
     "hdr": "7E0",
     "id": "BRONCO_TOT",
     "make": "Ford",
@@ -4035,6 +4188,23 @@
       "22": "2813"
     },
     "hdr": "726",
+    "id": "FOCUS_TP_FL",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "hdr": "726",
     "id": "FUSION_TP_FL",
     "make": "Ford",
     "model": "Fusion",
@@ -4174,6 +4344,23 @@
     "id": "FIESTA_TP_FR",
     "make": "Ford",
     "model": "Fiesta",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "hdr": "726",
+    "id": "FOCUS_TP_FR",
+    "make": "Ford",
+    "model": "Focus",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -4341,6 +4528,23 @@
       "22": "2815"
     },
     "hdr": "726",
+    "id": "FOCUS_TP_RRO",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Rear right outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "hdr": "726",
     "id": "FUSION_TP_RR",
     "make": "Ford",
     "model": "Fusion",
@@ -4480,6 +4684,23 @@
     "id": "FIESTA_TP_RLO",
     "make": "Ford",
     "model": "Fiesta",
+    "name": "Rear left outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "hdr": "726",
+    "id": "FOCUS_TP_RLO",
+    "make": "Ford",
+    "model": "Focus",
     "name": "Rear left outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -4647,6 +4868,23 @@
       "22": "2817"
     },
     "hdr": "726",
+    "id": "FOCUS_TP_RRI",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Rear right inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2817"
+    },
+    "hdr": "726",
     "id": "RANGER_TP_RRI",
     "make": "Ford",
     "model": "Ranger",
@@ -4757,6 +4995,23 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2818"
+    },
+    "hdr": "726",
+    "id": "FOCUS_TP_RLI",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Rear left inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -8617,6 +8872,23 @@
     "scaling": "raw*0.127 +-1798.574 clamped to [100]",
     "suggestedMetric": "stateOfHealth",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "7151"
+    },
+    "hdr": "726",
+    "id": "FOCUS_HIGHBEAM_STATUS",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Highbeam Status",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw clamped to [2]",
+    "suggestedMetric": "",
+    "unit": "offon"
   },
   {
     "bitLength": 16,
@@ -15067,6 +15339,23 @@
     "cmd": {
       "22": "DD01"
     },
+    "hdr": "726",
+    "id": "FOCUS_ODO",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Odometer (Instrument panel)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
     "hdr": "7E0",
     "id": "FUSION_ODO",
     "make": "Ford",
@@ -18278,6 +18567,23 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1E12"
+    },
+    "hdr": "7E0",
+    "id": "FOCUS_GEAR",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1E1C"
     },
     "hdr": "7DF",
@@ -18638,6 +18944,23 @@
       "22": "3201"
     },
     "hdr": "760",
+    "id": "FOCUS_STEER_ANGLE",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*6.25 clamped to [-790, 790]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "3201"
+    },
+    "hdr": "760",
     "id": "RANGER_STEER_ANGLE",
     "make": "Ford",
     "model": "Ranger",
@@ -18961,6 +19284,23 @@
       "22": "6185"
     },
     "hdr": "720",
+    "id": "FOCUS_FLI",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Fuel tank level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6185"
+    },
+    "hdr": "720",
     "id": "RANGER_FLI",
     "make": "Ford",
     "model": "Ranger",
@@ -19123,6 +19463,23 @@
     "scaling": "raw*0.5 +-40 clamped to [100]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C259"
+    },
+    "hdr": "726",
+    "id": "FOCUS_CENTRAL_LOCK_STATUS",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Lock Status",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Unlocked', 'value': 'UNLOCKED'}, '2': {'description': 'Locked', 'value': 'LOCKED'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
