@@ -8,6 +8,7 @@ import ErrorAlert from '../components/ErrorAlert';
 import PageHeader from '../components/PageHeader';
 import EmptyState from '../components/EmptyState';
 import VehicleComparisonTable from '../components/VehicleComparisonTable';
+import VehicleSelectionModal from '../components/VehicleSelectionModal';
 
 const Vehicles = () => {
   const location = useLocation();
@@ -25,6 +26,8 @@ const Vehicles = () => {
   const [isComparing, setIsComparing] = useState(false);
   const [comparisonParameters, setComparisonParameters] = useState([]);
   const [loadingComparison, setLoadingComparison] = useState(false);
+  const [showVehicleSelectionModal, setShowVehicleSelectionModal] = useState(false);
+  const [vehicleSelectionMode, setVehicleSelectionMode] = useState('add'); // 'add' or 'change'
 
   // Parse URL query parameters
   const parseQueryString = () => {
@@ -254,6 +257,67 @@ const Vehicles = () => {
     }
   };
 
+  // Open vehicle selection modal
+  const openVehicleSelectionModal = (mode) => {
+    setVehicleSelectionMode(mode);
+    setShowVehicleSelectionModal(true);
+  };
+
+  // Handle adding a vehicle to comparison
+  const handleAddVehicle = () => {
+    // Only allow adding if we're under the 4 vehicle limit
+    if (selectedVehicles.length < 4) {
+      openVehicleSelectionModal('add');
+    }
+  };
+
+  // Handle changing vehicles in comparison
+  const handleChangeVehicles = () => {
+    openVehicleSelectionModal('change');
+  };
+
+  // Handle vehicle selection from modal
+  const handleVehicleSelectConfirm = async (selectedVehiclesList) => {
+    // Close the modal
+    setShowVehicleSelectionModal(false);
+
+    // Process differently based on mode
+    if (vehicleSelectionMode === 'add') {
+      // Add new vehicles to the current selection
+      const updatedVehicles = [...selectedVehicles];
+      
+      // Only add vehicles that aren't already in the comparison
+      selectedVehiclesList.forEach(newVehicle => {
+        const vehicleId = `${newVehicle.make}-${newVehicle.model}`;
+        if (!updatedVehicles.some(v => v.id === vehicleId) && updatedVehicles.length < 4) {
+          updatedVehicles.push({
+            make: newVehicle.make,
+            model: newVehicle.model,
+            id: vehicleId
+          });
+        }
+      });
+      
+      // Update state and trigger comparison
+      if (updatedVehicles !== selectedVehicles) {
+        setSelectedVehicles(updatedVehicles);
+        startComparison(updatedVehicles);
+      }
+    } else if (vehicleSelectionMode === 'change') {
+      // Replace current vehicles with new selection
+      if (selectedVehiclesList.length >= 2) {
+        const newVehicles = selectedVehiclesList.map(vehicle => ({
+          make: vehicle.make,
+          model: vehicle.model,
+          id: `${vehicle.make}-${vehicle.model}`
+        }));
+        
+        setSelectedVehicles(newVehicles);
+        startComparison(newVehicles);
+      }
+    }
+  };
+
   // End comparison mode
   const endComparison = () => {
     setIsComparing(false);
@@ -424,6 +488,8 @@ const Vehicles = () => {
           vehicles={selectedVehicles}
           parameters={comparisonParameters}
           onClose={endComparison}
+          onAddVehicle={selectedVehicles.length < 4 ? handleAddVehicle : null}
+          onChangeVehicles={handleChangeVehicles}
         />
       ) : (
         <>
@@ -462,6 +528,18 @@ const Vehicles = () => {
             </div>
           )}
         </>
+      )}
+
+      {/* Vehicle Selection Modal */}
+      {showVehicleSelectionModal && (
+        <VehicleSelectionModal
+          allVehicles={vehicles}
+          currentSelection={vehicleSelectionMode === 'change' ? [] : selectedVehicles}
+          mode={vehicleSelectionMode}
+          onConfirm={handleVehicleSelectConfirm}
+          onCancel={() => setShowVehicleSelectionModal(false)}
+          maxSelections={4}
+        />
       )}
     </div>
   );

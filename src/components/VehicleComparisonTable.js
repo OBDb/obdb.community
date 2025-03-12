@@ -4,11 +4,17 @@ import { Link } from 'react-router-dom';
 import StatusBadge from './StatusBadge';
 import signalUtils from '../utils/signalUtils';
 
-const VehicleComparisonTable = ({ vehicles, parameters, onClose }) => {
+const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicles, onAddVehicle }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedParameterId, setExpandedParameterId] = useState(null);
   const [filterByCommon, setFilterByCommon] = useState(false);
   const [showDetails, setShowDetails] = useState(true); // Whether to show parameter IDs under badges
+  const [showParamTransferModal, setShowParamTransferModal] = useState(false);
+  const [selectedParamsForTransfer, setSelectedParamsForTransfer] = useState([]);
+  const [targetVehiclesForTransfer, setTargetVehiclesForTransfer] = useState([]);
+  const [generatedCode, setGeneratedCode] = useState('');
+  const [showGeneratedCode, setShowGeneratedCode] = useState(false);
+  const [selectedVehicleTab, setSelectedVehicleTab] = useState(null);
 
   // Get all unique parameters across all vehicles
   const allParams = new Map();
@@ -93,12 +99,195 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose }) => {
     setExpandedParameterId(expandedParameterId === paramSignature ? null : paramSignature);
   };
 
+  // Open parameter transfer modal for multiple parameters
+  const openParamTransferModal = () => {
+    setShowParamTransferModal(true);
+    setTargetVehiclesForTransfer([]);
+    setGeneratedCode('');
+    setShowGeneratedCode(false);
+    setSelectedVehicleTab(null);
+  };
+
+  // Close parameter transfer modal
+  const closeParamTransferModal = () => {
+    setShowParamTransferModal(false);
+    setSelectedParamsForTransfer([]);
+    setTargetVehiclesForTransfer([]);
+    setGeneratedCode('');
+    setShowGeneratedCode(false);
+    setSelectedVehicleTab(null);
+  };
+
+  // Toggle parameter selection for transfer
+  const toggleParamSelection = (param) => {
+    const paramSignature = param.signature;
+    if (selectedParamsForTransfer.some(p => p.signature === paramSignature)) {
+      setSelectedParamsForTransfer(selectedParamsForTransfer.filter(p => p.signature !== paramSignature));
+    } else {
+      setSelectedParamsForTransfer([...selectedParamsForTransfer, param]);
+    }
+  };
+
+  // Toggle target vehicle selection for parameter transfer
+  const toggleTargetVehicle = (index) => {
+    if (targetVehiclesForTransfer.includes(index)) {
+      setTargetVehiclesForTransfer(targetVehiclesForTransfer.filter(i => i !== index));
+    } else {
+      setTargetVehiclesForTransfer([...targetVehiclesForTransfer, index]);
+    }
+  };
+
+  // Generate updated parameter data for target vehicles
+  const handleGenerateParameterData = () => {
+    try {
+      // Create a mapping of vehicle indices to parameters that should be transferred
+      const transferMapping = {};
+      
+      // Initialize with empty arrays for each target vehicle
+      targetVehiclesForTransfer.forEach(targetIndex => {
+        transferMapping[targetIndex] = [];
+      });
+      
+      // For each selected parameter, find where it exists and where it should be transferred
+      selectedParamsForTransfer.forEach(selectedParam => {
+        // Find the source vehicle index with this parameter
+        const sourceVehicleIndex = selectedParam.vehicles.findIndex(param => param !== null);
+        if (sourceVehicleIndex === -1) return;
+        
+        const sourceParam = selectedParam.vehicles[sourceVehicleIndex];
+        
+        // For each target vehicle, collect parameters to be transferred
+        targetVehiclesForTransfer.forEach(targetIndex => {
+          // Only transfer if the parameter doesn't already exist for this vehicle
+          if (!selectedParam.vehicles[targetIndex]) {
+            // Clean up the parameter for transfer
+            const { vehicleMake, vehicleModel, bitOffset, bitLength, ...baseParam } = sourceParam;
+            
+            // Create a clean parameter object
+            const cleanParam = {
+              ...baseParam,
+              id: baseParam.id,
+              name: baseParam.name,
+              hdr: baseParam.hdr || '',
+              cmd: baseParam.cmd || {},
+            };
+            
+            // Add optional fields only if they exist
+            if (baseParam.fmt) cleanParam.fmt = baseParam.fmt;
+            if (baseParam.unit) cleanParam.unit = baseParam.unit;
+            if (baseParam.suggestedMetric) cleanParam.suggestedMetric = baseParam.suggestedMetric;
+            
+            // Add to transfer mapping
+            transferMapping[targetIndex].push(cleanParam);
+          }
+        });
+      });
+      
+      // Create output organized by vehicle
+      const vehicleOutputs = {};
+      
+      Object.entries(transferMapping).forEach(([targetIndex, params]) => {
+        const targetVehicle = vehicles[parseInt(targetIndex)];
+        const key = `${targetVehicle.make}_${targetVehicle.model}`;
+        
+        if (params.length > 0) {
+          vehicleOutputs[key] = {
+            vehicle: targetVehicle,
+            parameters: params
+          };
+        }
+      });
+      
+      // Generate the formatted code output
+      if (Object.keys(vehicleOutputs).length > 0) {
+        const generatedCodes = {};
+        
+        // Generate code for each vehicle
+        Object.entries(vehicleOutputs).forEach(([key, data]) => {
+          const { vehicle, parameters } = data;
+          
+          // Format parameters as JSON
+          const paramsJson = parameters.map(p => JSON.stringify(p, null, 2)).join(',\n\n');
+          
+          const code = `// For ${vehicle.make} ${vehicle.model}:
+// Copy these parameters to add to your vehicle's existing parameters array:
+
+${paramsJson}`;
+          
+          generatedCodes[key] = code;
+        });
+        
+        setGeneratedCode(generatedCodes);
+        setSelectedVehicleTab(Object.keys(generatedCodes)[0]);
+        setShowGeneratedCode(true);
+      } else {
+        alert('No parameters to transfer. Please select parameters and target vehicles.');
+      }
+    } catch (error) {
+      console.error('Failed to generate parameter data:', error);
+      alert('Failed to generate parameter data');
+    }
+  };
+
+  // Copy generated code to clipboard
+  const copyToClipboard = () => {
+    const codeToCopy = selectedVehicleTab ? generatedCode[selectedVehicleTab] : '';
+    
+    if (codeToCopy) {
+      navigator.clipboard.writeText(codeToCopy)
+        .then(() => {
+          alert('Parameter data copied to clipboard!');
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+        });
+    }
+  };
+
+  // Copy all generated code to clipboard
+  const copyAllToClipboard = () => {
+    const allCode = Object.values(generatedCode).join('\n\n// ----------------------------------------\n\n');
+    
+    navigator.clipboard.writeText(allCode)
+      .then(() => {
+        alert('All parameter data copied to clipboard!');
+      })
+      .catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+  };
+
   return (
     <div className="bg-white shadow rounded-lg">
       <div className="p-4 border-b border-gray-200">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-medium">Parameter Comparison</h2>
           <div className="flex items-center gap-2">
+            {onAddVehicle && (
+              <button
+                onClick={onAddVehicle}
+                className="text-primary-600 hover:text-primary-800 flex items-center text-sm"
+                title="Add vehicle to comparison"
+                disabled={vehicles.length >= 4}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clipRule="evenodd" />
+                </svg>
+                Add Vehicle
+              </button>
+            )}
+            {onChangeVehicles && (
+              <button
+                onClick={onChangeVehicles}
+                className="text-primary-600 hover:text-primary-800 flex items-center text-sm"
+                title="Change vehicles being compared"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M8 5a1 1 0 100 2h5.586l-1.293 1.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L13.586 5H8zM12 15a1 1 0 100-2H6.414l1.293-1.293a1 1 0 10-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L6.414 15H12z" />
+                </svg>
+                Change Vehicles
+              </button>
+            )}
             <button
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700"
@@ -156,8 +345,23 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose }) => {
           </div>
         </div>
 
+        {/* Add a selection counter and button for multi-parameter selection */}
+        {selectedParamsForTransfer.length > 0 && (
+          <div className="mt-3 p-2 bg-blue-50 rounded-md flex items-center justify-between">
+            <span className="text-sm text-blue-700">
+              {selectedParamsForTransfer.length} parameter{selectedParamsForTransfer.length !== 1 ? 's' : ''} selected
+            </span>
+            <button
+              onClick={openParamTransferModal}
+              className="btn btn-primary btn-sm"
+            >
+              Transfer Selected Parameters
+            </button>
+          </div>
+        )}
+
         <div className="overflow-x-auto pb-2">
-          <div className="grid grid-cols-2 gap-2 mb-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-2">
             {vehicles.map((vehicle, index) => (
               <div key={vehicle.id} className="flex items-center bg-gray-50 p-2 rounded-md">
                 <svg className="h-4 w-4 text-primary-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -189,6 +393,11 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose }) => {
           <table className="min-w-full divide-y divide-gray-200 table-compact comparison-table">
             <thead>
               <tr className="bg-gray-50">
+                <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-12">
+                  <div className="flex items-center justify-center">
+                    <span className="sr-only">Select</span>
+                  </div>
+                </th>
                 <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Signal Name
                 </th>
@@ -209,6 +418,19 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose }) => {
                     className={`hover:bg-gray-50 cursor-pointer ${expandedParameterId === param.signature ? 'bg-gray-50' : ''}`}
                     onClick={() => toggleParameter(param.signature)}
                   >
+                    <td className="px-3 py-2 text-xs text-center" onClick={(e) => e.stopPropagation()}>
+                      {/* Only show checkbox if parameter is available in at least one vehicle but not all */}
+                      {param.vehicles.some(v => v !== null) && param.vehicles.some(v => v === null) && (
+                        <div className="flex items-center justify-center">
+                          <input
+                            type="checkbox"
+                            checked={selectedParamsForTransfer.some(p => p.signature === param.signature)}
+                            onChange={() => toggleParamSelection(param)}
+                            className="rounded border-gray-300 text-primary-600 focus:ring-primary-500 h-4 w-4"
+                          />
+                        </div>
+                      )}
+                    </td>
                     <td className="px-3 py-2 text-xs font-medium text-gray-900">
                       {param.name}
                       {param.vehicles.filter(v => v !== null).length === vehicles.length && (
@@ -264,7 +486,7 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose }) => {
                   </tr>
                   {expandedParameterId === param.signature && (
                     <tr>
-                      <td colSpan={2 + vehicles.length} className="px-0 py-0 border-t border-gray-100">
+                      <td colSpan={3 + vehicles.length} className="px-0 py-0 border-t border-gray-100">
                         <div className="p-4 bg-gray-50">
                           <h4 className="text-sm font-medium mb-3">Signal Details</h4>
                           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -326,6 +548,143 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose }) => {
               ))}
             </tbody>
           </table>
+        </div>
+      )}
+
+      {/* Parameter Transfer Modal */}
+      {showParamTransferModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full p-6">
+            <h3 className="text-lg font-medium mb-4">
+              {showGeneratedCode ? 'Generated Parameter Data' : 'Add Parameters to Other Models'}
+            </h3>
+            
+            {!showGeneratedCode ? (
+              <>
+                <p className="text-sm text-gray-500 mb-4">
+                  Select which vehicles you want to add {selectedParamsForTransfer.length} parameter{selectedParamsForTransfer.length !== 1 ? 's' : ''} to:
+                </p>
+                
+                <div className="max-h-60 overflow-y-auto mb-4 border border-gray-200 rounded-md p-3">
+                  <div className="space-y-3">
+                    {vehicles.map((vehicle, index) => (
+                      // Only show vehicles that are missing at least one of the selected parameters
+                      selectedParamsForTransfer.some(param => !param.vehicles[index]) && (
+                        <div key={index} className="flex items-center">
+                          <input
+                            type="checkbox"
+                            id={`vehicle-${index}`}
+                            checked={targetVehiclesForTransfer.includes(index)}
+                            onChange={() => toggleTargetVehicle(index)}
+                            className="rounded border-gray-300 text-primary-600 focus:ring-primary-500 h-4 w-4 mr-2"
+                          />
+                          <label htmlFor={`vehicle-${index}`} className="text-sm">
+                            {vehicle.make} {vehicle.model}
+                          </label>
+                        </div>
+                      )
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 p-3 rounded-md mb-4">
+                  <h4 className="text-sm font-medium mb-2">Selected Parameters:</h4>
+                  <ul className="text-xs text-gray-600 space-y-1 max-h-40 overflow-y-auto">
+                    {selectedParamsForTransfer.map(param => (
+                      <li key={param.signature} className="flex items-start">
+                        <svg className="h-4 w-4 text-primary-500 mr-1 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span>{param.name}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="text-sm text-blue-600 mb-4">
+                  <p className="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                    The generated parameters will be formatted for easy addition to your vehicle JSON files.
+                  </p>
+                </div>
+                
+                <div className="flex justify-end gap-2">
+                  <button 
+                    className="btn btn-secondary"
+                    onClick={closeParamTransferModal}
+                  >
+                    Cancel
+                  </button>
+                  <button 
+                    className="btn btn-primary"
+                    onClick={handleGenerateParameterData}
+                    disabled={targetVehiclesForTransfer.length === 0}
+                  >
+                    Generate Parameter Data
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="flex border-b border-gray-200 mb-4 overflow-x-auto">
+                  {Object.keys(generatedCode).map(key => (
+                    <button
+                      key={key}
+                      className={`px-4 py-2 text-sm font-medium whitespace-nowrap ${
+                        selectedVehicleTab === key
+                          ? 'text-primary-600 border-b-2 border-primary-500'
+                          : 'text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                      }`}
+                      onClick={() => setSelectedVehicleTab(key)}
+                    >
+                      {key.replace('_', ' ')}
+                    </button>
+                  ))}
+                </div>
+                
+                <div className="mb-4 border border-gray-200 rounded-md overflow-auto">
+                  <pre className="p-3 text-xs bg-gray-50 max-h-96 overflow-y-auto whitespace-pre-wrap">
+                    {selectedVehicleTab ? generatedCode[selectedVehicleTab] : ''}
+                  </pre>
+                </div>
+                
+                <div className="text-sm text-blue-600 mb-4">
+                  <p className="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                    <span>
+                      Copy these parameters and add them to your vehicle's JSON file in your GitHub fork.
+                      You can switch between tabs to see parameters for each vehicle.
+                    </span>
+                  </p>
+                </div>
+                
+                <div className="flex justify-end gap-2">
+                  <button 
+                    className="btn btn-secondary"
+                    onClick={() => setShowGeneratedCode(false)}
+                  >
+                    Back
+                  </button>
+                  <button 
+                    className="btn btn-primary"
+                    onClick={copyToClipboard}
+                  >
+                    Copy Current Vehicle
+                  </button>
+                  <button 
+                    className="btn btn-primary"
+                    onClick={copyAllToClipboard}
+                  >
+                    Copy All Vehicles
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
         </div>
       )}
     </div>
