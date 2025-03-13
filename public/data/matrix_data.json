@@ -10407,6 +10407,42 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_FL_SPD",
+    "make": "BMW",
+    "model": "I3s",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_FL_SPD",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DD68"
     },
     "debug": false,
@@ -12088,6 +12124,42 @@
     "id": "X3_FR_SPD",
     "make": "BMW",
     "model": "X3",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_FR_SPD",
+    "make": "BMW",
+    "model": "I3s",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_FR_SPD",
+    "make": "BMW",
+    "model": "i3",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -14511,6 +14583,42 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_RL_SPD",
+    "make": "BMW",
+    "model": "I3s",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_RL_SPD",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "DDBC"
     },
     "debug": false,
@@ -14734,6 +14842,42 @@
     "id": "X3_RR_SPD",
     "make": "BMW",
     "model": "X3",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_RR_SPD",
+    "make": "BMW",
+    "model": "I3s",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_RR_SPD",
+    "make": "BMW",
+    "model": "i3",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -20919,6 +21063,42 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "D031"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_GEAR",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_RANGE_DATA",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Range data",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D112"
     },
     "debug": true,
@@ -21045,6 +21225,24 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_DOORS",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Door status",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DD04"
     },
     "debug": false,
@@ -21094,6 +21292,60 @@
     "scaling": "raw clamped to [220]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_CHARGE_STATE",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Charge state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CELL_INFO",
+    "make": "BMW",
+    "model": "i3",
+    "name": "HV cell info",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CELLS",
+    "make": "BMW",
+    "model": "i3",
+    "name": "HV cell data",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
