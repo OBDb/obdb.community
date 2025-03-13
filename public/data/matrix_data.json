@@ -3909,6 +3909,42 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1022"
+    },
+    "debug": false,
+    "hdr": "7C0",
+    "id": "VENZAHYBRID_FLV",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "hdr": "7C0",
+    "id": "PRIUSPRIME_FLV",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1146"
     },
     "debug": false,
@@ -10173,6 +10209,24 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "D111"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_RANGE_E_CUR",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Current electric range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D240"
     },
     "debug": false,
@@ -10357,6 +10411,24 @@
     },
     "debug": false,
     "hdr": "6F1",
+    "id": "I3_FL_SPD",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "hdr": "6F1",
     "id": "IX3_FL_SPD",
     "make": "BMW",
     "model": "iX3",
@@ -10425,24 +10497,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "DBE4"
-    },
-    "debug": true,
-    "hdr": "6F1",
-    "id": "I3_FL_SPD",
-    "make": "BMW",
-    "model": "i3",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-327.68, 327.67]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "DD68"
     },
     "debug": false,
@@ -10463,11 +10517,11 @@
     "cmd": {
       "22": "DD68"
     },
-    "debug": true,
+    "debug": false,
     "hdr": "6F1",
-    "id": "I3_HVBAT_VOLT",
+    "id": "I3_HVBAT_V",
     "make": "BMW",
-    "model": "I3s",
+    "model": "i3",
     "name": "HV battery voltage",
     "path": "Battery",
     "pid": "22",
@@ -10485,7 +10539,7 @@
     "hdr": "6F1",
     "id": "I3_HVBAT_VOLT",
     "make": "BMW",
-    "model": "i3",
+    "model": "I3s",
     "name": "HV battery voltage",
     "path": "Battery",
     "pid": "22",
@@ -10553,11 +10607,11 @@
     "cmd": {
       "22": "DDC0"
     },
-    "debug": true,
+    "debug": false,
     "hdr": "6F1",
     "id": "I3_HVBAT_CT_MIN",
     "make": "BMW",
-    "model": "I3s",
+    "model": "i3",
     "name": "HV battery cell temperature (min)",
     "path": "Battery",
     "pid": "22",
@@ -10575,13 +10629,67 @@
     "hdr": "6F1",
     "id": "I3_HVBAT_CT_MIN",
     "make": "BMW",
-    "model": "i3",
+    "model": "I3s",
     "name": "HV battery cell temperature (min)",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/100 clamped to [-327.67, 327.67]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_HVPM_SOC",
+    "make": "BMW",
+    "model": "i3",
+    "name": "State of charge (hvpm)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_CNT",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Number of cells",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_CAP_MIN",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell capacity (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
   },
   {
     "bitLength": 16,
@@ -10726,6 +10834,24 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_TEMP_MAX",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell temperature (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -11307,6 +11433,24 @@
     "bitLength": 16,
     "bitOffset": 128,
     "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_TEMP_AVG",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell temperature (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 128,
+    "cmd": {
       "22": "E003"
     },
     "debug": false,
@@ -11392,6 +11536,24 @@
     "scaling": "raw/100 clamped to [655]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_RES_FACTOR_MIN",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell resistance factor (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -12063,6 +12225,24 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "D111"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_RANGE_E_MAX",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Maximum electric range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "DBE4"
     },
     "debug": false,
@@ -12070,6 +12250,24 @@
     "id": "4SERIES_FR_SPD",
     "make": "BMW",
     "model": "4-Series",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_FR_SPD",
+    "make": "BMW",
+    "model": "i3",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -12153,24 +12351,6 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
-      "22": "DBE4"
-    },
-    "debug": true,
-    "hdr": "6F1",
-    "id": "I3_FR_SPD",
-    "make": "BMW",
-    "model": "i3",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-327.68, 327.67]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
       "22": "DDBC"
     },
     "debug": false,
@@ -12227,11 +12407,11 @@
     "cmd": {
       "22": "DDC0"
     },
-    "debug": true,
+    "debug": false,
     "hdr": "6F1",
     "id": "I3_HVBAT_CT_MAX",
     "make": "BMW",
-    "model": "I3s",
+    "model": "i3",
     "name": "HV battery cell temperature (max)",
     "path": "Battery",
     "pid": "22",
@@ -12249,13 +12429,49 @@
     "hdr": "6F1",
     "id": "I3_HVBAT_CT_MAX",
     "make": "BMW",
-    "model": "i3",
+    "model": "I3s",
     "name": "HV battery cell temperature (max)",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/100 clamped to [-327.67, 327.67]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_CAP_MAX",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell capacity (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_RES_FACTOR_MAX",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell resistance factor (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -12835,6 +13051,42 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_RES_FACTOR_AVG",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell resistance factor (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_SOC_MIN",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell SoC (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 200,
     "cmd": {
       "22": "0105"
@@ -12921,6 +13173,24 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_SOC_MAX",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell SoC (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
     "unit": "percent"
   },
   {
@@ -13012,6 +13282,24 @@
     "scaling": "raw*2 /1000 clamped to [100]",
     "suggestedMetric": "",
     "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_SOC_AVG",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell SoC (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -13663,6 +13951,42 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 240,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_OCV_MIN",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell OCV (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_OCV_MAX",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell OCV (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 256,
     "cmd": {
       "22": "E003"
@@ -13732,6 +14056,24 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_OCV_AVG",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell OCV (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -14349,6 +14691,24 @@
     "bitLength": 16,
     "bitOffset": 288,
     "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_IMPEDANCE_ALPHA",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Aging factor",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 288,
+    "cmd": {
       "22": "E003"
     },
     "debug": false,
@@ -14511,6 +14871,24 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "D111"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_RANGE_F_CUR",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Current fuel range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "DBE4"
     },
     "debug": false,
@@ -14518,6 +14896,24 @@
     "id": "4SERIES_RL_SPD",
     "make": "BMW",
     "model": "4-Series",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_RL_SPD",
+    "make": "BMW",
+    "model": "i3",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -14601,24 +14997,6 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
-      "22": "DBE4"
-    },
-    "debug": true,
-    "hdr": "6F1",
-    "id": "I3_RL_SPD",
-    "make": "BMW",
-    "model": "i3",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-327.68, 327.67]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 32,
-    "cmd": {
       "22": "DDBC"
     },
     "debug": false,
@@ -14668,6 +15046,24 @@
     "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_CAP_AVG",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell capacity (average)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
   },
   {
     "bitLength": 16,
@@ -14781,6 +15177,24 @@
     "bitLength": 16,
     "bitOffset": 48,
     "cmd": {
+      "22": "D111"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_RANGE_F_MAX",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Maximum fuel range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
       "22": "DBE4"
     },
     "debug": false,
@@ -14788,6 +15202,24 @@
     "id": "4SERIES_RR_SPD",
     "make": "BMW",
     "model": "4-Series",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_RR_SPD",
+    "make": "BMW",
+    "model": "i3",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -14871,19 +15303,19 @@
     "bitLength": 16,
     "bitOffset": 48,
     "cmd": {
-      "22": "DBE4"
+      "22": "DFA0"
     },
-    "debug": true,
+    "debug": false,
     "hdr": "6F1",
-    "id": "I3_RR_SPD",
+    "id": "I3_HVBAT_C_V_MIN",
     "make": "BMW",
     "model": "i3",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
+    "name": "Cell voltage (min))",
+    "path": "Battery",
     "pid": "22",
-    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "scaling": "raw/10000 clamped to [6.5535]",
     "suggestedMetric": "",
-    "unit": "kilometersPerHour"
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -15532,6 +15964,42 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_RANGE_E_USE",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Electric consumption / 100km",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_V_MAX",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell voltage (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -16237,6 +16705,42 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_AUX_PWR",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Auxiliary power consumption",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_V_AVG",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell voltage (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 96,
     "cmd": {
       "22": "2AB7"
@@ -16270,6 +16774,24 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_TEMP_MIN",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Cell temperature (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 18,
@@ -17303,11 +17825,11 @@
     "cmd": {
       "22": "DD69"
     },
-    "debug": true,
+    "debug": false,
     "hdr": "6F1",
-    "id": "I3_HVBAT_CURR",
+    "id": "I3_HVBAT_C",
     "make": "BMW",
-    "model": "I3s",
+    "model": "i3",
     "name": "HV battery current",
     "path": "Battery",
     "pid": "22",
@@ -17325,7 +17847,7 @@
     "hdr": "6F1",
     "id": "I3_HVBAT_CURR",
     "make": "BMW",
-    "model": "i3",
+    "model": "I3s",
     "name": "HV battery current",
     "path": "Battery",
     "pid": "22",
@@ -19011,6 +19533,42 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TT_1",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TT_1",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1014"
     },
     "debug": false,
@@ -20271,6 +20829,42 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F5B"
+    },
+    "debug": false,
+    "hdr": "7D2",
+    "id": "VENZAHYBRID_SOC",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5B"
+    },
+    "debug": true,
+    "hdr": "7D2",
+    "id": "PRIUSPRIME_SOC",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2021"
     },
     "debug": false,
@@ -20296,6 +20890,42 @@
     "id": "RAV4PRIME_TID_1",
     "make": "Toyota",
     "model": "RAV4-Prime",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TID_1",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TID_1",
+    "make": "Toyota",
+    "model": "Prius-Prime",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -21065,7 +21695,7 @@
     "cmd": {
       "22": "D031"
     },
-    "debug": true,
+    "debug": false,
     "hdr": "6F1",
     "id": "I3_GEAR",
     "make": "BMW",
@@ -21081,31 +21711,13 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "D111"
-    },
-    "debug": true,
-    "hdr": "6F1",
-    "id": "I3_RANGE_DATA",
-    "make": "BMW",
-    "model": "i3",
-    "name": "Range data",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "D112"
     },
-    "debug": true,
+    "debug": false,
     "hdr": "6F1",
     "id": "I3_AAT",
     "make": "BMW",
-    "model": "I3s",
+    "model": "i3",
     "name": "Ambient air temperature",
     "path": "Climate",
     "pid": "22",
@@ -21123,7 +21735,7 @@
     "hdr": "6F1",
     "id": "I3_AAT",
     "make": "BMW",
-    "model": "i3",
+    "model": "I3s",
     "name": "Ambient air temperature",
     "path": "Climate",
     "pid": "22",
@@ -21227,12 +21839,12 @@
     "cmd": {
       "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "hdr": "6F1",
-    "id": "I3_DOORS",
+    "id": "I3_DOOR_DRIVER",
     "make": "BMW",
     "model": "i3",
-    "name": "Door status",
+    "name": "Driver door open",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -21292,60 +21904,6 @@
     "scaling": "raw clamped to [220]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DE00"
-    },
-    "debug": true,
-    "hdr": "6F1",
-    "id": "I3_CHARGE_STATE",
-    "make": "BMW",
-    "model": "i3",
-    "name": "Charge state",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DF71"
-    },
-    "debug": true,
-    "hdr": "6F1",
-    "id": "I3_HVBAT_CELL_INFO",
-    "make": "BMW",
-    "model": "i3",
-    "name": "HV cell info",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DFA0"
-    },
-    "debug": true,
-    "hdr": "6F1",
-    "id": "I3_HVBAT_CELLS",
-    "make": "BMW",
-    "model": "i3",
-    "name": "HV cell data",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -27309,6 +27867,42 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TT_3",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TT_3",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "1022"
     },
     "debug": false,
@@ -27381,6 +27975,42 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TID_3",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Tire 3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TID_3",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "Tire 3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "DA37"
     },
     "debug": true,
@@ -27390,6 +28020,60 @@
     "model": "4-Series",
     "name": "Time in M",
     "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_DOOR_DRIVER_REAR",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Rear driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_HVPM_MIN_SOC",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Minimum state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_C_CNT_MOD",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Number of cells per module",
+    "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -34707,6 +35391,42 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TT_4",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TT_4",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "1005"
     },
     "debug": false,
@@ -34732,6 +35452,42 @@
     "id": "RAV4PRIME_TP_2",
     "make": "Toyota",
     "model": "RAV4-Prime",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TP_2",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TP_2",
+    "make": "Toyota",
+    "model": "Prius-Prime",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -35373,6 +36129,42 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TID_4",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Tire 4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TID_4",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "Tire 4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "6335"
     },
     "debug": false,
@@ -35380,6 +36172,24 @@
     "id": "COOPSE_HVBAT_SOH",
     "make": "MINI",
     "model": "Cooper-SE",
+    "name": "HV battery health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "6335"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_SOH",
+    "make": "BMW",
+    "model": "i3",
     "name": "HV battery health",
     "path": "Battery",
     "pid": "22",
@@ -35409,19 +36219,55 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
-      "22": "6335"
+      "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "hdr": "6F1",
-    "id": "I3_HVBAT_SOH",
+    "id": "I3_DOOR_PASSENGER_REAR",
     "make": "BMW",
     "model": "i3",
-    "name": "HV battery health",
+    "name": "Rear passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CHG_CON",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Is charger connected",
     "path": "Battery",
     "pid": "22",
-    "scaling": "raw clamped to [100]",
-    "suggestedMetric": "stateOfHealth",
-    "unit": "percent"
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "pluggedIn",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_MOD_CNT",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Number of modules",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -42193,6 +43039,60 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HOOD",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Hood open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CHG_CON_EXT",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Is charging",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "isCharging",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_MOD_T_CNT",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Number of temperature sensors per module",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
       "01": "68"
@@ -42969,6 +43869,42 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TP_3",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TP_3",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "18A0"
     },
     "debug": false,
@@ -43468,6 +44404,42 @@
     "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_TRUNK",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Trunk open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CHG_RDY",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Ready to drive",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
   },
   {
     "bitLength": 8,
@@ -44209,6 +45181,24 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_REAR_WINDOW",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Rear window open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
       "01": "9F"
@@ -44908,6 +45898,60 @@
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TP_4",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TP_4",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_CENTRAL_LOCK",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Locked",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -46857,6 +47901,42 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TT_2",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TT_2",
+    "make": "Toyota",
+    "model": "Prius-Prime",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "1005"
     },
     "debug": false,
@@ -46882,6 +47962,42 @@
     "id": "RAV4PRIME_TP_1",
     "make": "Toyota",
     "model": "RAV4-Prime",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TP_1",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TP_1",
+    "make": "Toyota",
+    "model": "Prius-Prime",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -46954,6 +48070,42 @@
     "id": "RAV4PRIME_TID_2",
     "make": "Toyota",
     "model": "RAV4-Prime",
+    "name": "Tire 2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "hdr": "750",
+    "id": "VENZAHYBRID_TID_2",
+    "make": "Toyota",
+    "model": "Venza-Hybrid",
+    "name": "Tire 2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "hdr": "750",
+    "id": "PRIUSPRIME_TID_2",
+    "make": "Toyota",
+    "model": "Prius-Prime",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
@@ -47046,6 +48198,24 @@
     "model": "4-Series",
     "name": "Time in S",
     "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "hdr": "6F1",
+    "id": "I3_DOOR_PASSENGER",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Passenger door open",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
