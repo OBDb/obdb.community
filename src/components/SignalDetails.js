@@ -62,6 +62,17 @@ const SignalDetails = ({ signal }) => {
     return parts.join(' | ');
   };
 
+  // Determine if this is a BMW vehicle
+  const isBMW = signal.make && signal.make.toLowerCase() === 'bmw';
+
+  // Get the appropriate ECU identifier
+  const getEcuIdentifier = () => {
+    if (isBMW && signal.eax) {
+      return signal.eax;
+    }
+    return signal.hdr || '';
+  };
+
   return (
     <Card title="Signal Details" className="mb-4">
       <div className="p-4">
@@ -116,13 +127,18 @@ const SignalDetails = ({ signal }) => {
 
           <div>
             {/* Display ECU header and command information */}
-            {signal.hdr && (
+            {(signal.hdr || signal.eax) && (
               <div className="mt-3 p-2 bg-gray-50 rounded border border-gray-200">
                 <h5 className="text-xs font-medium text-gray-700 mb-1">Command Invocation</h5>
-                <div className="flex items-center">
-                  <div className="mr-2">
-                    <span className="text-xs text-gray-500">ECU Header:</span>
-                    <span className="text-xs font-mono font-medium ml-1">{signal.hdr}</span>
+                <div className="flex flex-col">
+                  <div className="mb-1">
+                    <span className="text-xs text-gray-500">ECU:</span>
+                    <span className="text-xs font-mono font-medium ml-1">{getEcuIdentifier()}</span>
+                    {isBMW && signal.eax && signal.hdr && (
+                      <div className="mt-1 text-xs text-gray-500">
+                        <span className="font-medium">BMW Note:</span> Using extended address (eax) instead of header
+                      </div>
+                    )}
                   </div>
                   {signal.cmd && (
                     <div>

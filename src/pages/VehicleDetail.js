@@ -20,6 +20,8 @@ const VehicleDetail = () => {
   const [commandData, setCommandData] = useState(null);
   // New state to handle special cases
   const [isSpecialCase, setIsSpecialCase] = useState(false);
+  // Check if this is a BMW vehicle
+  const isBMW = make && make.toLowerCase() === 'bmw';
 
   useEffect(() => {
     const fetchVehicleData = async () => {
@@ -37,9 +39,11 @@ const VehicleDetail = () => {
           if (params && params.length > 0) {
             setParameters(params);
 
-            // Extract unique ECU headers
-            const headers = [...new Set(params.map(param => param.hdr))].sort();
-            setEcuHeaders(headers);
+            // Extract unique ECU headers or extended addresses for BMW
+            const ecuIdentifiers = isBMW
+              ? [...new Set(params.map(param => param.eax || param.hdr))].sort()
+              : [...new Set(params.map(param => param.hdr))].sort();
+            setEcuHeaders(ecuIdentifiers);
 
             setFilteredParams(params);
           } else {
@@ -50,9 +54,11 @@ const VehicleDetail = () => {
           const params = await dataService.getVehicleParameters(make, model);
           setParameters(params);
 
-          // Extract unique ECU headers
-          const headers = [...new Set(params.map(param => param.hdr))].sort();
-          setEcuHeaders(headers);
+          // Extract unique ECU headers or extended addresses for BMW
+          const ecuIdentifiers = isBMW
+            ? [...new Set(params.map(param => param.eax || param.hdr))].sort()
+            : [...new Set(params.map(param => param.hdr))].sort();
+          setEcuHeaders(ecuIdentifiers);
 
           setFilteredParams(params);
         }
@@ -69,7 +75,7 @@ const VehicleDetail = () => {
     };
 
     fetchVehicleData();
-  }, [make, model]);
+  }, [make, model, isBMW]);
 
   useEffect(() => {
     if (searchQuery) {
@@ -147,6 +153,7 @@ const VehicleDetail = () => {
         setCommandData({
           id: parameter.id,
           hdr: parameter.hdr,
+          eax: parameter.eax, // Include extended address
           cmd: parameter.cmd,
           parameters: [parameter],
           vehicles: []
@@ -158,6 +165,7 @@ const VehicleDetail = () => {
       setCommandData({
         id: parameter.id,
         hdr: parameter.hdr,
+        eax: parameter.eax, // Include extended address
         cmd: parameter.cmd,
         parameters: [parameter],
         vehicles: []
@@ -165,9 +173,24 @@ const VehicleDetail = () => {
     }
   };
 
+  // Function to get ECU display value for BMW or non-BMW vehicles
+  const getEcuValue = (param) => {
+    if (isBMW && param.eax) {
+      return param.eax;
+    }
+    return param.hdr || '';
+  };
+
   // Group parameters by ECU for the ECU tab
-  const paramsByEcu = ecuHeaders.reduce((acc, header) => {
-    acc[header] = filteredParams.filter(param => param.hdr === header);
+  const paramsByEcu = ecuHeaders.reduce((acc, ecuId) => {
+    // For BMW, group by extended address, for others group by header
+    const paramsForEcu = isBMW
+      ? filteredParams.filter(param => (param.eax || param.hdr) === ecuId)
+      : filteredParams.filter(param => param.hdr === ecuId);
+
+    if (paramsForEcu.length > 0) {
+      acc[ecuId] = paramsForEcu;
+    }
     return acc;
   }, {});
 
@@ -187,7 +210,8 @@ const VehicleDetail = () => {
     {
       key: 'hdr',
       header: 'ECU',
-      cellClassName: 'font-mono text-gray-900'
+      cellClassName: 'font-mono text-gray-900',
+      render: (row) => getEcuValue(row)
     },
     {
       key: 'id',
@@ -246,7 +270,8 @@ const VehicleDetail = () => {
     {
       key: 'hdr',
       header: 'ECU',
-      cellClassName: 'font-mono text-gray-900'
+      cellClassName: 'font-mono text-gray-900',
+      render: (row) => getEcuValue(row)
     },
     {
       key: 'id',
@@ -361,12 +386,12 @@ const VehicleDetail = () => {
           {/* By ECU Tab */}
           {tabValue === 1 && (
             <div>
-              {Object.entries(paramsByEcu).map(([header, ecuParams]) => (
+              {Object.entries(paramsByEcu).map(([ecuId, ecuParams]) => (
                 ecuParams.length > 0 && (
-                  <div key={header} className="mb-6">
+                  <div key={ecuId} className="mb-6">
                     <div className="flex items-center mb-2">
                       <h3 className="text-sm font-medium text-gray-700 font-mono">
-                        {header}
+                        {ecuId}
                       </h3>
                       <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
                         {ecuParams.length} parameters

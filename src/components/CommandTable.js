@@ -34,12 +34,26 @@ const CommandTable = ({
       .join(' ');
   };
 
+  // Function to get ECU display value for BMW or non-BMW vehicles
+  const getEcuValue = (command) => {
+    // Check if this is a BMW command
+    const isBMW = command.parameters.length > 0 &&
+                 command.parameters[0].make &&
+                 command.parameters[0].make.toLowerCase() === 'bmw';
+
+    if (isBMW && command.eax) {
+      return command.eax;
+    }
+    return command.hdr || '';
+  };
+
   // Define columns for the table
   const columns = [
     {
       key: 'hdr',
       header: 'ECU Header',
-      cellClassName: 'font-mono font-medium text-gray-900'
+      cellClassName: 'font-mono font-medium text-gray-900',
+      render: (row) => getEcuValue(row)
     },
     {
       key: 'cmd',
