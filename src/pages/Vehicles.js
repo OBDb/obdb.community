@@ -9,6 +9,7 @@ import PageHeader from '../components/PageHeader';
 import EmptyState from '../components/EmptyState';
 import VehicleComparisonTable from '../components/VehicleComparisonTable';
 import VehicleSelectionModal from '../components/VehicleSelectionModal';
+import { getMakeSvgUrl, getModelSvgUrl } from '../utils/vehicleSymbolMap';
 
 const Vehicles = () => {
   const navigate = useNavigate();
@@ -180,7 +181,7 @@ const Vehicles = () => {
           }
           return null;
         }).filter(v => v !== null); // Filter out any invalid entries
-        
+
         // Make sure we have valid vehicles to compare
         if (vehiclesToCompare.length >= 2) {
           startComparison(vehiclesToCompare);
@@ -231,14 +232,14 @@ const Vehicles = () => {
   const toggleVehicleSelection = (make, model) => {
     // Create a vehicle object with make and model only to be consistent
     const newVehicle = { make, model };
-    
+
     // Check if this vehicle is already selected
-    const isSelected = selectedVehicles.some(v => 
+    const isSelected = selectedVehicles.some(v =>
       v.make === make && v.model === model
     );
 
     if (isSelected) {
-      setSelectedVehicles(selectedVehicles.filter(v => 
+      setSelectedVehicles(selectedVehicles.filter(v =>
         !(v.make === make && v.model === model)
       ));
     } else {
@@ -276,14 +277,14 @@ const Vehicles = () => {
     if (vehicleSelectionMode === 'add') {
       // Add new vehicles to the current selection
       const updatedVehicles = [...selectedVehicles];
-      
+
       // Only add vehicles that aren't already in the comparison
       selectedVehiclesList.forEach(newVehicle => {
         // Check if this vehicle is already in the comparison
-        const alreadySelected = updatedVehicles.some(v => 
+        const alreadySelected = updatedVehicles.some(v =>
           v.make === newVehicle.make && v.model === newVehicle.model
         );
-        
+
         if (!alreadySelected && updatedVehicles.length < 4) {
           // Add vehicle with consistent structure (just make and model)
           updatedVehicles.push({
@@ -292,7 +293,7 @@ const Vehicles = () => {
           });
         }
       });
-      
+
       // Update state and trigger comparison
       if (updatedVehicles.length !== selectedVehicles.length) {
         setSelectedVehicles(updatedVehicles);
@@ -306,7 +307,7 @@ const Vehicles = () => {
           make: vehicle.make,
           model: vehicle.model
         }));
-        
+
         setSelectedVehicles(newVehicles);
         startComparison(newVehicles);
       }
@@ -418,11 +419,9 @@ const Vehicles = () => {
     const navigate = useNavigate();
 
     // Generate image URLs for make and model
-    const makeImageUrl = `https://raw.githubusercontent.com/ClutchEngineering/sidecar.clutch.engineering/main/site/gfx/make/${make.toLowerCase()}.svg`;
-    // Update the model image URL to use the correct filename format from the repo
-    const modelSanitized = model.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
-    const modelImageUrl = `https://raw.githubusercontent.com/ClutchEngineering/sidecar.clutch.engineering/main/site/gfx/model/${modelSanitized}.svg`;
-    
+    const makeImageUrl = getMakeSvgUrl(make);
+    const modelImageUrl = getModelSvgUrl(make, model);
+
     // State to track if images loaded successfully
     const [makeImageLoaded, setMakeImageLoaded] = useState(true);
     const [modelImageLoaded, setModelImageLoaded] = useState(true);
@@ -444,9 +443,9 @@ const Vehicles = () => {
           {/* Make logo */}
           <div className="flex items-center justify-center mb-2 h-8">
             {makeImageLoaded ? (
-              <img 
-                src={makeImageUrl} 
-                alt={make} 
+              <img
+                src={makeImageUrl}
+                alt={make}
                 className="h-6 object-contain"
                 onError={() => setMakeImageLoaded(false)}
               />
@@ -454,13 +453,13 @@ const Vehicles = () => {
               <span className="text-xs font-medium text-gray-700">{make}</span>
             )}
           </div>
-          
+
           {/* Vehicle model image */}
           <div className="flex items-center justify-center mb-2 h-24">
             {modelImageLoaded ? (
-              <img 
-                src={modelImageUrl} 
-                alt={`${make} ${model}`} 
+              <img
+                src={modelImageUrl}
+                alt={`${make} ${model}`}
                 className="max-h-24 max-w-full object-contain"
                 onError={() => setModelImageLoaded(false)}
               />
@@ -474,7 +473,7 @@ const Vehicles = () => {
               </div>
             )}
           </div>
-          
+
           <div className="flex items-center justify-between mt-auto">
             <span className="text-sm font-medium">{model}</span>
 

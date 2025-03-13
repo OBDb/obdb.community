@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import StatusBadge from './StatusBadge';
 import signalUtils from '../utils/signalUtils';
+import { getMakeSvgUrl, getModelSvgUrl } from '../utils/vehicleSymbolMap';
 
 const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicles, onAddVehicle }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -668,11 +669,8 @@ ${Object.values(parameters).map(command => {
                   Command
                 </th>
                 {vehicles.map((vehicle, index) => {
-                  // Generate image URLs for make and model
-                  const makeImageUrl = `https://raw.githubusercontent.com/ClutchEngineering/sidecar.clutch.engineering/main/site/gfx/make/${vehicle.make.toLowerCase()}.svg`;
-                  // Update the model image URL to use the correct filename format from the repo
-                  const modelSanitized = vehicle.model.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
-                  const modelImageUrl = `https://raw.githubusercontent.com/ClutchEngineering/sidecar.clutch.engineering/main/site/gfx/model/${modelSanitized}.svg`;
+                  const makeImageUrl = getMakeSvgUrl(vehicle.make);
+                  const modelImageUrl = getModelSvgUrl(vehicle.make, vehicle.model);
 
                   return (
                     <th
