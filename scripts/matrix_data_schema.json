@@ -9,6 +9,10 @@
         "type": "string",
         "description": "ECU header"
       },
+      "eax": {
+        "type": "string",
+        "description": "Extended address (used by BMW vehicles)"
+      },
       "pid": {
         "type": "string",
         "description": "Parameter ID"

@@ -28,6 +28,7 @@ const CommandDetailsPanel = ({
     const enhancedSignal = {
       ...signal,
       hdr: command.hdr,
+      eax: command.eax, // Include extended address
       cmd: command.cmd
     };
 
@@ -40,12 +41,59 @@ const CommandDetailsPanel = ({
     }
   };
 
+  // Check if this is a BMW vehicle based on the first parameter
+  const isBMW = command.parameters.length > 0 &&
+                command.parameters[0].make &&
+                command.parameters[0].make.toLowerCase() === 'bmw';
+
+  // Format the command for display
+  const formatCommand = () => {
+    if (!command.cmd) return '';
+    return Object.entries(command.cmd)
+      .map(([key, value]) => `${key}${value}`)
+      .join(' ');
+  };
+
+  // Determine what ECU information to display
+  const getEcuDisplay = () => {
+    if (isBMW && command.eax) {
+      return (
+        <div className="mb-3">
+          <h4 className="text-xs font-medium text-gray-500 mb-1">
+            Command Information:
+          </h4>
+          <div className="text-xs p-2 bg-gray-50 rounded border border-gray-200">
+            <div className="flex flex-col">
+              <div className="mb-1">
+                <span className="font-medium">ECU (Extended Address):</span> <span className="font-mono">{command.eax}</span>
+              </div>
+              <div className="mb-1">
+                <span className="font-medium">Header:</span> <span className="font-mono">{command.hdr}</span>
+              </div>
+              <div className="mb-1">
+                <span className="font-medium">Command:</span> <span className="font-mono">{formatCommand()}</span>
+              </div>
+              <div className="text-gray-500 text-xs mt-1 italic">
+                For BMW vehicles, the extended address (eax) is used as the ECU identifier
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  };
+
   return (
     <div className="p-3 bg-gray-50">
       {/* Display detailed info about the selected signal if any */}
       {selectedSignal && (
         <SignalDetails signal={selectedSignal} />
       )}
+
+      {/* Display BMW-specific ECU information */}
+      {getEcuDisplay()}
 
       {/* Bit Mapping Visualization */}
       {command.parameters.length > 0 && (

@@ -116,6 +116,9 @@ def parse_signalset(file_path, make, model):
     for cmd in data.get('commands', []):
         hdr = cmd.get('hdr', '')
 
+        # Extract extended address (eax) from command
+        eax = cmd.get('eax', '')
+
         # Extract debug flag from command
         debug_flag = cmd.get('dbg', False)
 
@@ -153,6 +156,7 @@ def parse_signalset(file_path, make, model):
 
                 parameters.append({
                     'hdr': hdr,
+                    'eax': eax,
                     'pid': pid,
                     'cmd': cmd.get('cmd', {}),
                     'id': signal.get('id', ''),
