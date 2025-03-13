@@ -1,0 +1,8 @@
+{
+  "makeSymbols": {
+    "vauxhallopel": "vauxhall-opel"
+  },
+  "modelSymbols": {
+    "bmw:i3s": "i3"
+  }
+}
