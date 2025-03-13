@@ -3,7 +3,7 @@ name: Daily Data Update
 
 on:
   schedule:
-    - cron: '0 5 * * *'  # Runs at 5:00 UTC (midnight EST) every day
+    - cron: '0 5,11,17,23 * * *'
   workflow_dispatch:  # Allows manual triggering
 
 permissions:
