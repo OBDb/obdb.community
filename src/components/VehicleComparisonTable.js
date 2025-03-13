@@ -24,38 +24,38 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
 
     // Initialize the fmt object with default length
     const fmt = { len: 8 };
-    
+
     // Parse the scaling string
     // Example: "raw*100 /255 clamped to [100]"
     // Example: "raw/58 +-0.5 clamped to [4]"
     // Example: "raw*1.28 clamped to [326]"
-    
+
     if (scalingString.includes('*')) {
       const mulMatch = scalingString.match(/raw\s*\*\s*([\d.]+)/);
       if (mulMatch) {
         fmt.mul = parseFloat(mulMatch[1]);
       }
     }
-    
+
     if (scalingString.includes('/')) {
       const divMatch = scalingString.match(/raw\s*\/\s*([\d.]+)/);
       if (divMatch) {
         fmt.div = parseFloat(divMatch[1]);
       }
     }
-    
+
     // Check for clamping to derive max value
     const clampMatch = scalingString.match(/clamped to \[([\d.]+)\]/);
     if (clampMatch) {
       fmt.max = parseFloat(clampMatch[1]);
     }
-    
+
     // Check for unit
     const unitMatch = scalingString.match(/\b(kph|mph|percent|celsius|volts|degrees|ohms|amps|grams)\b/i);
     if (unitMatch) {
       fmt.unit = unitMatch[1].toLowerCase();
     }
-    
+
     return fmt;
   };
 
@@ -198,7 +198,7 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
       const targetVehicle = vehicles[vehicleIndex];
       const targetMake = targetVehicle.make;
       const targetModel = targetVehicle.model;
-      
+
       // Group parameters by command to maintain OBDb structure
       const commandGroups = {};
 
@@ -229,17 +229,17 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
             signals: []
           };
         }
-        
+
         // Clean up the parameter for JSON
-        const { 
+        const {
           // Remove metadata
-          vehicleMake, vehicleModel, bitOffset, bitLength, 
+          vehicleMake, vehicleModel, bitOffset, bitLength,
           // Remove command-level properties
           hdr: signalHdr, cmd: signalCmd, freq: signalFreq,
           rax: signalRax, eax: signalEax, tst: signalTst, fcm1: signalFcm1, dbg: signalDbg,
           // Remove non-standard properties
           make, model, pid, scaling,
-          ...signalProps 
+          ...signalProps
         } = existingParam;
 
         // Add to appropriate command group
@@ -250,11 +250,11 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
       selectedParamsForTransfer.forEach(param => {
         // Skip if the parameter already exists for this vehicle
         if (param.vehicles[vehicleIndex] !== null) return;
-        
+
         // Find the original parameter data from a vehicle that has it
         const sourceVehicleIndex = param.vehicles.findIndex(p => p !== null);
         if (sourceVehicleIndex === -1) return; // Skip if no source vehicle has this parameter
-        
+
         const originalParam = param.originalParams[sourceVehicleIndex];
         if (!originalParam) return;
 
@@ -297,18 +297,18 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
             signals: []
           };
         }
-        
+
         // Clean up the parameter for JSON
-        const { 
+        const {
           // Remove metadata
           __isNewParameter, __targetMake, __targetModel, __sourceMake, __sourceModel, __sourceId,
-          vehicleMake, vehicleModel, bitOffset, bitLength, 
+          vehicleMake, vehicleModel, bitOffset, bitLength,
           // Remove command-level properties
           hdr: signalHdr, cmd: signalCmd, freq: signalFreq,
           rax: signalRax, eax: signalEax, tst: signalTst, fcm1: signalFcm1, dbg: signalDbg,
           // Remove non-standard properties
           make, model, pid, scaling,
-          ...signalProps 
+          ...signalProps
         } = paramData;
 
         // Remove any properties that start with __ (metadata markers)
@@ -318,17 +318,17 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
           }
           return acc;
         }, {});
-        
+
         // Add marker for new parameters
         const signalWithMarker = {
           ...cleanSignalProps,
           __isNewParameter: true
         };
-        
+
         // Add to appropriate command group
         commandGroups[groupKey].signals.push(signalWithMarker);
       });
-      
+
       return {
         vehicle: {
           make: targetMake,
@@ -337,15 +337,15 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
         parameters: commandGroups
       };
     });
-    
+
     // Generate the formatted code output
     if (vehicleData.length > 0) {
       const generatedCodes = {};
-      
+
       // Generate code for each vehicle
       vehicleData.forEach(({ vehicle, parameters }) => {
         const key = `${vehicle.make}_${vehicle.model}`;
-        
+
         if (Object.keys(parameters).length > 0) {
           // Build the complete JSON structure
           const codeString = `// For ${vehicle.make} ${vehicle.model}:
@@ -355,7 +355,7 @@ const VehicleComparisonTable = ({ vehicles, parameters, onClose, onChangeVehicle
 ${Object.values(parameters).map(command => {
   // We can use this to add special styling for entirely new commands if needed in the future
   // const isEntireCommandNew = command.signals.every(s => newParameterIds.has(s.id));
-  
+
   // Format command properties
   const commandProps = Object.entries(command)
     .filter(([key]) => key !== 'signals')
@@ -374,22 +374,22 @@ ${Object.values(parameters).map(command => {
       return `    "${key}": ${formattedValue}`;
     })
     .join(',\n');
-  
+
   // Format signals
   const signalsString = command.signals.map((signal, index) => {
     // Check if this is a new parameter
     const isNew = signal.__isNewParameter === true;
     return formatSignalForOutput(signal, isNew, index, command.signals);
   }).join('\n');
-  
+
   return `  {\n${commandProps},\n    "signals": [\n${signalsString}\n    ]\n  }`;
 }).join(',\n')}
 ]}`;
-          
+
           generatedCodes[key] = codeString;
         }
       });
-      
+
       setGeneratedCode(generatedCodes);
       setSelectedVehicleTab(Object.keys(generatedCodes)[0]);
       setShowGeneratedCode(true);
@@ -401,7 +401,7 @@ ${Object.values(parameters).map(command => {
   // Copy generated code to clipboard
   const copyToClipboard = () => {
     const codeToCopy = selectedVehicleTab ? generatedCode[selectedVehicleTab] : '';
-    
+
     if (codeToCopy) {
       navigator.clipboard.writeText(codeToCopy)
         .then(() => {
@@ -416,7 +416,7 @@ ${Object.values(parameters).map(command => {
   // Copy all generated code to clipboard
   const copyAllToClipboard = () => {
     const allCode = Object.values(generatedCode).join('\n\n// ========================================\n\n');
-    
+
     navigator.clipboard.writeText(allCode)
       .then(() => {
         alert('All parameter data copied to clipboard! The data is separated by dividers for each vehicle.');
@@ -430,42 +430,42 @@ ${Object.values(parameters).map(command => {
   const formatSignalForOutput = (signal, isNew, index, array) => {
     // Create a copy of the signal to manipulate
     const cleanSignal = { ...signal };
-    
+
     // Remove the __isNewParameter property
     delete cleanSignal.__isNewParameter;
-    
+
     // Convert scaling string to fmt object if needed
     if (cleanSignal.scaling && typeof cleanSignal.scaling === 'string') {
       cleanSignal.fmt = convertScalingStringToFmtObject(cleanSignal.scaling);
       delete cleanSignal.scaling;
     }
-    
+
     // Apply correct indentation for the RAV4 format
     const signalString = JSON.stringify(cleanSignal, null, 2);
-    
+
     // The actual syntax highlighting will be applied in the CSS, here we just return the plain JSON
     // We don't use highlightClass here as it's handled by the renderCodeWithHighlighting function
     return `    ${signalString.replace(/\n {2}/g, '\n    ')}${index < array.length - 1 ? ',' : ''}`;
   };
-  
+
   // Render the JSON code with syntax highlighting for new parameters
   const renderCodeWithHighlighting = (codeString, newParameterIds) => {
     // Create HTML content with syntax highlighting
     let highlightedCode = '';
     let inNewParameter = false;
-    
+
     // Split the code into lines for processing
     const lines = codeString.split('\n');
-    
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
+
       // Check if this line contains a parameter ID that's new
       const idMatch = line.match(/"id":\s*"([^"]+)"/);
       if (!inNewParameter && idMatch) {
         // Get the parameter ID
         const paramId = idMatch[1];
-        
+
         // Check if this is a new parameter by checking if it's in the target vehicle's model format
         // and if it's in our list of new parameters
         const modelPrefix = paramId.split('_')[0];
@@ -479,11 +479,11 @@ ${Object.values(parameters).map(command => {
           continue;
         }
       }
-      
+
       // Check if we're in a new parameter and need to end the highlighting
       if (inNewParameter) {
         highlightedCode += line + '\n';
-        
+
         // Check if this line closes the parameter object (has matching indentation and closing bracket)
         if (line.match(/^\s*}/) && line.endsWith(',')) {
           highlightedCode += '</span>';
@@ -497,7 +497,7 @@ ${Object.values(parameters).map(command => {
         highlightedCode += line + '\n';
       }
     }
-    
+
     return highlightedCode;
   };
 
@@ -508,20 +508,20 @@ ${Object.values(parameters).map(command => {
           color: #15803d; /* A nice green color */
           font-weight: 500;
         }
-        
+
         pre code .new-parameter {
           display: inline-block;
           width: 100%;
           background-color: rgba(21, 128, 61, 0.1); /* Light green background */
         }
-        
+
         /* Add more specific styling for the comment */
         .new-parameter:first-line {
           font-weight: bold;
           color: #33cc59; /* Brighter green for better visibility */
         }
       `}</style>
-      
+
       <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <h3 className="text-lg font-medium">Parameter Comparison</h3>
@@ -673,15 +673,15 @@ ${Object.values(parameters).map(command => {
                   // Update the model image URL to use the correct filename format from the repo
                   const modelSanitized = vehicle.model.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
                   const modelImageUrl = `https://raw.githubusercontent.com/ClutchEngineering/sidecar.clutch.engineering/main/site/gfx/model/${modelSanitized}.svg`;
-                  
+
                   return (
-                    <th 
-                      key={`${vehicle.make}-${vehicle.model}`} 
+                    <th
+                      key={`${vehicle.make}-${vehicle.model}`}
                       className="px-3 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
                       style={{ width: '120px', minWidth: '120px' }}
                     >
                       <div className="flex flex-col items-center">
-                        <img 
+                        <img
                           src={makeImageUrl}
                           alt={vehicle.make}
                           className="h-6 mb-2 object-contain"
@@ -691,9 +691,9 @@ ${Object.values(parameters).map(command => {
                           }}
                         />
                         <span className="hidden">{vehicle.make}</span>
-                        
+
                         <div className="h-16 flex items-center justify-center mb-2 w-full">
-                          <img 
+                          <img
                             src={modelImageUrl}
                             alt={`${vehicle.make} ${vehicle.model}`}
                             className="max-h-16 max-w-full object-contain"
@@ -702,7 +702,7 @@ ${Object.values(parameters).map(command => {
                             }}
                           />
                         </div>
-                        
+
                         <span className="font-medium text-center w-full truncate">{vehicle.model}</span>
                       </div>
                     </th>
@@ -765,9 +765,14 @@ ${Object.values(parameters).map(command => {
                         {vehicleParam ? (
                           <div className="flex flex-col items-center">
                             <StatusBadge
-                              text="Available"
-                              variant="success"
+                              text={vehicleParam.debug ? "Debugging" : "Available"}
+                              variant={vehicleParam.debug ? "debugging" : "success"}
                               size="sm"
+                              icon={vehicleParam.debug ? (
+                                <svg className="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fillRule="evenodd" d="M6.56 1.14a.75.75 0 01.177 1.045 3.989 3.989 0 00-.464.86c.185.17.382.329.59.473A3.993 3.993 0 0110 2c1.272 0 2.405.594 3.137 1.518.208-.144.405-.302.59-.473a3.989 3.989 0 00-.464-.86.75.75 0 011.222-.869c.369.519.65 1.105.822 1.736a.75.75 0 01-.174.707 7.03 7.03 0 01-1.299 1.098A4 4 0 0114 6c0 .52-.301.963-.723 1.187a6.961 6.961 0 01-1.158.486c.13.208.231.436.296.679 1.413-.174 2.779-.5 4.081-.96a.75.75 0 01.501 1.415c-1.409.499-2.886.835-4.408 1.007-.107.487-.307.913-.581 1.268.47.258.934.538 1.376.845a.75.75 0 11-.874 1.218 15.53 15.53 0 00-1.561-.959l-.2.493a6.98 6.98 0 01-.174 3.1 1.917 1.917 0 00-1.114-.333c-.425 0-.813.155-1.114.333A6.98 6.98 0 019.4 13.29l-.2-.493a15.53 15.53 0 00-1.56.959.75.75 0 01-.875-1.218c.442-.307.906-.587 1.376-.845a3.24 3.24 0 01-.58-1.268 14.557 14.557 0 01-4.41-1.007.75.75 0 01.501-1.415c1.303.46 2.67.786 4.083.96.064-.243.165-.47.296-.679a6.961 6.961 0 01-1.158-.486C6.301 6.963 6 6.52 6 6a4 4 0 01.166-1.143 7.03 7.03 0 01-1.3-1.098.75.75 0 01-.173-.707 5.483 5.483 0 01.822-1.736.75.75 0 011.046-.176z" clipRule="evenodd" />
+                                </svg>
+                              ) : null}
                             />
                             {showDetails && (
                               <span className="mt-1 text-xs text-gray-500 font-mono truncate max-w-full">
@@ -855,13 +860,13 @@ ${Object.values(parameters).map(command => {
             <h3 className="text-lg font-medium mb-4">
               {showGeneratedCode ? 'Generated Parameter Data' : 'Add Parameters to Other Models'}
             </h3>
-            
+
             {!showGeneratedCode ? (
               <>
                 <p className="text-sm text-gray-500 mb-4">
                   Select which vehicles you want to add {selectedParamsForTransfer.length} parameter{selectedParamsForTransfer.length !== 1 ? 's' : ''} to:
                 </p>
-                
+
                 <div className="max-h-60 overflow-y-auto mb-4 border border-gray-200 rounded-md p-3">
                   <div className="space-y-3">
                     {vehicles.map((vehicle, index) => (
@@ -883,7 +888,7 @@ ${Object.values(parameters).map(command => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 p-3 rounded-md mb-4">
                   <h4 className="text-sm font-medium mb-2">Selected Parameters:</h4>
                   <ul className="text-xs text-gray-600 space-y-1 max-h-40 overflow-y-auto">
@@ -897,7 +902,7 @@ ${Object.values(parameters).map(command => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="text-sm text-blue-600 mb-4">
                   <p className="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
@@ -906,15 +911,15 @@ ${Object.values(parameters).map(command => {
                     The generated parameters will be formatted for easy addition to your vehicle JSON files.
                   </p>
                 </div>
-                
+
                 <div className="flex justify-end gap-2">
-                  <button 
+                  <button
                     className="btn btn-secondary"
                     onClick={closeParamTransferModal}
                   >
                     Cancel
                   </button>
-                  <button 
+                  <button
                     className="btn btn-primary"
                     onClick={handleGenerateParameterData}
                     disabled={targetVehiclesForTransfer.length === 0}
@@ -940,21 +945,21 @@ ${Object.values(parameters).map(command => {
                     </button>
                   ))}
                 </div>
-                
+
                 <div className="mb-4 border border-gray-200 rounded-md overflow-auto">
-                  <pre 
+                  <pre
                     className="p-3 text-xs bg-gray-50 max-h-96 overflow-y-auto whitespace-pre-wrap"
-                    dangerouslySetInnerHTML={{ 
-                      __html: selectedVehicleTab 
+                    dangerouslySetInnerHTML={{
+                      __html: selectedVehicleTab
                         ? renderCodeWithHighlighting(
-                            generatedCode[selectedVehicleTab], 
+                            generatedCode[selectedVehicleTab],
                             new Set(selectedParamsForTransfer.map(p => p.id))
-                          ) 
+                          )
                         : ''
                     }}
                   />
                 </div>
-                
+
                 <div className="bg-blue-50 p-4 rounded-md mb-4">
                   <h4 className="text-sm font-medium text-blue-700 mb-2">How to use this data:</h4>
                   <ul className="text-sm text-blue-700 space-y-2 list-disc pl-5">
@@ -981,21 +986,21 @@ ${Object.values(parameters).map(command => {
                     </li>
                   </ul>
                 </div>
-                
+
                 <div className="flex justify-end gap-2">
-                  <button 
+                  <button
                     className="btn btn-secondary"
                     onClick={() => setShowGeneratedCode(false)}
                   >
                     Back
                   </button>
-                  <button 
+                  <button
                     className="btn btn-primary"
                     onClick={copyToClipboard}
                   >
                     Copy Current Vehicle
                   </button>
-                  <button 
+                  <button
                     className="btn btn-primary"
                     onClick={copyAllToClipboard}
                   >

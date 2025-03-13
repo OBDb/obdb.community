@@ -58,6 +58,11 @@
         "type": "integer",
         "description": "Number of bits used by the signal",
         "minimum": 1
+      },
+      "debug": {
+        "type": "boolean",
+        "description": "Whether this parameter is in debug mode",
+        "default": false
       }
     },
     "required": [

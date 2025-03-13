@@ -2,6 +2,7 @@
 import React from 'react';
 import Card from './Card';
 import StatusBadge from './StatusBadge';
+import BugIcon from './icons/BugIcon';
 
 const SignalDetails = ({ signal }) => {
   if (!signal) return null;
@@ -74,6 +75,16 @@ const SignalDetails = ({ signal }) => {
                 text={signal.suggestedMetric}
                 variant="primary"
                 size="md"
+              />
+            </div>
+          )}
+          {signal.debug && (
+            <div className="ml-2">
+              <StatusBadge
+                text="Debugging"
+                variant="debugging"
+                size="sm"
+                icon={<BugIcon className="h-3 w-3" />}
               />
             </div>
           )}

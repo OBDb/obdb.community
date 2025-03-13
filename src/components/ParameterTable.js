@@ -1,6 +1,7 @@
 // src/components/ParameterTable.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import BugIcon from './icons/BugIcon';
 import StatusBadge from './StatusBadge';
 import CommandDetailsPanel from './CommandDetailsPanel';
 import SignalDetails from './SignalDetails';
@@ -83,8 +84,38 @@ const ParameterTable = ({
     }
   ];
 
+  const getColumnsWithDebug = (columns) => {
+    // Check if columns array already includes a debugging column
+    const hasDebugColumn = columns.some(col => col.key === 'debug');
+
+    if (hasDebugColumn) {
+      return columns;
+    }
+
+    // Add debug column after name
+    const nameColumnIndex = columns.findIndex(col => col.key === 'name');
+    const insertIndex = nameColumnIndex !== -1 ? nameColumnIndex + 1 : columns.length;
+
+    const newColumns = [...columns];
+    newColumns.splice(insertIndex, 0, {
+      key: 'debug',
+      header: 'Status',
+      cellClassName: 'text-center',
+      render: (row) => row.debug ? (
+        <StatusBadge
+          text="Debugging"
+          variant="debugging"
+          size="sm"
+          icon={<BugIcon className="h-3 w-3" />}
+        />
+      ) : null
+    });
+
+    return newColumns;
+  };
+
   // Use the provided columns or the default ones
-  const columns = propColumns || defaultColumns;
+  const columns = getColumnsWithDebug(propColumns || defaultColumns);
 
   const handleExpandParameter = (parameter) => {
     if (onParameterClick) {

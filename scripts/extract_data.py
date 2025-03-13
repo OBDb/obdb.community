@@ -115,6 +115,10 @@ def parse_signalset(file_path, make, model):
     parameters = []
     for cmd in data.get('commands', []):
         hdr = cmd.get('hdr', '')
+
+        # Extract debug flag from command
+        debug_flag = cmd.get('dbg', False)
+
         for pid, value in cmd.get('cmd', {}).items():
             for signal in cmd.get('signals', []):
                 fmt = signal.get('fmt', {})
@@ -160,7 +164,8 @@ def parse_signalset(file_path, make, model):
                     'make': make,
                     'model': model,
                     'bitOffset': bit_offset,
-                    'bitLength': bit_length
+                    'bitLength': bit_length,
+                    'debug': debug_flag
                 })
 
     return parameters

@@ -3,9 +3,10 @@ import React from 'react';
 
 const StatusBadge = ({
   text,
-  variant = 'default', // default, primary, secondary, success, warning, danger
+  variant = 'default', // default, primary, secondary, success, warning, danger, debugging
   size = 'sm', // sm, md, lg
-  rounded = 'full' // full, md
+  rounded = 'full', // full, md
+  icon = null
 }) => {
   const variantClasses = {
     default: 'bg-gray-100 text-gray-800',
@@ -13,7 +14,8 @@ const StatusBadge = ({
     secondary: 'bg-secondary-100 text-secondary-800',
     success: 'bg-green-100 text-green-800',
     warning: 'bg-yellow-100 text-yellow-800',
-    danger: 'bg-red-100 text-red-800'
+    danger: 'bg-red-100 text-red-800',
+    debugging: 'bg-purple-100 text-purple-800' // New debugging variant
   };
 
   const sizeClasses = {
@@ -29,6 +31,7 @@ const StatusBadge = ({
 
   return (
     <span className={`inline-flex items-center font-medium ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]}`}>
+      {icon && <span className="mr-1">{icon}</span>}
       {text}
     </span>
   );

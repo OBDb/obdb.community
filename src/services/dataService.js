@@ -103,7 +103,9 @@ const transformData = (rawData) => {
         hdr: item.hdr,
         cmd: item.cmd,
         vehicles: new Set(),
-        parameters: []
+        parameters: [],
+        // Add debug flag at command level
+        debug: !!item.debug
       };
     }
 
@@ -122,7 +124,12 @@ const transformData = (rawData) => {
     );
 
     if (!paramExists) {
-      commands[commandId].parameters.push(item);
+      // Include debug property for each parameter
+      commands[commandId].parameters.push({
+        ...item,
+        // Pass the command debug flag to the parameter
+        debug: !!item.debug || !!commands[commandId].debug
+      });
     }
   });
 
@@ -140,8 +147,13 @@ const transformData = (rawData) => {
         id: item.id,
         name: item.name,
         vehicles: new Set(),
-        instances: []
+        instances: [],
+        // Track if any instance is in debug mode
+        debug: !!item.debug
       };
+    } else {
+      // Update debug flag if any instance has debugging enabled
+      parametersByName[item.id].debug = parametersByName[item.id].debug || !!item.debug;
     }
 
     // Add vehicle ID, handling special cases
@@ -151,7 +163,11 @@ const transformData = (rawData) => {
       parametersByName[item.id].vehicles.add(`${item.make}-${item.model}`);
     }
 
-    parametersByName[item.id].instances.push(item);
+    // Ensure debug flag is included in each instance
+    parametersByName[item.id].instances.push({
+      ...item,
+      debug: !!item.debug
+    });
   });
 
   // Convert Sets to Arrays
@@ -237,6 +253,12 @@ const searchParameters = async (filters) => {
       return false;
     }
 
+    // Filter by debug status
+    if (filters.debug !== undefined) {
+      if (filters.debug && !param.debug) return false;
+      if (!filters.debug && param.debug) return false;
+    }
+
     return true;
   });
 };
@@ -285,6 +307,12 @@ const getCommands = async (filters = {}) => {
         param.id.toLowerCase().includes(filters.parameterId.toLowerCase())
       );
       if (!hasParameter) return false;
+    }
+
+    // Filter by debug status
+    if (filters.debug !== undefined) {
+      if (filters.debug && !command.debug) return false;
+      if (!filters.debug && command.debug) return false;
     }
 
     return true;
