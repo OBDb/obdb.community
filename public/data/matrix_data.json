@@ -6723,6 +6723,23 @@
     "hdr": "6F1",
     "id": "I3_RANGE_ECO",
     "make": "BMW",
+    "model": "I3s",
+    "name": "Estimated range remaining in economy mode",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "420C"
+    },
+    "hdr": "6F1",
+    "id": "I3_RANGE_ECO",
+    "make": "BMW",
     "model": "i3",
     "name": "Estimated range remaining in economy mode",
     "path": "Trips",
@@ -9494,6 +9511,23 @@
     "hdr": "6F1",
     "id": "I3_VSS",
     "make": "BMW",
+    "model": "I3s",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
+    "hdr": "6F1",
+    "id": "I3_VSS",
+    "make": "BMW",
     "model": "i3",
     "name": "Vehicle speed",
     "path": "Movement",
@@ -9817,6 +9851,23 @@
     "hdr": "6F1",
     "id": "I3_HVBAT_VOLT",
     "make": "BMW",
+    "model": "I3s",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD68"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_VOLT",
+    "make": "BMW",
     "model": "i3",
     "name": "HV battery voltage",
     "path": "Battery",
@@ -9851,6 +9902,23 @@
     "hdr": "6F1",
     "id": "I3_HVBAT_SOC",
     "make": "BMW",
+    "model": "I3s",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DDBC"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_SOC",
+    "make": "BMW",
     "model": "i3",
     "name": "HV battery charge",
     "path": "Battery",
@@ -9858,6 +9926,40 @@
     "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DDC0"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CT_MIN",
+    "make": "BMW",
+    "model": "I3s",
+    "name": "HV battery cell temperature (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.67, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DDC0"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CT_MIN",
+    "make": "BMW",
+    "model": "i3",
+    "name": "HV battery cell temperature (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.67, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -10820,6 +10922,23 @@
     "hdr": "6F1",
     "id": "I3_RANGE_COMF",
     "make": "BMW",
+    "model": "I3s",
+    "name": "Estimated range remaining in comfort mode",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "420C"
+    },
+    "hdr": "6F1",
+    "id": "I3_RANGE_COMF",
+    "make": "BMW",
     "model": "i3",
     "name": "Estimated range remaining in comfort mode",
     "path": "Trips",
@@ -11330,6 +11449,23 @@
     "hdr": "6F1",
     "id": "I3_HVBAT_SOC_MAX",
     "make": "BMW",
+    "model": "I3s",
+    "name": "HV battery charge (maximum)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DDBC"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_SOC_MAX",
+    "make": "BMW",
     "model": "i3",
     "name": "HV battery charge (maximum)",
     "path": "Battery",
@@ -11337,6 +11473,40 @@
     "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DDC0"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CT_MAX",
+    "make": "BMW",
+    "model": "I3s",
+    "name": "HV battery cell temperature (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.67, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DDC0"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CT_MAX",
+    "make": "BMW",
+    "model": "i3",
+    "name": "HV battery cell temperature (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.67, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -13438,6 +13608,23 @@
     "hdr": "6F1",
     "id": "I3_RANGE",
     "make": "BMW",
+    "model": "I3s",
+    "name": "Estimated range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "420C"
+    },
+    "hdr": "6F1",
+    "id": "I3_RANGE",
+    "make": "BMW",
     "model": "i3",
     "name": "Estimated range remaining",
     "path": "Trips",
@@ -13524,6 +13711,23 @@
     "id": "COOPSE_HVBAT_SOC_MIN",
     "make": "MINI",
     "model": "Cooper-SE",
+    "name": "HV battery charge (minimum)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DDBC"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_SOC_MIN",
+    "make": "BMW",
+    "model": "I3s",
     "name": "HV battery charge (minimum)",
     "path": "Battery",
     "pid": "22",
@@ -15869,6 +16073,23 @@
     "hdr": "6F1",
     "id": "I3_ODO1",
     "make": "BMW",
+    "model": "I3s",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D10D"
+    },
+    "hdr": "6F1",
+    "id": "I3_ODO1",
+    "make": "BMW",
     "model": "i3",
     "name": "Odometer #1",
     "path": "Trips",
@@ -15988,6 +16209,23 @@
     "hdr": "6F1",
     "id": "I3_HVBAT_CURR",
     "make": "BMW",
+    "model": "I3s",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-10000, 10000]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD69"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_CURR",
+    "make": "BMW",
     "model": "i3",
     "name": "HV battery current",
     "path": "Battery",
@@ -16040,6 +16278,23 @@
     "id": "COOPSE_ODO2",
     "make": "MINI",
     "model": "Cooper-SE",
+    "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "hdr": "6F1",
+    "id": "I3_ODO2",
+    "make": "BMW",
+    "model": "I3s",
     "name": "Odometer #2",
     "path": "Trips",
     "pid": "22",
@@ -19497,6 +19752,40 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D112"
+    },
+    "hdr": "6F1",
+    "id": "I3_AAT",
+    "make": "BMW",
+    "model": "I3s",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D112"
+    },
+    "hdr": "6F1",
+    "id": "I3_AAT",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -32887,6 +33176,23 @@
     "id": "COOPSE_HVBAT_SOH",
     "make": "MINI",
     "model": "Cooper-SE",
+    "name": "HV battery health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "6335"
+    },
+    "hdr": "6F1",
+    "id": "I3_HVBAT_SOH",
+    "make": "BMW",
+    "model": "I3s",
     "name": "HV battery health",
     "path": "Battery",
     "pid": "22",
