@@ -45,10 +45,27 @@ const BitMappingVisualizer = ({ command, onBitSelected }) => {
 
   // Colors for different signals to make them visually distinguishable
   const colorForSignal = (signal) => {
-    const hash = Math.abs(signal.id.hashValue || signal.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0));
-    // Generate a color based on the hash of the signal ID
-    const hue = (hash % 360) / 360.0;
-    return `hsl(${hue * 360}, 70%, ${isDarkMode() ? 70 : 90}%)`;
+    const hashCode = (str) => {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32-bit integer
+      }
+      return Math.abs(hash);
+    };
+
+    const hash = hashCode(signal.id.toString());
+    
+    // Use golden ratio to distribute hues more evenly
+    const goldenRatio = 0.618033988749895;
+    const hue = (hash * goldenRatio) % 1;
+    
+    // Increase saturation and vary lightness based on dark/light mode
+    const saturation = 70 + ((hash % 30) - 15); // Vary saturation slightly
+    const lightness = isDarkMode() ? 70 + ((hash % 20) - 10) : 85 + ((hash % 10) - 5);
+    
+    return `hsl(${hue * 360}, ${saturation}%, ${lightness}%)`;
   };
 
   // Check if dark mode is enabled
