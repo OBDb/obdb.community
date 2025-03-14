@@ -113,7 +113,20 @@ def write_json(data, output_path):
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
         with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2)
+            # Use custom JSON encoder to format arrays on single lines
+            class CompactJSONEncoder(json.JSONEncoder):
+                def encode(self, obj):
+                    if isinstance(obj, list) and all(isinstance(x, str) for x in obj):
+                        # For arrays of strings (PID arrays), keep them on one line
+                        parts = [self.encode(item) for item in obj]
+                        return "[" + ", ".join(parts) + "]"
+                    return super().encode(obj)
+
+            json_str = json.dumps(data, cls=CompactJSONEncoder, indent=2, sort_keys=True)
+            # Further compact ECU command arrays by regex replacing multi-line arrays
+            import re
+            json_str = re.sub(r'\[\n\s+("[0-9A-F]{2}",?\s*)+\n\s+\]', lambda m: m.group(0).replace('\n', ' ').replace('  ', ''), json_str)
+            f.write(json_str)
 
         logger.info(f"Successfully wrote JSON data to: {output_path}")
 
