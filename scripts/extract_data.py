@@ -4,6 +4,7 @@ import os
 import shutil
 import subprocess
 import argparse
+import re
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import multiprocessing
@@ -107,7 +108,7 @@ def clone_repos(org_name, workspace_dir):
     if failed > 0:
         print("Check the error messages above for details about failed repositories.")
 
-def parse_signalset(file_path, make, model):
+def parse_signalset(file_path, make, model, years=None):
     """Parse a signalset JSON file and extract parameter information."""
     with open(file_path) as f:
         data = json.load(f)
@@ -154,7 +155,7 @@ def parse_signalset(file_path, make, model):
                 bit_offset = fmt.get('bix', 0)  # bit index/offset
                 bit_length = fmt.get('len', 8)  # bit length, default to 8 if not specified
 
-                parameters.append({
+                parameter = {
                     'hdr': hdr,
                     'eax': eax,
                     'pid': pid,
@@ -170,9 +171,28 @@ def parse_signalset(file_path, make, model):
                     'bitOffset': bit_offset,
                     'bitLength': bit_length,
                     'debug': debug_flag
-                })
+                }
+
+                # Add model year information if available
+                if years:
+                    parameter['modelYears'] = years
+
+                parameters.append(parameter)
 
     return parameters
+
+def extract_year_range_from_filename(filename):
+    """Extract year range from filename pattern like 'aaaa-bbbb.json'."""
+    # Use regex to extract year range from filename
+    year_pattern = re.compile(r'(\d{4})-(\d{4})\.json$')
+    match = year_pattern.search(filename)
+
+    if match:
+        start_year = int(match.group(1))
+        end_year = int(match.group(2))
+        return (start_year, end_year)
+
+    return None
 
 def load_model_year_data(repo_dir, make, model):
     """Load model year PID support data if it exists."""
@@ -215,17 +235,39 @@ def extract_data(workspace_dir, output_dir, force=False):
         if not repo_dir.is_dir():
             continue
 
-        signalset_path = repo_dir / 'signalsets' / 'v3' / 'default.json'
-        if not signalset_path.exists():
-            print(f"No signalset found for {repo_dir.name}, skipping...")
+        signalsets_dir = repo_dir / 'signalsets' / 'v3'
+        if not signalsets_dir.exists():
+            print(f"No signalset directory found for {repo_dir.name}, skipping...")
             continue
 
         # Extract make and model from repo name
         make, model = repo_dir.name.split('-', 1) if '-' in repo_dir.name else (repo_dir.name, '')
 
         print(f"Processing {make} {model}...")
-        parameters = parse_signalset(signalset_path, make, model)
-        matrix_data.extend(parameters)
+
+        # Find all signalset files in the v3 directory
+        signalset_files = list(signalsets_dir.glob('*.json'))
+
+        if not signalset_files:
+            print(f"No signalset files found for {make} {model}, skipping...")
+            continue
+
+        # Process each signalset file
+        for signalset_path in signalset_files:
+            # Extract year range from filename if available
+            years = None
+            if signalset_path.name != 'default.json':
+                years = extract_year_range_from_filename(signalset_path.name)
+                if years:
+                    print(f"  Processing signalset for years {years[0]}-{years[1]}")
+                else:
+                    print(f"  Processing signalset: {signalset_path.name}")
+            else:
+                print(f"  Processing default signalset")
+
+            # Parse the signalset file
+            parameters = parse_signalset(signalset_path, make, model, years)
+            matrix_data.extend(parameters)
 
         # Check for model year PID support data
         my_data = load_model_year_data(repo_dir, make, model)

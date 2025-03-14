@@ -2870,6 +2870,29 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RAV4_GEAR_LOCKUP",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Gear lock-up",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 9,
     "cmd": {
       "01": "01"
@@ -3456,6 +3479,29 @@
     "scaling": "raw/32 clamped to [2047.96875]",
     "suggestedMetric": "",
     "unit": "milligramsPerStroke"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RAV4_ATF_PAN_T",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -4514,6 +4560,29 @@
     "id": "F150_TOT",
     "make": "Ford",
     "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
+    "name": "Transmission oil temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7DF",
+    "id": "F150_TOT",
+    "make": "Ford",
+    "model": "F-150",
     "name": "Transmission oil temperature",
     "path": "Transmission",
     "pid": "22",
@@ -4818,6 +4887,29 @@
     "id": "F150_TP_FL",
     "make": "Ford",
     "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
+    "id": "F150_TP_FL",
+    "make": "Ford",
+    "model": "F-150",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -4989,6 +5081,29 @@
     "id": "ESCAPE_TP_FR",
     "make": "Ford",
     "model": "Escape",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
+    "id": "F150_TP_FR",
+    "make": "Ford",
+    "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5198,6 +5313,29 @@
     "id": "F150_TP_RRO",
     "make": "Ford",
     "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
+    "name": "Rear right outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
+    "id": "F150_TP_RRO",
+    "make": "Ford",
+    "model": "F-150",
     "name": "Rear right outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5369,6 +5507,29 @@
     "id": "ESCAPE_TP_RLO",
     "make": "Ford",
     "model": "Escape",
+    "name": "Rear left outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
+    "id": "F150_TP_RLO",
+    "make": "Ford",
+    "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
     "name": "Rear left outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5578,6 +5739,29 @@
     "id": "F150_TP_RRI",
     "make": "Ford",
     "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
+    "name": "Rear right inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2817"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
+    "id": "F150_TP_RRI",
+    "make": "Ford",
+    "model": "F-150",
     "name": "Rear right inner tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5716,6 +5900,29 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2818"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
+    "id": "F150_TP_RLI",
+    "make": "Ford",
+    "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
+    "name": "Rear left inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
     "unit": "psi"
   },
   {
@@ -6097,6 +6304,29 @@
     "scaling": "raw/1000 clamped to [-360, 360]",
     "suggestedMetric": "",
     "unit": "radians"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "3201"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "760",
+    "id": "F150_STEER_ANGLE",
+    "make": "Ford",
+    "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
+    "name": "Steering wheel angle (ABS)",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/20 +-1638.4 clamped to [-1638, 1638]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -11745,6 +11975,29 @@
     "bitLength": 16,
     "bitOffset": 112,
     "cmd": {
+      "22": "6001"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "DA26",
+    "id": "ACCORD_TP_RL",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 112,
+    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -12709,6 +12962,29 @@
     "scaling": "raw/100 clamped to [100]",
     "suggestedMetric": "stateOfHealth",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RAV4_ATF_TQC_T",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -16588,6 +16864,29 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 368,
+    "cmd": {
+      "22": "2660"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "DA10",
+    "id": "ACCORD_RUNTM",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
+    "name": "Time since engine start",
+    "path": "Clocks",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 40,
     "cmd": {
       "01": "70"
@@ -16604,6 +16903,29 @@
     "scaling": "raw/32 clamped to [2047.96875]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RAV4_PREV_TRIP_DST",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Previous trip distance",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
   },
   {
     "bitLength": 16,
@@ -17521,6 +17843,29 @@
     "bitLength": 16,
     "bitOffset": 64,
     "cmd": {
+      "22": "6001"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "DA26",
+    "id": "ACCORD_TP_FR",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
       "22": "D111"
     },
     "debug": false,
@@ -18338,6 +18683,29 @@
     "bitLength": 16,
     "bitOffset": 80,
     "cmd": {
+      "22": "6001"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "DA26",
+    "id": "ACCORD_TP_FL",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
       "22": "D111"
     },
     "debug": false,
@@ -18441,6 +18809,29 @@
     "id": "TLX_TP_RR",
     "make": "Acura",
     "model": "TLX",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "6001"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "DA26",
+    "id": "ACCORD_TP_RR",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -18561,6 +18952,29 @@
     "scaling": "Mapped values: {'1': {'description': 'Open loop', 'value': 'BP_A_OL'}, '2': {'description': 'Closed loop', 'value': 'BP_A_CL'}, '3': {'description': 'Fault', 'value': 'BP_A_FAULT'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "28"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RAV4_ODO",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
   },
   {
     "bitLength": 24,
@@ -18692,6 +19106,29 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "404C"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "720",
+    "id": "F150_ODO",
+    "make": "Ford",
+    "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
+    "name": "Odometer (Instrument panel)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -18973,6 +19410,29 @@
     "id": "CRV_ODO",
     "make": "Honda",
     "model": "CR-V",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 344,
+    "cmd": {
+      "22": "2660"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "DA10",
+    "id": "ACCORD_ODO",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -21041,6 +21501,29 @@
     "debug": false,
     "eax": "",
     "hdr": "7B0",
+    "id": "RAV4_TS_FR",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7B0",
     "id": "TACOMA_TIRE_FR_SPD",
     "make": "Toyota",
     "model": "Tacoma",
@@ -21112,6 +21595,29 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "29"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7C0",
+    "id": "RAV4_FLI_VOL",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "30"
     },
     "debug": false,
@@ -21158,12 +21664,58 @@
     "id": "RAV4_TP_FL",
     "make": "Toyota",
     "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_FL",
+    "make": "Toyota",
+    "model": "RAV4",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RAV4_GEAR",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -22583,6 +23135,29 @@
     "id": "F150_GEAR",
     "make": "Ford",
     "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "F150_GEAR",
+    "make": "Ford",
+    "model": "F-150",
     "name": "Current gear",
     "path": "Transmission",
     "pid": "22",
@@ -22716,6 +23291,29 @@
     "id": "ESCAPE_GEAR_SHFT",
     "make": "Ford",
     "model": "Escape",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "F150_GEAR_SHFT",
+    "make": "Ford",
+    "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
     "name": "Shift gear",
     "path": "Transmission",
     "pid": "22",
@@ -24198,6 +24796,29 @@
     "id": "BRONCO_FLI",
     "make": "Ford",
     "model": "Bronco",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "F150_FLI",
+    "make": "Ford",
+    "model": "F-150",
+    "modelYears": [
+      0,
+      2015
+    ],
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
@@ -28596,6 +29217,29 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "7028"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "DA60",
+    "id": "ACCORD_AAT",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
+    "name": "Outside air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 144,
     "cmd": {
       "21": "02"
@@ -30313,6 +30957,29 @@
     "debug": false,
     "eax": "",
     "hdr": "7B0",
+    "id": "RAV4_TS_RR",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7B0",
     "id": "TACOMA_TIRE_RR_SPD",
     "make": "Toyota",
     "model": "Tacoma",
@@ -30398,6 +31065,29 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_RL",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -33419,6 +34109,52 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "2221"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "DA1D",
+    "id": "ACCORD_GEAR",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2008,
+      2009
+    ],
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "2221"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "DA1D",
+    "id": "ACCORD_GEAR",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -38312,6 +39048,29 @@
     "debug": false,
     "eax": "",
     "hdr": "7B0",
+    "id": "RAV4_TS_RL",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7B0",
     "id": "TACOMA_TIRE_RL_SPD",
     "make": "Toyota",
     "model": "Tacoma",
@@ -38397,6 +39156,29 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_RR",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -45193,6 +45975,29 @@
     "id": "RAV4_TP_SPARE",
     "make": "Toyota",
     "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_SPARE",
+    "make": "Toyota",
+    "model": "RAV4",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -49194,6 +49999,29 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "21": "51"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RAV4_VVTOT",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Variable valve timing oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -50790,6 +51618,29 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "21": "51"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RAV4_EOT",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -51783,6 +52634,29 @@
     "debug": false,
     "eax": "",
     "hdr": "7B0",
+    "id": "RAV4_TS_FL",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7B0",
     "id": "TACOMA_TIRE_FL_SPD",
     "make": "Toyota",
     "model": "Tacoma",
@@ -51835,6 +52709,29 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "21"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RAV4_CC_S",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Cruise control speed",
+    "path": "Cruise control",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "21": "30"
     },
     "debug": false,
@@ -51868,6 +52765,29 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_FR",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,

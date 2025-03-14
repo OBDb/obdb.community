@@ -7,6 +7,9 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorAlert from '../components/ErrorAlert';
 import TabPanel from '../components/TabPanel';
 import ModelYearPidSupport from '../components/ModelYearPidSupport';
+import Card from '../components/Card';
+import StatusBadge from '../components/StatusBadge';
+import ModelYearBadge from '../components/ModelYearBadge';
 
 const VehicleDetail = () => {
   const { make, model } = useParams();
@@ -19,7 +22,12 @@ const VehicleDetail = () => {
   const [ecuHeaders, setEcuHeaders] = useState([]);
   const [expandedParameterId, setExpandedParameterId] = useState(null);
   const [commandData, setCommandData] = useState(null);
-  // New state to handle special cases
+  // New state for year range filters
+  const [yearRangeFilter, setYearRangeFilter] = useState('all');
+  const [yearRanges, setYearRanges] = useState([]);
+  // State to track total parameters by year range
+  const [paramsByYearRange, setParamsByYearRange] = useState({});
+  // State for special cases
   const [isSpecialCase, setIsSpecialCase] = useState(false);
   // Check if this is a BMW vehicle
   const isBMW = make && make.toLowerCase() === 'bmw';
@@ -53,6 +61,42 @@ const VehicleDetail = () => {
         } else {
           // Standard make/model case
           const params = await dataService.getVehicleParameters(make, model);
+
+          // Process model year data from parameters
+          const yearRangesMap = {};
+          params.forEach(param => {
+            if (param.modelYears && param.modelYears.length === 2) {
+              const startYear = param.modelYears[0];
+              const endYear = param.modelYears[1];
+              const key = `${startYear}-${endYear}`;
+
+              if (!yearRangesMap[key]) {
+                yearRangesMap[key] = {
+                  startYear,
+                  endYear,
+                  parameters: []
+                };
+              }
+
+              yearRangesMap[key].parameters.push(param);
+            }
+          });
+
+          // Convert to array and sort by start year
+          const sortedYearRanges = Object.values(yearRangesMap)
+            .sort((a, b) => a.startYear - b.startYear);
+
+          // Save the year ranges for filtering
+          setYearRanges(sortedYearRanges);
+
+          // Also create a lookup of parameters by year range for filtering
+          const paramsByYearRange = {};
+          sortedYearRanges.forEach(range => {
+            const key = `${range.startYear}-${range.endYear}`;
+            paramsByYearRange[key] = range.parameters;
+          });
+          setParamsByYearRange(paramsByYearRange);
+
           setParameters(params);
 
           // Extract unique ECU headers or extended addresses for BMW
@@ -79,16 +123,28 @@ const VehicleDetail = () => {
   }, [make, model, isBMW]);
 
   useEffect(() => {
+    // Apply search and year range filters
+    let filtered = parameters;
+
+    // Apply search filter
     if (searchQuery) {
-      const filtered = parameters.filter(param =>
+      filtered = filtered.filter(param =>
         param.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
         param.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
-      setFilteredParams(filtered);
-    } else {
-      setFilteredParams(parameters);
     }
-  }, [searchQuery, parameters]);
+
+    // Apply year range filter
+    if (yearRangeFilter !== 'all' && paramsByYearRange[yearRangeFilter]) {
+      // When filtering by year range, we use the pre-grouped parameters
+      filtered = paramsByYearRange[yearRangeFilter];
+    }
+
+    setFilteredParams(filtered);
+    // Reset expanded state when filters change
+    setExpandedParameterId(null);
+    setCommandData(null);
+  }, [searchQuery, yearRangeFilter, parameters, paramsByYearRange]);
 
   const handleTabChange = (index) => {
     setTabValue(index);
@@ -99,9 +155,10 @@ const VehicleDetail = () => {
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
-    // Reset expanded state when searching
-    setExpandedParameterId(null);
-    setCommandData(null);
+  };
+
+  const handleYearRangeFilterChange = (e) => {
+    setYearRangeFilter(e.target.value);
   };
 
   const openGitHubRepo = () => {
@@ -225,6 +282,15 @@ const VehicleDetail = () => {
       cellClassName: 'text-gray-900'
     },
     {
+      key: 'modelYears',
+      header: 'Years',
+      render: (row) => row.modelYears ? (
+        <ModelYearBadge years={row.modelYears} variant="primary" />
+      ) : (
+        <span className="text-xs text-gray-500">—</span>
+      )
+    },
+    {
       key: 'suggestedMetric',
       header: 'Suggested Metric',
       render: (row) => row.suggestedMetric ? (
@@ -234,11 +300,6 @@ const VehicleDetail = () => {
       ) : (
         <span className="text-xs text-gray-500">—</span>
       )
-    },
-    {
-      key: 'unit',
-      header: 'Unit',
-      render: (row) => row.unit || '—'
     }
   ];
 
@@ -255,14 +316,18 @@ const VehicleDetail = () => {
       cellClassName: 'text-gray-900'
     },
     {
+      key: 'modelYears',
+      header: 'Years',
+      render: (row) => row.modelYears ? (
+        <ModelYearBadge years={row.modelYears} variant="primary" />
+      ) : (
+        <span className="text-xs text-gray-500">—</span>
+      )
+    },
+    {
       key: 'suggestedMetric',
       header: 'Suggested Metric',
       render: (row) => row.suggestedMetric || '—'
-    },
-    {
-      key: 'unit',
-      header: 'Unit',
-      render: (row) => row.unit || '—'
     }
   ];
 
@@ -283,6 +348,15 @@ const VehicleDetail = () => {
       key: 'name',
       header: 'Name',
       cellClassName: 'text-gray-900'
+    },
+    {
+      key: 'modelYears',
+      header: 'Years',
+      render: (row) => row.modelYears ? (
+        <ModelYearBadge years={row.modelYears} variant="primary" />
+      ) : (
+        <span className="text-xs text-gray-500">—</span>
+      )
     },
     {
       key: 'unit',
@@ -345,13 +419,59 @@ const VehicleDetail = () => {
       </div>
 
       {!isSpecialCase && (
-        <div className="mb-6">
+        <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <ModelYearPidSupport make={make} model={model} />
+
+          {/* Year range summary card */}
+          {yearRanges.length > 0 && (
+            <Card title="Available Signalsets">
+              <div className="p-4">
+                <div className="space-y-4">
+                  {yearRanges.map((yearRange, idx) => (
+                    <div key={idx} className="border-b pb-3 last:border-b-0">
+                      <div className="flex items-center">
+                        <ModelYearBadge
+                          years={[yearRange.startYear, yearRange.endYear]}
+                          variant="primary"
+                          className="mr-2"
+                        />
+                        <StatusBadge
+                          text={`${yearRange.parameters.length} parameters`}
+                          variant="secondary"
+                          size="sm"
+                        />
+                      </div>
+                      <div className="mt-2 text-sm text-gray-600">
+                        <div className="flex flex-wrap gap-2 mt-1">
+                          {ecuHeaders.filter(ecuId => {
+                            // For BMW, filter by extended address, for others filter by header
+                            const ecuParams = isBMW
+                              ? yearRange.parameters.filter(param => (param.eax || param.hdr) === ecuId)
+                              : yearRange.parameters.filter(param => param.hdr === ecuId);
+                            return ecuParams.length > 0;
+                          }).slice(0, 5).map(ecuId => (
+                            <div key={ecuId} className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
+                              <span className="font-mono">{ecuId}</span>
+                            </div>
+                          ))}
+                          {ecuHeaders.length > 5 && (
+                            <div className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-600">
+                              +{ecuHeaders.length - 5} more ECUs
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          )}
         </div>
       )}
 
-      <div className="mb-6">
-        <div className="relative">
+      <div className="mb-6 flex flex-col md:flex-row gap-4">
+        <div className="relative flex-grow">
           <input
             type="text"
             value={searchQuery}
@@ -365,6 +485,26 @@ const VehicleDetail = () => {
             </svg>
           </div>
         </div>
+
+        {/* Year range filter */}
+        {yearRanges.length > 0 && (
+          <div className="md:w-64">
+            <select
+              value={yearRangeFilter}
+              onChange={handleYearRangeFilterChange}
+              className="input text-sm py-2"
+            >
+              <option value="all">All Model Years</option>
+              {yearRanges.map((range, idx) => (
+                <option key={idx} value={`${range.startYear}-${range.endYear}`}>
+                  {range.startYear === range.endYear
+                    ? `${range.startYear} Only`
+                    : `${range.startYear}-${range.endYear}`}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
       </div>
 
       {loading ? (

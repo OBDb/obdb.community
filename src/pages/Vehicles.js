@@ -9,7 +9,8 @@ import PageHeader from '../components/PageHeader';
 import EmptyState from '../components/EmptyState';
 import VehicleComparisonTable from '../components/VehicleComparisonTable';
 import VehicleSelectionModal from '../components/VehicleSelectionModal';
-import { getMakeSvgUrl, getModelSvgUrl } from '../utils/vehicleSymbolMap';
+import VehicleCard from '../components/VehicleCard';
+import ModelYearBadge from '../components/ModelYearBadge';
 
 const Vehicles = () => {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ const Vehicles = () => {
   const [filters, setFilters] = useState({
     make: '',
     model: '',
+    yearRange: '',
   });
   const [selectedVehicles, setSelectedVehicles] = useState([]);
   const [isComparing, setIsComparing] = useState(false);
@@ -28,6 +30,7 @@ const Vehicles = () => {
   const [loadingComparison, setLoadingComparison] = useState(false);
   const [showVehicleSelectionModal, setShowVehicleSelectionModal] = useState(false);
   const [vehicleSelectionMode, setVehicleSelectionMode] = useState('add'); // 'add' or 'change'
+  const [yearRanges, setYearRanges] = useState([]);
 
   // Parse URL query parameters
   const parseQueryString = () => {
@@ -130,6 +133,87 @@ const Vehicles = () => {
             const modelYearData = await modelYearResponse.json();
             setModelYearData(modelYearData);
 
+            // Extract all unique year ranges for filtering
+            const uniqueYearRanges = new Set();
+            const decades = new Set();
+
+            // Also fetch matrix data to get signalset year ranges
+            const matrixResponse = await fetch('/data/matrix_data.json');
+            if (matrixResponse.ok) {
+              const matrixData = await matrixResponse.json();
+
+              // Process vehicle parameters to extract model year information
+              vehicles.forEach(vehicle => {
+                const vehicleParams = matrixData.filter(
+                  param => param.make === vehicle.make && param.model === vehicle.model
+                );
+
+                // Extract year ranges and create structure
+                const yearRangesMap = {};
+
+                vehicleParams.forEach(param => {
+                  if (param.modelYears && param.modelYears.length === 2) {
+                    const startYear = param.modelYears[0];
+                    const endYear = param.modelYears[1];
+                    const key = `${startYear}-${endYear}`;
+
+                    if (!yearRangesMap[key]) {
+                      yearRangesMap[key] = {
+                        startYear,
+                        endYear,
+                        parameters: []
+                      };
+                    }
+
+                    yearRangesMap[key].parameters.push(param);
+
+                    // Add to unique year ranges for global filtering
+                    uniqueYearRanges.add(key);
+
+                    // Also track decades for filtering
+                    const startDecade = Math.floor(startYear / 10) * 10;
+                    const endDecade = Math.floor(endYear / 10) * 10;
+                    decades.add(startDecade);
+                    if (endDecade !== startDecade) {
+                      decades.add(endDecade);
+                    }
+                  }
+                });
+
+                // Add year ranges to vehicle object
+                vehicle.yearRanges = Object.values(yearRangesMap);
+
+                // Also extract flat list of years this vehicle supports
+                const allYears = [];
+                vehicle.yearRanges.forEach(range => {
+                  for (let year = range.startYear; year <= range.endYear; year++) {
+                    if (!allYears.includes(year)) {
+                      allYears.push(year);
+                    }
+                  }
+                });
+                vehicle.supportedYears = allYears.sort();
+              });
+
+              // Format filtered year ranges for dropdown
+              const sortedDecades = [...decades].sort((a, b) => a - b);
+              const formattedRanges = [
+                ...sortedDecades.map(decade => ({
+                  key: `${decade}s`,
+                  label: `${decade}s`
+                })),
+                ...[...uniqueYearRanges].sort().map(range => {
+                  const [start, end] = range.split('-');
+                  return {
+                    key: range,
+                    label: start === end ? start : range
+                  };
+                })
+              ];
+
+              setYearRanges(formattedRanges);
+            }
+
             // Enhance vehicles with model year information
             vehicles.forEach(vehicle => {
               const vehicleYearData = modelYearData.find(
@@ -156,59 +240,6 @@ const Vehicles = () => {
           // Not setting an error state as this is non-critical
         }
 
-        setVehicles(vehicles);
-
-        // Check if URL has comparison parameters
-        const queryParams = parseQueryString();
-        if (queryParams.compare) {
-          // Split by ',' to get individual vehicle IDs, avoid re-decoding
-          const vehiclesToCompare = queryParams.compare.split(',').map(id => {
-            // Split by '-' to get make and model
-            const parts = id.split('-');
-            if (parts.length >= 2) {
-              // The make is the first part, the model is the rest joined with '-'
-              // This handles cases where model names might contain hyphens
-              const make = parts[0];
-              const model = parts.slice(1).join('-');
-              // Only include make and model - removed id to be consistent with the rest of the app
-              return { make, model };
-            }
-            return null;
-          }).filter(v => v !== null); // Filter out any invalid entries
-
-          // Validate that these vehicles exist
-          const validVehicles = vehiclesToCompare.filter(v =>
-            vehicles.some(existingVehicle =>
-              existingVehicle.make === v.make && existingVehicle.model === v.model
-            )
-          );
-
-          if (validVehicles.length >= 2) {
-            setSelectedVehicles(validVehicles);
-            // Trigger comparison (will be executed after loading is complete)
-            setTimeout(() => startComparison(validVehicles), 0);
-          }
-        }
-
-        setLoading(false);
-      } catch (err) {
-        setError('Failed to load vehicle data. Please try again later.');
-        setLoading(false);
-        console.error(err);
-      }
-    };
-
-    fetchData();
-  }, [startComparison]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const makes = await dataService.getMakes();
-        setMakes(makes);
-
-        const vehicles = await dataService.getVehicles();
         setVehicles(vehicles);
 
         // Check if URL has comparison parameters
@@ -300,12 +331,56 @@ const Vehicles = () => {
 
   // Filter vehicles based on the current filters
   const filteredVehicles = vehicles.filter(vehicle => {
+    // Filter by make
     if (filters.make && vehicle.make !== filters.make) {
       return false;
     }
+
+    // Filter by model (partial match)
     if (filters.model && !vehicle.model.toLowerCase().includes(filters.model.toLowerCase())) {
       return false;
     }
+
+    // Filter by year range
+    if (filters.yearRange) {
+      // Handle decade filter (e.g., "2010s")
+      if (filters.yearRange.endsWith('s')) {
+        const decade = parseInt(filters.yearRange.slice(0, -1));
+        const decadeEnd = decade + 9;
+
+        // Check if any of the vehicle's supported years fall within this decade
+        const hasYearsInDecade = vehicle.supportedYears && vehicle.supportedYears.some(
+          year => year >= decade && year <= decadeEnd
+        );
+
+        if (!hasYearsInDecade) {
+          return false;
+        }
+      }
+      // Handle specific year range (e.g., "2010-2015")
+      else if (filters.yearRange.includes('-')) {
+        const [startYearStr, endYearStr] = filters.yearRange.split('-');
+        const startYear = parseInt(startYearStr);
+        const endYear = parseInt(endYearStr);
+
+        // Check if this vehicle supports any year in the selected range
+        const hasYearsInRange = vehicle.supportedYears && vehicle.supportedYears.some(
+          year => year >= startYear && year <= endYear
+        );
+
+        if (!hasYearsInRange) {
+          return false;
+        }
+      }
+      // Handle specific year (e.g., "2010")
+      else {
+        const year = parseInt(filters.yearRange);
+        if (!vehicle.supportedYears || !vehicle.supportedYears.includes(year)) {
+          return false;
+        }
+      }
+    }
+
     return true;
   });
 
@@ -426,6 +501,13 @@ const Vehicles = () => {
       type: 'text',
       placeholder: 'Type to search...',
       className: 'flex-1 min-w-[200px]'
+    },
+    {
+      name: 'yearRange',
+      label: 'Model Year',
+      type: 'select',
+      options: yearRanges.map(yr => yr.label),
+      className: 'flex-1 min-w-[200px]'
     }
   ];
 
@@ -503,94 +585,6 @@ const Vehicles = () => {
     </button>
   );
 
-  // Vehicle card component
-  const VehicleCard = ({ make, model }) => {
-    const isSelected = selectedVehicles.some(v => v.make === make && v.model === model);
-    const navigate = useNavigate();
-
-    // Generate image URLs for make and model
-    const makeImageUrl = getMakeSvgUrl(make);
-    const modelImageUrl = getModelSvgUrl(make, model);
-
-    // State to track if images loaded successfully
-    const [makeImageLoaded, setMakeImageLoaded] = useState(true);
-    const [modelImageLoaded, setModelImageLoaded] = useState(true);
-
-    const handleCardClick = () => {
-      navigate(`/vehicles/${make}/${model}`);
-    };
-
-    return (
-      <div
-        className={`bg-white border rounded-md p-3 transition-colors cursor-pointer ${
-          isSelected
-            ? 'border-primary-500 bg-primary-50'
-            : 'border-gray-200 hover:bg-gray-50 hover:border-primary-300'
-        }`}
-        onClick={handleCardClick}
-      >
-        <div className="flex flex-col">
-          {/* Make logo */}
-          <div className="flex items-center justify-center mb-2 h-8">
-            {makeImageLoaded ? (
-              <img
-                src={makeImageUrl}
-                alt={make}
-                className="h-6 object-contain"
-                onError={() => setMakeImageLoaded(false)}
-              />
-            ) : (
-              <span className="text-xs font-medium text-gray-700">{make}</span>
-            )}
-          </div>
-
-          {/* Vehicle model image */}
-          <div className="flex items-center justify-center mb-2 h-24">
-            {modelImageLoaded ? (
-              <img
-                src={modelImageUrl}
-                alt={`${make} ${model}`}
-                className="max-h-24 max-w-full object-contain"
-                onError={() => setModelImageLoaded(false)}
-              />
-            ) : (
-              <div className="flex items-center">
-                <svg className="h-4 w-4 text-primary-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                  <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1v-1h3.05a2.5 2.5 0 014.9 0H19a1 1 0 001-1v-2a4 4 0 00-4-4h-3V4a1 1 0 00-1-1H3z" />
-                </svg>
-                <span className="text-sm font-medium">{model}</span>
-              </div>
-            )}
-          </div>
-
-          <div className="flex items-center justify-between mt-auto">
-            <span className="text-sm font-medium">{model}</span>
-
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleVehicleSelection(make, model);
-              }}
-              className={`h-5 w-5 rounded-full border flex items-center justify-center focus:outline-none ${
-                isSelected
-                  ? 'bg-primary-500 border-primary-500 text-white'
-                  : 'border-gray-300 text-transparent hover:border-primary-500'
-              }`}
-            >
-              {isSelected && (
-                <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div>
       <PageHeader
@@ -641,7 +635,17 @@ const Vehicles = () => {
                     </h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                       {makeVehicles.map(vehicle => (
-                        <VehicleCard key={vehicle.id} make={vehicle.make} model={vehicle.model} />
+                        <VehicleCard
+                          key={`${vehicle.make}-${vehicle.model}`}
+                          make={vehicle.make}
+                          model={vehicle.model}
+                          modelYears={vehicle.yearRanges?.map(range => [range.startYear, range.endYear])}
+                          totalPids={vehicle.totalPids}
+                          isSelected={selectedVehicles.some(v =>
+                            v.make === vehicle.make && v.model === vehicle.model
+                          )}
+                          onSelect={toggleVehicleSelection}
+                        />
                       ))}
                     </div>
                   </div>

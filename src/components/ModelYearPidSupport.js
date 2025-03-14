@@ -5,9 +5,11 @@ import LoadingSpinner from './LoadingSpinner';
 import ErrorAlert from './ErrorAlert';
 import StatusBadge from './StatusBadge';
 import TabPanel from './TabPanel';
+import ModelYearBadge from './ModelYearBadge';
 
 const ModelYearPidSupport = ({ make, model }) => {
   const [modelYearData, setModelYearData] = useState(null);
+  const [signalsetYears, setSignalsetYears] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
@@ -40,6 +42,43 @@ const ModelYearPidSupport = ({ make, model }) => {
         } else {
           // Not an error, just no data for this vehicle
           setModelYearData(null);
+        }
+
+        // Also try to fetch matrix data to get signalset year ranges
+        try {
+          const matrixResponse = await fetch('/data/matrix_data.json');
+          if (matrixResponse.ok) {
+            const matrixData = await matrixResponse.json();
+
+            // Find all parameters for this vehicle
+            const vehicleParams = matrixData.filter(
+              param => param.make.toLowerCase() === make.toLowerCase() &&
+                     param.model.toLowerCase() === model.toLowerCase()
+            );
+
+            // Extract unique year ranges
+            const yearRanges = [];
+            vehicleParams.forEach(param => {
+              if (param.modelYears && param.modelYears.length === 2) {
+                const yearRange = [param.modelYears[0], param.modelYears[1]];
+                // Check if this range is already in our list
+                const exists = yearRanges.some(range =>
+                  range[0] === yearRange[0] && range[1] === yearRange[1]
+                );
+
+                if (!exists) {
+                  yearRanges.push(yearRange);
+                }
+              }
+            });
+
+            // Sort by start year
+            yearRanges.sort((a, b) => a[0] - b[0]);
+            setSignalsetYears(yearRanges);
+          }
+        } catch (err) {
+          console.warn('Failed to load matrix data for year ranges:', err);
+          // Don't set error state - this is non-critical
         }
 
         // Also fetch SAEJ1979 command descriptions
@@ -136,19 +175,37 @@ const ModelYearPidSupport = ({ make, model }) => {
     );
   }
 
-  if (!modelYearData) {
-    return (
-      <Card title="Model Year PID Support">
-        <div className="p-4 text-sm text-gray-500">
-          No model year PID data available for this vehicle.
-        </div>
-      </Card>
-    );
-  }
-
   return (
-    <div>
-        {yearTabs.length > 0 ? (
+    <Card title="Model Year Information">
+      <div className="p-4">
+        {/* First show signalset year ranges if available */}
+        {signalsetYears.length > 0 && (
+          <div className="mb-4">
+            <h4 className="text-sm font-medium text-gray-700 mb-2">
+              Available signalsets for these model years:
+            </h4>
+            <div className="flex flex-wrap gap-1 mb-2">
+              {signalsetYears.map((yearRange, idx) => (
+                <ModelYearBadge
+                  key={idx}
+                  years={yearRange}
+                  variant="primary"
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Then show PID support information */}
+        <h4 className="text-sm font-medium text-gray-700 mb-2">
+          PID Support by Model Year:
+        </h4>
+
+        {!modelYearData ? (
+          <div className="text-sm text-gray-500">
+            No model year PID data available for this vehicle.
+          </div>
+        ) : yearTabs.length > 0 ? (
           <TabPanel
             tabs={yearTabs.map(year => `${year} (${getPidCountForYear(year)} PIDs)`)}
             activeTab={activeTab}
@@ -174,10 +231,11 @@ const ModelYearPidSupport = ({ make, model }) => {
           </TabPanel>
         ) : (
           <div className="text-sm text-gray-500">
-            No model year data available.
+            No PID support data available.
           </div>
         )}
-    </div>
+      </div>
+    </Card>
   );
 };
 
