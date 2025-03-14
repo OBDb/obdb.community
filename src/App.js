@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Vehicles from './pages/Vehicles';
+import VehicleComparison from './pages/VehicleComparison';
 import Parameters from './pages/Parameters';
 import Commands from './pages/Commands';
 import VehicleDetail from './pages/VehicleDetail';
@@ -20,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/vehicles" element={<Vehicles />} />
+            <Route path="/vehicles/compare" element={<VehicleComparison />} />
             <Route path="/vehicles/:make/:model" element={<VehicleDetail />} />
             <Route path="/vehicles/:make" element={<VehicleDetail />} />
             <Route path="/parameters" element={<Parameters />} />
