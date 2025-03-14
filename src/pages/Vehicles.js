@@ -215,7 +215,7 @@ const Vehicles = () => {
         !(v.make === make && v.model === model)
       ));
     } else {
-      if (selectedVehicles.length < 4) {  // Limit to 4 vehicles for comparison
+      if (selectedVehicles.length < 5) {
         setSelectedVehicles([...selectedVehicles, newVehicle]);
       }
     }
@@ -290,8 +290,8 @@ const Vehicles = () => {
         description={!loading && !error &&
           `${filteredVehicles.length} vehicles found. ${
             selectedVehicles.length > 0
-              ? `Select up to ${4 - selectedVehicles.length} more to compare.`
-              : 'Select up to 4 vehicles to compare parameters.'
+              ? `Select up to ${5 - selectedVehicles.length} more to compare.`
+              : 'Select up to 5 vehicles to compare parameters.'
           }`
         }
         actions={pageActions}
