@@ -22037,25 +22037,6 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
-      "22": "6180"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "720",
-    "id": "EDGE_ODO",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1677721]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
       "22": "B921"
     },
     "debug": false,
@@ -22187,6 +22168,25 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [1677721]",
     "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "726",
+    "id": "EDGE_ODO",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Odometer (Instrument panel)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
   {
