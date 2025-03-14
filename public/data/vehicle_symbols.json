@@ -3,6 +3,18 @@
     "vauxhallopel": "vauxhall-opel"
   },
   "modelSymbols": {
-    "bmw:i3s": "i3"
+    "bmw:i3s": "i3",
+    "bmw:4-series": "4series1stgenm430",
+    "bmw:ix3": "ix31stgenfacelift",
+    "ford:f-150": "f15014thgen",
+    "ford:mustang-mach-e": "mustangmache1stgen",
+    "hyundai:ioniq-plugin-hybrid": "ioniq-phev",
+    "hyundai:kona-electric": "konaev2ndgen",
+    "hyundai:tucson-hybrid": "tucsonhybrid4thgen",
+    "lexus:is-300": "is3004thgen",
+    "kia:optima": "optima4thgen",
+    "toyota:camry": "camry8thgen",
+    "toyota:corolla-hybrid": "corollahybrid2ndgen",
+    "toyota:rav4": "rav45thgen"
   }
 }
