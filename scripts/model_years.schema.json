@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "make": {
+        "type": "string",
+        "description": "Vehicle make"
+      },
+      "model": {
+        "type": "string",
+        "description": "Vehicle model"
+      },
+      "modelYears": {
+        "type": "object",
+        "description": "Model year to supported PIDs mapping",
+        "additionalProperties": {
+          "type": "object",
+          "description": "ECU to PIDs mapping for this model year",
+          "additionalProperties": {
+            "type": "array",
+            "description": "List of supported PIDs for this ECU in Service 01",
+            "items": {
+              "type": "string",
+              "description": "PID identifier (e.g., '01', '0C')"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "make",
+      "model",
+      "modelYears"
+    ]
+  }
+}
