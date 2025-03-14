@@ -1103,6 +1103,48 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 2,
+    "cmd": {
+      "22": "61A5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "720",
+    "id": "FIESTA_TPMS_WARN",
+    "make": "Ford",
+    "model": "Fiesta",
+    "modelYears": [
+      0,
+      2014
+    ],
+    "name": "Tire pressure warning indicator",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 2,
+    "cmd": {
+      "22": "61A5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "720",
+    "id": "FIESTA_TPMS_WARN",
+    "make": "Ford",
+    "model": "Fiesta",
+    "name": "Tire pressure warning indicator",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 20,
     "cmd": {
       "01": "01"
@@ -3569,9 +3611,180 @@
     "debug": true,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_DRIVE_TIME",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A6_DRIVE_TIME",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "AMAROK_DRIVE_TIME",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "GOLF_DRIVE_TIME",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "JETTA_DRIVE_TIME",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
     "id": "POLO_DRIVE_TIME",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "RS3_DRIVE_TIME",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "SQ5_DRIVE_TIME",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TIGUAN_DRIVE_TIME",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TT_DRIVE_TIME",
+    "make": "Audi",
+    "model": "TT",
     "name": "Total drive time",
     "path": "Stats",
     "pid": "22",
@@ -4310,6 +4523,101 @@
     "debug": true,
     "eax": "",
     "hdr": "7E0",
+    "id": "A4_OIL_LEVEL",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "A6_OIL_LEVEL",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "AMAROK_OIL_LEVEL",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "GOLF_OIL_LEVEL",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "JETTA_OIL_LEVEL",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
     "id": "POLO_OIL_LEVEL",
     "make": "Volkswagen",
     "model": "Polo",
@@ -4319,6 +4627,177 @@
     "scaling": "raw/250 clamped to [262]",
     "suggestedMetric": "",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RS3_OIL_LEVEL",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "SQ5_OIL_LEVEL",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "TIGUAN_OIL_LEVEL",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "TT_OIL_LEVEL",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "A4_OIL_MAX",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "A6_OIL_MAX",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "AMAROK_OIL_MAX",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "GOLF_OIL_MAX",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "JETTA_OIL_MAX",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
   },
   {
     "bitLength": 16,
@@ -4343,6 +4822,177 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "11C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RS3_OIL_MAX",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "SQ5_OIL_MAX",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "TIGUAN_OIL_MAX",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "TT_OIL_MAX",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "A4_OIL_MIN",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "A6_OIL_MIN",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "AMAROK_OIL_MIN",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "GOLF_OIL_MIN",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "JETTA_OIL_MIN",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "11C5"
     },
     "debug": true,
@@ -4351,6 +5001,82 @@
     "id": "POLO_OIL_MIN",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RS3_OIL_MIN",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "SQ5_OIL_MIN",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "TIGUAN_OIL_MIN",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "TT_OIL_MIN",
+    "make": "Audi",
+    "model": "TT",
     "name": "Oil level (min)",
     "path": "Fluids",
     "pid": "22",
@@ -4636,6 +5362,25 @@
     },
     "debug": false,
     "eax": "",
+    "hdr": "7E0",
+    "id": "RANGER_TOT",
+    "make": "Ford",
+    "model": "Ranger",
+    "name": "Transmission oil temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": false,
+    "eax": "",
     "hdr": "7E6",
     "id": "MACHE_TT",
     "make": "Ford",
@@ -4751,9 +5496,180 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
+    "id": "A4_RANGE",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "A6_RANGE",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "AMAROK_RANGE",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "GOLF_RANGE",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "JETTA_RANGE",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
     "id": "POLO_RANGE",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "RS3_RANGE",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "SQ5_RANGE",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TIGUAN_RANGE",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TT_RANGE",
+    "make": "Audi",
+    "model": "TT",
     "name": "Range remaining",
     "path": "Trips",
     "pid": "22",
@@ -4770,9 +5686,180 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
+    "id": "A4_FLV",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "A6_FLV",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "AMAROK_FLV",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "GOLF_FLV",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "JETTA_FLV",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
     "id": "POLO_FLV",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "RS3_FLV",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "SQ5_FLV",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TIGUAN_FLV",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TT_FLV",
+    "make": "Audi",
+    "model": "TT",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -4808,9 +5895,180 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
+    "id": "A4_IAT",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "A6_IAT",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "AMAROK_IAT",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "GOLF_IAT",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "JETTA_IAT",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
     "id": "POLO_IAT",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "RS3_IAT",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "SQ5_IAT",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TIGUAN_IAT",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TT_IAT",
+    "make": "Audi",
+    "model": "TT",
     "name": "Interior air temperature",
     "path": "Climate",
     "pid": "22",
@@ -4926,6 +6184,25 @@
     "debug": false,
     "eax": "",
     "hdr": "726",
+    "id": "FIESTA_TP_FL",
+    "make": "Ford",
+    "model": "Fiesta",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
     "id": "FOCUS_TP_FL",
     "make": "Ford",
     "model": "Focus",
@@ -4980,12 +6257,12 @@
     "cmd": {
       "22": "2813"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "hdr": "726",
-    "id": "FIESTA_TP_FL",
+    "id": "RANGER_TP_FL",
     "make": "Ford",
-    "model": "Fiesta",
+    "model": "Ranger",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5005,6 +6282,10 @@
     "id": "RANGER_TP_FL",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5139,6 +6420,25 @@
     "debug": false,
     "eax": "",
     "hdr": "726",
+    "id": "FIESTA_TP_FR",
+    "make": "Ford",
+    "model": "Fiesta",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
     "id": "FOCUS_TP_FR",
     "make": "Ford",
     "model": "Focus",
@@ -5193,12 +6493,12 @@
     "cmd": {
       "22": "2814"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "hdr": "726",
-    "id": "FIESTA_TP_FR",
+    "id": "RANGER_TP_FR",
     "make": "Ford",
-    "model": "Fiesta",
+    "model": "Ranger",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5218,6 +6518,10 @@
     "id": "RANGER_TP_FR",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5352,6 +6656,25 @@
     "debug": false,
     "eax": "",
     "hdr": "726",
+    "id": "FIESTA_TP_RR",
+    "make": "Ford",
+    "model": "Fiesta",
+    "name": "Rear right outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
     "id": "FOCUS_TP_RRO",
     "make": "Ford",
     "model": "Focus",
@@ -5406,12 +6729,12 @@
     "cmd": {
       "22": "2815"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "hdr": "726",
-    "id": "FIESTA_TP_RRO",
+    "id": "RANGER_TP_RR",
     "make": "Ford",
-    "model": "Fiesta",
+    "model": "Ranger",
     "name": "Rear right outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5428,9 +6751,13 @@
     "debug": true,
     "eax": "",
     "hdr": "726",
-    "id": "RANGER_TP_RRO",
+    "id": "RANGER_TP_RR",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Rear right outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5565,6 +6892,25 @@
     "debug": false,
     "eax": "",
     "hdr": "726",
+    "id": "FIESTA_TP_RL",
+    "make": "Ford",
+    "model": "Fiesta",
+    "name": "Rear left outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "726",
     "id": "FOCUS_TP_RLO",
     "make": "Ford",
     "model": "Focus",
@@ -5619,12 +6965,12 @@
     "cmd": {
       "22": "2816"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "hdr": "726",
-    "id": "FIESTA_TP_RLO",
+    "id": "RANGER_TP_RL",
     "make": "Ford",
-    "model": "Fiesta",
+    "model": "Ranger",
     "name": "Rear left outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5641,9 +6987,13 @@
     "debug": true,
     "eax": "",
     "hdr": "726",
-    "id": "RANGER_TP_RLO",
+    "id": "RANGER_TP_RL",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Rear left outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -5797,44 +7147,6 @@
     "debug": true,
     "eax": "",
     "hdr": "726",
-    "id": "FIESTA_TP_RRI",
-    "make": "Ford",
-    "model": "Fiesta",
-    "name": "Rear right inner tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2817"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "726",
-    "id": "RANGER_TP_RRI",
-    "make": "Ford",
-    "model": "Ranger",
-    "name": "Rear right inner tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2817"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "726",
     "id": "TRANSITC_TP_RRI",
     "make": "Ford",
     "model": "Transit-Connect",
@@ -5972,44 +7284,6 @@
     "debug": true,
     "eax": "",
     "hdr": "726",
-    "id": "FIESTA_TP_RLI",
-    "make": "Ford",
-    "model": "Fiesta",
-    "name": "Rear left inner tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2818"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "726",
-    "id": "RANGER_TP_RLI",
-    "make": "Ford",
-    "model": "Ranger",
-    "name": "Rear left inner tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2818"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "726",
     "id": "TRANSITC_TP_RLI",
     "make": "Ford",
     "model": "Transit-Connect",
@@ -6105,9 +7379,180 @@
     "debug": true,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_TIRE_FL_SPD",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A6_TIRE_FL_SPD",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "AMAROK_TIRE_FL_SPD",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "GOLF_TIRE_FL_SPD",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "JETTA_TIRE_FL_SPD",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
     "id": "POLO_TIRE_FL_SPD",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "RS3_TIRE_FL_SPD",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "SQ5_TIRE_FL_SPD",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TIGUAN_TIRE_FL_SPD",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TT_TIRE_FL_SPD",
+    "make": "Audi",
+    "model": "TT",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -6162,9 +7607,180 @@
     "debug": true,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_TIRE_FR_SPD",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A6_TIRE_FR_SPD",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "AMAROK_TIRE_FR_SPD",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "GOLF_TIRE_FR_SPD",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "JETTA_TIRE_FR_SPD",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
     "id": "POLO_TIRE_FR_SPD",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "RS3_TIRE_FR_SPD",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "SQ5_TIRE_FR_SPD",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TIGUAN_TIRE_FR_SPD",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TT_TIRE_FR_SPD",
+    "make": "Audi",
+    "model": "TT",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -6219,9 +7835,180 @@
     "debug": true,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_TIRE_RL_SPD",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A6_TIRE_RL_SPD",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "AMAROK_TIRE_RL_SPD",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "GOLF_TIRE_RL_SPD",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "JETTA_TIRE_RL_SPD",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
     "id": "POLO_TIRE_RL_SPD",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "RS3_TIRE_RL_SPD",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "SQ5_TIRE_RL_SPD",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TIGUAN_TIRE_RL_SPD",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TT_TIRE_RL_SPD",
+    "make": "Audi",
+    "model": "TT",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -6276,9 +8063,180 @@
     "debug": true,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_TIRE_RR_SPD",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A6_TIRE_RR_SPD",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "AMAROK_TIRE_RR_SPD",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "GOLF_TIRE_RR_SPD",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "JETTA_TIRE_RR_SPD",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
     "id": "POLO_TIRE_RR_SPD",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "RS3_TIRE_RR_SPD",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "SQ5_TIRE_RR_SPD",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TIGUAN_TIRE_RR_SPD",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TT_TIRE_RR_SPD",
+    "make": "Audi",
+    "model": "TT",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -11348,6 +13306,25 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "D402"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "6A2",
+    "id": "CORSA_VSS",
+    "make": "VauxhallOpel",
+    "model": "Corsa-e",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D410"
     },
     "debug": false,
@@ -11356,6 +13333,25 @@
     "id": "CORSA_HVBAT_SOC",
     "make": "VauxhallOpel",
     "model": "Corsa",
+    "name": "High voltage battery charge (calibrated)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/512 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D410"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "6B4",
+    "id": "CORSA_HVBAT_SOC",
+    "make": "VauxhallOpel",
+    "model": "Corsa-e",
     "name": "High voltage battery charge (calibrated)",
     "path": "Battery",
     "pid": "22",
@@ -11405,6 +13401,25 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "D810"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "6B4",
+    "id": "CORSA_HVBAT_SOC_RAW",
+    "make": "VauxhallOpel",
+    "model": "Corsa-e",
+    "name": "High voltage battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/512 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D815"
     },
     "debug": false,
@@ -11413,6 +13428,25 @@
     "id": "CORSA_HVBAT_VOLT",
     "make": "VauxhallOpel",
     "model": "Corsa",
+    "name": "High voltage battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [4095]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D815"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "6B4",
+    "id": "CORSA_HVBAT_VOLT",
+    "make": "VauxhallOpel",
+    "model": "Corsa-e",
     "name": "High voltage battery voltage",
     "path": "Battery",
     "pid": "22",
@@ -11443,6 +13477,25 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "D865"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "6B4",
+    "id": "CORSA_HVBAT_KWH",
+    "make": "VauxhallOpel",
+    "model": "Corsa-e",
+    "name": "HV battery energy",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/64 clamped to [3276.75]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D86F"
     },
     "debug": false,
@@ -11462,6 +13515,25 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "D86F"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "6B4",
+    "id": "CORSA_HVBAT_MIN_VOLT",
+    "make": "VauxhallOpel",
+    "model": "Corsa-e",
+    "name": "High voltage minimum voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "millivolts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D870"
     },
     "debug": false,
@@ -11470,6 +13542,25 @@
     "id": "CORSA_HVBAT_MAX_VOLT",
     "make": "VauxhallOpel",
     "model": "Corsa",
+    "name": "High voltage maximum voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "millivolts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D870"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "6B4",
+    "id": "CORSA_HVBAT_MAX_VOLT",
+    "make": "VauxhallOpel",
+    "model": "Corsa-e",
     "name": "High voltage maximum voltage",
     "path": "Battery",
     "pid": "22",
@@ -17061,9 +19152,180 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
+    "id": "A4_FLI_VOL",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "A6_FLI_VOL",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "AMAROK_FLI_VOL",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "GOLF_FLI_VOL",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "JETTA_FLI_VOL",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
     "id": "POLO_FLI_VOL",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "RS3_FLI_VOL",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "SQ5_FLI_VOL",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TIGUAN_FLI_VOL",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TT_FLI_VOL",
+    "make": "Audi",
+    "model": "TT",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "22",
@@ -18909,6 +21171,25 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "D860"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "6B4",
+    "id": "CORSA_HVBAT_SOH",
+    "make": "VauxhallOpel",
+    "model": "Corsa-e",
+    "name": "High voltage battery health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 80,
     "cmd": {
       "22": "2AB7"
@@ -19365,6 +21646,101 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
+    "id": "A4_ODO_DASH",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "A6_ODO_DASH",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "AMAROK_ODO_DASH",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "GOLF_ODO_DASH",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "JETTA_ODO_DASH",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
     "id": "POLO_ODO_DASH",
     "make": "Volkswagen",
     "model": "Polo",
@@ -19372,6 +21748,162 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "RS3_ODO_DASH",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "SQ5_ODO_DASH",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TIGUAN_ODO_DASH",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TT_ODO_DASH",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "GOLF_ODO",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "modelYears": [
+      2016,
+      2016
+    ],
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "AMAROK_ODO",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "GOLF_ODO",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "TIGUAN_ODO",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -19423,13 +21955,36 @@
     "cmd": {
       "22": "404C"
     },
+    "debug": false,
+    "eax": "",
+    "hdr": "720",
+    "id": "FIESTA_ODO",
+    "make": "Ford",
+    "model": "Fiesta",
+    "modelYears": [
+      0,
+      2014
+    ],
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "404C"
+    },
     "debug": true,
     "eax": "",
     "hdr": "720",
     "id": "FIESTA_ODO",
     "make": "Ford",
     "model": "Fiesta",
-    "name": "Odometer (variant 1)",
+    "name": "Odometer",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw/10 clamped to [1677721]",
@@ -19448,6 +22003,10 @@
     "id": "RANGER_ODO",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -19491,25 +22050,6 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [1677721]",
     "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "6180"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "720",
-    "id": "FIESTA_ODO_ALT",
-    "make": "Ford",
-    "model": "Fiesta",
-    "name": "Odometer (variant 2)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1677721]",
-    "suggestedMetric": "",
     "unit": "kilometers"
   },
   {
@@ -19605,6 +22145,48 @@
     "pid": "22",
     "scaling": "raw clamped to [1000000]",
     "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "720",
+    "id": "FIESTA_ODO_TRIP",
+    "make": "Ford",
+    "model": "Fiesta",
+    "modelYears": [
+      0,
+      2014
+    ],
+    "name": "Trip distance",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "720",
+    "id": "FIESTA_ODO_TRIP",
+    "make": "Ford",
+    "model": "Fiesta",
+    "name": "Trip distance",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "",
     "unit": "kilometers"
   },
   {
@@ -20052,6 +22634,101 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "10E0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "A4_ODO_3",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Odometer (alternative 2)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10E0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "A6_ODO_3",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Odometer (alternative 2)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10E0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RS3_ODO_3",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Odometer (alternative 2)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10E0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "SQ5_ODO_3",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Odometer (alternative 2)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10E0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "TT_ODO_3",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Odometer (alternative 2)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1E32"
     },
     "debug": false,
@@ -20076,9 +22753,123 @@
     "debug": true,
     "eax": "",
     "hdr": "7E0",
+    "id": "A4_ODO_2",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "A6_ODO_2",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "JETTA_ODO_2",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
     "id": "POLO_ODO_2",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RS3_ODO_2",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "SQ5_ODO_2",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "TT_ODO_2",
+    "make": "Audi",
+    "model": "TT",
     "name": "Odometer (alternative)",
     "path": "Trips",
     "pid": "22",
@@ -20095,9 +22886,180 @@
     "debug": true,
     "eax": "",
     "hdr": "710",
+    "id": "A4_ODO",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "710",
+    "id": "A6_ODO",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "710",
+    "id": "AMAROK_ODO_2",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "710",
+    "id": "GOLF_ODO_2",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "710",
+    "id": "JETTA_ODO",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "710",
     "id": "POLO_ODO",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "710",
+    "id": "RS3_ODO",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "710",
+    "id": "SQ5_ODO",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "710",
+    "id": "TIGUAN_ODO_2",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "710",
+    "id": "TT_ODO",
+    "make": "Audi",
+    "model": "TT",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -20345,6 +23307,25 @@
     "id": "CORSA_ODO",
     "make": "VauxhallOpel",
     "model": "Corsa",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [429496729]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D49C"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "6B4",
+    "id": "CORSA_ODO",
+    "make": "VauxhallOpel",
+    "model": "Corsa-e",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -22125,9 +25106,180 @@
     "debug": true,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_DRIVE_TIME_ECO",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A6_DRIVE_TIME_ECO",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "AMAROK_DRIVE_TIME_ECO",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "GOLF_DRIVE_TIME_ECO",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "JETTA_DRIVE_TIME_ECO",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
     "id": "POLO_DRIVE_TIME_ECO",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "RS3_DRIVE_TIME_ECO",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "SQ5_DRIVE_TIME_ECO",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TIGUAN_DRIVE_TIME_ECO",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TT_DRIVE_TIME_ECO",
+    "make": "Audi",
+    "model": "TT",
     "name": "Driving time (eco)",
     "path": "Stats",
     "pid": "22",
@@ -22163,9 +25315,180 @@
     "debug": true,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_DRIVE_TIME_SPORT",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A6_DRIVE_TIME_SPORT",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "AMAROK_DRIVE_TIME_SPORT",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "GOLF_DRIVE_TIME_SPORT",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "JETTA_DRIVE_TIME_SPORT",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
     "id": "POLO_DRIVE_TIME_SPORT",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "RS3_DRIVE_TIME_SPORT",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "SQ5_DRIVE_TIME_SPORT",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TIGUAN_DRIVE_TIME_SPORT",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TT_DRIVE_TIME_SPORT",
+    "make": "Audi",
+    "model": "TT",
     "name": "Driving time (sport)",
     "path": "Stats",
     "pid": "22",
@@ -22201,9 +25524,180 @@
     "debug": true,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_DRIVE_TIME_MANUAL",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A6_DRIVE_TIME_MANUAL",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "AMAROK_DRIVE_TIME_MANUAL",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "GOLF_DRIVE_TIME_MANUAL",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "JETTA_DRIVE_TIME_MANUAL",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
     "id": "POLO_DRIVE_TIME_MANUAL",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "RS3_DRIVE_TIME_MANUAL",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "SQ5_DRIVE_TIME_MANUAL",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TIGUAN_DRIVE_TIME_MANUAL",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TT_DRIVE_TIME_MANUAL",
+    "make": "Audi",
+    "model": "TT",
     "name": "Driving time (manual)",
     "path": "Stats",
     "pid": "22",
@@ -22695,28 +26189,13 @@
     "debug": true,
     "eax": "",
     "hdr": "7DF",
-    "id": "FIESTA_EOT",
-    "make": "Ford",
-    "model": "Fiesta",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1310"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7DF",
     "id": "RANGER_EOT",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -23513,18 +26992,18 @@
     "cmd": {
       "22": "1E12"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
-    "hdr": "7DF",
-    "id": "FIESTA_GEAR",
+    "hdr": "7E0",
+    "id": "RANGER_GEAR",
     "make": "Ford",
-    "model": "Fiesta",
-    "name": "Gear",
-    "path": "Engine",
+    "model": "Ranger",
+    "name": "Current gear",
+    "path": "Transmission",
     "pid": "22",
-    "scaling": "raw clamped to [255]",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
     "suggestedMetric": "",
-    "unit": "scalar"
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -23538,6 +27017,10 @@
     "id": "RANGER_GEAR",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Current gear",
     "path": "Engine",
     "pid": "22",
@@ -23576,6 +27059,10 @@
     "id": "RANGER_TOT",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Transmission oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -23669,12 +27156,35 @@
     "cmd": {
       "22": "1E23"
     },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RANGER_GEAR_SHFT",
+    "make": "Ford",
+    "model": "Ranger",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
     "debug": true,
     "eax": "",
     "hdr": "7DF",
     "id": "RANGER_GEAR_SHFT",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Shift gear",
     "path": "Engine",
     "pid": "22",
@@ -23938,6 +27448,101 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
+    "id": "A4_EOT",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "A6_EOT",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "AMAROK_EOT",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "GOLF_EOT",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "JETTA_EOT",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
     "id": "POLO_EOT",
     "make": "Volkswagen",
     "model": "Polo",
@@ -23945,6 +27550,272 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "RS3_EOT",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "SQ5_EOT",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TIGUAN_EOT",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "714",
+    "id": "TT_EOT",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A4_GEAR",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A6_GEAR",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "RS3_GEAR",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "SQ5_GEAR",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "TT_GEAR",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "A4_CRSH_FRONT",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "A6_CRSH_FRONT",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "AMAROK_CRSH_FRONT",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "GOLF_CRSH_FRONT",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "JETTA_CRSH_FRONT",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -23960,6 +27831,82 @@
     "id": "POLO_CRSH_FRONT",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "RS3_CRSH_FRONT",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "SQ5_CRSH_FRONT",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TIGUAN_CRSH_FRONT",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TT_CRSH_FRONT",
+    "make": "Audi",
+    "model": "TT",
     "name": "Crashes, front",
     "path": "Trips",
     "pid": "22",
@@ -23995,9 +27942,180 @@
     "debug": true,
     "eax": "",
     "hdr": "715",
+    "id": "A4_CRASH_CNT_DRVR",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "A6_CRASH_CNT_DRVR",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "AMAROK_CRASH_CNT_DRVR",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "GOLF_CRASH_CNT_DRVR",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "JETTA_CRASH_CNT_DRVR",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
     "id": "POLO_CRASH_CNT_DRVR",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "RS3_CRASH_CNT_DRVR",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "SQ5_CRASH_CNT_DRVR",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TIGUAN_CRASH_CNT_DRVR",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TT_CRASH_CNT_DRVR",
+    "make": "Audi",
+    "model": "TT",
     "name": "Crashes, driver side",
     "path": "Stats",
     "pid": "22",
@@ -24033,9 +28151,180 @@
     "debug": true,
     "eax": "",
     "hdr": "715",
+    "id": "A4_CRASH_CNT_PSNGR",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "A6_CRASH_CNT_PSNGR",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "AMAROK_CRASH_CNT_PSNGR",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "GOLF_CRASH_CNT_PSNGR",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "JETTA_CRASH_CNT_PSNGR",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
     "id": "POLO_CRASH_CNT_PSNGR",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "RS3_CRASH_CNT_PSNGR",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "SQ5_CRASH_CNT_PSNGR",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TIGUAN_CRASH_CNT_PSNGR",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TT_CRASH_CNT_PSNGR",
+    "make": "Audi",
+    "model": "TT",
     "name": "Crashes, passenger side",
     "path": "Stats",
     "pid": "22",
@@ -24071,9 +28360,180 @@
     "debug": true,
     "eax": "",
     "hdr": "715",
+    "id": "A4_CRASH_CNT_REAR",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "A6_CRASH_CNT_REAR",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "AMAROK_CRASH_CNT_REAR",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "GOLF_CRASH_CNT_REAR",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "JETTA_CRASH_CNT_REAR",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
     "id": "POLO_CRASH_CNT_REAR",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "RS3_CRASH_CNT_REAR",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "SQ5_CRASH_CNT_REAR",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TIGUAN_CRASH_CNT_REAR",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TT_CRASH_CNT_REAR",
+    "make": "Audi",
+    "model": "TT",
     "name": "Crashes, rear",
     "path": "Stats",
     "pid": "22",
@@ -24109,9 +28569,180 @@
     "debug": true,
     "eax": "",
     "hdr": "715",
+    "id": "A4_CRASH_CNT_ROLL",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "A6_CRASH_CNT_ROLL",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "AMAROK_CRASH_CNT_ROLL",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "GOLF_CRASH_CNT_ROLL",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "JETTA_CRASH_CNT_ROLL",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
     "id": "POLO_CRASH_CNT_ROLL",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "RS3_CRASH_CNT_ROLL",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "SQ5_CRASH_CNT_ROLL",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TIGUAN_CRASH_CNT_ROLL",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "715",
+    "id": "TT_CRASH_CNT_ROLL",
+    "make": "Audi",
+    "model": "TT",
     "name": "Crashes, rollover",
     "path": "Stats",
     "pid": "22",
@@ -24147,9 +28778,180 @@
     "debug": true,
     "eax": "",
     "hdr": "746",
+    "id": "A4_WNDSHLD_TEMP",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "746",
+    "id": "A6_WNDSHLD_TEMP",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "746",
+    "id": "AMAROK_WNDSHLD_TEMP",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "746",
+    "id": "GOLF_WNDSHLD_TEMP",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "746",
+    "id": "JETTA_WNDSHLD_TEMP",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "746",
     "id": "POLO_WNDSHLD_TEMP",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "746",
+    "id": "RS3_WNDSHLD_TEMP",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "746",
+    "id": "SQ5_WNDSHLD_TEMP",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "746",
+    "id": "TIGUAN_WNDSHLD_TEMP",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "746",
+    "id": "TT_WNDSHLD_TEMP",
+    "make": "Audi",
+    "model": "TT",
     "name": "Windshield temperature",
     "path": "Climate",
     "pid": "22",
@@ -24204,28 +29006,13 @@
     "debug": true,
     "eax": "",
     "hdr": "760",
-    "id": "FIESTA_STEER_ANGLE",
-    "make": "Ford",
-    "model": "Fiesta",
-    "name": "Steering wheel angle",
-    "path": "Control",
-    "pid": "22",
-    "scaling": "raw*6.25 clamped to [-790, 790]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "3201"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "760",
     "id": "RANGER_STEER_ANGLE",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Steering wheel angle",
     "path": "Control",
     "pid": "22",
@@ -24581,12 +29368,16 @@
     "cmd": {
       "22": "6185"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "hdr": "720",
-    "id": "FIESTA_FLI",
+    "id": "RANGER_FLI",
     "make": "Ford",
-    "model": "Fiesta",
+    "model": "Ranger",
+    "modelYears": [
+      0,
+      2004
+    ],
     "name": "Fuel tank level",
     "path": "Fuel",
     "pid": "22",
@@ -24606,6 +29397,10 @@
     "id": "RANGER_FLI",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Fuel tank level",
     "path": "Fuel",
     "pid": "22",
@@ -25193,12 +29988,35 @@
     "cmd": {
       "22": "F42F"
     },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "RANGER_FLI",
+    "make": "Ford",
+    "model": "Ranger",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
     "debug": true,
     "eax": "",
     "hdr": "7DF",
     "id": "RANGER_FLI",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Fuel level (alternative)",
     "path": "Fuel",
     "pid": "22",
@@ -25237,6 +30055,10 @@
     "id": "RANGER_EOP",
     "make": "Ford",
     "model": "Ranger",
+    "modelYears": [
+      2005,
+      2018
+    ],
     "name": "Engine oil pressure",
     "path": "Engine",
     "pid": "22",
@@ -48750,9 +53572,180 @@
     "debug": true,
     "eax": "",
     "hdr": "70B",
+    "id": "A4_TP_FR",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "A6_TP_FR",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "AMAROK_TP_FR",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "GOLF_TP_FR",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "JETTA_TP_FR",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
     "id": "POLO_TP_FR",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "RS3_TP_FR",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "SQ5_TP_FR",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "TIGUAN_TP_FR",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "TT_TP_FR",
+    "make": "Audi",
+    "model": "TT",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -48788,9 +53781,180 @@
     "debug": true,
     "eax": "",
     "hdr": "70B",
+    "id": "A4_TP_FL",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "A6_TP_FL",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "AMAROK_TP_FL",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "GOLF_TP_FL",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "JETTA_TP_FL",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
     "id": "POLO_TP_FL",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "RS3_TP_FL",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "SQ5_TP_FL",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "TIGUAN_TP_FL",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "TT_TP_FL",
+    "make": "Audi",
+    "model": "TT",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -48826,9 +53990,180 @@
     "debug": true,
     "eax": "",
     "hdr": "70B",
+    "id": "A4_TP_RL",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "A6_TP_RL",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "AMAROK_TP_RL",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "GOLF_TP_RL",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "JETTA_TP_RL",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
     "id": "POLO_TP_RL",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "RS3_TP_RL",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "SQ5_TP_RL",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "TIGUAN_TP_RL",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "TT_TP_RL",
+    "make": "Audi",
+    "model": "TT",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -48864,9 +54199,180 @@
     "debug": true,
     "eax": "",
     "hdr": "70B",
+    "id": "A4_TP_RR",
+    "make": "Audi",
+    "model": "A4",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "A6_TP_RR",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "AMAROK_TP_RR",
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "GOLF_TP_RR",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "JETTA_TP_RR",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
     "id": "POLO_TP_RR",
     "make": "Volkswagen",
     "model": "Polo",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "RS3_TP_RR",
+    "make": "Audi",
+    "model": "RS-3",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "SQ5_TP_RR",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "TIGUAN_TP_RR",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "70B",
+    "id": "TT_TP_RR",
+    "make": "Audi",
+    "model": "TT",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
