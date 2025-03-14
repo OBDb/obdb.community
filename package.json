@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-saej1979": "node scripts/generate_saej1979_commands.js"
   },
   "eslintConfig": {
     "extends": [

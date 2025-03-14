@@ -6,6 +6,7 @@ import ParameterTable from '../components/ParameterTable';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorAlert from '../components/ErrorAlert';
 import TabPanel from '../components/TabPanel';
+import ModelYearPidSupport from '../components/ModelYearPidSupport';
 
 const VehicleDetail = () => {
   const { make, model } = useParams();
@@ -342,6 +343,12 @@ const VehicleDetail = () => {
           </span>
         </div>
       </div>
+
+      {!isSpecialCase && (
+        <div className="mb-6">
+          <ModelYearPidSupport make={make} model={model} />
+        </div>
+      )}
 
       <div className="mb-6">
         <div className="relative">

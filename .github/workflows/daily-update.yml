@@ -134,6 +134,9 @@ jobs:
       - name: Create data directory for build
         run: mkdir -p public/data
 
+      - name: Generate SAEJ1979 commands data
+        run: node scripts/generate_saej1979_commands.js
+
       - name: Copy CNAME to public folder
         run: cp CNAME public/
 

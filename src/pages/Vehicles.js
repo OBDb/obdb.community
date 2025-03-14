@@ -111,6 +111,96 @@ const Vehicles = () => {
     }
   }, [selectedVehicles, navigate]);
 
+  // State for model year data
+  const [modelYearData, setModelYearData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const makes = await dataService.getMakes();
+        setMakes(makes);
+
+        const vehicles = await dataService.getVehicles();
+
+        // Also fetch model year data if available
+        try {
+          const modelYearResponse = await fetch('/data/model_years_data.json');
+          if (modelYearResponse.ok) {
+            const modelYearData = await modelYearResponse.json();
+            setModelYearData(modelYearData);
+
+            // Enhance vehicles with model year information
+            vehicles.forEach(vehicle => {
+              const vehicleYearData = modelYearData.find(
+                item => item.make === vehicle.make && item.model === vehicle.model
+              );
+
+              if (vehicleYearData) {
+                // Add model year info to vehicle object
+                vehicle.modelYears = Object.keys(vehicleYearData.modelYears).sort();
+
+                // Get total count of unique PIDs across all years and ECUs
+                const uniquePids = new Set();
+                Object.values(vehicleYearData.modelYears).forEach(yearData => {
+                  Object.values(yearData).forEach(pids => {
+                    pids.forEach(pid => uniquePids.add(pid));
+                  });
+                });
+                vehicle.totalPids = uniquePids.size;
+              }
+            });
+          }
+        } catch (err) {
+          console.warn('Failed to load model year data:', err);
+          // Not setting an error state as this is non-critical
+        }
+
+        setVehicles(vehicles);
+
+        // Check if URL has comparison parameters
+        const queryParams = parseQueryString();
+        if (queryParams.compare) {
+          // Split by ',' to get individual vehicle IDs, avoid re-decoding
+          const vehiclesToCompare = queryParams.compare.split(',').map(id => {
+            // Split by '-' to get make and model
+            const parts = id.split('-');
+            if (parts.length >= 2) {
+              // The make is the first part, the model is the rest joined with '-'
+              // This handles cases where model names might contain hyphens
+              const make = parts[0];
+              const model = parts.slice(1).join('-');
+              // Only include make and model - removed id to be consistent with the rest of the app
+              return { make, model };
+            }
+            return null;
+          }).filter(v => v !== null); // Filter out any invalid entries
+
+          // Validate that these vehicles exist
+          const validVehicles = vehiclesToCompare.filter(v =>
+            vehicles.some(existingVehicle =>
+              existingVehicle.make === v.make && existingVehicle.model === v.model
+            )
+          );
+
+          if (validVehicles.length >= 2) {
+            setSelectedVehicles(validVehicles);
+            // Trigger comparison (will be executed after loading is complete)
+            setTimeout(() => startComparison(validVehicles), 0);
+          }
+        }
+
+        setLoading(false);
+      } catch (err) {
+        setError('Failed to load vehicle data. Please try again later.');
+        setLoading(false);
+        console.error(err);
+      }
+    };
+
+    fetchData();
+  }, [startComparison]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
