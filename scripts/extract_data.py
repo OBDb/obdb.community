@@ -174,6 +174,26 @@ def parse_signalset(file_path, make, model):
 
     return parameters
 
+def load_model_year_data(repo_dir, make, model):
+    """Load model year PID support data if it exists."""
+    model_years_path = repo_dir / 'service01' / 'modelyears.json'
+    if not model_years_path.exists():
+        return None
+
+    try:
+        with open(model_years_path) as f:
+            data = json.load(f)
+
+        # Add make and model information to the data
+        return {
+            'make': make,
+            'model': model,
+            'modelYears': data
+        }
+    except Exception as e:
+        print(f"Error loading model year data for {make}-{model}: {e}")
+        return None
+
 def calculate_hash(data):
     """Calculate a hash from the sorted and normalized data for easy comparison."""
     # Sort the data deterministically
@@ -185,8 +205,10 @@ def calculate_hash(data):
 def extract_data(workspace_dir, output_dir, force=False):
     """Extract matrix data from all repositories."""
     matrix_data = []
+    model_year_data = []
     temp_output_path = Path(output_dir) / 'matrix_data_temp.json'
     final_output_path = Path(output_dir) / 'matrix_data.json'
+    model_years_output_path = Path(output_dir) / 'model_years_data.json'
 
     # Process each repository
     for repo_dir in Path(workspace_dir).iterdir():
@@ -204,6 +226,12 @@ def extract_data(workspace_dir, output_dir, force=False):
         print(f"Processing {make} {model}...")
         parameters = parse_signalset(signalset_path, make, model)
         matrix_data.extend(parameters)
+
+        # Check for model year PID support data
+        my_data = load_model_year_data(repo_dir, make, model)
+        if my_data:
+            model_year_data.append(my_data)
+            print(f"  Found model year PID data for {make} {model}")
 
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
@@ -238,6 +266,27 @@ def extract_data(workspace_dir, output_dir, force=False):
             print(f"Error validating JSON: {e}")
             # Fall back to raw output if validation fails
             shutil.move(temp_output_path, final_output_path)
+
+    # Save model year data with custom formatting
+    if model_year_data:
+        with open(model_years_output_path, 'w') as f:
+            # Use custom JSON encoder to format arrays on single lines
+            class CompactJSONEncoder(json.JSONEncoder):
+                def encode(self, obj):
+                    if isinstance(obj, list) and all(isinstance(x, str) for x in obj):
+                        # For arrays of strings (PID arrays), keep them on one line
+                        parts = [self.encode(item) for item in obj]
+                        return "[" + ", ".join(parts) + "]"
+                    return super().encode(obj)
+
+            json_str = json.dumps(model_year_data, cls=CompactJSONEncoder, indent=2, sort_keys=True)
+            # Further compact ECU command arrays by regex replacing multi-line arrays
+            import re
+            json_str = re.sub(r'\[\n\s+("[0-9A-F]{2}",?\s*)+\n\s+\]', lambda m: m.group(0).replace('\n', ' ').replace('  ', ''), json_str)
+            f.write(json_str)
+        print(f"Saved model year data to {model_years_output_path} ({len(model_year_data)} vehicles)")
+    else:
+        print("No model year data found.")
 
     print(f"Saved matrix data to {final_output_path} ({len(matrix_data)} parameters total)")
 
