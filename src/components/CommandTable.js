@@ -1,6 +1,7 @@
 // src/components/CommandTable.js
 import React, { useState } from 'react';
 import CommandDetailsPanel from './CommandDetailsPanel';
+import VehicleChips from './VehicleChips';
 
 const CommandTable = ({
   commands,
@@ -65,9 +66,7 @@ const CommandTable = ({
       key: 'vehicleCount',
       header: 'Vehicle Coverage',
       render: (row) => (
-        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-          {row.vehicleCount} vehicles
-        </span>
+        <VehicleChips vehicles={row.vehicles} />
       )
     },
     {
