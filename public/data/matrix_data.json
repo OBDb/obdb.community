@@ -3592,6 +3592,29 @@
     "debug": false,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_DRIVE_TIME",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E1",
     "id": "CAYENNE_DRIVE_TIME",
     "make": "Porsche",
     "model": "Cayenne",
@@ -3671,25 +3694,6 @@
     "id": "GOLF_DRIVE_TIME",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Total drive time",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/4 clamped to [16383]",
-    "suggestedMetric": "",
-    "unit": "hours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0302"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E1",
-    "id": "JETTA_DRIVE_TIME",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Total drive time",
     "path": "Stats",
     "pid": "22",
@@ -4520,6 +4524,25 @@
     "cmd": {
       "22": "11BA"
     },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "JETTA_OIL_LEVEL",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/2500 clamped to [26.2]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
     "debug": true,
     "eax": "",
     "hdr": "7E0",
@@ -4583,25 +4606,6 @@
     "id": "GOLF_OIL_LEVEL",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Oil level",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "unknown"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11BA"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E0",
-    "id": "JETTA_OIL_LEVEL",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Oil level",
     "path": "Engine",
     "pid": "22",
@@ -4708,6 +4712,25 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "11BB"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "JETTA_OIL_CRIT",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Oil level (critical)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/2500 clamped to [26.2]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "11C4"
     },
     "debug": true,
@@ -4795,7 +4818,7 @@
     "name": "Oil level (max)",
     "path": "Fluids",
     "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
+    "scaling": "raw/2500 clamped to [26.2]",
     "suggestedMetric": "",
     "unit": "centimeters"
   },
@@ -4985,7 +5008,7 @@
     "name": "Oil level (min)",
     "path": "Fluids",
     "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
+    "scaling": "raw/2500 clamped to [26.2]",
     "suggestedMetric": "",
     "unit": "centimeters"
   },
@@ -5572,25 +5595,6 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
-    "id": "JETTA_RANGE",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Range remaining",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "fuelRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2294"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "714",
     "id": "POLO_RANGE",
     "make": "Volkswagen",
     "model": "Polo",
@@ -5746,25 +5750,6 @@
     "id": "GOLF_FLV",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Fuel remaining",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/8 clamped to [255]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "229A"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "714",
-    "id": "JETTA_FLV",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -5955,25 +5940,6 @@
     "id": "GOLF_IAT",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Interior air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2613"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "714",
-    "id": "JETTA_IAT",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Interior air temperature",
     "path": "Climate",
     "pid": "22",
@@ -7378,7 +7344,30 @@
     },
     "debug": true,
     "eax": "",
-    "hdr": "7E1",
+    "hdr": "713",
+    "id": "A4_TIRE_FL_SPD",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "713",
     "id": "A4_TIRE_FL_SPD",
     "make": "Audi",
     "model": "A4",
@@ -7439,25 +7428,6 @@
     "id": "GOLF_TIRE_FL_SPD",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1B"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E1",
-    "id": "JETTA_TIRE_FL_SPD",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -7606,7 +7576,30 @@
     },
     "debug": true,
     "eax": "",
-    "hdr": "7E1",
+    "hdr": "713",
+    "id": "A4_TIRE_FR_SPD",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "713",
     "id": "A4_TIRE_FR_SPD",
     "make": "Audi",
     "model": "A4",
@@ -7667,25 +7660,6 @@
     "id": "GOLF_TIRE_FR_SPD",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1C"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E1",
-    "id": "JETTA_TIRE_FR_SPD",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -7834,7 +7808,30 @@
     },
     "debug": true,
     "eax": "",
-    "hdr": "7E1",
+    "hdr": "713",
+    "id": "A4_TIRE_RL_SPD",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "713",
     "id": "A4_TIRE_RL_SPD",
     "make": "Audi",
     "model": "A4",
@@ -7895,25 +7892,6 @@
     "id": "GOLF_TIRE_RL_SPD",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1D"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E1",
-    "id": "JETTA_TIRE_RL_SPD",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -8062,7 +8040,30 @@
     },
     "debug": true,
     "eax": "",
-    "hdr": "7E1",
+    "hdr": "713",
+    "id": "A4_TIRE_RR_SPD",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "713",
     "id": "A4_TIRE_RR_SPD",
     "make": "Audi",
     "model": "A4",
@@ -8123,25 +8124,6 @@
     "id": "GOLF_TIRE_RR_SPD",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1E"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E1",
-    "id": "JETTA_TIRE_RR_SPD",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -19228,25 +19210,6 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
-    "id": "JETTA_FLI_VOL",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 336,
-    "cmd": {
-      "22": "22B0"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "714",
     "id": "POLO_FLI_VOL",
     "make": "Volkswagen",
     "model": "Polo",
@@ -21722,25 +21685,6 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
-    "id": "JETTA_ODO_DASH",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Odometer (dash)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2203"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "714",
     "id": "POLO_ODO_DASH",
     "make": "Volkswagen",
     "model": "Polo",
@@ -21836,13 +21780,55 @@
     "debug": false,
     "eax": "",
     "hdr": "7E0",
+    "id": "A4_ODO",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
     "id": "GOLF_ODO",
     "make": "Volkswagen",
     "model": "Golf",
     "modelYears": [
-      2016,
+      2015,
       2016
     ],
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "A4_ODO",
+    "make": "Audi",
+    "model": "A4",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -22639,10 +22625,10 @@
     "debug": true,
     "eax": "",
     "hdr": "7E0",
-    "id": "A4_ODO_3",
+    "id": "A4_ODO_2",
     "make": "Audi",
     "model": "A4",
-    "name": "Odometer (alternative 2)",
+    "name": "Odometer (alternative)",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
@@ -22665,6 +22651,25 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10E0"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "JETTA_ODO",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4000000000]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -22729,6 +22734,25 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "1160"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "JETTA_ODO_2",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Odometer (alt)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4000000000]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1E32"
     },
     "debug": false,
@@ -22753,47 +22777,9 @@
     "debug": true,
     "eax": "",
     "hdr": "7E0",
-    "id": "A4_ODO_2",
-    "make": "Audi",
-    "model": "A4",
-    "name": "Odometer (alternative)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "295A"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E0",
     "id": "A6_ODO_2",
     "make": "Audi",
     "model": "A6",
-    "name": "Odometer (alternative)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "295A"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E0",
-    "id": "JETTA_ODO_2",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Odometer (alternative)",
     "path": "Trips",
     "pid": "22",
@@ -22886,7 +22872,7 @@
     "debug": true,
     "eax": "",
     "hdr": "710",
-    "id": "A4_ODO",
+    "id": "A4_ODO_3",
     "make": "Audi",
     "model": "A4",
     "name": "Odometer",
@@ -22947,25 +22933,6 @@
     "make": "Volkswagen",
     "model": "Golf",
     "name": "Odometer (alternative)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2A0A"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "710",
-    "id": "JETTA_ODO",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Odometer",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -24991,6 +24958,29 @@
     "id": "RAV4_TP_FL",
     "make": "Toyota",
     "model": "RAV4",
+    "modelYears": [
+      2021,
+      2021
+    ],
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_FL",
+    "make": "Toyota",
+    "model": "RAV4",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -25087,6 +25077,29 @@
     "debug": false,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_DRIVE_TIME_ECO",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E1",
     "id": "CAYENNE_DRIVE_TIME_ECO",
     "make": "Porsche",
     "model": "Cayenne",
@@ -25166,25 +25179,6 @@
     "id": "GOLF_DRIVE_TIME_ECO",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Driving time (eco)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0303"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E1",
-    "id": "JETTA_DRIVE_TIME_ECO",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Driving time (eco)",
     "path": "Stats",
     "pid": "22",
@@ -25296,6 +25290,29 @@
     "debug": false,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_DRIVE_TIME_SPORT",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E1",
     "id": "CAYENNE_DRIVE_TIME_SPORT",
     "make": "Porsche",
     "model": "Cayenne",
@@ -25375,25 +25392,6 @@
     "id": "GOLF_DRIVE_TIME_SPORT",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Driving time (sport)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0304"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E1",
-    "id": "JETTA_DRIVE_TIME_SPORT",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Driving time (sport)",
     "path": "Stats",
     "pid": "22",
@@ -25505,6 +25503,29 @@
     "debug": false,
     "eax": "",
     "hdr": "7E1",
+    "id": "A4_DRIVE_TIME_MANUAL",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E1",
     "id": "CAYENNE_DRIVE_TIME_MANUAL",
     "make": "Porsche",
     "model": "Cayenne",
@@ -25584,25 +25605,6 @@
     "id": "GOLF_DRIVE_TIME_MANUAL",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Driving time (manual)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0305"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "7E1",
-    "id": "JETTA_DRIVE_TIME_MANUAL",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Driving time (manual)",
     "path": "Stats",
     "pid": "22",
@@ -27217,6 +27219,29 @@
     "cmd": {
       "22": "1F2F"
     },
+    "debug": false,
+    "eax": "",
+    "hdr": "700",
+    "id": "RAV4_FLI",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      2021,
+      2021
+    ],
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F2F"
+    },
     "debug": true,
     "eax": "",
     "hdr": "700",
@@ -27524,25 +27549,6 @@
     "debug": true,
     "eax": "",
     "hdr": "714",
-    "id": "JETTA_EOT",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-58 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "202F"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "714",
     "id": "POLO_EOT",
     "make": "Volkswagen",
     "model": "Polo",
@@ -27628,6 +27634,29 @@
     "scaling": "raw+-58 clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E1",
+    "id": "A4_GEAR",
+    "make": "Audi",
+    "model": "A4",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -27793,25 +27822,6 @@
     "id": "GOLF_CRSH_FRONT",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Crashes, front",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2353"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "715",
-    "id": "JETTA_CRSH_FRONT",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Crashes, front",
     "path": "Trips",
     "pid": "22",
@@ -28018,25 +28028,6 @@
     "debug": true,
     "eax": "",
     "hdr": "715",
-    "id": "JETTA_CRASH_CNT_DRVR",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Crashes, driver side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2354"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "715",
     "id": "POLO_CRASH_CNT_DRVR",
     "make": "Volkswagen",
     "model": "Polo",
@@ -28211,25 +28202,6 @@
     "id": "GOLF_CRASH_CNT_PSNGR",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Crashes, passenger side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2355"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "715",
-    "id": "JETTA_CRASH_CNT_PSNGR",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Crashes, passenger side",
     "path": "Stats",
     "pid": "22",
@@ -28436,25 +28408,6 @@
     "debug": true,
     "eax": "",
     "hdr": "715",
-    "id": "JETTA_CRASH_CNT_REAR",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Crashes, rear",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2356"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "715",
     "id": "POLO_CRASH_CNT_REAR",
     "make": "Volkswagen",
     "model": "Polo",
@@ -28645,25 +28598,6 @@
     "debug": true,
     "eax": "",
     "hdr": "715",
-    "id": "JETTA_CRASH_CNT_ROLL",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Crashes, rollover",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2357"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "715",
     "id": "POLO_CRASH_CNT_ROLL",
     "make": "Volkswagen",
     "model": "Polo",
@@ -28838,25 +28772,6 @@
     "id": "GOLF_WNDSHLD_TEMP",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Windshield temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "27C4"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "746",
-    "id": "JETTA_WNDSHLD_TEMP",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Windshield temperature",
     "path": "Climate",
     "pid": "22",
@@ -36245,6 +36160,29 @@
     "modelYears": [
       0,
       2018
+    ],
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_RL",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      2021,
+      2021
     ],
     "name": "Rear left tire pressure",
     "path": "Tires",
@@ -44356,6 +44294,29 @@
     "id": "RAV4_TP_RR",
     "make": "Toyota",
     "model": "RAV4",
+    "modelYears": [
+      2021,
+      2021
+    ],
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_RR",
+    "make": "Toyota",
+    "model": "RAV4",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -51181,6 +51142,29 @@
     "id": "RAV4_TP_SPARE",
     "make": "Toyota",
     "model": "RAV4",
+    "modelYears": [
+      2021,
+      2021
+    ],
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_SPARE",
+    "make": "Toyota",
+    "model": "RAV4",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -53648,25 +53632,6 @@
     "debug": true,
     "eax": "",
     "hdr": "70B",
-    "id": "JETTA_TP_FR",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A0"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "70B",
     "id": "POLO_TP_FR",
     "make": "Volkswagen",
     "model": "Polo",
@@ -53841,25 +53806,6 @@
     "id": "GOLF_TP_FL",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A1"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "70B",
-    "id": "JETTA_TP_FL",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -54066,25 +54012,6 @@
     "debug": true,
     "eax": "",
     "hdr": "70B",
-    "id": "JETTA_TP_RL",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A2"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "70B",
     "id": "POLO_TP_RL",
     "make": "Volkswagen",
     "model": "Polo",
@@ -54259,25 +54186,6 @@
     "id": "GOLF_TP_RR",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A3"
-    },
-    "debug": true,
-    "eax": "",
-    "hdr": "70B",
-    "id": "JETTA_TP_RR",
-    "make": "Volkswagen",
-    "model": "Jetta",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -58648,6 +58556,29 @@
     "modelYears": [
       0,
       2018
+    ],
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "hdr": "750",
+    "id": "RAV4_TP_FR",
+    "make": "Toyota",
+    "model": "RAV4",
+    "modelYears": [
+      2021,
+      2021
     ],
     "name": "Front right tire pressure",
     "path": "Tires",
