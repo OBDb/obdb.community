@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import dataService from '../services/dataService';
-import ParameterTable from '../components/ParameterTable';
-import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorAlert from '../components/ErrorAlert';
-import TabPanel from '../components/TabPanel';
-import ModelYearPidSupport from '../components/ModelYearPidSupport';
 import Card from '../components/Card';
-import StatusBadge from '../components/StatusBadge';
+import ErrorAlert from '../components/ErrorAlert';
+import LoadingSpinner from '../components/LoadingSpinner';
 import ModelYearBadge from '../components/ModelYearBadge';
+import ModelYearPidSupport from '../components/ModelYearPidSupport';
+import ParameterTable from '../components/ParameterTable';
+import StatusBadge from '../components/StatusBadge';
+import TabPanel from '../components/TabPanel';
 
 const VehicleDetail = () => {
   const { make, model } = useParams();
