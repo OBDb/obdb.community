@@ -126,12 +126,56 @@ const VehicleDetail = () => {
     // Apply search and year range filters
     let filtered = parameters;
 
-    // Apply search filter
     if (searchQuery) {
-      filtered = filtered.filter(param =>
-        param.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        param.name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+      const searchLower = searchQuery.toLowerCase();
+      filtered = filtered.filter(param => {
+        // Check if parameter ID matches
+        if (param.id.toLowerCase().includes(searchLower)) {
+          return true;
+        }
+
+        // Check if parameter name matches
+        if (param.name.toLowerCase().includes(searchLower)) {
+          return true;
+        }
+
+        // Check if command ID matches (if available)
+        if (param.cmd) {
+          const cmdFormatted = Object.entries(param.cmd)
+            .map(([key, value]) => `${key}${value}`)
+            .join('');
+          const commandId = `${param.hdr}_${cmdFormatted}`;
+
+          if (commandId.toLowerCase().includes(searchLower)) {
+            return true;
+          }
+        }
+
+        // Check if ECU header or extended address matches
+        if (param.hdr && param.hdr.toLowerCase().includes(searchLower)) {
+          return true;
+        }
+
+        if (param.eax && param.eax.toLowerCase().includes(searchLower)) {
+          return true;
+        }
+
+        // Check if unit or suggestedMetric matches
+        if (param.unit && param.unit.toLowerCase().includes(searchLower)) {
+          return true;
+        }
+
+        if (param.suggestedMetric && param.suggestedMetric.toLowerCase().includes(searchLower)) {
+          return true;
+        }
+
+        // Check for description match if available
+        if (param.description && param.description.toLowerCase().includes(searchLower)) {
+          return true;
+        }
+
+        return false;
+      });
     }
 
     // Apply year range filter
@@ -476,7 +520,7 @@ const VehicleDetail = () => {
             type="text"
             value={searchQuery}
             onChange={handleSearchChange}
-            placeholder="Filter by parameter ID or name..."
+            placeholder="Search parameters by ID, name, ECU, or other fields..."
             className="input text-sm py-2 pl-9"
           />
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
