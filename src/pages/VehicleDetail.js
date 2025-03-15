@@ -1,15 +1,27 @@
 // src/pages/VehicleDetail.js
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import dataService from '../services/dataService';
-import Card from '../components/Card';
 import ErrorAlert from '../components/ErrorAlert';
 import LoadingSpinner from '../components/LoadingSpinner';
-import ModelYearBadge from '../components/ModelYearBadge';
 import ModelYearPidSupport from '../components/ModelYearPidSupport';
-import ParameterTable from '../components/ParameterTable';
-import StatusBadge from '../components/StatusBadge';
 import TabPanel from '../components/TabPanel';
+
+import {
+  VehicleHeader,
+  SearchFilter,
+  YearRangeSummary,
+  AllParametersTab,
+  ByEcuTab,
+  ByMetricTab
+} from '../components/vehicle';
+
+import {
+  groupParametersByEcu,
+  groupParametersByMetric,
+  filterParameters,
+  processYearRanges
+} from '../utils/parameterUtils';
 
 const VehicleDetail = () => {
   const { make, model } = useParams();
@@ -22,10 +34,10 @@ const VehicleDetail = () => {
   const [ecuHeaders, setEcuHeaders] = useState([]);
   const [expandedParameterId, setExpandedParameterId] = useState(null);
   const [commandData, setCommandData] = useState(null);
-  // New state for year range filters
+  // State for year range filters
   const [yearRangeFilter, setYearRangeFilter] = useState('all');
   const [yearRanges, setYearRanges] = useState([]);
-  // State to track total parameters by year range
+  // State to track parameters by year range
   const [paramsByYearRange, setParamsByYearRange] = useState({});
   // State for special cases
   const [isSpecialCase, setIsSpecialCase] = useState(false);
@@ -42,7 +54,6 @@ const VehicleDetail = () => {
           setIsSpecialCase(true);
 
           // For SAEJ1979 or other special cases, we'll fetch data differently
-          // This would need to be adapted based on your actual data structure
           const params = await dataService.getSpecialCaseParameters(make);
 
           if (params && params.length > 0) {
@@ -62,41 +73,12 @@ const VehicleDetail = () => {
           // Standard make/model case
           const params = await dataService.getVehicleParameters(make, model);
 
-          // Process model year data from parameters
-          const yearRangesMap = {};
-          params.forEach(param => {
-            if (param.modelYears && param.modelYears.length === 2) {
-              const startYear = param.modelYears[0];
-              const endYear = param.modelYears[1];
-              const key = `${startYear}-${endYear}`;
+          // Process year ranges
+          const { yearRanges: processedRanges, paramsByYearRange: processedParams } =
+            processYearRanges(params);
 
-              if (!yearRangesMap[key]) {
-                yearRangesMap[key] = {
-                  startYear,
-                  endYear,
-                  parameters: []
-                };
-              }
-
-              yearRangesMap[key].parameters.push(param);
-            }
-          });
-
-          // Convert to array and sort by start year
-          const sortedYearRanges = Object.values(yearRangesMap)
-            .sort((a, b) => a.startYear - b.startYear);
-
-          // Save the year ranges for filtering
-          setYearRanges(sortedYearRanges);
-
-          // Also create a lookup of parameters by year range for filtering
-          const paramsByYearRange = {};
-          sortedYearRanges.forEach(range => {
-            const key = `${range.startYear}-${range.endYear}`;
-            paramsByYearRange[key] = range.parameters;
-          });
-          setParamsByYearRange(paramsByYearRange);
-
+          setYearRanges(processedRanges);
+          setParamsByYearRange(processedParams);
           setParameters(params);
 
           // Extract unique ECU headers or extended addresses for BMW
@@ -124,67 +106,9 @@ const VehicleDetail = () => {
 
   useEffect(() => {
     // Apply search and year range filters
-    let filtered = parameters;
-
-    if (searchQuery) {
-      const searchLower = searchQuery.toLowerCase();
-      filtered = filtered.filter(param => {
-        // Check if parameter ID matches
-        if (param.id.toLowerCase().includes(searchLower)) {
-          return true;
-        }
-
-        // Check if parameter name matches
-        if (param.name.toLowerCase().includes(searchLower)) {
-          return true;
-        }
-
-        // Check if command ID matches (if available)
-        if (param.cmd) {
-          const cmdFormatted = Object.entries(param.cmd)
-            .map(([key, value]) => `${key}${value}`)
-            .join('');
-          const commandId = `${param.hdr}_${cmdFormatted}`;
-
-          if (commandId.toLowerCase().includes(searchLower)) {
-            return true;
-          }
-        }
-
-        // Check if ECU header or extended address matches
-        if (param.hdr && param.hdr.toLowerCase().includes(searchLower)) {
-          return true;
-        }
-
-        if (param.eax && param.eax.toLowerCase().includes(searchLower)) {
-          return true;
-        }
-
-        // Check if unit or suggestedMetric matches
-        if (param.unit && param.unit.toLowerCase().includes(searchLower)) {
-          return true;
-        }
-
-        if (param.suggestedMetric && param.suggestedMetric.toLowerCase().includes(searchLower)) {
-          return true;
-        }
-
-        // Check for description match if available
-        if (param.description && param.description.toLowerCase().includes(searchLower)) {
-          return true;
-        }
-
-        return false;
-      });
-    }
-
-    // Apply year range filter
-    if (yearRangeFilter !== 'all' && paramsByYearRange[yearRangeFilter]) {
-      // When filtering by year range, we use the pre-grouped parameters
-      filtered = paramsByYearRange[yearRangeFilter];
-    }
-
+    const filtered = filterParameters(parameters, searchQuery, yearRangeFilter, paramsByYearRange);
     setFilteredParams(filtered);
+
     // Reset expanded state when filters change
     setExpandedParameterId(null);
     setCommandData(null);
@@ -203,18 +127,6 @@ const VehicleDetail = () => {
 
   const handleYearRangeFilterChange = (e) => {
     setYearRangeFilter(e.target.value);
-  };
-
-  const openGitHubRepo = () => {
-    let url;
-    if (isSpecialCase) {
-      // For special cases like SAEJ1979
-      url = `https://github.com/OBDb/${make}/blob/main/signalsets/v3/default.json`;
-    } else {
-      // For regular make-model
-      url = `https://github.com/OBDb/${make}-${model}/blob/main/signalsets/v3/default.json`;
-    }
-    window.open(url, '_blank');
   };
 
   const handleExpandParameter = async (parameter) => {
@@ -275,376 +187,88 @@ const VehicleDetail = () => {
     }
   };
 
-  // Function to get ECU display value for BMW or non-BMW vehicles
-  const getEcuValue = (param) => {
-    if (isBMW && param.eax) {
-      return param.eax;
-    }
-    return param.hdr || '';
-  };
+  // Create required data structures for tabs
+  const paramsByEcu = groupParametersByEcu(filteredParams, ecuHeaders, isBMW);
+  const metricGroups = groupParametersByMetric(filteredParams);
 
-  // Group parameters by ECU for the ECU tab
-  const paramsByEcu = ecuHeaders.reduce((acc, ecuId) => {
-    // For BMW, group by extended address, for others group by header
-    const paramsForEcu = isBMW
-      ? filteredParams.filter(param => (param.eax || param.hdr) === ecuId)
-      : filteredParams.filter(param => param.hdr === ecuId);
+  // Render loading spinner or error message if needed
+  if (loading) {
+    return <LoadingSpinner size="md" centered={true} />;
+  }
 
-    if (paramsForEcu.length > 0) {
-      acc[ecuId] = paramsForEcu;
-    }
-    return acc;
-  }, {});
-
-  // Group parameters by suggested metric for the metrics tab
-  const paramsByMetric = filteredParams.reduce((acc, param) => {
-    const metric = param.suggestedMetric || 'Other';
-    if (!acc[metric]) acc[metric] = [];
-    acc[metric].push(param);
-    return acc;
-  }, {});
-
-  const metricGroups = Object.entries(paramsByMetric)
-    .sort(([a], [b]) => a === 'Other' ? 1 : b === 'Other' ? -1 : a.localeCompare(b));
-
-  // Columns for the All Parameters tab
-  const allParamsColumns = [
-    {
-      key: 'hdr',
-      header: 'ECU',
-      cellClassName: 'font-mono text-gray-900',
-      render: (row) => getEcuValue(row)
-    },
-    {
-      key: 'id',
-      header: 'Parameter ID',
-      cellClassName: 'font-medium text-gray-900'
-    },
-    {
-      key: 'name',
-      header: 'Name',
-      cellClassName: 'text-gray-900'
-    },
-    {
-      key: 'modelYears',
-      header: 'Years',
-      render: (row) => row.modelYears ? (
-        <ModelYearBadge years={row.modelYears} variant="primary" />
-      ) : (
-        <span className="text-xs text-gray-500">—</span>
-      )
-    },
-    {
-      key: 'suggestedMetric',
-      header: 'Suggested Metric',
-      render: (row) => row.suggestedMetric ? (
-        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
-          {row.suggestedMetric}
-        </span>
-      ) : (
-        <span className="text-xs text-gray-500">—</span>
-      )
-    }
-  ];
-
-  // Columns for the ECU tab (no ECU column needed)
-  const ecuParamsColumns = [
-    {
-      key: 'id',
-      header: 'Parameter ID',
-      cellClassName: 'font-medium text-gray-900'
-    },
-    {
-      key: 'name',
-      header: 'Name',
-      cellClassName: 'text-gray-900'
-    },
-    {
-      key: 'modelYears',
-      header: 'Years',
-      render: (row) => row.modelYears ? (
-        <ModelYearBadge years={row.modelYears} variant="primary" />
-      ) : (
-        <span className="text-xs text-gray-500">—</span>
-      )
-    },
-    {
-      key: 'suggestedMetric',
-      header: 'Suggested Metric',
-      render: (row) => row.suggestedMetric || '—'
-    }
-  ];
-
-  // Columns for the Metric tab
-  const metricParamsColumns = [
-    {
-      key: 'hdr',
-      header: 'ECU',
-      cellClassName: 'font-mono text-gray-900',
-      render: (row) => getEcuValue(row)
-    },
-    {
-      key: 'id',
-      header: 'Parameter ID',
-      cellClassName: 'font-medium text-gray-900'
-    },
-    {
-      key: 'name',
-      header: 'Name',
-      cellClassName: 'text-gray-900'
-    },
-    {
-      key: 'modelYears',
-      header: 'Years',
-      render: (row) => row.modelYears ? (
-        <ModelYearBadge years={row.modelYears} variant="primary" />
-      ) : (
-        <span className="text-xs text-gray-500">—</span>
-      )
-    },
-    {
-      key: 'unit',
-      header: 'Unit',
-      render: (row) => row.unit || '—'
-    }
-  ];
-
-  // Get appropriate title based on whether it's a special case or regular make/model
-  const getTitle = () => {
-    if (isSpecialCase) {
-      return make;  // Just use the make for special cases
-    }
-    return `${make} ${model}`;  // Use make + model for regular cases
-  };
-
-  // Adjust breadcrumbs based on special case status
-  const getBreadcrumbs = () => (
-    <>
-      <Link to="/" className="hover:text-primary-600">Home</Link>
-      <svg className="mx-2 h-4 w-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-      </svg>
-      <Link to="/vehicles" className="hover:text-primary-600">Vehicles</Link>
-      <svg className="mx-2 h-4 w-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-      </svg>
-      <span className="text-gray-700">{getTitle()}</span>
-    </>
-  );
+  if (error) {
+    return <ErrorAlert message={error} />;
+  }
 
   return (
     <div>
-      <div className="flex flex-wrap items-center justify-between mb-6">
-        <div>
-          {/* Breadcrumbs */}
-          <div className="flex items-center text-sm text-gray-500 mb-2">
-            {getBreadcrumbs()}
-          </div>
+      {/* Vehicle Header Component */}
+      <VehicleHeader
+        make={make}
+        model={model}
+        isSpecialCase={isSpecialCase}
+        parameterCount={parameters.length}
+      />
 
-          <h1 className="text-2xl font-bold flex items-center">
-            <span>{getTitle()}</span>
-            <button
-              onClick={openGitHubRepo}
-              className="ml-2 text-gray-500 hover:text-primary-600"
-              title="View on GitHub"
-            >
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.998.108-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.606-.015 2.896-.015 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-              </svg>
-            </button>
-          </h1>
-        </div>
-
-        <div className="mt-4 sm:mt-0">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800">
-            {parameters.length} parameters
-          </span>
-        </div>
-      </div>
-
+      {/* Model Year Info Section - Only show for regular vehicles */}
       {!isSpecialCase && (
         <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <ModelYearPidSupport make={make} model={model} />
-
-          {/* Year range summary card */}
-          {yearRanges.length > 0 && (
-            <Card title="Available Signalsets">
-              <div className="p-4">
-                <div className="space-y-4">
-                  {yearRanges.map((yearRange, idx) => (
-                    <div key={idx} className="border-b pb-3 last:border-b-0">
-                      <div className="flex items-center">
-                        <ModelYearBadge
-                          years={[yearRange.startYear, yearRange.endYear]}
-                          variant="primary"
-                          className="mr-2"
-                        />
-                        <StatusBadge
-                          text={`${yearRange.parameters.length} parameters`}
-                          variant="secondary"
-                          size="sm"
-                        />
-                      </div>
-                      <div className="mt-2 text-sm text-gray-600">
-                        <div className="flex flex-wrap gap-2 mt-1">
-                          {ecuHeaders.filter(ecuId => {
-                            // For BMW, filter by extended address, for others filter by header
-                            const ecuParams = isBMW
-                              ? yearRange.parameters.filter(param => (param.eax || param.hdr) === ecuId)
-                              : yearRange.parameters.filter(param => param.hdr === ecuId);
-                            return ecuParams.length > 0;
-                          }).slice(0, 5).map(ecuId => (
-                            <div key={ecuId} className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
-                              <span className="font-mono">{ecuId}</span>
-                            </div>
-                          ))}
-                          {ecuHeaders.length > 5 && (
-                            <div className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-600">
-                              +{ecuHeaders.length - 5} more ECUs
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Card>
-          )}
-        </div>
-      )}
-
-      <div className="mb-6 flex flex-col md:flex-row gap-4">
-        <div className="relative flex-grow">
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={handleSearchChange}
-            placeholder="Search parameters by ID, name, ECU, or other fields..."
-            className="input text-sm py-2 pl-9"
+          <YearRangeSummary
+            yearRanges={yearRanges}
+            ecuHeaders={ecuHeaders}
+            isBMW={isBMW}
           />
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <svg className="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-            </svg>
-          </div>
         </div>
-
-        {/* Year range filter */}
-        {yearRanges.length > 0 && (
-          <div className="md:w-64">
-            <select
-              value={yearRangeFilter}
-              onChange={handleYearRangeFilterChange}
-              className="input text-sm py-2"
-            >
-              <option value="all">All Model Years</option>
-              {yearRanges.map((range, idx) => (
-                <option key={idx} value={`${range.startYear}-${range.endYear}`}>
-                  {range.startYear === range.endYear
-                    ? `${range.startYear} Only`
-                    : `${range.startYear}-${range.endYear}`}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
-      </div>
-
-      {loading ? (
-        <LoadingSpinner size="md" centered={true} />
-      ) : error ? (
-        <ErrorAlert message={error} />
-      ) : (
-        <TabPanel
-          tabs={["All Parameters", "By ECU", "By Metric"]}
-          activeTab={tabValue}
-          onTabChange={handleTabChange}
-        >
-          {/* All Parameters Tab */}
-          {tabValue === 0 && (
-            <ParameterTable
-              parameters={filteredParams}
-              columns={allParamsColumns}
-              expandedParameterId={expandedParameterId}
-              commandData={commandData}
-              onParameterClick={handleExpandParameter}
-              showPagination={false}
-              showVehicles={false}
-            />
-          )}
-
-          {/* By ECU Tab */}
-          {tabValue === 1 && (
-            <div>
-              {Object.entries(paramsByEcu).map(([ecuId, ecuParams]) => (
-                ecuParams.length > 0 && (
-                  <div key={ecuId} className="mb-6">
-                    <div className="flex items-center mb-2">
-                      <h3 className="text-sm font-medium text-gray-700 font-mono">
-                        {ecuId}
-                      </h3>
-                      <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                        {ecuParams.length} parameters
-                      </span>
-                    </div>
-                    <ParameterTable
-                      parameters={ecuParams}
-                      columns={ecuParamsColumns}
-                      expandedParameterId={expandedParameterId}
-                      commandData={commandData}
-                      onParameterClick={handleExpandParameter}
-                      showPagination={false}
-                      showVehicles={false}
-                    />
-                  </div>
-                )
-              ))}
-              {Object.values(paramsByEcu).every(group => group.length === 0) && (
-                <div className="py-6 text-center">
-                  <p className="text-sm text-gray-500">
-                    No parameters found matching the search criteria.
-                  </p>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* By Metric Tab */}
-          {tabValue === 2 && (
-            <div>
-              {metricGroups.map(([metric, metricParams]) => (
-                <div key={metric} className="mb-6">
-                  <div className="flex items-center mb-2">
-                    <h3 className="text-sm font-medium text-gray-700">
-                      {metric}
-                    </h3>
-                    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                      {metricParams.length} parameters
-                    </span>
-                  </div>
-                  <ParameterTable
-                    parameters={metricParams}
-                    columns={metricParamsColumns}
-                    expandedParameterId={expandedParameterId}
-                    commandData={commandData}
-                    onParameterClick={handleExpandParameter}
-                    showPagination={false}
-                    showVehicles={false}
-                  />
-                </div>
-              ))}
-              {metricGroups.length === 0 && (
-                <div className="py-6 text-center">
-                  <p className="text-sm text-gray-500">
-                    No parameters found matching the search criteria.
-                  </p>
-                </div>
-              )}
-            </div>
-          )}
-        </TabPanel>
       )}
+
+      {/* Search and Filters Component */}
+      <SearchFilter
+        searchQuery={searchQuery}
+        onSearchChange={handleSearchChange}
+        yearRangeFilter={yearRangeFilter}
+        onYearRangeFilterChange={handleYearRangeFilterChange}
+        yearRanges={yearRanges}
+      />
+
+      {/* Tab Panel with Content Components */}
+      <TabPanel
+        tabs={["All Parameters", "By ECU", "By Metric"]}
+        activeTab={tabValue}
+        onTabChange={handleTabChange}
+      >
+        {/* All Parameters Tab */}
+        {tabValue === 0 && (
+          <AllParametersTab
+            filteredParams={filteredParams}
+            expandedParameterId={expandedParameterId}
+            commandData={commandData}
+            handleExpandParameter={handleExpandParameter}
+            isBMW={isBMW}
+          />
+        )}
+
+        {/* By ECU Tab */}
+        {tabValue === 1 && (
+          <ByEcuTab
+            paramsByEcu={paramsByEcu}
+            expandedParameterId={expandedParameterId}
+            commandData={commandData}
+            handleExpandParameter={handleExpandParameter}
+          />
+        )}
+
+        {/* By Metric Tab */}
+        {tabValue === 2 && (
+          <ByMetricTab
+            metricGroups={metricGroups}
+            expandedParameterId={expandedParameterId}
+            commandData={commandData}
+            handleExpandParameter={handleExpandParameter}
+            isBMW={isBMW}
+          />
+        )}
+      </TabPanel>
     </div>
   );
 };
