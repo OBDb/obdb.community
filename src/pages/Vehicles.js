@@ -18,7 +18,7 @@ const Vehicles = () => {
   const [error, setError] = useState(null);
   const [filters, setFilters] = useState({
     make: '',
-    model: '',
+    query: '',
     yearRange: '',
   });
   const [selectedVehicles, setSelectedVehicles] = useState([]);
@@ -143,9 +143,15 @@ const Vehicles = () => {
       return false;
     }
 
-    // Filter by model (partial match)
-    if (filters.model && !vehicle.model.toLowerCase().includes(filters.model.toLowerCase())) {
-      return false;
+    // Filter by query (searching both make and model with case-insensitive partial match)
+    if (filters.query) {
+      const query = filters.query.toLowerCase();
+      const makeMatch = vehicle.make.toLowerCase().includes(query);
+      const modelMatch = vehicle.model.toLowerCase().includes(query);
+
+      if (!makeMatch && !modelMatch) {
+        return false;
+      }
     }
 
     // Filter by year range
@@ -224,17 +230,17 @@ const Vehicles = () => {
   // Define filter fields for the SearchFilter component
   const filterFields = [
     {
+      name: 'query',
+      label: 'Search',
+      type: 'text',
+      placeholder: 'Search makes and models...',
+      className: 'flex-1 min-w-[200px]'
+    },
+    {
       name: 'make',
       label: 'Make',
       type: 'select',
       options: makes,
-      className: 'flex-1 min-w-[200px]'
-    },
-    {
-      name: 'model',
-      label: 'Search by Model',
-      type: 'text',
-      placeholder: 'Type to search...',
       className: 'flex-1 min-w-[200px]'
     },
     {
