@@ -302,9 +302,12 @@ const getCommands = async (filters = {}) => {
     }
 
     // Filter by parameter ID
-    if (filters.parameterId) {
+    if (filters.query) {
+      if (command.id.toLowerCase().includes(filters.query.toLowerCase())) {
+        return true;
+      }
       const hasParameter = command.parameters.some(param =>
-        param.id.toLowerCase().includes(filters.parameterId.toLowerCase())
+        param.id.toLowerCase().includes(filters.query.toLowerCase())
       );
       if (!hasParameter) return false;
     }

@@ -13,7 +13,7 @@ const Commands = () => {
   const [rowsPerPage, setRowsPerPage] = useState(50);
   const [filters, setFilters] = useState({
     hdr: '',
-    parameterId: '',
+    query: '',
   });
 
   useEffect(() => {
@@ -75,10 +75,10 @@ const Commands = () => {
       className: 'w-full sm:w-64'
     },
     {
-      name: 'parameterId',
-      label: 'Filter by Parameter ID',
+      name: 'query',
+      label: 'Search',
       type: 'text',
-      placeholder: 'Enter parameter ID...',
+      placeholder: 'Search by command ID or parameter name...',
       className: 'flex-grow'
     }
   ];
