@@ -4543,6 +4543,29 @@
     "cmd": {
       "22": "11BA"
     },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E0",
+    "id": "POLO_OIL_LEVEL",
+    "make": "Volkswagen",
+    "model": "Polo",
+    "modelYears": [
+      2017,
+      2017
+    ],
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/2500 clamped to [26.2]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
     "debug": true,
     "eax": "",
     "hdr": "7E0",
@@ -4628,9 +4651,9 @@
     "name": "Oil level",
     "path": "Engine",
     "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
+    "scaling": "raw/2500 clamped to [26.2]",
     "suggestedMetric": "",
-    "unit": "unknown"
+    "unit": "centimeters"
   },
   {
     "bitLength": 16,
