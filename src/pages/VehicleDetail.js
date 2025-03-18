@@ -13,12 +13,14 @@ import {
   YearRangeSummary,
   AllParametersTab,
   ByEcuTab,
-  ByMetricTab
+  ByMetricTab,
+  BySignalGroupTab
 } from '../components/vehicle';
 
 import {
   groupParametersByEcu,
   groupParametersByMetric,
+  groupParametersBySignalGroup,
   filterParameters,
   processYearRanges
 } from '../utils/parameterUtils';
@@ -43,6 +45,8 @@ const VehicleDetail = () => {
   const [isSpecialCase, setIsSpecialCase] = useState(false);
   // Check if this is a BMW vehicle
   const isBMW = make && make.toLowerCase() === 'bmw';
+  // State for signal groups
+  const [signalGroups, setSignalGroups] = useState({});
 
   useEffect(() => {
     const fetchVehicleData = async () => {
@@ -65,6 +69,10 @@ const VehicleDetail = () => {
               : [...new Set(params.map(param => param.hdr))].sort();
             setEcuHeaders(ecuIdentifiers);
 
+            // Group parameters by signal group
+            const groups = groupParametersBySignalGroup(params);
+            setSignalGroups(groups);
+
             setFilteredParams(params);
           } else {
             setError(`No data found for ${make}`);
@@ -86,6 +94,10 @@ const VehicleDetail = () => {
             ? [...new Set(params.map(param => param.eax || param.hdr))].sort()
             : [...new Set(params.map(param => param.hdr))].sort();
           setEcuHeaders(ecuIdentifiers);
+
+          // Group parameters by signal group
+          const groups = groupParametersBySignalGroup(params);
+          setSignalGroups(groups);
 
           setFilteredParams(params);
         }
@@ -191,6 +203,25 @@ const VehicleDetail = () => {
   const paramsByEcu = groupParametersByEcu(filteredParams, ecuHeaders, isBMW);
   const metricGroups = groupParametersByMetric(filteredParams);
 
+  // Filter signal groups based on the current search/filter
+  const filteredSignalGroups = {};
+  if (searchQuery || yearRangeFilter !== 'all') {
+    // Recompute signal groups using only the filtered parameters
+    const filtered = groupParametersBySignalGroup(filteredParams);
+    Object.assign(filteredSignalGroups, filtered);
+  } else {
+    // Use all signal groups when no filtering is applied
+    Object.assign(filteredSignalGroups, signalGroups);
+  }
+
+  // Identify parameters that belong to signal groups
+  const groupedParameterIds = new Set();
+  Object.values(filteredSignalGroups).forEach(group => {
+    group.parameters.forEach(param => {
+      groupedParameterIds.add(param.id);
+    });
+  });
+
   // Render loading spinner or error message if needed
   if (loading) {
     return <LoadingSpinner size="md" centered={true} />;
@@ -198,6 +229,15 @@ const VehicleDetail = () => {
 
   if (error) {
     return <ErrorAlert message={error} />;
+  }
+
+  // Check if we have any signal groups
+  const hasSignalGroups = Object.keys(signalGroups).length > 0;
+
+  // Define tab options based on available data
+  const tabOptions = ["All Parameters", "By ECU", "By Metric"];
+  if (hasSignalGroups) {
+    tabOptions.push("By Signal Group");
   }
 
   return (
@@ -233,7 +273,7 @@ const VehicleDetail = () => {
 
       {/* Tab Panel with Content Components */}
       <TabPanel
-        tabs={["All Parameters", "By ECU", "By Metric"]}
+        tabs={tabOptions}
         activeTab={tabValue}
         onTabChange={handleTabChange}
       >
@@ -245,6 +285,9 @@ const VehicleDetail = () => {
             commandData={commandData}
             handleExpandParameter={handleExpandParameter}
             isBMW={isBMW}
+            groupedParameterIds={groupedParameterIds}
+            hasSignalGroups={hasSignalGroups}
+            onSignalGroupTabSelect={() => setTabValue(3)}
           />
         )}
 
@@ -262,6 +305,17 @@ const VehicleDetail = () => {
         {tabValue === 2 && (
           <ByMetricTab
             metricGroups={metricGroups}
+            expandedParameterId={expandedParameterId}
+            commandData={commandData}
+            handleExpandParameter={handleExpandParameter}
+            isBMW={isBMW}
+          />
+        )}
+
+        {/* By Signal Group Tab */}
+        {tabValue === 3 && hasSignalGroups && (
+          <BySignalGroupTab
+            signalGroups={filteredSignalGroups}
             expandedParameterId={expandedParameterId}
             commandData={commandData}
             handleExpandParameter={handleExpandParameter}

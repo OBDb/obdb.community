@@ -43,6 +43,57 @@ export const groupParametersByMetric = (parameters) => {
 };
 
 /**
+ * Group parameters by signal group
+ * @param {Array} parameters - List of parameters
+ * @returns {Object} Object with signal group IDs as keys and group data as values
+ */
+export const groupParametersBySignalGroup = (parameters) => {
+  const signalGroups = {};
+
+  // First pass: identify all signal groups
+  parameters.forEach(param => {
+    if (param.signalGroups && Array.isArray(param.signalGroups)) {
+      param.signalGroups.forEach(group => {
+        const groupId = group.id;
+        if (!signalGroups[groupId]) {
+          signalGroups[groupId] = {
+            id: groupId,
+            name: group.name || groupId,
+            path: group.path || '',
+            matchingRegex: group.matchingRegex,
+            suggestedMetricGroup: group.suggestedMetricGroup,
+            parameters: []
+          };
+        }
+      });
+    }
+  });
+
+  // Second pass: assign parameters to their groups
+  parameters.forEach(param => {
+    if (param.signalGroups && Array.isArray(param.signalGroups)) {
+      param.signalGroups.forEach(group => {
+        const groupId = group.id;
+        if (signalGroups[groupId]) {
+          // Check if this parameter is already in the group (avoid duplicates)
+          const existingParam = signalGroups[groupId].parameters.find(p => p.id === param.id);
+          if (!existingParam) {
+            signalGroups[groupId].parameters.push(param);
+          }
+        }
+      });
+    }
+  });
+
+  // Sort parameters in each group by ID
+  Object.values(signalGroups).forEach(group => {
+    group.parameters.sort((a, b) => a.id.localeCompare(b.id));
+  });
+
+  return signalGroups;
+};
+
+/**
  * Filter parameters based on search query and year range
  * @param {Array} parameters - All parameters
  * @param {String} searchQuery - Search query string
@@ -94,6 +145,16 @@ export const filterParameters = (parameters, searchQuery, yearRangeFilter, param
 
       if (param.suggestedMetric && param.suggestedMetric.toLowerCase().includes(searchLower)) {
         return true;
+      }
+
+      // Check for signal group matches
+      if (param.signalGroups && Array.isArray(param.signalGroups)) {
+        return param.signalGroups.some(group =>
+          (group.id && group.id.toLowerCase().includes(searchLower)) ||
+          (group.name && group.name.toLowerCase().includes(searchLower)) ||
+          (group.path && group.path.toLowerCase().includes(searchLower)) ||
+          (group.suggestedMetricGroup && group.suggestedMetricGroup.toLowerCase().includes(searchLower))
+        );
       }
 
       // Check for description match if available

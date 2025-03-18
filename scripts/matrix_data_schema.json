@@ -76,6 +76,40 @@
         "type": "boolean",
         "description": "Whether this parameter is in debug mode",
         "default": false
+      },
+      "fmt": {
+        "type": ["object", "null"],
+        "description": "Complete format object for the signal"
+      },
+      "signalGroups": {
+        "type": "array",
+        "description": "Signal groups this parameter belongs to",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Signal group identifier"
+            },
+            "name": {
+              "type": ["string", "null"],
+              "description": "Signal group name"
+            },
+            "path": {
+              "type": ["string", "null"],
+              "description": "Signal group path"
+            },
+            "suggestedMetricGroup": {
+              "type": ["string", "null"],
+              "description": "Suggested metric group"
+            },
+            "matchDetails": {
+              "type": ["object", "null"],
+              "description": "Details from regex capture groups"
+            }
+          },
+          "required": ["id"]
+        }
       }
     },
     "required": [
