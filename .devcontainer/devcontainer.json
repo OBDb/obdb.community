@@ -11,14 +11,15 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "bradlc.vscode-tailwindcss",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
+        "GitHub.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
         "ms-python.python",
-        "ms-python.vscode-pylance",
-        "bradlc.vscode-tailwindcss"
+        "ms-python.vscode-pylance"
       ],
       "settings": {
-        "editor.formatOnSave": true,
         "python.linting.enabled": true,
         "python.linting.pylintEnabled": true,
         "python.formatting.provider": "black"

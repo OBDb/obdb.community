@@ -59,8 +59,7 @@ def parse_csv(file_path):
 
                     # Initialize model year if not exists
                     if model_year not in pid_data:
-                        pid_data[model_year] = {
-                        }
+                        pid_data[model_year] = {}
 
                     # Simple PIDs (without ECU header specified)
                     for pid in pids:
@@ -124,7 +123,6 @@ def write_json(data, output_path):
 
             json_str = json.dumps(data, cls=CompactJSONEncoder, indent=2, sort_keys=True)
             # Further compact ECU command arrays by regex replacing multi-line arrays
-            import re
             json_str = re.sub(r'\[\n\s+("[0-9A-F]{2}",?\s*)+\n\s+\]', lambda m: m.group(0).replace('\n', ' ').replace('  ', ''), json_str)
             f.write(json_str)
 
