@@ -4981,35 +4981,6 @@
     "id": "POLO_DRIVE_TIME",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Total drive time",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/4 clamped to [16383]",
-    "suggestedMetric": "",
-    "unit": "hours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0302"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 4,
-      "len": 16,
-      "max": 16383,
-      "unit": "hours"
-    },
-    "hdr": "7E1",
-    "id": "POLO_DRIVE_TIME",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Total drive time",
     "path": "Stats",
     "pid": "22",
@@ -6505,35 +6476,6 @@
     "id": "POLO_OIL_MAX",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Oil level (max)",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "centimeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11C4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 250,
-      "len": 16,
-      "max": 262,
-      "unit": "centimeters"
-    },
-    "hdr": "7E0",
-    "id": "POLO_OIL_MAX",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Oil level (max)",
     "path": "Fluids",
     "pid": "22",
@@ -6759,35 +6701,6 @@
     "id": "GOLF_OIL_MIN",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Oil level (min)",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "centimeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11C5"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 250,
-      "len": 16,
-      "max": 262,
-      "unit": "centimeters"
-    },
-    "hdr": "7E0",
-    "id": "POLO_OIL_MIN",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Oil level (min)",
     "path": "Fluids",
     "pid": "22",
@@ -7611,34 +7524,6 @@
     "id": "POLO_RANGE",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Range remaining",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "fuelRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2294"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 16,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
-    "id": "POLO_RANGE",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Range remaining",
     "path": "Trips",
     "pid": "22",
@@ -7835,35 +7720,6 @@
     "id": "GOLF_FLV",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Fuel remaining",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/8 clamped to [255]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "229A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 8,
-      "len": 16,
-      "max": 255,
-      "unit": "liters"
-    },
-    "hdr": "714",
-    "id": "POLO_FLV",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -8113,35 +7969,6 @@
     "id": "GOLF_IAT",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Interior air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2613"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "714",
-    "id": "POLO_IAT",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Interior air temperature",
     "path": "Climate",
     "pid": "22",
@@ -10063,35 +9890,6 @@
     "id": "POLO_TIRE_FL_SPD",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "POLO_TIRE_FL_SPD",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -10372,35 +10170,6 @@
     "id": "GOLF_TIRE_FR_SPD",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "POLO_TIRE_FR_SPD",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -10731,35 +10500,6 @@
     "id": "POLO_TIRE_RL_SPD",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1D"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "POLO_TIRE_RL_SPD",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -11040,35 +10780,6 @@
     "id": "GOLF_TIRE_RR_SPD",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1E"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "POLO_TIRE_RR_SPD",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -30442,36 +30153,6 @@
     "id": "POLO_FLI_VOL",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 336,
-    "cmd": {
-      "22": "22B0"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 336,
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "unit": "liters"
-    },
-    "hdr": "714",
-    "id": "POLO_FLI_VOL",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "22",
@@ -34785,34 +34466,6 @@
     "id": "POLO_ODO_DASH",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Odometer (dash)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2203"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
-    "id": "POLO_ODO_DASH",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Odometer (dash)",
     "path": "Trips",
     "pid": "22",
@@ -36246,34 +35899,6 @@
     "id": "POLO_ODO_2",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Odometer (alternative)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "295A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 32,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7E0",
-    "id": "POLO_ODO_2",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Odometer (alternative)",
     "path": "Trips",
     "pid": "22",
@@ -36443,34 +36068,6 @@
     "make": "Volkswagen",
     "model": "Golf",
     "name": "Odometer (alternative)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2A0A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 32,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "710",
-    "id": "POLO_ODO",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Odometer",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -40052,35 +39649,6 @@
     "id": "POLO_DRIVE_TIME_ECO",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Driving time (eco)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0303"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
-    "id": "POLO_DRIVE_TIME_ECO",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Driving time (eco)",
     "path": "Stats",
     "pid": "22",
@@ -40360,35 +39928,6 @@
     "id": "POLO_DRIVE_TIME_SPORT",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Driving time (sport)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0304"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
-    "id": "POLO_DRIVE_TIME_SPORT",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Driving time (sport)",
     "path": "Stats",
     "pid": "22",
@@ -40643,35 +40182,6 @@
     "id": "GOLF_DRIVE_TIME_MANUAL",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Driving time (manual)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0305"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
-    "id": "POLO_DRIVE_TIME_MANUAL",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Driving time (manual)",
     "path": "Stats",
     "pid": "22",
@@ -43703,35 +43213,6 @@
     "id": "POLO_EOT",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-58 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "202F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "714",
-    "id": "POLO_EOT",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -44128,34 +43609,6 @@
     "id": "POLO_CRSH_FRONT",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Crashes, front",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2353"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "POLO_CRSH_FRONT",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Crashes, front",
     "path": "Trips",
     "pid": "22",
@@ -44372,34 +43825,6 @@
     "id": "GOLF_CRASH_CNT_DRVR",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Crashes, driver side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2354"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "POLO_CRASH_CNT_DRVR",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Crashes, driver side",
     "path": "Stats",
     "pid": "22",
@@ -44664,34 +44089,6 @@
     "id": "POLO_CRASH_CNT_PSNGR",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Crashes, passenger side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2355"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "POLO_CRASH_CNT_PSNGR",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Crashes, passenger side",
     "path": "Stats",
     "pid": "22",
@@ -44908,34 +44305,6 @@
     "id": "GOLF_CRASH_CNT_REAR",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Crashes, rear",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2356"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "POLO_CRASH_CNT_REAR",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Crashes, rear",
     "path": "Stats",
     "pid": "22",
@@ -45200,34 +44569,6 @@
     "id": "POLO_CRASH_CNT_ROLL",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Crashes, rollover",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2357"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "POLO_CRASH_CNT_ROLL",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Crashes, rollover",
     "path": "Stats",
     "pid": "22",
@@ -45459,37 +44800,6 @@
     "id": "GOLF_WNDSHLD_TEMP",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Windshield temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "27C4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -38.8,
-      "len": 8,
-      "max": 108.08,
-      "min": -38.8,
-      "mul": 0.576,
-      "unit": "celsius"
-    },
-    "hdr": "746",
-    "id": "POLO_WNDSHLD_TEMP",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Windshield temperature",
     "path": "Climate",
     "pid": "22",
@@ -57954,32 +57264,6 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "E004"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E2",
-    "id": "KONAEV_VPWR",
-    "make": "Hyundai",
-    "model": "Kona-Electric",
-    "name": "12V battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [100]",
-    "signalGroups": [],
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -90506,36 +89790,6 @@
     "id": "POLO_TP_FR",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A0"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
-    "id": "POLO_TP_FR",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -90770,36 +90024,6 @@
     "id": "GOLF_TP_FL",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A1"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
-    "id": "POLO_TP_FL",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -91086,36 +90310,6 @@
     "id": "POLO_TP_RL",
     "make": "Volkswagen",
     "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A2"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
-    "id": "POLO_TP_RL",
-    "make": "Volkswagen",
-    "model": "Polo",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -91350,36 +90544,6 @@
     "id": "GOLF_TP_RR",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A3"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
-    "id": "POLO_TP_RR",
-    "make": "Volkswagen",
-    "model": "Polo",
-    "modelYears": [
-      2017,
-      2017
-    ],
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -95670,35 +94834,6 @@
     "bitLength": 8,
     "bitOffset": 64,
     "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 64,
-      "div": 2,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7B3",
-    "id": "KONAEV_IAT_PASS",
-    "make": "Hyundai",
-    "model": "Kona-Electric",
-    "name": "Passenger temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw/2 +-40 clamped to [-40, 215]",
-    "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 64,
-    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -97126,35 +96261,6 @@
     "path": "Engine",
     "pid": "21",
     "scaling": "raw clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 72,
-      "div": 2,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7B3",
-    "id": "KONAEV_IAT_PASS_LEGS",
-    "make": "Hyundai",
-    "model": "Kona-Electric",
-    "name": "Passenger leg temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw/2 +-40 clamped to [-40, 215]",
-    "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
   },
