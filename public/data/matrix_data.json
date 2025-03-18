@@ -1962,6 +1962,25 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 405,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_IGN",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Ignition",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 5,
     "cmd": {
       "01": "13"
@@ -17278,15 +17297,15 @@
     "debug": false,
     "eax": "",
     "hdr": "7E4",
-    "id": "KONAEV_HVBAT_WH",
+    "id": "KONAEV_HVBAT_DET_MIN",
     "make": "Hyundai",
     "model": "Kona-Electric",
-    "name": "HV battery remaining energy",
+    "name": "HV battery min deteriation",
     "path": "Battery",
     "pid": "22",
-    "scaling": "raw*2 /1000 clamped to [100]",
+    "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "",
-    "unit": "kilowattHours"
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -19715,6 +19734,25 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 456,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_ISO_R",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Isolation resistance",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "kiloohms"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 48,
     "cmd": {
       "01": "6D"
@@ -21469,6 +21507,25 @@
     "bitLength": 16,
     "bitOffset": 80,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_CURR",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
       "22": "2AB7"
     },
     "debug": false,
@@ -21599,6 +21656,25 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_VDC",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery voltage (DC)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -31358,6 +31434,25 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7A0",
+    "id": "KONAEV_TT_RL",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "22": "C101"
     },
     "debug": false,
@@ -31486,6 +31581,25 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_T_MAX",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery temperature (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -32308,6 +32422,25 @@
     "bitLength": 8,
     "bitOffset": 120,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_T_MIN",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery temperature (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -33068,6 +33201,25 @@
     "bitLength": 8,
     "bitOffset": 128,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_MOD1_T",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery temperature (module 1)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -33823,6 +33975,25 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_MOD2_T",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery temperature (module 2)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -35027,6 +35198,25 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7A0",
+    "id": "KONAEV_TT_RR",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 144,
     "cmd": {
       "21": "02"
@@ -35138,6 +35328,25 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_MOD3_T",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery temperature (module 3)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -35803,6 +36012,25 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_MOD4_T",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery temperature (module 4)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -36478,25 +36706,6 @@
     "debug": false,
     "eax": "",
     "hdr": "7E2",
-    "id": "KONAEV_VPWR",
-    "make": "Hyundai",
-    "model": "Kona-Electric",
-    "name": "12V battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "E004"
-    },
-    "debug": false,
-    "eax": "",
-    "hdr": "7E2",
     "id": "SANTAFEHYB_VPWR",
     "make": "Hyundai",
     "model": "Santa-Fe-Hybrid",
@@ -36519,6 +36728,25 @@
     "id": "SPORTAGE_VPWR",
     "make": "Kia",
     "model": "Sportage-HEV",
+    "name": "12V battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7E2",
+    "id": "KONAEV_VPWR",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
     "name": "12V battery charge",
     "path": "Battery",
     "pid": "22",
@@ -37682,6 +37910,25 @@
     "bitLength": 8,
     "bitOffset": 160,
     "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_C_DEV_V",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV cell deviation (voltage)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -38708,6 +38955,25 @@
     "bitLength": 8,
     "bitOffset": 176,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_INLET_T",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Battery inlet temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -39715,6 +39981,25 @@
     "bitLength": 8,
     "bitOffset": 184,
     "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_HTR1_T",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery heater 1 temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -40459,6 +40744,25 @@
     "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_HTR2_T",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery heater 2 temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -42782,6 +43086,25 @@
     "bitLength": 8,
     "bitOffset": 216,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_FAN_STATUS",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery fan status",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 216,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -43100,6 +43423,25 @@
     "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 216,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_DET_MAX_ID",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery max deteriation cell id",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [98]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -43442,6 +43784,25 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_FAN",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery fan",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "hertz"
   },
   {
     "bitLength": 8,
@@ -44201,6 +44562,25 @@
     "pid": "22",
     "scaling": "raw*0.1 clamped to [25]",
     "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_VPWR",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Battery auxiliary voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "starterBatteryVoltage",
     "unit": "volts"
   },
   {
@@ -46608,6 +46988,25 @@
     "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 240,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7E4",
+    "id": "KONAEV_HVBAT_DET_MIN_ID",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "HV battery min deteriation cell id",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [98]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -55624,6 +56023,25 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7A0",
+    "id": "KONAEV_TT_FL",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "DCDD"
     },
     "debug": false,
@@ -57490,6 +57908,25 @@
     "bitLength": 8,
     "bitOffset": 64,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7B3",
+    "id": "KONAEV_IAT_PASS",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Passenger temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -58292,6 +58729,25 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "hdr": "7B3",
+    "id": "KONAEV_IAT_PASS_LEGS",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Passenger leg temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -58933,6 +59389,25 @@
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "hdr": "7A0",
+    "id": "KONAEV_TT_FR",
+    "make": "Hyundai",
+    "model": "Kona-Electric",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
