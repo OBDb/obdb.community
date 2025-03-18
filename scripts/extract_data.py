@@ -108,6 +108,57 @@ def clone_repos(org_name, workspace_dir):
     if failed > 0:
         print("Check the error messages above for details about failed repositories.")
 
+def process_signal_groups(signalset_data, parameters, make, model):
+    """Process signal groups and assign group membership to parameters."""
+    if 'signalGroups' not in signalset_data:
+        return parameters
+
+    for param in parameters:
+        param['signalGroups'] = []  # Initialize empty list for signal groups this parameter belongs to
+
+    for group in signalset_data.get('signalGroups', []):
+        group_id = group.get('id')
+        matching_regex = group.get('matchingRegex')
+        group_name = group.get('name', group_id)
+        group_path = group.get('path', '')
+        suggested_metric_group = group.get('suggestedMetricGroup', '')
+
+        if not group_id or not matching_regex:
+            continue
+
+        try:
+            pattern = re.compile(matching_regex)
+
+            # Check each parameter against the regex
+            for param in parameters:
+                param_id = param.get('id', '')
+                if pattern.search(param_id):
+                    # Create a group reference with basic info
+                    group_info = {
+                        'id': group_id,
+                        'name': group_name,
+                        'path': group_path
+                    }
+
+                    # Add suggestedMetricGroup if it exists
+                    if suggested_metric_group:
+                        group_info['suggestedMetricGroup'] = suggested_metric_group
+
+                    # Store the regex match result to extract subgroups if needed
+                    match = pattern.search(param_id)
+                    if match and match.groups():
+                        # Extract capture groups from the regex match
+                        group_info['matchDetails'] = {}
+                        for i, group_value in enumerate(match.groups(), 1):
+                            group_info['matchDetails'][f'group{i}'] = group_value
+
+                    # Add this group to the parameter's signalGroups list
+                    param['signalGroups'].append(group_info)
+        except re.error as e:
+            print(f"Error with regex pattern '{matching_regex}' in signal group '{group_id}': {e}")
+
+    return parameters
+
 def parse_signalset(file_path, make, model, years=None):
     """Parse a signalset JSON file and extract parameter information."""
     with open(file_path) as f:
@@ -170,7 +221,8 @@ def parse_signalset(file_path, make, model, years=None):
                     'model': model,
                     'bitOffset': bit_offset,
                     'bitLength': bit_length,
-                    'debug': debug_flag
+                    'debug': debug_flag,
+                    'fmt': fmt  # Include the complete fmt object for reference
                 }
 
                 # Add model year information if available
@@ -178,6 +230,9 @@ def parse_signalset(file_path, make, model, years=None):
                     parameter['modelYears'] = years
 
                 parameters.append(parameter)
+
+    # Process signal groups and assign to parameters
+    parameters = process_signal_groups(data, parameters, make, model)
 
     return parameters
 

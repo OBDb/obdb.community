@@ -73,6 +73,9 @@ const SignalDetails = ({ signal }) => {
     return signal.hdr || '';
   };
 
+  // Check if this parameter belongs to any signal groups
+  const hasSignalGroups = signal.signalGroups && Array.isArray(signal.signalGroups) && signal.signalGroups.length > 0;
+
   return (
     <Card title="Signal Details" className="mb-4">
       <div className="p-4">
@@ -121,6 +124,20 @@ const SignalDetails = ({ signal }) => {
                   variant="warning"
                   size="sm"
                 />
+              </div>
+            )}
+
+            {/* Signal Group Information */}
+            {hasSignalGroups && (
+              <div className="mt-3">
+                <h4 className="text-xs font-medium text-gray-700 mb-1">Signal Groups:</h4>
+                <div className="flex flex-wrap gap-1 mt-1">
+                  {signal.signalGroups.map((group, idx) => (
+                    <div key={idx} className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-blue-100 text-blue-800">
+                      {group.name || group.id}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
