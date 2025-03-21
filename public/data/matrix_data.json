@@ -34457,6 +34457,8 @@
       "div": 1600,
       "len": 18,
       "max": 10485,
+      "min": -10485,
+      "sign": true,
       "unit": "kilowattHours"
     },
     "hdr": "714",
@@ -34466,7 +34468,7 @@
     "name": "Trip consumption (short)",
     "path": "Trips",
     "pid": "22",
-    "scaling": "raw/1600 clamped to [10485]",
+    "scaling": "raw/1600 clamped to [-10485, 10485]",
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilowattHours"
