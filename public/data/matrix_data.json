@@ -7117,6 +7117,30 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "122B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "ALTIMA_CC_S",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Cruise control speed",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1236"
     },
     "debug": false,
@@ -7163,6 +7187,34 @@
     "scaling": "raw clamped to [-32767, 32767]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1266"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -273,
+      "div": 128,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "mul": 3,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "ALTIMA_VVTO_T",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "VVT oil temperature",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw*3 /128 +-273 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -41628,6 +41680,30 @@
     "scaling": "raw*0.9 +-40.9 clamped to [-36.81, 192.69]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1186"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "7E0",
+    "id": "ALTIMA_FLV",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
   },
   {
     "bitLength": 8,
