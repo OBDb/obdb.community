@@ -74299,6 +74299,32 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B3",
+    "id": "EV9_VSS",
+    "make": "Kia",
+    "model": "EV9",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "signalGroups": [],
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B3",
     "id": "IONIQ5_VSS",
     "make": "Hyundai",
     "model": "IONIQ-5",
@@ -74328,32 +74354,6 @@
     "id": "IONIQ6_VSS",
     "make": "Hyundai",
     "model": "IONIQ-6",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "signalGroups": [],
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 232,
-    "cmd": {
-      "22": "0100"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 232,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B3",
-    "id": "EV9_VSS",
-    "make": "Kia",
-    "model": "EV9",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -92021,7 +92021,7 @@
     "cmd": {
       "22": "0100"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -95731,7 +95731,7 @@
     "cmd": {
       "22": "0100"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
