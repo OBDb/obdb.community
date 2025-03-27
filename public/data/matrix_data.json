@@ -38825,6 +38825,33 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "01": "2F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 1000,
+      "nullmin": 0,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "A1_RANGE",
+    "make": "Audi",
+    "model": "A1",
+    "name": "Range remaining",
+    "path": "Fuel.Generic",
+    "pid": "01",
+    "scaling": "raw*1000 /255 clamped to [100]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "01": "30"
     },
     "debug": false,
