@@ -38832,7 +38832,7 @@
     "fmt": {
       "div": 255,
       "len": 8,
-      "max": 100,
+      "max": 1000,
       "mul": 1000,
       "nullmin": 0,
       "unit": "kilometers"
@@ -38844,7 +38844,7 @@
     "name": "Range remaining",
     "path": "Fuel.Generic",
     "pid": "01",
-    "scaling": "raw*1000 /255 clamped to [100]",
+    "scaling": "raw*1000 /255 clamped to [1000]",
     "suggestedMetric": "fuelRange",
     "unit": "kilometers"
   },
