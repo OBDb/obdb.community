@@ -4251,6 +4251,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "01": "0C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 16383.75,
+      "mul": 0.25,
+      "unit": "rpm"
+    },
+    "hdr": "7DF",
+    "id": "HECTOR_RPM",
+    "make": "MG",
+    "model": "Hector",
+    "name": "Engine RPM",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw*0.25 clamped to [16383.75]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "01": "10"
     },
     "debug": false,
@@ -35366,6 +35391,30 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
+      "22": "B921"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "710",
+    "id": "HECTOR_GWM_ODO",
+    "make": "MG",
+    "model": "Hector",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DD01"
     },
     "debug": false,
@@ -38333,6 +38382,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "01": "0D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7DF",
+    "id": "HECTOR_VSS",
+    "make": "MG",
+    "model": "Hector",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "01",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "01": "0E"
     },
     "debug": false,
@@ -38970,6 +39043,32 @@
     "model": "",
     "name": "Ambient air temperature",
     "path": "Climate.Generic",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "46"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "HECTOR_AAT",
+    "make": "MG",
+    "model": "Hector",
+    "name": "Ambient air temperature",
+    "path": "Climate",
     "pid": "01",
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
@@ -46783,6 +46882,30 @@
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "710",
+    "id": "HECTOR_GWM_STATUS",
+    "make": "MG",
+    "model": "Hector",
+    "name": "Vehicle Gateway Status",
+    "path": "Vehicle.Internal",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
