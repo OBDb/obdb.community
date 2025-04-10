@@ -6059,6 +6059,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 410,
+      "min": -410,
+      "mul": 1.5,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7B3",
+    "id": "GR_COROLLA_STEERING_ANGLE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Steering Angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*1.5 clamped to [-410, 410]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1022"
     },
     "debug": false,
@@ -6158,6 +6185,58 @@
     "scaling": "raw/100 clamped to [655]",
     "suggestedMetric": "fuelTankLevel",
     "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1026"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B1",
+    "id": "GR_COROLLA_COUPLING_TEMP",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Coupling Temperature",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw/128 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1074"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 1000,
+      "mul": 10,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "GR_COROLLA_ENG_OIL_PRESS",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Engine Oil Pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /128 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
   },
   {
     "bitLength": 16,
@@ -28238,34 +28317,6 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "47"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -32768,
-      "bix": 24,
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "min": -1000,
-      "unit": "degrees"
-    },
-    "hdr": "7B0",
-    "id": "GR_COROLLA_STEER_ANGLE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Steering wheel angle",
-    "path": "Control",
-    "pid": "21",
-    "scaling": "raw/10 +-32768 clamped to [-1000, 1000]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 240,
     "cmd": {
       "22": "DFA0"
@@ -40602,32 +40653,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "GR_COROLLA_TT_FL",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "21": "21"
     },
     "debug": false,
@@ -40846,27 +40871,33 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "21": "30"
+      "21": "62"
     },
     "debug": true,
-    "eax": "2A",
+    "eax": "",
     "fmt": {
-      "add": -0.5,
-      "div": 58,
       "len": 8,
-      "max": 4,
-      "unit": "bars"
+      "map": {
+        "0": {
+          "description": "",
+          "value": "Off"
+        },
+        "2": {
+          "description": "",
+          "value": "On"
+        }
+      }
     },
-    "hdr": "750",
-    "id": "GR_COROLLA_TP_FL",
+    "hdr": "7D0",
+    "id": "GR_COROLLA_PARKING_BRAKE",
     "make": "Toyota",
     "model": "GR-Corolla",
-    "name": "Front left tire pressure",
-    "path": "Tires",
+    "name": "Parking Brake",
+    "path": "Control",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
+    "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -42070,6 +42101,84 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TT_FL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TP_FL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1006"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -80,
+      "len": 8,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B0",
+    "id": "GR_COROLLA_MASTER_CYL_TEMP",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Master Cylinder Sensor Temperature",
+    "path": "Brakes",
+    "pid": "22",
+    "scaling": "raw+-80 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1014"
     },
     "debug": false,
@@ -42118,6 +42227,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 20,
+      "unit": "volts"
+    },
+    "hdr": "7C0",
+    "id": "GR_COROLLA_BATTERY_VOLTAGE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "B+ Battery Voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1022"
     },
     "debug": false,
@@ -42138,6 +42272,32 @@
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1059"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -41,
+      "div": 1.42,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "GR_COROLLA_ACCEL_PEDAL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Accelerator Pedal",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/1.42 +-41 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -42608,6 +42768,32 @@
     "scaling": "Mapped values: {'0': {'description': 'E-pedal mode is off', 'value': 'EPEDAL_OFF'}, '4': {'description': 'E-pedal mode is on', 'value': 'EPEDAL_ON'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1638"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "GR_COROLLA_ATF_TEMP",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Transmission Fluid Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -60603,33 +60789,6 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "GR_COROLLA_TT_RL",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
       "21": "30"
     },
     "debug": false,
@@ -60800,33 +60959,6 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 16,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GR_COROLLA_TP_RL",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -60934,6 +61066,60 @@
     "scaling": "raw+-40 clamped to [-30, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TT_RL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TP_RL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -77437,33 +77623,6 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 24,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "GR_COROLLA_TT_RR",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
       "21": "30"
     },
     "debug": false,
@@ -77634,33 +77793,6 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 24,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GR_COROLLA_TP_RR",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -77773,6 +77905,33 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TT_RR",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "1005"
     },
     "debug": false,
@@ -77852,6 +78011,33 @@
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TP_RR",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -90633,33 +90819,6 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 32,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "GR_COROLLA_TT_SPARE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Spare tire temperature",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
       "21": "30"
     },
     "debug": false,
@@ -90819,33 +90978,6 @@
     "id": "COROLLA_TP_SPARE",
     "make": "Toyota",
     "model": "Corolla",
-    "name": "Spare tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 32,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GR_COROLLA_TP_SPARE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -92260,6 +92392,60 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TT_SPARE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TP_SPARE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -104335,33 +104521,6 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 8,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "GR_COROLLA_TT_FR",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
       "21": "21"
     },
     "debug": false,
@@ -104561,33 +104720,6 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 8,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GR_COROLLA_TP_FR",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -104700,6 +104832,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TT_FR",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "1005"
     },
     "debug": false,
@@ -104779,6 +104938,33 @@
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GR_COROLLA_TP_FR",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
