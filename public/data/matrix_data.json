@@ -30860,6 +30860,31 @@
       "unit": "seconds"
     },
     "hdr": "DA10",
+    "id": "CIVIC_RUNTM",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Time since engine start",
+    "path": "Clocks",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 368,
+    "cmd": {
+      "22": "2660"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 368,
+      "len": 16,
+      "max": 65535,
+      "unit": "seconds"
+    },
+    "hdr": "DA10",
     "id": "CRV_RUNTM",
     "make": "Honda",
     "model": "CR-V",
@@ -30917,31 +30942,6 @@
       2010,
       2013
     ],
-    "name": "Time since engine start",
-    "path": "Clocks",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 368,
-    "cmd": {
-      "22": "2660"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 368,
-      "len": 16,
-      "max": 65535,
-      "unit": "seconds"
-    },
-    "hdr": "DA10",
-    "id": "CIVIC_RUNTM",
-    "make": "Honda",
-    "model": "Civic",
     "name": "Time since engine start",
     "path": "Clocks",
     "pid": "22",
@@ -36043,6 +36043,31 @@
       "unit": "kilometers"
     },
     "hdr": "DA10",
+    "id": "CIVIC_ODO",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 344,
+    "cmd": {
+      "22": "2660"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 344,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "DA10",
     "id": "CRV_ODO",
     "make": "Honda",
     "model": "CR-V",
@@ -36100,31 +36125,6 @@
       2010,
       2013
     ],
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 344,
-    "cmd": {
-      "22": "2660"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 344,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "DA10",
-    "id": "CIVIC_ODO",
-    "make": "Honda",
-    "model": "Civic",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -38622,9 +38622,9 @@
       "unit": "celsius"
     },
     "hdr": "DB33",
-    "id": "TLX_ECT",
-    "make": "Acura",
-    "model": "TLX",
+    "id": "CIVIC_ECT",
+    "make": "Honda",
+    "model": "Civic",
     "name": "Engine coolant temperature",
     "path": "Engine",
     "pid": "01",
@@ -38638,7 +38638,7 @@
     "cmd": {
       "01": "05"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -38648,9 +38648,9 @@
       "unit": "celsius"
     },
     "hdr": "DB33",
-    "id": "CIVIC_ECT",
-    "make": "Honda",
-    "model": "Civic",
+    "id": "TLX_ECT",
+    "make": "Acura",
+    "model": "TLX",
     "name": "Engine coolant temperature",
     "path": "Engine",
     "pid": "01",
@@ -57138,6 +57138,33 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "add": -40,
+      "bix": 136,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "DA60",
+    "id": "CIVIC_AAT",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Outside air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "7028"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "bix": 136,
       "len": 8,
       "max": 215,
@@ -57179,33 +57206,6 @@
       2010,
       2013
     ],
-    "name": "Outside air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "7028"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 136,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DA60",
-    "id": "CIVIC_AAT",
-    "make": "Honda",
-    "model": "Civic",
     "name": "Outside air temperature",
     "path": "Climate",
     "pid": "22",
