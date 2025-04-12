@@ -6190,6 +6190,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655,
+      "nullmax": 655,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "RAV4HYBRID_FLV",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1026"
     },
     "debug": true,
@@ -42108,6 +42134,33 @@
     "fmt": {
       "add": -40,
       "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -44648,6 +44701,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F5B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_SOC",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2021"
     },
     "debug": false,
@@ -44877,6 +44956,46 @@
     "id": "PRIUSPRIME_TID_1",
     "make": "Toyota",
     "model": "Prius-Prime",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TID_1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -61079,6 +61198,34 @@
       "add": -40,
       "bix": 16,
       "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_3",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -61413,6 +61560,47 @@
     "id": "PRIUSPRIME_TID_3",
     "make": "Toyota",
     "model": "Prius-Prime",
+    "name": "Tire 3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TID_3",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Tire 3 position",
     "path": "Tires",
     "pid": "22",
@@ -77913,6 +78101,34 @@
       "add": -40,
       "bix": 24,
       "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_4",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -78060,6 +78276,34 @@
     "id": "PRIUSPRIME_TP_2",
     "make": "Toyota",
     "model": "Prius-Prime",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 24,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -79516,6 +79760,47 @@
     "id": "PRIUSPRIME_TID_4",
     "make": "Toyota",
     "model": "Prius-Prime",
+    "name": "Tire 4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TID_4",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Tire 4 position",
     "path": "Tires",
     "pid": "22",
@@ -95483,6 +95768,34 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 40,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_3",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "18A0"
     },
     "debug": false,
@@ -100649,6 +100962,34 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 56,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_4",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "DCDD"
     },
     "debug": false,
@@ -104840,6 +105181,34 @@
       "add": -40,
       "bix": 8,
       "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -104992,6 +105361,34 @@
     "pid": "22",
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 8,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
   {
@@ -105286,6 +105683,47 @@
     "id": "PRIUSPRIME_TID_2",
     "make": "Toyota",
     "model": "Prius-Prime",
+    "name": "Tire 2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TID_2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
