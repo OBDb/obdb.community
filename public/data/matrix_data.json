@@ -4124,6 +4124,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_GEAR_LOCKUP",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Gear lock-up",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 9,
     "cmd": {
       "01": "01"
@@ -4956,6 +4981,33 @@
       0,
       2018
     ],
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_ATF_PAN_T",
+    "make": "Toyota",
+    "model": "Corolla",
     "name": "Transmission temperature (pan)",
     "path": "Transmission",
     "pid": "21",
@@ -23652,6 +23704,34 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_ATF_TQC_T",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "182E"
     },
     "debug": false,
@@ -31033,6 +31113,32 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_PREV_TRIP_DST",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Previous trip distance",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 408,
     "cmd": {
       "22": "0101"
@@ -35097,6 +35203,30 @@
       0,
       2018
     ],
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "28"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_ODO",
+    "make": "Toyota",
+    "model": "Corolla",
     "name": "Odometer",
     "path": "Trips",
     "pid": "21",
@@ -40733,6 +40863,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "29"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "COROLLA_FLI_VOL",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "30"
     },
     "debug": false,
@@ -40946,6 +41101,30 @@
       0,
       2018
     ],
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 20,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_GEAR",
+    "make": "Toyota",
+    "model": "Corolla",
     "name": "Gear",
     "path": "Transmission",
     "pid": "21",
@@ -99657,6 +99836,32 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_VVTOT",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Variable valve timing oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -102761,6 +102966,32 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_EOT",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -104880,6 +105111,31 @@
       0,
       2018
     ],
+    "name": "Cruise control speed",
+    "path": "Cruise control",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "21"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_CC_S",
+    "make": "Toyota",
+    "model": "Corolla",
     "name": "Cruise control speed",
     "path": "Cruise control",
     "pid": "21",
