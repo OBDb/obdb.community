@@ -21946,6 +21946,31 @@
     "bitLength": 16,
     "bitOffset": 112,
     "cmd": {
+      "22": "7029"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 16,
+      "max": 100,
+      "unit": "liters"
+    },
+    "hdr": "DA60",
+    "id": "CIVIC_FUEL_LEVEL",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 112,
+    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -76354,6 +76379,31 @@
     "bitLength": 8,
     "bitOffset": 232,
     "cmd": {
+      "22": "0100"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B3",
+    "id": "ELANTRA_VSS",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -77548,6 +77598,31 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "01": "2F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "DB33",
+    "id": "CIVIC_FUEL_LEVEL_PERCENT",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "01",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
