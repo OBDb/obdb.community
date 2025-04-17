@@ -1076,6 +1076,56 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 150,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 150,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7D1",
+    "id": "VELOSTER_ABS_TC_SWITCH",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "ABS Traction Control Switch (Raw)",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 150,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 150,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7D1",
+    "id": "ELANTRA_ABS_TC_SWITCH",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "ABS Traction Control Switch (Raw)",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 16,
     "cmd": {
       "01": "01"
@@ -2355,6 +2405,456 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DOOR_RL_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door Rear Left Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_DOOR_RL_OPEN",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Door Rear Left Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 34,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 34,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DOOR_FL_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door Front Left Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 34,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 34,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_DOOR_FL_OPEN",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Door Front Left Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 34,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 34,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_LOCK_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door Lock Front Right (Raw)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 34,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 34,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_LOCK_FR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Door Lock Front Right (Raw)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_HANDBRAKE",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Handbrake Switch",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_HANDBRAKE",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Handbrake Switch",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_LOCK_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door Lock Front Left (Raw)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_LOCK_FL",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Door Lock Front Left (Raw)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DOOR_FR_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door Front Right Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_DOOR_FR_OPEN",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Door Front Right Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_REVERSE_GEAR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Reverse Gear Selected",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_REVERSE_GEAR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Reverse Gear Selected",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 37,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 37,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DOOR_RR_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door Rear Right Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 37,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 37,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_DOOR_RR_OPEN",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Door Rear Right Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 39,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 39,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DOOR_TRUNK_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door Trunk Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 39,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 39,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_DOOR_TRUNK_OPEN",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Door Trunk Open",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 4,
     "cmd": {
       "01": "13"
@@ -2630,6 +3130,56 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_BELT_PASSENGER",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Seatbelt Passenger",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_BELT_PASSENGER",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Seatbelt Passenger",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 405,
     "cmd": {
       "22": "0101"
@@ -2679,6 +3229,56 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 41,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 41,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_BELT_DRIVER",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Seatbelt Driver",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 41,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 41,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_BELT_DRIVER",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Seatbelt Driver",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
   },
   {
     "bitLength": 1,
@@ -4235,6 +4835,31 @@
       "max": 16383.75,
       "unit": "rpm"
     },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_RPM",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE RPM",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw/4 clamped to [16383.75]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "0C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 16383.75,
+      "unit": "rpm"
+    },
     "hdr": "7E0",
     "id": "RPM",
     "make": "SAEJ1979",
@@ -4269,6 +4894,31 @@
     "pid": "01",
     "scaling": "raw*0.25 clamped to [16383.75]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "0C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 16383.75,
+      "unit": "rpm"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_RPM",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE RPM",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw/4 clamped to [16383.75]",
     "suggestedMetric": "",
     "unit": "rpm"
   },
@@ -4527,6 +5177,58 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "01": "3C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_CAT_TEMP_B1S1",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Catalyst Temp B1S1",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw/10 +-40 clamped to [6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "3C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_CAT_TEMP_B1S1",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Catalyst Temp B1S1",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw/10 +-40 clamped to [6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "01": "3D"
     },
     "debug": false,
@@ -4615,6 +5317,31 @@
     "fmt": {
       "div": 1000,
       "len": 16,
+      "max": 65.535,
+      "unit": "volts"
+    },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_MODULE_VOLTAGE",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Control Module Voltage",
+    "path": "Electrical",
+    "pid": "01",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "42"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
       "max": 65535,
       "unit": "volts"
     },
@@ -4627,6 +5354,31 @@
     "pid": "01",
     "scaling": "raw/1000 clamped to [65535]",
     "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "42"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "unit": "volts"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_MODULE_VOLTAGE",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Control Module Voltage",
+    "path": "Electrical",
+    "pid": "01",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
     "unit": "volts"
   },
   {
@@ -4664,6 +5416,32 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 32768,
+      "len": 16,
+      "max": 2,
+      "mul": 2,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_LAMBDA_CMD",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Lambda Commanded",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw*2 /32768 clamped to [2]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "44"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "div": 65535,
       "len": 16,
       "max": 1.99,
@@ -4678,6 +5456,32 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw*2 /65535 clamped to [1.99]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "44"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 32768,
+      "len": 16,
+      "max": 2,
+      "mul": 2,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_LAMBDA_CMD",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Lambda Commanded",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw*2 /32768 clamped to [2]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -23619,6 +24423,60 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "01": "34"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 32768,
+      "len": 16,
+      "max": 2,
+      "mul": 2,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_LAMBDA_B1S1",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Lambda B1S1 (Actual)",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw*2 /32768 clamped to [2]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "01": "34"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 32768,
+      "len": 16,
+      "max": 2,
+      "mul": 2,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_LAMBDA_B1S1",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Lambda B1S1 (Actual)",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw*2 /32768 clamped to [2]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "01": "9A"
     },
     "debug": false,
@@ -26615,6 +27473,60 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_INJ_DUR_1",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Injection Duration Cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_INJ_DUR_1",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Injection Duration Cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 192,
     "cmd": {
       "22": "DFA0"
@@ -26664,6 +27576,116 @@
     "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_INJ_DUR_2",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Injection Duration Cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_INJ_DUR_2",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Injection Duration Cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 200,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7D1",
+    "id": "VELOSTER_STEERING_ANGLE",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Steering Wheel Angle",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 200,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7D1",
+    "id": "ELANTRA_STEERING_ANGLE",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Steering Wheel Angle",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -26881,6 +27903,60 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_INJ_DUR_3",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Injection Duration Cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_INJ_DUR_3",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Injection Duration Cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 224,
     "cmd": {
       "22": "0105"
@@ -27095,6 +28171,60 @@
     "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_INJ_DUR_4",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Injection Duration Cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_INJ_DUR_4",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Injection Duration Cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
   },
   {
     "bitLength": 16,
@@ -28497,6 +29627,60 @@
     "scaling": "raw/10000 clamped to [6.5535]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "div": 86.7,
+      "len": 16,
+      "max": 100,
+      "sign": true,
+      "unit": "percent"
+    },
+    "hdr": "7D1",
+    "id": "VELOSTER_BRAKE_PRESSURE",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Brake Pressure",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw/86.7 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "div": 86.7,
+      "len": 16,
+      "max": 100,
+      "sign": true,
+      "unit": "percent"
+    },
+    "hdr": "7D1",
+    "id": "ELANTRA_BRAKE_PRESSURE",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Brake Pressure",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw/86.7 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -31164,6 +32348,58 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_CHG_PWR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "BMS Available Charge Power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "ELANTRA_BMS_CHG_PWR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "BMS Available Charge Power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 408,
     "cmd": {
       "22": "0101"
@@ -31700,6 +32936,58 @@
     "scaling": "raw/32 clamped to [2047.96875]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_DISCHG_PWR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "BMS Available Discharge Power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "ELANTRA_BMS_DISCHG_PWR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "BMS Available Discharge Power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
   },
   {
     "bitLength": 16,
@@ -36499,6 +37787,31 @@
     "cmd": {
       "22": "B002"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7C6",
+    "id": "VELOSTER_ODO_KM",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Odometer (Metric)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "B002"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -36691,6 +38004,31 @@
     "id": "TUCSON_ODO_MI",
     "make": "Hyundai",
     "model": "Tucson",
+    "name": "Odometer (Imperial)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "miles"
+    },
+    "hdr": "7C6",
+    "id": "VELOSTER_ODO_MI",
+    "make": "Hyundai",
+    "model": "Veloster",
     "name": "Odometer (Imperial)",
     "path": "Trips",
     "pid": "22",
@@ -38843,6 +40181,56 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "01": "05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_COOLANT_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Coolant Temp",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_COOLANT_TEMP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Coolant Temp",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "01": "06"
     },
     "debug": false,
@@ -38989,12 +40377,60 @@
       "max": 255,
       "unit": "kilopascal"
     },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_MAP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Manifold Absolute Pressure",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "0B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilopascal"
+    },
     "hdr": "7E0",
     "id": "MAP",
     "make": "SAEJ1979",
     "model": "",
     "name": "Intake manifold absolute pressure",
     "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "0B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilopascal"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_MAP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Manifold Absolute Pressure",
+    "path": "Engine",
     "pid": "01",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -39048,6 +40484,54 @@
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
     "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "0D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_SPEED",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Speed",
+    "path": "Chassis",
+    "pid": "01",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "0D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_SPEED",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Speed",
+    "path": "Chassis",
+    "pid": "01",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
   {
@@ -39630,12 +41114,60 @@
       "max": 255,
       "unit": "kilopascal"
     },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_BARO",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Barometric Pressure",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "33"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilopascal"
+    },
     "hdr": "7E0",
     "id": "BARO",
     "make": "SAEJ1979",
     "model": "",
     "name": "Barometric pressure",
     "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "33"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilopascal"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_BARO",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Barometric Pressure",
+    "path": "Engine",
     "pid": "01",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -39726,6 +41258,31 @@
     "cmd": {
       "01": "46"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_AMBIENT_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Ambient Air Temp",
+    "path": "Climate",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "46"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -39743,6 +41300,31 @@
     "path": "Climate",
     "pid": "01",
     "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "46"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_AMBIENT_TEMP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Ambient Air Temp",
+    "path": "Climate",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -49605,6 +51187,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "VELOSTER_ABS_SPEED_RR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "ABS Speed Rear Right",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -49636,6 +51243,31 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "ELANTRA_ABS_SPEED_RR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "ABS Speed Rear Right",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -50125,6 +51757,62 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_RETARD_2",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock Retard Cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_KNOCK_RETARD_2",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Knock Retard Cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -51082,6 +52770,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "VELOSTER_ABS_SPEED_RL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "ABS Speed Rear Left",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -51113,6 +52826,31 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "ELANTRA_ABS_SPEED_RL",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "ABS Speed Rear Left",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -51715,6 +53453,32 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_RR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Pressure Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -51725,14 +53489,14 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "ELANTRA_TP_RL",
+    "id": "ELANTRA_TPMS_PRESS_RR",
     "make": "Hyundai",
     "model": "Elantra",
-    "name": "Rear left tire pressure",
+    "name": "TPMS Pressure Rear Right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearLeftTirePressure",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
@@ -51760,6 +53524,62 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_RETARD_3",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock Retard Cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_KNOCK_RETARD_3",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Knock Retard Cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -51979,6 +53799,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MIN_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "BMS Battery Min Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -51998,6 +53845,33 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "ELANTRA_BMS_MIN_TEMP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "BMS Battery Min Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -53188,6 +55062,58 @@
     "bitLength": 8,
     "bitOffset": 120,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_TEMP_RR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Temperature Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "ELANTRA_TPMS_TEMP_RR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "TPMS Temperature Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
       "22": "E003"
     },
     "debug": false,
@@ -53291,6 +55217,62 @@
     "signalGroups": [],
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_RETARD_4",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock Retard Cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_KNOCK_RETARD_4",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Knock Retard Cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -53510,6 +55492,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MOD1_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "BMS Battery Mod 1 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -53529,6 +55538,33 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "ELANTRA_BMS_MOD1_TEMP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "BMS Battery Mod 1 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -55064,6 +57100,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MOD2_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "BMS Battery Mod 2 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -55083,6 +57146,33 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "ELANTRA_BMS_MOD2_TEMP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "BMS Battery Mod 2 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -57570,6 +59660,31 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_RR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Alert Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -57591,6 +59706,31 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "ELANTRA_TPMS_ALERT_RR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "TPMS Alert Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
   },
   {
     "bitLength": 8,
@@ -57810,6 +59950,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MOD3_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "BMS Battery Mod 3 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -57829,6 +59996,33 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "ELANTRA_BMS_MOD3_TEMP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "BMS Battery Mod 3 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -59205,6 +61399,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MOD4_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "BMS Battery Mod 4 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -59224,6 +61445,33 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "ELANTRA_BMS_MOD4_TEMP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "BMS Battery Mod 4 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -60549,6 +62797,32 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_RL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Pressure Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -60559,14 +62833,14 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "ELANTRA_TP_RR",
+    "id": "ELANTRA_TPMS_PRESS_RL",
     "make": "Hyundai",
     "model": "Elantra",
-    "name": "Rear right tire pressure",
+    "name": "TPMS Pressure Rear Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearRightTirePressure",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -60696,6 +62970,58 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "01": "67"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_COOLANT_B",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Coolant Temp B",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "01": "67"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_COOLANT_B",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Coolant Temp B",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -63590,6 +65916,114 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_TEMP_RL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Temperature Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "ELANTRA_TPMS_TEMP_RL",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "TPMS Temperature Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_LEARN_1",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock Learn Cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_KNOCK_LEARN_1",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Knock Learn Cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 168,
     "cmd": {
       "21": "02"
@@ -64898,6 +67332,62 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_LEARN_2",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock Learn Cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_KNOCK_LEARN_2",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Knock Learn Cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -66293,6 +68783,112 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_RL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Alert Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "ELANTRA_TPMS_ALERT_RL",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "TPMS Alert Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_LEARN_3",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock Learn Cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_KNOCK_LEARN_3",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Knock Learn Cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -67827,6 +70423,62 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_LEARN_4",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock Learn Cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_KNOCK_LEARN_4",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Knock Learn Cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -76372,31 +79024,6 @@
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 232,
-    "cmd": {
-      "22": "0100"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 232,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B3",
-    "id": "ELANTRA_VSS",
-    "make": "Hyundai",
-    "model": "Elantra",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
   },
@@ -87021,6 +89648,60 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 264,
+      "div": 1.3333,
+      "len": 8,
+      "max": 207,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_INTAKE_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Intake Air Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [207]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 264,
+      "div": 1.3333,
+      "len": 8,
+      "max": 207,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_INTAKE_TEMP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Intake Air Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [207]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 272,
     "cmd": {
       "21": "02"
@@ -88368,6 +91049,60 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "div": 1.3333,
+      "len": 8,
+      "max": 207,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_OIL_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Engine Oil Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [207]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "div": 1.3333,
+      "len": 8,
+      "max": 207,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_OIL_TEMP",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Engine Oil Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [207]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -91539,6 +94274,32 @@
       "max": 100,
       "unit": "percent"
     },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_SOC",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "BMS State Of Charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
     "hdr": "7E4",
     "id": "EV9_HVBAT_SOC",
     "make": "Kia",
@@ -91710,6 +94471,32 @@
     "pid": "22",
     "scaling": "raw*0.5 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D4",
+    "id": "ELANTRA_BMS_SOC",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "BMS State Of Charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
     "unit": "percent"
   },
   {
@@ -93054,6 +95841,31 @@
     "cmd": {
       "22": "B002"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "7C6",
+    "id": "VELOSTER_FLI_VOL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B002"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -93928,6 +96740,164 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "BC05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_HAZARD_SW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Hazard Switch (Raw)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_HAZARD_SW",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Hazard Switch (Raw)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC08"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 1,
+      "nullmax": 1,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_TURN_L",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Turn Signal Left (Raw >1)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC08"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 1,
+      "nullmax": 3,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_TURN_R",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Turn Signal Right (Raw >3)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC08"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 1,
+      "nullmax": 1,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_TURN_L",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Turn Signal Left (Raw >1)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC08"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 1,
+      "nullmax": 3,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_TURN_R",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Turn Signal Right (Raw >3)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -94223,6 +97193,32 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Pressure Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -94233,10 +97229,10 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "ELANTRA_TP_FL",
+    "id": "ELANTRA_TPMS_PRESS_FL",
     "make": "Hyundai",
     "model": "Elantra",
-    "name": "Front left tire pressure",
+    "name": "TPMS Pressure Front Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -94419,6 +97415,106 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 320,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 320,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_AUX_SOC",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Aux Battery SOC",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 320,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 320,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_AUX_SOC",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Aux Battery SOC",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 328,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 328,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_AUX_SOH",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Aux Battery SOH",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 328,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 328,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_AUX_SOH",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Aux Battery SOH",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -97127,6 +100223,58 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 12.8,
+      "len": 8,
+      "max": 18,
+      "unit": "volts"
+    },
+    "hdr": "7C6",
+    "id": "VELOSTER_CLUSTER_VOLTAGE",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Cluster Voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [18]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 12.8,
+      "len": 8,
+      "max": 18,
+      "unit": "volts"
+    },
+    "hdr": "7C6",
+    "id": "ELANTRA_CLUSTER_VOLTAGE",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Cluster Voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [18]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B009"
     },
     "debug": false,
@@ -97978,6 +101126,56 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "BC07"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DEFOG_LIGHT",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Defog Light On",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "BC07"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_DEFOG_LIGHT",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Defog Light On",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -98036,6 +101234,32 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_TEMP_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Temperature Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -98055,6 +101279,32 @@
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "ELANTRA_TPMS_TEMP_FL",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "TPMS Temperature Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -99205,6 +102455,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "VELOSTER_ABS_SPEED",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "ABS Speed (Avg)",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -99236,6 +102511,31 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "ELANTRA_ABS_SPEED",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "ABS Speed (Avg)",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -99643,6 +102943,112 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "BC05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 1,
+      "nullmax": 2,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_HL_SW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Headlight Switch (Raw >2)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "BC05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 1,
+      "nullmax": 2,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_HL_SW",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Headlight Switch (Raw >2)",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "BC09"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 12,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_HL_HIGH",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Headlight High Beam On",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw/12 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "BC09"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 12,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_HL_HIGH",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Headlight High Beam On",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw/12 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
   },
   {
     "bitLength": 8,
@@ -101265,6 +104671,162 @@
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "nullmax": 1,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DEFOG_SW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Defog Switch (Raw >1)",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "nullmax": 1,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_DEFOG_SW",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Defog Switch (Raw >1)",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "BC09"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 12,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_HL_LOW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Headlight Low Beam On",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw/12 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "BC09"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 12,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "ELANTRA_HL_LOW",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Headlight Low Beam On",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw/12 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Alert Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "ELANTRA_TPMS_ALERT_FL",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "TPMS Alert Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
   },
   {
     "bitLength": 8,
@@ -104451,6 +108013,32 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Pressure Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -104489,10 +108077,10 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "ELANTRA_TP_FR",
+    "id": "ELANTRA_TPMS_PRESS_FR",
     "make": "Hyundai",
     "model": "Elantra",
-    "name": "Front right tire pressure",
+    "name": "TPMS Pressure Front Right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -104752,6 +108340,58 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "01": "67"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "VELOSTER_SAE_COOLANT_A",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "SAE Coolant Temp A",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "01": "67"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "ELANTRA_SAE_COOLANT_A",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "SAE Coolant Temp A",
+    "path": "Engine",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -108937,6 +112577,58 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_TEMP_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Temperature Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "ELANTRA_TPMS_TEMP_FR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "TPMS Temperature Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 88,
     "cmd": {
       "21": "02"
@@ -109845,6 +113537,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "VELOSTER_ABS_SPEED_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "ABS Speed Front Left",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -109876,6 +113593,31 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "ELANTRA_ABS_SPEED_FL",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "ABS Speed Front Left",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -111182,6 +114924,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "VELOSTER_ABS_SPEED_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "ABS Speed Front Right",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -111213,6 +114980,31 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "ELANTRA_ABS_SPEED_FR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "ABS Speed Front Right",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -111759,6 +115551,31 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "TPMS Alert Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -111779,6 +115596,31 @@
     "signalGroups": [],
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "ELANTRA_TPMS_ALERT_FR",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "TPMS Alert Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
   },
   {
     "bitLength": 8,
@@ -111805,5 +115647,61 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_RETARD_1",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock Retard Cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 5,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "ELANTRA_KNOCK_RETARD_1",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Knock Retard Cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   }
 ]
