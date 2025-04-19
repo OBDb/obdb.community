@@ -8520,6 +8520,31 @@
       "unit": "celsius"
     },
     "hdr": "7DF",
+    "id": "F350_TOT",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Transmission oil temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
     "id": "FOCUS_TOT",
     "make": "Ford",
     "model": "Focus",
@@ -9598,6 +9623,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F350_TP_FL",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "FIESTA_TP_FL",
     "make": "Ford",
     "model": "Fiesta",
@@ -9884,6 +9934,31 @@
     "id": "F150_TP_FR",
     "make": "Ford",
     "model": "F-150",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "F350_TP_FR",
+    "make": "Ford",
+    "model": "F-350",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -10214,6 +10289,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F350_TP_RRO",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Rear right outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "FIESTA_TP_RR",
     "make": "Ford",
     "model": "Fiesta",
@@ -10522,6 +10622,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F350_TP_RLO",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Rear left outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "FIESTA_TP_RL",
     "make": "Ford",
     "model": "Fiesta",
@@ -10805,6 +10930,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F350_TP_RRI",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Rear right inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2817"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "FOCUS_TP_RRI",
     "make": "Ford",
     "model": "Focus",
@@ -10937,6 +11087,31 @@
     "id": "F150_TP_RLI",
     "make": "Ford",
     "model": "F-150",
+    "name": "Rear left inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2818"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "F350_TP_RLI",
+    "make": "Ford",
+    "model": "F-350",
     "name": "Rear left inner tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -12319,6 +12494,33 @@
     "id": "F150_STEER_ANGLE",
     "make": "Ford",
     "model": "F-150",
+    "name": "Steering wheel angle (ABS)",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/20 +-1638.4 clamped to [-1638, 1638]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "3201"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -1638.4,
+      "div": 20,
+      "len": 16,
+      "max": 1638,
+      "min": -1638,
+      "unit": "degrees"
+    },
+    "hdr": "760",
+    "id": "F350_STEER_ANGLE",
+    "make": "Ford",
+    "model": "F-350",
     "name": "Steering wheel angle (ABS)",
     "path": "Control",
     "pid": "22",
@@ -20087,6 +20289,34 @@
     "id": "F150_CC_TGT_VSS",
     "make": "Ford",
     "model": "F-150",
+    "name": "Target vehicle speed",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw*3.6 /10 clamped to [-736, 736]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A224"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 736,
+      "min": -736,
+      "mul": 3.6,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "764",
+    "id": "F350_CC_TGT_VSS",
+    "make": "Ford",
+    "model": "F-350",
     "name": "Target vehicle speed",
     "path": "Cruise control",
     "pid": "22",
@@ -37128,6 +37358,31 @@
       "unit": "kilometers"
     },
     "hdr": "720",
+    "id": "F350_ODO",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Odometer (Instrument panel)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "404C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 24,
+      "max": 1677721,
+      "unit": "kilometers"
+    },
+    "hdr": "720",
     "id": "FIESTA_ODO",
     "make": "Ford",
     "model": "Fiesta",
@@ -45773,6 +46028,70 @@
       }
     },
     "hdr": "7E0",
+    "id": "F350_GEAR",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E0",
     "id": "FOCUS_GEAR",
     "make": "Ford",
     "model": "Focus",
@@ -46140,6 +46459,50 @@
     "id": "F150_GEAR_SHFT",
     "make": "Ford",
     "model": "F-150",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "10": {
+          "description": "Manual",
+          "value": "MANUAL"
+        },
+        "46": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "50": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "60": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "70": {
+          "description": "Park",
+          "value": "PARK"
+        }
+      }
+    },
+    "hdr": "7E0",
+    "id": "F350_GEAR_SHFT",
+    "make": "Ford",
+    "model": "F-350",
     "name": "Shift gear",
     "path": "Transmission",
     "pid": "22",
@@ -50201,6 +50564,32 @@
     "id": "F150_FLI",
     "make": "Ford",
     "model": "F-150",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 255,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "F350_FLI",
+    "make": "Ford",
+    "model": "F-350",
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
