@@ -4749,6 +4749,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "GEAR_LOCKUP",
+    "make": "Toyota",
+    "model": "",
+    "name": "Gear lock-up",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 9,
     "cmd": {
       "01": "01"
@@ -5785,6 +5810,33 @@
       0,
       2018
     ],
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "ATF_PAN_T",
+    "make": "Toyota",
+    "model": "",
     "name": "Transmission temperature (pan)",
     "path": "Transmission",
     "pid": "21",
@@ -7032,6 +7084,32 @@
       "unit": "liters"
     },
     "hdr": "7C0",
+    "id": "FLV",
+    "make": "Toyota",
+    "model": "",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655,
+      "nullmax": 655,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
     "id": "PRIUSPRIME_FLV",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -7084,6 +7162,32 @@
       "unit": "celsius"
     },
     "hdr": "7B1",
+    "id": "COUPLING_TEMP",
+    "make": "Toyota",
+    "model": "",
+    "name": "Coupling Temperature",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw/128 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1026"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B1",
     "id": "GR_COROLLA_COUPLING_TEMP",
     "make": "Toyota",
     "model": "GR-Corolla",
@@ -7093,6 +7197,32 @@
     "scaling": "raw/128 clamped to [-20, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1074"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 1000,
+      "mul": 10,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "ENG_OIL_PRESS",
+    "make": "Toyota",
+    "model": "",
+    "name": "Engine Oil Pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /128 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
   },
   {
     "bitLength": 16,
@@ -8287,6 +8417,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1627"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "TF1_PAN",
+    "make": "Toyota",
+    "model": "",
+    "name": "Transmission Fluid Pan Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1628"
     },
     "debug": false,
@@ -8368,6 +8525,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1628"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "TF2_CONV",
+    "make": "Toyota",
+    "model": "",
+    "name": "Transmission Fluid Post-Converter Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1801"
     },
     "debug": false,
@@ -8423,6 +8607,31 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "HVBAT_CMU01_VOLT",
+    "make": "Toyota",
+    "model": "",
+    "name": "HV battery module 01 voltage",
+    "path": "Battery.Modules.01",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -24831,6 +25040,34 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "ATF_TQC_T",
+    "make": "Toyota",
+    "model": "",
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "COROLLA_ATF_TQC_T",
     "make": "Toyota",
     "model": "Corolla",
@@ -24875,6 +25112,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "HVBAT_CMU02_VOLT",
+    "make": "Toyota",
+    "model": "",
+    "name": "HV battery module 02 voltage",
+    "path": "Battery.Modules.02",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -29808,6 +30071,34 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "bix": 24,
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "min": -1000,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "STEER_ANGLE",
+    "make": "Toyota",
+    "model": "",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 +-32768 clamped to [-1000, 1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 240,
     "cmd": {
       "22": "DFA0"
@@ -32569,6 +32860,32 @@
     "id": "COROLLA_PREV_TRIP_DST",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Previous trip distance",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "PREV_TRIP_DST",
+    "make": "Toyota",
+    "model": "",
     "name": "Previous trip distance",
     "path": "Trips",
     "pid": "21",
@@ -36781,6 +37098,30 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
+      "21": "28"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "ODO",
+    "make": "Toyota",
+    "model": "",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0207"
     },
     "debug": false,
@@ -38390,6 +38731,31 @@
     "pid": "22",
     "scaling": "raw clamped to [16777215]",
     "signalGroups": [],
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "747",
+    "id": "ODO",
+    "make": "Toyota",
+    "model": "",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -42593,6 +42959,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "TIRE_FR_SPD",
+    "make": "Toyota",
+    "model": "",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -42608,6 +43000,32 @@
     "id": "GR86_TP_2_FL",
     "make": "Toyota",
     "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "TP_2_FL",
+    "make": "Toyota",
+    "model": "",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -42660,6 +43078,32 @@
     "id": "COROLLA_TT_FL",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "TT_FL",
+    "make": "Toyota",
+    "model": "",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -42739,6 +43183,31 @@
     "id": "COROLLA_FLI_VOL",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "29"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "FLI_VOL",
+    "make": "Toyota",
+    "model": "",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "21",
@@ -42914,6 +43383,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "TP_FL",
+    "make": "Toyota",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "62"
     },
     "debug": true,
@@ -42939,6 +43434,38 @@
     "path": "Control",
     "pid": "21",
     "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "62"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "Off"
+        },
+        "1": {
+          "description": "On",
+          "value": "On"
+        }
+      }
+    },
+    "hdr": "7D0",
+    "id": "PARKING_BRAKE",
+    "make": "Toyota",
+    "model": "",
+    "name": "Parking Brake",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'Off'}, '1': {'description': 'On', 'value': 'On'}}",
     "suggestedMetric": "",
     "unit": ""
   },
@@ -42987,6 +43514,30 @@
     "id": "COROLLA_GEAR",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 20,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "GEAR",
+    "make": "Toyota",
+    "model": "",
     "name": "Gear",
     "path": "Transmission",
     "pid": "21",
@@ -44202,6 +44753,33 @@
     "fmt": {
       "add": -40,
       "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "TT_1",
+    "make": "Toyota",
+    "model": "",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -44273,6 +44851,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1006"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -80,
+      "len": 8,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B0",
+    "id": "MASTER_CYL_TEMP",
+    "make": "Toyota",
+    "model": "",
+    "name": "Master Cylinder Sensor Temperature",
+    "path": "Brakes",
+    "pid": "22",
+    "scaling": "raw+-80 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1014"
     },
     "debug": false,
@@ -44332,6 +44936,31 @@
       "unit": "volts"
     },
     "hdr": "7C0",
+    "id": "BATTERY_VOLTAGE",
+    "make": "Toyota",
+    "model": "",
+    "name": "B+ Battery Voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 20,
+      "unit": "volts"
+    },
+    "hdr": "7C0",
     "id": "GR_COROLLA_BATTERY_VOLTAGE",
     "make": "Toyota",
     "model": "GR-Corolla",
@@ -44366,6 +44995,32 @@
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1059"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -41,
+      "div": 1.42,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "ACCEL_PEDAL",
+    "make": "Toyota",
+    "model": "",
+    "name": "Accelerator Pedal",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/1.42 +-41 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -44879,6 +45534,32 @@
       "unit": "celsius"
     },
     "hdr": "700",
+    "id": "ATF_TEMP",
+    "make": "Toyota",
+    "model": "",
+    "name": "Transmission Fluid Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1638"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
     "id": "GR_COROLLA_ATF_TEMP",
     "make": "Toyota",
     "model": "GR-Corolla",
@@ -44911,6 +45592,30 @@
     "pid": "22",
     "scaling": "raw clamped to [100]",
     "signalGroups": [],
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1739"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "745",
+    "id": "HVBAT_SOC_DISPLAY",
+    "make": "Toyota",
+    "model": "",
+    "name": "HV battery charge (displayed)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
   },
@@ -46611,6 +47316,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F0D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "VSS",
+    "make": "Toyota",
+    "model": "",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F2F"
     },
     "debug": false,
@@ -46656,6 +47385,32 @@
     "id": "COROLLA_FLI",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F2F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "FLI",
+    "make": "Toyota",
+    "model": "",
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
@@ -46865,6 +47620,32 @@
     "id": "RAV4HYBRID_SOC",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "SOC",
+    "make": "Toyota",
+    "model": "",
     "name": "State of charge",
     "path": "Battery",
     "pid": "22",
@@ -47145,6 +47926,46 @@
     "id": "RAV4HYBRID_TID_1",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "TID_1",
+    "make": "Toyota",
+    "model": "",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -63746,6 +64567,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "TIRE_RR_SPD",
+    "make": "Toyota",
+    "model": "",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -63762,6 +64610,33 @@
     "id": "GR86_TP_2_RL",
     "make": "Toyota",
     "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "TP_2_RL",
+    "make": "Toyota",
+    "model": "",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -63816,6 +64691,33 @@
     "id": "COROLLA_TT_RL",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "TT_RL",
+    "make": "Toyota",
+    "model": "",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -63997,6 +64899,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "TP_RL",
+    "make": "Toyota",
+    "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -64145,6 +65074,34 @@
       "add": -40,
       "bix": 16,
       "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "TT_3",
+    "make": "Toyota",
+    "model": "",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -64237,6 +65194,32 @@
     "pid": "22",
     "scaling": "raw/2 clamped to [100]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "106C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "HVBAT_SOC_MIN",
+    "make": "Toyota",
+    "model": "",
+    "name": "HV battery charge (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -64520,6 +65503,47 @@
     "id": "RAV4HYBRID_TID_3",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
+    "name": "Tire 3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "TID_3",
+    "make": "Toyota",
+    "model": "",
     "name": "Tire 3 position",
     "path": "Tires",
     "pid": "22",
@@ -81000,6 +82024,33 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "TIRE_RL_SPD",
+    "make": "Toyota",
+    "model": "",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -81016,6 +82067,33 @@
     "id": "GR86_TP_2_RR",
     "make": "Toyota",
     "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "TP_2_RR",
+    "make": "Toyota",
+    "model": "",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -81070,6 +82148,33 @@
     "id": "COROLLA_TT_RR",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "TT_RR",
+    "make": "Toyota",
+    "model": "",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -81251,6 +82356,33 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "TP_RR",
+    "make": "Toyota",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -81380,6 +82512,34 @@
     "id": "RAV4HYBRID_TT_4",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "TT_4",
+    "make": "Toyota",
+    "model": "",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -81574,6 +82734,34 @@
     "id": "RAV4HYBRID_TP_2",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 24,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "TP_2",
+    "make": "Toyota",
+    "model": "",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -83071,6 +84259,47 @@
     "id": "RAV4HYBRID_TID_4",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
+    "name": "Tire 4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "TID_4",
+    "make": "Toyota",
+    "model": "",
     "name": "Tire 4 position",
     "path": "Tires",
     "pid": "22",
@@ -94428,6 +95657,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "TP_2_SPARE",
+    "make": "Toyota",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "21": "16"
     },
     "debug": false,
@@ -94471,6 +95727,33 @@
     "id": "COROLLA_TT_SPARE",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "TT_SPARE",
+    "make": "Toyota",
+    "model": "",
     "name": "Spare tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -94641,6 +95924,33 @@
     "id": "COROLLA_TP_SPARE",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "TP_SPARE",
+    "make": "Toyota",
+    "model": "",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -99535,6 +100845,34 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 40,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "TP_3",
+    "make": "Toyota",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "18A0"
     },
     "debug": false,
@@ -103732,6 +105070,32 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "VVTOT",
+    "make": "Toyota",
+    "model": "",
+    "name": "Variable valve timing oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -105054,6 +106418,34 @@
     "id": "RAV4HYBRID_TP_4",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 56,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "TP_4",
+    "make": "Toyota",
+    "model": "",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -107007,6 +108399,32 @@
     "id": "COROLLA_EOT",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EOT",
+    "make": "Toyota",
+    "model": "",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "21",
@@ -109116,6 +110534,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "TIRE_FL_SPD",
+    "make": "Toyota",
+    "model": "",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -109132,6 +110577,33 @@
     "id": "GR86_TP_2_FR",
     "make": "Toyota",
     "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "TP_2_FR",
+    "make": "Toyota",
+    "model": "",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -109197,6 +110669,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "TT_FR",
+    "make": "Toyota",
+    "model": "",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "21": "21"
     },
     "debug": false,
@@ -109215,6 +110714,31 @@
       0,
       2018
     ],
+    "name": "Cruise control speed",
+    "path": "Cruise control",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "21"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
+    "id": "CC_S",
+    "make": "Toyota",
+    "model": "",
     "name": "Cruise control speed",
     "path": "Cruise control",
     "pid": "21",
@@ -109421,6 +110945,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "TP_FR",
+    "make": "Toyota",
+    "model": "",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -109550,6 +111101,34 @@
     "id": "RAV4HYBRID_TT_2",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "TT_2",
+    "make": "Toyota",
+    "model": "",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -109755,6 +111334,34 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 8,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "TP_1",
+    "make": "Toyota",
+    "model": "",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "1022"
     },
     "debug": false,
@@ -109801,6 +111408,32 @@
     "pid": "22",
     "scaling": "raw/2 clamped to [100]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "106C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "HVBAT_SOC_MAX",
+    "make": "Toyota",
+    "model": "",
+    "name": "HV battery charge (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -110084,6 +111717,47 @@
     "id": "RAV4HYBRID_TID_2",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
+    "name": "Tire 2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "TID_2",
+    "make": "Toyota",
+    "model": "",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
