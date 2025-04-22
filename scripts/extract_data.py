@@ -11,6 +11,17 @@ import multiprocessing
 import hashlib
 import sys
 
+# List of vehicle makes to exclude (these are standalone make repos)
+VEHICLE_MAKES = [
+    "abarth", "acura", "aiways", "alfaromeo", "alpine", "audi", "bentley", "buick", "byd",
+    "cadillac", "changan", "chery", "chevrolet", "chrysler", "citroen", "cupra", "dacia",
+    "dodge", "dongfeng", "ds", "fiat", "fisker", "ford", "genesis", "gmc", "haval", "holden",
+    "hyundai", "infiniti", "jaguar", "jeep", "kia", "ktm", "landrover", "lexus", "lincoln",
+    "maruti", "maserati", "maxus", "mazda", "mercedes", "mg", "mini", "mitsubishi", "nissan",
+    "omoda", "peugeot", "polestar", "ram", "renault", "rivian", "saab", "scion", "seat", "skoda",
+    "smart", "subaru", "suzuki", "tata", "tesla", "vauxhall-opel", "volkswagen", "volvo", "voyah"
+]
+
 def handle_repo(org_name, repo, workspace_dir):
     """Clone or update a single repository."""
     repo_path = Path(workspace_dir) / repo
@@ -71,7 +82,7 @@ def clone_repos(org_name, workspace_dir):
     # Filter out excluded repos
     filtered_repos = [
         repo for repo in repos
-        if '.' not in repo
+        if '.' not in repo and repo.lower() not in VEHICLE_MAKES
     ]
 
     print(f"Found {len(filtered_repos)} repositories to process")
