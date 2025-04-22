@@ -20,6 +20,7 @@ VEHICLE_MAKES = [
     "alpine",
     "audi",
     "bentley",
+    "bmw",
     "buick",
     "byd",
     "cadillac",
@@ -40,6 +41,7 @@ VEHICLE_MAKES = [
     "gmc",
     "haval",
     "holden",
+    "honda",
     "hyundai",
     "infiniti",
     "jaguar",
@@ -61,6 +63,7 @@ VEHICLE_MAKES = [
     "omoda",
     "peugeot",
     "polestar",
+    "porsche",
     "ram",
     "renault",
     "rivian",
@@ -73,6 +76,7 @@ VEHICLE_MAKES = [
     "suzuki",
     "tata",
     "tesla",
+    "toyota",
     "vauxhall-opel",
     "volkswagen",
     "volvo",
@@ -356,6 +360,11 @@ def extract_data(workspace_dir, output_dir, force=False):
     # Process each repository
     for repo_dir in Path(workspace_dir).iterdir():
         if not repo_dir.is_dir():
+            continue
+
+        # Skip if the repo is in the VEHICLE_MAKES list
+        if repo_dir.name.lower() in VEHICLE_MAKES:
+            print(f"Skipping standalone make repo: {repo_dir.name}")
             continue
 
         signalsets_dir = repo_dir / 'signalsets' / 'v3'
