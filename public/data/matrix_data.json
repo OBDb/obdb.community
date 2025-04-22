@@ -131,6 +131,30 @@
     "bitLength": 1,
     "bitOffset": 0,
     "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "797",
+    "id": "NISSAN_IGN",
+    "make": "Nissan",
+    "model": "",
+    "name": "Power switch",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1304"
     },
     "debug": false,
@@ -849,7 +873,7 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [1]",
-    "suggestedMetric": "isCharging",
+    "suggestedMetric": "",
     "unit": "offon"
   },
   {
@@ -5176,6 +5200,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 77,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 77,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E4",
+    "id": "HYUNDAI_HVBAT_PLUG_NORM",
+    "make": "Hyundai",
+    "model": "",
+    "name": "Normal charge port state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "pluggedIn",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 78,
     "cmd": {
       "22": "0101"
@@ -5202,6 +5251,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 78,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 78,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E4",
+    "id": "HYUNDAI_HVBAT_PLUG_RAPD",
+    "make": "Hyundai",
+    "model": "",
+    "name": "Rapid charge port state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "pluggedIn",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 79,
     "cmd": {
       "22": "0101"
@@ -5223,6 +5297,31 @@
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "signalGroups": [],
+    "suggestedMetric": "isCharging",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 79,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 79,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E4",
+    "id": "HYUNDAI_HVBAT_CHARGING",
+    "make": "Hyundai",
+    "model": "",
+    "name": "HV battery charging",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
     "suggestedMetric": "isCharging",
     "unit": "offon"
   },
@@ -7955,6 +8054,30 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0E01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "743",
+    "id": "NISSAN_RANGE",
+    "make": "Nissan",
+    "model": "",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [6553.5]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0E2E"
     },
     "debug": false,
@@ -8468,6 +8591,182 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "797",
+    "id": "NISSAN_VSS",
+    "make": "Nissan",
+    "model": "",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 256,
+      "len": 16,
+      "max": 128,
+      "min": -128,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "797",
+    "id": "NISSAN_12V_CURR",
+    "make": "Nissan",
+    "model": "",
+    "name": "12V battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/256 clamped to [-128, 128]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 2621400,
+      "mul": 40,
+      "unit": "watts"
+    },
+    "hdr": "797",
+    "id": "NISSAN_MOTOR_PWR",
+    "make": "Nissan",
+    "model": "",
+    "name": "Motor power",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*40 clamped to [2621400]",
+    "suggestedMetric": "",
+    "unit": "watts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32767,
+      "sign": true,
+      "unit": "scalar"
+    },
+    "hdr": "797",
+    "id": "NISSAN_RPM",
+    "make": "Nissan",
+    "model": "",
+    "name": "Engine RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [-32767, 32767]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "797",
+    "id": "NISSAN_L1L2CHRG_CNT",
+    "make": "Nissan",
+    "model": "",
+    "name": "Quick charge count",
+    "path": "Battery.Statistics",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "797",
+    "id": "NISSAN_QCKCHRG_CNT",
+    "make": "Nissan",
+    "model": "",
+    "name": "Quick charge count",
+    "path": "Battery.Statistics",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 6553500,
+      "mul": 100,
+      "unit": "watts"
+    },
+    "hdr": "797",
+    "id": "NISSAN_CHRG_PWR",
+    "make": "Nissan",
+    "model": "",
+    "name": "Charging power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 clamped to [6553500]",
+    "suggestedMetric": "",
+    "unit": "watts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1146"
     },
     "debug": false,
@@ -8540,6 +8839,58 @@
     "scaling": "raw/256 clamped to [-128, 128]",
     "suggestedMetric": "",
     "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1186"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -273,
+      "div": 128,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "mul": 3,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "NISSAN_VVTO_T",
+    "make": "Nissan",
+    "model": "",
+    "name": "VVT oil temperature",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw*3 /128 +-273 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1186"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "NISSAN_CC_S",
+    "make": "Nissan",
+    "model": "",
+    "name": "Cruise control speed",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -31647,6 +31998,32 @@
     "bitLength": 16,
     "bitOffset": 144,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 100,
+      "len": 16,
+      "max": 655,
+      "unit": "volts"
+    },
+    "hdr": "79B",
+    "id": "NISSAN_HVBAT_VOLT",
+    "make": "Nissan",
+    "model": "",
+    "name": "High voltage battery voltage",
+    "path": "Battery",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
       "22": "6335"
     },
     "debug": true,
@@ -32039,6 +32416,32 @@
     "scaling": "raw/50 clamped to [1310.7]",
     "suggestedMetric": "",
     "unit": "gramsPerSecond"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "79B",
+    "id": "NISSAN_HVBAT_SOH",
+    "make": "Nissan",
+    "model": "",
+    "name": "High voltage battery health",
+    "path": "Battery",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -36962,32 +37365,6 @@
       "unit": "percent"
     },
     "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_SOH",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery state of health",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [100]",
-    "suggestedMetric": "stateOfHealth",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 200,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 200,
-      "div": 10,
-      "len": 16,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E4",
     "id": "KIA_HVBAT_SOH",
     "make": "Kia",
     "model": "",
@@ -37428,33 +37805,6 @@
     "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "div": 1000,
-      "len": 16,
-      "max": 100,
-      "mul": 2,
-      "unit": "kilowattHours"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_WH",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery remaining energy",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw*2 /1000 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "kilowattHours"
   },
   {
     "bitLength": 16,
@@ -50594,6 +50944,30 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
+      "22": "0E01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "743",
+    "id": "NISSAN_ODO",
+    "make": "Nissan",
+    "model": "",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1014"
     },
     "debug": true,
@@ -51661,6 +52035,33 @@
   },
   {
     "bitLength": 24,
+    "bitOffset": 248,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -17,
+      "bix": 248,
+      "div": 8190,
+      "len": 24,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "79B",
+    "id": "NISSAN_HVBAT_SOC",
+    "make": "Nissan",
+    "model": "",
+    "name": "High voltage battery charge",
+    "path": "Battery",
+    "pid": "21",
+    "scaling": "raw/8190 +-17 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 24,
     "bitOffset": 280,
     "cmd": {
       "21": "01"
@@ -51678,6 +52079,32 @@
     "id": "LEAF_HVBAT_CAP",
     "make": "Nissan",
     "model": "Leaf",
+    "name": "High voltage battery capacity",
+    "path": "Battery",
+    "pid": "21",
+    "scaling": "raw/10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 280,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 280,
+      "div": 10000,
+      "len": 24,
+      "max": 1000,
+      "unit": "ampereHours"
+    },
+    "hdr": "79B",
+    "id": "NISSAN_HVBAT_CAP",
+    "make": "Nissan",
+    "model": "",
     "name": "High voltage battery capacity",
     "path": "Battery",
     "pid": "21",
@@ -59285,6 +59712,106 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "0E01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 439.5,
+      "mul": 1.7236894,
+      "unit": "kilopascal"
+    },
+    "hdr": "743",
+    "id": "NISSAN_TP_FL",
+    "make": "Nissan",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.7236894 clamped to [439.5]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0E01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 439.5,
+      "mul": 1.7236894,
+      "unit": "kilopascal"
+    },
+    "hdr": "743",
+    "id": "NISSAN_TP_FR",
+    "make": "Nissan",
+    "model": "",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.7236894 clamped to [439.5]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0E01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 439.5,
+      "mul": 1.7236894,
+      "unit": "kilopascal"
+    },
+    "hdr": "743",
+    "id": "NISSAN_TP_RL",
+    "make": "Nissan",
+    "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.7236894 clamped to [439.5]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0E01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 439.5,
+      "mul": 1.7236894,
+      "unit": "kilopascal"
+    },
+    "hdr": "743",
+    "id": "NISSAN_TP_RR",
+    "make": "Nissan",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.7236894 clamped to [439.5]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0E25"
     },
     "debug": false,
@@ -59991,6 +60518,398 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40.9,
+      "len": 8,
+      "max": 192.69,
+      "min": -36.81,
+      "mul": 0.9,
+      "unit": "fahrenheit"
+    },
+    "hdr": "797",
+    "id": "NISSAN_AAT",
+    "make": "Nissan",
+    "model": "",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.9 +-40.9 clamped to [-36.81, 192.69]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 12.5,
+      "len": 8,
+      "max": 30,
+      "unit": "volts"
+    },
+    "hdr": "797",
+    "id": "NISSAN_VPWR",
+    "make": "Nissan",
+    "model": "",
+    "name": "12V battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/12.5 clamped to [30]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "E-pedal mode is off",
+          "value": "EPEDAL_OFF"
+        },
+        "4": {
+          "description": "E-pedal mode is on",
+          "value": "EPEDAL_ON"
+        }
+      }
+    },
+    "hdr": "797",
+    "id": "NISSAN_EPEDAL_MODE",
+    "make": "Nissan",
+    "model": "",
+    "name": "E-pedal mode",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'E-pedal mode is off', 'value': 'EPEDAL_OFF'}, '4': {'description': 'E-pedal mode is on', 'value': 'EPEDAL_ON'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "ECO is off",
+          "value": "ECO_OFF"
+        },
+        "16": {
+          "description": "ECO is on",
+          "value": "ECO_ON_1"
+        },
+        "17": {
+          "description": "ECO is on",
+          "value": "ECO_ON_2"
+        }
+      }
+    },
+    "hdr": "797",
+    "id": "NISSAN_ECO_MODE",
+    "make": "Nissan",
+    "model": "",
+    "name": "ECO mode state",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'ECO is off', 'value': 'ECO_OFF'}, '16': {'description': 'ECO is on', 'value': 'ECO_ON_1'}, '17': {'description': 'ECO is on', 'value': 'ECO_ON_2'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Not charging",
+          "value": "NOT_CHARGING"
+        },
+        "1": {
+          "description": "L1 charging (100-120V)",
+          "value": "CHARGING_L1"
+        },
+        "2": {
+          "description": "L2 charging (200-240V)",
+          "value": "CHARGING_L2"
+        },
+        "3": {
+          "description": "L3 quick charging",
+          "value": "CHARGING_L3"
+        }
+      }
+    },
+    "hdr": "797",
+    "id": "NISSAN_CHARGE_MODE",
+    "make": "Nissan",
+    "model": "",
+    "name": "Charging mode",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Not charging', 'value': 'NOT_CHARGING'}, '1': {'description': 'L1 charging (100-120V)', 'value': 'CHARGING_L1'}, '2': {'description': 'L2 charging (200-240V)', 'value': 'CHARGING_L2'}, '3': {'description': 'L3 quick charging', 'value': 'CHARGING_L3'}}",
+    "suggestedMetric": "isCharging",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Not plugged in",
+          "value": "UNPLUGGED"
+        },
+        "1": {
+          "description": "Partially plugged in",
+          "value": "PLUGGED_PARTIAL"
+        },
+        "2": {
+          "description": "Plugged in",
+          "value": "PLUGGED"
+        }
+      }
+    },
+    "hdr": "797",
+    "id": "NISSAN_CHARGE_PLUG",
+    "make": "Nissan",
+    "model": "",
+    "name": "L1/L2 charge port plug state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Not plugged in', 'value': 'UNPLUGGED'}, '1': {'description': 'Partially plugged in', 'value': 'PLUGGED_PARTIAL'}, '2': {'description': 'Plugged in', 'value': 'PLUGGED'}}",
+    "suggestedMetric": "pluggedIn",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "2": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "3": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "4": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "7": {
+          "description": "Eco",
+          "value": "ECO"
+        }
+      }
+    },
+    "hdr": "797",
+    "id": "NISSAN_GEAR",
+    "make": "Nissan",
+    "model": "",
+    "name": "Gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Park', 'value': 'PARK'}, '2': {'description': 'Reverse', 'value': 'REVERSE'}, '3': {'description': 'Neutral', 'value': 'NEUTRAL'}, '4': {'description': 'Drive', 'value': 'DRIVE'}, '7': {'description': 'Eco', 'value': 'ECO'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "162": {
+          "description": "Heater is on",
+          "value": "HEATER_ON"
+        }
+      }
+    },
+    "hdr": "797",
+    "id": "NISSAN_HTR_REAR",
+    "make": "Nissan",
+    "model": "",
+    "name": "Rear heater state",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "Mapped values: {'162': {'description': 'Heater is on', 'value': 'HEATER_ON'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "797",
+    "id": "NISSAN_AC_ON",
+    "make": "Nissan",
+    "model": "",
+    "name": "A/C state",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 12750,
+      "mul": 50,
+      "unit": "watts"
+    },
+    "hdr": "797",
+    "id": "NISSAN_AC_PWR_EST",
+    "make": "Nissan",
+    "model": "",
+    "name": "Power used by air conditioning",
+    "path": "Battery.Draw",
+    "pid": "22",
+    "scaling": "raw*50 clamped to [12750]",
+    "suggestedMetric": "",
+    "unit": "watts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 25500,
+      "mul": 100,
+      "unit": "watts"
+    },
+    "hdr": "797",
+    "id": "NISSAN_AUX_PWR",
+    "make": "Nissan",
+    "model": "",
+    "name": "Power used by auxiliary equipment (lights, radio, navigation, rear defroster, etc...).",
+    "path": "Battery.Draw",
+    "pid": "22",
+    "scaling": "raw*100 clamped to [25500]",
+    "suggestedMetric": "",
+    "unit": "watts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 63750,
+      "mul": 250,
+      "unit": "watts"
+    },
+    "hdr": "797",
+    "id": "NISSAN_AC_PWR",
+    "make": "Nissan",
+    "model": "",
+    "name": "Power used by both the A/C and PTC heater.",
+    "path": "Battery.Draw",
+    "pid": "22",
+    "scaling": "raw*250 clamped to [63750]",
+    "suggestedMetric": "",
+    "unit": "watts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 63750,
+      "mul": 250,
+      "unit": "watts"
+    },
+    "hdr": "797",
+    "id": "NISSAN_HTR_PWR",
+    "make": "Nissan",
+    "model": "",
+    "name": "Power used by cabin positive temperature coefficient (PTC) heaters.",
+    "path": "Battery.Draw",
+    "pid": "22",
+    "scaling": "raw*250 clamped to [63750]",
+    "suggestedMetric": "",
+    "unit": "watts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1106"
     },
     "debug": false,
@@ -60243,6 +61162,30 @@
     "id": "ALTIMA_FLV",
     "make": "Nissan",
     "model": "Altima",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1186"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "7E0",
+    "id": "NISSAN_FLV",
+    "make": "Nissan",
+    "model": "",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -68763,7 +69706,8 @@
       "bix": 104,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -68773,7 +69717,7 @@
     "name": "HV battery module 010 voltage",
     "path": "Battery.Modules.010",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -68789,7 +69733,8 @@
       "bix": 104,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -68799,111 +69744,7 @@
     "name": "HV battery module 042 voltage",
     "path": "Battery.Modules.042",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU074_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 074 voltage",
-    "path": "Battery.Modules.074",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU106_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 106 voltage",
-    "path": "Battery.Modules.106",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU138_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 138 voltage",
-    "path": "Battery.Modules.138",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU170_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 170 voltage",
-    "path": "Battery.Modules.170",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -70760,7 +71601,8 @@
       "bix": 112,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -70770,7 +71612,7 @@
     "name": "HV battery module 011 voltage",
     "path": "Battery.Modules.011",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -70786,7 +71628,8 @@
       "bix": 112,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -70796,111 +71639,7 @@
     "name": "HV battery module 043 voltage",
     "path": "Battery.Modules.043",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU075_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 075 voltage",
-    "path": "Battery.Modules.075",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU107_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 107 voltage",
-    "path": "Battery.Modules.107",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU139_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 139 voltage",
-    "path": "Battery.Modules.139",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU171_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 171 voltage",
-    "path": "Battery.Modules.171",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -72602,14 +73341,14 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "HYUNDAI_TP_RL",
+    "id": "HYUNDAI_TPMS_PRESS_RR",
     "make": "Hyundai",
     "model": "",
-    "name": "Rear left tire pressure",
+    "name": "TPMS Pressure Rear Right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearLeftTirePressure",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
@@ -73076,7 +73815,8 @@
       "bix": 120,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -73086,7 +73826,7 @@
     "name": "HV battery module 012 voltage",
     "path": "Battery.Modules.012",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -73102,7 +73842,8 @@
       "bix": 120,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -73112,111 +73853,7 @@
     "name": "HV battery module 044 voltage",
     "path": "Battery.Modules.044",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU076_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 076 voltage",
-    "path": "Battery.Modules.076",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU108_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 108 voltage",
-    "path": "Battery.Modules.108",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU140_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 140 voltage",
-    "path": "Battery.Modules.140",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU172_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 172 voltage",
-    "path": "Battery.Modules.172",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -74698,6 +75335,32 @@
     "bitLength": 8,
     "bitOffset": 120,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "HYUNDAI_TPMS_TEMP_RR",
+    "make": "Hyundai",
+    "model": "",
+    "name": "TPMS Temperature Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
       "22": "E001"
     },
     "debug": true,
@@ -75267,7 +75930,8 @@
       "bix": 128,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -75277,7 +75941,7 @@
     "name": "HV battery module 013 voltage",
     "path": "Battery.Modules.013",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -75293,7 +75957,8 @@
       "bix": 128,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -75303,111 +75968,7 @@
     "name": "HV battery module 045 voltage",
     "path": "Battery.Modules.045",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU077_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 077 voltage",
-    "path": "Battery.Modules.077",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU109_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 109 voltage",
-    "path": "Battery.Modules.109",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU141_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 141 voltage",
-    "path": "Battery.Modules.141",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU173_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 173 voltage",
-    "path": "Battery.Modules.173",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -77319,7 +77880,8 @@
       "bix": 136,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -77329,7 +77891,7 @@
     "name": "HV battery module 014 voltage",
     "path": "Battery.Modules.014",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -77345,7 +77907,8 @@
       "bix": 136,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -77355,111 +77918,7 @@
     "name": "HV battery module 046 voltage",
     "path": "Battery.Modules.046",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU078_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 078 voltage",
-    "path": "Battery.Modules.078",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU110_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 110 voltage",
-    "path": "Battery.Modules.110",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU142_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 142 voltage",
-    "path": "Battery.Modules.142",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU174_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 174 voltage",
-    "path": "Battery.Modules.174",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -80969,8 +81428,8 @@
       "unit": "celsius"
     },
     "hdr": "DA60",
-    "id": "HONDA_AAT",
-    "make": "Honda",
+    "id": "ACURA_AAT",
+    "make": "Acura",
     "model": "",
     "name": "Outside air temperature",
     "path": "Climate",
@@ -80988,6 +81447,7 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "add": -40,
       "bix": 136,
       "len": 8,
       "max": 215,
@@ -80995,13 +81455,13 @@
       "unit": "celsius"
     },
     "hdr": "DA60",
-    "id": "ACURA_AAT",
-    "make": "Acura",
+    "id": "HONDA_AAT",
+    "make": "Honda",
     "model": "",
     "name": "Outside air temperature",
     "path": "Climate",
     "pid": "22",
-    "scaling": "raw clamped to [-40, 215]",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -81104,6 +81564,31 @@
     "id": "ELANTRA_TPMS_ALERT_RR",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "TPMS Alert Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "HYUNDAI_TPMS_ALERT_RR",
+    "make": "Hyundai",
+    "model": "",
     "name": "TPMS Alert Rear Right",
     "path": "Tires",
     "pid": "22",
@@ -81440,7 +81925,8 @@
       "bix": 144,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -81450,7 +81936,7 @@
     "name": "HV battery module 015 voltage",
     "path": "Battery.Modules.015",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -81466,7 +81952,8 @@
       "bix": 144,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -81476,111 +81963,7 @@
     "name": "HV battery module 047 voltage",
     "path": "Battery.Modules.047",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 144,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 144,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU079_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 079 voltage",
-    "path": "Battery.Modules.079",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 144,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 144,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU111_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 111 voltage",
-    "path": "Battery.Modules.111",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 144,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 144,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU143_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 143 voltage",
-    "path": "Battery.Modules.143",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 144,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 144,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU175_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 175 voltage",
-    "path": "Battery.Modules.175",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -83307,7 +83690,8 @@
       "bix": 152,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -83317,7 +83701,7 @@
     "name": "HV battery module 016 voltage",
     "path": "Battery.Modules.016",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -83333,7 +83717,8 @@
       "bix": 152,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -83343,111 +83728,7 @@
     "name": "HV battery module 048 voltage",
     "path": "Battery.Modules.048",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU080_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 080 voltage",
-    "path": "Battery.Modules.080",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU112_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 112 voltage",
-    "path": "Battery.Modules.112",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU144_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 144 voltage",
-    "path": "Battery.Modules.144",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU176_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 176 voltage",
-    "path": "Battery.Modules.176",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -85074,14 +85355,14 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "HYUNDAI_TP_RR",
+    "id": "HYUNDAI_TPMS_PRESS_RL",
     "make": "Hyundai",
     "model": "",
-    "name": "Rear right tire pressure",
+    "name": "TPMS Pressure Rear Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearRightTirePressure",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -87341,7 +87622,8 @@
       "bix": 160,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -87351,7 +87633,7 @@
     "name": "HV battery module 017 voltage",
     "path": "Battery.Modules.017",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -87367,7 +87649,8 @@
       "bix": 160,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -87377,111 +87660,7 @@
     "name": "HV battery module 049 voltage",
     "path": "Battery.Modules.049",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 160,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 160,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU081_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 081 voltage",
-    "path": "Battery.Modules.081",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 160,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 160,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU113_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 113 voltage",
-    "path": "Battery.Modules.113",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 160,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 160,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU145_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 145 voltage",
-    "path": "Battery.Modules.145",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 160,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 160,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU177_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 177 voltage",
-    "path": "Battery.Modules.177",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -89107,6 +89286,32 @@
     "bitLength": 8,
     "bitOffset": 160,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "HYUNDAI_TPMS_TEMP_RL",
+    "make": "Hyundai",
+    "model": "",
+    "name": "TPMS Temperature Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
       "22": "E001"
     },
     "debug": true,
@@ -89433,7 +89638,8 @@
       "bix": 168,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -89443,7 +89649,7 @@
     "name": "HV battery module 018 voltage",
     "path": "Battery.Modules.018",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -89459,7 +89665,8 @@
       "bix": 168,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -89469,111 +89676,7 @@
     "name": "HV battery module 050 voltage",
     "path": "Battery.Modules.050",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 168,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 168,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU082_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 082 voltage",
-    "path": "Battery.Modules.082",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 168,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 168,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU114_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 114 voltage",
-    "path": "Battery.Modules.114",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 168,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 168,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU146_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 146 voltage",
-    "path": "Battery.Modules.146",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 168,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 168,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU178_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 178 voltage",
-    "path": "Battery.Modules.178",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -91248,7 +91351,8 @@
       "bix": 176,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -91258,7 +91362,7 @@
     "name": "HV battery module 019 voltage",
     "path": "Battery.Modules.019",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -91274,7 +91378,8 @@
       "bix": 176,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -91284,111 +91389,7 @@
     "name": "HV battery module 051 voltage",
     "path": "Battery.Modules.051",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU083_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 083 voltage",
-    "path": "Battery.Modules.083",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU115_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 115 voltage",
-    "path": "Battery.Modules.115",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU147_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 147 voltage",
-    "path": "Battery.Modules.147",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU179_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 179 voltage",
-    "path": "Battery.Modules.179",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -92786,6 +92787,31 @@
     "bitLength": 8,
     "bitOffset": 176,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "HYUNDAI_TPMS_ALERT_RL",
+    "make": "Hyundai",
+    "model": "",
+    "name": "TPMS Alert Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
       "22": "E001"
     },
     "debug": true,
@@ -93166,7 +93192,8 @@
       "bix": 184,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -93176,7 +93203,7 @@
     "name": "HV battery module 020 voltage",
     "path": "Battery.Modules.020",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -93192,7 +93219,8 @@
       "bix": 184,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -93202,111 +93230,7 @@
     "name": "HV battery module 052 voltage",
     "path": "Battery.Modules.052",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 184,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 184,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU084_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 084 voltage",
-    "path": "Battery.Modules.084",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 184,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 184,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU116_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 116 voltage",
-    "path": "Battery.Modules.116",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 184,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 184,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU148_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 148 voltage",
-    "path": "Battery.Modules.148",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 184,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 184,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU180_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 180 voltage",
-    "path": "Battery.Modules.180",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -94832,6 +94756,31 @@
       "unit": "scalar"
     },
     "hdr": "DA1D",
+    "id": "ACURA_GEAR",
+    "make": "Acura",
+    "model": "",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "2221"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "DA1D",
     "id": "HONDA_GEAR",
     "make": "Honda",
     "model": "",
@@ -95251,7 +95200,8 @@
       "bix": 192,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -95261,7 +95211,7 @@
     "name": "HV battery module 021 voltage",
     "path": "Battery.Modules.021",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -95277,7 +95227,8 @@
       "bix": 192,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -95287,111 +95238,7 @@
     "name": "HV battery module 053 voltage",
     "path": "Battery.Modules.053",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 192,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 192,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU085_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 085 voltage",
-    "path": "Battery.Modules.085",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 192,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 192,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU117_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 117 voltage",
-    "path": "Battery.Modules.117",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 192,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 192,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU149_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 149 voltage",
-    "path": "Battery.Modules.149",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 192,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 192,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU181_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 181 voltage",
-    "path": "Battery.Modules.181",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -99126,7 +98973,8 @@
       "bix": 200,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -99136,7 +98984,7 @@
     "name": "HV battery module 022 voltage",
     "path": "Battery.Modules.022",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -99152,7 +99000,8 @@
       "bix": 200,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -99162,111 +99011,7 @@
     "name": "HV battery module 054 voltage",
     "path": "Battery.Modules.054",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 200,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 200,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU086_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 086 voltage",
-    "path": "Battery.Modules.086",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 200,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 200,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU118_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 118 voltage",
-    "path": "Battery.Modules.118",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 200,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 200,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU150_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 150 voltage",
-    "path": "Battery.Modules.150",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 200,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 200,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU182_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 182 voltage",
-    "path": "Battery.Modules.182",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -100906,7 +100651,8 @@
       "bix": 208,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -100916,7 +100662,7 @@
     "name": "HV battery module 023 voltage",
     "path": "Battery.Modules.023",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -100932,7 +100678,8 @@
       "bix": 208,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -100942,111 +100689,7 @@
     "name": "HV battery module 055 voltage",
     "path": "Battery.Modules.055",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 208,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU087_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 087 voltage",
-    "path": "Battery.Modules.087",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 208,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU119_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 119 voltage",
-    "path": "Battery.Modules.119",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 208,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU151_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 151 voltage",
-    "path": "Battery.Modules.151",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 208,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU183_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 183 voltage",
-    "path": "Battery.Modules.183",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -102684,7 +102327,8 @@
       "bix": 216,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -102694,7 +102338,7 @@
     "name": "HV battery module 024 voltage",
     "path": "Battery.Modules.024",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -102710,7 +102354,8 @@
       "bix": 216,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -102720,111 +102365,7 @@
     "name": "HV battery module 056 voltage",
     "path": "Battery.Modules.056",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 216,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 216,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU088_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 088 voltage",
-    "path": "Battery.Modules.088",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 216,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 216,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU120_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 120 voltage",
-    "path": "Battery.Modules.120",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 216,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 216,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU152_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 152 voltage",
-    "path": "Battery.Modules.152",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 216,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 216,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU184_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 184 voltage",
-    "path": "Battery.Modules.184",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -104569,7 +104110,8 @@
       "bix": 224,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -104579,7 +104121,7 @@
     "name": "HV battery module 025 voltage",
     "path": "Battery.Modules.025",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -104595,7 +104137,8 @@
       "bix": 224,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -104605,111 +104148,7 @@
     "name": "HV battery module 057 voltage",
     "path": "Battery.Modules.057",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU089_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 089 voltage",
-    "path": "Battery.Modules.089",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU121_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 121 voltage",
-    "path": "Battery.Modules.121",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU153_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 153 voltage",
-    "path": "Battery.Modules.153",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU185_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 185 voltage",
-    "path": "Battery.Modules.185",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -106493,7 +105932,8 @@
       "bix": 232,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -106503,7 +105943,7 @@
     "name": "HV battery module 026 voltage",
     "path": "Battery.Modules.026",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -106519,7 +105959,8 @@
       "bix": 232,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -106529,111 +105970,7 @@
     "name": "HV battery module 058 voltage",
     "path": "Battery.Modules.058",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 232,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 232,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU090_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 090 voltage",
-    "path": "Battery.Modules.090",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 232,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 232,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU122_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 122 voltage",
-    "path": "Battery.Modules.122",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 232,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 232,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU154_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 154 voltage",
-    "path": "Battery.Modules.154",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 232,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 232,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU186_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 186 voltage",
-    "path": "Battery.Modules.186",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -112158,7 +111495,8 @@
       "bix": 240,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -112168,7 +111506,7 @@
     "name": "HV battery module 027 voltage",
     "path": "Battery.Modules.027",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -112184,7 +111522,8 @@
       "bix": 240,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -112194,111 +111533,7 @@
     "name": "HV battery module 059 voltage",
     "path": "Battery.Modules.059",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 240,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 240,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU091_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 091 voltage",
-    "path": "Battery.Modules.091",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 240,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 240,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU123_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 123 voltage",
-    "path": "Battery.Modules.123",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 240,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 240,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU155_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 155 voltage",
-    "path": "Battery.Modules.155",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 240,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 240,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU187_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 187 voltage",
-    "path": "Battery.Modules.187",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -113881,6 +113116,32 @@
       "unit": "percent"
     },
     "hdr": "7E4",
+    "id": "HYUNDAI_HVBAT_SOC_DISP",
+    "make": "Hyundai",
+    "model": "",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 248,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 248,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
     "id": "KIA_HVBAT_SOC_DISP",
     "make": "Kia",
     "model": "",
@@ -113903,7 +113164,8 @@
       "bix": 248,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -113913,7 +113175,7 @@
     "name": "HV battery module 028 voltage",
     "path": "Battery.Modules.028",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -113929,7 +113191,8 @@
       "bix": 248,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -113939,111 +113202,7 @@
     "name": "HV battery module 060 voltage",
     "path": "Battery.Modules.060",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 248,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 248,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU092_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 092 voltage",
-    "path": "Battery.Modules.092",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 248,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 248,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU124_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 124 voltage",
-    "path": "Battery.Modules.124",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 248,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 248,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU156_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 156 voltage",
-    "path": "Battery.Modules.156",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 248,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 248,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU188_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 188 voltage",
-    "path": "Battery.Modules.188",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -114150,32 +113309,6 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 248,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 248,
-      "len": 8,
-      "max": 100,
-      "mul": 0.5,
-      "unit": "percent"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_SOC_DISP",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw*0.5 clamped to [100]",
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -117740,7 +116873,8 @@
       "bix": 256,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -117750,7 +116884,7 @@
     "name": "HV battery module 029 voltage",
     "path": "Battery.Modules.029",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -117766,7 +116900,8 @@
       "bix": 256,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -117776,111 +116911,7 @@
     "name": "HV battery module 061 voltage",
     "path": "Battery.Modules.061",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 256,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 256,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU093_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 093 voltage",
-    "path": "Battery.Modules.093",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 256,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 256,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU125_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 125 voltage",
-    "path": "Battery.Modules.125",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 256,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 256,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU157_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 157 voltage",
-    "path": "Battery.Modules.157",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 256,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 256,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU189_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 189 voltage",
-    "path": "Battery.Modules.189",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -119352,7 +118383,8 @@
       "bix": 264,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -119362,7 +118394,7 @@
     "name": "HV battery module 030 voltage",
     "path": "Battery.Modules.030",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -119378,7 +118410,8 @@
       "bix": 264,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -119388,111 +118421,7 @@
     "name": "HV battery module 062 voltage",
     "path": "Battery.Modules.062",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 264,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 264,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU094_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 094 voltage",
-    "path": "Battery.Modules.094",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 264,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 264,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU126_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 126 voltage",
-    "path": "Battery.Modules.126",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 264,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 264,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU158_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 158 voltage",
-    "path": "Battery.Modules.158",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 264,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 264,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU190_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 190 voltage",
-    "path": "Battery.Modules.190",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -121045,7 +119974,8 @@
       "bix": 272,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -121055,7 +119985,7 @@
     "name": "HV battery module 031 voltage",
     "path": "Battery.Modules.031",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -121071,7 +120001,8 @@
       "bix": 272,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -121081,111 +120012,7 @@
     "name": "HV battery module 063 voltage",
     "path": "Battery.Modules.063",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 272,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 272,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU095_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 095 voltage",
-    "path": "Battery.Modules.095",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 272,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 272,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU127_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 127 voltage",
-    "path": "Battery.Modules.127",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 272,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 272,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU159_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 159 voltage",
-    "path": "Battery.Modules.159",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 272,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 272,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU191_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 191 voltage",
-    "path": "Battery.Modules.191",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -122814,7 +121641,8 @@
       "bix": 280,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -122824,7 +121652,7 @@
     "name": "HV battery module 032 voltage",
     "path": "Battery.Modules.032",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -122840,7 +121668,8 @@
       "bix": 280,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -122850,111 +121679,7 @@
     "name": "HV battery module 064 voltage",
     "path": "Battery.Modules.064",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 280,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 280,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU096_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 096 voltage",
-    "path": "Battery.Modules.096",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 280,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 280,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU128_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 128 voltage",
-    "path": "Battery.Modules.128",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 280,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 280,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU160_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 160 voltage",
-    "path": "Battery.Modules.160",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 280,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 280,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU192_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 192 voltage",
-    "path": "Battery.Modules.192",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -127301,6 +126026,32 @@
       "unit": "percent"
     },
     "hdr": "7E4",
+    "id": "HYUNDAI_HVBAT_SOC",
+    "make": "Hyundai",
+    "model": "",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
     "id": "KIA_HVBAT_SOC",
     "make": "Kia",
     "model": "",
@@ -127350,7 +126101,8 @@
       "bix": 32,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -127360,7 +126112,7 @@
     "name": "HV battery module 001 voltage",
     "path": "Battery.Modules.001",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -127376,7 +126128,8 @@
       "bix": 32,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -127386,7 +126139,7 @@
     "name": "HV battery module 033 voltage",
     "path": "Battery.Modules.033",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -127402,7 +126155,8 @@
       "bix": 32,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -127412,85 +126166,7 @@
     "name": "HV battery module 065 voltage",
     "path": "Battery.Modules.065",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU097_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 097 voltage",
-    "path": "Battery.Modules.097",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU129_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 129 voltage",
-    "path": "Battery.Modules.129",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU161_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 161 voltage",
-    "path": "Battery.Modules.161",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -127623,32 +126299,6 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "len": 8,
-      "max": 100,
-      "mul": 0.5,
-      "unit": "percent"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_SOC",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery charge (dash)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw*0.5 clamped to [100]",
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -129027,6 +127677,31 @@
     "id": "ELANTRA_FLI_VOL",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "7C6",
+    "id": "HYUNDAI_FLI_VOL",
+    "make": "Hyundai",
+    "model": "",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "22",
@@ -131131,10 +129806,10 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "HYUNDAI_TP_FL",
+    "id": "HYUNDAI_TPMS_PRESS_FL",
     "make": "Hyundai",
     "model": "",
-    "name": "Front left tire pressure",
+    "name": "TPMS Pressure Front Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -131955,7 +130630,8 @@
       "bix": 40,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -131965,7 +130641,7 @@
     "name": "HV battery module 002 voltage",
     "path": "Battery.Modules.002",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -131981,7 +130657,8 @@
       "bix": 40,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -131991,7 +130668,7 @@
     "name": "HV battery module 034 voltage",
     "path": "Battery.Modules.034",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -132007,7 +130684,8 @@
       "bix": 40,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -132017,85 +130695,7 @@
     "name": "HV battery module 066 voltage",
     "path": "Battery.Modules.066",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU098_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 098 voltage",
-    "path": "Battery.Modules.098",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU130_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 130 voltage",
-    "path": "Battery.Modules.130",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU162_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 162 voltage",
-    "path": "Battery.Modules.162",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -135035,6 +133635,32 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 12.8,
+      "len": 8,
+      "max": 18,
+      "unit": "volts"
+    },
+    "hdr": "7C6",
+    "id": "HYUNDAI_CLUSTER_VOLTAGE",
+    "make": "Hyundai",
+    "model": "",
+    "name": "Cluster Voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [18]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B009"
     },
     "debug": false,
@@ -136745,6 +135371,32 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "HYUNDAI_TPMS_TEMP_FL",
+    "make": "Hyundai",
+    "model": "",
+    "name": "TPMS Temperature Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "DCDD"
     },
     "debug": false,
@@ -137327,7 +135979,8 @@
       "bix": 48,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -137337,7 +135990,7 @@
     "name": "HV battery module 003 voltage",
     "path": "Battery.Modules.003",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -137353,7 +136006,8 @@
       "bix": 48,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -137363,7 +136017,7 @@
     "name": "HV battery module 035 voltage",
     "path": "Battery.Modules.035",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -137379,7 +136033,8 @@
       "bix": 48,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -137389,85 +136044,7 @@
     "name": "HV battery module 067 voltage",
     "path": "Battery.Modules.067",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU099_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 099 voltage",
-    "path": "Battery.Modules.099",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU131_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 131 voltage",
-    "path": "Battery.Modules.131",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU163_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 163 voltage",
-    "path": "Battery.Modules.163",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -139458,7 +138035,8 @@
       "bix": 56,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -139468,7 +138046,7 @@
     "name": "HV battery module 004 voltage",
     "path": "Battery.Modules.004",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -139484,7 +138062,8 @@
       "bix": 56,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -139494,7 +138073,7 @@
     "name": "HV battery module 036 voltage",
     "path": "Battery.Modules.036",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -139510,7 +138089,8 @@
       "bix": 56,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -139520,85 +138100,7 @@
     "name": "HV battery module 068 voltage",
     "path": "Battery.Modules.068",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU100_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 100 voltage",
-    "path": "Battery.Modules.100",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU132_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 132 voltage",
-    "path": "Battery.Modules.132",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU164_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 164 voltage",
-    "path": "Battery.Modules.164",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -141306,6 +139808,31 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "HYUNDAI_TPMS_ALERT_FL",
+    "make": "Hyundai",
+    "model": "",
+    "name": "TPMS Alert Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "DCDD"
     },
     "debug": false,
@@ -141650,7 +140177,8 @@
       "bix": 64,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -141660,7 +140188,7 @@
     "name": "HV battery module 005 voltage",
     "path": "Battery.Modules.005",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -141676,7 +140204,8 @@
       "bix": 64,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -141686,7 +140215,7 @@
     "name": "HV battery module 037 voltage",
     "path": "Battery.Modules.037",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -141702,7 +140231,8 @@
       "bix": 64,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -141712,85 +140242,7 @@
     "name": "HV battery module 069 voltage",
     "path": "Battery.Modules.069",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 64,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 64,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU101_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 101 voltage",
-    "path": "Battery.Modules.101",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 64,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 64,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU133_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 133 voltage",
-    "path": "Battery.Modules.133",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 64,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 64,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU165_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 165 voltage",
-    "path": "Battery.Modules.165",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -143630,7 +142082,8 @@
       "bix": 72,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -143640,7 +142093,7 @@
     "name": "HV battery module 006 voltage",
     "path": "Battery.Modules.006",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -143656,7 +142109,8 @@
       "bix": 72,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -143666,7 +142120,7 @@
     "name": "HV battery module 038 voltage",
     "path": "Battery.Modules.038",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -143682,7 +142136,8 @@
       "bix": 72,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -143692,85 +142147,7 @@
     "name": "HV battery module 070 voltage",
     "path": "Battery.Modules.070",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU102_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 102 voltage",
-    "path": "Battery.Modules.102",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU134_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 134 voltage",
-    "path": "Battery.Modules.134",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU166_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 166 voltage",
-    "path": "Battery.Modules.166",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -145382,10 +143759,10 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "HYUNDAI_TP_FR",
+    "id": "HYUNDAI_TPMS_PRESS_FR",
     "make": "Hyundai",
     "model": "",
-    "name": "Front right tire pressure",
+    "name": "TPMS Pressure Front Right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -148054,7 +146431,8 @@
       "bix": 80,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -148064,7 +146442,7 @@
     "name": "HV battery module 007 voltage",
     "path": "Battery.Modules.007",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -148080,7 +146458,8 @@
       "bix": 80,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -148090,7 +146469,7 @@
     "name": "HV battery module 039 voltage",
     "path": "Battery.Modules.039",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -148106,7 +146485,8 @@
       "bix": 80,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -148116,85 +146496,7 @@
     "name": "HV battery module 071 voltage",
     "path": "Battery.Modules.071",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 80,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 80,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU103_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 103 voltage",
-    "path": "Battery.Modules.103",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 80,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 80,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU135_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 135 voltage",
-    "path": "Battery.Modules.135",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 80,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 80,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU167_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 167 voltage",
-    "path": "Battery.Modules.167",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -151587,6 +149889,32 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "HYUNDAI_TPMS_TEMP_FR",
+    "make": "Hyundai",
+    "model": "",
+    "name": "TPMS Temperature Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 88,
     "cmd": {
       "21": "02"
@@ -151831,7 +150159,8 @@
       "bix": 88,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -151841,7 +150170,7 @@
     "name": "HV battery module 008 voltage",
     "path": "Battery.Modules.008",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -151857,7 +150186,8 @@
       "bix": 88,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -151867,7 +150197,7 @@
     "name": "HV battery module 040 voltage",
     "path": "Battery.Modules.040",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -151883,7 +150213,8 @@
       "bix": 88,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -151893,85 +150224,7 @@
     "name": "HV battery module 072 voltage",
     "path": "Battery.Modules.072",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU104_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 104 voltage",
-    "path": "Battery.Modules.104",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU136_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 136 voltage",
-    "path": "Battery.Modules.136",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU168_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 168 voltage",
-    "path": "Battery.Modules.168",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -153670,7 +151923,8 @@
       "bix": 96,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -153680,7 +151934,7 @@
     "name": "HV battery module 009 voltage",
     "path": "Battery.Modules.009",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -153696,7 +151950,8 @@
       "bix": 96,
       "div": 50,
       "len": 8,
-      "max": 5.1,
+      "max": 4.2,
+      "min": 2.8,
       "unit": "volts"
     },
     "hdr": "7E4",
@@ -153706,111 +151961,7 @@
     "name": "HV battery module 041 voltage",
     "path": "Battery.Modules.041",
     "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU073_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 073 voltage",
-    "path": "Battery.Modules.073",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU105_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 105 voltage",
-    "path": "Battery.Modules.105",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU137_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 137 voltage",
-    "path": "Battery.Modules.137",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "div": 50,
-      "len": 8,
-      "max": 5.1,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "HYUNDAI_HVBAT_CMU169_VOLT",
-    "make": "Hyundai",
-    "model": "",
-    "name": "HV battery module 169 voltage",
-    "path": "Battery.Modules.169",
-    "pid": "22",
-    "scaling": "raw/50 clamped to [5.1]",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -155402,6 +153553,31 @@
     "id": "ELANTRA_TPMS_ALERT_FR",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "TPMS Alert Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "HYUNDAI_TPMS_ALERT_FR",
+    "make": "Hyundai",
+    "model": "",
     "name": "TPMS Alert Front Right",
     "path": "Tires",
     "pid": "22",
