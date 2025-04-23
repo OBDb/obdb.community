@@ -38463,7 +38463,7 @@
     "make": "Renault",
     "model": "Kadjar",
     "name": "Odometer",
-    "path": "Trips.Generic",
+    "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
