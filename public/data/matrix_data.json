@@ -23731,14 +23731,14 @@
       "unit": "liters"
     },
     "hdr": "DA60",
-    "id": "CIVIC_FUEL_LEVEL",
+    "id": "CIVIC_FLV",
     "make": "Honda",
     "model": "Civic",
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
     "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
+    "suggestedMetric": "fuelTankLevel",
     "unit": "liters"
   },
   {
@@ -83765,7 +83765,7 @@
       "unit": "percent"
     },
     "hdr": "DB33",
-    "id": "CIVIC_FUEL_LEVEL_PERCENT",
+    "id": "CIVIC_FLI",
     "make": "Honda",
     "model": "Civic",
     "name": "Fuel level",
