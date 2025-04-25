@@ -42240,32 +42240,6 @@
       "unit": "celsius"
     },
     "hdr": "DB33",
-    "id": "CIVIC_ECT",
-    "make": "Honda",
-    "model": "Civic",
-    "name": "Engine coolant temperature",
-    "path": "Engine",
-    "pid": "01",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "01": "05"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DB33",
     "id": "TLX_ECT",
     "make": "Acura",
     "model": "TLX",
@@ -83749,31 +83723,6 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "01": "2F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 24,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "DB33",
-    "id": "CIVIC_FLI",
-    "make": "Honda",
-    "model": "Civic",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "01",
-    "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
   },
   {
     "bitLength": 8,
