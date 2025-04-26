@@ -20300,6 +20300,30 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "4903"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "unit": "millivolts"
+    },
+    "hdr": "7E4",
+    "id": "LANDROVER_HVB_CELL_V_MAX",
+    "make": "Land",
+    "model": "Rover",
+    "name": "Maximum Cell Voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [32767]",
+    "suggestedMetric": "",
+    "unit": "millivolts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "4904"
     },
     "debug": false,
@@ -20313,6 +20337,30 @@
     "id": "IPACE_HVB_CELL_V_MIN",
     "make": "Jaguar",
     "model": "I-PACE",
+    "name": "Minimum Cell Voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [32767]",
+    "suggestedMetric": "",
+    "unit": "millivolts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4904"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "unit": "millivolts"
+    },
+    "hdr": "7E4",
+    "id": "LANDROVER_HVB_CELL_V_MIN",
+    "make": "Land",
+    "model": "Rover",
     "name": "Minimum Cell Voltage",
     "path": "Battery",
     "pid": "22",
@@ -20351,6 +20399,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "490C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 40,
+      "len": 16,
+      "max": 1000,
+      "min": -500,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7E4",
+    "id": "LANDROVER_HVB_CURR",
+    "make": "Land",
+    "model": "Rover",
+    "name": "Current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [-500, 1000]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "490F"
     },
     "debug": false,
@@ -20365,6 +20440,31 @@
     "id": "IPACE_HVB_V",
     "make": "Jaguar",
     "model": "I-PACE",
+    "name": "High voltage battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [450]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "490F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 450,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "LANDROVER_HVB_V",
+    "make": "Land",
+    "model": "Rover",
     "name": "High voltage battery voltage",
     "path": "Battery",
     "pid": "22",
@@ -20401,7 +20501,7 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "4918"
+      "22": "4910"
     },
     "debug": true,
     "eax": "",
@@ -20421,106 +20521,6 @@
     "scaling": "raw/100 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4918"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 100,
-      "len": 16,
-      "max": 450,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
-    "id": "LANDROVER_HVB_V",
-    "make": "Land",
-    "model": "Rover",
-    "name": "High voltage battery voltage",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [450]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4918"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 40,
-      "len": 16,
-      "max": 1000,
-      "min": -500,
-      "sign": true,
-      "unit": "amps"
-    },
-    "hdr": "7E4",
-    "id": "LANDROVER_HVB_CURR",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Current",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [-500, 1000]",
-    "suggestedMetric": "",
-    "unit": "amps"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4918"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 16,
-      "max": 32767,
-      "unit": "millivolts"
-    },
-    "hdr": "7E4",
-    "id": "LANDROVER_HVB_CELL_V_MAX",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Maximum Cell Voltage",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [32767]",
-    "suggestedMetric": "",
-    "unit": "millivolts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4918"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 16,
-      "max": 32767,
-      "unit": "millivolts"
-    },
-    "hdr": "7E4",
-    "id": "LANDROVER_HVB_CELL_V_MIN",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Minimum Cell Voltage",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [32767]",
-    "suggestedMetric": "",
-    "unit": "millivolts"
   },
   {
     "bitLength": 16,
@@ -39069,30 +39069,6 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
-      "22": "4918"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 1000000,
-      "unit": "kilometers"
-    },
-    "hdr": "7E4",
-    "id": "LANDROVER_ODOMETER",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Odometer",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [1000000]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
       "22": "B921"
     },
     "debug": false,
@@ -39262,6 +39238,30 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [1677721]",
     "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "7E4",
+    "id": "LANDROVER_ODOMETER",
+    "make": "Land",
+    "model": "Rover",
+    "name": "Odometer",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
   {
@@ -51743,6 +51743,33 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "4907"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "LANDROVER_HVB_T",
+    "make": "Land",
+    "model": "Rover",
+    "name": "Battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "490C"
     },
     "debug": false,
@@ -51798,33 +51825,6 @@
     "debug": true,
     "eax": "",
     "fmt": {
-      "add": -40,
-      "div": 2,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E4",
-    "id": "LANDROVER_HVB_T",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Battery temperature",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 +-40 clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4918"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "div": 2,
       "len": 8,
       "max": 100,
@@ -51840,30 +51840,6 @@
     "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "stateOfHealth",
     "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4918"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 220,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E4",
-    "id": "LANDROVER_VSS",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Vehicle Speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [220]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -52984,6 +52960,30 @@
     "id": "IPACE_VSS",
     "make": "Jaguar",
     "model": "I-PACE",
+    "name": "Vehicle Speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [220]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD09"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 220,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E4",
+    "id": "LANDROVER_VSS",
+    "make": "Land",
+    "model": "Rover",
     "name": "Vehicle Speed",
     "path": "Movement",
     "pid": "22",
@@ -114174,84 +114174,6 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "22": "2076"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "len": 8,
-      "max": 5,
-      "mul": 0.01373,
-      "unit": "bars"
-    },
-    "hdr": "751",
-    "id": "LANDROVER_TP_FR",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*0.01373 clamped to [5]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "2076"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "len": 8,
-      "max": 5,
-      "mul": 0.01373,
-      "unit": "bars"
-    },
-    "hdr": "751",
-    "id": "LANDROVER_TP_RL",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*0.01373 clamped to [5]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "2076"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "len": 8,
-      "max": 5,
-      "mul": 0.01373,
-      "unit": "bars"
-    },
-    "hdr": "751",
-    "id": "LANDROVER_TP_RR",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*0.01373 clamped to [5]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
       "22": "2077"
     },
     "debug": false,
@@ -114267,6 +114189,32 @@
     "id": "IPACE_TP_FR",
     "make": "Jaguar",
     "model": "I-PACE",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.01373 clamped to [5]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2077"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 5,
+      "mul": 0.01373,
+      "unit": "bars"
+    },
+    "hdr": "751",
+    "id": "LANDROVER_TP_FR",
+    "make": "Land",
+    "model": "Rover",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -114304,6 +114252,32 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "2078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 5,
+      "mul": 0.01373,
+      "unit": "bars"
+    },
+    "hdr": "751",
+    "id": "LANDROVER_TP_RR",
+    "make": "Land",
+    "model": "Rover",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.01373 clamped to [5]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "2079"
     },
     "debug": false,
@@ -114319,6 +114293,32 @@
     "id": "IPACE_TP_RL",
     "make": "Jaguar",
     "model": "I-PACE",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.01373 clamped to [5]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2079"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 5,
+      "mul": 0.01373,
+      "unit": "bars"
+    },
+    "hdr": "751",
+    "id": "LANDROVER_TP_RL",
+    "make": "Land",
+    "model": "Rover",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
