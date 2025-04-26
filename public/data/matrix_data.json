@@ -4697,31 +4697,6 @@
     "bitLength": 1,
     "bitOffset": 8,
     "cmd": {
-      "21": "21"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "DAIHATSU_GEAR_LOCKUP",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Gear lock-up",
-    "path": "Transmission",
-    "pid": "21",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 8,
-    "cmd": {
       "21": "85"
     },
     "debug": false,
@@ -4765,6 +4740,31 @@
     "id": "COROLLA_GEAR_LOCKUP",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Gear lock-up",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "DAIHATSU_GEAR_LOCKUP",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Gear lock-up",
     "path": "Transmission",
     "pid": "21",
@@ -4944,31 +4944,6 @@
     "path": "Engine",
     "pid": "01",
     "scaling": "raw/4 clamped to [16383.75]",
-    "suggestedMetric": "",
-    "unit": "rpm"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "01": "0C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 16,
-      "max": 16383.75,
-      "mul": 0.25,
-      "unit": "rpm"
-    },
-    "hdr": "7DF",
-    "id": "HECTOR_RPM",
-    "make": "MG",
-    "model": "Hector",
-    "name": "Engine RPM",
-    "path": "Engine",
-    "pid": "01",
-    "scaling": "raw*0.25 clamped to [16383.75]",
     "suggestedMetric": "",
     "unit": "rpm"
   },
@@ -5790,33 +5765,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "21": "21"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "div": 256,
-      "len": 16,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "DAIHATSU_ATF_PAN_T",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Transmission temperature (pan)",
-    "path": "Transmission",
-    "pid": "21",
-    "scaling": "raw/256 +-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "21": "82"
     },
     "debug": false,
@@ -5875,26 +5823,28 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "0103"
+      "21": "82"
     },
     "debug": true,
     "eax": "",
     "fmt": {
-      "div": 13107,
+      "add": -40,
+      "div": 256,
       "len": 16,
-      "max": 5,
-      "unit": "volts"
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
     },
-    "hdr": "747",
-    "id": "DAIHATSU_HVBAT_CMU01_VOLT",
+    "hdr": "7E0",
+    "id": "DAIHATSU_ATF_PAN_T",
     "make": "Daihatsu",
     "model": "",
-    "name": "HV battery module 01 voltage",
-    "path": "Battery.Modules.01",
-    "pid": "22",
-    "scaling": "raw/13107 clamped to [5]",
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
     "suggestedMetric": "",
-    "unit": "volts"
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -6171,31 +6121,6 @@
     "id": "SQ5_DRIVE_TIME",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Total drive time",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/4 clamped to [16383]",
-    "suggestedMetric": "",
-    "unit": "hours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0302"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 4,
-      "len": 16,
-      "max": 16383,
-      "unit": "hours"
-    },
-    "hdr": "7E1",
-    "id": "TIGUAN_DRIVE_TIME",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Total drive time",
     "path": "Stats",
     "pid": "22",
@@ -7202,6 +7127,54 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1024"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7B0",
+    "id": "CROSSTREK_FR_VSS",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Front right tire speed",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1025"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7B0",
+    "id": "CROSSTREK_FL_VSS",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Front left tire speed",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1026"
     },
     "debug": true,
@@ -7254,6 +7227,105 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1026"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7B0",
+    "id": "CROSSTREK_RR_VSS",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Rear right tire speed",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1027"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7B0",
+    "id": "CROSSTREK_RL_VSS",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Rear left tire speed",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1029"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "CROSSTREK_STEER_ANGLE",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Steering wheel angle (ABS)",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1074"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 1000,
+      "mul": 10,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_ENG_OIL_PRESS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Engine Oil Pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /128 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1074"
     },
     "debug": true,
@@ -7275,6 +7347,31 @@
     "scaling": "raw*10 /128 clamped to [1000]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10E5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 131070,
+      "mul": 2,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "CROSSTREK_ODO",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*2 clamped to [131070]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
   },
   {
     "bitLength": 16,
@@ -7371,6 +7468,31 @@
     "id": "CAYENNE_OIL_LEVEL",
     "make": "Porsche",
     "model": "Cayenne",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 250,
+      "len": 16,
+      "max": 262,
+      "unit": "unknown"
+    },
+    "hdr": "7E0",
+    "id": "TIGUAN_OIL_LEVEL",
+    "make": "Volkswagen",
+    "model": "Tiguan",
     "name": "Oil level",
     "path": "Engine",
     "pid": "22",
@@ -7597,31 +7719,6 @@
       "unit": "unknown"
     },
     "hdr": "7E0",
-    "id": "TIGUAN_OIL_LEVEL",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Oil level",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "unknown"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11BA"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 250,
-      "len": 16,
-      "max": 262,
-      "unit": "unknown"
-    },
-    "hdr": "7E0",
     "id": "TT_OIL_LEVEL",
     "make": "Audi",
     "model": "TT",
@@ -7679,6 +7776,31 @@
     "path": "Fluids",
     "pid": "22",
     "scaling": "raw/2500 clamped to [26.2]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 250,
+      "len": 16,
+      "max": 262,
+      "unit": "centimeters"
+    },
+    "hdr": "7E0",
+    "id": "TIGUAN_OIL_MAX",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Oil level (max)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
     "suggestedMetric": "",
     "unit": "centimeters"
   },
@@ -7872,31 +7994,6 @@
       "unit": "centimeters"
     },
     "hdr": "7E0",
-    "id": "TIGUAN_OIL_MAX",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Oil level (max)",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "centimeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11C4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 250,
-      "len": 16,
-      "max": 262,
-      "unit": "centimeters"
-    },
-    "hdr": "7E0",
     "id": "TT_OIL_MAX",
     "make": "Audi",
     "model": "TT",
@@ -7929,6 +8026,31 @@
     "path": "Fluids",
     "pid": "22",
     "scaling": "raw/2500 clamped to [26.2]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11C5"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 250,
+      "len": 16,
+      "max": 262,
+      "unit": "centimeters"
+    },
+    "hdr": "7E0",
+    "id": "TIGUAN_OIL_MIN",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Oil level (min)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
     "suggestedMetric": "",
     "unit": "centimeters"
   },
@@ -8100,31 +8222,6 @@
     "id": "SQ5_OIL_MIN",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Oil level (min)",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "centimeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11C5"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 250,
-      "len": 16,
-      "max": 262,
-      "unit": "centimeters"
-    },
-    "hdr": "7E0",
-    "id": "TIGUAN_OIL_MIN",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Oil level (min)",
     "path": "Fluids",
     "pid": "22",
@@ -8456,33 +8553,6 @@
       "unit": "fahrenheit"
     },
     "hdr": "701",
-    "id": "DAIHATSU_TF2_CONV",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Transmission Fluid Post-Converter Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1627"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 16,
-      "max": 350,
-      "min": -40,
-      "mul": 0.00703125,
-      "unit": "fahrenheit"
-    },
-    "hdr": "701",
     "id": "GRCOROLLA_TF1_PAN",
     "make": "Toyota",
     "model": "GR-Corolla",
@@ -8540,6 +8610,33 @@
     "id": "COROLLA_TF2_CONV",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Transmission Fluid Post-Converter Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1628"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "DAIHATSU_TF2_CONV",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Transmission Fluid Post-Converter Temperature",
     "path": "Engine",
     "pid": "22",
@@ -8633,6 +8730,31 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "DAIHATSU_HVBAT_CMU01_VOLT",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "HV battery module 01 voltage",
+    "path": "Battery.Modules.01",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -8900,32 +9022,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "1F2F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 128,
-      "len": 16,
-      "max": 1000,
-      "mul": 10,
-      "unit": "kilopascal"
-    },
-    "hdr": "700",
-    "id": "DAIHATSU_ENG_OIL_PRESS",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Engine Oil Pressure",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw*10 /128 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilopascal"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "2005"
     },
     "debug": false,
@@ -8999,6 +9095,31 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 655350,
+      "mul": 10,
+      "unit": "kilometers"
+    },
+    "hdr": "714",
+    "id": "TIGUAN_ODO_DASH",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*10 clamped to [655350]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
   },
   {
     "bitLength": 16,
@@ -9182,9 +9303,9 @@
       "unit": "kilometers"
     },
     "hdr": "714",
-    "id": "TIGUAN_RANGE",
-    "make": "Volkswagen",
-    "model": "Tiguan",
+    "id": "TT_RANGE",
+    "make": "Audi",
+    "model": "TT",
     "name": "Range remaining",
     "path": "Trips",
     "pid": "22",
@@ -9202,17 +9323,17 @@
     "eax": "",
     "fmt": {
       "len": 16,
-      "max": 255,
+      "max": 65535,
       "unit": "kilometers"
     },
     "hdr": "714",
-    "id": "TT_RANGE",
-    "make": "Audi",
-    "model": "TT",
+    "id": "TIGUAN_RANGE",
+    "make": "Volkswagen",
+    "model": "Tiguan",
     "name": "Range remaining",
     "path": "Trips",
     "pid": "22",
-    "scaling": "raw clamped to [255]",
+    "scaling": "raw clamped to [65535]",
     "suggestedMetric": "fuelRange",
     "unit": "kilometers"
   },
@@ -9384,31 +9505,6 @@
     "id": "SQ5_FLV",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Fuel remaining",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/8 clamped to [255]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "229A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 8,
-      "len": 16,
-      "max": 255,
-      "unit": "liters"
-    },
-    "hdr": "714",
-    "id": "TIGUAN_FLV",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -9633,31 +9729,6 @@
     "id": "SQ5_IAT",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Interior air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2613"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "714",
-    "id": "TIGUAN_IAT",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Interior air temperature",
     "path": "Climate",
     "pid": "22",
@@ -11701,31 +11772,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E1",
-    "id": "TIGUAN_TIRE_FL_SPD",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
     "id": "TT_TIRE_FL_SPD",
     "make": "Audi",
     "model": "TT",
@@ -11984,31 +12030,6 @@
     "id": "SQ5_TIRE_FR_SPD",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "TIGUAN_TIRE_FR_SPD",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -12311,31 +12332,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E1",
-    "id": "TIGUAN_TIRE_RL_SPD",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1D"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
     "id": "TT_TIRE_RL_SPD",
     "make": "Audi",
     "model": "TT",
@@ -12594,31 +12590,6 @@
     "id": "SQ5_TIRE_RR_SPD",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1E"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "TIGUAN_TIRE_RR_SPD",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -16109,6 +16080,30 @@
     "id": "I3_RANGE_ECO",
     "make": "BMW",
     "model": "i3s",
+    "name": "Estimated range remaining in economy mode",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "420C"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_RANGE_ECO",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Estimated range remaining in economy mode",
     "path": "Trips",
     "pid": "22",
@@ -20634,157 +20629,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_SOC",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "HV battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [100]",
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "div": 100,
-      "len": 16,
-      "max": 327.67,
-      "min": -327.67,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_CT_MIN",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "HV battery cell temperature (min)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-327.67, 327.67]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "ampereHours"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_CAP_MIN",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell capacity (min)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "ampereHours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "volts"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_V",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "HV battery voltage",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "volts"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_VOLT",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "HV battery voltage",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_CNT",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Number of cells",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "7151"
     },
     "debug": false,
@@ -22214,55 +22058,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "D107"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_RANGE_E_CUR",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Current electric range",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "electricRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "D107"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "len": 16,
-      "max": 65535,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_RANGE_ECO",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Estimated range remaining in economy mode",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "electricRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "D111"
     },
     "debug": false,
@@ -22302,6 +22097,31 @@
     "id": "I3_RANGE_E_CUR",
     "make": "BMW",
     "model": "i3s",
+    "name": "Current electric range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_RANGE_E_CUR",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Current electric range",
     "path": "Trips",
     "pid": "22",
@@ -23073,6 +22893,56 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "DD68"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_V",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD68"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_VOLT",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DDBC"
     },
     "debug": false,
@@ -23173,6 +23043,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "DDBC"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_SOC",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DDC0"
     },
     "debug": false,
@@ -23243,6 +23138,33 @@
     "id": "I3_HVBAT_CT_MIN",
     "make": "BMW",
     "model": "I3s",
+    "name": "HV battery cell temperature (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.67, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DDC0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.67,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_CT_MIN",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "HV battery cell temperature (min)",
     "path": "Battery",
     "pid": "22",
@@ -23377,6 +23299,30 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "DF71"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_CNT",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Number of cells",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -23427,6 +23373,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "ampereHours"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_CAP_MIN",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Cell capacity (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "E5CE"
     },
     "debug": false,
@@ -23441,6 +23412,31 @@
     "id": "IX3_HVBAT_SOC",
     "make": "BMW",
     "model": "iX3",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "E5CE"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_SOC",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "HV battery charge",
     "path": "Battery",
     "pid": "22",
@@ -23692,34 +23688,6 @@
     "bitLength": 16,
     "bitOffset": 112,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 112,
-      "div": 100,
-      "len": 16,
-      "max": 327.67,
-      "min": -327.68,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_TEMP_MAX",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell temperature (max)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-327.68, 327.67]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 112,
-    "cmd": {
       "22": "7029"
     },
     "debug": true,
@@ -23790,6 +23758,34 @@
     "id": "I3_HVBAT_C_TEMP_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell temperature (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 112,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_TEMP_MAX",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell temperature (max)",
     "path": "Battery",
     "pid": "22",
@@ -25017,34 +25013,6 @@
     "bitLength": 16,
     "bitOffset": 128,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 128,
-      "div": 100,
-      "len": 16,
-      "max": 327.67,
-      "min": -327.68,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_TEMP_AVG",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell temperature (avg)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-327.68, 327.67]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 128,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -25090,6 +25058,34 @@
     "id": "I3_HVBAT_C_TEMP_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell temperature (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 128,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_TEMP_AVG",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell temperature (avg)",
     "path": "Battery",
     "pid": "22",
@@ -25235,32 +25231,6 @@
     "bitLength": 16,
     "bitOffset": 144,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 144,
-      "div": 10000,
-      "len": 16,
-      "max": 6.5535,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_RES_FACTOR_MIN",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell resistance factor (min)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 144,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -25302,6 +25272,32 @@
     "id": "I3_HVBAT_C_RES_FACTOR_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell resistance factor (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 144,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_RES_FACTOR_MIN",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell resistance factor (min)",
     "path": "Battery",
     "pid": "22",
@@ -25553,34 +25549,6 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
-      "21": "21"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "div": 256,
-      "len": 16,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "DAIHATSU_ATF_TQC_T",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Transmission temperature (torque converter)",
-    "path": "Transmission",
-    "pid": "21",
-    "scaling": "raw/256 +-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
       "21": "61"
     },
     "debug": false,
@@ -25667,27 +25635,29 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
-      "22": "0103"
+      "21": "82"
     },
     "debug": true,
     "eax": "",
     "fmt": {
+      "add": -40,
       "bix": 16,
-      "div": 13107,
+      "div": 256,
       "len": 16,
-      "max": 5,
-      "unit": "volts"
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
     },
-    "hdr": "747",
-    "id": "DAIHATSU_HVBAT_CMU02_VOLT",
+    "hdr": "7E0",
+    "id": "DAIHATSU_ATF_TQC_T",
     "make": "Daihatsu",
     "model": "",
-    "name": "HV battery module 02 voltage",
-    "path": "Battery.Modules.02",
-    "pid": "22",
-    "scaling": "raw/13107 clamped to [5]",
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
     "suggestedMetric": "",
-    "unit": "volts"
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -25723,6 +25693,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "DAIHATSU_HVBAT_CMU02_VOLT",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "HV battery module 02 voltage",
+    "path": "Battery.Modules.02",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -25857,81 +25853,26 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
-      "22": "6335"
+      "22": "420C"
     },
     "debug": true,
-    "eax": "07",
+    "eax": "60",
     "fmt": {
       "bix": 16,
-      "div": 10,
       "len": 16,
-      "max": 100,
-      "unit": "percent"
+      "max": 65535,
+      "unit": "kilometers"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_SOC_MAX",
+    "id": "ROLLSROYCE_RANGE_COMF",
     "make": "Rolls",
     "model": "Royce",
-    "name": "HV battery charge (maximum)",
-    "path": "Battery",
+    "name": "Estimated range remaining in comfort mode",
+    "path": "Trips",
     "pid": "22",
-    "scaling": "raw/10 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 16,
-      "div": 100,
-      "len": 16,
-      "max": 327.67,
-      "min": -327.67,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_CT_MAX",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "HV battery cell temperature (max)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-327.67, 327.67]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 16,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "ampereHours"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_CAP_MAX",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell capacity (max)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "ampereHours"
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
   },
   {
     "bitLength": 16,
@@ -26825,57 +26766,6 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
-      "22": "D107"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "bix": 16,
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_RANGE_E_MAX",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Maximum electric range",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "D107"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "bix": 16,
-      "len": 16,
-      "max": 65535,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_RANGE_COMF",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Estimated range remaining in comfort mode",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "electricRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
       "22": "D111"
     },
     "debug": false,
@@ -26917,6 +26807,32 @@
     "id": "I3_RANGE_E_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Maximum electric range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 16,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_RANGE_E_MAX",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Maximum electric range",
     "path": "Trips",
     "pid": "22",
@@ -27256,6 +27172,32 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "DDBC"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 16,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_SOC_MAX",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "HV battery charge (maximum)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "DDC0"
     },
     "debug": false,
@@ -27340,6 +27282,34 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "DDC0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.67,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_CT_MAX",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "HV battery cell temperature (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.67, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -27390,29 +27360,29 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 160,
+    "bitOffset": 16,
     "cmd": {
-      "22": "6335"
+      "22": "DFA0"
     },
     "debug": true,
     "eax": "07",
     "fmt": {
-      "bix": 160,
-      "div": 10000,
+      "bix": 16,
+      "div": 100,
       "len": 16,
-      "max": 6.5535,
-      "unit": "scalar"
+      "max": 655.35,
+      "unit": "ampereHours"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_RES_FACTOR_MAX",
+    "id": "ROLLSROYCE_HVBAT_C_CAP_MAX",
     "make": "Rolls",
     "model": "Royce",
-    "name": "Cell resistance factor (max)",
+    "name": "Cell capacity (max)",
     "path": "Battery",
     "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
+    "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
-    "unit": "scalar"
+    "unit": "ampereHours"
   },
   {
     "bitLength": 16,
@@ -27459,6 +27429,32 @@
     "id": "I3_HVBAT_C_RES_FACTOR_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell resistance factor (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 160,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_RES_FACTOR_MAX",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell resistance factor (max)",
     "path": "Battery",
     "pid": "22",
@@ -28686,32 +28682,6 @@
     "bitLength": 16,
     "bitOffset": 176,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 176,
-      "div": 10000,
-      "len": 16,
-      "max": 6.5535,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_RES_FACTOR_AVG",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell resistance factor (avg)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 176,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -28753,6 +28723,32 @@
     "id": "I3_HVBAT_C_RES_FACTOR_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell resistance factor (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 176,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_RES_FACTOR_AVG",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell resistance factor (avg)",
     "path": "Battery",
     "pid": "22",
@@ -28818,32 +28814,6 @@
     "bitLength": 16,
     "bitOffset": 192,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 192,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "percent"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_SOC_MIN",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell SoC (min)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 192,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -28885,6 +28855,32 @@
     "id": "I3_HVBAT_C_SOC_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell SoC (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 192,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_SOC_MIN",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell SoC (min)",
     "path": "Battery",
     "pid": "22",
@@ -29168,32 +29164,6 @@
     "bitLength": 16,
     "bitOffset": 208,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 208,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "percent"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_SOC_MAX",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell SoC (max)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 208,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -29235,6 +29205,32 @@
     "id": "I3_HVBAT_C_SOC_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell SoC (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 208,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_SOC_MAX",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell SoC (max)",
     "path": "Battery",
     "pid": "22",
@@ -29465,32 +29461,6 @@
     "bitLength": 16,
     "bitOffset": 224,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 224,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "percent"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_SOC_AVG",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell SoC (avg)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 224,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -29532,6 +29502,32 @@
     "id": "I3_HVBAT_C_SOC_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell SoC (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 224,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_SOC_AVG",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell SoC (avg)",
     "path": "Battery",
     "pid": "22",
@@ -30891,34 +30887,6 @@
     "bitLength": 16,
     "bitOffset": 24,
     "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -32768,
-      "bix": 24,
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "min": -1000,
-      "unit": "degrees"
-    },
-    "hdr": "7B0",
-    "id": "DAIHATSU_STEER_ANGLE",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Steering wheel angle",
-    "path": "Control",
-    "pid": "21",
-    "scaling": "raw/10 +-32768 clamped to [-1000, 1000]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 24,
-    "cmd": {
       "21": "47"
     },
     "debug": false,
@@ -30973,29 +30941,31 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 240,
+    "bitOffset": 24,
     "cmd": {
-      "22": "6335"
+      "21": "47"
     },
     "debug": true,
-    "eax": "07",
+    "eax": "",
     "fmt": {
-      "bix": 240,
-      "div": 10000,
+      "add": -32768,
+      "bix": 24,
+      "div": 10,
       "len": 16,
-      "max": 6.5535,
-      "unit": "volts"
+      "max": 1000,
+      "min": -1000,
+      "unit": "degrees"
     },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_OCV_MIN",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell OCV (min)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
+    "hdr": "7B0",
+    "id": "DAIHATSU_STEER_ANGLE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 +-32768 clamped to [-1000, 1000]",
     "suggestedMetric": "",
-    "unit": "volts"
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -31042,6 +31012,32 @@
     "id": "I3_HVBAT_C_OCV_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell OCV (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 240,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 240,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_OCV_MIN",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell OCV (min)",
     "path": "Battery",
     "pid": "22",
@@ -31107,32 +31103,6 @@
     "bitLength": 16,
     "bitOffset": 256,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 256,
-      "div": 10000,
-      "len": 16,
-      "max": 6.5535,
-      "unit": "volts"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_OCV_MAX",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell OCV (max)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 256,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -31174,6 +31144,32 @@
     "id": "I3_HVBAT_C_OCV_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell OCV (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 256,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_OCV_MAX",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell OCV (max)",
     "path": "Battery",
     "pid": "22",
@@ -31289,32 +31285,6 @@
     "bitLength": 16,
     "bitOffset": 272,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 272,
-      "div": 10000,
-      "len": 16,
-      "max": 6.5535,
-      "unit": "volts"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_OCV_AVG",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell OCV (avg)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 272,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -31356,6 +31326,32 @@
     "id": "I3_HVBAT_C_OCV_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell OCV (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 272,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_OCV_AVG",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell OCV (avg)",
     "path": "Battery",
     "pid": "22",
@@ -32635,32 +32631,6 @@
     "bitLength": 16,
     "bitOffset": 288,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 288,
-      "div": 10000,
-      "len": 16,
-      "max": 6.5535,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_IMPEDANCE_ALPHA",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Aging factor",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 288,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -32702,6 +32672,32 @@
     "id": "I3_HVBAT_IMPEDANCE_ALPHA",
     "make": "BMW",
     "model": "i3s",
+    "name": "Aging factor",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 288,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 288,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_IMPEDANCE_ALPHA",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Aging factor",
     "path": "Battery",
     "pid": "22",
@@ -32972,86 +32968,7 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 32,
-      "div": 10,
-      "len": 16,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_SOC_MIN",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "HV battery charge (minimum)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 32,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "ampereHours"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_CAP_AVG",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell capacity (average)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "ampereHours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "D107"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "bix": 32,
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "nullmax": 6553,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_RANGE_F_CUR",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Current fuel range",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "D107"
+      "22": "420C"
     },
     "debug": true,
     "eax": "60",
@@ -33119,6 +33036,33 @@
     "id": "I3_RANGE_F_CUR",
     "make": "BMW",
     "model": "i3s",
+    "name": "Current fuel range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "nullmax": 6553,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_RANGE_F_CUR",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Current fuel range",
     "path": "Trips",
     "pid": "22",
@@ -33458,6 +33402,32 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "DDBC"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_SOC_MIN",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "HV battery charge (minimum)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -33499,6 +33469,32 @@
     "id": "I3_HVBAT_C_CAP_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell capacity (average)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "ampereHours"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_CAP_AVG",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell capacity (average)",
     "path": "Battery",
     "pid": "22",
@@ -33730,32 +33726,6 @@
       "unit": "liters"
     },
     "hdr": "714",
-    "id": "TIGUAN_FLI_VOL",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 336,
-    "cmd": {
-      "22": "22B0"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 336,
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "unit": "liters"
-    },
-    "hdr": "714",
     "id": "TT_FLI_VOL",
     "make": "Audi",
     "model": "TT",
@@ -33925,32 +33895,6 @@
     "bitLength": 16,
     "bitOffset": 40,
     "cmd": {
-      "21": "21"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "kilometers"
-    },
-    "hdr": "7E0",
-    "id": "DAIHATSU_PREV_TRIP_DST",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Previous trip distance",
-    "path": "Trips",
-    "pid": "21",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 40,
-    "cmd": {
       "21": "51"
     },
     "debug": false,
@@ -33996,6 +33940,32 @@
     "id": "COROLLA_PREV_TRIP_DST",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Previous trip distance",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "DAIHATSU_PREV_TRIP_DST",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Previous trip distance",
     "path": "Trips",
     "pid": "21",
@@ -34268,60 +34238,6 @@
     "bitLength": 16,
     "bitOffset": 48,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 48,
-      "div": 10000,
-      "len": 16,
-      "max": 6.5535,
-      "unit": "volts"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_V_MIN",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell voltage (min))",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "D107"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "bix": 48,
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "nullmax": 6553,
-      "nullmin": 0,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_RANGE_F_MAX",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Maximum fuel range",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 48,
-    "cmd": {
       "22": "D111"
     },
     "debug": false,
@@ -34367,6 +34283,34 @@
     "id": "I3_RANGE_F_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Maximum fuel range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "nullmax": 6553,
+      "nullmin": 0,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_RANGE_F_MAX",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Maximum fuel range",
     "path": "Trips",
     "pid": "22",
@@ -34643,6 +34587,32 @@
     "id": "I3_HVBAT_C_V_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell voltage (min))",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 48,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_V_MIN",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell voltage (min))",
     "path": "Battery",
     "pid": "22",
@@ -36080,33 +36050,63 @@
     "bitLength": 16,
     "bitOffset": 64,
     "cmd": {
-      "22": "6335"
+      "22": "D111"
     },
-    "debug": true,
-    "eax": "07",
+    "debug": false,
+    "eax": "60",
     "fmt": {
       "bix": 64,
-      "div": 10000,
+      "div": 1000,
       "len": 16,
-      "max": 6.5535,
-      "unit": "volts"
+      "max": 65.535,
+      "nullmax": 65,
+      "nullmin": 0,
+      "unit": "kilowattHours"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_V_MAX",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell voltage (max)",
-    "path": "Battery",
+    "id": "I3_RANGE_E_USE",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Electric consumption / 100km",
+    "path": "Trips",
     "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
+    "scaling": "raw/1000 clamped to [65.535]",
     "suggestedMetric": "",
-    "unit": "volts"
+    "unit": "kilowattHours"
   },
   {
     "bitLength": 16,
     "bitOffset": 64,
     "cmd": {
-      "22": "D107"
+      "22": "D111"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 64,
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmax": 65,
+      "nullmin": 0,
+      "unit": "kilowattHours"
+    },
+    "hdr": "6F1",
+    "id": "I3_RANGE_E_USE",
+    "make": "BMW",
+    "model": "i3s",
+    "name": "Electric consumption / 100km",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "D111"
     },
     "debug": true,
     "eax": "60",
@@ -36134,62 +36134,6 @@
     "bitLength": 16,
     "bitOffset": 64,
     "cmd": {
-      "22": "D111"
-    },
-    "debug": false,
-    "eax": "60",
-    "fmt": {
-      "bix": 64,
-      "div": 1000,
-      "len": 16,
-      "max": 65.535,
-      "nullmax": 65,
-      "nullmin": 0,
-      "unit": "kilowattHours"
-    },
-    "hdr": "6F1",
-    "id": "I3_RANGE_E_USE",
-    "make": "BMW",
-    "model": "i3",
-    "name": "Electric consumption / 100km",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/1000 clamped to [65.535]",
-    "suggestedMetric": "",
-    "unit": "kilowattHours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 64,
-    "cmd": {
-      "22": "D111"
-    },
-    "debug": false,
-    "eax": "60",
-    "fmt": {
-      "bix": 64,
-      "div": 1000,
-      "len": 16,
-      "max": 65.535,
-      "nullmax": 65,
-      "nullmin": 0,
-      "unit": "kilowattHours"
-    },
-    "hdr": "6F1",
-    "id": "I3_RANGE_E_USE",
-    "make": "BMW",
-    "model": "i3s",
-    "name": "Electric consumption / 100km",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/1000 clamped to [65.535]",
-    "suggestedMetric": "",
-    "unit": "kilowattHours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 64,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -36231,6 +36175,32 @@
     "id": "I3_HVBAT_C_V_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell voltage (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 64,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_V_MAX",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell voltage (max)",
     "path": "Battery",
     "pid": "22",
@@ -37803,33 +37773,61 @@
     "bitLength": 16,
     "bitOffset": 80,
     "cmd": {
-      "22": "6335"
+      "22": "D111"
     },
-    "debug": true,
-    "eax": "07",
+    "debug": false,
+    "eax": "60",
     "fmt": {
       "bix": 80,
-      "div": 10000,
+      "div": 100,
       "len": 16,
-      "max": 6.5535,
-      "unit": "volts"
+      "max": 655.35,
+      "nullmax": 655,
+      "unit": "kilowatts"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_V_AVG",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell voltage (avg)",
-    "path": "Battery",
+    "id": "I3_AUX_PWR",
+    "make": "BMW",
+    "model": "i3",
+    "name": "Auxiliary power consumption",
+    "path": "Trips",
     "pid": "22",
-    "scaling": "raw/10000 clamped to [6.5535]",
+    "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
-    "unit": "volts"
+    "unit": "kilowatts"
   },
   {
     "bitLength": 16,
     "bitOffset": 80,
     "cmd": {
-      "22": "D107"
+      "22": "D111"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 80,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "nullmax": 655,
+      "unit": "kilowatts"
+    },
+    "hdr": "6F1",
+    "id": "I3_AUX_PWR",
+    "make": "BMW",
+    "model": "i3s",
+    "name": "Auxiliary power consumption",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "D111"
     },
     "debug": true,
     "eax": "60",
@@ -37856,60 +37854,6 @@
     "bitLength": 16,
     "bitOffset": 80,
     "cmd": {
-      "22": "D111"
-    },
-    "debug": false,
-    "eax": "60",
-    "fmt": {
-      "bix": 80,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "nullmax": 655,
-      "unit": "kilowatts"
-    },
-    "hdr": "6F1",
-    "id": "I3_AUX_PWR",
-    "make": "BMW",
-    "model": "i3",
-    "name": "Auxiliary power consumption",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 80,
-    "cmd": {
-      "22": "D111"
-    },
-    "debug": false,
-    "eax": "60",
-    "fmt": {
-      "bix": 80,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "nullmax": 655,
-      "unit": "kilowatts"
-    },
-    "hdr": "6F1",
-    "id": "I3_AUX_PWR",
-    "make": "BMW",
-    "model": "i3s",
-    "name": "Auxiliary power consumption",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 80,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -37951,6 +37895,32 @@
     "id": "I3_HVBAT_C_V_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell voltage (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 80,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_V_AVG",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell voltage (avg)",
     "path": "Battery",
     "pid": "22",
@@ -38149,34 +38119,6 @@
     "bitLength": 16,
     "bitOffset": 96,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 96,
-      "div": 100,
-      "len": 16,
-      "max": 327.67,
-      "min": -327.68,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_TEMP_MIN",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Cell temperature (min)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-327.68, 327.67]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 96,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -38222,6 +38164,34 @@
     "id": "I3_HVBAT_C_TEMP_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell temperature (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 96,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_TEMP_MIN",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Cell temperature (min)",
     "path": "Battery",
     "pid": "22",
@@ -38373,30 +38343,6 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
-      "21": "21"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7E0",
-    "id": "DAIHATSU_ODO",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "21",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
       "21": "28"
     },
     "debug": false,
@@ -38438,6 +38384,30 @@
     "id": "COROLLA_ODO",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "28"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "DAIHATSU_ODO",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Odometer",
     "path": "Trips",
     "pid": "21",
@@ -38492,6 +38462,30 @@
     "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1028"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "scalar"
+    },
+    "hdr": "753",
+    "id": "CROSSTREK_TID1",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Tire 1 id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 24,
@@ -38771,30 +38765,6 @@
       "unit": "kilometers"
     },
     "hdr": "714",
-    "id": "TIGUAN_ODO_DASH",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Odometer (dash)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2203"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
     "id": "TT_ODO_DASH",
     "make": "Audi",
     "model": "TT",
@@ -38926,30 +38896,6 @@
     "id": "GOLF_ODO",
     "make": "Volkswagen",
     "model": "Golf",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "295A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 16777215,
-      "unit": "kilometers"
-    },
-    "hdr": "7E0",
-    "id": "TIGUAN_ODO",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -39172,30 +39118,6 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
-      "22": "B921"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "710",
-    "id": "HECTOR_GWM_ODO",
-    "make": "MG",
-    "model": "Hector",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
       "22": "DD01"
     },
     "debug": false,
@@ -39365,6 +39287,31 @@
     "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1028"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 24,
+      "max": 16777215,
+      "unit": "scalar"
+    },
+    "hdr": "753",
+    "id": "CROSSTREK_TID2",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Tire 2 id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 24,
@@ -39547,6 +39494,31 @@
     "scaling": "raw clamped to [4294967295]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "1028"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
+      "max": 16777215,
+      "unit": "scalar"
+    },
+    "hdr": "753",
+    "id": "CROSSTREK_TID3",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Tire 3 id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 24,
@@ -39803,6 +39775,31 @@
     "signalGroups": [],
     "suggestedMetric": "odometer",
     "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "1028"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
+      "max": 16777215,
+      "unit": "scalar"
+    },
+    "hdr": "753",
+    "id": "CROSSTREK_TID4",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Tire 4 id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 24,
@@ -40099,7 +40096,7 @@
       "max": 16777215,
       "unit": "kilometers"
     },
-    "hdr": "747",
+    "hdr": "701",
     "id": "DAIHATSU_ODO",
     "make": "Daihatsu",
     "model": "",
@@ -40114,7 +40111,7 @@
     "bitLength": 24,
     "bitOffset": 8,
     "cmd": {
-      "22": "1627"
+      "22": "0103"
     },
     "debug": true,
     "eax": "",
@@ -40124,7 +40121,7 @@
       "max": 16777215,
       "unit": "kilometers"
     },
-    "hdr": "701",
+    "hdr": "747",
     "id": "DAIHATSU_ODO",
     "make": "Daihatsu",
     "model": "",
@@ -40360,6 +40357,30 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
+    "id": "TIGUAN_ODO",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10E0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
     "id": "TT_ODO_3",
     "make": "Audi",
     "model": "TT",
@@ -40393,6 +40414,30 @@
     "scaling": "raw clamped to [4000000000]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1160"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "meters"
+    },
+    "hdr": "7E0",
+    "id": "TIGUAN_ODO_HD",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Odometer (high resolution)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "meters"
   },
   {
     "bitLength": 32,
@@ -40721,30 +40766,6 @@
       "unit": "kilometers"
     },
     "hdr": "710",
-    "id": "TIGUAN_ODO_2",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Odometer (alternative)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2A0A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 32,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "710",
     "id": "TT_ODO",
     "make": "Audi",
     "model": "TT",
@@ -40829,83 +40850,6 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "div": 100,
-      "len": 32,
-      "max": 10000,
-      "min": -10000,
-      "sign": true,
-      "unit": "amps"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "HV battery current",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-10000, 10000]",
-    "suggestedMetric": "",
-    "unit": "amps"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "div": 100,
-      "len": 32,
-      "max": 10000,
-      "min": -10000,
-      "unit": "amps"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_CURR",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "HV battery current",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [-10000, 10000]",
-    "suggestedMetric": "",
-    "unit": "amps"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "D107"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "len": 32,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_ODO1",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Odometer #1",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
   },
   {
     "bitLength": 32,
@@ -41127,6 +41071,30 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_ODO1",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D49C"
     },
     "debug": false,
@@ -41266,12 +41234,65 @@
       "len": 32,
       "max": 10000,
       "min": -10000,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-10000, 10000]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD69"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 32,
+      "max": 10000,
+      "min": -10000,
       "unit": "amps"
     },
     "hdr": "6F1",
     "id": "I3_HVBAT_CURR",
     "make": "BMW",
     "model": "I3s",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-10000, 10000]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD69"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 32,
+      "max": 10000,
+      "min": -10000,
+      "unit": "amps"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_CURR",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "HV battery current",
     "path": "Battery",
     "pid": "22",
@@ -41554,31 +41575,6 @@
     "bitLength": 32,
     "bitOffset": 32,
     "cmd": {
-      "22": "D107"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "bix": 32,
-      "len": 32,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_ODO2",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Odometer #2",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 32,
-    "cmd": {
       "22": "D10D"
     },
     "debug": false,
@@ -41793,6 +41789,31 @@
     "id": "X3_ODO2",
     "make": "BMW",
     "model": "X3",
+    "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_ODO2",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Odometer #2",
     "path": "Trips",
     "pid": "22",
@@ -42611,30 +42632,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "01": "0D"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7DF",
-    "id": "HECTOR_VSS",
-    "make": "MG",
-    "model": "Hector",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "01",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "01": "0E"
     },
     "debug": false,
@@ -43347,32 +43344,6 @@
     "path": "Climate",
     "pid": "01",
     "scaling": "raw+-40 clamped to [215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "01": "46"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7DF",
-    "id": "HECTOR_AAT",
-    "make": "MG",
-    "model": "Hector",
-    "name": "Ambient air temperature",
-    "path": "Climate",
-    "pid": "01",
-    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -44463,31 +44434,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 326,
-      "mul": 1.28,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
-    "id": "DAIHATSU_VSS",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*1.28 clamped to [326]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -44503,6 +44449,32 @@
     "id": "GR86_TP_2_FL",
     "make": "Toyota",
     "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_2_FL",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -44535,58 +44507,6 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_FL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_2_FL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
@@ -44675,19 +44595,20 @@
     "eax": "",
     "fmt": {
       "len": 8,
-      "max": 20,
-      "unit": "scalar"
+      "max": 326,
+      "mul": 1.28,
+      "unit": "kilometersPerHour"
     },
-    "hdr": "7E0",
-    "id": "DAIHATSU_GEAR",
+    "hdr": "7B0",
+    "id": "DAIHATSU_VSS",
     "make": "Daihatsu",
     "model": "",
-    "name": "Gear",
-    "path": "Transmission",
+    "name": "Vehicle speed",
+    "path": "Movement",
     "pid": "21",
-    "scaling": "raw clamped to [20]",
-    "suggestedMetric": "",
-    "unit": "scalar"
+    "scaling": "raw*1.28 clamped to [326]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -44936,6 +44857,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_FL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "62"
     },
     "debug": true,
@@ -45052,6 +44999,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 20,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "DAIHATSU_GEAR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "000D"
     },
     "debug": false,
@@ -45097,6 +45068,32 @@
     "signalGroups": [],
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "002F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 255,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "CROSSTREK_FLI",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -45346,31 +45343,6 @@
     "id": "SQ5_DRIVE_TIME_ECO",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Driving time (eco)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0303"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
-    "id": "TIGUAN_DRIVE_TIME_ECO",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Driving time (eco)",
     "path": "Stats",
     "pid": "22",
@@ -45647,31 +45619,6 @@
       "unit": "percent"
     },
     "hdr": "7E1",
-    "id": "TIGUAN_DRIVE_TIME_SPORT",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Driving time (sport)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0304"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
     "id": "TT_DRIVE_TIME_SPORT",
     "make": "Audi",
     "model": "TT",
@@ -45904,31 +45851,6 @@
     "id": "SQ5_DRIVE_TIME_MANUAL",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Driving time (manual)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0305"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
-    "id": "TIGUAN_DRIVE_TIME_MANUAL",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Driving time (manual)",
     "path": "Stats",
     "pid": "22",
@@ -46208,6 +46130,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TT_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_1",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -46261,6 +46210,32 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TT_FL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "GRCOROLLA_TT_FL",
     "make": "Toyota",
     "model": "GR-Corolla",
@@ -46270,6 +46245,32 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_FL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -46401,6 +46402,57 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1014"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 215,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "714",
+    "id": "TIGUAN_AAT",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 20,
+      "unit": "volts"
+    },
+    "hdr": "7C0",
+    "id": "DAIHATSU_BATTERY_VOLTAGE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "B+ Battery Voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1021"
     },
     "debug": true,
@@ -46456,21 +46508,47 @@
     "debug": true,
     "eax": "",
     "fmt": {
-      "div": 10,
+      "div": 5,
       "len": 8,
-      "max": 20,
-      "unit": "volts"
+      "max": 51,
+      "unit": "psi"
     },
-    "hdr": "7C0",
-    "id": "DAIHATSU_BATTERY_VOLTAGE",
+    "hdr": "753",
+    "id": "CROSSTREK_TP_RL",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1059"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -41,
+      "div": 1.42,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_ACCEL_PEDAL",
     "make": "Daihatsu",
     "model": "",
-    "name": "B+ Battery Voltage",
-    "path": "Electrical",
+    "name": "Accelerator Pedal",
+    "path": "Control",
     "pid": "22",
-    "scaling": "raw/10 clamped to [20]",
+    "scaling": "raw/1.42 +-41 clamped to [100]",
     "suggestedMetric": "",
-    "unit": "volts"
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -46967,6 +47045,32 @@
     "scaling": "Mapped values: {'0': {'description': 'E-pedal mode is off', 'value': 'EPEDAL_OFF'}, '4': {'description': 'E-pedal mode is on', 'value': 'EPEDAL_ON'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1638"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_ATF_TEMP",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Transmission Fluid Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -48740,6 +48844,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F0D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_VSS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F2F"
     },
     "debug": false,
@@ -48764,58 +48892,6 @@
     "pid": "22",
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "fuelTankLevel",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1F2F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "700",
-    "id": "DAIHATSU_ATF_TEMP",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Transmission Fluid Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1F2F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -41,
-      "div": 1.42,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "700",
-    "id": "DAIHATSU_ACCEL_PEDAL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Accelerator Pedal",
-    "path": "Control",
-    "pid": "22",
-    "scaling": "raw/1.42 +-41 clamped to [100]",
-    "suggestedMetric": "",
     "unit": "percent"
   },
   {
@@ -49135,30 +49211,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "1F5B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D2",
-    "id": "DAIHATSU_VSS",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "2021"
     },
     "debug": false,
@@ -49274,85 +49326,6 @@
     "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
     "suggestedMetric": "",
     "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_FL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TT_1",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TT_FL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -49613,6 +49586,32 @@
     "fmt": {
       "add": -58,
       "len": 8,
+      "max": 197,
+      "min": -58,
+      "unit": "celsius"
+    },
+    "hdr": "714",
+    "id": "TIGUAN_EOT",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Engine oil temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [-58, 197]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -49770,31 +49769,6 @@
     "id": "SQ5_EOT",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-58 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "202F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "714",
-    "id": "TIGUAN_EOT",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -50185,30 +50159,6 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "TIGUAN_CRSH_FRONT",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Crashes, front",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2353"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
     "id": "TT_CRSH_FRONT",
     "make": "Audi",
     "model": "TT",
@@ -50404,30 +50354,6 @@
     "id": "SQ5_CRASH_CNT_DRVR",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Crashes, driver side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2354"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "TIGUAN_CRASH_CNT_DRVR",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Crashes, driver side",
     "path": "Stats",
     "pid": "22",
@@ -50665,30 +50591,6 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "TIGUAN_CRASH_CNT_PSNGR",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Crashes, passenger side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2355"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
     "id": "TT_CRASH_CNT_PSNGR",
     "make": "Audi",
     "model": "TT",
@@ -50905,30 +50807,6 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "TIGUAN_CRASH_CNT_REAR",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Crashes, rear",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2356"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
     "id": "TT_CRASH_CNT_REAR",
     "make": "Audi",
     "model": "TT",
@@ -51124,30 +51002,6 @@
     "id": "SQ5_CRASH_CNT_ROLL",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Crashes, rollover",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2357"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "TIGUAN_CRASH_CNT_ROLL",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Crashes, rollover",
     "path": "Stats",
     "pid": "22",
@@ -51388,33 +51242,6 @@
     "id": "SQ5_WNDSHLD_TEMP",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Windshield temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "27C4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -38.8,
-      "len": 8,
-      "max": 108.08,
-      "min": -38.8,
-      "mul": 0.576,
-      "unit": "celsius"
-    },
-    "hdr": "746",
-    "id": "TIGUAN_WNDSHLD_TEMP",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Windshield temperature",
     "path": "Climate",
     "pid": "22",
@@ -52042,7 +51869,7 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "4AB1"
+      "22": "586F"
     },
     "debug": true,
     "eax": "12",
@@ -52052,9 +51879,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_EOP",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "4SERIES_EOP",
+    "make": "BMW",
+    "model": "4-Series",
     "name": "Engine oil pressure",
     "path": "Movement",
     "pid": "22",
@@ -52076,9 +51903,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "4SERIES_EOP",
-    "make": "BMW",
-    "model": "4-Series",
+    "id": "ROLLSROYCE_EOP",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Engine oil pressure",
     "path": "Movement",
     "pid": "22",
@@ -52600,30 +52427,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "D001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "710",
-    "id": "HECTOR_GWM_STATUS",
-    "make": "MG",
-    "model": "Hector",
-    "name": "Vehicle Gateway Status",
-    "path": "Vehicle.Internal",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "D031"
     },
     "debug": false,
@@ -52691,33 +52494,6 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "D107"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "add": -40,
-      "div": 2,
-      "len": 8,
-      "max": 87.5,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_AAT",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Ambient air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
-    "suggestedMetric": "",
-    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -52793,6 +52569,33 @@
     "id": "I3_AAT",
     "make": "BMW",
     "model": "I3s",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 87.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_AAT",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Ambient air temperature",
     "path": "Climate",
     "pid": "22",
@@ -52900,7 +52703,7 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "DA12"
+      "22": "DA25"
     },
     "debug": true,
     "eax": "18",
@@ -52910,58 +52713,10 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_EOT",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "4SERIES_EOT",
+    "make": "BMW",
+    "model": "4-Series",
     "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DA12"
-    },
-    "debug": true,
-    "eax": "18",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_GEAR",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Gear",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DA12"
-    },
-    "debug": true,
-    "eax": "18",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_TIME_D",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Time in D",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -52982,9 +52737,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "4SERIES_EOT",
-    "make": "BMW",
-    "model": "4-Series",
+    "id": "ROLLSROYCE_EOT",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -53020,6 +52775,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_GEAR",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DA37"
     },
     "debug": true,
@@ -53033,6 +52812,30 @@
     "id": "4SERIES_TIME_D",
     "make": "BMW",
     "model": "4-Series",
+    "name": "Time in D",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_TIME_D",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Time in D",
     "path": "Engine",
     "pid": "22",
@@ -66551,6 +66354,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_2_RL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "21": "16"
     },
     "debug": false,
@@ -66573,60 +66403,6 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 16,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_RL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 16,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_2_RL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
@@ -66856,6 +66632,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_RL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -66954,6 +66757,34 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TT_3",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_3",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -67009,6 +66840,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TT_RL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "GRCOROLLA_TT_RL",
     "make": "Toyota",
     "model": "GR-Corolla",
@@ -67018,6 +66876,33 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_RL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -67076,6 +66961,32 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "753",
+    "id": "CROSSTREK_TP_FR",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "106C"
     },
     "debug": false,
@@ -67103,7 +67014,7 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "22": "1F5B"
+      "22": "106C"
     },
     "debug": true,
     "eax": "",
@@ -67247,88 +67158,6 @@
     "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
     "suggestedMetric": "",
     "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 16,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_RL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TT_3",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TT_RL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -67539,31 +67368,6 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 16,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_C_CNT_MOD",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Number of cells per module",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
       "22": "C901"
     },
     "debug": false,
@@ -67670,7 +67474,7 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "22": "DA12"
+      "22": "DA37"
     },
     "debug": true,
     "eax": "18",
@@ -67681,9 +67485,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_TIME_M",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "4SERIES_TIME_M",
+    "make": "BMW",
+    "model": "4-Series",
     "name": "Time in M",
     "path": "Engine",
     "pid": "22",
@@ -67706,9 +67510,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "4SERIES_TIME_M",
-    "make": "BMW",
-    "model": "4-Series",
+    "id": "ROLLSROYCE_TIME_M",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Time in M",
     "path": "Engine",
     "pid": "22",
@@ -67912,6 +67716,31 @@
     "id": "I3_HVBAT_C_CNT_MOD",
     "make": "BMW",
     "model": "i3s",
+    "name": "Number of cells per module",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_C_CNT_MOD",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Number of cells per module",
     "path": "Battery",
     "pid": "22",
@@ -84165,6 +83994,33 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_2_RR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "21": "16"
     },
     "debug": false,
@@ -84187,60 +84043,6 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 24,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_RR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 24,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_2_RR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
@@ -84470,6 +84272,33 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_RR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -84568,6 +84397,34 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TT_4",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_4",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -84603,6 +84460,33 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_RR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -84734,6 +84618,33 @@
       "unit": "bars"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TP_RR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
     "id": "GRCOROLLA_TP_RR",
     "make": "Toyota",
     "model": "GR-Corolla",
@@ -84743,6 +84654,34 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 24,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -84819,6 +84758,32 @@
     "id": "WRX_TP_FL",
     "make": "Subaru",
     "model": "WRX",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "753",
+    "id": "CROSSTREK_TP_FL",
+    "make": "Subaru",
+    "model": "Crosstrek",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -86142,116 +86107,6 @@
     "debug": true,
     "eax": "2A",
     "fmt": {
-      "add": -0.5,
-      "bix": 24,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_RR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 24,
-      "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TT_4",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 24,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TT_RR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 24,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_2",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
       "bix": 24,
       "len": 8,
       "map": {
@@ -86577,31 +86432,6 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 24,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_MOD_CNT",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Number of modules",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
       "22": "C901"
     },
     "debug": false,
@@ -86908,6 +86738,31 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "DF71"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_MOD_CNT",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Number of modules",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "E5C7"
     },
     "debug": false,
@@ -86922,6 +86777,31 @@
     "id": "IX3_HVBAT_SOH",
     "make": "BMW",
     "model": "iX3",
+    "name": "HV battery health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "E5C7"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_SOH",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "HV battery health",
     "path": "Battery",
     "pid": "22",
@@ -97898,6 +97778,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_2_SPARE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "21": "16"
     },
     "debug": false,
@@ -97920,60 +97827,6 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 32,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_SPARE",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Spare tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 32,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_2_SPARE",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
@@ -98192,6 +98045,33 @@
     "id": "COROLLA_TP_SPARE",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_SPARE",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -99676,6 +99556,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TT_SPARE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "GRCOROLLA_TT_SPARE",
     "make": "Toyota",
     "model": "GR-Corolla",
@@ -99703,33 +99610,6 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "GRCOROLLA_TP_SPARE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Spare tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 32,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
     "id": "DAIHATSU_TP_SPARE",
     "make": "Daihatsu",
     "model": "",
@@ -99744,53 +99624,28 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
-      "22": "2021"
+      "22": "1005"
     },
     "debug": true,
     "eax": "2A",
     "fmt": {
-      "add": -40,
+      "add": -0.5,
       "bix": 32,
+      "div": 58,
       "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
+      "max": 4,
+      "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TT_SPARE",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Spare tire temperature",
+    "id": "GRCOROLLA_TP_SPARE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "6335"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_MOD_T_CNT",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "Number of temperature sensors per module",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -101487,6 +101342,31 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_HVBAT_MOD_T_CNT",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Number of temperature sensors per module",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 320,
     "cmd": {
       "22": "E004"
@@ -103173,6 +103053,34 @@
       "unit": "psi"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TP_3",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 40,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TP_3",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -103435,32 +103343,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "TIGUAN_TP_FR",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A0"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "TT_TP_FR",
     "make": "Audi",
     "model": "TT",
@@ -103672,32 +103554,6 @@
     "id": "SQ5_TP_FL",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A1"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
-    "id": "TIGUAN_TP_FL",
-    "make": "Volkswagen",
-    "model": "Tiguan",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -103955,32 +103811,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "TIGUAN_TP_RL",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A2"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "TT_TP_RL",
     "make": "Audi",
     "model": "TT",
@@ -104215,32 +104045,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "TIGUAN_TP_RR",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A3"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "TT_TP_RR",
     "make": "Audi",
     "model": "TT",
@@ -104250,34 +104054,6 @@
     "scaling": "raw/40 clamped to [6.375]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 40,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_3",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -107459,32 +107235,6 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
-      "21": "21"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "DAIHATSU_VVTOT",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Variable valve timing oil temperature",
-    "path": "Engine",
-    "pid": "21",
-    "scaling": "raw clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
       "21": "51"
     },
     "debug": false,
@@ -107530,6 +107280,32 @@
     "id": "COROLLA_VVTOT",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Variable valve timing oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "DAIHATSU_VVTOT",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Variable valve timing oil temperature",
     "path": "Engine",
     "pid": "21",
@@ -108832,6 +108608,34 @@
       "unit": "psi"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TP_4",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 56,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TP_4",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -108863,34 +108667,6 @@
     "id": "RAV4HYBRID_TP_4",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 56,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_4",
-    "make": "Daihatsu",
-    "model": "",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -110824,32 +110600,6 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
-      "21": "21"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "DAIHATSU_EOT",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "21",
-    "scaling": "raw clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
       "21": "51"
     },
     "debug": false,
@@ -110895,6 +110645,32 @@
     "id": "COROLLA_EOT",
     "make": "Toyota",
     "model": "Corolla",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "DAIHATSU_EOT",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "21",
@@ -113085,6 +112861,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_2_FR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "21": "16"
     },
     "debug": false,
@@ -113107,60 +112910,6 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 8,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_FR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 8,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_2_FR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
@@ -113469,6 +113218,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_FR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -113567,6 +113343,34 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TT_2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_2",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -113602,6 +113406,33 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_FR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -113733,6 +113564,33 @@
       "unit": "bars"
     },
     "hdr": "750",
+    "id": "DAIHATSU_TP_FR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
     "id": "GRCOROLLA_TP_FR",
     "make": "Toyota",
     "model": "GR-Corolla",
@@ -113742,6 +113600,34 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 8,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -113829,6 +113715,32 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "753",
+    "id": "CROSSTREK_TP_RR",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "106C"
     },
     "debug": false,
@@ -113856,7 +113768,7 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "22": "1F5B"
+      "22": "106C"
     },
     "debug": true,
     "eax": "",
@@ -114000,116 +113912,6 @@
     "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
     "suggestedMetric": "",
     "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 8,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_FR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 8,
-      "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TT_2",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 8,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TT_FR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 8,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_1",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -114634,7 +114436,7 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "22": "DA12"
+      "22": "DA37"
     },
     "debug": true,
     "eax": "18",
@@ -114645,9 +114447,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_TIME_S",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "4SERIES_TIME_S",
+    "make": "BMW",
+    "model": "4-Series",
     "name": "Time in S",
     "path": "Engine",
     "pid": "22",
@@ -114670,9 +114472,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "4SERIES_TIME_S",
-    "make": "BMW",
-    "model": "4-Series",
+    "id": "ROLLSROYCE_TIME_S",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Time in S",
     "path": "Engine",
     "pid": "22",
