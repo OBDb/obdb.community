@@ -6132,31 +6132,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "0302"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 4,
-      "len": 16,
-      "max": 16383,
-      "unit": "hours"
-    },
-    "hdr": "7E1",
-    "id": "TT_DRIVE_TIME",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Total drive time",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/4 clamped to [16383]",
-    "suggestedMetric": "",
-    "unit": "hours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "0307"
     },
     "debug": false,
@@ -7713,31 +7688,6 @@
     "debug": true,
     "eax": "",
     "fmt": {
-      "div": 250,
-      "len": 16,
-      "max": 262,
-      "unit": "unknown"
-    },
-    "hdr": "7E0",
-    "id": "TT_OIL_LEVEL",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Oil level",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "unknown"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11BA"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "div": 2500,
       "len": 16,
       "max": 26.2,
@@ -7988,31 +7938,6 @@
     "debug": true,
     "eax": "",
     "fmt": {
-      "div": 250,
-      "len": 16,
-      "max": 262,
-      "unit": "centimeters"
-    },
-    "hdr": "7E0",
-    "id": "TT_OIL_MAX",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Oil level (max)",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "centimeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11C4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "div": 2500,
       "len": 16,
       "max": 26.2,
@@ -8222,31 +8147,6 @@
     "id": "SQ5_OIL_MIN",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Oil level (min)",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "centimeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11C5"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 250,
-      "len": 16,
-      "max": 262,
-      "unit": "centimeters"
-    },
-    "hdr": "7E0",
-    "id": "TT_OIL_MIN",
-    "make": "Audi",
-    "model": "TT",
     "name": "Oil level (min)",
     "path": "Fluids",
     "pid": "22",
@@ -8675,6 +8575,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1800"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "713",
+    "id": "TT_FL_VSS",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1801"
     },
     "debug": false,
@@ -8696,6 +8621,81 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1801"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "713",
+    "id": "TT_FR_VSS",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1802"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "713",
+    "id": "TT_RL_VSS",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1803"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "713",
+    "id": "TT_RR_VSS",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
   },
   {
     "bitLength": 16,
@@ -9299,30 +9299,6 @@
     "eax": "",
     "fmt": {
       "len": 16,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
-    "id": "TT_RANGE",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Range remaining",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "fuelRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2294"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 16,
       "max": 65535,
       "unit": "kilometers"
     },
@@ -9505,31 +9481,6 @@
     "id": "SQ5_FLV",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Fuel remaining",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/8 clamped to [255]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "229A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 8,
-      "len": 16,
-      "max": 255,
-      "unit": "liters"
-    },
-    "hdr": "714",
-    "id": "TT_FLV",
-    "make": "Audi",
-    "model": "TT",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -9729,31 +9680,6 @@
     "id": "SQ5_IAT",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Interior air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2613"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "714",
-    "id": "TT_IAT",
-    "make": "Audi",
-    "model": "TT",
     "name": "Interior air temperature",
     "path": "Climate",
     "pid": "22",
@@ -11761,31 +11687,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "2B1B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "TT_TIRE_FL_SPD",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "2B1C"
     },
     "debug": false,
@@ -12030,31 +11931,6 @@
     "id": "SQ5_TIRE_FR_SPD",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "TT_TIRE_FR_SPD",
-    "make": "Audi",
-    "model": "TT",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -12321,31 +12197,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "2B1D"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "TT_TIRE_RL_SPD",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "2B1E"
     },
     "debug": false,
@@ -12590,31 +12441,6 @@
     "id": "SQ5_TIRE_RR_SPD",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1E"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "TT_TIRE_RR_SPD",
-    "make": "Audi",
-    "model": "TT",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -33712,32 +33538,6 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 336,
-    "cmd": {
-      "22": "22B0"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 336,
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "unit": "liters"
-    },
-    "hdr": "714",
-    "id": "TT_FLI_VOL",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 368,
     "cmd": {
       "22": "2660"
@@ -38467,6 +38267,31 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
+      "22": "101A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "blsb": true,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E1",
+    "id": "TT_ODO_TCM_2",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Odometer (TCM #2)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1028"
     },
     "debug": true,
@@ -38580,6 +38405,31 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 167772150,
+      "mul": 10,
+      "unit": "kilometers"
+    },
+    "hdr": "714",
+    "id": "IBIZA_ODO",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*10 clamped to [167772150]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -38755,30 +38605,6 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
-      "22": "2203"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
-    "id": "TT_ODO_DASH",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Odometer (dash)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
       "22": "295A"
     },
     "debug": false,
@@ -38897,6 +38723,30 @@
     "make": "Volkswagen",
     "model": "Golf",
     "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "TT_ODO_2",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Odometer (alternative)",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [16777215]",
@@ -40371,30 +40221,6 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
-      "22": "10E0"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 32,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7E0",
-    "id": "TT_ODO_3",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Odometer (alternative 2)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
       "22": "1160"
     },
     "debug": true,
@@ -40553,30 +40379,6 @@
     "id": "SQ5_ODO_2",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Odometer (alternative)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "295A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 32,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7E0",
-    "id": "TT_ODO_2",
-    "make": "Audi",
-    "model": "TT",
     "name": "Odometer (alternative)",
     "path": "Trips",
     "pid": "22",
@@ -40756,30 +40558,6 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
-      "22": "2A0A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 32,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "710",
-    "id": "TT_ODO",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
       "22": "2AB2"
     },
     "debug": false,
@@ -40825,6 +40603,57 @@
     "scaling": "raw/1310770 clamped to [3276]",
     "suggestedMetric": "",
     "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "3841"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "blsb": true,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7E1",
+    "id": "TT_ODO_TCM_1",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Odometer (TCM #1)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "3887"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "blsb": true,
+      "div": 10,
+      "len": 32,
+      "max": 429496729.5,
+      "unit": "kilometers"
+    },
+    "hdr": "7E1",
+    "id": "TT_ODO_TCM_2_HD",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Odometer (TCM #2 high res)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [429496729.5]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
   },
   {
     "bitLength": 32,
@@ -45354,31 +45183,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "0303"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
-    "id": "TT_DRIVE_TIME_ECO",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Driving time (eco)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "0304"
     },
     "debug": false,
@@ -45608,31 +45412,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "0304"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
-    "id": "TT_DRIVE_TIME_SPORT",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Driving time (sport)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "0305"
     },
     "debug": false,
@@ -45851,31 +45630,6 @@
     "id": "SQ5_DRIVE_TIME_MANUAL",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Driving time (manual)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0305"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
-    "id": "TT_DRIVE_TIME_MANUAL",
-    "make": "Audi",
-    "model": "TT",
     "name": "Driving time (manual)",
     "path": "Stats",
     "pid": "22",
@@ -46421,6 +46175,31 @@
     "path": "Climate",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1014"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "714",
+    "id": "TT_AAT",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -49612,6 +49391,31 @@
     "fmt": {
       "add": -58,
       "len": 8,
+      "max": 197,
+      "unit": "celsius"
+    },
+    "hdr": "714",
+    "id": "TT_EOT",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [197]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -49780,31 +49584,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "202F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "714",
-    "id": "TT_EOT",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-58 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "210F"
     },
     "debug": false,
@@ -49946,30 +49725,6 @@
     "id": "SQ5_GEAR",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "210F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "7E1",
-    "id": "TT_GEAR",
-    "make": "Audi",
-    "model": "TT",
     "name": "Gear",
     "path": "Transmission",
     "pid": "22",
@@ -50138,30 +49893,6 @@
     "id": "SQ5_CRSH_FRONT",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Crashes, front",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2353"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "TT_CRSH_FRONT",
-    "make": "Audi",
-    "model": "TT",
     "name": "Crashes, front",
     "path": "Trips",
     "pid": "22",
@@ -50365,30 +50096,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "2354"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "TT_CRASH_CNT_DRVR",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Crashes, driver side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "2355"
     },
     "debug": false,
@@ -50570,30 +50277,6 @@
     "id": "SQ5_CRASH_CNT_PSNGR",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Crashes, passenger side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2355"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "TT_CRASH_CNT_PSNGR",
-    "make": "Audi",
-    "model": "TT",
     "name": "Crashes, passenger side",
     "path": "Stats",
     "pid": "22",
@@ -50797,30 +50480,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "2356"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "TT_CRASH_CNT_REAR",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Crashes, rear",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "2357"
     },
     "debug": false,
@@ -51002,30 +50661,6 @@
     "id": "SQ5_CRASH_CNT_ROLL",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Crashes, rollover",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2357"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "TT_CRASH_CNT_ROLL",
-    "make": "Audi",
-    "model": "TT",
     "name": "Crashes, rollover",
     "path": "Stats",
     "pid": "22",
@@ -51242,33 +50877,6 @@
     "id": "SQ5_WNDSHLD_TEMP",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Windshield temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "27C4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -38.8,
-      "len": 8,
-      "max": 108.08,
-      "min": -38.8,
-      "mul": 0.576,
-      "unit": "celsius"
-    },
-    "hdr": "746",
-    "id": "TT_WNDSHLD_TEMP",
-    "make": "Audi",
-    "model": "TT",
     "name": "Windshield temperature",
     "path": "Climate",
     "pid": "22",
@@ -99651,6 +99259,170 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "1": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "2": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "3": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "70B",
+    "id": "TT_TID_1",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Tire #1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "1": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "2": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "3": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "70B",
+    "id": "TT_TID_2",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Tire #2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "1": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "2": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "3": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "70B",
+    "id": "TT_TID_3",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Tire #3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "1": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "2": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "3": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "70B",
+    "id": "TT_TID_4",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Tire #4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B001"
     },
     "debug": false,
@@ -103331,32 +103103,6 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
-      "22": "18A0"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
-    "id": "TT_TP_FR",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
       "22": "18A1"
     },
     "debug": false,
@@ -103554,32 +103300,6 @@
     "id": "SQ5_TP_FL",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A1"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
-    "id": "TT_TP_FL",
-    "make": "Audi",
-    "model": "TT",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -103799,32 +103519,6 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
-      "22": "18A2"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
-    "id": "TT_TP_RL",
-    "make": "Audi",
-    "model": "TT",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
       "22": "18A3"
     },
     "debug": false,
@@ -104022,32 +103716,6 @@
     "id": "SQ5_TP_RR",
     "make": "Audi",
     "model": "SQ5",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A3"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
-    "id": "TT_TP_RR",
-    "make": "Audi",
-    "model": "TT",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -106866,6 +106534,110 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "TT_TP_1",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Tire #1 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "TT_TP_2",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Tire #2 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "TT_TP_3",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Tire #3 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "TT_TP_4",
+    "make": "Audi",
+    "model": "TT",
+    "name": "Tire #4 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
