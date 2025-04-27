@@ -23387,56 +23387,6 @@
     "bitLength": 16,
     "bitOffset": 112,
     "cmd": {
-      "22": "6001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "len": 16,
-      "max": 65535,
-      "unit": "kilopascal"
-    },
-    "hdr": "DA26",
-    "id": "CIVIC_TP_RL",
-    "make": "Honda",
-    "model": "Civic",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "kilopascal"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "7029"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "len": 16,
-      "max": 100,
-      "unit": "liters"
-    },
-    "hdr": "DA60",
-    "id": "CIVIC_FLV",
-    "make": "Honda",
-    "model": "Civic",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw clamped to [100]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 112,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -30693,6 +30643,32 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2610"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 4,
+      "len": 16,
+      "max": 16383.75,
+      "unit": "rpm"
+    },
+    "hdr": "DA0E",
+    "id": "CIVIC_RPM",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Engine RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383.75]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 240,
     "cmd": {
       "22": "DFA0"
@@ -35642,6 +35618,33 @@
     "bitLength": 16,
     "bitOffset": 64,
     "cmd": {
+      "22": "2611"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 65535,
+      "len": 16,
+      "max": 29.4,
+      "mul": 29.4,
+      "unit": "scalar"
+    },
+    "hdr": "DA0E",
+    "id": "CIVIC_AIRGAS_RATIO",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Air/gas ratio",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*29.4 /65535 clamped to [29.4]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
       "22": "2AB7"
     },
     "debug": false,
@@ -35712,31 +35715,6 @@
       2010,
       2013
     ],
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "kilopascal"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 64,
-    "cmd": {
-      "22": "6001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 64,
-      "len": 16,
-      "max": 65535,
-      "unit": "kilopascal"
-    },
-    "hdr": "DA26",
-    "id": "CIVIC_TP_FR",
-    "make": "Honda",
-    "model": "Civic",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -37446,31 +37424,6 @@
     "bitLength": 16,
     "bitOffset": 80,
     "cmd": {
-      "22": "6001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 80,
-      "len": 16,
-      "max": 65535,
-      "unit": "kilopascal"
-    },
-    "hdr": "DA26",
-    "id": "CIVIC_TP_FL",
-    "make": "Honda",
-    "model": "Civic",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "kilopascal"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 80,
-    "cmd": {
       "22": "D111"
     },
     "debug": false,
@@ -37711,6 +37664,34 @@
     "bitLength": 16,
     "bitOffset": 96,
     "cmd": {
+      "22": "2662"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 96,
+      "div": 10,
+      "len": 16,
+      "max": 1500,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "DA0E",
+    "id": "CIVIC_CAT_T",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Catalyst temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 1500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
       "22": "2AB7"
     },
     "debug": false,
@@ -37792,26 +37773,27 @@
     "bitLength": 16,
     "bitOffset": 96,
     "cmd": {
-      "22": "6001"
+      "22": "7029"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 96,
+      "div": 100,
       "len": 16,
-      "max": 65535,
-      "unit": "kilopascal"
+      "max": 32,
+      "unit": "liters"
     },
-    "hdr": "DA26",
-    "id": "CIVIC_TP_RR",
+    "hdr": "DA60",
+    "id": "CIVIC_FLV",
     "make": "Honda",
     "model": "Civic",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
+    "name": "Fuel level",
+    "path": "Fuel",
     "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "kilopascal"
+    "scaling": "raw/100 clamped to [32]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
   },
   {
     "bitLength": 16,
@@ -101014,6 +100996,55 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 352,
+    "cmd": {
+      "22": "2612"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 352,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        }
+      }
+    },
+    "hdr": "DA0E",
+    "id": "CIVIC_GEAR",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
       "01": "68"
@@ -111422,6 +111453,32 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "22": "266D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 2,
+      "len": 8,
+      "max": 127,
+      "unit": "percent"
+    },
+    "hdr": "DA0E",
+    "id": "CIVIC_AIRGAS_MIX",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Air/gas mixture",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [127]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -116637,6 +116694,33 @@
     ],
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "2662"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "div": 255,
+      "len": 8,
+      "max": 2,
+      "mul": 1.99,
+      "unit": "scalar"
+    },
+    "hdr": "DA0E",
+    "id": "CIVIC_KNOCK_CTRL",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Knock control",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*1.99 /255 clamped to [2]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
