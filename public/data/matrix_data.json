@@ -764,6 +764,32 @@
       "unit": "offon"
     },
     "hdr": "744",
+    "id": "EV9_DC_CHRG_STATE",
+    "make": "Kia",
+    "model": "EV9",
+    "name": "DC charging state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 140,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 140,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "744",
     "id": "IONIQ5_DC_CHRG_STATE",
     "make": "Hyundai",
     "model": "IONIQ-5",
@@ -805,9 +831,9 @@
     "bitLength": 1,
     "bitOffset": 140,
     "cmd": {
-      "22": "E001"
+      "22": "E003"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 140,
@@ -816,10 +842,10 @@
       "unit": "offon"
     },
     "hdr": "744",
-    "id": "EV9_DC_CHRG_STATE",
+    "id": "EV6_HVBAT_DC_CHRGNG",
     "make": "Kia",
-    "model": "EV9",
-    "name": "DC charging state",
+    "model": "EV6",
+    "name": "DC charging",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -842,9 +868,9 @@
       "unit": "offon"
     },
     "hdr": "744",
-    "id": "EV6_HVBAT_DC_CHRGNG",
+    "id": "EV9_HVBAT_DC_CHRGNG",
     "make": "Kia",
-    "model": "EV6",
+    "model": "EV9",
     "name": "DC charging",
     "path": "Battery",
     "pid": "22",
@@ -897,32 +923,6 @@
     "id": "IONIQ6_HVBAT_DC_CHRGNG",
     "make": "Hyundai",
     "model": "IONIQ-6",
-    "name": "DC charging",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 140,
-    "cmd": {
-      "22": "E003"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 140,
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "744",
-    "id": "EV9_HVBAT_DC_CHRGNG",
-    "make": "Kia",
-    "model": "EV9",
     "name": "DC charging",
     "path": "Battery",
     "pid": "22",
@@ -24810,6 +24810,33 @@
       "unit": "volts"
     },
     "hdr": "744",
+    "id": "EV9_HVBAT_TARGET_VOLT",
+    "make": "Kia",
+    "model": "EV9",
+    "name": "EVSE target current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "E003"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "volts"
+    },
+    "hdr": "744",
     "id": "IONIQ5_HVBAT_TARGET_VOLT",
     "make": "Hyundai",
     "model": "IONIQ-5",
@@ -24840,33 +24867,6 @@
     "id": "IONIQ6_HVBAT_TARGET_VOLT",
     "make": "Hyundai",
     "model": "IONIQ-6",
-    "name": "EVSE target current",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553]",
-    "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "E003"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "div": 10,
-      "len": 16,
-      "max": 6553,
-      "unit": "volts"
-    },
-    "hdr": "744",
-    "id": "EV9_HVBAT_TARGET_VOLT",
-    "make": "Kia",
-    "model": "EV9",
     "name": "EVSE target current",
     "path": "Battery",
     "pid": "22",
@@ -25022,6 +25022,33 @@
       "unit": "amps"
     },
     "hdr": "744",
+    "id": "EV9_HVBAT_TARGET_CURR",
+    "make": "Kia",
+    "model": "EV9",
+    "name": "EVSE target voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "E003"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "amps"
+    },
+    "hdr": "744",
     "id": "IONIQ5_HVBAT_TARGET_CURR",
     "make": "Hyundai",
     "model": "IONIQ-5",
@@ -25052,33 +25079,6 @@
     "id": "IONIQ6_HVBAT_TARGET_CURR",
     "make": "Hyundai",
     "model": "IONIQ-6",
-    "name": "EVSE target voltage",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553]",
-    "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "amps"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 144,
-    "cmd": {
-      "22": "E003"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 144,
-      "div": 10,
-      "len": 16,
-      "max": 6553,
-      "unit": "amps"
-    },
-    "hdr": "744",
-    "id": "EV9_HVBAT_TARGET_CURR",
-    "make": "Kia",
-    "model": "EV9",
     "name": "EVSE target voltage",
     "path": "Battery",
     "pid": "22",
@@ -30918,6 +30918,32 @@
       "unit": "scalar"
     },
     "hdr": "744",
+    "id": "EV9_HVBAT_CHRG_CNT",
+    "make": "Kia",
+    "model": "EV9",
+    "name": "Number of DC charges",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "E003"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "744",
     "id": "IONIQ5_HVBAT_CHRG_CNT",
     "make": "Hyundai",
     "model": "IONIQ-5",
@@ -30947,32 +30973,6 @@
     "id": "IONIQ6_HVBAT_CHRG_CNT",
     "make": "Hyundai",
     "model": "IONIQ-6",
-    "name": "Number of DC charges",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 256,
-    "cmd": {
-      "22": "E003"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 256,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "744",
-    "id": "EV9_HVBAT_CHRG_CNT",
-    "make": "Kia",
-    "model": "EV9",
     "name": "Number of DC charges",
     "path": "Battery",
     "pid": "22",
@@ -32446,6 +32446,32 @@
       "unit": "hours"
     },
     "hdr": "744",
+    "id": "EV9_DC_CHRG_TIME",
+    "make": "Kia",
+    "model": "EV9",
+    "name": "Total DC charging time",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 288,
+    "cmd": {
+      "22": "E003"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 288,
+      "len": 16,
+      "max": 65535,
+      "unit": "hours"
+    },
+    "hdr": "744",
     "id": "IONIQ5_DC_CHRG_TIME",
     "make": "Hyundai",
     "model": "IONIQ-5",
@@ -32475,32 +32501,6 @@
     "id": "IONIQ6_DC_CHRG_TIME",
     "make": "Hyundai",
     "model": "IONIQ-6",
-    "name": "Total DC charging time",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "hours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 288,
-    "cmd": {
-      "22": "E003"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 288,
-      "len": 16,
-      "max": 65535,
-      "unit": "hours"
-    },
-    "hdr": "744",
-    "id": "EV9_DC_CHRG_TIME",
-    "make": "Kia",
-    "model": "EV9",
     "name": "Total DC charging time",
     "path": "Battery",
     "pid": "22",
@@ -57435,6 +57435,33 @@
       "unit": "percent"
     },
     "hdr": "744",
+    "id": "EV9_HVBAT_SOC_VCMS",
+    "make": "Kia",
+    "model": "EV9",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "signalGroups": [],
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "E003"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "744",
     "id": "IONIQ5_HVBAT_SOC_VCMS",
     "make": "Hyundai",
     "model": "IONIQ-5",
@@ -57465,33 +57492,6 @@
     "id": "IONIQ6_HVBAT_SOC_VCMS",
     "make": "Hyundai",
     "model": "IONIQ-6",
-    "name": "HV battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 clamped to [100]",
-    "signalGroups": [],
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "E003"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "div": 2,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "744",
-    "id": "EV9_HVBAT_SOC_VCMS",
-    "make": "Kia",
-    "model": "EV9",
     "name": "HV battery charge",
     "path": "Battery",
     "pid": "22",
