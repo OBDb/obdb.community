@@ -7520,6 +7520,35 @@
     "id": "GOLF_OIL_LEVEL",
     "make": "Volkswagen",
     "model": "Golf",
+    "modelYears": [
+      2015,
+      2018
+    ],
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 250,
+      "len": 16,
+      "max": 262,
+      "unit": "unknown"
+    },
+    "hdr": "7E0",
+    "id": "GOLF_OIL_LEVEL",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Oil level",
     "path": "Engine",
     "pid": "22",
@@ -38528,7 +38557,7 @@
     "model": "Golf",
     "modelYears": [
       2015,
-      2016
+      2018
     ],
     "name": "Odometer",
     "path": "Trips",
