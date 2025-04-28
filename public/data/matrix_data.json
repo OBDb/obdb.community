@@ -10108,6 +10108,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "27C6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DACB",
+    "id": "EQUINOXEV_SOC_HD",
+    "make": "Chevrolet",
+    "model": "Equinox-EV",
+    "name": "SoC (high res)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /65535 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2813"
     },
     "debug": false,
@@ -11844,6 +11870,31 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2AF5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 6.55,
+      "unit": "volts"
+    },
+    "hdr": "DACB",
+    "id": "EQUINOXEV_HVBAT_C_V_AVG",
+    "make": "Chevrolet",
+    "model": "Equinox-EV",
+    "name": "Cell voltage (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.55]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -25998,6 +26049,32 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "2AF5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 6.55,
+      "unit": "volts"
+    },
+    "hdr": "DACB",
+    "id": "EQUINOXEV_HVBAT_C_V_MIN",
+    "make": "Chevrolet",
+    "model": "Equinox-EV",
+    "name": "Cell voltage (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.55]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "420C"
     },
     "debug": false,
@@ -33297,6 +33374,32 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "2AF5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10000,
+      "len": 16,
+      "max": 6.55,
+      "unit": "volts"
+    },
+    "hdr": "DACB",
+    "id": "EQUINOXEV_HVBAT_C_V_MAX",
+    "make": "Chevrolet",
+    "model": "Equinox-EV",
+    "name": "Cell voltage (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.55]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -51635,6 +51738,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2B43"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DACB",
+    "id": "EQUINOXEV_SOC",
+    "make": "Chevrolet",
+    "model": "Equinox-EV",
+    "name": "SoC",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "3201"
     },
     "debug": false,
@@ -51715,6 +51844,31 @@
     "scaling": "raw*6.25 clamped to [-790, 790]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "33E5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "volts"
+    },
+    "hdr": "DA1D",
+    "id": "EQUINOXEV_HVBAT_V",
+    "make": "Chevrolet",
+    "model": "Equinox-EV",
+    "name": "DMCM battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 8,
