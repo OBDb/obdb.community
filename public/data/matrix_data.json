@@ -179,6 +179,30 @@
     "bitLength": 1,
     "bitOffset": 0,
     "cmd": {
+      "22": "2B00"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "760",
+    "id": "EDGE_PARKING_BRAKE",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Focus Parking Brake State",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
       "22": "407E"
     },
     "debug": false,
@@ -212,6 +236,39 @@
     "bitLength": 1,
     "bitOffset": 0,
     "cmd": {
+      "22": "407E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 0,
+      "len": 1,
+      "map": {
+        "0": {
+          "description": "0",
+          "value": "0"
+        },
+        "216": {
+          "description": "1",
+          "value": "1"
+        }
+      }
+    },
+    "hdr": "726",
+    "id": "EDGE_EXTERIOR_LIGHT_STATE",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Focus Exterior Lighting State",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '0', 'value': '0'}, '216': {'description': '1', 'value': '1'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
       "22": "C154"
     },
     "debug": false,
@@ -225,6 +282,30 @@
     "id": "FOCUS_HOOD_OPEN",
     "make": "Ford",
     "model": "Focus",
+    "name": "Hood Ajar?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C154"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "726",
+    "id": "EDGE_HOOD_OPEN",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Hood Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -434,6 +515,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 11,
+    "cmd": {
+      "22": "C150"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 11,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "726",
+    "id": "EDGE_TRUNK_OPEN",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Trunk Ajar?",
+    "path": "Doors & Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 12,
     "cmd": {
       "01": "01"
@@ -550,6 +656,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 12,
+    "cmd": {
+      "22": "C150"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 12,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "726",
+    "id": "EDGE_RRD_OPEN",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Rear Right Door Ajar?",
+    "path": "Doors & Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 13,
     "cmd": {
       "01": "01"
@@ -641,6 +772,31 @@
     "id": "FOCUS_RLD_OPEN",
     "make": "Ford",
     "model": "Focus",
+    "name": "Rear Left Door Ajar?",
+    "path": "Doors & Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 13,
+    "cmd": {
+      "22": "C150"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 13,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "726",
+    "id": "EDGE_RLD_OPEN",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Rear Left Door Ajar?",
     "path": "Doors & Windows",
     "pid": "22",
@@ -1226,6 +1382,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "C150"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "726",
+    "id": "EDGE_DRIVER_DOOR_OPEN",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Driver Door Ajar",
+    "path": "Doors & Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 17,
     "cmd": {
       "01": "01"
@@ -1292,6 +1473,31 @@
     "id": "FOCUS_PASSENGER_DOOR_OPEN",
     "make": "Ford",
     "model": "Focus",
+    "name": "Passenger Door Ajar?",
+    "path": "Doors & Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 17,
+    "cmd": {
+      "22": "C150"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 17,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "726",
+    "id": "EDGE_PASSENGER_DOOR_OPEN",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Passenger Door Ajar?",
     "path": "Doors & Windows",
     "pid": "22",
@@ -1573,6 +1779,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 2,
+    "cmd": {
+      "22": "61A5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 2,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "720",
+    "id": "EDGE_TPMS_WARN",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Tire pressure warning indicator",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
   },
   {
     "bitLength": 1,
@@ -2493,6 +2724,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "KONA_DOOR_RL",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear left door open?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_DOOR_RL",
     "make": "Hyundai",
     "model": "Veloster",
@@ -2546,6 +2802,31 @@
     "id": "FORTE_DOOR_FL",
     "make": "Kia",
     "model": "Forte",
+    "name": "Front left door open?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 34,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 34,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "KONA_DOOR_FL",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Front left door open?",
     "path": "Doors",
     "pid": "22",
@@ -2643,6 +2924,31 @@
       "unit": "scalar"
     },
     "hdr": "770",
+    "id": "KONA_LOCK_FR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Door Lock Front Right (Raw)",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 34,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 34,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "770",
     "id": "VELOSTER_LOCK_FR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -2696,6 +3002,31 @@
     "id": "FORTE_HANDBRAKE",
     "make": "Kia",
     "model": "Forte",
+    "name": "Handbrake engaged?",
+    "path": "Chassis",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "KONA_HANDBRAKE",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Handbrake engaged?",
     "path": "Chassis",
     "pid": "22",
@@ -2793,6 +3124,31 @@
       "unit": "scalar"
     },
     "hdr": "770",
+    "id": "KONA_LOCK_FL",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Door Lock Front Left (Raw)",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "770",
     "id": "VELOSTER_LOCK_FL",
     "make": "Hyundai",
     "model": "Veloster",
@@ -2846,6 +3202,31 @@
     "id": "FORTE_DOOR_FR",
     "make": "Kia",
     "model": "Forte",
+    "name": "Front right door open?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "KONA_DOOR_FR",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Front right door open?",
     "path": "Doors",
     "pid": "22",
@@ -2943,6 +3324,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "KONA_REVERSE_GEAR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Reverse Gear Selected",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_REVERSE_GEAR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -3018,6 +3424,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "KONA_DOOR_RR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear right door open?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 37,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 37,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_DOOR_RR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -3071,6 +3502,31 @@
     "id": "FORTE_TRUNK",
     "make": "Kia",
     "model": "Forte",
+    "name": "Trunk open?",
+    "path": "Body",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 39,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 39,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "KONA_TRUNK",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Trunk open?",
     "path": "Body",
     "pid": "22",
@@ -3443,6 +3899,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "KONA_BELT_PASSENGER",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Passenger seatbelt latched?",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_BELT_PASSENGER",
     "make": "Hyundai",
     "model": "Veloster",
@@ -3548,6 +4029,31 @@
     "id": "FORTE_BELT_DRIVER",
     "make": "Kia",
     "model": "Forte",
+    "name": "Driver seatbelt latched?",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 41,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 41,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "KONA_BELT_DRIVER",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Driver seatbelt latched?",
     "path": "Seatbelts",
     "pid": "22",
@@ -5999,6 +6505,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0301"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0009765625,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] MAP voltage",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Manifold absolute pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0009765625 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0302"
     },
     "debug": false,
@@ -6253,6 +6784,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0307"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] LPFP duty cycle",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Low pressure fuel pump commanded duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "030F"
     },
     "debug": false,
@@ -6267,6 +6823,31 @@
     "id": "[ECU] Commanded lambda",
     "make": "Ford",
     "model": "Mustang",
+    "name": "Commanded lambda",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*3.05176e-05 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "030F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 3.05176e-05,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] Commanded lambda",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Commanded lambda",
     "path": "",
     "pid": "22",
@@ -6303,6 +6884,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0316"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] VCT intake duty cycle",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "VCT intake camshaft solenoid duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0317"
     },
     "debug": false,
@@ -6317,6 +6923,31 @@
     "id": "[ECU] VCT exhaust duty cycle",
     "make": "Ford",
     "model": "Mustang",
+    "name": "VCT exhaust camshaft solenoid duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0317"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] VCT exhaust duty cycle",
+    "make": "Ford",
+    "model": "Edge",
     "name": "VCT exhaust camshaft solenoid duty cycle",
     "path": "",
     "pid": "22",
@@ -6354,6 +6985,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0318"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 0,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] VCT intake actual",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "VCT intake camshaft actual",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 0]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0319"
     },
     "debug": false,
@@ -6368,6 +7025,31 @@
     "id": "[ECU] VCT exhaust actual",
     "make": "Ford",
     "model": "Mustang",
+    "name": "VCT exhaust camshaft actual",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0319"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] VCT exhaust actual",
+    "make": "Ford",
+    "model": "Edge",
     "name": "VCT exhaust camshaft actual",
     "path": "",
     "pid": "22",
@@ -6405,6 +7087,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "031A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] VCT intake error",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "VCT intake camshaft error",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "031B"
     },
     "debug": false,
@@ -6431,6 +7139,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "031B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] VCT exhaust error",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "VCT exhaust camshaft error",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0324"
     },
     "debug": false,
@@ -6445,6 +7179,31 @@
     "id": "[ECU] HPFP sensor voltage",
     "make": "Ford",
     "model": "Mustang",
+    "name": "High pressure fuel rail sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0324"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] HPFP sensor voltage",
+    "make": "Ford",
+    "model": "Edge",
     "name": "High pressure fuel rail sensor voltage",
     "path": "",
     "pid": "22",
@@ -6482,6 +7241,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0338"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 90,
+      "min": -90,
+      "mul": 0.001953125,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] ETC learned trim",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Electronic throttle control learned trim angle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.001953125 clamped to [-90, 90]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "033C"
     },
     "debug": false,
@@ -6507,6 +7292,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "033C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048828125,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] TIP sensor voltage",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Throttle inlet pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048828125 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "033E"
     },
     "debug": false,
@@ -6521,6 +7331,31 @@
     "id": "[ECU] TIP actual abs",
     "make": "Ford",
     "model": "Mustang",
+    "name": "Throttle inlet pressure absolute",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0011064263 clamped to [60]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "033E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 60,
+      "mul": 0.0011064263,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] TIP actual abs",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Throttle inlet pressure absolute",
     "path": "",
     "pid": "22",
@@ -6558,6 +7393,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0353"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 20,
+      "min": 8,
+      "mul": 0.0362553791,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] Baro",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Barometric pressure",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0362553791 clamped to [8, 20]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "035A"
     },
     "debug": false,
@@ -6572,6 +7433,31 @@
     "id": "[ECU] Baro Sensor V",
     "make": "Ford",
     "model": "Mustang",
+    "name": "Barometric pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "035A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] Baro Sensor V",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Barometric pressure sensor voltage",
     "path": "",
     "pid": "22",
@@ -6608,6 +7494,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "035F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1,
+      "mul": 0.0009765625,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] Rear O2 V",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Rear O2 voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0009765625 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "038E"
     },
     "debug": false,
@@ -6622,6 +7533,31 @@
     "id": "[ECU] Evap Pres Sensor V",
     "make": "Ford",
     "model": "Mustang",
+    "name": "Evaporative vapor pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.1998046869 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "038E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.1998046869,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] Evap Pres Sensor V",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Evaporative vapor pressure sensor voltage",
     "path": "",
     "pid": "22",
@@ -6659,6 +7595,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "038F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 148.889,
+      "min": -40,
+      "mul": 0.015625,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] ECT",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Engine coolant temperature",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.015625 clamped to [-40, 148.889]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0393"
     },
     "debug": false,
@@ -6674,6 +7636,32 @@
     "id": "[ECU] AC Pressure",
     "make": "Ford",
     "model": "Mustang",
+    "name": "Air conditioning compressor pressure",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.2900754962 clamped to [-100, 1000]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0393"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "min": -100,
+      "mul": 0.2900754962,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] AC Pressure",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Air conditioning compressor pressure",
     "path": "",
     "pid": "22",
@@ -6710,6 +7698,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "03BA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] AAT Sensor V",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Ambient air temperature sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "03BB"
     },
     "debug": false,
@@ -6724,6 +7737,31 @@
     "id": "[ECU] VCT Exh Des",
     "make": "Ford",
     "model": "Mustang",
+    "name": "VCT exhaust cam desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] VCT Exh Des",
+    "make": "Ford",
+    "model": "Edge",
     "name": "VCT exhaust cam desired",
     "path": "",
     "pid": "22",
@@ -6761,6 +7799,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "03BC"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 0,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] VCT Int Des",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "VCT intake cam desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 0]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "03BD"
     },
     "debug": false,
@@ -6776,6 +7840,32 @@
     "id": "[ECU] CL Lambda Corr",
     "make": "Ford",
     "model": "Mustang",
+    "name": "Closed loop lambda correction",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0001220703 clamped to [-5, 5]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "min": -5,
+      "mul": 0.0001220703,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] CL Lambda Corr",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Closed loop lambda correction",
     "path": "",
     "pid": "22",
@@ -6812,6 +7902,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "03DC"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 3500,
+      "mul": 1.4503773969,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] HPFP Desired",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "High pressure fuel pressure desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*1.4503773969 clamped to [3500]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "03E8"
     },
     "debug": false,
@@ -6827,6 +7942,32 @@
     "id": "[ECU] OAR",
     "make": "Ford",
     "model": "Mustang",
+    "name": "Octane adjust ratio",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*6.10352e-05 clamped to [-1, 1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03E8"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1,
+      "min": -1,
+      "mul": 6.10352e-05,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] OAR",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Octane adjust ratio",
     "path": "",
     "pid": "22",
@@ -9376,6 +10517,110 @@
     "id": "BRONCO_TOT",
     "make": "Ford",
     "model": "Bronco",
+    "name": "Transmission oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
+    "id": "EDGE_TOT",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Transmission oil temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_TOT_v2",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Transmission oil temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 300,
+      "min": -300,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E6",
+    "id": "EDGE_TT",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Transmission temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [-300, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_TOT",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Transmission oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -20494,6 +21739,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "4801"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 500,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_SOC",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/500 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "480D"
     },
     "debug": false,
@@ -20508,6 +21778,31 @@
     "id": "MACHE_HVBAT_V",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "480D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_V",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery voltage",
     "path": "Battery",
     "pid": "22",
@@ -20545,6 +21840,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "4810"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 16,
+      "max": 235926,
+      "mul": 720,
+      "unit": "hours"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_AGE",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "HV battery age",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*720 /200 clamped to [235926]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "4848"
     },
     "debug": false,
@@ -20559,6 +21880,31 @@
     "id": "MACHE_HVBAT_KWH",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery energy",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/500 clamped to [131.07]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4848"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 500,
+      "len": 16,
+      "max": 131.07,
+      "unit": "kilowattHours"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_KWH",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery energy",
     "path": "Battery",
     "pid": "22",
@@ -20947,6 +22293,30 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "7151"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 2,
+      "unit": "offon"
+    },
+    "hdr": "726",
+    "id": "EDGE_HIGHBEAM_STATUS",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Highbeam Status",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw clamped to [2]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "A224"
     },
     "debug": false,
@@ -20992,6 +22362,34 @@
     "id": "F350_CC_TGT_VSS",
     "make": "Ford",
     "model": "F-350",
+    "name": "Target vehicle speed",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw*3.6 /10 clamped to [-736, 736]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A224"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 736,
+      "min": -736,
+      "mul": 3.6,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "764",
+    "id": "EDGE_CC_TGT_VSS",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Target vehicle speed",
     "path": "Cruise control",
     "pid": "22",
@@ -23923,6 +25321,32 @@
     "signalGroups": [],
     "suggestedMetric": "speed",
     "unit": "milesPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SOUL_MIS_4",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Misfire count #4",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -29149,6 +30573,33 @@
       "unit": "seconds"
     },
     "hdr": "7E0",
+    "id": "KONA_INJ_DUR_1",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_INJ_DUR_1",
     "make": "Hyundai",
     "model": "Veloster",
@@ -29284,6 +30735,33 @@
     "id": "FORTE_INJ_DUR_2",
     "make": "Kia",
     "model": "Forte",
+    "name": "Injection Duration Cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INJ_DUR_2",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Injection Duration Cyl 2",
     "path": "Engine",
     "pid": "22",
@@ -29713,6 +31191,33 @@
       "unit": "seconds"
     },
     "hdr": "7E0",
+    "id": "KONA_INJ_DUR_3",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_INJ_DUR_3",
     "make": "Hyundai",
     "model": "Veloster",
@@ -30037,6 +31542,33 @@
       "unit": "seconds"
     },
     "hdr": "7E0",
+    "id": "KONA_INJ_DUR_4",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.7]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.7,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_INJ_DUR_4",
     "make": "Hyundai",
     "model": "Veloster",
@@ -30046,6 +31578,34 @@
     "scaling": "raw/1220.7 clamped to [53.7]",
     "suggestedMetric": "",
     "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 232,
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "mul": 2,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "KONA_CLUTCH_1_T",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Clutch #1 temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*2 +-40 clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -31528,6 +33088,34 @@
     "scaling": "raw/10000 clamped to [6.5535]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 248,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 248,
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "mul": 2,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "KONA_CLUTCH_2_T",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Clutch #2 temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*2 +-40 clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -34552,6 +36140,32 @@
       "unit": "kilowatts"
     },
     "hdr": "7D4",
+    "id": "KONA_BMS_CHG_PWR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "BMS Available Charge Power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
     "id": "VELOSTER_BMS_CHG_PWR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -35187,6 +36801,32 @@
     "bitLength": 16,
     "bitOffset": 56,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SOUL_MIS_1",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Misfire count #1",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
       "22": "0101"
     },
     "debug": true,
@@ -35228,6 +36868,32 @@
     "id": "FORTE_BMS_DISCHG_PWR",
     "make": "Kia",
     "model": "Forte",
+    "name": "BMS Available Discharge Power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "KONA_BMS_DISCHG_PWR",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "BMS Available Discharge Power",
     "path": "Battery",
     "pid": "22",
@@ -36800,6 +38466,32 @@
     "scaling": "raw/10 clamped to [-3276, 3276]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SOUL_MIS_2",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Misfire count #2",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -38470,6 +40162,32 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SOUL_MIS_3",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Misfire count #3",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 96,
     "cmd": {
       "22": "0101"
@@ -39868,6 +41586,31 @@
       "unit": "kilometers"
     },
     "hdr": "720",
+    "id": "EDGE_ODO_TRIP",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Trip distance",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 24,
+      "max": 1677721,
+      "unit": "kilometers"
+    },
+    "hdr": "720",
     "id": "FIESTA_ODO_TRIP",
     "make": "Ford",
     "model": "Fiesta",
@@ -39944,11 +41687,11 @@
       "max": 16777215,
       "unit": "kilometers"
     },
-    "hdr": "726",
+    "hdr": "7E0",
     "id": "EDGE_ODO",
     "make": "Ford",
     "model": "Edge",
-    "name": "Odometer (Instrument panel)",
+    "name": "Odometer",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [16777215]",
@@ -40457,6 +42200,56 @@
       "unit": "kilometers"
     },
     "hdr": "7C6",
+    "id": "KONA_ODO",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7C6",
+    "id": "KONA_ODO_KM",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Odometer (Metric)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7C6",
     "id": "TUCSONHYB_ODO_KM",
     "make": "Hyundai",
     "model": "Tucson-Hybrid",
@@ -40769,6 +42562,31 @@
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
     "signalGroups": [],
+    "suggestedMetric": "odometer",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "miles"
+    },
+    "hdr": "7C6",
+    "id": "KONA_ODO_MI",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Odometer (Imperial)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
     "suggestedMetric": "odometer",
     "unit": "miles"
   },
@@ -42928,6 +44746,56 @@
     "scaling": "raw/8583.07212 clamped to [-250300, 250300]",
     "suggestedMetric": "",
     "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 188,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 188,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7E1",
+    "id": "KONA_GEAR_CUR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 196,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 196,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7E1",
+    "id": "KONA_GEAR_NXT",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Next gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 4,
@@ -45779,6 +47647,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "028C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 250,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "FC00",
+    "id": "Q4ETRON_SOC",
+    "make": "Audi",
+    "model": "Q4-e-tron",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /250 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0303"
     },
     "debug": false,
@@ -46491,6 +48385,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "032B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "mul": 0.5,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] Accelerator pedal position",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Accelerator Pedal Position",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "03CA"
     },
     "debug": false,
@@ -46504,6 +48423,30 @@
     "id": "[ECU] MCT",
     "make": "Ford",
     "model": "Mustang",
+    "name": "Manifold charge temperature",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw clamped to [148.889]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03CA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 148.889,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_[ECU] MCT",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Manifold charge temperature",
     "path": "",
     "pid": "22",
@@ -47578,6 +49521,30 @@
     "scaling": "raw*250 clamped to [63750]",
     "suggestedMetric": "",
     "unit": "watts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1310"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "EDGE_EOT",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -49102,6 +51069,158 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "map": {
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E0",
+    "id": "EDGE_GEAR",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Current gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E0",
+    "id": "EDGE_GEAR_v2",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "EDGE_GEAR",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Current gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -49415,6 +51534,118 @@
     "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "10": {
+          "description": "Manual",
+          "value": "MANUAL"
+        },
+        "46": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "50": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "60": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "70": {
+          "description": "Park",
+          "value": "PARK"
+        }
+      }
+    },
+    "hdr": "7E0",
+    "id": "EDGE_GEAR_SHFT",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Shift gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "10": {
+          "description": "Manual",
+          "value": "MANUAL"
+        },
+        "46": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "50": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "60": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "70": {
+          "description": "Park",
+          "value": "PARK"
+        }
+      }
+    },
+    "hdr": "7E0",
+    "id": "EDGE_GEAR_SHFT_v2",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "EDGE_GEAR_SHFT",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Shift gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -51831,6 +54062,33 @@
       "unit": "degrees"
     },
     "hdr": "760",
+    "id": "EDGE_STEER_ANGLE",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*6.25 clamped to [-790, 790]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "3201"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 790,
+      "min": -790,
+      "mul": 6.25,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "760",
     "id": "RANGER_STEER_ANGLE",
     "make": "Ford",
     "model": "Ranger",
@@ -52140,6 +54398,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "4800"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_T",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "HV battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "4845"
     },
     "debug": false,
@@ -52154,6 +54438,31 @@
     "id": "MACHE_HVBAT_SOC_DISP",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery charge (displayed)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4845"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_SOC_DISP",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery charge (displayed)",
     "path": "Battery",
     "pid": "22",
@@ -52214,6 +54523,66 @@
     "id": "MACHE_CHRG_STATE",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "Charging state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Not ready', 'value': 'NOT_READY'}, '1': {'description': 'Ready', 'value': 'READY'}, '2': {'description': 'Fault', 'value': 'FAULT'}, '3': {'description': 'Wait Check', 'value': 'WAIT'}, '4': {'description': 'Pre-condition', 'value': 'PRE_COND'}, '5': {'description': 'Charging', 'value': 'CHARGING'}, '6': {'description': 'Done', 'value': 'DONE'}, '7': {'description': 'External Charger', 'value': 'EXT'}, '8': {'description': 'Initializing', 'value': 'INIT'}}",
+    "suggestedMetric": "isCharging",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "484F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Not ready",
+          "value": "NOT_READY"
+        },
+        "1": {
+          "description": "Ready",
+          "value": "READY"
+        },
+        "2": {
+          "description": "Fault",
+          "value": "FAULT"
+        },
+        "3": {
+          "description": "Wait Check",
+          "value": "WAIT"
+        },
+        "4": {
+          "description": "Pre-condition",
+          "value": "PRE_COND"
+        },
+        "5": {
+          "description": "Charging",
+          "value": "CHARGING"
+        },
+        "6": {
+          "description": "Done",
+          "value": "DONE"
+        },
+        "7": {
+          "description": "External Charger",
+          "value": "EXT"
+        },
+        "8": {
+          "description": "Initializing",
+          "value": "INIT"
+        }
+      }
+    },
+    "hdr": "7E4",
+    "id": "EDGE_CHRG_STATE",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Charging state",
     "path": "Battery",
     "pid": "22",
@@ -52293,6 +54662,31 @@
     "id": "MACHE_HVBAT_SOH",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery state of health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "490C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_SOH",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery state of health",
     "path": "Battery",
     "pid": "22",
@@ -52473,6 +54867,32 @@
       0,
       2004
     ],
+    "name": "Fuel tank level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6185"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "720",
+    "id": "EDGE_FLI",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Fuel tank level",
     "path": "Fuel",
     "pid": "22",
@@ -52774,6 +55194,38 @@
     "id": "FOCUS_CENTRAL_LOCK_STATUS",
     "make": "Ford",
     "model": "Focus",
+    "name": "Lock Status",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Unlocked', 'value': 'UNLOCKED'}, '2': {'description': 'Locked', 'value': 'LOCKED'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C259"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Unlocked",
+          "value": "UNLOCKED"
+        },
+        "2": {
+          "description": "Locked",
+          "value": "LOCKED"
+        }
+      }
+    },
+    "hdr": "726",
+    "id": "EDGE_CENTRAL_LOCK_STATUS",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Lock Status",
     "path": "Doors",
     "pid": "22",
@@ -53430,6 +55882,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "DD04"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
+    "id": "EDGE_IAT",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Interior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DD05"
     },
     "debug": false,
@@ -53445,6 +55923,32 @@
     "id": "MACHE_AAT",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "Exterior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
+    "id": "EDGE_AAT",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Exterior temperature",
     "path": "Climate",
     "pid": "22",
@@ -53499,6 +56003,30 @@
     "scaling": "raw clamped to [220]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "HYUNDAI_22E004",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Unknown",
+    "path": "Unknown",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -53668,6 +56196,82 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 255,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_FLI",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 255,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "EDGE_FLI_v3",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "EDGE_FLI_v2",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Fuel level (alternative)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "len": 8,
       "max": 255,
       "unit": "scalar"
@@ -53726,6 +56330,30 @@
       "unit": "scalar"
     },
     "hdr": "7DF",
+    "id": "EDGE_EOP",
+    "make": "Ford",
+    "model": "Edge",
+    "name": "Engine oil pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F45C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
     "id": "RANGER_EOP",
     "make": "Ford",
     "model": "Ranger",
@@ -53744,6 +56372,33 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 127.5,
+      "min": -127.5,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "SOUL_RL_VSS",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "21": "02"
     },
     "debug": false,
@@ -53895,6 +56550,33 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 104,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "SOUL_ATF_T",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Automatic transmission fluid temperature",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -55291,6 +57973,33 @@
     "scaling": "raw/5 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 127.5,
+      "min": -127.5,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "SOUL_RR_VSS",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -57032,6 +59741,32 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TP_RR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "TPMS Pressure Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
       "22": "C101"
     },
     "debug": false,
@@ -57425,6 +60160,33 @@
     "id": "FORTE_BMS_MIN_TEMP",
     "make": "Kia",
     "model": "Forte",
+    "name": "BMS Battery Min Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "KONA_BMS_MIN_TEMP",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "BMS Battery Min Temp",
     "path": "Battery",
     "pid": "22",
@@ -58724,6 +61486,32 @@
     "bitLength": 8,
     "bitOffset": 120,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TT_RR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "TPMS Temperature Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
       "22": "E003"
     },
     "debug": false,
@@ -59199,6 +61987,33 @@
     "id": "FORTE_BMS_MOD1_TEMP",
     "make": "Kia",
     "model": "Forte",
+    "name": "BMS Battery Mod 1 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "KONA_BMS_MOD1_TEMP",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "BMS Battery Mod 1 Temp",
     "path": "Battery",
     "pid": "22",
@@ -60549,6 +63364,32 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "SOUL_TP_RR",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 136,
     "cmd": {
       "21": "02"
@@ -60834,6 +63675,33 @@
     "id": "FORTE_BMS_MOD2_TEMP",
     "make": "Kia",
     "model": "Forte",
+    "name": "BMS Battery Mod 2 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "KONA_BMS_MOD2_TEMP",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "BMS Battery Mod 2 Temp",
     "path": "Battery",
     "pid": "22",
@@ -63451,6 +66319,31 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TW_RR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "TPMS Alert Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 144,
     "cmd": {
       "21": "02"
@@ -63736,6 +66629,33 @@
     "id": "FORTE_BMS_MOD3_TEMP",
     "make": "Kia",
     "model": "Forte",
+    "name": "BMS Battery Mod 3 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "KONA_BMS_MOD3_TEMP",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "BMS Battery Mod 3 Temp",
     "path": "Battery",
     "pid": "22",
@@ -65085,6 +68005,47 @@
     "bitLength": 8,
     "bitOffset": 152,
     "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "2": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "3": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "4": {
+          "description": "Manual",
+          "value": "MANUAL"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "SOUL_GEAR",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "Mapped values: {'1': {'description': 'Neutral', 'value': 'NEUTRAL'}, '2': {'description': 'Reverse', 'value': 'REVERSE'}, '3': {'description': 'Park', 'value': 'PARK'}, '4': {'description': 'Manual', 'value': 'MANUAL'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -65212,6 +68173,33 @@
     "id": "FORTE_BMS_MOD4_TEMP",
     "make": "Kia",
     "model": "Forte",
+    "name": "BMS Battery Mod 4 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "KONA_BMS_MOD4_TEMP",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "BMS Battery Mod 4 Temp",
     "path": "Battery",
     "pid": "22",
@@ -66633,6 +69621,32 @@
     "id": "FORTE_TP_RL",
     "make": "Kia",
     "model": "Forte",
+    "name": "TPMS Pressure Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TP_RL",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "TPMS Pressure Rear Left",
     "path": "Tires",
     "pid": "22",
@@ -70178,6 +73192,32 @@
     "bitLength": 8,
     "bitOffset": 160,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TT_RL",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "TPMS Temperature Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
       "22": "E00A"
     },
     "debug": true,
@@ -73116,6 +76156,31 @@
     "id": "FORTE_TW_RL",
     "make": "Kia",
     "model": "Forte",
+    "name": "TPMS Alert Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TW_RL",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "TPMS Alert Rear Left",
     "path": "Tires",
     "pid": "22",
@@ -83415,6 +86480,31 @@
     "id": "FORTE_VSS",
     "make": "Kia",
     "model": "Forte",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B3",
+    "id": "KONA_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -94575,6 +97665,33 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "KONA_INTAKE_TEMP",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Intake Air Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [207]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 264,
+      "div": 1.3333,
+      "len": 8,
+      "max": 207,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_INTAKE_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -94740,6 +97857,33 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "21": "18"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "len": 8,
+      "max": 207,
+      "min": -48,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "SOUL_CVVT_T",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "CVVT temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-48 clamped to [-48, 207]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -95982,6 +99126,33 @@
     "id": "FORTE_OIL_TEMP",
     "make": "Kia",
     "model": "Forte",
+    "name": "Engine Oil Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [207]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "div": 1.3333,
+      "len": 8,
+      "max": 207,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "KONA_OIL_TEMP",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Engine Oil Temperature",
     "path": "Engine",
     "pid": "22",
@@ -99508,6 +102679,32 @@
       "unit": "percent"
     },
     "hdr": "7D4",
+    "id": "KONA_BMS_SOC",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "BMS State Of Charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D4",
     "id": "VELOSTER_BMS_SOC",
     "make": "Hyundai",
     "model": "Veloster",
@@ -101057,6 +104254,33 @@
     "eax": "",
     "fmt": {
       "bix": 32,
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "nullmax": 127,
+      "unit": "liters"
+    },
+    "hdr": "7C6",
+    "id": "SOUL_FLI_VOL",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
       "len": 8,
       "max": 255,
       "unit": "liters"
@@ -101065,6 +104289,31 @@
     "id": "ELANTRA_FLI_VOL",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "7C6",
+    "id": "KONA_FLI_VOL",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "22",
@@ -102063,6 +105312,31 @@
       "unit": "scalar"
     },
     "hdr": "770",
+    "id": "KONA_HAZARD_SW",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Hazard Switch (Raw)",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "770",
     "id": "VELOSTER_HAZARD_SW",
     "make": "Hyundai",
     "model": "Veloster",
@@ -102622,6 +105896,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "KONA_TP_FL",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "TPMS Pressure Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "NIROEV_TP_FL",
     "make": "Kia",
     "model": "Niro-EV",
@@ -102630,6 +105930,32 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "SOUL_TP_FL",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "psi"
   },
@@ -103347,6 +106673,34 @@
     "pid": "22",
     "scaling": "raw/2 +-40 clamped to [-40, 80]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "div": 2,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7B3",
+    "id": "KONA_TEMP_INT",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Interior Temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -105622,6 +108976,58 @@
       "unit": "volts"
     },
     "hdr": "7C6",
+    "id": "KONA_CLUSTER_VOLTAGE",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Cluster Voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [18]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 12.8,
+      "len": 8,
+      "max": 18,
+      "unit": "volts"
+    },
+    "hdr": "7C6",
+    "id": "SOUL_VPWR",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "12v battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [18]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 12.8,
+      "len": 8,
+      "max": 18,
+      "unit": "volts"
+    },
+    "hdr": "7C6",
     "id": "VELOSTER_CLUSTER_VOLTAGE",
     "make": "Hyundai",
     "model": "Veloster",
@@ -106750,6 +110156,32 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TT_FL",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "TPMS Temperature Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "DCDD"
     },
     "debug": false,
@@ -107164,6 +110596,31 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SOUL_VSS",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Vehicle speed",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "0100"
     },
     "debug": false,
@@ -107186,6 +110643,34 @@
     "pid": "22",
     "scaling": "raw/2 +-40 clamped to [-40, 80]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 48,
+      "div": 2,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7B3",
+    "id": "KONA_TEMP_EXT",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Exterior Temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -108565,6 +112050,33 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 48,
+      "len": 8,
+      "max": 215,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_FL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 215]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "BC05"
     },
     "debug": true,
@@ -108608,6 +112120,33 @@
     "id": "FORTE_HL_SW",
     "make": "Kia",
     "model": "Forte",
+    "name": "Headlight Switch (Raw >2)",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "BC05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 1,
+      "nullmax": 2,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "KONA_HL_SW",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Headlight Switch (Raw >2)",
     "path": "Lights",
     "pid": "22",
@@ -110425,6 +113964,33 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_FR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "BC03"
     },
     "debug": true,
@@ -110468,6 +114034,33 @@
     "id": "FORTE_DEFOG_SW",
     "make": "Kia",
     "model": "Forte",
+    "name": "Defogging?",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "nullmax": 1,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "KONA_DEFOG_SW",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Defogging?",
     "path": "Climate",
     "pid": "22",
@@ -110648,6 +114241,31 @@
     "id": "FORTE_TW_FL",
     "make": "Kia",
     "model": "Forte",
+    "name": "TPMS Alert Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TW_FL",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "TPMS Alert Front Left",
     "path": "Tires",
     "pid": "22",
@@ -112110,6 +115728,33 @@
     "bitLength": 8,
     "bitOffset": 64,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 64,
+      "len": 8,
+      "max": 255,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_RL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -112262,6 +115907,32 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "SOUL_TP_FR",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
@@ -113726,6 +117397,33 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 72,
+      "len": 8,
+      "max": 255,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_RR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -114010,6 +117708,32 @@
     "id": "FORTE_TP_FR",
     "make": "Kia",
     "model": "Forte",
+    "name": "TPMS Pressure Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TP_FR",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "TPMS Pressure Front Right",
     "path": "Tires",
     "pid": "22",
@@ -119103,6 +122827,59 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TT_FR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "TPMS Temperature Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 127.5,
+      "min": -127.5,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "SOUL_FL_VSS",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 88,
     "cmd": {
       "21": "02"
@@ -120548,6 +124325,33 @@
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 127.5,
+      "min": -127.5,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "SOUL_FR_VSS",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127.5, 127.5]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -122156,6 +125960,32 @@
     "eax": "",
     "fmt": {
       "bix": 96,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "SOUL_TP_RL",
+    "make": "Kia",
+    "model": "Soul",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
       "len": 8,
       "max": 1,
       "unit": "noyes"
@@ -122164,6 +125994,31 @@
     "id": "FORTE_TW_FR",
     "make": "Kia",
     "model": "Forte",
+    "name": "TPMS Alert Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TW_FR",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "TPMS Alert Front Right",
     "path": "Tires",
     "pid": "22",
