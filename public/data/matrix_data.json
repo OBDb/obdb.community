@@ -8969,9 +8969,9 @@
       "unit": "unknown"
     },
     "hdr": "7E0",
-    "id": "CAYENNE_OIL_LEVEL",
-    "make": "Porsche",
-    "model": "Cayenne",
+    "id": "TIGUAN_OIL_LEVEL",
+    "make": "Volkswagen",
+    "model": "Tiguan",
     "name": "Oil level",
     "path": "Engine",
     "pid": "22",
@@ -8988,21 +8988,21 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "div": 250,
+      "div": 2500,
       "len": 16,
-      "max": 262,
-      "unit": "unknown"
+      "max": 26.2,
+      "unit": "centimeters"
     },
     "hdr": "7E0",
-    "id": "TIGUAN_OIL_LEVEL",
-    "make": "Volkswagen",
-    "model": "Tiguan",
+    "id": "CAYENNE_OIL_LEVEL",
+    "make": "Porsche",
+    "model": "Cayenne",
     "name": "Oil level",
-    "path": "Engine",
+    "path": "Fluids",
     "pid": "22",
-    "scaling": "raw/250 clamped to [262]",
+    "scaling": "raw/2500 clamped to [26.2]",
     "suggestedMetric": "",
-    "unit": "unknown"
+    "unit": "centimeters"
   },
   {
     "bitLength": 16,
@@ -9286,6 +9286,55 @@
     "scaling": "raw/2500 clamped to [26.2]",
     "suggestedMetric": "",
     "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BD"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2500,
+      "len": 16,
+      "max": 26.2,
+      "unit": "centimeters"
+    },
+    "hdr": "7E0",
+    "id": "CAYENNE_OIL_LEVEL_WARN",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Oil level warning threshold",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/2500 clamped to [26.2]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BE"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "CAYENNE_EOT",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -13064,6 +13113,33 @@
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A07"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 4,
+      "div": 100,
+      "len": 16,
+      "max": 69.54,
+      "min": 4,
+      "unit": "volts"
+    },
+    "hdr": "710",
+    "id": "CAYENNE_SSB_V",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Start/stop battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 +4 clamped to [4, 69.54]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -35633,32 +35709,6 @@
     "cmd": {
       "22": "22B0"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 336,
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "unit": "liters"
-    },
-    "hdr": "714",
-    "id": "CAYENNE_FLI_VOL",
-    "make": "Porsche",
-    "model": "Cayenne",
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 336,
-    "cmd": {
-      "22": "22B0"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -40846,30 +40896,6 @@
     "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2203"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 16777215,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
-    "id": "CAYENNE_ODO",
-    "make": "Porsche",
-    "model": "Cayenne",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
   },
   {
     "bitLength": 24,
@@ -52723,6 +52749,42 @@
     "cmd": {
       "22": "210F"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "2": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "3": {
+          "description": "Drive",
+          "value": "DRIVE"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "CAYENNE_GEAR_SHFT",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Reverse', 'value': 'REVERSE'}, '2': {'description': 'Park', 'value': 'PARK'}, '3': {'description': 'Drive', 'value': 'DRIVE'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -53755,33 +53817,6 @@
     "cmd": {
       "22": "27C4"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -38.8,
-      "len": 8,
-      "max": 108.08,
-      "min": -38.8,
-      "mul": 0.576,
-      "unit": "celsius"
-    },
-    "hdr": "746",
-    "id": "CAYENNE_WNDSHLD_TEMP",
-    "make": "Porsche",
-    "model": "Cayenne",
-    "name": "Windshield temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "27C4"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -53850,6 +53885,33 @@
     "id": "AMAROK_WNDSHLD_TEMP",
     "make": "Volkswagen",
     "model": "Amarok",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -38.8,
+      "len": 8,
+      "max": 108.08,
+      "min": -38.8,
+      "mul": 0.576,
+      "unit": "celsius"
+    },
+    "hdr": "746",
+    "id": "CAYENNE_WNDSHLD_TEMP",
+    "make": "Porsche",
+    "model": "Cayenne",
     "name": "Windshield temperature",
     "path": "Climate",
     "pid": "22",
@@ -53964,6 +54026,160 @@
     "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "710",
+    "id": "CAYENNE_SSB_SENSOR_T",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Start/stop battery sensor temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "710",
+    "id": "CAYENNE_SSB_T",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Start/stop battery sensor temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "710",
+    "id": "CAYENNE_SSB_SOC",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Start/stop battery state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 100,
+      "mul": 2,
+      "unit": "milliohms"
+    },
+    "hdr": "710",
+    "id": "CAYENNE_SSB_R",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Start/stop battery resistance",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*2 /10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "milliohms"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "CAYENNE_SSB_AH",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Start/stop battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A10"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 9,
+      "div": 255,
+      "len": 8,
+      "max": 63,
+      "min": 9,
+      "mul": 54,
+      "unit": "volts"
+    },
+    "hdr": "710",
+    "id": "CAYENNE_SSB_V_REST",
+    "make": "Porsche",
+    "model": "Cayenne",
+    "name": "Start/stop battery voltage (at rest)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*54 /255 +9 clamped to [9, 63]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 8,
@@ -108078,6 +108294,7 @@
       "div": 40,
       "len": 8,
       "max": 6.375,
+      "nullmax": 6.37,
       "unit": "bars"
     },
     "hdr": "70B",
@@ -108286,6 +108503,7 @@
       "div": 40,
       "len": 8,
       "max": 6.375,
+      "nullmax": 6.37,
       "unit": "bars"
     },
     "hdr": "70B",
@@ -108494,6 +108712,7 @@
       "div": 40,
       "len": 8,
       "max": 6.375,
+      "nullmax": 6.37,
       "unit": "bars"
     },
     "hdr": "70B",
@@ -108702,6 +108921,7 @@
       "div": 40,
       "len": 8,
       "max": 6.375,
+      "nullmax": 6.37,
       "unit": "bars"
     },
     "hdr": "70B",
