@@ -10733,6 +10733,56 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "mul": 0.05625,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_TIRE_FL_VSS",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "mul": 0.05625,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_TIRE_FL_VSS",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2005"
     },
     "debug": false,
@@ -27000,6 +27050,62 @@
     "bitLength": 16,
     "bitOffset": 144,
     "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 1000,
+      "len": 16,
+      "max": 32,
+      "min": -32,
+      "sign": true,
+      "unit": "bars"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_VACC_BREAK",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Vaccuum cylinder pressure",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [-32, 32]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 1000,
+      "len": 16,
+      "max": 32,
+      "min": -32,
+      "sign": true,
+      "unit": "bars"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_VACC_BREAK",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Vaccuum cylinder pressure",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [-32, 32]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -27517,6 +27623,58 @@
     "scaling": "raw/13107 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 1000,
+      "mul": 0.05625,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_TIRE_FR_VSS",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 1000,
+      "mul": 0.05625,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_TIRE_FR_VSS",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -33065,6 +33223,62 @@
     "bitLength": 16,
     "bitOffset": 24,
     "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 627.6,
+      "len": 16,
+      "max": 52.21,
+      "min": -52.21,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_LAT_G",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Lateral acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/627.6 clamped to [-52.21, 52.21]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 627.6,
+      "len": 16,
+      "max": 52.21,
+      "min": -52.21,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_LAT_G",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Lateral acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/627.6 clamped to [-52.21, 52.21]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
       "22": "2610"
     },
     "debug": true,
@@ -35016,6 +35230,58 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 16,
+      "max": 1000,
+      "mul": 0.05625,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_TIRE_RL_VSS",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 16,
+      "max": 1000,
+      "mul": 0.05625,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_TIRE_RL_VSS",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "2AB7"
     },
     "debug": false,
@@ -36407,6 +36673,116 @@
     "scaling": "raw*10 clamped to [655350]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 16,
+      "max": 1000,
+      "mul": 0.05625,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_TIRE_RR_VSS",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 16,
+      "max": 1000,
+      "mul": 0.05625,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_TIRE_RR_VSS",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 32767,
+      "len": 16,
+      "max": 2,
+      "min": -2,
+      "mul": 2,
+      "sign": true,
+      "unit": "radians"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_YAW_RATE",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Yaw rate",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw*2 /32767 clamped to [-2, 2]",
+    "suggestedMetric": "",
+    "unit": "radians"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 32767,
+      "len": 16,
+      "max": 2,
+      "min": -2,
+      "mul": 2,
+      "sign": true,
+      "unit": "radians"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_YAW_RATE",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Yaw rate",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw*2 /32767 clamped to [-2, 2]",
+    "suggestedMetric": "",
+    "unit": "radians"
   },
   {
     "bitLength": 16,
@@ -38545,6 +38921,62 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_STEER_ANGLE",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_STEER_ANGLE",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 8,
     "cmd": {
       "01": "66"
@@ -39841,6 +40273,62 @@
     "bitLength": 16,
     "bitOffset": 8,
     "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 192747,
+      "len": 16,
+      "max": 0.17,
+      "min": -0.17,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_LNG_G",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Longitudinal acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/192747 clamped to [-0.17, 0.17]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 192747,
+      "len": 16,
+      "max": 0.17,
+      "min": -0.17,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_LNG_G",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Longitudinal acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/192747 clamped to [-0.17, 0.17]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 8,
+    "cmd": {
       "22": "D860"
     },
     "debug": false,
@@ -40316,6 +40804,62 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 65.35883831,
+      "len": 16,
+      "max": 501.34,
+      "min": -501.34,
+      "sign": true,
+      "unit": "bars"
+    },
+    "hdr": "7E2",
+    "id": "GCLASS_MCYL_BREAK",
+    "make": "Mercedes",
+    "model": "Benz-G-Class",
+    "name": "Master break cylinder pressure",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/65.35883831 clamped to [-501.34, 501.34]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 65.35883831,
+      "len": 16,
+      "max": 501.34,
+      "min": -501.34,
+      "sign": true,
+      "unit": "bars"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_MCYL_BREAK",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Master break cylinder pressure",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/65.35883831 clamped to [-501.34, 501.34]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 16,
