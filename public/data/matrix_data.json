@@ -3028,7 +3028,7 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "Handbrake engaged?",
-    "path": "Chassis",
+    "path": "Control",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3528,7 +3528,7 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "Trunk open?",
-    "path": "Body",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -30824,6 +30824,33 @@
       "blsb": true,
       "div": 1220.7,
       "len": 16,
+      "max": 53,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INJ_DUR_1",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
       "max": 53.7,
       "unit": "seconds"
     },
@@ -30858,33 +30885,6 @@
     "id": "FORTE_INJ_DUR_1",
     "make": "Kia",
     "model": "Forte",
-    "name": "Injection Duration Cyl 1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "KONA_INJ_DUR_1",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Injection Duration Cyl 1",
     "path": "Engine",
     "pid": "22",
@@ -31010,6 +31010,33 @@
       "blsb": true,
       "div": 1220.7,
       "len": 16,
+      "max": 53,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INJ_DUR_2",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
       "max": 53.7,
       "unit": "seconds"
     },
@@ -31044,33 +31071,6 @@
     "id": "FORTE_INJ_DUR_2",
     "make": "Kia",
     "model": "Forte",
-    "name": "Injection Duration Cyl 2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 192,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 192,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "KONA_INJ_DUR_2",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Injection Duration Cyl 2",
     "path": "Engine",
     "pid": "22",
@@ -31442,6 +31442,33 @@
       "blsb": true,
       "div": 1220.7,
       "len": 16,
+      "max": 53,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INJ_DUR_3",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
       "max": 53.7,
       "unit": "seconds"
     },
@@ -31476,33 +31503,6 @@
     "id": "FORTE_INJ_DUR_3",
     "make": "Kia",
     "model": "Forte",
-    "name": "Injection Duration Cyl 3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 208,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "KONA_INJ_DUR_3",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Injection Duration Cyl 3",
     "path": "Engine",
     "pid": "22",
@@ -31793,6 +31793,33 @@
       "blsb": true,
       "div": 1220.7,
       "len": 16,
+      "max": 53,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INJ_DUR_4",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
       "max": 53.7,
       "unit": "seconds"
     },
@@ -31827,33 +31854,6 @@
     "id": "FORTE_INJ_DUR_4",
     "make": "Kia",
     "model": "Forte",
-    "name": "Injection Duration Cyl 4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "KONA_INJ_DUR_4",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Injection Duration Cyl 4",
     "path": "Engine",
     "pid": "22",
@@ -42710,6 +42710,31 @@
     "fmt": {
       "bix": 48,
       "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7C6",
+    "id": "KONA_ODO_KM",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Odometer (Metric)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
       "max": 4294967295,
       "unit": "kilometers"
     },
@@ -42851,56 +42876,6 @@
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
     "signalGroups": [],
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7C6",
-    "id": "KONA_ODO",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7C6",
-    "id": "KONA_ODO_KM",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Odometer (Metric)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -43116,6 +43091,31 @@
     "fmt": {
       "bix": 72,
       "len": 24,
+      "max": 16777215,
+      "unit": "miles"
+    },
+    "hdr": "7C6",
+    "id": "KONA_ODO_MI",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Odometer (Imperial)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
       "max": 4294967295,
       "unit": "miles"
     },
@@ -43231,31 +43231,6 @@
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
     "signalGroups": [],
-    "suggestedMetric": "odometer",
-    "unit": "miles"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "miles"
-    },
-    "hdr": "7C6",
-    "id": "KONA_ODO_MI",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Odometer (Imperial)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
     "suggestedMetric": "odometer",
     "unit": "miles"
   },
@@ -57147,7 +57122,7 @@
     "id": "LANDROVER_VSS",
     "make": "Land",
     "model": "Rover",
-    "name": "Vehicle speed",
+    "name": "Vehicle Speed",
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -57172,7 +57147,7 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "Unknown",
-    "path": "Unknown",
+    "path": "Engine.Unknown",
     "pid": "22",
     "scaling": "raw clamped to [100]",
     "suggestedMetric": "",
@@ -98757,6 +98732,33 @@
       "bix": 264,
       "div": 1.3333,
       "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INTAKE_TEMP",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Intake Air Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 264,
+      "div": 1.3333,
+      "len": 8,
       "max": 207,
       "unit": "celsius"
     },
@@ -98791,33 +98793,6 @@
     "id": "FORTE_INTAKE_TEMP",
     "make": "Kia",
     "model": "Forte",
-    "name": "Intake Air Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1.3333 +-48 clamped to [207]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 264,
-    "cmd": {
-      "22": "E001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -48,
-      "bix": 264,
-      "div": 1.3333,
-      "len": 8,
-      "max": 207,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "KONA_INTAKE_TEMP",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Intake Air Temperature",
     "path": "Engine",
     "pid": "22",
@@ -100242,6 +100217,33 @@
       "bix": 272,
       "div": 1.3333,
       "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "KONA_OIL_TEMP",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Engine Oil Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "div": 1.3333,
+      "len": 8,
       "max": 207,
       "unit": "celsius"
     },
@@ -100276,33 +100278,6 @@
     "id": "FORTE_OIL_TEMP",
     "make": "Kia",
     "model": "Forte",
-    "name": "Engine Oil Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1.3333 +-48 clamped to [207]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 272,
-    "cmd": {
-      "22": "E001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -48,
-      "bix": 272,
-      "div": 1.3333,
-      "len": 8,
-      "max": 207,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "KONA_OIL_TEMP",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Engine Oil Temperature",
     "path": "Engine",
     "pid": "22",
@@ -113212,7 +113187,7 @@
       "add": -50,
       "bix": 48,
       "len": 8,
-      "max": 215,
+      "max": 205,
       "min": -50,
       "unit": "kilometersPerHour"
     },
@@ -113223,7 +113198,7 @@
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 215]",
+    "scaling": "raw+-50 clamped to [-50, 205]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -115126,7 +115101,7 @@
       "add": -50,
       "bix": 56,
       "len": 8,
-      "max": 255,
+      "max": 205,
       "min": -50,
       "unit": "kilometersPerHour"
     },
@@ -115137,7 +115112,7 @@
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 255]",
+    "scaling": "raw+-50 clamped to [-50, 205]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -116890,7 +116865,7 @@
       "add": -50,
       "bix": 64,
       "len": 8,
-      "max": 255,
+      "max": 205,
       "min": -50,
       "unit": "kilometersPerHour"
     },
@@ -116901,7 +116876,7 @@
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 255]",
+    "scaling": "raw+-50 clamped to [-50, 205]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -118559,7 +118534,7 @@
       "add": -50,
       "bix": 72,
       "len": 8,
-      "max": 255,
+      "max": 205,
       "min": -50,
       "unit": "kilometersPerHour"
     },
@@ -118570,7 +118545,7 @@
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 255]",
+    "scaling": "raw+-50 clamped to [-50, 205]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
