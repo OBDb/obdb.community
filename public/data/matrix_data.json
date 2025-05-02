@@ -5239,6 +5239,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "D928"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "732",
+    "id": "LANDROVER_PARKED",
+    "make": "Land",
+    "model": "Rover",
+    "name": "Parked?",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 72,
     "cmd": {
       "22": "0101"
@@ -55463,7 +55488,7 @@
       "add": -40,
       "div": 2,
       "len": 8,
-      "max": 80,
+      "max": 87.5,
       "min": -40,
       "unit": "celsius"
     },
@@ -55474,7 +55499,7 @@
     "name": "Battery temperature",
     "path": "Battery",
     "pid": "22",
-    "scaling": "raw/2 +-40 clamped to [-40, 80]",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -55857,18 +55882,18 @@
       "add": -40,
       "div": 2,
       "len": 8,
-      "max": 80,
+      "max": 87.5,
       "min": -40,
       "unit": "celsius"
     },
     "hdr": "733",
-    "id": "LANDROVER_AAT",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Outside Temperature",
+    "id": "FPACE_AAT",
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "name": "Outside temperature",
     "path": "Climate",
     "pid": "22",
-    "scaling": "raw/2 +-40 clamped to [-40, 80]",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -55889,9 +55914,9 @@
       "unit": "celsius"
     },
     "hdr": "733",
-    "id": "FPACE_AAT",
-    "make": "Jaguar",
-    "model": "F-PACE",
+    "id": "LANDROVER_AAT",
+    "make": "Land",
+    "model": "Rover",
     "name": "Outside temperature",
     "path": "Climate",
     "pid": "22",
@@ -56405,30 +56430,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "D928"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "732",
-    "id": "LANDROVER_PARKED",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Parked?",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "DA12"
     },
     "debug": true,
@@ -56827,17 +56828,17 @@
     "eax": "",
     "fmt": {
       "len": 8,
-      "max": 220,
+      "max": 255,
       "unit": "kilometersPerHour"
     },
     "hdr": "7E4",
-    "id": "LANDROVER_VSS",
-    "make": "Land",
-    "model": "Rover",
-    "name": "Vehicle Speed",
+    "id": "FPACE_VSS",
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw clamped to [220]",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
   },
@@ -56855,9 +56856,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E4",
-    "id": "FPACE_VSS",
-    "make": "Jaguar",
-    "model": "F-PACE",
+    "id": "LANDROVER_VSS",
+    "make": "Land",
+    "model": "Rover",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
