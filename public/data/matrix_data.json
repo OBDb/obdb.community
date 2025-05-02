@@ -5189,6 +5189,56 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "D928"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "732",
+    "id": "IPACE_PARKED",
+    "make": "Jaguar",
+    "model": "I-PACE",
+    "name": "Parked?",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "D928"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "732",
+    "id": "FPACE_PARKED",
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "name": "Parked?",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 72,
     "cmd": {
       "22": "0101"
@@ -42234,6 +42284,30 @@
       "unit": "kilometers"
     },
     "hdr": "7E4",
+    "id": "FPACE_ODOMETER",
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "name": "Odometer",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "7E4",
     "id": "LANDROVER_ODOMETER",
     "make": "Land",
     "model": "Rover",
@@ -55362,7 +55436,7 @@
       "add": -40,
       "div": 2,
       "len": 8,
-      "max": 80,
+      "max": 87.5,
       "min": -40,
       "unit": "celsius"
     },
@@ -55373,7 +55447,7 @@
     "name": "Battery temperature",
     "path": "Battery",
     "pid": "22",
-    "scaling": "raw/2 +-40 clamped to [-40, 80]",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -55756,7 +55830,7 @@
       "add": -40,
       "div": 2,
       "len": 8,
-      "max": 80,
+      "max": 87.5,
       "min": -40,
       "unit": "celsius"
     },
@@ -55767,7 +55841,7 @@
     "name": "Outside Temperature",
     "path": "Climate",
     "pid": "22",
-    "scaling": "raw/2 +-40 clamped to [-40, 80]",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -55795,6 +55869,33 @@
     "path": "Climate",
     "pid": "22",
     "scaling": "raw/2 +-40 clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "9924"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 87.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "733",
+    "id": "FPACE_AAT",
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "name": "Outside temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -56306,30 +56407,6 @@
     "cmd": {
       "22": "D928"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "732",
-    "id": "IPACE_PARKED",
-    "make": "Jaguar",
-    "model": "I-PACE",
-    "name": "Parked?",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "D928"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -56726,7 +56803,7 @@
     "eax": "",
     "fmt": {
       "len": 8,
-      "max": 220,
+      "max": 255,
       "unit": "kilometersPerHour"
     },
     "hdr": "7E4",
@@ -56736,7 +56813,7 @@
     "name": "Vehicle Speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw clamped to [220]",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
   },
@@ -56761,6 +56838,30 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [220]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD09"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E4",
+    "id": "FPACE_VSS",
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
   },
@@ -120499,6 +120600,32 @@
       "unit": "bars"
     },
     "hdr": "751",
+    "id": "FPACE_TP_FL",
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.01373 clamped to [5]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2076"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 5,
+      "mul": 0.01373,
+      "unit": "bars"
+    },
+    "hdr": "751",
     "id": "LANDROVER_TP_FL",
     "make": "Land",
     "model": "Rover",
@@ -120528,6 +120655,32 @@
     "id": "IPACE_TP_FR",
     "make": "Jaguar",
     "model": "I-PACE",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.01373 clamped to [5]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2077"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 5,
+      "mul": 0.01373,
+      "unit": "bars"
+    },
+    "hdr": "751",
+    "id": "FPACE_TP_FR",
+    "make": "Jaguar",
+    "model": "F-PACE",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -120603,6 +120756,32 @@
       "unit": "bars"
     },
     "hdr": "751",
+    "id": "FPACE_TP_RR",
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.01373 clamped to [5]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 5,
+      "mul": 0.01373,
+      "unit": "bars"
+    },
+    "hdr": "751",
     "id": "LANDROVER_TP_RR",
     "make": "Land",
     "model": "Rover",
@@ -120632,6 +120811,32 @@
     "id": "IPACE_TP_RL",
     "make": "Jaguar",
     "model": "I-PACE",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.01373 clamped to [5]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2079"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 5,
+      "mul": 0.01373,
+      "unit": "bars"
+    },
+    "hdr": "751",
+    "id": "FPACE_TP_RL",
+    "make": "Jaguar",
+    "model": "F-PACE",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
