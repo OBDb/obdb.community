@@ -507,7 +507,7 @@
     "make": "Ford",
     "model": "Focus",
     "name": "Trunk Ajar?",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -532,7 +532,7 @@
     "make": "Ford",
     "model": "Edge",
     "name": "Trunk Ajar?",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -648,7 +648,7 @@
     "make": "Ford",
     "model": "Focus",
     "name": "Rear Right Door Ajar?",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -673,7 +673,7 @@
     "make": "Ford",
     "model": "Edge",
     "name": "Rear Right Door Ajar?",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -773,7 +773,7 @@
     "make": "Ford",
     "model": "Focus",
     "name": "Rear Left Door Ajar?",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -798,7 +798,7 @@
     "make": "Ford",
     "model": "Edge",
     "name": "Rear Left Door Ajar?",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -1374,7 +1374,7 @@
     "make": "Ford",
     "model": "Focus",
     "name": "Driver Door Ajar",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -1399,7 +1399,7 @@
     "make": "Ford",
     "model": "Edge",
     "name": "Driver Door Ajar",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -1474,7 +1474,7 @@
     "make": "Ford",
     "model": "Focus",
     "name": "Passenger Door Ajar?",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -1499,7 +1499,7 @@
     "make": "Ford",
     "model": "Edge",
     "name": "Passenger Door Ajar?",
-    "path": "Doors & Windows",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -2978,7 +2978,7 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Handbrake engaged?",
-    "path": "Chassis",
+    "path": "Control",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3478,7 +3478,7 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Trunk open?",
-    "path": "Body",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -6591,7 +6591,7 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] MAP voltage",
+    "id": "EDGE_MAP_V",
     "make": "Ford",
     "model": "Edge",
     "name": "Manifold absolute pressure sensor voltage",
@@ -6870,7 +6870,7 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] LPFP duty cycle",
+    "id": "EDGE_LPFP_DUTY",
     "make": "Ford",
     "model": "Edge",
     "name": "Low pressure fuel pump commanded duty cycle",
@@ -6920,7 +6920,7 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] Commanded lambda",
+    "id": "EDGE_CL",
     "make": "Ford",
     "model": "Edge",
     "name": "Commanded lambda",
@@ -6970,7 +6970,7 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] VCT intake duty cycle",
+    "id": "EDGE_VCT_INT_DUTY",
     "make": "Ford",
     "model": "Edge",
     "name": "VCT intake camshaft solenoid duty cycle",
@@ -7020,7 +7020,7 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] VCT exhaust duty cycle",
+    "id": "EDGE_VCT_EXH_DUTY",
     "make": "Ford",
     "model": "Edge",
     "name": "VCT exhaust camshaft solenoid duty cycle",
@@ -7072,7 +7072,7 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] VCT intake actual",
+    "id": "EDGE_VCT_INT_ACT",
     "make": "Ford",
     "model": "Edge",
     "name": "VCT intake camshaft actual",
@@ -7122,7 +7122,7 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] VCT exhaust actual",
+    "id": "EDGE_VCT_EXH_ACT",
     "make": "Ford",
     "model": "Edge",
     "name": "VCT exhaust camshaft actual",
@@ -7174,7 +7174,7 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] VCT intake error",
+    "id": "EDGE_VCT_INT_ERR",
     "make": "Ford",
     "model": "Edge",
     "name": "VCT intake camshaft error",
@@ -7226,7 +7226,7 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] VCT exhaust error",
+    "id": "EDGE_VCT_EXH_ERR",
     "make": "Ford",
     "model": "Edge",
     "name": "VCT exhaust camshaft error",
@@ -7276,7 +7276,7 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] HPFP sensor voltage",
+    "id": "EDGE_HPFP_V",
     "make": "Ford",
     "model": "Edge",
     "name": "High pressure fuel rail sensor voltage",
@@ -7328,7 +7328,7 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] ETC learned trim",
+    "id": "EDGE_ETC_TRIM_LEARNED",
     "make": "Ford",
     "model": "Edge",
     "name": "Electronic throttle control learned trim angle",
@@ -7378,7 +7378,7 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] TIP sensor voltage",
+    "id": "EDGE_TIP_V",
     "make": "Ford",
     "model": "Edge",
     "name": "Throttle inlet pressure sensor voltage",
@@ -7428,7 +7428,7 @@
       "unit": "psi"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] TIP actual abs",
+    "id": "EDGE_TIP_ABS",
     "make": "Ford",
     "model": "Edge",
     "name": "Throttle inlet pressure absolute",
@@ -7480,7 +7480,7 @@
       "unit": "psi"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] Baro",
+    "id": "EDGE_BARO",
     "make": "Ford",
     "model": "Edge",
     "name": "Barometric pressure",
@@ -7530,7 +7530,7 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] Baro Sensor V",
+    "id": "EDGE_BARO_V",
     "make": "Ford",
     "model": "Edge",
     "name": "Barometric pressure sensor voltage",
@@ -7580,7 +7580,7 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] Rear O2 V",
+    "id": "EDGE_RO2_V",
     "make": "Ford",
     "model": "Edge",
     "name": "Rear O2 voltage",
@@ -7630,7 +7630,7 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] Evap Pres Sensor V",
+    "id": "EDGE_EVAP_V",
     "make": "Ford",
     "model": "Edge",
     "name": "Evaporative vapor pressure sensor voltage",
@@ -7682,7 +7682,7 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] ECT",
+    "id": "EDGE_ECT",
     "make": "Ford",
     "model": "Edge",
     "name": "Engine coolant temperature",
@@ -7734,7 +7734,7 @@
       "unit": "psi"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] AC Pressure",
+    "id": "EDGE_AC_P",
     "make": "Ford",
     "model": "Edge",
     "name": "Air conditioning compressor pressure",
@@ -7784,7 +7784,7 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] AAT Sensor V",
+    "id": "EDGE_AAT_V",
     "make": "Ford",
     "model": "Edge",
     "name": "Ambient air temperature sensor voltage",
@@ -7834,7 +7834,7 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] VCT Exh Des",
+    "id": "EDGE_VCT_EXH_DES",
     "make": "Ford",
     "model": "Edge",
     "name": "VCT exhaust cam desired",
@@ -7886,7 +7886,7 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] VCT Int Des",
+    "id": "EDGE_VCT_INT_DES",
     "make": "Ford",
     "model": "Edge",
     "name": "VCT intake cam desired",
@@ -7938,7 +7938,7 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] CL Lambda Corr",
+    "id": "EDGE_CL_LC",
     "make": "Ford",
     "model": "Edge",
     "name": "Closed loop lambda correction",
@@ -7988,7 +7988,7 @@
       "unit": "psi"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] HPFP Desired",
+    "id": "EDGE_HPFP_DES",
     "make": "Ford",
     "model": "Edge",
     "name": "High pressure fuel pressure desired",
@@ -8040,7 +8040,7 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] OAR",
+    "id": "EDGE_OAR",
     "make": "Ford",
     "model": "Edge",
     "name": "Octane adjust ratio",
@@ -10664,31 +10664,6 @@
     },
     "hdr": "7DF",
     "id": "EDGE_TOT",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "Transmission oil temperature",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw/16 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1E1C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 16,
-      "len": 16,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "EDGE_TOT_v2",
     "make": "Ford",
     "model": "Edge",
     "name": "Transmission oil temperature",
@@ -22635,7 +22610,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -22672,7 +22646,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -22710,8 +22683,7 @@
     "fmt": {
       "len": 16,
       "max": 25000,
-      "mul": 0.01030927835,
-      "sign": false,
+      "mul": 0.0103092783,
       "unit": "volts"
     },
     "hdr": "7DF",
@@ -22721,7 +22693,7 @@
     "name": "Voltage",
     "path": "Battery.EVCC",
     "pid": "22",
-    "scaling": "raw*0.01030927835 clamped to [25000]",
+    "scaling": "raw*0.0103092783 clamped to [25000]",
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "volts"
@@ -22736,7 +22708,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -22773,7 +22744,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -22810,7 +22780,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -22847,7 +22816,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23041,7 +23009,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23078,7 +23045,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23115,7 +23081,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23152,7 +23117,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23189,7 +23153,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23226,7 +23189,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23263,7 +23225,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23300,7 +23261,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23337,7 +23297,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23374,7 +23333,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23411,7 +23369,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23448,7 +23405,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23485,7 +23441,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23522,7 +23477,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23559,7 +23513,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23596,7 +23549,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23633,7 +23585,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -23670,7 +23621,6 @@
     "eax": "",
     "fmt": {
       "add": 1,
-      "bix": 0,
       "len": 16,
       "max": 10,
       "mul": 0.0005,
@@ -47044,7 +46994,6 @@
     "fmt": {
       "len": 8,
       "max": 100,
-      "min": 0,
       "mul": 0.3921568627,
       "unit": "percent"
     },
@@ -47055,7 +47004,7 @@
     "name": "State of charge",
     "path": "Battery",
     "pid": "01",
-    "scaling": "raw*0.3921568627 clamped to [0, 100]",
+    "scaling": "raw*0.3921568627 clamped to [100]",
     "signalGroups": [],
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
@@ -49064,7 +49013,7 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] Accelerator pedal position",
+    "id": "EDGE_ACC_POS",
     "make": "Ford",
     "model": "Edge",
     "name": "Accelerator Pedal Position",
@@ -49112,7 +49061,7 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "EDGE_[ECU] MCT",
+    "id": "EDGE_MCT",
     "make": "Ford",
     "model": "Edge",
     "name": "Manifold charge temperature",
@@ -51801,70 +51750,6 @@
     "eax": "",
     "fmt": {
       "len": 8,
-      "map": {
-        "1": {
-          "description": "First gear",
-          "value": "1"
-        },
-        "10": {
-          "description": "Tenth gear",
-          "value": "10"
-        },
-        "2": {
-          "description": "Second gear",
-          "value": "2"
-        },
-        "3": {
-          "description": "Third gear",
-          "value": "3"
-        },
-        "4": {
-          "description": "Fourth gear",
-          "value": "4"
-        },
-        "5": {
-          "description": "Fifth gear",
-          "value": "5"
-        },
-        "6": {
-          "description": "Sixth gear",
-          "value": "6"
-        },
-        "7": {
-          "description": "Seventh gear",
-          "value": "7"
-        },
-        "8": {
-          "description": "Eighth gear",
-          "value": "8"
-        },
-        "9": {
-          "description": "Ninth gear",
-          "value": "9"
-        }
-      }
-    },
-    "hdr": "7E0",
-    "id": "EDGE_GEAR_v2",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "Current gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1E12"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -52242,50 +52127,6 @@
     "model": "Edge",
     "name": "Shift gear",
     "path": "Engine",
-    "pid": "22",
-    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1E23"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "10": {
-          "description": "Manual",
-          "value": "MANUAL"
-        },
-        "46": {
-          "description": "Drive",
-          "value": "DRIVE"
-        },
-        "50": {
-          "description": "Neutral",
-          "value": "NEUTRAL"
-        },
-        "60": {
-          "description": "Reverse",
-          "value": "REVERSE"
-        },
-        "70": {
-          "description": "Park",
-          "value": "PARK"
-        }
-      }
-    },
-    "hdr": "7E0",
-    "id": "EDGE_GEAR_SHFT_v2",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "Shift gear",
-    "path": "Transmission",
     "pid": "22",
     "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
     "suggestedMetric": "",
@@ -56079,7 +55920,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 0,
       "len": 8,
       "max": 255,
       "unit": "scalar"
@@ -56526,7 +56366,7 @@
     "make": "MG",
     "model": "MG4",
     "name": "Vehicle Gateway Status",
-    "path": "Vehicle.Internal",
+    "path": "ECU",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
@@ -57323,7 +57163,7 @@
     "fmt": {
       "div": 255,
       "len": 8,
-      "max": 255,
+      "max": 100,
       "mul": 100,
       "unit": "percent"
     },
@@ -57334,33 +57174,7 @@
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
-    "scaling": "raw*100 /255 clamped to [255]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "F42F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 255,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E0",
-    "id": "EDGE_FLI_v3",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [255]",
+    "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "fuelTankLevel",
     "unit": "percent"
   },
@@ -57378,7 +57192,7 @@
       "unit": "scalar"
     },
     "hdr": "7DF",
-    "id": "EDGE_FLI_v2",
+    "id": "EDGE_FLI_V2",
     "make": "Ford",
     "model": "Edge",
     "name": "Fuel level (alternative)",
