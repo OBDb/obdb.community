@@ -25302,7 +25302,7 @@
       "unit": "percent"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_SOC",
+    "id": "ROLLSROYCE_HVBAT_SOC_V2",
     "make": "Rolls",
     "model": "Royce",
     "name": "HV battery charge",
@@ -43376,7 +43376,7 @@
       "unit": "kilometers"
     },
     "hdr": "701",
-    "id": "DAIHATSU_ODO",
+    "id": "DAIHATSU_ODO_V3",
     "make": "Daihatsu",
     "model": "",
     "name": "Odometer",
@@ -43401,7 +43401,7 @@
       "unit": "kilometers"
     },
     "hdr": "747",
-    "id": "DAIHATSU_ODO",
+    "id": "DAIHATSU_ODO_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Odometer",
@@ -47663,7 +47663,7 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "DAIHATSU_VSS",
+    "id": "DAIHATSU_VSS_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Vehicle speed",
@@ -49349,7 +49349,7 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TT_FL",
+    "id": "DAIHATSU_TT_FL_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Front left tire temperature",
@@ -49401,7 +49401,7 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_FL",
+    "id": "DAIHATSU_TP_FL_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Front left tire pressure",
@@ -56435,7 +56435,7 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_GEAR",
+    "id": "ROLLSROYCE_GEAR_V2",
     "make": "Rolls",
     "model": "Royce",
     "name": "Current gear",
@@ -71622,7 +71622,7 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TT_RL",
+    "id": "DAIHATSU_TT_RL_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Rear left tire temperature",
@@ -71676,7 +71676,7 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_RL",
+    "id": "DAIHATSU_TP_RL_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Rear left tire pressure",
@@ -89602,7 +89602,7 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TT_RR",
+    "id": "DAIHATSU_TT_RR_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Rear right tire temperature",
@@ -89740,7 +89740,7 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_RR",
+    "id": "DAIHATSU_TP_RR_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Rear right tire pressure",
@@ -91947,7 +91947,7 @@
       "unit": "percent"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_SOH",
+    "id": "ROLLSROYCE_HVBAT_SOH_V2",
     "make": "Rolls",
     "model": "Royce",
     "name": "HV battery health",
@@ -104891,7 +104891,7 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TT_SPARE",
+    "id": "DAIHATSU_TT_SPARE_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Spare tire temperature",
@@ -104945,7 +104945,7 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_SPARE",
+    "id": "DAIHATSU_TP_SPARE_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Spare tire pressure",
@@ -105145,6 +105145,318 @@
     "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "ALFAROMEO_TT_FL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "RAM_TT_FL",
+    "make": "Ram",
+    "model": "1500",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "VAUXHALLOPEL_TT_FL",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "ALFAROMEO_TT_FR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "RAM_TT_FR",
+    "make": "Ram",
+    "model": "1500",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "VAUXHALLOPEL_TT_FR",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "ALFAROMEO_TT_RL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "RAM_TT_RL",
+    "make": "Ram",
+    "model": "1500",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "VAUXHALLOPEL_TT_RL",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "ALFAROMEO_TT_RR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "RAM_TT_RR",
+    "make": "Ram",
+    "model": "1500",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "40B4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7F1",
+    "id": "VAUXHALLOPEL_TT_RR",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -119918,7 +120230,7 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TT_FR",
+    "id": "DAIHATSU_TT_FR_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Front right tire temperature",
@@ -120056,7 +120368,7 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_FR",
+    "id": "DAIHATSU_TP_FR_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Front right tire pressure",
