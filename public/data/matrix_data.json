@@ -1507,6 +1507,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 175,
+    "cmd": {
+      "22": "2612"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 175,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_VTEC_VALVE_CTRL",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "VTEC valve control",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 18,
     "cmd": {
       "01": "01"
@@ -2208,6 +2233,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "yesno"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 262,
+    "cmd": {
+      "22": "2610"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 262,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_AC_CLUTCH",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "A/C clutch",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
   },
   {
     "bitLength": 1,
@@ -3003,7 +3053,7 @@
     "make": "Kia",
     "model": "Forte",
     "name": "Handbrake engaged?",
-    "path": "Chassis",
+    "path": "Control",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3053,7 +3103,7 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Handbrake engaged?",
-    "path": "Chassis",
+    "path": "Control",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3503,7 +3553,7 @@
     "make": "Kia",
     "model": "Forte",
     "name": "Trunk open?",
-    "path": "Body",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3553,7 +3603,7 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Trunk open?",
-    "path": "Body",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -27077,7 +27127,7 @@
     "cmd": {
       "22": "2002"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 144,
@@ -33250,7 +33300,7 @@
     "cmd": {
       "22": "2002"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 24,
@@ -33299,32 +33349,6 @@
     "scaling": "raw/627.6 clamped to [-52.21, 52.21]",
     "suggestedMetric": "",
     "unit": "gravity"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "2610"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 24,
-      "div": 4,
-      "len": 16,
-      "max": 16383.75,
-      "unit": "rpm"
-    },
-    "hdr": "DA0E",
-    "id": "CIVIC_RPM",
-    "make": "Honda",
-    "model": "Civic",
-    "name": "Engine RPM",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/4 clamped to [16383.75]",
-    "suggestedMetric": "",
-    "unit": "rpm"
   },
   {
     "bitLength": 16,
@@ -33480,7 +33504,7 @@
     "make": "Kia",
     "model": "Forte",
     "name": "Brake Pressure",
-    "path": "Movement",
+    "path": "Control",
     "pid": "22",
     "scaling": "raw/86.7 clamped to [100]",
     "suggestedMetric": "",
@@ -33507,7 +33531,7 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Brake Pressure",
-    "path": "Movement",
+    "path": "Control",
     "pid": "22",
     "scaling": "raw/86.7 clamped to [100]",
     "suggestedMetric": "",
@@ -33692,6 +33716,31 @@
     "pid": "22",
     "scaling": "raw clamped to [65535]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "2663"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 272,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_MIS_1",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Misfire count #1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -35045,6 +35094,31 @@
     "bitLength": 16,
     "bitOffset": 288,
     "cmd": {
+      "22": "2663"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 288,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_MIS_2",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Misfire count #2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 288,
+    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -35222,6 +35296,31 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "2663"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 304,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_MIS_3",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Misfire count #3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -35996,6 +36095,31 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 320,
+    "cmd": {
+      "22": "2663"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 320,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_MIS_4",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Misfire count #4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 336,
     "cmd": {
       "22": "22B0"
@@ -36757,7 +36881,7 @@
     "cmd": {
       "22": "2002"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -38626,7 +38750,7 @@
     "cmd": {
       "22": "2611"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 64,
@@ -38644,6 +38768,32 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*29.4 /65535 clamped to [29.4]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "2661"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 2229.08163265,
+      "len": 16,
+      "max": 29.4,
+      "unit": "scalar"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_FUELAIR_CAR",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Fuel/air commanded equivalence ratio",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/2229.08163265 clamped to [29.4]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -38950,7 +39100,7 @@
     "cmd": {
       "22": "2002"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 72,
@@ -40300,7 +40450,7 @@
     "cmd": {
       "22": "2002"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 8,
@@ -40836,7 +40986,7 @@
     "cmd": {
       "22": "2002"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 96,
@@ -40892,7 +41042,7 @@
     "cmd": {
       "22": "2662"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -40903,7 +41053,7 @@
       "min": -40,
       "unit": "celsius"
     },
-    "hdr": "DA0E",
+    "hdr": "DA11",
     "id": "CIVIC_CAT_T",
     "make": "Honda",
     "model": "Civic",
@@ -42456,17 +42606,17 @@
     "fmt": {
       "bix": 344,
       "len": 24,
-      "max": 4294967295,
+      "max": 16777215,
       "unit": "kilometers"
     },
     "hdr": "DA10",
-    "id": "ACCORD_ODO",
+    "id": "CIVIC_ODO",
     "make": "Honda",
-    "model": "Accord",
+    "model": "Civic",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
+    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -42485,9 +42635,9 @@
       "unit": "kilometers"
     },
     "hdr": "DA10",
-    "id": "CIVIC_ODO",
+    "id": "ACCORD_ODO",
     "make": "Honda",
-    "model": "Civic",
+    "model": "Accord",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -78749,6 +78899,33 @@
     "bitLength": 8,
     "bitOffset": 184,
     "cmd": {
+      "22": "2610"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_GENERATOR",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Generator",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
       "22": "E00A"
     },
     "debug": true,
@@ -84296,6 +84473,32 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "2201"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 208,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "DA1D",
+    "id": "CIVIC_ATF_T",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "ATF temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 216,
     "cmd": {
       "21": "02"
@@ -87115,6 +87318,33 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "2662"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_VTC_DUTY",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Variable timing \u0441ontrol duty",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -107587,55 +107817,6 @@
   },
   {
     "bitLength": 8,
-    "bitOffset": 352,
-    "cmd": {
-      "22": "2612"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 352,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "First gear",
-          "value": "1"
-        },
-        "2": {
-          "description": "Second gear",
-          "value": "2"
-        },
-        "3": {
-          "description": "Third gear",
-          "value": "3"
-        },
-        "4": {
-          "description": "Fourth gear",
-          "value": "4"
-        },
-        "5": {
-          "description": "Fifth gear",
-          "value": "5"
-        },
-        "6": {
-          "description": "Sixth gear",
-          "value": "6"
-        }
-      }
-    },
-    "hdr": "DA0E",
-    "id": "CIVIC_GEAR",
-    "make": "Honda",
-    "model": "Civic",
-    "name": "Current gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
       "01": "68"
@@ -113305,6 +113486,32 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "22": "2666"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 20,
+      "len": 8,
+      "max": 12.75,
+      "unit": "centimeters"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_EOL",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Engine oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [12.75]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "4000"
     },
     "debug": false,
@@ -118628,7 +118835,7 @@
     "cmd": {
       "22": "266D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 72,
@@ -124057,7 +124264,7 @@
     "cmd": {
       "22": "2662"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 80,
@@ -124067,7 +124274,7 @@
       "mul": 1.99,
       "unit": "scalar"
     },
-    "hdr": "DA0E",
+    "hdr": "DA11",
     "id": "CIVIC_KNOCK_CTRL",
     "make": "Honda",
     "model": "Civic",
@@ -125660,6 +125867,33 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "22": "2666"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 88,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_EOT",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
