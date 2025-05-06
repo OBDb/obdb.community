@@ -87339,7 +87339,7 @@
     "id": "CIVIC_VTC_DUTY",
     "make": "Honda",
     "model": "Civic",
-    "name": "Variable timing \u0441ontrol duty",
+    "name": "Variable timing control duty",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*100 /255 clamped to [100]",
@@ -124270,7 +124270,7 @@
       "bix": 80,
       "div": 255,
       "len": 8,
-      "max": 2,
+      "max": 1.99,
       "mul": 1.99,
       "unit": "scalar"
     },
@@ -124281,7 +124281,7 @@
     "name": "Knock control",
     "path": "Engine",
     "pid": "22",
-    "scaling": "raw*1.99 /255 clamped to [2]",
+    "scaling": "raw*1.99 /255 clamped to [1.99]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
