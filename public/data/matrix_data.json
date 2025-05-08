@@ -22867,9 +22867,59 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_VSS2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4AB1"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_VSS2",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4AB1"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_VSS2",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -24350,9 +24400,59 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_VSS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_VSS",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_VSS",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -24473,9 +24573,57 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_VSS_INSTR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Vehicle speed (instrument cluster)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D240"
+    },
+    "debug": true,
+    "eax": "0D",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_VSS_INSTR",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Vehicle speed (instrument cluster)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D240"
+    },
+    "debug": true,
+    "eax": "0D",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_VSS_INSTR",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Vehicle speed (instrument cluster)",
     "path": "Movement",
     "pid": "22",
@@ -24908,6 +25056,112 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_TQ_CNVRT_RPM",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TQ_CNVRT_RPM",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DBE4"
     },
     "debug": false,
@@ -25083,6 +25337,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_FL_SPD",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "I3_FL_SPD",
     "make": "BMW",
     "model": "I3s",
@@ -25113,6 +25394,33 @@
     "id": "ROLLSROYCE_FL_SPD",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_FL_SPD",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -25724,6 +26032,58 @@
     "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
     "unit": "ampereHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 156.25,
+      "unit": "degrees"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_VGT_CAL_ANGLE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Variable geometry turbocharger calibration angle",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 156.25,
+      "unit": "degrees"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_VGT_CAL_ANGLE",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Variable geometry turbocharger calibration angle",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -29312,6 +29672,60 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_TRANS_SHAFT_RPM",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TRANS_SHAFT_RPM",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "DBE4"
     },
     "debug": false,
@@ -29494,6 +29908,34 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_FR_SPD",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "I3_FR_SPD",
     "make": "BMW",
     "model": "I3s",
@@ -29525,6 +29967,34 @@
     "id": "ROLLSROYCE_FR_SPD",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_FR_SPD",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -36165,6 +36635,62 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "DBE4"
     },
     "debug": false,
@@ -36347,6 +36873,34 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_RL_SPD",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "I3_RL_SPD",
     "make": "BMW",
     "model": "I3s",
@@ -36378,6 +36932,34 @@
     "id": "ROLLSROYCE_RL_SPD",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_RL_SPD",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -37788,6 +38370,34 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_RR_SPD",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "I3_RR_SPD",
     "make": "BMW",
     "model": "I3s",
@@ -37819,6 +38429,34 @@
     "id": "ROLLSROYCE_RR_SPD",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_RR_SPD",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -44236,7 +44874,7 @@
       "unit": "kilometers"
     },
     "hdr": "701",
-    "id": "DAIHATSU_ODO_V3",
+    "id": "DAIHATSU_ODO_V4",
     "make": "Daihatsu",
     "model": "",
     "name": "Odometer",
@@ -44261,7 +44899,7 @@
       "unit": "kilometers"
     },
     "hdr": "747",
-    "id": "DAIHATSU_ODO_V2",
+    "id": "DAIHATSU_ODO_V3",
     "make": "Daihatsu",
     "model": "",
     "name": "Odometer",
@@ -44580,6 +45218,54 @@
     "scaling": "raw clamped to [4294967295]",
     "suggestedMetric": "odometer",
     "unit": "meters"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1700"
+    },
+    "debug": true,
+    "eax": "40",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_ODO_2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Odometer variant",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1700"
+    },
+    "debug": true,
+    "eax": "40",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ODO_2",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Odometer variant",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
   },
   {
     "bitLength": 32,
@@ -45226,9 +45912,57 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_ODO1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_ODO1",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ODO1",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Odometer #1",
     "path": "Trips",
     "pid": "22",
@@ -45284,6 +46018,56 @@
     "pid": "22",
     "scaling": "raw/1000 clamped to [429496729]",
     "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_ODO_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "[EGS] mileage/odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ODO",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "[EGS] mileage/odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "",
     "unit": "kilometers"
   },
   {
@@ -45690,6 +46474,56 @@
   },
   {
     "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 304,
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_OIL_CHANGE_DIST",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Distance since last oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 304,
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_OIL_CHANGE_DIST",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Distance since last oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
     "bitOffset": 32,
     "cmd": {
       "22": "1E32"
@@ -45956,9 +46790,59 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_ODO2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_ODO2",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ODO2",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Odometer #2",
     "path": "Trips",
     "pid": "22",
@@ -48550,7 +49434,7 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "DAIHATSU_VSS_V2",
+    "id": "DAIHATSU_VSS_V3",
     "make": "Daihatsu",
     "model": "",
     "name": "Vehicle speed",
@@ -53262,7 +54146,7 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D2",
-    "id": "DAIHATSU_VSS",
+    "id": "DAIHATSU_VSS_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Vehicle speed",
@@ -56824,9 +57708,57 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_EOP",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Engine oil pressure",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "586F"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_EOP",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Engine oil pressure",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "586F"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_EOP",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Engine oil pressure",
     "path": "Movement",
     "pid": "22",
@@ -57862,9 +58794,57 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_ATF_TEMP_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "ATF temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA12"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_ATF_TEMP",
     "make": "Rolls",
     "model": "Royce",
+    "name": "ATF temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA12"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ATF_TEMP",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "ATF temperature",
     "path": "Engine",
     "pid": "22",
@@ -57910,9 +58890,57 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_EOT_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA25"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_EOT",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA25"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_EOT",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -57958,11 +58986,59 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_GEAR_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_GEAR",
     "make": "Rolls",
     "model": "Royce",
     "name": "Gear",
     "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_GEAR",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Gear",
+    "path": "Transmission",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -58006,9 +59082,57 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_TIME_D",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Time in D",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_TIME_D",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Time in D",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TIME_D",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Time in D",
     "path": "Engine",
     "pid": "22",
@@ -73620,9 +74744,59 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_TIME_M",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Time in M",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_TIME_M",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Time in M",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TIME_M",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Time in M",
     "path": "Engine",
     "pid": "22",
@@ -122961,6 +124135,204 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "DA1F"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_KICKDOWN",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_KICKDOWN",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_TQ_CNVRT_LOCKUP",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TQ_CNVRT_LOCKUP",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA28"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "DAIHATSU_BRAKE_SWITCH",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Brake switch",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA28"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_BRAKE_SWITCH",
+    "make": "Toyota",
+    "model": "Supra",
+    "name": "Brake switch",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "DA37"
     },
     "debug": true,
@@ -122997,9 +124369,59 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "DAIHATSU_TIME_S",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Time in S",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_TIME_S",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Time in S",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TIME_S",
+    "make": "Toyota",
+    "model": "Supra",
     "name": "Time in S",
     "path": "Engine",
     "pid": "22",
