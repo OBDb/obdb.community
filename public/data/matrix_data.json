@@ -23358,6 +23358,31 @@
     "hdr": "6F1",
     "id": "SUPRA_VSS2",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4AB1"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_VSS2",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Vehicle speed",
     "path": "Movement",
@@ -24891,6 +24916,31 @@
     "hdr": "6F1",
     "id": "SUPRA_VSS",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_VSS",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Vehicle speed",
     "path": "Movement",
@@ -25039,6 +25089,30 @@
     "id": "ROLLSROYCE_VSS_INSTR",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Vehicle speed (instrument cluster)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D240"
+    },
+    "debug": true,
+    "eax": "0D",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_VSS_INSTR",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Vehicle speed (instrument cluster)",
     "path": "Movement",
     "pid": "22",
@@ -25535,6 +25609,32 @@
     "hdr": "6F1",
     "id": "SUPRA_TQ_CNVRT_RPM",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TQ_CNVRT_RPM",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Torque converter speed",
     "path": "Transmission",
@@ -25563,6 +25663,33 @@
     "id": "DAIHATSU_AXLE_FRONT_ACTUAL_TORQUE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Front axle, actual torque",
     "path": "Tires",
     "pid": "22",
@@ -25833,6 +25960,33 @@
     "id": "ROLLSROYCE_FL_SPD",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_FL_SPD",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -26516,6 +26670,32 @@
     "hdr": "6F1",
     "id": "SUPRA_VGT_CAL_ANGLE",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Variable geometry turbocharger calibration angle",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 156.25,
+      "unit": "degrees"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_VGT_CAL_ANGLE",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Variable geometry turbocharger calibration angle",
     "path": "Engine",
@@ -26955,7 +27135,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C3"
@@ -26993,7 +27173,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C3"
@@ -27031,7 +27211,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C3"
@@ -27069,7 +27249,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C3"
@@ -27107,7 +27287,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C3"
@@ -27145,7 +27325,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C3"
@@ -27183,7 +27363,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C3"
@@ -27221,7 +27401,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C3"
@@ -27259,7 +27439,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C3"
@@ -27297,7 +27477,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C3"
@@ -27335,7 +27515,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C3"
@@ -27373,7 +27553,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C3"
@@ -27411,7 +27591,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C3"
@@ -27449,7 +27629,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C3"
@@ -27487,7 +27667,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C3"
@@ -27525,7 +27705,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C3"
@@ -27563,7 +27743,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C3"
@@ -27601,7 +27781,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C3"
@@ -27639,7 +27819,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C3"
@@ -27677,7 +27857,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C3"
@@ -27715,7 +27895,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C3"
@@ -27753,7 +27933,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C3"
@@ -27791,7 +27971,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C3"
@@ -27829,7 +28009,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C3"
@@ -27867,7 +28047,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C3"
@@ -27905,7 +28085,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C3"
@@ -27943,7 +28123,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C3"
@@ -27981,7 +28161,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C3"
@@ -28019,7 +28199,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C3"
@@ -28057,7 +28237,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C3"
@@ -28095,7 +28275,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C3"
@@ -28133,7 +28313,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C3"
@@ -30218,6 +30398,33 @@
     "hdr": "6F1",
     "id": "SUPRA_TRANS_SHAFT_RPM",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TRANS_SHAFT_RPM",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Transmission output shaft speed",
     "path": "Transmission",
@@ -30471,6 +30678,34 @@
     "id": "ROLLSROYCE_FR_SPD",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_FR_SPD",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -30985,7 +31220,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C4"
@@ -31023,7 +31258,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C4"
@@ -31061,7 +31296,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C4"
@@ -31099,7 +31334,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C4"
@@ -31137,7 +31372,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C4"
@@ -31175,7 +31410,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C4"
@@ -31213,7 +31448,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C4"
@@ -31251,7 +31486,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C4"
@@ -31289,7 +31524,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C4"
@@ -31327,7 +31562,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C4"
@@ -31365,7 +31600,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C4"
@@ -31403,7 +31638,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C4"
@@ -31441,7 +31676,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C4"
@@ -31479,7 +31714,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C4"
@@ -31517,7 +31752,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C4"
@@ -31555,7 +31790,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C4"
@@ -31593,7 +31828,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C4"
@@ -31631,7 +31866,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C4"
@@ -31669,7 +31904,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C4"
@@ -31707,7 +31942,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C4"
@@ -31745,7 +31980,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C4"
@@ -31783,7 +32018,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C4"
@@ -31821,7 +32056,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C4"
@@ -31859,7 +32094,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C4"
@@ -31897,7 +32132,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C4"
@@ -31935,7 +32170,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C4"
@@ -31973,7 +32208,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C4"
@@ -32011,7 +32246,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C4"
@@ -32049,7 +32284,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C4"
@@ -32087,7 +32322,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C4"
@@ -32125,7 +32360,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C4"
@@ -32163,7 +32398,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C4"
@@ -33640,7 +33875,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C5"
@@ -33678,7 +33913,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C5"
@@ -33716,7 +33951,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C5"
@@ -33754,7 +33989,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C5"
@@ -33792,7 +34027,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C5"
@@ -33830,7 +34065,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C5"
@@ -33868,7 +34103,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C5"
@@ -33906,7 +34141,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C5"
@@ -33944,7 +34179,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C5"
@@ -33982,7 +34217,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C5"
@@ -34020,7 +34255,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C5"
@@ -34058,7 +34293,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C5"
@@ -34096,7 +34331,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C5"
@@ -34134,7 +34369,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C5"
@@ -34172,7 +34407,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C5"
@@ -34210,7 +34445,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C5"
@@ -34248,7 +34483,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C5"
@@ -34286,7 +34521,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C5"
@@ -34324,7 +34559,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C5"
@@ -34362,7 +34597,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C5"
@@ -34400,7 +34635,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C5"
@@ -34438,7 +34673,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C5"
@@ -34476,7 +34711,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C5"
@@ -34514,7 +34749,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C5"
@@ -34552,7 +34787,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C5"
@@ -34590,7 +34825,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C5"
@@ -34628,7 +34863,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C5"
@@ -34666,7 +34901,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C5"
@@ -34704,7 +34939,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C5"
@@ -34742,7 +34977,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C5"
@@ -34780,7 +35015,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C5"
@@ -34818,7 +35053,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C5"
@@ -35708,7 +35943,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C6"
@@ -35746,7 +35981,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C6"
@@ -35784,7 +36019,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C6"
@@ -35822,7 +36057,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C6"
@@ -35860,7 +36095,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C6"
@@ -35898,7 +36133,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C6"
@@ -35936,7 +36171,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C6"
@@ -35974,7 +36209,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C6"
@@ -36012,7 +36247,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C6"
@@ -36050,7 +36285,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C6"
@@ -36088,7 +36323,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C6"
@@ -36126,7 +36361,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C6"
@@ -36164,7 +36399,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C6"
@@ -36202,7 +36437,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C6"
@@ -36240,7 +36475,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C6"
@@ -36278,7 +36513,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C6"
@@ -36316,7 +36551,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C6"
@@ -36354,7 +36589,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C6"
@@ -36392,7 +36627,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C6"
@@ -36430,7 +36665,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C6"
@@ -36468,7 +36703,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C6"
@@ -36506,7 +36741,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C6"
@@ -36544,7 +36779,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C6"
@@ -36582,7 +36817,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C6"
@@ -36620,7 +36855,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C6"
@@ -36658,7 +36893,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C6"
@@ -36696,7 +36931,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C6"
@@ -36734,7 +36969,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C6"
@@ -36772,7 +37007,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C6"
@@ -36810,7 +37045,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C6"
@@ -36848,7 +37083,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C6"
@@ -36886,7 +37121,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C6"
@@ -37626,6 +37861,34 @@
     "hdr": "6F1",
     "id": "SUPRA_AXLE_FRONT_SETPOINT_TORQUE",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Front axle, setpoint torque",
     "path": "Tires",
@@ -37879,6 +38142,34 @@
     "id": "ROLLSROYCE_RL_SPD",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_RL_SPD",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -39508,6 +39799,34 @@
     "hdr": "6F1",
     "id": "SUPRA_RR_SPD",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_RR_SPD",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Rear right wheel speed",
     "path": "Movement",
@@ -39857,7 +40176,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C2"
@@ -39895,7 +40214,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C2"
@@ -39933,7 +40252,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C2"
@@ -39971,7 +40290,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C2"
@@ -40009,7 +40328,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C2"
@@ -40047,7 +40366,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C2"
@@ -40085,7 +40404,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C2"
@@ -40123,7 +40442,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C2"
@@ -40161,7 +40480,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C2"
@@ -40199,7 +40518,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C2"
@@ -40237,7 +40556,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C2"
@@ -40275,7 +40594,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C2"
@@ -40313,7 +40632,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C2"
@@ -40351,7 +40670,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C2"
@@ -40389,7 +40708,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C2"
@@ -40427,7 +40746,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C2"
@@ -40465,7 +40784,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C2"
@@ -40503,7 +40822,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C2"
@@ -40541,7 +40860,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C2"
@@ -40579,7 +40898,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C2"
@@ -40617,7 +40936,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C2"
@@ -40655,7 +40974,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C2"
@@ -40693,7 +41012,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C2"
@@ -40731,7 +41050,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C2"
@@ -40769,7 +41088,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C2"
@@ -40807,7 +41126,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C2"
@@ -40845,7 +41164,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C2"
@@ -40883,7 +41202,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C2"
@@ -40921,7 +41240,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C2"
@@ -40959,7 +41278,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C2"
@@ -40997,7 +41316,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C2"
@@ -41035,7 +41354,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C2"
@@ -41643,7 +41962,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C1"
@@ -41681,7 +42000,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C1"
@@ -41719,7 +42038,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C1"
@@ -41757,7 +42076,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C1"
@@ -41795,7 +42114,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C1"
@@ -41833,7 +42152,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C1"
@@ -41871,7 +42190,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C1"
@@ -41909,7 +42228,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C1"
@@ -41947,7 +42266,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C1"
@@ -41985,7 +42304,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C1"
@@ -42023,7 +42342,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C1"
@@ -42061,7 +42380,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C1"
@@ -42099,7 +42418,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C1"
@@ -42137,7 +42456,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C1"
@@ -42175,7 +42494,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C1"
@@ -42213,7 +42532,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C1"
@@ -42251,7 +42570,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C1"
@@ -42289,7 +42608,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C1"
@@ -42327,7 +42646,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C1"
@@ -42365,7 +42684,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C1"
@@ -42403,7 +42722,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C1"
@@ -42441,7 +42760,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C1"
@@ -42479,7 +42798,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C1"
@@ -42517,7 +42836,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C1"
@@ -42555,7 +42874,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C1"
@@ -42593,7 +42912,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C1"
@@ -42631,7 +42950,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C1"
@@ -42669,7 +42988,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C1"
@@ -42707,7 +43026,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C1"
@@ -42745,7 +43064,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C1"
@@ -42783,7 +43102,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C1"
@@ -42821,7 +43140,7 @@
     "scaling": "raw/10000 clamped to [6.5]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_V",
+        "id": "TAYCAN_HVBAT_PACK_V",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C1"
@@ -46505,6 +46824,30 @@
     "hdr": "6F1",
     "id": "SUPRA_ODO_2",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Odometer variant",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1700"
+    },
+    "debug": true,
+    "eax": "40",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ODO_2",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Odometer variant",
     "path": "Trips",
@@ -47208,6 +47551,30 @@
     "hdr": "6F1",
     "id": "SUPRA_ODO1",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ODO1",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Odometer #1",
     "path": "Trips",
@@ -47284,6 +47651,31 @@
     "id": "DAIHATSU_ODO_V2",
     "make": "Daihatsu",
     "model": "",
+    "name": "[EGS] mileage/odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ODO",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "[EGS] mileage/odometer",
     "path": "Trips",
     "pid": "22",
@@ -47760,6 +48152,31 @@
     "hdr": "6F1",
     "id": "SUPRA_OIL_CHANGE_DIST",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Distance since last oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 304,
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_OIL_CHANGE_DIST",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Distance since last oil change",
     "path": "Fluids",
@@ -48064,6 +48481,31 @@
     "id": "ROLLSROYCE_ODO2",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ODO2",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Odometer #2",
     "path": "Trips",
     "pid": "22",
@@ -59004,6 +59446,30 @@
     "hdr": "6F1",
     "id": "SUPRA_EOP",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Engine oil pressure",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "586F"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_EOP",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Engine oil pressure",
     "path": "Movement",
@@ -60090,6 +60556,30 @@
     "hdr": "6F1",
     "id": "SUPRA_ATF_TEMP",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "ATF temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA12"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_ATF_TEMP",
+    "make": "Toyota",
     "model": "Supra",
     "name": "ATF temperature",
     "path": "Engine",
@@ -60163,6 +60653,30 @@
     "id": "ROLLSROYCE_EOT",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA25"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_EOT",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -60282,6 +60796,30 @@
     "hdr": "6F1",
     "id": "SUPRA_GEAR",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_GEAR",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Gear",
     "path": "Transmission",
@@ -60355,6 +60893,30 @@
     "id": "ROLLSROYCE_TIME_D",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Time in D",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TIME_D",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Time in D",
     "path": "Engine",
     "pid": "22",
@@ -69832,7 +70394,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C3"
@@ -69869,7 +70431,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C3"
@@ -69906,7 +70468,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C3"
@@ -69943,7 +70505,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C3"
@@ -69980,7 +70542,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C3"
@@ -70017,7 +70579,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C3"
@@ -70054,7 +70616,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C3"
@@ -70091,7 +70653,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C3"
@@ -70128,7 +70690,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C3"
@@ -70165,7 +70727,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C3"
@@ -70202,7 +70764,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C3"
@@ -70239,7 +70801,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C3"
@@ -70276,7 +70838,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C3"
@@ -70313,7 +70875,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C3"
@@ -70350,7 +70912,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C3"
@@ -70387,7 +70949,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C3"
@@ -70424,7 +70986,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C3"
@@ -70461,7 +71023,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C3"
@@ -70498,7 +71060,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C3"
@@ -70535,7 +71097,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C3"
@@ -70572,7 +71134,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C3"
@@ -70609,7 +71171,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C3"
@@ -70646,7 +71208,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C3"
@@ -70683,7 +71245,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C3"
@@ -70720,7 +71282,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C3"
@@ -70757,7 +71319,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C3"
@@ -70794,7 +71356,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C3"
@@ -70831,7 +71393,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C3"
@@ -70868,7 +71430,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C3"
@@ -70905,7 +71467,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C3"
@@ -70942,7 +71504,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C3"
@@ -70979,7 +71541,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C3"
@@ -76415,6 +76977,31 @@
     "id": "ROLLSROYCE_TIME_M",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Time in M",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TIME_M",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Time in M",
     "path": "Engine",
     "pid": "22",
@@ -84838,7 +85425,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C4"
@@ -84875,7 +85462,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C4"
@@ -84912,7 +85499,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C4"
@@ -84949,7 +85536,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C4"
@@ -84986,7 +85573,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C4"
@@ -85023,7 +85610,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C4"
@@ -85060,7 +85647,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C4"
@@ -85097,7 +85684,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C4"
@@ -85134,7 +85721,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C4"
@@ -85171,7 +85758,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C4"
@@ -85208,7 +85795,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C4"
@@ -85245,7 +85832,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C4"
@@ -85282,7 +85869,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C4"
@@ -85319,7 +85906,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C4"
@@ -85356,7 +85943,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C4"
@@ -85393,7 +85980,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C4"
@@ -85430,7 +86017,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C4"
@@ -85467,7 +86054,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C4"
@@ -85504,7 +86091,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C4"
@@ -85541,7 +86128,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C4"
@@ -85578,7 +86165,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C4"
@@ -85615,7 +86202,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C4"
@@ -85652,7 +86239,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C4"
@@ -85689,7 +86276,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C4"
@@ -85726,7 +86313,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C4"
@@ -85763,7 +86350,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C4"
@@ -85800,7 +86387,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C4"
@@ -85837,7 +86424,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C4"
@@ -85874,7 +86461,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C4"
@@ -85911,7 +86498,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C4"
@@ -85948,7 +86535,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C4"
@@ -85985,7 +86572,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C4"
@@ -94674,7 +95261,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C1"
@@ -94711,7 +95298,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C1"
@@ -94748,7 +95335,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C1"
@@ -94785,7 +95372,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C1"
@@ -94822,7 +95409,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C1"
@@ -94859,7 +95446,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C1"
@@ -94896,7 +95483,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C1"
@@ -94933,7 +95520,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C1"
@@ -94970,7 +95557,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C1"
@@ -95007,7 +95594,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C1"
@@ -95044,7 +95631,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C1"
@@ -95081,7 +95668,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C1"
@@ -95118,7 +95705,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C1"
@@ -95155,7 +95742,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C1"
@@ -95192,7 +95779,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C1"
@@ -95229,7 +95816,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C1"
@@ -95266,7 +95853,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C1"
@@ -95303,7 +95890,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C1"
@@ -95340,7 +95927,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C1"
@@ -95377,7 +95964,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C1"
@@ -95414,7 +96001,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C1"
@@ -95451,7 +96038,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C1"
@@ -95488,7 +96075,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C1"
@@ -95525,7 +96112,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C1"
@@ -95562,7 +96149,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C1"
@@ -95599,7 +96186,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C1"
@@ -95636,7 +96223,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C1"
@@ -95673,7 +96260,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C1"
@@ -95710,7 +96297,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C1"
@@ -95747,7 +96334,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C1"
@@ -95784,7 +96371,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C1"
@@ -95821,7 +96408,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C1"
@@ -99536,7 +100123,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C5"
@@ -99573,7 +100160,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C5"
@@ -99610,7 +100197,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C5"
@@ -99647,7 +100234,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C5"
@@ -99684,7 +100271,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C5"
@@ -99721,7 +100308,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C5"
@@ -99758,7 +100345,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C5"
@@ -99795,7 +100382,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C5"
@@ -99832,7 +100419,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C5"
@@ -99869,7 +100456,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C5"
@@ -99906,7 +100493,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C5"
@@ -99943,7 +100530,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C5"
@@ -99980,7 +100567,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C5"
@@ -100017,7 +100604,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C5"
@@ -100054,7 +100641,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C5"
@@ -100091,7 +100678,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C5"
@@ -100128,7 +100715,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C5"
@@ -100165,7 +100752,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C5"
@@ -100202,7 +100789,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C5"
@@ -100239,7 +100826,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C5"
@@ -100276,7 +100863,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C5"
@@ -100313,7 +100900,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C5"
@@ -100350,7 +100937,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C5"
@@ -100387,7 +100974,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C5"
@@ -100424,7 +101011,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C5"
@@ -100461,7 +101048,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C5"
@@ -100498,7 +101085,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C5"
@@ -100535,7 +101122,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C5"
@@ -100572,7 +101159,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C5"
@@ -100609,7 +101196,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C5"
@@ -100646,7 +101233,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C5"
@@ -100683,7 +101270,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C5"
@@ -106329,7 +106916,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C6"
@@ -106366,7 +106953,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C6"
@@ -106403,7 +106990,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C6"
@@ -106440,7 +107027,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C6"
@@ -106477,7 +107064,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C6"
@@ -106514,7 +107101,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C6"
@@ -106551,7 +107138,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C6"
@@ -106588,7 +107175,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C6"
@@ -106625,7 +107212,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C6"
@@ -106662,7 +107249,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C6"
@@ -106699,7 +107286,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C6"
@@ -106736,7 +107323,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C6"
@@ -106773,7 +107360,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C6"
@@ -106810,7 +107397,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C6"
@@ -106847,7 +107434,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C6"
@@ -106884,7 +107471,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C6"
@@ -106921,7 +107508,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C6"
@@ -106958,7 +107545,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C6"
@@ -106995,7 +107582,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C6"
@@ -107032,7 +107619,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C6"
@@ -107069,7 +107656,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C6"
@@ -107106,7 +107693,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C6"
@@ -107143,7 +107730,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C6"
@@ -107180,7 +107767,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C6"
@@ -107217,7 +107804,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C6"
@@ -107254,7 +107841,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C6"
@@ -107291,7 +107878,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C6"
@@ -107328,7 +107915,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C6"
@@ -107365,7 +107952,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C6"
@@ -107402,7 +107989,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C6"
@@ -107439,7 +108026,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C6"
@@ -107476,7 +108063,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C6"
@@ -126618,6 +127205,31 @@
     "hdr": "6F1",
     "id": "SUPRA_KICKDOWN",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_KICKDOWN",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Kickdown",
     "path": "Engine",
@@ -126716,6 +127328,55 @@
     "hdr": "6F1",
     "id": "SUPRA_TQ_CNVRT_LOCKUP",
     "make": "Toyota",
+    "model": "GR-Supra",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TQ_CNVRT_LOCKUP",
+    "make": "Toyota",
     "model": "Supra",
     "name": "Torque converter lockup",
     "path": "Transmission",
@@ -126742,6 +127403,31 @@
     "id": "DAIHATSU_BRAKE_SWITCH",
     "make": "Daihatsu",
     "model": "",
+    "name": "Brake switch",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA28"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_BRAKE_SWITCH",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Brake switch",
     "path": "Control",
     "pid": "22",
@@ -126842,6 +127528,31 @@
     "id": "ROLLSROYCE_TIME_S",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Time in S",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "SUPRA_TIME_S",
+    "make": "Toyota",
+    "model": "GR-Supra",
     "name": "Time in S",
     "path": "Engine",
     "pid": "22",
@@ -128349,7 +129060,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD1",
           "group2": "C2"
@@ -128386,7 +129097,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD2",
           "group2": "C2"
@@ -128423,7 +129134,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD3",
           "group2": "C2"
@@ -128460,7 +129171,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD4",
           "group2": "C2"
@@ -128497,7 +129208,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD5",
           "group2": "C2"
@@ -128534,7 +129245,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD6",
           "group2": "C2"
@@ -128571,7 +129282,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD7",
           "group2": "C2"
@@ -128608,7 +129319,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD8",
           "group2": "C2"
@@ -128645,7 +129356,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD9",
           "group2": "C2"
@@ -128682,7 +129393,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD10",
           "group2": "C2"
@@ -128719,7 +129430,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD11",
           "group2": "C2"
@@ -128756,7 +129467,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD12",
           "group2": "C2"
@@ -128793,7 +129504,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD13",
           "group2": "C2"
@@ -128830,7 +129541,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD14",
           "group2": "C2"
@@ -128867,7 +129578,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD15",
           "group2": "C2"
@@ -128904,7 +129615,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD16",
           "group2": "C2"
@@ -128941,7 +129652,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD17",
           "group2": "C2"
@@ -128978,7 +129689,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD18",
           "group2": "C2"
@@ -129015,7 +129726,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD19",
           "group2": "C2"
@@ -129052,7 +129763,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD20",
           "group2": "C2"
@@ -129089,7 +129800,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD21",
           "group2": "C2"
@@ -129126,7 +129837,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD22",
           "group2": "C2"
@@ -129163,7 +129874,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD23",
           "group2": "C2"
@@ -129200,7 +129911,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD24",
           "group2": "C2"
@@ -129237,7 +129948,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD25",
           "group2": "C2"
@@ -129274,7 +129985,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD26",
           "group2": "C2"
@@ -129311,7 +130022,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD27",
           "group2": "C2"
@@ -129348,7 +130059,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD28",
           "group2": "C2"
@@ -129385,7 +130096,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD29",
           "group2": "C2"
@@ -129422,7 +130133,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD30",
           "group2": "C2"
@@ -129459,7 +130170,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD31",
           "group2": "C2"
@@ -129496,7 +130207,7 @@
     "scaling": "raw clamped to [100]",
     "signalGroups": [
       {
-        "id": "TAYCAN_HVBAT_SOC",
+        "id": "TAYCAN_HVBAT_PACK_SOC",
         "matchDetails": {
           "group1": "MOD32",
           "group2": "C2"
