@@ -107949,7 +107949,7 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/2 clamped to [100]",
-    "suggestedMetric": "",
+    "suggestedMetric": "stateOfCharge",
     "unit": "percent"
   },
   {
@@ -111859,7 +111859,7 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
+    "suggestedMetric": "stateOfCharge",
     "unit": "percent"
   },
   {
@@ -111934,7 +111934,7 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
+    "suggestedMetric": "stateOfHealth",
     "unit": "percent"
   },
   {
