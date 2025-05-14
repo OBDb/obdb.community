@@ -3944,6 +3944,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "0805"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E1",
+    "id": "MACAN_BRAKE_LIGHT_ON_VALID",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Brake light reading valid?",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 40,
     "cmd": {
       "22": "BC03"
@@ -4521,6 +4546,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "22": "0805"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E1",
+    "id": "MACAN_BRAKE_PRESSED_VALID",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Brake pressure reading valid?",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 52,
     "cmd": {
       "22": "BC04"
@@ -4971,6 +5021,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "0805"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E1",
+    "id": "MACAN_BRAKE_PRESSED",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Brake",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 62,
     "cmd": {
       "22": "BC03"
@@ -5390,6 +5465,31 @@
     "name": "State of certified energy supported",
     "path": "Battery.Generic",
     "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "0805"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E1",
+    "id": "MACAN_BRAKE_LIGHT_ON",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Brake ligh",
+    "path": "Control",
+    "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "offon"
@@ -6910,6 +7010,31 @@
     "path": "Stats",
     "pid": "22",
     "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 100,
+      "unit": "hours"
+    },
+    "hdr": "7E1",
+    "id": "MACAN_DRIVE_TIME",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Total drive time",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [100]",
     "suggestedMetric": "",
     "unit": "hours"
   },
@@ -46343,6 +46468,102 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TID_1",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 1 sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TID_2",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 2 sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TID_3",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 3 sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TID_4",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 4 sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1E32"
     },
     "debug": false,
@@ -51461,6 +51682,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "0303"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "mul": 0.4,
+      "unit": "percent"
+    },
+    "hdr": "7E1",
+    "id": "MACAN_DRIVE_TIME_ECO",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "[TCM] driving time ecological",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*0.4 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0304"
     },
     "debug": false,
@@ -51690,6 +51936,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E1",
+    "id": "MACAN_DRIVE_TIME_SPORT",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "[TCM] driving time sporty",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0305"
     },
     "debug": false,
@@ -51912,6 +52182,30 @@
     "path": "Stats",
     "pid": "22",
     "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E1",
+    "id": "MACAN_DRIVE_TIME_MANUAL",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "[TCM] driving time manual",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -56462,6 +56756,30 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACAN_CRASH_CNT_FRONT",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Crashes, front",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -56641,6 +56959,30 @@
     "path": "Stats",
     "pid": "22",
     "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACAN_CRASH_CNT_DRVR",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -56846,6 +57188,30 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACAN_CRASH_CNT_PSNGR",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -57038,6 +57404,30 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACAN_CRASH_CNT_REAR",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -57217,6 +57607,30 @@
     "path": "Stats",
     "pid": "22",
     "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACAN_CRASH_CNT_ROLLOVER",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -109389,10 +109803,92 @@
       }
     },
     "hdr": "70B",
+    "id": "MACAN_TPOS_1",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "1": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "2": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "3": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "70B",
     "id": "TT_TID_1",
     "make": "Audi",
     "model": "TT",
     "name": "Tire #1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "1": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "2": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "3": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPOS_2",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
     "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
@@ -109471,10 +109967,92 @@
       }
     },
     "hdr": "70B",
+    "id": "MACAN_TPOS_3",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "1": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "2": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "3": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "70B",
     "id": "TT_TID_3",
     "make": "Audi",
     "model": "TT",
     "name": "Tire #3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "1": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "2": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "3": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPOS_4",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
     "scaling": "Mapped values: {'0': {'description': 'Front left', 'value': 'FL'}, '1': {'description': 'Front right', 'value': 'FR'}, '2': {'description': 'Rear left', 'value': 'RL'}, '3': {'description': 'Rear right', 'value': 'RR'}}",
@@ -117641,6 +118219,33 @@
       "div": 10,
       "len": 8,
       "max": 25.5,
+      "nullmax": 25,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TP_1",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 1 current pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
       "unit": "bars"
     },
     "hdr": "70B",
@@ -117652,6 +118257,33 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [25.5]",
     "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "nullmax": 25,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TP_2",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 2 current pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
   {
@@ -117693,6 +118325,33 @@
       "div": 10,
       "len": 8,
       "max": 25.5,
+      "nullmax": 25,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TP_3",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 3 current pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
       "unit": "bars"
     },
     "hdr": "70B",
@@ -117704,6 +118363,33 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [25.5]",
     "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "nullmax": 25,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TP_4",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 4 current pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
   {
@@ -119772,6 +120458,110 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 56,
+      "len": 8,
+      "max": 100,
+      "unit": "celsius"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TT_1",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 1 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 56,
+      "len": 8,
+      "max": 100,
+      "unit": "celsius"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TT_2",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 2 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 56,
+      "len": 8,
+      "max": 100,
+      "unit": "celsius"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TT_3",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 3 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 56,
+      "len": 8,
+      "max": 100,
+      "unit": "celsius"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TT_4",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 4 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "266C"
     },
     "debug": true,
@@ -121534,6 +122324,110 @@
     "bitLength": 8,
     "bitOffset": 64,
     "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPS_1",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 1 specified pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPS_2",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 2 specified pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPS_3",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 3 specified pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPS_4",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 4 specified pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
       "22": "266C"
     },
     "debug": true,
@@ -123223,6 +124117,110 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPW_1",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 1 warning pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPW_2",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 2 warning pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPW_3",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 3 warning pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 8,
+      "max": 25.5,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACAN_TPW_4",
+    "make": "Porsche",
+    "model": "Macan",
+    "name": "Tire 4 warning pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
