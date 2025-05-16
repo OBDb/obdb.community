@@ -1282,31 +1282,6 @@
   },
   {
     "bitLength": 1,
-    "bitOffset": 150,
-    "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 150,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7D1",
-    "id": "VELOSTER_TC_SWITCH",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "ABS Traction Control Switch (Raw)",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
     "bitOffset": 16,
     "cmd": {
       "01": "01"
@@ -2798,6 +2773,31 @@
     "cmd": {
       "22": "BC03"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DOOR_RL_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door rear left open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC03"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -2844,23 +2844,23 @@
   },
   {
     "bitLength": 1,
-    "bitOffset": 32,
+    "bitOffset": 34,
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 32,
+      "bix": 34,
       "len": 1,
       "max": 1,
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DOOR_RL",
+    "id": "ELANTRA_DOOR_FL",
     "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Rear left door open?",
+    "model": "Elantra",
+    "name": "Front left door open?",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -2882,10 +2882,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "ELANTRA_DOOR_FL",
+    "id": "VELOSTER_DOOR_FL_OPEN",
     "make": "Hyundai",
-    "model": "Elantra",
-    "name": "Front left door open?",
+    "model": "Veloster",
+    "name": "Door front left open",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -2946,26 +2946,26 @@
     "bitLength": 1,
     "bitOffset": 34,
     "cmd": {
-      "22": "BC03"
+      "22": "BC04"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 34,
       "len": 1,
       "max": 1,
-      "unit": "noyes"
+      "unit": "scalar"
     },
     "hdr": "770",
-    "id": "VELOSTER_DOOR_FL",
+    "id": "VELOSTER_LOCK_FR",
     "make": "Hyundai",
     "model": "Veloster",
-    "name": "Front left door open?",
+    "name": "Door lock front right (raw)",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
-    "unit": "noyes"
+    "unit": "scalar"
   },
   {
     "bitLength": 1,
@@ -3019,31 +3019,6 @@
   },
   {
     "bitLength": 1,
-    "bitOffset": 34,
-    "cmd": {
-      "22": "BC04"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 34,
-      "len": 1,
-      "max": 1,
-      "unit": "scalar"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_LOCK_FR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Door Lock Front Right (Raw)",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 1,
     "bitOffset": 35,
     "cmd": {
       "22": "BC03"
@@ -3062,6 +3037,31 @@
     "model": "Elantra",
     "name": "Front right door open?",
     "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_HANDBRAKE",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Handbrake switch",
+    "path": "Control",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3121,31 +3121,6 @@
     "bitLength": 1,
     "bitOffset": 35,
     "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 35,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_HANDBRAKE",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Handbrake engaged?",
-    "path": "Control",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 35,
-    "cmd": {
       "22": "BC04"
     },
     "debug": false,
@@ -3166,6 +3141,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_LOCK_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door lock front left (raw)",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 1,
@@ -3219,31 +3219,6 @@
   },
   {
     "bitLength": 1,
-    "bitOffset": 35,
-    "cmd": {
-      "22": "BC04"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 35,
-      "len": 1,
-      "max": 1,
-      "unit": "scalar"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_LOCK_FL",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Door Lock Front Left (Raw)",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 1,
     "bitOffset": 36,
     "cmd": {
       "22": "BC03"
@@ -3262,6 +3237,31 @@
     "model": "Elantra",
     "name": "Handbrake engaged?",
     "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DOOR_FR_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door front right open",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3321,9 +3321,9 @@
     "bitLength": 1,
     "bitOffset": 36,
     "cmd": {
-      "22": "BC03"
+      "22": "BC04"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 36,
@@ -3332,11 +3332,11 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DOOR_FR",
+    "id": "VELOSTER_REVERSE_GEAR",
     "make": "Hyundai",
     "model": "Veloster",
-    "name": "Front right door open?",
-    "path": "Doors",
+    "name": "Reverse gear selected",
+    "path": "Transmission",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3419,24 +3419,24 @@
   },
   {
     "bitLength": 1,
-    "bitOffset": 36,
+    "bitOffset": 37,
     "cmd": {
-      "22": "BC04"
+      "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 36,
+      "bix": 37,
       "len": 1,
       "max": 1,
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_REVERSE_GEAR",
+    "id": "ELANTRA_DOOR_RR",
     "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Reverse Gear Selected",
-    "path": "Transmission",
+    "model": "Elantra",
+    "name": "Rear right door open?",
+    "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3457,10 +3457,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "ELANTRA_DOOR_RR",
+    "id": "VELOSTER_DOOR_RR_OPEN",
     "make": "Hyundai",
-    "model": "Elantra",
-    "name": "Rear right door open?",
+    "model": "Veloster",
+    "name": "Door rear right open",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3510,31 +3510,6 @@
     "id": "KONA_DOOR_RR",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "Rear right door open?",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 37,
-    "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 37,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_DOOR_RR",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Rear right door open?",
     "path": "Doors",
     "pid": "22",
@@ -3598,6 +3573,31 @@
     "cmd": {
       "22": "BC03"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 39,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DOOR_TRUNK_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door trunk open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 39,
+    "cmd": {
+      "22": "BC03"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -3635,31 +3635,6 @@
     "id": "KONA_TRUNK",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "Trunk open?",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 39,
-    "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 39,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_TRUNK",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Trunk open?",
     "path": "Doors",
     "pid": "22",
@@ -3973,6 +3948,31 @@
     "cmd": {
       "22": "BC03"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_BELT_PASSENGER",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Seatbelt passenger",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "BC03"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -4010,31 +4010,6 @@
     "id": "KONA_BELT_PASSENGER",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "Passenger seatbelt latched?",
-    "path": "Seatbelts",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_BELT_PASSENGER",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Passenger seatbelt latched?",
     "path": "Seatbelts",
     "pid": "22",
@@ -4100,6 +4075,31 @@
     "cmd": {
       "22": "BC03"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 41,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_BELT_DRIVER",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Seatbelt driver",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 41,
+    "cmd": {
+      "22": "BC03"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -4137,31 +4137,6 @@
     "id": "KONA_BELT_DRIVER",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "Driver seatbelt latched?",
-    "path": "Seatbelts",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 41,
-    "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 41,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_BELT_DRIVER",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Driver seatbelt latched?",
     "path": "Seatbelts",
     "pid": "22",
@@ -5922,13 +5897,9 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "RAV4_GEAR_LOCKUP",
+    "id": "COROLLA_GEAR_LOCKUP",
     "make": "Toyota",
-    "model": "RAV4",
-    "modelYears": [
-      0,
-      2018
-    ],
+    "model": "Corolla",
     "name": "Gear lock-up",
     "path": "Transmission",
     "pid": "21",
@@ -5942,7 +5913,7 @@
     "cmd": {
       "21": "85"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 8,
@@ -5951,9 +5922,13 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "COROLLA_GEAR_LOCKUP",
+    "id": "RAV4_GEAR_LOCKUP",
     "make": "Toyota",
-    "model": "Corolla",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
     "name": "Gear lock-up",
     "path": "Transmission",
     "pid": "21",
@@ -6788,13 +6763,9 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "RAV4_ATF_PAN_T",
+    "id": "COROLLA_ATF_PAN_T",
     "make": "Toyota",
-    "model": "RAV4",
-    "modelYears": [
-      0,
-      2018
-    ],
+    "model": "Corolla",
     "name": "Transmission temperature (pan)",
     "path": "Transmission",
     "pid": "21",
@@ -6808,7 +6779,7 @@
     "cmd": {
       "21": "82"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -6819,9 +6790,13 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "COROLLA_ATF_PAN_T",
+    "id": "RAV4_ATF_PAN_T",
     "make": "Toyota",
-    "model": "Corolla",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
     "name": "Transmission temperature (pan)",
     "path": "Transmission",
     "pid": "21",
@@ -9595,6 +9570,58 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "10CD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "COROLLA_LFPS",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Low fuel pressure sensor",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 +-3276.8 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10CD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_LFPS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Low fuel pressure sensor",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 +-3276.8 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10E5"
     },
     "debug": true,
@@ -9966,6 +9993,30 @@
     "scaling": "raw/256 clamped to [-128, 128]",
     "suggestedMetric": "",
     "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "SILVERADO1500_RUNTM",
+    "make": "Chevrolet",
+    "model": "Silverado-1500",
+    "name": "Time since engine start",
+    "path": "Clocks",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "seconds"
   },
   {
     "bitLength": 16,
@@ -11019,6 +11070,33 @@
       "unit": "fahrenheit"
     },
     "hdr": "701",
+    "id": "COROLLA_TF1_PAN",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Transmission fluid pan temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1627"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
     "id": "TACOMA_TF1_PAN",
     "make": "Toyota",
     "model": "Tacoma",
@@ -11046,10 +11124,10 @@
       "unit": "fahrenheit"
     },
     "hdr": "701",
-    "id": "COROLLA_TF1_PAN",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Transmission Fluid Pan Temperature",
+    "id": "DAIHATSU_TF1_PAN",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Transmission fluid pan temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
@@ -11073,7 +11151,7 @@
       "unit": "fahrenheit"
     },
     "hdr": "701",
-    "id": "DAIHATSU_TF1_PAN",
+    "id": "DAIHATSU_TF1_PAN_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Transmission Fluid Pan Temperature",
@@ -11130,33 +11208,6 @@
     "id": "TACOMA_TF2_CONV",
     "make": "Toyota",
     "model": "Tacoma",
-    "name": "Transmission Fluid Post-Converter Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1628"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 16,
-      "max": 350,
-      "min": -40,
-      "mul": 0.00703125,
-      "unit": "fahrenheit"
-    },
-    "hdr": "701",
-    "id": "COROLLA_TF2_CONV",
-    "make": "Toyota",
-    "model": "Corolla",
     "name": "Transmission Fluid Post-Converter Temperature",
     "path": "Engine",
     "pid": "22",
@@ -26217,31 +26268,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "DD68"
-    },
-    "debug": true,
-    "eax": "07",
-    "fmt": {
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "volts"
-    },
-    "hdr": "6F1",
-    "id": "ROLLSROYCE_HVBAT_VOLT",
-    "make": "Rolls",
-    "model": "Royce",
-    "name": "HV battery voltage",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "DDBC"
     },
     "debug": false,
@@ -28879,33 +28905,6 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
-      "01": "34"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 16,
-      "div": 32768,
-      "len": 16,
-      "max": 2,
-      "mul": 2,
-      "unit": "scalar"
-    },
-    "hdr": "7DF",
-    "id": "VELOSTER_SAE_LAMBDA_B1S1",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "SAE Lambda B1S1 (Actual)",
-    "path": "Engine",
-    "pid": "01",
-    "scaling": "raw*2 /32768 clamped to [2]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
       "01": "9A"
     },
     "debug": false,
@@ -28998,13 +28997,9 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "RAV4_ATF_TQC_T",
+    "id": "COROLLA_ATF_TQC_T",
     "make": "Toyota",
-    "model": "RAV4",
-    "modelYears": [
-      0,
-      2018
-    ],
+    "model": "Corolla",
     "name": "Transmission temperature (torque converter)",
     "path": "Transmission",
     "pid": "21",
@@ -29018,7 +29013,7 @@
     "cmd": {
       "21": "82"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -29030,9 +29025,13 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "COROLLA_ATF_TQC_T",
+    "id": "RAV4_ATF_TQC_T",
     "make": "Toyota",
-    "model": "Corolla",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
     "name": "Transmission temperature (torque converter)",
     "path": "Transmission",
     "pid": "21",
@@ -32541,33 +32540,6 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_INJ_DUR_1",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Injection Duration Cyl 1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 192,
     "cmd": {
       "22": "2663"
@@ -32752,33 +32724,6 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 192,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 192,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_INJ_DUR_2",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Injection Duration Cyl 2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 200,
     "cmd": {
       "22": "0104"
@@ -32826,34 +32771,6 @@
     "id": "FORTE_STEER_ANGLE",
     "make": "Kia",
     "model": "Forte",
-    "name": "Steering Wheel Angle",
-    "path": "Control",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 200,
-    "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 200,
-      "div": 10,
-      "len": 16,
-      "max": 3276.7,
-      "min": -3276.8,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7D1",
-    "id": "VELOSTER_STEER_ANGLE",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Steering Wheel Angle",
     "path": "Control",
     "pid": "22",
@@ -33209,33 +33126,6 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 208,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_INJ_DUR_3",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Injection Duration Cyl 3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 224,
     "cmd": {
       "22": "0105"
@@ -33576,33 +33466,6 @@
     "id": "FORTE_INJ_DUR_4",
     "make": "Kia",
     "model": "Forte",
-    "name": "Injection Duration Cyl 4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_INJ_DUR_4",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Injection Duration Cyl 4",
     "path": "Engine",
     "pid": "22",
@@ -34969,12 +34832,12 @@
     "debug": true,
     "eax": "",
     "fmt": {
-      "add": -32768,
+      "add": -3276.8,
       "bix": 24,
       "div": 10,
       "len": 16,
-      "max": 1000,
-      "min": -1000,
+      "max": 3276.7,
+      "min": -3276,
       "unit": "degrees"
     },
     "hdr": "7B0",
@@ -34984,7 +34847,35 @@
     "name": "Steering wheel angle",
     "path": "Control",
     "pid": "21",
-    "scaling": "raw/10 +-32768 clamped to [-1000, 1000]",
+    "scaling": "raw/10 +-3276.8 clamped to [-3276, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "bix": 24,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "DAIHATSU_STEER_ANGLE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 +-3276.8 clamped to [-3276, 3276.7]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -35006,7 +34897,7 @@
       "unit": "degrees"
     },
     "hdr": "7B0",
-    "id": "DAIHATSU_STEER_ANGLE",
+    "id": "DAIHATSU_STEER_ANGLE_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Steering wheel angle",
@@ -35250,33 +35141,6 @@
     "id": "FORTE_BRAKE_P",
     "make": "Kia",
     "model": "Forte",
-    "name": "Brake Pressure",
-    "path": "Control",
-    "pid": "22",
-    "scaling": "raw/86.7 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 256,
-    "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 256,
-      "div": 86.7,
-      "len": 16,
-      "max": 100,
-      "sign": true,
-      "unit": "percent"
-    },
-    "hdr": "7D1",
-    "id": "VELOSTER_BRAKE_P",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Brake Pressure",
     "path": "Control",
     "pid": "22",
@@ -38641,6 +38505,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 392,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 392,
+      "div": 65535,
+      "len": 16,
+      "max": 10,
+      "mul": 10,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_WG_VOLTAGE",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Waste gate voltage",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /65535 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 40,
     "cmd": {
       "01": "70"
@@ -38664,6 +38555,32 @@
     "scaling": "raw/32 clamped to [2047.96875]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_PREV_TRIP_DST",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Previous trip distance",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
   },
   {
     "bitLength": 16,
@@ -38711,9 +38628,9 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
-    "id": "COROLLA_PREV_TRIP_DST",
-    "make": "Toyota",
-    "model": "Corolla",
+    "id": "DAIHATSU_PREV_TRIP_DST",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Previous trip distance",
     "path": "Trips",
     "pid": "21",
@@ -38725,27 +38642,27 @@
     "bitLength": 16,
     "bitOffset": 40,
     "cmd": {
-      "21": "51"
+      "22": "0101"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 40,
       "div": 100,
       "len": 16,
       "max": 655.35,
-      "unit": "kilometers"
+      "unit": "kilowatts"
     },
-    "hdr": "7E0",
-    "id": "DAIHATSU_PREV_TRIP_DST",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Previous trip distance",
-    "path": "Trips",
-    "pid": "21",
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_CHG_PWR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Available charge power",
+    "path": "Battery",
+    "pid": "22",
     "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
-    "unit": "kilometers"
+    "unit": "kilowatts"
   },
   {
     "bitLength": 16,
@@ -38827,32 +38744,6 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "kilowatts"
-    },
-    "hdr": "7D4",
-    "id": "VELOSTER_BMS_CHG_PWR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "BMS Available Charge Power",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 408,
     "cmd": {
       "22": "0101"
@@ -38905,6 +38796,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 408,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 408,
+      "div": 65535,
+      "len": 16,
+      "max": 200,
+      "mul": 200,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_WG_DUTY",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Waste gate duty",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*200 /65535 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 424,
     "cmd": {
       "22": "0101"
@@ -38954,6 +38872,60 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 424,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 424,
+      "div": 65535,
+      "len": 16,
+      "max": 400,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_WG_POSITION",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Waste gate position",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [400]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 440,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 440,
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_WG_SETPOINT",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Waste gate setpoint",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -39698,6 +39670,32 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_DISCHG_PWR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Available discharge power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -39774,32 +39772,6 @@
     "bitLength": 16,
     "bitOffset": 56,
     "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "kilowatts"
-    },
-    "hdr": "7D4",
-    "id": "VELOSTER_BMS_DISCHG_PWR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "BMS Available Discharge Power",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 56,
-    "cmd": {
       "22": "2301"
     },
     "debug": true,
@@ -39820,6 +39792,34 @@
     "scaling": "raw clamped to [10000]",
     "suggestedMetric": "",
     "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -12,
+      "bix": 56,
+      "div": 831.55690902,
+      "len": 16,
+      "max": 66.81,
+      "min": -10,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_TURBO_BOOST",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Turbo boost pressure (gauge)",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/831.55690902 +-12 clamped to [-10, 66.81]",
+    "suggestedMetric": "",
+    "unit": "psi"
   },
   {
     "bitLength": 16,
@@ -43897,6 +43897,30 @@
     "eax": "",
     "fmt": {
       "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_ODO",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "28"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
       "max": 4294967295,
       "unit": "kilometers"
     },
@@ -43925,17 +43949,17 @@
     "eax": "",
     "fmt": {
       "len": 24,
-      "max": 4294967295,
+      "max": 16777215,
       "unit": "kilometers"
     },
     "hdr": "7E0",
-    "id": "COROLLA_ODO",
-    "make": "Toyota",
-    "model": "Corolla",
+    "id": "DAIHATSU_ODO",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Odometer",
     "path": "Trips",
     "pid": "21",
-    "scaling": "raw clamped to [4294967295]",
+    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -43953,7 +43977,7 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
-    "id": "DAIHATSU_ODO",
+    "id": "DAIHATSU_ODO_V3",
     "make": "Daihatsu",
     "model": "",
     "name": "Odometer",
@@ -45356,6 +45380,31 @@
     "fmt": {
       "bix": 48,
       "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7C6",
+    "id": "VELOSTER_ODO_KM",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Odometer variation 1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
       "max": 4294967295,
       "unit": "kilometers"
     },
@@ -45518,31 +45567,6 @@
     "id": "TUCSON_ODO_KM",
     "make": "Hyundai",
     "model": "Tucson",
-    "name": "Odometer (Metric)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7C6",
-    "id": "VELOSTER_ODO_KM",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Odometer (Metric)",
     "path": "Trips",
     "pid": "22",
@@ -45737,6 +45761,31 @@
     "fmt": {
       "bix": 72,
       "len": 24,
+      "max": 16777215,
+      "unit": "miles"
+    },
+    "hdr": "7C6",
+    "id": "VELOSTER_ODO_MI",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Odometer variation 2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
       "max": 4294967295,
       "unit": "miles"
     },
@@ -45886,31 +45935,6 @@
     "cmd": {
       "22": "B002"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "miles"
-    },
-    "hdr": "7C6",
-    "id": "VELOSTER_ODO_MI",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Odometer (Imperial)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "miles"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "B002"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -46047,7 +46071,7 @@
       "unit": "kilometers"
     },
     "hdr": "701",
-    "id": "DAIHATSU_ODO_V4",
+    "id": "DAIHATSU_ODO_V5",
     "make": "Daihatsu",
     "model": "",
     "name": "Odometer",
@@ -46072,7 +46096,7 @@
       "unit": "kilometers"
     },
     "hdr": "747",
-    "id": "DAIHATSU_ODO_V3",
+    "id": "DAIHATSU_ODO_V4",
     "make": "Daihatsu",
     "model": "",
     "name": "Odometer",
@@ -50486,6 +50510,32 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "COROLLA_TIRE_FR_SPD",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "IS300_TIRE_FR_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -50568,32 +50618,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "COROLLA_TIRE_FR_SPD",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
     "id": "DAIHATSU_TIRE_FR_SPD",
     "make": "Daihatsu",
     "model": "",
@@ -50620,7 +50644,7 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "DAIHATSU_TS_FR",
+    "id": "DAIHATSU_TIRE_FR_SPD_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Front right wheel speed",
@@ -50750,32 +50774,6 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "COROLLA_TT_FL",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
     "id": "DAIHATSU_TT_FL",
     "make": "Daihatsu",
     "model": "",
@@ -50851,6 +50849,31 @@
       "unit": "liters"
     },
     "hdr": "7C0",
+    "id": "COROLLA_FLI_VOL",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "29"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
     "id": "RAV4_FLI_VOL",
     "make": "Toyota",
     "model": "RAV4",
@@ -50880,9 +50903,9 @@
       "unit": "liters"
     },
     "hdr": "7C0",
-    "id": "COROLLA_FLI_VOL",
-    "make": "Toyota",
-    "model": "Corolla",
+    "id": "DAIHATSU_FLI_VOL",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "21",
@@ -50905,7 +50928,7 @@
       "unit": "liters"
     },
     "hdr": "7C0",
-    "id": "DAIHATSU_FLI_VOL",
+    "id": "DAIHATSU_FLI_VOL_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Fuel level (volume)",
@@ -51069,9 +51092,9 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "COROLLA_TP_FL",
-    "make": "Toyota",
-    "model": "Corolla",
+    "id": "DAIHATSU_TP_FL",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -51083,27 +51106,55 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "21": "30"
+      "21": "47"
     },
     "debug": true,
-    "eax": "2A",
+    "eax": "",
     "fmt": {
-      "add": -0.5,
-      "div": 58,
+      "div": 50,
       "len": 8,
-      "max": 4,
-      "unit": "bars"
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
     },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_FL",
+    "hdr": "7B0",
+    "id": "COROLLA_LAT_G",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Lateral g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
+    "id": "DAIHATSU_LAT_G",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
+    "name": "Lateral g",
+    "path": "Orientation",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
   },
   {
     "bitLength": 8,
@@ -51183,13 +51234,9 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
-    "id": "RAV4_GEAR",
+    "id": "COROLLA_GEAR",
     "make": "Toyota",
-    "model": "RAV4",
-    "modelYears": [
-      0,
-      2018
-    ],
+    "model": "Corolla",
     "name": "Gear",
     "path": "Transmission",
     "pid": "21",
@@ -51203,7 +51250,7 @@
     "cmd": {
       "21": "85"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -51211,9 +51258,13 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
-    "id": "COROLLA_GEAR",
+    "id": "RAV4_GEAR",
     "make": "Toyota",
-    "model": "Corolla",
+    "model": "RAV4",
+    "modelYears": [
+      0,
+      2018
+    ],
     "name": "Gear",
     "path": "Transmission",
     "pid": "21",
@@ -51244,6 +51295,31 @@
     "scaling": "raw clamped to [20]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "000D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "nullmax": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
+    "id": "SILVERADO1500_VSS",
+    "make": "Chevrolet",
+    "model": "Silverado-1500",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -55637,13 +55713,9 @@
       "unit": "percent"
     },
     "hdr": "700",
-    "id": "RAV4_FLI",
+    "id": "COROLLA_FLI",
     "make": "Toyota",
-    "model": "RAV4",
-    "modelYears": [
-      2021,
-      2021
-    ],
+    "model": "Corolla",
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
@@ -55657,7 +55729,7 @@
     "cmd": {
       "22": "1F2F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -55667,9 +55739,13 @@
       "unit": "percent"
     },
     "hdr": "700",
-    "id": "COROLLA_FLI",
+    "id": "RAV4_FLI",
     "make": "Toyota",
-    "model": "Corolla",
+    "model": "RAV4",
+    "modelYears": [
+      2021,
+      2021
+    ],
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
@@ -55876,32 +55952,6 @@
       "unit": "percent"
     },
     "hdr": "7D2",
-    "id": "DAIHATSU_HVBAT_SOC",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "HV battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1F5B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 100,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D2",
     "id": "DAIHATSU_SOC",
     "make": "Daihatsu",
     "model": "",
@@ -56077,46 +56127,6 @@
     "id": "VENZAHYBRID_TID_1",
     "make": "Toyota",
     "model": "Venza-Hybrid",
-    "name": "Tire 1 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "COROLLA_TID_1",
-    "make": "Toyota",
-    "model": "Corolla",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -58638,6 +58648,102 @@
     "scaling": "raw/10 clamped to [25.5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4051"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "760",
+    "id": "SILVERADO1500_VSS_FL",
+    "make": "Chevrolet",
+    "model": "Silverado-1500",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4052"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "760",
+    "id": "SILVERADO1500_VSS_FR",
+    "make": "Chevrolet",
+    "model": "Silverado-1500",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4053"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "760",
+    "id": "SILVERADO1500_VSS_RL",
+    "make": "Chevrolet",
+    "model": "Silverado-1500",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4054"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "760",
+    "id": "SILVERADO1500_VSS_RR",
+    "make": "Chevrolet",
+    "model": "Silverado-1500",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -62419,31 +62525,6 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "VELOSTER_TIRE_RR_VSS",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "ABS Speed Rear Right",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -62962,6 +63043,34 @@
     "cmd": {
       "22": "E00A"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_RETARD_2",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock retard cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "E00A"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -63005,34 +63114,6 @@
     "id": "FORTE_KNOCK_RETARD_2",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock Retard Cyl 2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_KNOCK_RETARD_2",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Knock Retard Cyl 2",
     "path": "Engine",
     "pid": "22",
@@ -64109,31 +64190,6 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "VELOSTER_TIRE_RL_VSS",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "ABS Speed Rear Left",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -64838,32 +64894,6 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TP_RR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "TPMS Pressure Rear Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "C00B"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -64914,6 +64944,32 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_RR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire pressure rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
       "22": "C101"
     },
     "debug": false,
@@ -64935,6 +64991,34 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_RETARD_3",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock retard cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -64985,34 +65069,6 @@
     "id": "FORTE_KNOCK_RETARD_3",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock Retard Cyl 3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_KNOCK_RETARD_3",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Knock Retard Cyl 3",
     "path": "Engine",
     "pid": "22",
@@ -65238,6 +65294,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MIN_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Battery min temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -65334,33 +65417,6 @@
     "id": "KONA_BMS_MIN_TEMP",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "BMS Battery Min Temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "VELOSTER_BMS_MIN_TEMP",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "BMS Battery Min Temp",
     "path": "Battery",
     "pid": "22",
@@ -66584,20 +66640,21 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 120,
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "VELOSTER_TT_RR",
+    "id": "VELOSTER_TPMS_TEMP_RR",
     "make": "Hyundai",
     "model": "Veloster",
-    "name": "TPMS Temperature Rear Right",
+    "name": "Tire temperature rear right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [-50, 100]",
@@ -66770,6 +66827,34 @@
     "cmd": {
       "22": "E00A"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_RETARD_4",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock retard cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "E00A"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -66813,34 +66898,6 @@
     "id": "FORTE_KNOCK_RETARD_4",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock Retard Cyl 4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_KNOCK_RETARD_4",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Knock Retard Cyl 4",
     "path": "Engine",
     "pid": "22",
@@ -67066,6 +67123,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MOD1_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Battery mod 1 temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -67162,33 +67246,6 @@
     "id": "KONA_BMS_MOD1_TEMP",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "BMS Battery Mod 1 Temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "VELOSTER_BMS_MOD1_TEMP",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "BMS Battery Mod 1 Temp",
     "path": "Battery",
     "pid": "22",
@@ -68821,6 +68878,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MOD2_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Battery mod 2 temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -68917,33 +69001,6 @@
     "id": "KONA_BMS_MOD2_TEMP",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "BMS Battery Mod 2 Temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "VELOSTER_BMS_MOD2_TEMP",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "BMS Battery Mod 2 Temp",
     "path": "Battery",
     "pid": "22",
@@ -71492,31 +71549,6 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TW_RR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "TPMS Alert Rear Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "C00B"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -71610,6 +71642,31 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "TPMS Alert Rear Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_RR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire alert rear right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -71834,6 +71891,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MOD3_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Battery mod 3 temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -71930,33 +72014,6 @@
     "id": "KONA_BMS_MOD3_TEMP",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "BMS Battery Mod 3 Temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 144,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 144,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "VELOSTER_BMS_MOD3_TEMP",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "BMS Battery Mod 3 Temp",
     "path": "Battery",
     "pid": "22",
@@ -73378,6 +73435,33 @@
     "cmd": {
       "22": "0101"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_MOD4_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Battery mod 4 temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0101"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -73474,33 +73558,6 @@
     "id": "KONA_BMS_MOD4_TEMP",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "BMS Battery Mod 4 Temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "VELOSTER_BMS_MOD4_TEMP",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "BMS Battery Mod 4 Temp",
     "path": "Battery",
     "pid": "22",
@@ -74856,32 +74913,6 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TP_RL",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "TPMS Pressure Rear Left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "C00B"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -74922,6 +74953,32 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "TPMS Pressure Rear Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_RL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire pressure rear left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -75264,6 +75321,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "COROLLA_TIRE_RR_SPD",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "IS300_TIRE_RR_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -75349,33 +75433,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "COROLLA_TIRE_RR_SPD",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 16,
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
     "id": "DAIHATSU_TIRE_RR_SPD",
     "make": "Daihatsu",
     "model": "",
@@ -75403,7 +75460,7 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "DAIHATSU_TS_RR",
+    "id": "DAIHATSU_TIRE_RR_SPD_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Rear right wheel speed",
@@ -75514,33 +75571,6 @@
     "id": "CAMRY_TT_RL",
     "make": "Toyota",
     "model": "Camry",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "COROLLA_TT_RL",
-    "make": "Toyota",
-    "model": "Corolla",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -75735,9 +75765,9 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "COROLLA_TP_RL",
-    "make": "Toyota",
-    "model": "Corolla",
+    "id": "DAIHATSU_TP_RL",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -75749,28 +75779,55 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "21": "30"
+      "21": "47"
     },
     "debug": true,
-    "eax": "2A",
+    "eax": "",
     "fmt": {
-      "add": -0.5,
+      "add": -128,
       "bix": 16,
-      "div": 58,
       "len": 8,
-      "max": 4,
-      "unit": "bars"
+      "max": 127,
+      "min": -128,
+      "unit": "degrees"
     },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_RL",
+    "hdr": "7B0",
+    "id": "COROLLA_YAW_RATE",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Yaw rate value (degrees/se",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 16,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "DAIHATSU_YAW_RATE",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
+    "name": "Yaw rate value (degrees/se",
+    "path": "Orientation",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -76333,47 +76390,6 @@
       }
     },
     "hdr": "750",
-    "id": "COROLLA_TID_3",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Tire 3 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "bix": 16,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
     "id": "DAIHATSU_TID_3",
     "make": "Daihatsu",
     "model": "",
@@ -76506,6 +76522,34 @@
     "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "21A0"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 5,
+      "len": 8,
+      "max": 255,
+      "mul": 9,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_ATF_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Transmission fluid temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*9 /5 +-40 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
   },
   {
     "bitLength": 8,
@@ -78492,20 +78536,21 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 160,
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "VELOSTER_TT_RL",
+    "id": "VELOSTER_TPMS_TEMP_RL",
     "make": "Hyundai",
     "model": "Veloster",
-    "name": "TPMS Temperature Rear Left",
+    "name": "Tire temperature rear left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [-50, 100]",
@@ -78570,6 +78615,34 @@
     "cmd": {
       "22": "E00A"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_LEARN_1",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock learn cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "E00A"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -78613,34 +78686,6 @@
     "id": "FORTE_KNOCK_LEARN_1",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock Learn Cyl 1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 160,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 160,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_KNOCK_LEARN_1",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Knock Learn Cyl 1",
     "path": "Engine",
     "pid": "22",
@@ -80006,6 +80051,34 @@
     "cmd": {
       "22": "E00A"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_LEARN_2",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock learn cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
+      "22": "E00A"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -80049,34 +80122,6 @@
     "id": "FORTE_KNOCK_LEARN_2",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock Learn Cyl 2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 168,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 168,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_KNOCK_LEARN_2",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Knock Learn Cyl 2",
     "path": "Engine",
     "pid": "22",
@@ -81510,31 +81555,6 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TW_RL",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "TPMS Alert Rear Left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "C00B"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -81578,6 +81598,59 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_RL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire alert rear left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_LEARN_3",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock learn cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -81628,34 +81701,6 @@
     "id": "FORTE_KNOCK_LEARN_3",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock Learn Cyl 3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_KNOCK_LEARN_3",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Knock Learn Cyl 3",
     "path": "Engine",
     "pid": "22",
@@ -83340,6 +83385,34 @@
     "cmd": {
       "22": "E00A"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_LEARN_4",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock learn cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "E00A"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -83383,34 +83456,6 @@
     "id": "FORTE_KNOCK_LEARN_4",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock Learn Cyl 4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 184,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 184,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_KNOCK_LEARN_4",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Knock Learn Cyl 4",
     "path": "Engine",
     "pid": "22",
@@ -92241,31 +92286,6 @@
     "bitLength": 8,
     "bitOffset": 232,
     "cmd": {
-      "22": "0100"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 232,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B3",
-    "id": "VELOSTER_VSS",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 232,
-    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -93695,6 +93715,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "COROLLA_TIRE_RL_SPD",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "IS300_TIRE_RL_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -93780,33 +93827,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "COROLLA_TIRE_RL_SPD",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 24,
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
     "id": "DAIHATSU_TIRE_RL_SPD",
     "make": "Daihatsu",
     "model": "",
@@ -93834,7 +93854,7 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "DAIHATSU_TS_RL",
+    "id": "DAIHATSU_TIRE_RL_SPD_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Rear left wheel speed",
@@ -93945,33 +93965,6 @@
     "id": "CAMRY_TT_RR",
     "make": "Toyota",
     "model": "Camry",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 24,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "COROLLA_TT_RR",
-    "make": "Toyota",
-    "model": "Corolla",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -94148,33 +94141,6 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "unknown"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 24,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "COROLLA_TP_RR",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -96025,47 +95991,6 @@
     "id": "VENZAHYBRID_TID_4",
     "make": "Toyota",
     "model": "Venza-Hybrid",
-    "name": "Tire 4 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "bix": 24,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "COROLLA_TID_4",
-    "make": "Toyota",
-    "model": "Corolla",
     "name": "Tire 4 position",
     "path": "Tires",
     "pid": "22",
@@ -103325,6 +103250,33 @@
     "cmd": {
       "22": "E001"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 264,
+      "div": 1.3333,
+      "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_INTAKE_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Intake air temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "E001"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -103366,33 +103318,6 @@
     "id": "FORTE_INTAKE_TEMP",
     "make": "Kia",
     "model": "Forte",
-    "name": "Intake Air Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1.3333 +-48 clamped to [207]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 264,
-    "cmd": {
-      "22": "E001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -48,
-      "bix": 264,
-      "div": 1.3333,
-      "len": 8,
-      "max": 207,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_INTAKE_TEMP",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Intake Air Temperature",
     "path": "Engine",
     "pid": "22",
@@ -104812,6 +104737,33 @@
     "cmd": {
       "22": "E001"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "div": 1.3333,
+      "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_OIL_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "E001"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -104853,33 +104805,6 @@
     "id": "FORTE_OIL_TEMP",
     "make": "Kia",
     "model": "Forte",
-    "name": "Engine Oil Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1.3333 +-48 clamped to [207]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 272,
-    "cmd": {
-      "22": "E001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -48,
-      "bix": 272,
-      "div": 1.3333,
-      "len": 8,
-      "max": 207,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_OIL_TEMP",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Engine Oil Temperature",
     "path": "Engine",
     "pid": "22",
@@ -107918,33 +107843,6 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "COROLLA_TT_SPARE",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Spare tire temperature",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "21": "16"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 32,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
     "id": "DAIHATSU_TT_SPARE",
     "make": "Daihatsu",
     "model": "",
@@ -108115,9 +108013,9 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "COROLLA_TP_SPARE",
-    "make": "Toyota",
-    "model": "Corolla",
+    "id": "DAIHATSU_TP_SPARE",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -108129,28 +108027,27 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
-      "21": "30"
+      "22": "0101"
     },
-    "debug": true,
-    "eax": "2A",
+    "debug": false,
+    "eax": "",
     "fmt": {
-      "add": -0.5,
       "bix": 32,
-      "div": 58,
+      "div": 2,
       "len": 8,
-      "max": 4,
-      "unit": "bars"
+      "max": 100,
+      "unit": "percent"
     },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_SPARE",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Spare tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "hdr": "7D4",
+    "id": "VELOSTER_BMS_SOC",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "",
-    "unit": "bars"
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -108411,32 +108308,6 @@
     "id": "KONA_BMS_SOC",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "BMS State Of Charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 2,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D4",
-    "id": "VELOSTER_BMS_SOC",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "BMS State Of Charge",
     "path": "Battery",
     "pid": "22",
@@ -110544,7 +110415,7 @@
     "id": "VELOSTER_FLI_VOL",
     "make": "Hyundai",
     "model": "Veloster",
-    "name": "Fuel level (volume)",
+    "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -111483,6 +111354,31 @@
     "cmd": {
       "22": "BC05"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_HAZARD_SW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Hazard switch (raw)",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC05"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -111520,31 +111416,6 @@
     "id": "KONA_HAZARD_SW",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "Hazard Switch (Raw)",
-    "path": "Lights",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "BC05"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_HAZARD_SW",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Hazard Switch (Raw)",
     "path": "Lights",
     "pid": "22",
@@ -111645,33 +111516,6 @@
       "bix": 32,
       "len": 8,
       "max": 1,
-      "nullmax": 1,
-      "nullmin": 0,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_TURN_L",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Left turn signal on? (Raw >1)",
-    "path": "Lights",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "BC08"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "len": 8,
-      "max": 1,
       "nullmax": 3,
       "nullmin": 0,
       "unit": "noyes"
@@ -111680,33 +111524,6 @@
     "id": "FORTE_TURN_R",
     "make": "Kia",
     "model": "Forte",
-    "name": "Right turn signal on? (Raw >3)",
-    "path": "Lights",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "BC08"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "len": 8,
-      "max": 1,
-      "nullmax": 3,
-      "nullmin": 0,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_TURN_R",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Right turn signal on? (Raw >3)",
     "path": "Lights",
     "pid": "22",
@@ -112039,32 +111856,6 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TP_FL",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "TPMS Pressure Front Left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "C00B"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -112184,6 +111975,32 @@
     "make": "Kia",
     "model": "Soul",
     "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire pressure front left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -112446,7 +112263,7 @@
     "cmd": {
       "22": "E004"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 320,
@@ -112455,10 +112272,10 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "FORTE_AUX_SOC",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Aux Battery SOC",
+    "id": "VELOSTER_AUX_SOC",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Aux battery SOC",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
@@ -112480,9 +112297,9 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_AUX_SOC",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_AUX_SOC",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Aux Battery SOC",
     "path": "Battery",
     "pid": "22",
@@ -112521,7 +112338,7 @@
     "cmd": {
       "22": "E004"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 328,
@@ -112530,10 +112347,10 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "FORTE_AUX_SOH",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Aux Battery SOH",
+    "id": "VELOSTER_AUX_SOH",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Aux battery SOH",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
@@ -112555,9 +112372,9 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_AUX_SOH",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_AUX_SOH",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Aux Battery SOH",
     "path": "Battery",
     "pid": "22",
@@ -115241,7 +115058,7 @@
     "id": "VELOSTER_CLUSTER_VOLTAGE",
     "make": "Hyundai",
     "model": "Veloster",
-    "name": "Cluster Voltage",
+    "name": "Cluster voltage",
     "path": "Electrical",
     "pid": "22",
     "scaling": "raw/12.8 clamped to [18]",
@@ -116182,7 +115999,7 @@
     "cmd": {
       "22": "BC07"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 40,
@@ -116191,10 +116008,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_DEFOG_LIGHT",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Defog Light On",
+    "id": "VELOSTER_DEFOG_LIGHT",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Defog light on",
     "path": "Climate",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -116216,9 +116033,9 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DEFOG_LIGHT",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_DEFOG_LIGHT",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Defog Light On",
     "path": "Climate",
     "pid": "22",
@@ -116315,32 +116132,6 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "len": 8,
-      "max": 100,
-      "min": -50,
-      "unit": "celsius"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TT_FL",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "TPMS Temperature Front Left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [-50, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "C00B"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -116387,6 +116178,33 @@
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_TEMP_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire temperature front left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -117778,31 +117596,6 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "VELOSTER_VSS_AVG",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "ABS Speed (Avg)",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -118530,6 +118323,33 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 48,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "HYUNDAI_TIRE_FL_VSS_V2",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "BC05"
     },
     "debug": false,
@@ -118546,6 +118366,33 @@
     "id": "ELANTRA_HL_SW",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "Headlight switch (raw >2)",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "BC05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 1,
+      "nullmax": 2,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_HL_SW",
+    "make": "Hyundai",
+    "model": "Veloster",
     "name": "Headlight switch (raw >2)",
     "path": "Lights",
     "pid": "22",
@@ -118611,33 +118458,6 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
-      "22": "BC05"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 8,
-      "max": 1,
-      "nullmax": 2,
-      "nullmin": 0,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_HL_SW",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Headlight Switch (Raw >2)",
-    "path": "Lights",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
       "22": "BC09"
     },
     "debug": false,
@@ -118666,7 +118486,7 @@
     "cmd": {
       "22": "BC09"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -118676,10 +118496,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_HL_HIGH",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Headlight High Beam On",
+    "id": "VELOSTER_HL_HIGH",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Headlight high beam on",
     "path": "Lights",
     "pid": "22",
     "scaling": "raw/12 clamped to [1]",
@@ -118702,9 +118522,9 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_HL_HIGH",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_HL_HIGH",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Headlight High Beam On",
     "path": "Lights",
     "pid": "22",
@@ -119020,6 +118840,33 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "add": -40,
+      "bix": 56,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_VVTOT",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Variable valve timing oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "bix": 56,
       "len": 8,
       "max": 215,
@@ -119050,32 +118897,7 @@
     "debug": true,
     "eax": "",
     "fmt": {
-      "bix": 56,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "COROLLA_VVTOT",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Variable valve timing oil temperature",
-    "path": "Engine",
-    "pid": "21",
-    "scaling": "raw clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "21": "51"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
+      "add": -40,
       "bix": 56,
       "len": 8,
       "max": 215,
@@ -119089,7 +118911,7 @@
     "name": "Variable valve timing oil temperature",
     "path": "Engine",
     "pid": "21",
-    "scaling": "raw clamped to [-40, 215]",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -120614,6 +120436,60 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 56,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "HYUNDAI_TIRE_FR_VSS_V2",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "nullmax": 1,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "VELOSTER_DEFOG_SW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Defog switch (raw >1)",
+    "path": "Windshield",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "BC03"
     },
     "debug": true,
@@ -120668,26 +120544,25 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
-      "22": "BC03"
+      "22": "BC09"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 56,
+      "div": 12,
       "len": 8,
       "max": 1,
-      "nullmax": 1,
-      "nullmin": 0,
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DEFOG_SW",
+    "id": "ELANTRA_HL_LOW",
     "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Defogging?",
-    "path": "Climate",
+    "model": "Elantra",
+    "name": "Headlight low beam on",
+    "path": "Lights",
     "pid": "22",
-    "scaling": "raw clamped to [1]",
+    "scaling": "raw/12 clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
   },
@@ -120707,9 +120582,9 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "ELANTRA_HL_LOW",
+    "id": "VELOSTER_HL_LOW",
     "make": "Hyundai",
-    "model": "Elantra",
+    "model": "Veloster",
     "name": "Headlight low beam on",
     "path": "Lights",
     "pid": "22",
@@ -120747,32 +120622,6 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
-      "22": "BC09"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "div": 12,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "VELOSTER_HL_LOW",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Headlight Low Beam On",
-    "path": "Lights",
-    "pid": "22",
-    "scaling": "raw/12 clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -120788,31 +120637,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Tire alert front left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TW_FL",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "TPMS Alert Front Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -120863,6 +120687,31 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "TPMS Alert Front Left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire alert front left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -122480,6 +122329,33 @@
     "bitLength": 8,
     "bitOffset": 64,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 64,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "HYUNDAI_TIRE_RL_VSS_V2",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -122852,6 +122728,33 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "add": -40,
+      "bix": 72,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "COROLLA_EOT",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "bix": 72,
       "len": 8,
       "max": 215,
@@ -122882,32 +122785,7 @@
     "debug": true,
     "eax": "",
     "fmt": {
-      "bix": 72,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "COROLLA_EOT",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "21",
-    "scaling": "raw clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "21": "51"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
+      "add": -40,
       "bix": 72,
       "len": 8,
       "max": 215,
@@ -122921,7 +122799,7 @@
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "21",
-    "scaling": "raw clamped to [-40, 215]",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -124332,6 +124210,33 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 72,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "HYUNDAI_TIRE_RR_VSS_V2",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -124549,32 +124454,6 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TP_FR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "TPMS Pressure Front Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "C00B"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -124670,6 +124549,32 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "TPMS Pressure Front Right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire pressure front right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -125138,6 +125043,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "COROLLA_TIRE_FL_SPD",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "IS300_TIRE_FL_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -125223,33 +125155,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "COROLLA_TIRE_FL_SPD",
-    "make": "Toyota",
-    "model": "Corolla",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
     "id": "DAIHATSU_TIRE_FL_SPD",
     "make": "Daihatsu",
     "model": "",
@@ -125277,7 +125182,7 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "DAIHATSU_TS_FL",
+    "id": "DAIHATSU_TIRE_FL_SPD_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Front left wheel speed",
@@ -125412,9 +125317,9 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "COROLLA_TT_FR",
-    "make": "Toyota",
-    "model": "Corolla",
+    "id": "DAIHATSU_TT_FR",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -125426,28 +125331,26 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "21": "16"
+      "21": "21"
     },
-    "debug": true,
-    "eax": "2A",
+    "debug": false,
+    "eax": "",
     "fmt": {
-      "add": -40,
       "bix": 8,
       "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
+      "max": 255,
+      "unit": "kilometersPerHour"
     },
-    "hdr": "750",
-    "id": "DAIHATSU_TT_FR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front right tire temperature",
-    "path": "Tires",
+    "hdr": "7E0",
+    "id": "COROLLA_CC_S",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Cruise control speed",
+    "path": "Cruise control",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
-    "unit": "celsius"
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -125493,9 +125396,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E0",
-    "id": "COROLLA_CC_S",
-    "make": "Toyota",
-    "model": "Corolla",
+    "id": "DAIHATSU_CC_S",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Cruise control speed",
     "path": "Cruise control",
     "pid": "21",
@@ -125518,7 +125421,7 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E0",
-    "id": "DAIHATSU_CC_S",
+    "id": "DAIHATSU_CC_S_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Cruise control speed",
@@ -125688,9 +125591,9 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "COROLLA_TP_FR",
-    "make": "Toyota",
-    "model": "Corolla",
+    "id": "DAIHATSU_TP_FR",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -125702,28 +125605,57 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "21": "30"
+      "21": "47"
     },
     "debug": true,
-    "eax": "2A",
+    "eax": "",
     "fmt": {
-      "add": -0.5,
       "bix": 8,
-      "div": 58,
+      "div": 50,
       "len": 8,
-      "max": 4,
-      "unit": "bars"
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
     },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_FR",
+    "hdr": "7B0",
+    "id": "COROLLA_LNG_G",
+    "make": "Toyota",
+    "model": "Corolla",
+    "name": "Longitudinal g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
+    "id": "DAIHATSU_LNG_G",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front right tire pressure",
-    "path": "Tires",
+    "name": "Longitudinal g",
+    "path": "Orientation",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
   },
   {
     "bitLength": 8,
@@ -126416,47 +126348,6 @@
     "id": "VENZAHYBRID_TID_2",
     "make": "Toyota",
     "model": "Venza-Hybrid",
-    "name": "Tire 2 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "bix": 8,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "COROLLA_TID_2",
-    "make": "Toyota",
-    "model": "Corolla",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
@@ -130331,20 +130222,21 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 80,
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "VELOSTER_TT_FR",
+    "id": "VELOSTER_TPMS_TEMP_FR",
     "make": "Hyundai",
     "model": "Veloster",
-    "name": "TPMS Temperature Front Right",
+    "name": "Tire temperature front right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [-50, 100]",
@@ -131415,31 +131307,6 @@
     "id": "FORTE_TIRE_FL_VSS",
     "make": "Kia",
     "model": "Forte",
-    "name": "ABS Speed Front Left",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "VELOSTER_TIRE_FL_VSS",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "ABS Speed Front Left",
     "path": "Movement",
     "pid": "22",
@@ -133043,31 +132910,6 @@
     "bitLength": 8,
     "bitOffset": 96,
     "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "VELOSTER_TIRE_FR_VSS",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "ABS Speed Front Right",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -133634,31 +133476,6 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TW_FR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "TPMS Alert Front Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "C00B"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -133786,6 +133603,31 @@
     "bitLength": 8,
     "bitOffset": 96,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire alert front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
       "22": "C101"
     },
     "debug": false,
@@ -133807,6 +133649,34 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "VELOSTER_KNOCK_RETARD_1",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Knock retard cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -133857,34 +133727,6 @@
     "id": "FORTE_KNOCK_RETARD_1",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock Retard Cyl 1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "VELOSTER_KNOCK_RETARD_1",
-    "make": "Hyundai",
-    "model": "Veloster",
     "name": "Knock Retard Cyl 1",
     "path": "Engine",
     "pid": "22",
