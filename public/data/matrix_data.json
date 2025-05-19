@@ -23652,9 +23652,9 @@
     "fmt": {
       "div": 10000,
       "len": 16,
-      "max": 511,
-      "min": -511,
-      "mul": 156.2,
+      "max": 52,
+      "min": -52,
+      "mul": 15.92796725,
       "sign": true,
       "unit": "gravity"
     },
@@ -23665,7 +23665,7 @@
     "name": "Lateral acceleration",
     "path": "Orientation",
     "pid": "22",
-    "scaling": "raw*156.2 /10000 clamped to [-511, 511]",
+    "scaling": "raw*15.92796725 /10000 clamped to [-52, 52]",
     "suggestedMetric": "",
     "unit": "gravity"
   },
@@ -23680,9 +23680,9 @@
     "fmt": {
       "div": 10000,
       "len": 16,
-      "max": 511,
-      "min": -511,
-      "mul": 156.2,
+      "max": 52,
+      "min": -52,
+      "mul": 15.92796725,
       "sign": true,
       "unit": "gravity"
     },
@@ -23693,7 +23693,7 @@
     "name": "Longtitudinal acceleration",
     "path": "Orientation",
     "pid": "22",
-    "scaling": "raw*156.2 /10000 clamped to [-511, 511]",
+    "scaling": "raw*15.92796725 /10000 clamped to [-52, 52]",
     "suggestedMetric": "",
     "unit": "gravity"
   },
@@ -55111,6 +55111,14 @@
           "description": "Neutral",
           "value": "NEUTRAL"
         },
+        "10": {
+          "description": "Drive, gear 7",
+          "value": "D7"
+        },
+        "11": {
+          "description": "Drive, gear 8",
+          "value": "D8"
+        },
         "2": {
           "description": "Park",
           "value": "PARK"
@@ -55120,8 +55128,28 @@
           "value": "REVERSE"
         },
         "4": {
-          "description": "Drive",
-          "value": "DRIVE"
+          "description": "Drive, gear 1",
+          "value": "D1"
+        },
+        "5": {
+          "description": "Drive, gear 2",
+          "value": "D2"
+        },
+        "6": {
+          "description": "Drive, gear 3",
+          "value": "D3"
+        },
+        "7": {
+          "description": "Drive, gear 4",
+          "value": "D4"
+        },
+        "8": {
+          "description": "Drive, gear 5",
+          "value": "D5"
+        },
+        "9": {
+          "description": "Drive, gear 6",
+          "value": "D6"
         }
       }
     },
@@ -55132,7 +55160,7 @@
     "name": "Shift gear",
     "path": "Transmission",
     "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Neutral', 'value': 'NEUTRAL'}, '2': {'description': 'Park', 'value': 'PARK'}, '3': {'description': 'Reverse', 'value': 'REVERSE'}, '4': {'description': 'Drive', 'value': 'DRIVE'}}",
+    "scaling": "Mapped values: {'1': {'description': 'Neutral', 'value': 'NEUTRAL'}, '2': {'description': 'Park', 'value': 'PARK'}, '3': {'description': 'Reverse', 'value': 'REVERSE'}, '4': {'description': 'Drive, gear 1', 'value': 'D1'}, '5': {'description': 'Drive, gear 2', 'value': 'D2'}, '6': {'description': 'Drive, gear 3', 'value': 'D3'}, '7': {'description': 'Drive, gear 4', 'value': 'D4'}, '8': {'description': 'Drive, gear 5', 'value': 'D5'}, '9': {'description': 'Drive, gear 6', 'value': 'D6'}, '10': {'description': 'Drive, gear 7', 'value': 'D7'}, '11': {'description': 'Drive, gear 8', 'value': 'D8'}}",
     "suggestedMetric": "",
     "unit": ""
   },
