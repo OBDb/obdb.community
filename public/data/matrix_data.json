@@ -6835,6 +6835,58 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0010"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 655.35,
+      "mul": 100,
+      "unit": "gramsPerSecond"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_MAF",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Mass airflow sensor",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /10000 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "gramsPerSecond"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "005E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 3276.75,
+      "mul": 500,
+      "unit": "liters"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_FUEL_RATE",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Fuel consumption rate",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*500 /10000 clamped to [3276.75]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "028D"
     },
     "debug": false,
@@ -11927,6 +11979,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "20E3"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 655.35,
+      "mul": 100,
+      "unit": "kilopascal"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_BP_ACT",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Boost pressure, actual",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /10000 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2203"
     },
     "debug": true,
@@ -15469,6 +15547,32 @@
     "scaling": "raw/20 +-1638.4 clamped to [-1638, 1638]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "34D8"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 655.35,
+      "mul": 100,
+      "unit": "kilopascal"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_DPF_PRESS",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Particulate filter pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /10000 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
   },
   {
     "bitLength": 16,
@@ -23508,6 +23612,90 @@
     "scaling": "raw/100 clamped to [255]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4C2D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 720.874,
+      "min": -720.896,
+      "mul": 220,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "DA28",
+    "id": "CORVETTE_STEER_ANGLE",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*220 /10000 clamped to [-720.896, 720.874]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4C2F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 511,
+      "min": -511,
+      "mul": 156.2,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "DA28",
+    "id": "CORVETTE_LAT_G",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Lateral acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw*156.2 /10000 clamped to [-511, 511]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4C30"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 511,
+      "min": -511,
+      "mul": 156.2,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "DA28",
+    "id": "CORVETTE_LNG_G",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Longtitudinal acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw*156.2 /10000 clamped to [-511, 511]",
+    "suggestedMetric": "",
+    "unit": "gravity"
   },
   {
     "bitLength": 16,
@@ -46978,6 +47166,32 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "448F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 32,
+      "max": 1000000,
+      "mul": 156.25,
+      "unit": "kilometers"
+    },
+    "hdr": "DA1A",
+    "id": "CORVETTE_ODO",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000000]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "5200"
     },
     "debug": false,
@@ -51401,6 +51615,58 @@
     "cmd": {
       "22": "002F"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 8,
+      "max": 25.5,
+      "mul": 10,
+      "unit": "volts"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_AUX_V",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*10 /100 clamped to [25.5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "002F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_FLI",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "002F"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -53521,6 +53787,162 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "11EA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_MIS_5",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Misfires current cyl.5",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11EB"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_MIS_6",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Misfires current cyl.6",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1205"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_MIS_2",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Misfires current cyl.2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1206"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_MIS_1",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Misfires current cyl.1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1207"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_MIS_3",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Misfires current cyl.3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1208"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_MIS_4",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Misfires current cyl.4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1234"
     },
     "debug": false,
@@ -53722,6 +54144,31 @@
     "scaling": "Mapped values: {'0': {'description': 'E-pedal mode is off', 'value': 'EPEDAL_OFF'}, '4': {'description': 'E-pedal mode is on', 'value': 'EPEDAL_ON'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "153E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -30,
+      "len": 8,
+      "max": 225,
+      "unit": "celsius"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_EOT",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-30 clamped to [225]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -54623,6 +55070,71 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1940"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -30,
+      "len": 8,
+      "max": 225,
+      "unit": "celsius"
+    },
+    "hdr": "DA18",
+    "id": "CORVETTE_TFT",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Transmission fluid temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-30 clamped to [225]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1B30"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "2": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "3": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "4": {
+          "description": "Drive",
+          "value": "DRIVE"
+        }
+      }
+    },
+    "hdr": "DA18",
+    "id": "CORVETTE_GEAR",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Neutral', 'value': 'NEUTRAL'}, '2': {'description': 'Park', 'value': 'PARK'}, '3': {'description': 'Reverse', 'value': 'REVERSE'}, '4': {'description': 'Drive', 'value': 'DRIVE'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -56760,6 +57272,56 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2344"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 1020,
+      "mul": 4,
+      "unit": "kilopascal"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_EO_AP",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Engine oil absolute pressure sensor",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*4 clamped to [1020]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2345"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 1020,
+      "mul": 4,
+      "unit": "kilopascal"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_EOP_ACT",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Engine oil pressure, actual",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*4 clamped to [1020]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2353"
     },
     "debug": true,
@@ -58653,6 +59215,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "36A7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_AIRFILT_LIFE",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Air filter life remaining",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "4051"
     },
     "debug": true,
@@ -59359,6 +59945,84 @@
     "pid": "22",
     "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4A7A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA28",
+    "id": "CORVETTE_TIRE_FL_VSS",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4A7C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -1000,
+      "len": 8,
+      "max": 11700,
+      "min": -13800,
+      "mul": 100,
+      "sign": true,
+      "unit": "kilopascal"
+    },
+    "hdr": "DA28",
+    "id": "CORVETTE_BP",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Brake pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 +-1000 clamped to [-13800, 11700]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4DC0"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "DA11",
+    "id": "CORVETTE_EOL",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Engine oil life remaining",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
     "unit": "percent"
   },
   {
@@ -76550,6 +77214,31 @@
     "scaling": "raw*9 /5 +-40 clamped to [255]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "4A7A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA28",
+    "id": "CORVETTE_TIRE_RL_VSS",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -96161,6 +96850,31 @@
     "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "4A7A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA28",
+    "id": "CORVETTE_TIRE_RR_VSS",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -126830,6 +127544,31 @@
     "scaling": "raw*0.01373 clamped to [5]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "4A7A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA28",
+    "id": "CORVETTE_TIRE_FR_VSS",
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
