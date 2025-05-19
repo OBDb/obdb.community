@@ -25145,9 +25145,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
-    "id": "X3_VSS",
+    "id": "X7_VSS",
     "make": "BMW",
-    "model": "X3",
+    "model": "X7",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -25248,6 +25248,31 @@
     "id": "SUPRA_VSS",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "X3_VSS",
+    "make": "BMW",
+    "model": "X3",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -25875,6 +25900,86 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "DA25"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "add": -48,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "X7_EOT",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-48 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA25"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "add": -48,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "X3_EOT",
+    "make": "BMW",
+    "model": "X3",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-48 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "X7_TQ_CNVRT_RPM",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DA2A"
     },
     "debug": true,
@@ -25890,6 +25995,32 @@
     "id": "DAIHATSU_TQ_CNVRT_RPM",
     "make": "Daihatsu",
     "model": "",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_TQ_CNVRT_RPM",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Torque converter speed",
     "path": "Transmission",
     "pid": "22",
@@ -25948,6 +26079,59 @@
     "scaling": "raw clamped to [-32768, 32767]",
     "suggestedMetric": "",
     "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "X3_TQ_CNVRT_RPM",
+    "make": "BMW",
+    "model": "X3",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": false,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "X7_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
   },
   {
     "bitLength": 16,
@@ -25993,6 +26177,33 @@
       "unit": "newtonMeters"
     },
     "hdr": "6F1",
+    "id": "ROLLSROYCE_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
     "id": "SUPRA_AXLE_FRONT_ACTUAL_TORQUE",
     "make": "Toyota",
     "model": "GR-Supra",
@@ -26023,6 +26234,33 @@
     "id": "SUPRA_AXLE_FRONT_ACTUAL_TORQUE",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "X3_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "BMW",
+    "model": "X3",
     "name": "Front axle, actual torque",
     "path": "Tires",
     "pid": "22",
@@ -26182,9 +26420,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
-    "id": "X3_FL_SPD",
+    "id": "X7_FL_SPD",
     "make": "BMW",
-    "model": "X3",
+    "model": "X7",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -26320,6 +26558,33 @@
     "id": "SUPRA_FL_SPD",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "X3_FL_SPD",
+    "make": "BMW",
+    "model": "X3",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -30520,6 +30785,33 @@
     "cmd": {
       "22": "DA2A"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "X7_TRANS_SHAFT_RPM",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -30534,6 +30826,33 @@
     "id": "DAIHATSU_TRANS_SHAFT_RPM",
     "make": "Daihatsu",
     "model": "",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_TRANS_SHAFT_RPM",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Transmission output shaft speed",
     "path": "Transmission",
     "pid": "22",
@@ -30588,6 +30907,33 @@
     "id": "SUPRA_TRANS_SHAFT_RPM",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "X3_TRANS_SHAFT_RPM",
+    "make": "BMW",
+    "model": "X3",
     "name": "Transmission output shaft speed",
     "path": "Transmission",
     "pid": "22",
@@ -30753,9 +31099,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
-    "id": "X3_FR_SPD",
+    "id": "X7_FR_SPD",
     "make": "BMW",
-    "model": "X3",
+    "model": "X7",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -30896,6 +31242,34 @@
     "id": "SUPRA_FR_SPD",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "X3_FR_SPD",
+    "make": "BMW",
+    "model": "X3",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -37628,6 +38002,34 @@
     "cmd": {
       "22": "DB32"
     },
+    "debug": false,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "X7_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
     "debug": true,
     "eax": "19",
     "fmt": {
@@ -37643,6 +38045,34 @@
     "id": "DAIHATSU_AXLE_FRONT_SETPOINT_TORQUE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Front axle, setpoint torque",
     "path": "Tires",
     "pid": "22",
@@ -37699,6 +38129,34 @@
     "id": "SUPRA_AXLE_FRONT_SETPOINT_TORQUE",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "X3_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "BMW",
+    "model": "X3",
     "name": "Front axle, setpoint torque",
     "path": "Tires",
     "pid": "22",
@@ -37864,9 +38322,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
-    "id": "X3_RL_SPD",
+    "id": "X7_RL_SPD",
     "make": "BMW",
-    "model": "X3",
+    "model": "X7",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -38007,6 +38465,34 @@
     "id": "SUPRA_RL_SPD",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "X3_RL_SPD",
+    "make": "BMW",
+    "model": "X3",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -39572,9 +40058,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
-    "id": "X3_RR_SPD",
+    "id": "X7_RR_SPD",
     "make": "BMW",
-    "model": "X3",
+    "model": "X7",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -39715,6 +40201,34 @@
     "id": "SUPRA_RR_SPD",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "X3_RR_SPD",
+    "make": "BMW",
+    "model": "X3",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -47419,10 +47933,10 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
-    "id": "X3_ODO1",
+    "id": "X7_ODO",
     "make": "BMW",
-    "model": "X3",
-    "name": "Odometer #1",
+    "model": "X7",
+    "name": "Odometer",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
@@ -47529,6 +48043,30 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "X3_ODO",
+    "make": "BMW",
+    "model": "X3",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D49C"
     },
     "debug": false,
@@ -47581,6 +48119,31 @@
     "cmd": {
       "22": "DA23"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "X7_ODO_LOWRES",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Odometer, low resolution",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -47598,6 +48161,31 @@
     "pid": "22",
     "scaling": "raw*8 clamped to [1000000]",
     "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_ODO_LOWRES",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Odometer, low resolution",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
   {
@@ -47648,6 +48236,31 @@
     "pid": "22",
     "scaling": "raw*8 clamped to [1000000]",
     "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "X3_ODO_LOWRES",
+    "make": "BMW",
+    "model": "X3",
+    "name": "Odometer, low resolution",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
   {
@@ -48370,10 +48983,10 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
-    "id": "X3_ODO2",
+    "id": "X7_ODO_ALT",
     "make": "BMW",
-    "model": "X3",
-    "name": "Odometer #2",
+    "model": "X7",
+    "name": "Odometer, alternative",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
@@ -48474,6 +49087,31 @@
     "make": "Toyota",
     "model": "Supra",
     "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "X3_ODO_ALT",
+    "make": "BMW",
+    "model": "X3",
+    "name": "Odometer, alternative",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
@@ -54154,9 +54792,9 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -30,
+      "add": -40,
       "len": 8,
-      "max": 225,
+      "max": 215,
       "unit": "celsius"
     },
     "hdr": "DA11",
@@ -54166,7 +54804,7 @@
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
-    "scaling": "raw+-30 clamped to [225]",
+    "scaling": "raw+-40 clamped to [215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -55080,9 +55718,9 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -30,
+      "add": -40,
       "len": 8,
-      "max": 225,
+      "max": 215,
       "unit": "celsius"
     },
     "hdr": "DA18",
@@ -55092,7 +55730,7 @@
     "name": "Transmission fluid temperature",
     "path": "Engine",
     "pid": "22",
-    "scaling": "raw+-30 clamped to [225]",
+    "scaling": "raw+-40 clamped to [215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -61115,6 +61753,33 @@
     "cmd": {
       "22": "D112"
     },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 87.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "X7_AAT",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D112"
+    },
     "debug": true,
     "eax": "60",
     "fmt": {
@@ -61156,6 +61821,33 @@
     "id": "ROLLSROYCE_AAT",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 87.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "X3_AAT",
+    "make": "BMW",
+    "model": "X3",
     "name": "Ambient air temperature",
     "path": "Climate",
     "pid": "22",
@@ -61402,6 +62094,126 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "1": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "2": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "3": {
+          "description": "Drive",
+          "value": "DRIVE"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "X7_GEAR_SHIFT",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Park', 'value': 'PARK'}, '1': {'description': 'Reverse', 'value': 'REVERSE'}, '2': {'description': 'Neutral', 'value': 'NEUTRAL'}, '3': {'description': 'Drive', 'value': 'DRIVE'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "1": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "2": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "3": {
+          "description": "Drive",
+          "value": "DRIVE"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_GEAR_SHIFT",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Park', 'value': 'PARK'}, '1': {'description': 'Reverse', 'value': 'REVERSE'}, '2': {'description': 'Neutral', 'value': 'NEUTRAL'}, '3': {'description': 'Drive', 'value': 'DRIVE'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "1": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "2": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "3": {
+          "description": "Drive",
+          "value": "DRIVE"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "X3_GEAR_SHIFT",
+    "make": "BMW",
+    "model": "X3",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Park', 'value': 'PARK'}, '1': {'description': 'Reverse', 'value': 'REVERSE'}, '2': {'description': 'Neutral', 'value': 'NEUTRAL'}, '3': {'description': 'Drive', 'value': 'DRIVE'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -61697,6 +62509,30 @@
     "cmd": {
       "22": "DCDD"
     },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X7_DOOR_DRIVER",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DCDD"
+    },
     "debug": true,
     "eax": "56",
     "fmt": {
@@ -61708,6 +62544,30 @@
     "id": "ROLLSROYCE_DOOR_DRIVER",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X3_DOOR_DRIVER",
+    "make": "BMW",
+    "model": "X3",
     "name": "Driver door open",
     "path": "Doors",
     "pid": "22",
@@ -77555,6 +78415,31 @@
     "cmd": {
       "22": "DCDD"
     },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X7_DOOR_DRIVER_REAR",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Rear driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DCDD"
+    },
     "debug": true,
     "eax": "56",
     "fmt": {
@@ -77567,6 +78452,31 @@
     "id": "ROLLSROYCE_DOOR_DRIVER_REAR",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Rear driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X3_DOOR_DRIVER_REAR",
+    "make": "BMW",
+    "model": "X3",
     "name": "Rear driver door open",
     "path": "Doors",
     "pid": "22",
@@ -97191,6 +98101,31 @@
     "cmd": {
       "22": "DCDD"
     },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X7_DOOR_PASSENGER_REAR",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Rear passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "DCDD"
+    },
     "debug": true,
     "eax": "56",
     "fmt": {
@@ -97203,6 +98138,31 @@
     "id": "ROLLSROYCE_DOOR_PASSENGER_REAR",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Rear passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X3_DOOR_PASSENGER_REAR",
+    "make": "BMW",
+    "model": "X3",
     "name": "Rear passenger door open",
     "path": "Doors",
     "pid": "22",
@@ -112805,6 +113765,31 @@
     "cmd": {
       "22": "DCDD"
     },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X7_HOOD",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Hood open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DCDD"
+    },
     "debug": true,
     "eax": "56",
     "fmt": {
@@ -112817,6 +113802,31 @@
     "id": "ROLLSROYCE_HOOD",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Hood open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X3_HOOD",
+    "make": "BMW",
+    "model": "X3",
     "name": "Hood open",
     "path": "Doors",
     "pid": "22",
@@ -117058,6 +118068,31 @@
     "cmd": {
       "22": "DCDD"
     },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X7_TRUNK",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Trunk open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "DCDD"
+    },
     "debug": true,
     "eax": "56",
     "fmt": {
@@ -117070,6 +118105,31 @@
     "id": "ROLLSROYCE_TRUNK",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Trunk open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X3_TRUNK",
+    "make": "BMW",
+    "model": "X3",
     "name": "Trunk open",
     "path": "Doors",
     "pid": "22",
@@ -119371,6 +120431,31 @@
     "cmd": {
       "22": "DCDD"
     },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X7_REAR_WINDOW",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Rear window open",
+    "path": "Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DCDD"
+    },
     "debug": true,
     "eax": "56",
     "fmt": {
@@ -119384,7 +120469,32 @@
     "make": "Rolls",
     "model": "Royce",
     "name": "Rear window open",
-    "path": "Doors",
+    "path": "Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X3_REAR_WINDOW",
+    "make": "BMW",
+    "model": "X3",
+    "name": "Rear window open",
+    "path": "Windows",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -121516,6 +122626,31 @@
     "cmd": {
       "22": "DCDD"
     },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X7_CENTRAL_LOCK",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Locked",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "DCDD"
+    },
     "debug": true,
     "eax": "56",
     "fmt": {
@@ -121528,6 +122663,31 @@
     "id": "ROLLSROYCE_CENTRAL_LOCK",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Locked",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X3_CENTRAL_LOCK",
+    "make": "BMW",
+    "model": "X3",
     "name": "Locked",
     "path": "Doors",
     "pid": "22",
@@ -127736,6 +128896,31 @@
     "cmd": {
       "22": "DA1F"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X7_KICKDOWN",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -127748,6 +128933,31 @@
     "id": "DAIHATSU_KICKDOWN",
     "make": "Daihatsu",
     "model": "",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "ROLLSROYCE_KICKDOWN",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Kickdown",
     "path": "Engine",
     "pid": "22",
@@ -127804,6 +129014,80 @@
     "scaling": "raw clamped to [100]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X3_KICKDOWN",
+    "make": "BMW",
+    "model": "X3",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "X7_TQ_CNVRT_LOCKUP",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -127893,6 +129177,55 @@
       }
     },
     "hdr": "6F1",
+    "id": "ROLLSROYCE_TQ_CNVRT_LOCKUP",
+    "make": "Rolls",
+    "model": "Royce",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
     "id": "SUPRA_TQ_CNVRT_LOCKUP",
     "make": "Toyota",
     "model": "GR-Supra",
@@ -127945,6 +129278,55 @@
     "id": "SUPRA_TQ_CNVRT_LOCKUP",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "X3_TQ_CNVRT_LOCKUP",
+    "make": "BMW",
+    "model": "X3",
     "name": "Torque converter lockup",
     "path": "Transmission",
     "pid": "22",
@@ -128026,6 +129408,72 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "3": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "5": {
+          "description": "Sport",
+          "value": "SPORT"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "X7_GEAR",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Drive mode",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'3': {'description': 'Drive', 'value': 'DRIVE'}, '5': {'description': 'Sport', 'value': 'SPORT'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "3": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "5": {
+          "description": "Sport",
+          "value": "SPORT"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "X3_GEAR",
+    "make": "BMW",
+    "model": "X3",
+    "name": "Drive mode",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'3': {'description': 'Drive', 'value': 'DRIVE'}, '5': {'description': 'Sport', 'value': 'SPORT'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -128208,6 +129656,31 @@
     "cmd": {
       "22": "DCDD"
     },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X7_DOOR_PASSENGER",
+    "make": "BMW",
+    "model": "X7",
+    "name": "Passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DCDD"
+    },
     "debug": true,
     "eax": "56",
     "fmt": {
@@ -128220,6 +129693,31 @@
     "id": "ROLLSROYCE_DOOR_PASSENGER",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "X3_DOOR_PASSENGER",
+    "make": "BMW",
+    "model": "X3",
     "name": "Passenger door open",
     "path": "Doors",
     "pid": "22",
