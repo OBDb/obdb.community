@@ -14492,7 +14492,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": 4,
@@ -48736,7 +48736,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 128,
@@ -48762,7 +48762,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 16,
@@ -49748,7 +49748,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 96,
@@ -51858,6 +51858,32 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "4RUNNER_TIRE_FR_SPD",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "DAIHATSU_TIRE_FR_SPD",
     "make": "Daihatsu",
     "model": "",
@@ -52009,8 +52035,34 @@
     "fmt": {
       "add": -40,
       "len": 8,
-      "max": 215,
-      "min": -40,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TT_FL",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 150,
+      "min": -20,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -52020,7 +52072,7 @@
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
+    "scaling": "raw+-40 clamped to [-20, 150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -52315,6 +52367,32 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TP_FL",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -77586,6 +77664,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "4RUNNER_TIRE_RR_SPD",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "DAIHATSU_TIRE_RR_SPD",
     "make": "Daihatsu",
     "model": "",
@@ -77743,8 +77848,35 @@
       "add": -40,
       "bix": 16,
       "len": 8,
-      "max": 215,
-      "min": -40,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TT_RL",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 150,
+      "min": -20,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -77754,7 +77886,7 @@
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
+    "scaling": "raw+-40 clamped to [-20, 150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -77900,6 +78032,33 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TP_RL",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -80705,7 +80864,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 160,
@@ -82332,7 +82491,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 168,
@@ -83877,7 +84036,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 176,
@@ -96199,6 +96358,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "4RUNNER_TIRE_RL_SPD",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "DAIHATSU_TIRE_RL_SPD",
     "make": "Daihatsu",
     "model": "",
@@ -96356,8 +96542,35 @@
       "add": -40,
       "bix": 24,
       "len": 8,
-      "max": 215,
-      "min": -40,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TT_RR",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 150,
+      "min": -20,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -96367,7 +96580,7 @@
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
+    "scaling": "raw+-40 clamped to [-20, 150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -96513,6 +96726,33 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TP_RR",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -110382,8 +110622,35 @@
       "add": -40,
       "bix": 32,
       "len": 8,
-      "max": 215,
-      "min": -40,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TT_SPARE",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "min": -20,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -110393,7 +110660,7 @@
     "name": "Spare tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
+    "scaling": "raw+-40 clamped to [-20, 150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -110539,6 +110806,33 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TP_SPARE",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -123269,7 +123563,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 56,
@@ -125237,7 +125531,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -127145,7 +127439,7 @@
     "cmd": {
       "22": "2AF7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -128142,6 +128436,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "4RUNNER_TIRE_FL_SPD",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "DAIHATSU_TIRE_FL_SPD",
     "make": "Daihatsu",
     "model": "",
@@ -128299,8 +128620,35 @@
       "add": -40,
       "bix": 8,
       "len": 8,
-      "max": 215,
-      "min": -40,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TT_FR",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 150,
+      "min": -20,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -128310,7 +128658,7 @@
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-40, 215]",
+    "scaling": "raw+-40 clamped to [-20, 150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -128560,6 +128908,33 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "4RUNNER_TP_FR",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
