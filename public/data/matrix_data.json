@@ -9115,6 +9115,32 @@
       "unit": "liters"
     },
     "hdr": "7C0",
+    "id": "LANDCRUISER_FLV",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655,
+      "nullmax": 655,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
     "id": "PRIUSPRIME_FLV",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -14349,6 +14375,30 @@
       "unit": "miles"
     },
     "hdr": "710",
+    "id": "MACANEV_RANGE",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2AB6"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "miles"
+    },
+    "hdr": "710",
     "id": "TAYCAN_RANGE",
     "make": "Porsche",
     "model": "Taycan",
@@ -14359,6 +14409,31 @@
     "signalGroups": [],
     "suggestedMetric": "electricRange",
     "unit": "miles"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AVG_CSMP_CAT0",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Average consumption (category 0)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
   },
   {
     "bitLength": 16,
@@ -14408,6 +14483,32 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/10000 clamped to [6.55]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 4,
+      "div": 1000,
+      "len": 16,
+      "max": 69,
+      "unit": "volts"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_V",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 +4 clamped to [69]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -29651,6 +29752,32 @@
       "unit": "kilowattHours"
     },
     "hdr": "710",
+    "id": "MACANEV_AVG_CSMP_CAT1",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Average consumption (category 1)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
     "id": "TAYCAN_AVG_CSMP_CAT1",
     "make": "Porsche",
     "model": "Taycan",
@@ -29661,6 +29788,32 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2AB8"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 1000000,
+      "mul": 25,
+      "unit": "watts"
+    },
+    "hdr": "710",
+    "id": "MACANEV_HVBAT_KWH",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "HV battery energy",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*25 clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "watts"
   },
   {
     "bitLength": 16,
@@ -37753,6 +37906,32 @@
       "unit": "kilowattHours"
     },
     "hdr": "710",
+    "id": "MACANEV_AVG_CSMP_CAT2",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Average consumption (category 2)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
     "id": "TAYCAN_AVG_CSMP_CAT2",
     "make": "Porsche",
     "model": "Taycan",
@@ -39788,6 +39967,32 @@
     "scaling": "raw*2 /32767 clamped to [-2, 2]",
     "suggestedMetric": "",
     "unit": "radians"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AVG_CSMP_CAT3",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Average consumption (category 3)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
   },
   {
     "bitLength": 16,
@@ -41895,6 +42100,32 @@
       "unit": "kilowattHours"
     },
     "hdr": "710",
+    "id": "MACANEV_AVG_CSMP_CAT4",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Average consumption (category 4)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
     "id": "TAYCAN_AVG_CSMP_CAT4",
     "make": "Porsche",
     "model": "Taycan",
@@ -43756,6 +43987,32 @@
       "unit": "kilowattHours"
     },
     "hdr": "710",
+    "id": "MACANEV_AVG_CSMP_CAT5",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Average consumption (category 5)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
     "id": "TAYCAN_AVG_CSMP_CAT5",
     "make": "Porsche",
     "model": "Taycan",
@@ -44227,6 +44484,32 @@
     "scaling": "raw/10 +-40 clamped to [-40, 1500]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AVG_CSMP_CAT6",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Average consumption (category 6)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
   },
   {
     "bitLength": 16,
@@ -47604,6 +47887,31 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "2AB2"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1310770,
+      "len": 32,
+      "max": 3276,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
+    "id": "MACANEV_HVBAT_CAP",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "HV battery capacity",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1310770 clamped to [3276]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2AB8"
     },
     "debug": false,
@@ -48419,6 +48727,60 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/100 clamped to [-10000, 10000]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "div": 10,
+      "len": 32,
+      "max": 10000000,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_DSCH_TOT",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery total discharge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [10000000]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 32,
+      "max": 1000000,
+      "min": -1000000,
+      "mul": 0.001,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_C",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.001 clamped to [-1000000, 1000000]",
     "suggestedMetric": "",
     "unit": "amps"
   },
@@ -49379,6 +49741,32 @@
     "scaling": "raw/8583.07212 clamped to [-250300, 250300]",
     "suggestedMetric": "",
     "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 10,
+      "len": 32,
+      "max": 10000000,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_CHRG_TOT",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery total charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [10000000]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
   },
   {
     "bitLength": 4,
@@ -53664,6 +54052,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "LANDCRUISER_TT_1",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_1",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -57156,6 +57571,32 @@
       "unit": "percent"
     },
     "hdr": "7D2",
+    "id": "LANDCRUISER_SOC",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
     "id": "PRIUSPRIME_SOC",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -57385,6 +57826,46 @@
     "id": "GRCOROLLA_TID_1",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TID_1",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -57990,6 +58471,30 @@
     "cmd": {
       "22": "2353"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACANEV_CRASH_CNT_FRONT",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Crashes, front",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -58193,6 +58698,30 @@
     "id": "CAYENNE_CRASH_CNT_DRVR",
     "make": "Porsche",
     "model": "Cayenne",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACANEV_CRASH_CNT_DRVR",
+    "make": "Porsche",
+    "model": "Macan-Electric",
     "name": "Crashes, driver side",
     "path": "Stats",
     "pid": "22",
@@ -58422,6 +58951,30 @@
     "cmd": {
       "22": "2355"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACANEV_CRASH_CNT_PSNGR",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -58638,6 +59191,30 @@
     "cmd": {
       "22": "2356"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACANEV_CRASH_CNT_REAR",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -58841,6 +59418,30 @@
     "id": "CAYENNE_CRASH_CNT_ROLL",
     "make": "Porsche",
     "model": "Cayenne",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "MACANEV_CRASH_CNT_ROLL",
+    "make": "Porsche",
+    "model": "Macan-Electric",
     "name": "Crashes, rollover",
     "path": "Stats",
     "pid": "22",
@@ -77511,6 +78112,34 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "LANDCRUISER_TT_3",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_3",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -77986,6 +78615,47 @@
     "id": "GRCOROLLA_TID_3",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Tire 3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TID_3",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Tire 3 position",
     "path": "Tires",
     "pid": "22",
@@ -80033,6 +80703,31 @@
     "bitLength": 8,
     "bitOffset": 160,
     "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_AGE_CAP",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery aging by capacity",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
       "22": "3086"
     },
     "debug": true,
@@ -81635,6 +82330,31 @@
     "bitLength": 8,
     "bitOffset": 168,
     "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_AGE_POW",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery aging by power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -83150,6 +83870,31 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "len": 8,
+      "max": 100,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_CAP",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery adapted capacity",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
   },
   {
     "bitLength": 8,
@@ -95926,6 +96671,34 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "LANDCRUISER_TT_4",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_4",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -96177,6 +96950,34 @@
     "id": "DAIHATSU_TP_2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 24,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -97700,6 +98501,47 @@
     "id": "GRCOROLLA_TID_4",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Tire 4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TID_4",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Tire 4 position",
     "path": "Tires",
     "pid": "22",
@@ -115828,6 +116670,34 @@
       "unit": "psi"
     },
     "hdr": "750",
+    "id": "LANDCRUISER_TP_3",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 40,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TP_3",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -115886,6 +116756,33 @@
     "id": "CAYENNE_TP_FR",
     "make": "Porsche",
     "model": "Cayenne",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "nullmax": 6.37,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACANEV_TP_FR",
+    "make": "Porsche",
+    "model": "Macan-Electric",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -116108,6 +117005,33 @@
     "cmd": {
       "22": "18A1"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "nullmax": 6.37,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACANEV_TP_FL",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -116317,6 +117241,33 @@
     "cmd": {
       "22": "18A2"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "nullmax": 6.37,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACANEV_TP_RL",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -116513,6 +117464,33 @@
     "id": "CAYENNE_TP_RR",
     "make": "Porsche",
     "model": "Cayenne",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "nullmax": 6.37,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "MACANEV_TP_RR",
+    "make": "Porsche",
+    "model": "Macan-Electric",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -122090,6 +123068,34 @@
       "unit": "psi"
     },
     "hdr": "750",
+    "id": "LANDCRUISER_TP_4",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 56,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TP_4",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -122256,6 +123262,31 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_SOC",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery soc",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -124204,6 +125235,33 @@
     "bitLength": 8,
     "bitOffset": 64,
     "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 64,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_T",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
       "22": "4000"
     },
     "debug": false,
@@ -126085,6 +127143,33 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "22": "2AF7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 72,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "710",
+    "id": "MACANEV_AUX_BAT_T_S",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "12V battery sensor temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "4000"
     },
     "debug": false,
@@ -127689,6 +128774,34 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "LANDCRUISER_TT_2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_2",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -127945,6 +129058,34 @@
     "pid": "22",
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 8,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_1",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -128332,6 +129473,47 @@
     "id": "GRCOROLLA_TID_2",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Tire 2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TID_2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
