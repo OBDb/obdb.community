@@ -14365,6 +14365,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "2AB2"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 3276750,
+      "mul": 50,
+      "unit": "watts"
+    },
+    "hdr": "710",
+    "id": "MACANEV_HVBAT_CAP",
+    "make": "Porsche",
+    "model": "Macan-Electric",
+    "name": "HV battery capacity",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*50 clamped to [3276750]",
+    "suggestedMetric": "",
+    "unit": "watts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2AB6"
     },
     "debug": false,
@@ -47876,31 +47901,6 @@
     "id": "EGOLF_HVBAT_CAP",
     "make": "Volkswagen",
     "model": "e-Golf",
-    "name": "HV battery capacity",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/1310770 clamped to [3276]",
-    "suggestedMetric": "",
-    "unit": "kilowattHours"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2AB2"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 1310770,
-      "len": 32,
-      "max": 3276,
-      "unit": "kilowattHours"
-    },
-    "hdr": "710",
-    "id": "MACANEV_HVBAT_CAP",
-    "make": "Porsche",
-    "model": "Macan-Electric",
     "name": "HV battery capacity",
     "path": "Battery",
     "pid": "22",
