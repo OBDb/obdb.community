@@ -54250,58 +54250,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_FL_V2",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TP_FL",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "1006"
     },
     "debug": true,
@@ -78395,60 +78343,6 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 16,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_RL_V2",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 16,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TP_RL",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
       "22": "1022"
     },
     "debug": false,
@@ -97132,14 +97026,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_RR_V2",
+    "id": "DAIHATSU_TP_FR_V2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear right tire pressure",
+    "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
   {
@@ -97159,14 +97053,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "GRCOROLLA_TP_RR",
+    "id": "GRCOROLLA_TP_FR",
     "make": "Toyota",
     "model": "GR-Corolla",
-    "name": "Rear right tire pressure",
+    "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
   {
@@ -112431,60 +112325,6 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 32,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_SPARE_V2",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Spare tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 32,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TP_SPARE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Spare tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
       "22": "18A0"
     },
     "debug": true,
@@ -116917,6 +116757,60 @@
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 40,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_RL_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 40,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GRCOROLLA_TP_RL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -123325,6 +123219,60 @@
     "debug": true,
     "eax": "2A",
     "fmt": {
+      "add": -0.5,
+      "bix": 56,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_RR_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 56,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GRCOROLLA_TP_RR",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
       "add": -5.6969697,
       "bix": 56,
       "div": 4.125,
@@ -127254,6 +127202,60 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 72,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_SPARE_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 72,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GRCOROLLA_TP_SPARE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "18A0"
     },
     "debug": true,
@@ -129370,14 +129372,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_FR_V2",
+    "id": "DAIHATSU_TP_FL_V2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front right tire pressure",
+    "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
+    "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
   {
@@ -129397,14 +129399,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "GRCOROLLA_TP_FR",
+    "id": "GRCOROLLA_TP_FL",
     "make": "Toyota",
     "model": "GR-Corolla",
-    "name": "Front right tire pressure",
+    "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
+    "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
   {
