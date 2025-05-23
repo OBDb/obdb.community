@@ -62486,6 +62486,206 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "D922"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "CX90_TP_FL",
+    "make": "Mazda",
+    "model": "CX-90",
+    "name": "Front left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D923"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "CX90_TP_FR",
+    "make": "Mazda",
+    "model": "CX-90",
+    "name": "Front right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D924"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "CX90_TP_RL",
+    "make": "Mazda",
+    "model": "CX-90",
+    "name": "Rear left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D925"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "CX90_TP_RR",
+    "make": "Mazda",
+    "model": "CX-90",
+    "name": "Rear right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D926"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "CX90_TT_FL",
+    "make": "Mazda",
+    "model": "CX-90",
+    "name": "Front left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D927"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "CX90_TT_FR",
+    "make": "Mazda",
+    "model": "CX-90",
+    "name": "Front right temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D928"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "CX90_TT_RL",
+    "make": "Mazda",
+    "model": "CX-90",
+    "name": "Rear left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D929"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "CX90_TT_RR",
+    "make": "Mazda",
+    "model": "CX-90",
+    "name": "Rear right temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DA12"
     },
     "debug": true,
@@ -98919,6 +99119,56 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "ALFAROMEO_TP_FL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "RAM_TP_FL",
+    "make": "Ram",
+    "model": "1500",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "C901"
     },
     "debug": false,
@@ -112665,114 +112915,10 @@
       "unit": "celsius"
     },
     "hdr": "7F1",
-    "id": "ALFAROMEO_TT_FL",
-    "make": "Alfa",
-    "model": "Romeo",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B1"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "RAM_TT_FL",
-    "make": "Ram",
-    "model": "1500",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B1"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
     "id": "VAUXHALLOPEL_TT_FL",
     "make": "VauxhallOpel",
     "model": "",
     "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B2"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "ALFAROMEO_TT_FR",
-    "make": "Alfa",
-    "model": "Romeo",
-    "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B2"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "RAM_TT_FR",
-    "make": "Ram",
-    "model": "1500",
-    "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [255]",
@@ -112821,114 +112967,10 @@
       "unit": "celsius"
     },
     "hdr": "7F1",
-    "id": "ALFAROMEO_TT_RL",
-    "make": "Alfa",
-    "model": "Romeo",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B3"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "RAM_TT_RL",
-    "make": "Ram",
-    "model": "1500",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B3"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
     "id": "VAUXHALLOPEL_TT_RL",
     "make": "VauxhallOpel",
     "model": "",
     "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "ALFAROMEO_TT_RR",
-    "make": "Alfa",
-    "model": "Romeo",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "RAM_TT_RR",
-    "make": "Ram",
-    "model": "1500",
-    "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [255]",
@@ -112960,6 +113002,56 @@
     "scaling": "raw+-50 clamped to [255]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "ALFAROMEO_TP_FR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "RAM_TP_FR",
+    "make": "Ram",
+    "model": "1500",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -117872,6 +117964,56 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "ALFAROMEO_TP_RL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "RAM_TP_RL",
+    "make": "Ram",
+    "model": "1500",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B001"
     },
     "debug": false,
@@ -121318,6 +121460,56 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "ALFAROMEO_TP_RR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "RAM_TP_RR",
+    "make": "Ram",
+    "model": "1500",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "BC05"
     },
     "debug": false,
@@ -123583,6 +123775,56 @@
     "scaling": "raw+-50 clamped to [-50, 205]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "ALFAROMEO_TP_SPARE",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "RAM_TP_SPARE",
+    "make": "Ram",
+    "model": "1500",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
