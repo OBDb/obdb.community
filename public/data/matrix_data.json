@@ -11825,32 +11825,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "1E34"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10000,
-      "len": 16,
-      "max": 15.99,
-      "mul": 2.441,
-      "unit": "volts"
-    },
-    "hdr": "FC00",
-    "id": "MACANEV_HVB_CV_LOW_V",
-    "make": "Porsche",
-    "model": "Macan-Electric",
-    "name": "Battery pack cell, lowest voltage",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw*2.441 /10000 clamped to [15.99]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "1E3B"
     },
     "debug": false,
@@ -29734,31 +29708,6 @@
     "scaling": "raw/13107 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "1E34"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 16,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "FC00",
-    "id": "MACANEV_HVB_CV_LOW_ID",
-    "make": "Porsche",
-    "model": "Macan-Electric",
-    "name": "Battery pack cell, lowest voltage ID ",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 16,
