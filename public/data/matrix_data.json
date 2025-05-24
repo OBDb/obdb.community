@@ -62491,8 +62491,9 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 5,
       "len": 8,
-      "max": 255,
+      "max": 51,
       "unit": "psi"
     },
     "hdr": "726",
@@ -62502,7 +62503,7 @@
     "name": "Front left pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw clamped to [255]",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "psi"
   },
@@ -62515,8 +62516,9 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 5,
       "len": 8,
-      "max": 255,
+      "max": 51,
       "unit": "psi"
     },
     "hdr": "726",
@@ -62526,7 +62528,7 @@
     "name": "Front right pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw clamped to [255]",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
@@ -62539,8 +62541,9 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 5,
       "len": 8,
-      "max": 255,
+      "max": 51,
       "unit": "psi"
     },
     "hdr": "726",
@@ -62550,7 +62553,7 @@
     "name": "Rear left pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw clamped to [255]",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
@@ -62563,8 +62566,9 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 5,
       "len": 8,
-      "max": 255,
+      "max": 51,
       "unit": "psi"
     },
     "hdr": "726",
@@ -62574,7 +62578,7 @@
     "name": "Rear right pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw clamped to [255]",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
@@ -99169,6 +99173,31 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "VAUXHALLOPEL_TP_FL",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "C901"
     },
     "debug": false,
@@ -112903,110 +112932,6 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
-      "22": "40B1"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "VAUXHALLOPEL_TT_FL",
-    "make": "VauxhallOpel",
-    "model": "",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B2"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "VAUXHALLOPEL_TT_FR",
-    "make": "VauxhallOpel",
-    "model": "",
-    "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B3"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "VAUXHALLOPEL_TT_RL",
-    "make": "VauxhallOpel",
-    "model": "",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "40B4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7F1",
-    "id": "VAUXHALLOPEL_TT_RR",
-    "make": "VauxhallOpel",
-    "model": "",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
       "22": "A022"
     },
     "debug": true,
@@ -113046,6 +112971,31 @@
     "id": "RAM_TP_FR",
     "make": "Ram",
     "model": "1500",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "VAUXHALLOPEL_TP_FR",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -118014,6 +117964,31 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "VAUXHALLOPEL_TP_RL",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B001"
     },
     "debug": false,
@@ -121510,6 +121485,31 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "VAUXHALLOPEL_TP_RR",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "BC05"
     },
     "debug": false,
@@ -123819,6 +123819,31 @@
     "id": "RAM_TP_SPARE",
     "make": "Ram",
     "model": "1500",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "A022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "742",
+    "id": "VAUXHALLOPEL_TP_SPARE",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "22",
