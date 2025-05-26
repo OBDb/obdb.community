@@ -9730,10 +9730,11 @@
     "debug": true,
     "eax": "",
     "fmt": {
-      "add": -3276.8,
       "div": 10,
       "len": 16,
-      "max": 100,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
       "unit": "kilopascal"
     },
     "hdr": "700",
@@ -9743,7 +9744,7 @@
     "name": "Low fuel pressure sensor",
     "path": "Fuel",
     "pid": "22",
-    "scaling": "raw/10 +-3276.8 clamped to [100]",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
     "suggestedMetric": "",
     "unit": "kilopascal"
   },
@@ -9756,10 +9757,11 @@
     "debug": true,
     "eax": "",
     "fmt": {
-      "add": -3276.8,
       "div": 10,
       "len": 16,
-      "max": 100,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
       "unit": "kilopascal"
     },
     "hdr": "700",
@@ -9769,7 +9771,7 @@
     "name": "Low fuel pressure sensor",
     "path": "Fuel",
     "pid": "22",
-    "scaling": "raw/10 +-3276.8 clamped to [100]",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
     "suggestedMetric": "",
     "unit": "kilopascal"
   },
@@ -35648,34 +35650,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -32768,
-      "bix": 24,
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "min": -1000,
-      "unit": "degrees"
-    },
-    "hdr": "7B0",
-    "id": "TACOMA_STEER_ANGLE",
-    "make": "Toyota",
-    "model": "Tacoma",
-    "name": "Steering wheel angle",
-    "path": "Control",
-    "pid": "21",
-    "scaling": "raw/10 +-32768 clamped to [-1000, 1000]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "47"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "add": -3276.8,
       "bix": 24,
       "div": 10,
@@ -35692,6 +35666,34 @@
     "path": "Control",
     "pid": "21",
     "scaling": "raw/10 +-3276.8 clamped to [-3276, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "bix": 24,
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "min": -1000,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "TACOMA_STEER_ANGLE",
+    "make": "Toyota",
+    "model": "Tacoma",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 +-32768 clamped to [-1000, 1000]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -52530,7 +52532,7 @@
     "cmd": {
       "21": "47"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 50,
@@ -78373,7 +78375,7 @@
     "cmd": {
       "21": "47"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -128,
@@ -129366,7 +129368,7 @@
     "cmd": {
       "21": "47"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 8,
