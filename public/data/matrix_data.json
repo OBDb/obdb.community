@@ -27725,7 +27725,7 @@
     "cmd": {
       "22": "6001"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 112,
@@ -27734,13 +27734,9 @@
       "unit": "kilopascal"
     },
     "hdr": "DA26",
-    "id": "ACCORD_TP_RL",
-    "make": "Honda",
-    "model": "Accord",
-    "modelYears": [
-      2010,
-      2013
-    ],
+    "id": "TLX_TP_RL",
+    "make": "Acura",
+    "model": "TLX",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -27763,9 +27759,13 @@
       "unit": "kilopascal"
     },
     "hdr": "DA26",
-    "id": "TLX_TP_RL",
-    "make": "Acura",
-    "model": "TLX",
+    "id": "ACCORD_TP_RL",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -31885,31 +31885,6 @@
     "bitLength": 16,
     "bitOffset": 160,
     "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 160,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_1_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 1 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 160,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -33204,31 +33179,6 @@
     "bitLength": 16,
     "bitOffset": 176,
     "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_2_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 2 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 176,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -33383,31 +33333,6 @@
     "scaling": "raw/1220.7 clamped to [53.7]",
     "suggestedMetric": "",
     "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 192,
-    "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 192,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_3_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 3 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -33790,31 +33715,6 @@
     "bitLength": 16,
     "bitOffset": 208,
     "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 208,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_4_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 4 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 208,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -34134,31 +34034,6 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_5_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 5 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -35813,31 +35688,6 @@
     "bitLength": 16,
     "bitOffset": 240,
     "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 240,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_6_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 6 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 240,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -36224,31 +36074,6 @@
       2015
     ],
     "name": "Misfire count #1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 272,
-    "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 272,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_7_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 7 (hd)",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -37659,31 +37484,6 @@
     "bitLength": 16,
     "bitOffset": 288,
     "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 288,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_8_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 8 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 288,
-    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -37910,31 +37710,6 @@
       2015
     ],
     "name": "Misfire count #3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 304,
-    "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 304,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_9_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 9 (hd)",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -39074,31 +38849,6 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 320,
-    "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 320,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_10_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 10 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 336,
     "cmd": {
       "22": "22B0"
@@ -39281,56 +39031,6 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 336,
-    "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 336,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_11_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 11 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 352,
-    "cmd": {
-      "22": "2663"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 352,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_12_HD",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 12 (hd)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 368,
     "cmd": {
       "22": "2660"
@@ -39410,7 +39110,7 @@
     "cmd": {
       "22": "2660"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 368,
@@ -39419,13 +39119,9 @@
       "unit": "seconds"
     },
     "hdr": "DA10",
-    "id": "ACCORD_RUNTM",
-    "make": "Honda",
-    "model": "Accord",
-    "modelYears": [
-      2010,
-      2013
-    ],
+    "id": "TLX_RUNTM",
+    "make": "Acura",
+    "model": "TLX",
     "name": "Time since engine start",
     "path": "Clocks",
     "pid": "22",
@@ -39448,9 +39144,13 @@
       "unit": "seconds"
     },
     "hdr": "DA10",
-    "id": "TLX_RUNTM",
-    "make": "Acura",
-    "model": "TLX",
+    "id": "ACCORD_RUNTM",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
     "name": "Time since engine start",
     "path": "Clocks",
     "pid": "22",
@@ -40805,31 +40505,6 @@
     "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
     "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "2301"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "len": 16,
-      "max": 10000,
-      "unit": "rpm"
-    },
-    "hdr": "DB33",
-    "id": "TLX_RPM_PRE_TC",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "CVT RPM pre torque converter",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [10000]",
-    "suggestedMetric": "",
-    "unit": "rpm"
   },
   {
     "bitLength": 16,
@@ -42274,7 +41949,7 @@
     "cmd": {
       "22": "6001"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 64,
@@ -42283,13 +41958,9 @@
       "unit": "kilopascal"
     },
     "hdr": "DA26",
-    "id": "ACCORD_TP_FR",
-    "make": "Honda",
-    "model": "Accord",
-    "modelYears": [
-      2010,
-      2013
-    ],
+    "id": "TLX_TP_FR",
+    "make": "Acura",
+    "model": "TLX",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -42312,9 +41983,13 @@
       "unit": "kilopascal"
     },
     "hdr": "DA26",
-    "id": "TLX_TP_FR",
-    "make": "Acura",
-    "model": "TLX",
+    "id": "ACCORD_TP_FR",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -42593,31 +42268,6 @@
     "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
     "suggestedMetric": "",
     "unit": "degrees"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "2301"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "len": 16,
-      "max": 10000,
-      "unit": "rpm"
-    },
-    "hdr": "DB33",
-    "id": "TLX_RPM_POST_TC",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "CVT RPM post torque converter",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [10000]",
-    "suggestedMetric": "",
-    "unit": "rpm"
   },
   {
     "bitLength": 16,
@@ -44161,7 +43811,7 @@
     "cmd": {
       "22": "6001"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 80,
@@ -44170,13 +43820,9 @@
       "unit": "kilopascal"
     },
     "hdr": "DA26",
-    "id": "ACCORD_TP_FL",
-    "make": "Honda",
-    "model": "Accord",
-    "modelYears": [
-      2010,
-      2013
-    ],
+    "id": "TLX_TP_FL",
+    "make": "Acura",
+    "model": "TLX",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -44199,9 +43845,13 @@
       "unit": "kilopascal"
     },
     "hdr": "DA26",
-    "id": "TLX_TP_FL",
-    "make": "Acura",
-    "model": "TLX",
+    "id": "ACCORD_TP_FL",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -44393,31 +44043,6 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "2301"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "len": 16,
-      "max": 10000,
-      "unit": "rpm"
-    },
-    "hdr": "DB33",
-    "id": "TLX_OUTPUT_RPM",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "CVT output RPM",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [10000]",
-    "suggestedMetric": "",
-    "unit": "rpm"
   },
   {
     "bitLength": 16,
@@ -44675,7 +44300,7 @@
     "cmd": {
       "22": "6001"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 96,
@@ -44684,13 +44309,9 @@
       "unit": "kilopascal"
     },
     "hdr": "DA26",
-    "id": "ACCORD_TP_RR",
-    "make": "Honda",
-    "model": "Accord",
-    "modelYears": [
-      2010,
-      2013
-    ],
+    "id": "TLX_TP_RR",
+    "make": "Acura",
+    "model": "TLX",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -44713,9 +44334,13 @@
       "unit": "kilopascal"
     },
     "hdr": "DA26",
-    "id": "TLX_TP_RR",
-    "make": "Acura",
-    "model": "TLX",
+    "id": "ACCORD_TP_RR",
+    "make": "Honda",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -46263,6 +45888,31 @@
     "fmt": {
       "bix": 344,
       "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "DA10",
+    "id": "TLX_ODO",
+    "make": "Acura",
+    "model": "TLX",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 344,
+    "cmd": {
+      "22": "2660"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 344,
+      "len": 24,
       "max": 4294967295,
       "unit": "kilometers"
     },
@@ -46299,31 +45949,6 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 344,
-    "cmd": {
-      "22": "2660"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 344,
-      "len": 24,
-      "max": 16777215,
-      "unit": "kilometers"
-    },
-    "hdr": "DA10",
-    "id": "TLX_ODO",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -50081,32 +49706,6 @@
     "model": "",
     "name": "Engine coolant temperature",
     "path": "Engine.Generic",
-    "pid": "01",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "01": "05"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DB33",
-    "id": "TLX_ECT",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Engine coolant temperature",
-    "path": "Engine",
     "pid": "01",
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
@@ -67110,60 +66709,6 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
-      "22": "2666"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 112,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DA10",
-    "id": "TLX_EOT_V4",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Engine oil temperature v4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "2666"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 112,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DA11",
-    "id": "TLX_EOT_V2",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Engine oil temperature v2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
       "22": "3083"
     },
     "debug": true,
@@ -67176,7 +66721,7 @@
       "min": -40,
       "unit": "celsius"
     },
-    "hdr": "DB33",
+    "hdr": "DA1E",
     "id": "TLX_ATF",
     "make": "Acura",
     "model": "TLX",
@@ -67184,33 +66729,6 @@
     "path": "Transmission",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-40, 200]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "3083"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 112,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DA33",
-    "id": "TLX_ATF_T_V2",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "ATF temperature (v2)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -73920,6 +73438,33 @@
     "cmd": {
       "22": "7028"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "DA60",
+    "id": "TLX_AAT",
+    "make": "Acura",
+    "model": "TLX",
+    "name": "Outside air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "7028"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -73969,33 +73514,6 @@
       0,
       2015
     ],
-    "name": "Outside air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "7028"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 136,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DA60",
-    "id": "TLX_AAT",
-    "make": "Acura",
-    "model": "TLX",
     "name": "Outside air temperature",
     "path": "Climate",
     "pid": "22",
@@ -81173,7 +80691,7 @@
         }
       }
     },
-    "hdr": "DB33",
+    "hdr": "DA1E",
     "id": "TLX_GEAR",
     "make": "Acura",
     "model": "TLX",
@@ -91717,87 +91235,6 @@
     "path": "Transmission",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "2201"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 208,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DA1E",
-    "id": "TLX_ATF_T_V4",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "ATF temperature v4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "2201"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 208,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DA33",
-    "id": "TLX_ATF_T",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "ATF temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "2301"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 208,
-      "len": 8,
-      "max": 100,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DB33",
-    "id": "TLX_ATF_T_V3",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "ATF temperature v3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -119564,7 +119001,7 @@
       "max": 6,
       "unit": "scalar"
     },
-    "hdr": "DB33",
+    "hdr": "DA10",
     "id": "TLX_ACTIVE_CYL",
     "make": "Acura",
     "model": "TLX",
@@ -121406,31 +120843,6 @@
     "scaling": "raw/20 clamped to [12.75]",
     "suggestedMetric": "",
     "unit": "centimeters"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "266C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_1",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -123731,31 +123143,6 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
-      "22": "266C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_2",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
       "22": "2AF7"
     },
     "debug": false,
@@ -125774,31 +125161,6 @@
     "bitLength": 8,
     "bitOffset": 64,
     "cmd": {
-      "22": "266C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 64,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_3",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 64,
-    "cmd": {
       "22": "2AF7"
     },
     "debug": false,
@@ -127731,31 +127093,6 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilopascal"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "266C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_4",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -134286,31 +133623,6 @@
     "bitLength": 8,
     "bitOffset": 80,
     "cmd": {
-      "22": "266C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 80,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_5",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 5",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 80,
-    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -135883,33 +135195,6 @@
       "min": -40,
       "unit": "celsius"
     },
-    "hdr": "DA10",
-    "id": "TLX_EOT_V3",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Engine oil temperature v3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "2666"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 88,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
     "hdr": "DA11",
     "id": "CIVIC_EOT",
     "make": "Honda",
@@ -135951,58 +135236,6 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "2666"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 88,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "DA11",
-    "id": "TLX_EOT",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "266C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "DA11",
-    "id": "TLX_MIS_6",
-    "make": "Acura",
-    "model": "TLX",
-    "name": "Misfire count 6",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 8,
