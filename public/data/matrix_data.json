@@ -44498,10 +44498,10 @@
     "eax": "",
     "fmt": {
       "bix": 238,
-      "div": 1600,
+      "div": 1000,
       "len": 18,
-      "max": 81.9,
-      "min": -81.9,
+      "max": 131,
+      "min": -131,
       "sign": true,
       "unit": "kilowattHours"
     },
@@ -44512,7 +44512,7 @@
     "name": "Trip consumption (short)",
     "path": "Trips",
     "pid": "22",
-    "scaling": "raw/1600 clamped to [-81.9, 81.9]",
+    "scaling": "raw/1000 clamped to [-131, 131]",
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilowattHours"
