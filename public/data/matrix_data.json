@@ -6926,6 +6926,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_MAP_V",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Manifold absolute pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0009765625 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0301"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0009765625,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] MAP voltage",
     "make": "Ford",
     "model": "Mustang",
@@ -7305,6 +7330,31 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_LPFP_DUTY",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Low pressure fuel pump commanded duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0307"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "[ECU] LPFP duty cycle",
     "make": "Ford",
     "model": "Mustang",
@@ -7402,6 +7452,31 @@
     "eax": "",
     "fmt": {
       "len": 16,
+      "max": 2,
+      "mul": 3.05176e-05,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_CL",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Commanded lambda",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*3.05176e-05 clamped to [2]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "030F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
       "max": 5,
       "mul": 3.05176e-05,
       "unit": "scalar"
@@ -7457,6 +7532,31 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_VCT_INT_DUTY",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "VCT intake camshaft solenoid duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0316"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "[ECU] VCT intake duty cycle",
     "make": "Ford",
     "model": "Mustang",
@@ -7486,6 +7586,31 @@
     "make": "Ford",
     "model": "Edge",
     "name": "VCT intake camshaft solenoid duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0317"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_VCT_EXH_DUTY",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "VCT exhaust camshaft solenoid duty cycle",
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0030517578 clamped to [100]",
@@ -7558,6 +7683,32 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_VCT_INT_ACT",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "VCT intake camshaft actual",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 0]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0318"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 0,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "[ECU] VCT intake actual",
     "make": "Ford",
     "model": "Mustang",
@@ -7591,6 +7742,31 @@
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0625 clamped to [-50, 0]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0319"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_VCT_EXH_ACT",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "VCT exhaust camshaft actual",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [50]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -7660,6 +7836,32 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_VCT_INT_ERR",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "VCT intake camshaft error",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "031A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "[ECU] VCT intake error",
     "make": "Ford",
     "model": "Mustang",
@@ -7690,6 +7892,32 @@
     "make": "Ford",
     "model": "Edge",
     "name": "VCT intake camshaft error",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "031B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_VCT_EXH_ERR",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "VCT exhaust camshaft error",
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0625 clamped to [-50, 50]",
@@ -7763,6 +7991,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_HPFP_V",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "High pressure fuel rail sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0324"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] HPFP sensor voltage",
     "make": "Ford",
     "model": "Mustang",
@@ -7797,6 +8050,32 @@
     "scaling": "raw*0.0048875855 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0338"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 90,
+      "min": -90,
+      "mul": 0.001953125,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_ETC_TRIM_LEARNED",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Electronic throttle control learned trim angle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.001953125 clamped to [-90, 90]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -7865,6 +8144,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_TIP_V",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Throttle inlet pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048828125 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "033C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048828125,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] TIP sensor voltage",
     "make": "Ford",
     "model": "Mustang",
@@ -7915,6 +8219,31 @@
       "unit": "psi"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_TIP_ABS",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Throttle inlet pressure absolute",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0011064263 clamped to [60]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "033E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 60,
+      "mul": 0.0011064263,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
     "id": "[ECU] TIP actual abs",
     "make": "Ford",
     "model": "Mustang",
@@ -7947,6 +8276,32 @@
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0011064263 clamped to [60]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0353"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 20,
+      "min": 8,
+      "mul": 0.0362553791,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_BARO",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Barometric pressure",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0362553791 clamped to [8, 20]",
     "suggestedMetric": "",
     "unit": "psi"
   },
@@ -8017,6 +8372,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_BARO_V",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Barometric pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "035A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] Baro Sensor V",
     "make": "Ford",
     "model": "Mustang",
@@ -8067,6 +8447,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_RO2_V",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Rear O2 voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0009765625 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "035F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1,
+      "mul": 0.0009765625,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] Rear O2 V",
     "make": "Ford",
     "model": "Mustang",
@@ -8099,6 +8504,31 @@
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0009765625 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "038E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.1998046869,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_EVAP_V",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Evaporative vapor pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.1998046869 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -8168,6 +8598,32 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_ECT",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Engine coolant temperature",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.015625 clamped to [-40, 148.889]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "038F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 148.889,
+      "min": -40,
+      "mul": 0.015625,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "[ECU] ECT",
     "make": "Ford",
     "model": "Mustang",
@@ -8203,6 +8659,32 @@
     "scaling": "raw*0.015625 clamped to [-40, 148.889]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0393"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "min": -100,
+      "mul": 0.2900754962,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_AC_P",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Air conditioning compressor pressure",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.2900754962 clamped to [-100, 1000]",
+    "suggestedMetric": "",
+    "unit": "psi"
   },
   {
     "bitLength": 16,
@@ -8271,6 +8753,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_AAT_V",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Ambient air temperature sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] AAT Sensor V",
     "make": "Ford",
     "model": "Mustang",
@@ -8305,6 +8812,31 @@
     "scaling": "raw*0.0048875855 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BB"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_VCT_EXH_DES",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "VCT exhaust cam desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -8372,6 +8904,32 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_VCT_INT_DES",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "VCT intake cam desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 0]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BC"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 0,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "[ECU] VCT Int Des",
     "make": "Ford",
     "model": "Mustang",
@@ -8407,6 +8965,32 @@
     "scaling": "raw*0.0625 clamped to [-50, 0]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BD"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "min": -5,
+      "mul": 0.0001220703,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_CL_LC",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Closed loop lambda correction",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0001220703 clamped to [-5, 5]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -8500,6 +9084,31 @@
       "unit": "psi"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_HPFP_DES",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "High pressure fuel pressure desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*1.4503773969 clamped to [3500]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03DC"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 3500,
+      "mul": 1.4503773969,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
     "id": "[ECU] HPFP Desired",
     "make": "Ford",
     "model": "Mustang",
@@ -8560,6 +9169,32 @@
     "scaling": "raw*100 /65535 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03E8"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1,
+      "min": -1,
+      "mul": 6.10352e-05,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_OAR",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Octane adjust ratio",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*6.10352e-05 clamped to [-1, 1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -11854,6 +12489,33 @@
     "cmd": {
       "22": "1E1C"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_TOT",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Transmission oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -12865,6 +13527,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "EXPLORER_TP_FL",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "F150_TP_FL",
     "make": "Ford",
     "model": "F-150",
@@ -13198,6 +13885,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "EXPLORER_TP_FR",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "F150_TP_FR",
     "make": "Ford",
     "model": "F-150",
@@ -13414,6 +14126,31 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "EXPLORER_TP_RR",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [255]",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
@@ -13747,6 +14484,31 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "EXPLORER_TP_RL",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [255]",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -14172,6 +14934,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "EXPLORER_TP_RRI",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Rear right inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2817"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "F150_TP_RRI",
     "make": "Ford",
     "model": "F-150",
@@ -14334,6 +15121,31 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2818"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "EXPLORER_TP_RLI",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Rear left inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
     "unit": "psi"
   },
   {
@@ -15805,6 +16617,31 @@
     "scaling": "raw*100 /10000 clamped to [655.35]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4028"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "D01A",
+    "id": "POLESTAR2_SOC",
+    "make": "Polestar",
+    "model": "2",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -45563,6 +46400,30 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_ODO",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
     "id": "FUSION_ODO",
     "make": "Ford",
     "model": "Fusion",
@@ -53375,6 +54236,31 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "EXPLORER_ACC_POS",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Accelerator pedal position",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "032B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "mul": 0.5,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "[ECU] Accelerator pedal position",
     "make": "Ford",
     "model": "Mustang",
@@ -53433,6 +54319,30 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03CA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 148.889,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_MCT",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Manifold charge temperature",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw clamped to [148.889]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -56130,6 +57040,70 @@
       }
     },
     "hdr": "7E0",
+    "id": "EXPLORER_GEAR",
+    "make": "Ford",
+    "model": "Explorer",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E0",
     "id": "F150_GEAR",
     "make": "Ford",
     "model": "F-150",
@@ -56689,6 +57663,50 @@
     "id": "ESCAPE_GEAR_SHFT",
     "make": "Ford",
     "model": "Escape",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "10": {
+          "description": "Manual",
+          "value": "MANUAL"
+        },
+        "46": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "50": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "60": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "70": {
+          "description": "Park",
+          "value": "PARK"
+        }
+      }
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_GEAR_SHFT",
+    "make": "Ford",
+    "model": "Explorer",
     "name": "Shift gear",
     "path": "Transmission",
     "pid": "22",
@@ -63315,6 +64333,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "EE6F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "D016",
+    "id": "POLESTAR2_APP_POS",
+    "make": "Polestar",
+    "model": "2",
+    "name": "Accelerator pedal position",
+    "path": "Control.Pedals",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "F40D"
     },
     "debug": false,
@@ -63355,6 +64399,32 @@
     "id": "BRONCO_FLI",
     "make": "Ford",
     "model": "Bronco",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 255,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "EXPLORER_FLI",
+    "make": "Ford",
+    "model": "Explorer",
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
