@@ -5988,6 +5988,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "LANDCRUISER_GEAR_LOCKUP",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Gear lock-up",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 9,
     "cmd": {
       "01": "01"
@@ -6876,6 +6901,33 @@
     "id": "DAIHATSU_ATF_PAN_T",
     "make": "Daihatsu",
     "model": "",
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "LANDCRUISER_ATF_PAN_T",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Transmission temperature (pan)",
     "path": "Transmission",
     "pid": "21",
@@ -9879,32 +9931,6 @@
       "unit": "liters"
     },
     "hdr": "7C0",
-    "id": "LANDCRUISER_FLV",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
-    "name": "Fuel remaining",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1022"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 100,
-      "len": 16,
-      "max": 655,
-      "nullmax": 655,
-      "unit": "liters"
-    },
-    "hdr": "7C0",
     "id": "PRIUSPRIME_FLV",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -9947,6 +9973,30 @@
     "cmd": {
       "22": "1024"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7B0",
+    "id": "FORESTER_FR_VSS",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Front right tire speed",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1024"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -9979,9 +10029,9 @@
       "unit": "scalar"
     },
     "hdr": "7B0",
-    "id": "FORESTER_FR_VSS",
+    "id": "WRX_FR_VSS",
     "make": "Subaru",
-    "model": "Forester",
+    "model": "WRX",
     "name": "Front right tire speed",
     "path": "Tires",
     "pid": "22",
@@ -9993,9 +10043,9 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "1024"
+      "22": "1025"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -10003,10 +10053,10 @@
       "unit": "scalar"
     },
     "hdr": "7B0",
-    "id": "WRX_FR_VSS",
+    "id": "FORESTER_FL_VSS",
     "make": "Subaru",
-    "model": "WRX",
-    "name": "Front right tire speed",
+    "model": "Forester",
+    "name": "Front left tire speed",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -10051,9 +10101,9 @@
       "unit": "scalar"
     },
     "hdr": "7B0",
-    "id": "FORESTER_FL_VSS",
+    "id": "WRX_FL_VSS",
     "make": "Subaru",
-    "model": "Forester",
+    "model": "WRX",
     "name": "Front left tire speed",
     "path": "Tires",
     "pid": "22",
@@ -10065,9 +10115,9 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "1025"
+      "22": "1026"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -10075,10 +10125,10 @@
       "unit": "scalar"
     },
     "hdr": "7B0",
-    "id": "WRX_FL_VSS",
+    "id": "FORESTER_RR_VSS",
     "make": "Subaru",
-    "model": "WRX",
-    "name": "Front left tire speed",
+    "model": "Forester",
+    "name": "Rear right tire speed",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -10175,9 +10225,9 @@
       "unit": "scalar"
     },
     "hdr": "7B0",
-    "id": "FORESTER_RR_VSS",
+    "id": "WRX_RR_VSS",
     "make": "Subaru",
-    "model": "Forester",
+    "model": "WRX",
     "name": "Rear right tire speed",
     "path": "Tires",
     "pid": "22",
@@ -10189,9 +10239,9 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "1026"
+      "22": "1027"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -10199,10 +10249,10 @@
       "unit": "scalar"
     },
     "hdr": "7B0",
-    "id": "WRX_RR_VSS",
+    "id": "FORESTER_RL_VSS",
     "make": "Subaru",
-    "model": "WRX",
-    "name": "Rear right tire speed",
+    "model": "Forester",
+    "name": "Rear left tire speed",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -10247,30 +10297,6 @@
       "unit": "scalar"
     },
     "hdr": "7B0",
-    "id": "FORESTER_RL_VSS",
-    "make": "Subaru",
-    "model": "Forester",
-    "name": "Rear left tire speed",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1027"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "7B0",
     "id": "WRX_RL_VSS",
     "make": "Subaru",
     "model": "WRX",
@@ -10287,7 +10313,7 @@
     "cmd": {
       "22": "1029"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -10296,9 +10322,9 @@
       "unit": "degrees"
     },
     "hdr": "7B0",
-    "id": "CROSSTREK_STEER_ANGLE",
+    "id": "FORESTER_STEER_ANGLE",
     "make": "Subaru",
-    "model": "Crosstrek",
+    "model": "Forester",
     "name": "Steering wheel angle (ABS)",
     "path": "Control",
     "pid": "22",
@@ -10321,9 +10347,9 @@
       "unit": "degrees"
     },
     "hdr": "7B0",
-    "id": "FORESTER_STEER_ANGLE",
+    "id": "CROSSTREK_STEER_ANGLE",
     "make": "Subaru",
-    "model": "Forester",
+    "model": "Crosstrek",
     "name": "Steering wheel angle (ABS)",
     "path": "Control",
     "pid": "22",
@@ -10468,7 +10494,7 @@
     "cmd": {
       "22": "10E5"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -10477,9 +10503,9 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
-    "id": "CROSSTREK_ODO",
+    "id": "FORESTER_ODO",
     "make": "Subaru",
-    "model": "Crosstrek",
+    "model": "Forester",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -10502,9 +10528,9 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
-    "id": "FORESTER_ODO",
+    "id": "CROSSTREK_ODO",
     "make": "Subaru",
-    "model": "Forester",
+    "model": "Crosstrek",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -12036,6 +12062,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1627"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "LANDCRUISER_TF1_PAN",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Transmission fluid pan temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1628"
     },
     "debug": false,
@@ -12107,6 +12160,33 @@
     "make": "Toyota",
     "model": "GR-Corolla",
     "name": "Transmission Fluid Post-Converter Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1628"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "LANDCRUISER_TF2_CONV",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Transmission fluid post-converter temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
@@ -12293,6 +12373,31 @@
     "id": "DAIHATSU_HVBAT_CMU01_VOLT",
     "make": "Daihatsu",
     "model": "",
+    "name": "HV battery module 01 voltage",
+    "path": "Battery.Modules.01",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "LANDCRUISER_HVBAT_CMU01_VOLT",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "HV battery module 01 voltage",
     "path": "Battery.Modules.01",
     "pid": "22",
@@ -24647,6 +24752,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_VSS2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4AB1"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_VSS2",
     "make": "Rolls",
     "model": "Royce",
@@ -26289,6 +26419,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_VSS",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_VSS",
     "make": "Rolls",
     "model": "Royce",
@@ -26490,6 +26645,30 @@
     "id": "DAIHATSU_VSS_INSTR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Vehicle speed (instrument cluster)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D240"
+    },
+    "debug": true,
+    "eax": "0D",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_VSS_INSTR",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Vehicle speed (instrument cluster)",
     "path": "Movement",
     "pid": "22",
@@ -27112,6 +27291,32 @@
       "unit": "rpm"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_TQ_CNVRT_RPM",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_TQ_CNVRT_RPM",
     "make": "Rolls",
     "model": "Royce",
@@ -27247,6 +27452,33 @@
     "id": "DAIHATSU_AXLE_FRONT_ACTUAL_TORQUE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Front axle, actual torque",
     "path": "Tires",
     "pid": "22",
@@ -27571,6 +27803,33 @@
     "id": "I3_FL_SPD",
     "make": "BMW",
     "model": "I3s",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_FL_SPD",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -28285,6 +28544,32 @@
     "id": "DAIHATSU_VGT_CAL_ANGLE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Variable geometry turbocharger calibration angle",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 156.25,
+      "unit": "degrees"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_VGT_CAL_ANGLE",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Variable geometry turbocharger calibration angle",
     "path": "Engine",
     "pid": "22",
@@ -30646,6 +30931,34 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "LANDCRUISER_ATF_TQC_T",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "182E"
     },
     "debug": false,
@@ -30698,6 +31011,32 @@
     "id": "DAIHATSU_HVBAT_CMU02_VOLT",
     "make": "Daihatsu",
     "model": "",
+    "name": "HV battery module 02 voltage",
+    "path": "Battery.Modules.02",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "LANDCRUISER_HVBAT_CMU02_VOLT",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "HV battery module 02 voltage",
     "path": "Battery.Modules.02",
     "pid": "22",
@@ -32024,6 +32363,33 @@
       "unit": "rpm"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_TRANS_SHAFT_RPM",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_TRANS_SHAFT_RPM",
     "make": "Rolls",
     "model": "Royce",
@@ -32332,6 +32698,34 @@
     "id": "I3_FR_SPD",
     "make": "BMW",
     "model": "I3s",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_FR_SPD",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -36522,6 +36916,34 @@
     "bitLength": 16,
     "bitOffset": 24,
     "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "bix": 24,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "LANDCRUISER_STEER_ANGLE",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 +-3276.8 clamped to [-3276, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
       "22": "2002"
     },
     "debug": false,
@@ -39045,6 +39467,34 @@
       "unit": "newtonMeters"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_AXLE_FRONT_SETPOINT_TORQUE",
     "make": "Rolls",
     "model": "Royce",
@@ -39356,6 +39806,34 @@
     "id": "I3_RL_SPD",
     "make": "BMW",
     "model": "I3s",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_RL_SPD",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -40242,6 +40720,32 @@
     "bitLength": 16,
     "bitOffset": 40,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "LANDCRUISER_PREV_TRIP_DST",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Previous trip distance",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -41069,6 +41573,34 @@
     "id": "I3_RR_SPD",
     "make": "BMW",
     "model": "I3s",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_RR_SPD",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -45648,6 +46180,30 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
+      "21": "28"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "LANDCRUISER_ODO_V7",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0207"
     },
     "debug": false,
@@ -45731,6 +46287,30 @@
       "unit": "scalar"
     },
     "hdr": "753",
+    "id": "FORESTER_TID1",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Tire 1 id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1028"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "scalar"
+    },
+    "hdr": "753",
     "id": "WRX_TID1",
     "make": "Subaru",
     "model": "WRX",
@@ -45758,30 +46338,6 @@
     "id": "CROSSTREK_TID1",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Tire 1 id",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1028"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 16777215,
-      "unit": "scalar"
-    },
-    "hdr": "753",
-    "id": "FORESTER_TID1",
-    "make": "Subaru",
-    "model": "Forester",
     "name": "Tire 1 id",
     "path": "Tires",
     "pid": "22",
@@ -46679,6 +47235,31 @@
       "unit": "scalar"
     },
     "hdr": "753",
+    "id": "FORESTER_TID2",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Tire 2 id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1028"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 24,
+      "max": 16777215,
+      "unit": "scalar"
+    },
+    "hdr": "753",
     "id": "WRX_TID2",
     "make": "Subaru",
     "model": "WRX",
@@ -46707,31 +47288,6 @@
     "id": "CROSSTREK_TID2",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Tire 2 id",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "1028"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 24,
-      "len": 24,
-      "max": 16777215,
-      "unit": "scalar"
-    },
-    "hdr": "753",
-    "id": "FORESTER_TID2",
-    "make": "Subaru",
-    "model": "Forester",
     "name": "Tire 2 id",
     "path": "Tires",
     "pid": "22",
@@ -46965,6 +47521,31 @@
       "unit": "scalar"
     },
     "hdr": "753",
+    "id": "FORESTER_TID3",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Tire 3 id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "1028"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
+      "max": 16777215,
+      "unit": "scalar"
+    },
+    "hdr": "753",
     "id": "WRX_TID3",
     "make": "Subaru",
     "model": "WRX",
@@ -46993,31 +47574,6 @@
     "id": "CROSSTREK_TID3",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Tire 3 id",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "1028"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 24,
-      "max": 16777215,
-      "unit": "scalar"
-    },
-    "hdr": "753",
-    "id": "FORESTER_TID3",
-    "make": "Subaru",
-    "model": "Forester",
     "name": "Tire 3 id",
     "path": "Tires",
     "pid": "22",
@@ -47346,6 +47902,31 @@
       "unit": "scalar"
     },
     "hdr": "753",
+    "id": "FORESTER_TID4",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Tire 4 id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "1028"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
+      "max": 16777215,
+      "unit": "scalar"
+    },
+    "hdr": "753",
     "id": "WRX_TID4",
     "make": "Subaru",
     "model": "WRX",
@@ -47374,31 +47955,6 @@
     "id": "CROSSTREK_TID4",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Tire 4 id",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "1028"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "len": 24,
-      "max": 16777215,
-      "unit": "scalar"
-    },
-    "hdr": "753",
-    "id": "FORESTER_TID4",
-    "make": "Subaru",
-    "model": "Forester",
     "name": "Tire 4 id",
     "path": "Tires",
     "pid": "22",
@@ -47752,7 +48308,57 @@
       "unit": "kilometers"
     },
     "hdr": "701",
-    "id": "DAIHATSU_ODO_V4",
+    "id": "DAIHATSU_ODO_V5",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "701",
+    "id": "LANDCRUISER_ODO_V5",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "747",
+    "id": "DAIHATSU_ODO_V6",
     "make": "Daihatsu",
     "model": "",
     "name": "Odometer",
@@ -47777,9 +48383,9 @@
       "unit": "kilometers"
     },
     "hdr": "747",
-    "id": "DAIHATSU_ODO_V3",
-    "make": "Daihatsu",
-    "model": "",
+    "id": "LANDCRUISER_ODO_V6",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -48114,6 +48720,30 @@
     "id": "DAIHATSU_ODO_2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Odometer variant",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1700"
+    },
+    "debug": true,
+    "eax": "40",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_ODO_V3",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Odometer variant",
     "path": "Trips",
     "pid": "22",
@@ -48960,6 +49590,30 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_ODO",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_ODO1",
     "make": "Rolls",
     "model": "Royce",
@@ -49135,6 +49789,31 @@
     "id": "DAIHATSU_ODO_V2",
     "make": "Daihatsu",
     "model": "",
+    "name": "[EGS] mileage/odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_ODO_V4",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "[EGS] mileage/odometer",
     "path": "Trips",
     "pid": "22",
@@ -49738,6 +50417,31 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_OIL_CHANGE_DIST",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Distance since last oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 304,
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "SUPRA_OIL_CHANGE_DIST",
     "make": "Toyota",
     "model": "GR-Supra",
@@ -50044,6 +50748,31 @@
     "id": "DAIHATSU_ODO2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_ODO_V2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Odometer #2",
     "path": "Trips",
     "pid": "22",
@@ -52569,6 +53298,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "LANDCRUISER_TIRE_FR_SPD",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -52774,6 +53529,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "21"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 326,
+      "mul": 1.28,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "LANDCRUISER_VSS_V3",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*1.28 clamped to [326]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "29"
     },
     "debug": false,
@@ -52867,6 +53647,31 @@
     "id": "DAIHATSU_FLI_VOL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "29"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "LANDCRUISER_FLI_VOL",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "21",
@@ -53050,6 +53855,32 @@
       "add": -0.5,
       "div": 58,
       "len": 8,
+      "max": 3.896,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_FL",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "bars"
     },
@@ -53111,6 +53942,33 @@
     "id": "DAIHATSU_LAT_G",
     "make": "Daihatsu",
     "model": "",
+    "name": "Lateral g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
+    "id": "LANDCRUISER_LAT_G",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Lateral g",
     "path": "Orientation",
     "pid": "21",
@@ -53307,6 +54165,30 @@
     "id": "DAIHATSU_GEAR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 20,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "LANDCRUISER_GEAR_V2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Gear",
     "path": "Transmission",
     "pid": "21",
@@ -54798,6 +55680,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "LANDCRUISER_TT_1",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "RAV4PRIME_TT_1",
     "make": "Toyota",
     "model": "RAV4-Prime",
@@ -54855,33 +55764,6 @@
     "id": "DAIHATSU_TT_1",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TT_1",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -55211,6 +56093,31 @@
       "unit": "psi"
     },
     "hdr": "753",
+    "id": "FORESTER_TP_RL",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "753",
     "id": "WRX_TP_RL",
     "make": "Subaru",
     "model": "WRX",
@@ -55239,31 +56146,6 @@
     "id": "CROSSTREK_TP_RL",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1022"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "753",
-    "id": "FORESTER_TP_RL",
-    "make": "Subaru",
-    "model": "Forester",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -56092,6 +56974,30 @@
     "id": "DAIHATSU_HVBAT_SOC_DISPLAY",
     "make": "Daihatsu",
     "model": "",
+    "name": "HV battery charge (displayed)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1739"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "745",
+    "id": "LANDCRUISER_HVBAT_SOC_DISPLAY",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "HV battery charge (displayed)",
     "path": "Battery",
     "pid": "22",
@@ -58163,9 +59069,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D2",
-    "id": "DAIHATSU_VSS_V3",
+    "id": "DAIHATSU_VSS_V2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F0D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "LANDCRUISER_VSS_V2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -58454,32 +59384,6 @@
       "unit": "percent"
     },
     "hdr": "7D2",
-    "id": "LANDCRUISER_SOC",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
-    "name": "State of charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1F5B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 100,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D2",
     "id": "PRIUSPRIME_SOC",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -58549,6 +59453,46 @@
     "id": "COROLLAHYBRID_TID_1",
     "make": "Toyota",
     "model": "Corolla-Hybrid",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TID_1",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -58709,46 +59653,6 @@
     "id": "GRCOROLLA_TID_1",
     "make": "Toyota",
     "model": "GR-Corolla",
-    "name": "Tire 1 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TID_1",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -62237,6 +63141,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_EOP",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Engine oil pressure",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "586F"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_EOP",
     "make": "Rolls",
     "model": "Royce",
@@ -63629,6 +64557,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_ATF_TEMP",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "ATF temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA12"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_ATF_TEMP",
     "make": "Rolls",
     "model": "Royce",
@@ -63728,6 +64680,30 @@
     "id": "DAIHATSU_EOT_V2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA25"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_EOT",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -63989,6 +64965,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_GEAR",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_GEAR",
     "make": "Rolls",
     "model": "Royce",
@@ -64088,6 +65088,30 @@
     "id": "DAIHATSU_TIME_D",
     "make": "Daihatsu",
     "model": "",
+    "name": "Time in D",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_TIME_D",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Time in D",
     "path": "Engine",
     "pid": "22",
@@ -78736,6 +79760,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "LANDCRUISER_TIRE_RR_SPD",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -79050,6 +80101,33 @@
       "bix": 16,
       "div": 58,
       "len": 8,
+      "max": 3.896,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_RL",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "bars"
     },
@@ -79122,6 +80200,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 16,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "LANDCRUISER_YAW_RATE",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Yaw rate value (degrees/se",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -79139,6 +80244,34 @@
     "id": "COROLLAHYBRID_TT_3",
     "make": "Toyota",
     "model": "Corolla-Hybrid",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TT_3",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -79223,34 +80356,6 @@
     "id": "DAIHATSU_TT_3",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TT_3",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -79384,6 +80489,32 @@
       "unit": "psi"
     },
     "hdr": "753",
+    "id": "FORESTER_TP_FR",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "753",
     "id": "WRX_TP_FR",
     "make": "Subaru",
     "model": "WRX",
@@ -79413,32 +80544,6 @@
     "id": "CROSSTREK_TP_FR",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "1022"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 16,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "753",
-    "id": "FORESTER_TP_FR",
-    "make": "Subaru",
-    "model": "Forester",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -79503,6 +80608,32 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "106C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "LANDCRUISER_HVBAT_SOC_MIN",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "HV battery charge (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "2021"
     },
     "debug": false,
@@ -79533,6 +80664,47 @@
     "id": "COROLLAHYBRID_TID_3",
     "make": "Toyota",
     "model": "Corolla-Hybrid",
+    "name": "Tire 3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TID_3",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Tire 3 position",
     "path": "Tires",
     "pid": "22",
@@ -79697,47 +80869,6 @@
     "id": "GRCOROLLA_TID_3",
     "make": "Toyota",
     "model": "GR-Corolla",
-    "name": "Tire 3 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "bix": 16,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TID_3",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
     "name": "Tire 3 position",
     "path": "Tires",
     "pid": "22",
@@ -80029,6 +81160,31 @@
     "id": "DAIHATSU_TIME_M",
     "make": "Daihatsu",
     "model": "",
+    "name": "Time in M",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_TIME_M",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Time in M",
     "path": "Engine",
     "pid": "22",
@@ -97243,6 +98399,33 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "LANDCRUISER_TIRE_RL_SPD",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -97557,6 +98740,33 @@
       "bix": 24,
       "div": 58,
       "len": 8,
+      "max": 3.896,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_RR",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "bars"
     },
@@ -97592,6 +98802,34 @@
     "id": "COROLLAHYBRID_TT_4",
     "make": "Toyota",
     "model": "Corolla-Hybrid",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TT_4",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -97676,34 +98914,6 @@
     "id": "DAIHATSU_TT_4",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 24,
-      "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TT_4",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -97820,6 +99030,34 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 24,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.121212,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -98005,34 +99243,6 @@
       "unit": "psi"
     },
     "hdr": "750",
-    "id": "LANDCRUISER_TP_2",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 24,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
     "id": "PRIUSPRIME_TP_2",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -98087,6 +99297,32 @@
       "unit": "psi"
     },
     "hdr": "753",
+    "id": "FORESTER_TP_FL",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "753",
     "id": "WRX_TP_FL",
     "make": "Subaru",
     "model": "WRX",
@@ -98116,32 +99352,6 @@
     "id": "CROSSTREK_TP_FL",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "1022"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 24,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "753",
-    "id": "FORESTER_TP_FL",
-    "make": "Subaru",
-    "model": "Forester",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -99405,6 +100615,47 @@
       }
     },
     "hdr": "750",
+    "id": "LANDCRUISER_TID_4",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Tire 4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
     "id": "RAV4PRIME_TID_4",
     "make": "Toyota",
     "model": "RAV4-Prime",
@@ -99531,47 +100782,6 @@
     "id": "GRCOROLLA_TID_4",
     "make": "Toyota",
     "model": "GR-Corolla",
-    "name": "Tire 4 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "bix": 24,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TID_4",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
     "name": "Tire 4 position",
     "path": "Tires",
     "pid": "22",
@@ -111712,6 +112922,33 @@
       "bix": 32,
       "div": 58,
       "len": 8,
+      "max": 3.896,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_SPARE",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "bars"
     },
@@ -117371,6 +118608,34 @@
       "bix": 40,
       "div": 4.125,
       "len": 8,
+      "max": 56.121212,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_3",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 40,
+      "div": 4.125,
+      "len": 8,
       "max": 56.8,
       "nullmin": 0,
       "unit": "psi"
@@ -117517,34 +118782,6 @@
     "id": "DAIHATSU_TP_3",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 40,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TP_3",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -122773,6 +124010,33 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 56,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "LANDCRUISER_VVTOT",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Variable valve timing oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -123975,6 +125239,34 @@
       "bix": 56,
       "div": 4.125,
       "len": 8,
+      "max": 56.121212,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_4",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 56,
+      "div": 4.125,
+      "len": 8,
       "max": 56.8,
       "nullmin": 0,
       "unit": "psi"
@@ -124126,34 +125418,6 @@
     "pid": "22",
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 56,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TP_4",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
   {
@@ -126897,6 +128161,33 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 72,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "LANDCRUISER_EOT_V2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -129369,6 +130660,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "LANDCRUISER_TIRE_FL_SPD",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -129608,6 +130926,31 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "21"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
+    "id": "LANDCRUISER_CC_S",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Cruise control speed",
+    "path": "Cruise control",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "21": "30"
     },
     "debug": false,
@@ -129787,6 +131130,33 @@
       "bix": 8,
       "div": 58,
       "len": 8,
+      "max": 3.896,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_FR",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "bars"
     },
@@ -129861,6 +131231,34 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
+    "id": "LANDCRUISER_LNG_G",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Longitudinal g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -129878,6 +131276,34 @@
     "id": "COROLLAHYBRID_TT_2",
     "make": "Toyota",
     "model": "Corolla-Hybrid",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TT_2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -129962,34 +131388,6 @@
     "id": "DAIHATSU_TT_2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 8,
-      "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TT_2",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -130106,6 +131504,34 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 8,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.121212,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_1",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -130291,34 +131717,6 @@
       "unit": "psi"
     },
     "hdr": "750",
-    "id": "LANDCRUISER_TP_1",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 8,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
     "id": "PRIUSPRIME_TP_1",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -130373,6 +131771,32 @@
       "unit": "psi"
     },
     "hdr": "753",
+    "id": "FORESTER_TP_RR",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "753",
     "id": "WRX_TP_RR",
     "make": "Subaru",
     "model": "WRX",
@@ -130402,32 +131826,6 @@
     "id": "CROSSTREK_TP_RR",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "1022"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "753",
-    "id": "FORESTER_TP_RR",
-    "make": "Subaru",
-    "model": "Forester",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -130492,6 +131890,32 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "106C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "LANDCRUISER_HVBAT_SOC_MAX",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "HV battery charge (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "2021"
     },
     "debug": false,
@@ -130522,6 +131946,47 @@
     "id": "COROLLAHYBRID_TID_2",
     "make": "Toyota",
     "model": "Corolla-Hybrid",
+    "name": "Tire 2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TID_2",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
@@ -130686,47 +132151,6 @@
     "id": "GRCOROLLA_TID_2",
     "make": "Toyota",
     "model": "GR-Corolla",
-    "name": "Tire 2 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "bix": 8,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "LANDCRUISER_TID_2",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
@@ -131350,6 +132774,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_KICKDOWN",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_KICKDOWN",
     "make": "Rolls",
     "model": "Royce",
@@ -131526,6 +132975,55 @@
     "id": "DAIHATSU_TQ_CNVRT_LOCKUP",
     "make": "Daihatsu",
     "model": "",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_TQ_CNVRT_LOCKUP",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Torque converter lockup",
     "path": "Transmission",
     "pid": "22",
@@ -131769,6 +133267,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "LANDCRUISER_BRAKE_SWITCH",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Brake switch",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA28"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "SUPRA_BRAKE_SWITCH",
     "make": "Toyota",
     "model": "GR-Supra",
@@ -131913,6 +133436,31 @@
     "id": "DAIHATSU_TIME_S",
     "make": "Daihatsu",
     "model": "",
+    "name": "Time in S",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "LANDCRUISER_TIME_S",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Time in S",
     "path": "Engine",
     "pid": "22",
