@@ -1236,7 +1236,7 @@
     "cmd": {
       "22": "0104"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 150,
@@ -1245,10 +1245,10 @@
       "unit": "noyes"
     },
     "hdr": "7D1",
-    "id": "ELANTRA_TC_SWITCH",
-    "make": "Hyundai",
-    "model": "Elantra",
-    "name": "ABS traction control switch (raw)",
+    "id": "FORTE_TC_SWITCH",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Wheel traction control switch",
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -1270,10 +1270,10 @@
       "unit": "noyes"
     },
     "hdr": "7D1",
-    "id": "FORTE_TC_SWITCH",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "ABS Traction Control Switch (Raw)",
+    "id": "ELANTRA_TC_SWITCH",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "ABS traction control switch (raw)",
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -2782,10 +2782,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DOOR_RL_OPEN",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Door rear left open",
+    "id": "FORTE_DOOR_RL",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left door open?",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -2798,7 +2798,7 @@
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 32,
@@ -2807,10 +2807,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_DOOR_RL",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear left door open?",
+    "id": "VELOSTER_DOOR_RL_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door rear left open",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -2882,10 +2882,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DOOR_FL_OPEN",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Door front left open",
+    "id": "FORTE_DOOR_FL",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left door open?",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -2898,7 +2898,7 @@
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 34,
@@ -2907,10 +2907,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_DOOR_FL",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front left door open?",
+    "id": "VELOSTER_DOOR_FL_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door front left open",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -2957,10 +2957,10 @@
       "unit": "scalar"
     },
     "hdr": "770",
-    "id": "VELOSTER_LOCK_FR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Door lock front right (raw)",
+    "id": "FORTE_LOCK_FR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Door lock front right",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -2973,7 +2973,7 @@
     "cmd": {
       "22": "BC04"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 34,
@@ -2982,10 +2982,10 @@
       "unit": "scalar"
     },
     "hdr": "770",
-    "id": "FORTE_LOCK_FR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Door Lock Front Right (Raw)",
+    "id": "VELOSTER_LOCK_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door lock front right (raw)",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3057,10 +3057,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_HANDBRAKE",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Handbrake switch",
+    "id": "FORTE_HANDBRAKE",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Handbrake engaged?",
     "path": "Control",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3073,7 +3073,7 @@
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 35,
@@ -3082,10 +3082,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_HANDBRAKE",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Handbrake engaged?",
+    "id": "VELOSTER_HANDBRAKE",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Handbrake switch",
     "path": "Control",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3157,10 +3157,10 @@
       "unit": "scalar"
     },
     "hdr": "770",
-    "id": "VELOSTER_LOCK_FL",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Door lock front left (raw)",
+    "id": "FORTE_LOCK_FL",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Door lock front left ",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3173,7 +3173,7 @@
     "cmd": {
       "22": "BC04"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 35,
@@ -3182,10 +3182,10 @@
       "unit": "scalar"
     },
     "hdr": "770",
-    "id": "FORTE_LOCK_FL",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Door Lock Front Left (Raw)",
+    "id": "VELOSTER_LOCK_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door lock front left (raw)",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3257,10 +3257,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DOOR_FR_OPEN",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Door front right open",
+    "id": "FORTE_DOOR_FR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right door open?",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3273,7 +3273,7 @@
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 36,
@@ -3282,10 +3282,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_DOOR_FR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front right door open?",
+    "id": "VELOSTER_DOOR_FR_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door front right open",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3312,6 +3312,31 @@
     "model": "Kona",
     "name": "Front right door open?",
     "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "FORTE_REVERSE_GEAR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Reverse gear selected",
+    "path": "Transmission",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3382,31 +3407,6 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_REVERSE_GEAR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Reverse Gear Selected",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 36,
-    "cmd": {
-      "22": "BC04"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 36,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
     "id": "KONA_REVERSE_GEAR",
     "make": "Hyundai",
     "model": "Kona",
@@ -3457,10 +3457,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DOOR_RR_OPEN",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Door rear right open",
+    "id": "FORTE_DOOR_RR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right door open?",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3473,7 +3473,7 @@
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 37,
@@ -3482,10 +3482,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_DOOR_RR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear right door open?",
+    "id": "VELOSTER_DOOR_RR_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door rear right open",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3582,10 +3582,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DOOR_TRUNK_OPEN",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Door trunk open",
+    "id": "FORTE_TRUNK",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Trunk open?",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3598,7 +3598,7 @@
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 39,
@@ -3607,10 +3607,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_TRUNK",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Trunk open?",
+    "id": "VELOSTER_DOOR_TRUNK_OPEN",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Door trunk open",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3957,10 +3957,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_BELT_PASSENGER",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Seatbelt passenger",
+    "id": "FORTE_BELT_PASSENGER",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Passenger seatbelt latched?",
     "path": "Seatbelts",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3973,7 +3973,7 @@
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 40,
@@ -3982,10 +3982,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_BELT_PASSENGER",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Passenger seatbelt latched?",
+    "id": "VELOSTER_BELT_PASSENGER",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Seatbelt passenger",
     "path": "Seatbelts",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -4084,10 +4084,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_BELT_DRIVER",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Seatbelt driver",
+    "id": "FORTE_BELT_DRIVER",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Driver seatbelt latched?",
     "path": "Seatbelts",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -4100,7 +4100,7 @@
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 41,
@@ -4109,10 +4109,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_BELT_DRIVER",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Driver seatbelt latched?",
+    "id": "VELOSTER_BELT_DRIVER",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Seatbelt driver",
     "path": "Seatbelts",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -6013,6 +6013,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_GEAR_LOCKUP",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Gear lock-up",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 9,
     "cmd": {
       "01": "01"
@@ -6928,6 +6953,33 @@
     "id": "LANDCRUISER_ATF_PAN_T",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_ATF_PAN_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Transmission temperature (pan)",
     "path": "Transmission",
     "pid": "21",
@@ -9815,6 +9867,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 410,
+      "min": -410,
+      "mul": 1.5,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7B3",
+    "id": "RAV4HYBRID_STEERING_ANGLE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Steering angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*1.5 clamped to [-410, 410]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1022"
     },
     "debug": false,
@@ -9830,6 +9909,32 @@
     "id": "COROLLAHYBRID_FLV",
     "make": "Toyota",
     "model": "Corolla-Hybrid",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655,
+      "nullmax": 655,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "RAV4HYBRID_FLV",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -9945,51 +10050,27 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "1022"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 100,
-      "len": 16,
-      "max": 655,
-      "nullmax": 655,
-      "unit": "liters"
-    },
-    "hdr": "7C0",
-    "id": "RAV4HYBRID_FLV",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
-    "name": "Fuel remaining",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "1024"
     },
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 10000,
       "len": 16,
-      "max": 65535,
-      "unit": "scalar"
+      "max": 3686,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
     "id": "FORESTER_FR_VSS",
     "make": "Subaru",
     "model": "Forester",
-    "name": "Front right tire speed",
+    "name": "Front right wheel speed",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw clamped to [65535]",
+    "scaling": "raw*562.5 /10000 clamped to [3686]",
     "suggestedMetric": "",
-    "unit": "scalar"
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -10048,20 +10129,22 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 10000,
       "len": 16,
-      "max": 65535,
-      "unit": "scalar"
+      "max": 3686,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
     "id": "FORESTER_FL_VSS",
     "make": "Subaru",
     "model": "Forester",
-    "name": "Front left tire speed",
+    "name": "Front left wheel speed",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw clamped to [65535]",
+    "scaling": "raw*562.5 /10000 clamped to [3686]",
     "suggestedMetric": "",
-    "unit": "scalar"
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -10120,20 +10203,22 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 10000,
       "len": 16,
-      "max": 65535,
-      "unit": "scalar"
+      "max": 3686,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
     "id": "FORESTER_RR_VSS",
     "make": "Subaru",
     "model": "Forester",
-    "name": "Rear right tire speed",
+    "name": "Rear right wheel speed",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw clamped to [65535]",
+    "scaling": "raw*562.5 /10000 clamped to [3686]",
     "suggestedMetric": "",
-    "unit": "scalar"
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -10181,6 +10266,32 @@
     "make": "Toyota",
     "model": "GR-Corolla",
     "name": "Coupling Temperature",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw/128 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1026"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B1",
+    "id": "RAV4HYBRID_COUPLING_TEMP",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Coupling temperature",
     "path": "Drivetrain",
     "pid": "22",
     "scaling": "raw/128 clamped to [-20, 100]",
@@ -10244,20 +10355,22 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 10000,
       "len": 16,
-      "max": 65535,
-      "unit": "scalar"
+      "max": 3686,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
     "id": "FORESTER_RL_VSS",
     "make": "Subaru",
     "model": "Forester",
-    "name": "Rear left tire speed",
+    "name": "Rear left wheel speed",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw clamped to [65535]",
+    "scaling": "raw*562.5 /10000 clamped to [3686]",
     "suggestedMetric": "",
-    "unit": "scalar"
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -10317,7 +10430,8 @@
     "eax": "",
     "fmt": {
       "len": 16,
-      "max": 65535,
+      "max": 32767,
+      "min": -32767,
       "sign": true,
       "unit": "degrees"
     },
@@ -10325,10 +10439,10 @@
     "id": "FORESTER_STEER_ANGLE",
     "make": "Subaru",
     "model": "Forester",
-    "name": "Steering wheel angle (ABS)",
+    "name": "Steering wheel angle",
     "path": "Control",
     "pid": "22",
-    "scaling": "raw clamped to [65535]",
+    "scaling": "raw clamped to [-32767, 32767]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -10438,6 +10552,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1074"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 1000,
+      "mul": 10,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_ENG_OIL_PRESS",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Engine Oil Pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /128 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10CD"
     },
     "debug": true,
@@ -10481,6 +10621,33 @@
     "id": "DAIHATSU_LFPS",
     "make": "Daihatsu",
     "model": "",
+    "name": "Low fuel pressure sensor",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10CD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_LFPS",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Low fuel pressure sensor",
     "path": "Fuel",
     "pid": "22",
@@ -12089,6 +12256,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1627"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "RAV4HYBRID_TF1_PAN",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Transmission fluid pan temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1628"
     },
     "debug": false,
@@ -12187,6 +12381,33 @@
     "make": "Toyota",
     "model": "Land-Cruiser",
     "name": "Transmission fluid post-converter temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1628"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "RAV4HYBRID_TF2_CONV",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Transmission Fluid Post-Converter Temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
@@ -12398,6 +12619,31 @@
     "id": "LANDCRUISER_HVBAT_CMU01_VOLT",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "HV battery module 01 voltage",
+    "path": "Battery.Modules.01",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "RAV4HYBRID_HVBAT_CMU01_VOLT",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "HV battery module 01 voltage",
     "path": "Battery.Modules.01",
     "pid": "22",
@@ -24777,6 +25023,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_VSS2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4AB1"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_VSS2",
     "make": "Rolls",
     "model": "Royce",
@@ -26444,6 +26715,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_VSS",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_VSS",
     "make": "Rolls",
     "model": "Royce",
@@ -26669,6 +26965,30 @@
     "id": "LANDCRUISER_VSS_INSTR",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Vehicle speed (instrument cluster)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D240"
+    },
+    "debug": true,
+    "eax": "0D",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_VSS_INSTR",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Vehicle speed (instrument cluster)",
     "path": "Movement",
     "pid": "22",
@@ -27317,6 +27637,32 @@
       "unit": "rpm"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_TQ_CNVRT_RPM",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_TQ_CNVRT_RPM",
     "make": "Rolls",
     "model": "Royce",
@@ -27479,6 +27825,33 @@
     "id": "LANDCRUISER_AXLE_FRONT_ACTUAL_TORQUE",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front axle, actual torque",
     "path": "Tires",
     "pid": "22",
@@ -27830,6 +28203,33 @@
     "id": "LANDCRUISER_FL_SPD",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_FL_SPD",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -28593,6 +28993,32 @@
       "unit": "degrees"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_VGT_CAL_ANGLE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Variable geometry turbocharger calibration angle",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 156.25,
+      "unit": "degrees"
+    },
+    "hdr": "6F1",
     "id": "SUPRA_VGT_CAL_ANGLE",
     "make": "Toyota",
     "model": "GR-Supra",
@@ -28829,6 +29255,35 @@
       "unit": "milesPerHour"
     },
     "hdr": "7E2",
+    "id": "FORTE_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [-180, 180]",
+    "suggestedMetric": "speed",
+    "unit": "milesPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
+      "div": 100,
+      "len": 16,
+      "max": 180,
+      "min": -180,
+      "sign": true,
+      "unit": "milesPerHour"
+    },
+    "hdr": "7E2",
     "id": "NIROEV_VSS",
     "make": "Kia",
     "model": "Niro-EV",
@@ -28839,6 +29294,32 @@
     "signalGroups": [],
     "suggestedMetric": "speed",
     "unit": "milesPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_MIS_4",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Misfire count #4",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -30726,7 +31207,7 @@
     "id": "FORTE_SAE_LAMBDA_B1S1",
     "make": "Kia",
     "model": "Forte",
-    "name": "SAE Lambda B1S1 (Actual)",
+    "name": "SAE lambda B1S1",
     "path": "Engine",
     "pid": "01",
     "scaling": "raw*2 /32768 clamped to [2]",
@@ -30959,6 +31440,34 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_ATF_TQC_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "182E"
     },
     "debug": false,
@@ -31037,6 +31546,32 @@
     "id": "LANDCRUISER_HVBAT_CMU02_VOLT",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "HV battery module 02 voltage",
+    "path": "Battery.Modules.02",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "RAV4HYBRID_HVBAT_CMU02_VOLT",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "HV battery module 02 voltage",
     "path": "Battery.Modules.02",
     "pid": "22",
@@ -32390,6 +32925,33 @@
       "unit": "rpm"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_TRANS_SHAFT_RPM",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_TRANS_SHAFT_RPM",
     "make": "Rolls",
     "model": "Royce",
@@ -32726,6 +33288,34 @@
     "id": "LANDCRUISER_FR_SPD",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_FR_SPD",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -34543,6 +35133,33 @@
     "cmd": {
       "22": "E002"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_INJ_DUR_1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Injection duration cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E002"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -34588,33 +35205,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1220.7 clamped to [53]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_INJ_DUR_1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Injection Duration Cyl 1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
     "suggestedMetric": "",
     "unit": "seconds"
   },
@@ -34702,6 +35292,33 @@
     "cmd": {
       "22": "E002"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_INJ_DUR_2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Injection duration cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "E002"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -34752,38 +35369,11 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 192,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 192,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_INJ_DUR_2",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Injection Duration Cyl 2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 200,
     "cmd": {
       "22": "0104"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 200,
@@ -34795,9 +35385,9 @@
       "unit": "degrees"
     },
     "hdr": "7D1",
-    "id": "ELANTRA_STEER_ANGLE",
-    "make": "Hyundai",
-    "model": "Elantra",
+    "id": "FORTE_STEER_ANGLE",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Steering wheel angle",
     "path": "Control",
     "pid": "22",
@@ -34823,10 +35413,10 @@
       "unit": "degrees"
     },
     "hdr": "7D1",
-    "id": "FORTE_STEER_ANGLE",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Steering Wheel Angle",
+    "id": "ELANTRA_STEER_ANGLE",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Steering wheel angle",
     "path": "Control",
     "pid": "22",
     "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
@@ -35079,6 +35669,33 @@
     "cmd": {
       "22": "E002"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_INJ_DUR_3",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Injection duration cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "E002"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -35124,33 +35741,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1220.7 clamped to [53]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 208,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_INJ_DUR_3",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Injection Duration Cyl 3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
     "suggestedMetric": "",
     "unit": "seconds"
   },
@@ -35403,6 +35993,33 @@
     "cmd": {
       "22": "E002"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_INJ_DUR_4",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Injection duration cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "E002"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -35453,33 +36070,6 @@
   },
   {
     "bitLength": 16,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53.7,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_INJ_DUR_4",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Injection Duration Cyl 4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53.7]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
     "bitOffset": 232,
     "cmd": {
       "22": "01A4"
@@ -35499,6 +36089,34 @@
     "id": "KONA_CLUTCH_1_T",
     "make": "Hyundai",
     "model": "Kona",
+    "name": "Clutch #1 temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*2 +-40 clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 232,
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "mul": 2,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "FORTE_CLUTCH_1_T",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Clutch #1 temperature",
     "path": "Transmission",
     "pid": "22",
@@ -36944,6 +37562,34 @@
     "bitLength": 16,
     "bitOffset": 24,
     "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "bix": 24,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_STEER_ANGLE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 +-3276.8 clamped to [-3276, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
       "22": "2002"
     },
     "debug": false,
@@ -37104,11 +37750,39 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 248,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 248,
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "mul": 2,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "FORTE_CLUTCH_2_T",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Clutch #2 temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*2 +-40 clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 256,
     "cmd": {
       "22": "0104"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 256,
@@ -37119,9 +37793,9 @@
       "unit": "percent"
     },
     "hdr": "7D1",
-    "id": "ELANTRA_BRAKE_P",
-    "make": "Hyundai",
-    "model": "Elantra",
+    "id": "FORTE_BRAKE_P",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Brake pressure",
     "path": "Control",
     "pid": "22",
@@ -37146,10 +37820,10 @@
       "unit": "percent"
     },
     "hdr": "7D1",
-    "id": "FORTE_BRAKE_P",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Brake Pressure",
+    "id": "ELANTRA_BRAKE_P",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "name": "Brake pressure",
     "path": "Control",
     "pid": "22",
     "scaling": "raw/86.7 clamped to [100]",
@@ -39495,6 +40169,34 @@
       "unit": "newtonMeters"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_AXLE_FRONT_SETPOINT_TORQUE",
     "make": "Rolls",
     "model": "Royce",
@@ -39834,6 +40536,34 @@
     "id": "LANDCRUISER_RL_SPD",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_RL_SPD",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -40584,6 +41314,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 392,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 392,
+      "div": 65535,
+      "len": 16,
+      "max": 10,
+      "mul": 10,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_WG_VOLTAGE",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Waste gate voltage",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /65535 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 40,
     "cmd": {
       "01": "70"
@@ -40746,6 +41503,58 @@
     "bitLength": 16,
     "bitOffset": 40,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_PREV_TRIP_DST",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Previous trip distance",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "FORTE_BMS_CHG_PWR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Battery available charge power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -40788,32 +41597,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS available charge power",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "kilowatts"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_CHG_PWR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "BMS Available Charge Power",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/100 clamped to [655.35]",
@@ -40927,6 +41710,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 408,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 408,
+      "div": 65535,
+      "len": 16,
+      "max": 200,
+      "mul": 200,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_WG_DUTY",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Waste gate duty",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*200 /65535 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 424,
     "cmd": {
       "22": "0101"
@@ -41006,6 +41816,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 424,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 424,
+      "div": 65535,
+      "len": 16,
+      "max": 400,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_WG_POSITION",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Waste gate position",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [400]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 440,
     "cmd": {
       "22": "E021"
@@ -41024,6 +41861,33 @@
     "id": "VELOSTER_WG_SETPOINT",
     "make": "Hyundai",
     "model": "Veloster",
+    "name": "Waste gate setpoint",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 440,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 440,
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_WG_SETPOINT",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Waste gate setpoint",
     "path": "Engine",
     "pid": "22",
@@ -41626,6 +42490,34 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_RR_SPD",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_RR_SPD",
     "make": "Rolls",
     "model": "Royce",
@@ -41840,6 +42732,32 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
+    "id": "FORTE_MIS_1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Misfire count #1",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
     "id": "SOUL_MIS_1",
     "make": "Kia",
     "model": "Soul",
@@ -41849,6 +42767,32 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "FORTE_BMS_DISCHG_PWR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Battery available discharge power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
   },
   {
     "bitLength": 16,
@@ -41918,32 +42862,6 @@
       "unit": "kilowatts"
     },
     "hdr": "7D4",
-    "id": "FORTE_BMS_DISCHG_PWR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "BMS Available Discharge Power",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "kilowatts"
-    },
-    "hdr": "7D4",
     "id": "KONA_BMS_DISCHG_PWR",
     "make": "Hyundai",
     "model": "Kona",
@@ -41975,6 +42893,34 @@
     "id": "VELOSTER_TURBO_BOOST",
     "make": "Hyundai",
     "model": "Veloster",
+    "name": "Turbo boost pressure (gauge)",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/831.55690902 +-12 clamped to [-10, 66.81]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -12,
+      "bix": 56,
+      "div": 831.55690902,
+      "len": 16,
+      "max": 66.81,
+      "min": -10,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_TURBO_BOOST",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Turbo boost pressure (gauge)",
     "path": "Engine",
     "pid": "22",
@@ -43651,6 +44597,32 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
+    "id": "FORTE_MIS_2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Misfire count #2",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
     "id": "SOUL_MIS_2",
     "make": "Kia",
     "model": "Soul",
@@ -43660,6 +44632,34 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7D4",
+    "id": "FORTE_STEER_ANGLE_V2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -45482,6 +46482,32 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
+    "id": "FORTE_MIS_3",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Misfire count #3",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
     "id": "SOUL_MIS_3",
     "make": "Kia",
     "model": "Soul",
@@ -46193,6 +47219,30 @@
     "id": "LANDCRUISER_ODO_V7",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "28"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_ODO",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Odometer",
     "path": "Trips",
     "pid": "21",
@@ -47596,6 +48646,31 @@
       "unit": "kilometers"
     },
     "hdr": "7C6",
+    "id": "FORTE_ODO_KM",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Odometer (metric)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7C6",
     "id": "KONA_ODO_KM",
     "make": "Hyundai",
     "model": "Kona",
@@ -47851,31 +48926,6 @@
       "unit": "kilometers"
     },
     "hdr": "7C6",
-    "id": "FORTE_ODO_KM",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Odometer (Metric)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7C6",
     "id": "NIROEV_ODO_KM",
     "make": "Kia",
     "model": "Niro-EV",
@@ -47961,6 +49011,31 @@
     "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
+      "max": 16777215,
+      "unit": "miles"
+    },
+    "hdr": "7C6",
+    "id": "FORTE_ODO_MI",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Odometer (imperial)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "miles"
   },
   {
     "bitLength": 24,
@@ -48206,31 +49281,6 @@
       "unit": "miles"
     },
     "hdr": "7C6",
-    "id": "FORTE_ODO_MI",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Odometer (Imperial)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "miles"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "miles"
-    },
-    "hdr": "7C6",
     "id": "NIROEV_ODO_MI",
     "make": "Kia",
     "model": "Niro-EV",
@@ -48357,6 +49407,31 @@
       "max": 16777215,
       "unit": "kilometers"
     },
+    "hdr": "701",
+    "id": "RAV4HYBRID_ODO_V5",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
     "hdr": "747",
     "id": "DAIHATSU_ODO_V6",
     "make": "Daihatsu",
@@ -48386,6 +49461,31 @@
     "id": "LANDCRUISER_ODO_V6",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "747",
+    "id": "RAV4HYBRID_ODO_V4",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -48744,6 +49844,30 @@
     "id": "LANDCRUISER_ODO_V3",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Odometer variant",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1700"
+    },
+    "debug": true,
+    "eax": "40",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_ODO_2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Odometer variant",
     "path": "Trips",
     "pid": "22",
@@ -49614,6 +50738,30 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_ODO1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_ODO1",
     "make": "Rolls",
     "model": "Royce",
@@ -49814,6 +50962,31 @@
     "id": "LANDCRUISER_ODO_V4",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "[EGS] mileage/odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_ODO_V3",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "[EGS] mileage/odometer",
     "path": "Trips",
     "pid": "22",
@@ -50442,6 +51615,31 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_OIL_CHANGE_DIST",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Distance since last oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 304,
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "SUPRA_OIL_CHANGE_DIST",
     "make": "Toyota",
     "model": "GR-Supra",
@@ -50773,6 +51971,31 @@
     "id": "LANDCRUISER_ODO_V2",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_ODO2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Odometer #2",
     "path": "Trips",
     "pid": "22",
@@ -51195,6 +52418,31 @@
   },
   {
     "bitLength": 4,
+    "bitOffset": 188,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 188,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7E1",
+    "id": "FORTE_GEAR_CUR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
     "bitOffset": 196,
     "cmd": {
       "22": "01A4"
@@ -51211,6 +52459,31 @@
     "id": "KONA_GEAR_NXT",
     "make": "Hyundai",
     "model": "Kona",
+    "name": "Next gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 196,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 196,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7E1",
+    "id": "FORTE_GEAR_NXT",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Next gear",
     "path": "Transmission",
     "pid": "22",
@@ -53324,6 +54597,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_TIRE_FR_SPD",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -53365,6 +54664,32 @@
     "id": "DAIHATSU_TP_2_FL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_2_FL",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -53443,6 +54768,32 @@
     "id": "DAIHATSU_TT_FL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_FL",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -53543,6 +54894,31 @@
     "id": "LANDCRUISER_VSS_V3",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*1.28 clamped to [326]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "21"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 326,
+      "mul": 1.28,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_VSS_V3",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "21",
@@ -53672,6 +55048,31 @@
     "id": "LANDCRUISER_FLI_VOL",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "29"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "RAV4HYBRID_FLI_VOL",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "21",
@@ -53899,6 +55300,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_FL",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "47"
     },
     "debug": false,
@@ -53969,6 +55396,33 @@
     "id": "LANDCRUISER_LAT_G",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Lateral g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_LAT_G",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Lateral g",
     "path": "Orientation",
     "pid": "21",
@@ -54066,6 +55520,38 @@
     "make": "Toyota",
     "model": "GR-Corolla",
     "name": "Parking Brake",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "62"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "",
+          "value": "Off"
+        },
+        "2": {
+          "description": "",
+          "value": "On"
+        }
+      }
+    },
+    "hdr": "7D0",
+    "id": "RAV4HYBRID_PARKING_BRAKE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Parking brake",
     "path": "Control",
     "pid": "21",
     "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
@@ -54195,6 +55681,56 @@
     "scaling": "raw clamped to [20]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 20,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_GEAR",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0005"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "FORESTER_COOLANT_T",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -54366,32 +55902,6 @@
     "id": "CROSSTREK_FLI",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [255]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "002F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 255,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E0",
-    "id": "FORESTER_FLI",
-    "make": "Subaru",
-    "model": "Forester",
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
@@ -55809,33 +57319,6 @@
     "fmt": {
       "add": -40,
       "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "RAV4HYBRID_TT_1",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
-    "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -55870,6 +57353,32 @@
     "id": "GRCOROLLA_TT_FL",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_FL_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -55923,6 +57432,32 @@
     "make": "Toyota",
     "model": "GR-Corolla",
     "name": "Master Cylinder Sensor Temperature",
+    "path": "Brakes",
+    "pid": "22",
+    "scaling": "raw+-80 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1006"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -80,
+      "len": 8,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_MASTER_CYL_TEMP",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Master cylinder sensor temperature",
     "path": "Brakes",
     "pid": "22",
     "scaling": "raw+-80 clamped to [-20, 100]",
@@ -56082,6 +57617,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 20,
+      "unit": "volts"
+    },
+    "hdr": "7C0",
+    "id": "RAV4HYBRID_BATTERY_VOLTAGE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Battery voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1022"
     },
     "debug": false,
@@ -56204,6 +57764,58 @@
     "scaling": "raw/1.42 +-41 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1059"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -41,
+      "div": 1.42,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_ACCEL_PEDAL",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Accelerator Pedal",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/1.42 +-41 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "106B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7E6",
+    "id": "FORESTER_ATF_T",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "ATF temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -56936,6 +58548,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1638"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_ATF_TEMP",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Transmission Fluid Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1739"
     },
     "debug": false,
@@ -56998,6 +58636,30 @@
     "id": "LANDCRUISER_HVBAT_SOC_DISPLAY",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "HV battery charge (displayed)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1739"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "745",
+    "id": "RAV4HYBRID_HVBAT_SOC_DISPLAY",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "HV battery charge (displayed)",
     "path": "Battery",
     "pid": "22",
@@ -59107,6 +60769,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F0D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_VSS_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F2F"
     },
     "debug": false,
@@ -59227,6 +60913,32 @@
       "unit": "percent"
     },
     "hdr": "700",
+    "id": "RAV4HYBRID_FLI",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F2F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
     "id": "RAV4_FLI",
     "make": "Toyota",
     "model": "RAV4",
@@ -59283,6 +60995,32 @@
     "id": "COROLLAHYBRID_SOC",
     "make": "Toyota",
     "model": "Corolla-Hybrid",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_SOC",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "State of charge",
     "path": "Battery",
     "pid": "22",
@@ -59387,32 +61125,6 @@
     "id": "PRIUSPRIME_SOC",
     "make": "Toyota",
     "model": "Prius-Prime",
-    "name": "State of charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1F5B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 100,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D2",
-    "id": "RAV4HYBRID_SOC",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
     "name": "State of charge",
     "path": "Battery",
     "pid": "22",
@@ -63165,6 +64877,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_EOP",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Engine oil pressure",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "586F"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_EOP",
     "make": "Rolls",
     "model": "Royce",
@@ -64581,6 +66317,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_ATF_TEMP_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "ATF temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA12"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_ATF_TEMP",
     "make": "Rolls",
     "model": "Royce",
@@ -64704,6 +66464,30 @@
     "id": "LANDCRUISER_EOT",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA25"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_EOT_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -64989,6 +66773,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_GEAR_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_GEAR",
     "make": "Rolls",
     "model": "Royce",
@@ -65112,6 +66920,30 @@
     "id": "LANDCRUISER_TIME_D",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Time in D",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_TIME_D",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Time in D",
     "path": "Engine",
     "pid": "22",
@@ -65884,6 +67716,31 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_RL_VSS",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "21": "02"
     },
     "debug": false,
@@ -66035,6 +67892,33 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 104,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "FORTE_ATF_T",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Automatic transmission fluid temperature",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -66779,6 +68663,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_RR_VSS",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -66830,31 +68739,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "ABS speed rear right",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_RR_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "ABS Speed Rear Right",
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -67285,6 +69169,33 @@
       "unit": "celsius"
     },
     "hdr": "7A0",
+    "id": "FORTE_TT_RL",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 104,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
     "id": "KONAEV_TT_RL",
     "make": "Hyundai",
     "model": "Kona-Electric",
@@ -67381,6 +69292,59 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "22": "C101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "FORTE_TIRE_RL_SPD",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_KNOCK_RETARD_2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Knock retard cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -67435,34 +69399,6 @@
   },
   {
     "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_KNOCK_RETARD_2",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Knock Retard Cyl 2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
       "21": "01"
@@ -67485,6 +69421,31 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_RR_VSS",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -68444,6 +70405,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_RL_VSS",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -68495,31 +70481,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "ABS speed rear left",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_RL_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "ABS Speed Rear Left",
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -69163,32 +71124,6 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "FORTE_TP_RR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Pressure Rear Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
     "id": "KONA_TP_RR",
     "make": "Hyundai",
     "model": "Kona",
@@ -69255,6 +71190,59 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
+      "22": "C101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "FORTE_TIRE_RR_SPD",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_KNOCK_RETARD_3",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Knock retard cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -69304,34 +71292,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_KNOCK_RETARD_3",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Knock Retard Cyl 3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -69564,6 +71524,33 @@
       "unit": "celsius"
     },
     "hdr": "7D4",
+    "id": "FORTE_BMS_MIN_TEMP",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Battery min temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
     "id": "VELOSTER_BMS_MIN_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -69623,33 +71610,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS battery min temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_MIN_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "BMS Battery Min Temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -70936,32 +72896,6 @@
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "FORTE_TT_RR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Temperature Rear Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [-50, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "len": 8,
-      "max": 100,
-      "min": -50,
-      "unit": "celsius"
-    },
-    "hdr": "7A0",
     "id": "KONA_TT_RR",
     "make": "Hyundai",
     "model": "Kona",
@@ -71098,6 +73032,34 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "FORTE_KNOCK_RETARD_4",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Knock retard cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_KNOCK_RETARD_4",
     "make": "Hyundai",
     "model": "Veloster",
@@ -71133,34 +73095,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_KNOCK_RETARD_4",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Knock Retard Cyl 4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -71393,6 +73327,33 @@
       "unit": "celsius"
     },
     "hdr": "7D4",
+    "id": "FORTE_BMS_MOD1_TEMP",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Battery module 1 temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
     "id": "VELOSTER_BMS_MOD1_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -71452,33 +73413,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS battery mod 1 temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_MOD1_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "BMS Battery Mod 1 Temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -72683,6 +74617,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "FORTE_TP_RR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "IONIQPHEV_TP_RL",
     "make": "Hyundai",
     "model": "IONIQ-Electric",
@@ -73148,6 +75108,33 @@
       "unit": "celsius"
     },
     "hdr": "7D4",
+    "id": "FORTE_BMS_MOD2_TEMP",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Battery module 2 temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
     "id": "VELOSTER_BMS_MOD2_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -73207,33 +75194,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS battery mod 2 temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_MOD2_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "BMS Battery Mod 2 Temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -75766,6 +77726,33 @@
       "unit": "celsius"
     },
     "hdr": "7A0",
+    "id": "FORTE_TT_RR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 136,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
     "id": "KONAEV_TT_RR",
     "make": "Hyundai",
     "model": "Kona-Electric",
@@ -75856,31 +77843,6 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "FORTE_TW_RR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Alert Rear Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
   },
   {
     "bitLength": 8,
@@ -76161,6 +78123,33 @@
       "unit": "celsius"
     },
     "hdr": "7D4",
+    "id": "FORTE_BMS_MOD3_TEMP",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Battery module 3 temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
     "id": "VELOSTER_BMS_MOD3_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -76220,33 +78209,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS battery mod 3 temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 144,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 144,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_MOD3_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "BMS Battery Mod 3 Temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -77622,6 +79584,47 @@
       }
     },
     "hdr": "7E1",
+    "id": "FORTE_GEAR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "Mapped values: {'1': {'description': 'Neutral', 'value': 'NEUTRAL'}, '2': {'description': 'Reverse', 'value': 'REVERSE'}, '3': {'description': 'Park', 'value': 'PARK'}, '4': {'description': 'Manual', 'value': 'MANUAL'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "2": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "3": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "4": {
+          "description": "Manual",
+          "value": "MANUAL"
+        }
+      }
+    },
+    "hdr": "7E1",
     "id": "SOUL_GEAR",
     "make": "Kia",
     "model": "Soul",
@@ -77705,6 +79708,33 @@
       "unit": "celsius"
     },
     "hdr": "7D4",
+    "id": "FORTE_BMS_MOD4_TEMP",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Battery module 4 temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
     "id": "VELOSTER_BMS_MOD4_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -77764,33 +79794,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS battery mod 4 temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_MOD4_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "BMS Battery Mod 4 Temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -79182,32 +81185,6 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "FORTE_TP_RL",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Pressure Rear Left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
     "id": "KONA_TP_RL",
     "make": "Hyundai",
     "model": "Kona",
@@ -79288,6 +81265,31 @@
     "id": "SPORTAGE_VPWR",
     "make": "Kia",
     "model": "Sportage-HEV",
+    "name": "12V battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E2",
+    "id": "FORTE_VPWR",
+    "make": "Kia",
+    "model": "Forte",
     "name": "12V battery charge",
     "path": "Battery",
     "pid": "22",
@@ -79787,6 +81789,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_TIRE_RR_SPD",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -79830,6 +81859,33 @@
     "id": "DAIHATSU_TP_2_RL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_2_RL",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -79911,6 +81967,33 @@
     "id": "DAIHATSU_TT_RL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_RL",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -80146,6 +82229,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_RL",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "21": "47"
     },
     "debug": false,
@@ -80216,6 +82326,33 @@
     "id": "LANDCRUISER_YAW_RATE",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Yaw rate value (degrees/se",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 16,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_YAW_RATE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Yaw rate value (degrees/se",
     "path": "Orientation",
     "pid": "21",
@@ -80403,34 +82540,6 @@
       "add": -40,
       "bix": 16,
       "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "RAV4HYBRID_TT_3",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -80466,6 +82575,33 @@
     "id": "GRCOROLLA_TT_RL",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_RL_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -80623,6 +82759,32 @@
     "id": "LANDCRUISER_HVBAT_SOC_MIN",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "HV battery charge (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "106C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_HVBAT_SOC_MIN",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "HV battery charge (min)",
     "path": "Battery",
     "pid": "22",
@@ -80990,6 +83152,34 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "21A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 5,
+      "len": 8,
+      "max": 255,
+      "mul": 9,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_ATF_TEMP",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Transmission fluid temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*9 /5 +-40 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "4A7A"
     },
     "debug": false,
@@ -81185,6 +83375,31 @@
     "id": "LANDCRUISER_TIME_M",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Time in M",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_TIME_M",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Time in M",
     "path": "Engine",
     "pid": "22",
@@ -83133,9 +85348,9 @@
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "FORTE_TT_RL",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "KONA_TT_RL",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "TPMS Temperature Rear Left",
     "path": "Tires",
     "pid": "22",
@@ -83147,27 +85362,29 @@
     "bitLength": 8,
     "bitOffset": 160,
     "cmd": {
-      "22": "C00B"
+      "22": "E00A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 160,
+      "div": 5,
       "len": 8,
-      "max": 100,
-      "min": -50,
-      "unit": "celsius"
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
     },
-    "hdr": "7A0",
-    "id": "KONA_TT_RL",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Temperature Rear Left",
-    "path": "Tires",
+    "hdr": "7E0",
+    "id": "FORTE_KNOCK_LEARN_1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Knock learn cyl 1",
+    "path": "Engine",
     "pid": "22",
-    "scaling": "raw clamped to [-50, 100]",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
     "suggestedMetric": "",
-    "unit": "celsius"
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -83222,34 +85439,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 160,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 160,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_KNOCK_LEARN_1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Knock Learn Cyl 1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -84648,6 +86837,34 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "FORTE_KNOCK_LEARN_2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Knock learn cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_KNOCK_LEARN_2",
     "make": "Hyundai",
     "model": "Veloster",
@@ -84683,34 +86900,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 168,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 168,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_KNOCK_LEARN_2",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Knock Learn Cyl 2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -86174,31 +88363,6 @@
       "unit": "noyes"
     },
     "hdr": "7A0",
-    "id": "FORTE_TW_RL",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Alert Rear Left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
     "id": "KONA_TW_RL",
     "make": "Hyundai",
     "model": "Kona",
@@ -86233,6 +88397,34 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_KNOCK_LEARN_3",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Knock learn cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -86287,34 +88479,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_KNOCK_LEARN_3",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Knock Learn Cyl 3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -87982,6 +90146,34 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "FORTE_KNOCK_LEARN_4",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Knock learn cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_KNOCK_LEARN_4",
     "make": "Hyundai",
     "model": "Veloster",
@@ -88024,34 +90216,6 @@
     "bitLength": 8,
     "bitOffset": 184,
     "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 184,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_KNOCK_LEARN_4",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Knock Learn Cyl 4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 184,
-    "cmd": {
       "22": "ED02"
     },
     "debug": false,
@@ -88072,6 +90236,33 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw+-4 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "ED02"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4,
+      "bix": 184,
+      "len": 8,
+      "max": 215,
+      "min": -4,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_EOT_V2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-4 clamped to [-4, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -96674,6 +98865,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B3",
+    "id": "FORTE_VSS",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B3",
     "id": "IONIQ5_VSS",
     "make": "Hyundai",
     "model": "IONIQ-5",
@@ -96729,31 +98945,6 @@
     "id": "ELANTRA_VSS",
     "make": "Hyundai",
     "model": "Elantra",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 232,
-    "cmd": {
-      "22": "0100"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 232,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B3",
-    "id": "FORTE_VSS",
-    "make": "Kia",
-    "model": "Forte",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -98426,6 +100617,33 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_TIRE_RL_SPD",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -98469,6 +100687,33 @@
     "id": "DAIHATSU_TP_2_RR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_2_RR",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -98550,6 +100795,33 @@
     "id": "DAIHATSU_TT_RR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_RR",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -98785,6 +101057,33 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_RR",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "1004"
     },
     "debug": false,
@@ -98961,34 +101260,6 @@
       "add": -40,
       "bix": 24,
       "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "RAV4HYBRID_TT_4",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 24,
-      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -99024,6 +101295,33 @@
     "id": "GRCOROLLA_TT_RR",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_RR_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -99206,6 +101504,33 @@
     "debug": true,
     "eax": "2A",
     "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_FR_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
       "add": -5.6969697,
       "bix": 24,
       "div": 4.125,
@@ -99246,34 +101571,6 @@
     "id": "PRIUSPRIME_TP_2",
     "make": "Toyota",
     "model": "Prius-Prime",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 24,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "RAV4HYBRID_TP_2",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -108120,6 +110417,33 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "FORTE_INTAKE_TEMP",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Intake air temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 264,
+      "div": 1.3333,
+      "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_INTAKE_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -108154,33 +110478,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 264,
-    "cmd": {
-      "22": "E001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -48,
-      "bix": 264,
-      "div": 1.3333,
-      "len": 8,
-      "max": 207,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_INTAKE_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Intake Air Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1.3333 +-48 clamped to [207]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -108368,6 +110665,33 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "21": "18"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "len": 8,
+      "max": 207,
+      "min": -48,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_CVVT_T",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "CVVT temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-48 clamped to [-48, 207]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -109607,6 +111931,33 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "FORTE_OIL_TEMP",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "div": 1.3333,
+      "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_OIL_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -109641,33 +111992,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 272,
-    "cmd": {
-      "22": "E001"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -48,
-      "bix": 272,
-      "div": 1.3333,
-      "len": 8,
-      "max": 207,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_OIL_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Engine Oil Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1.3333 +-48 clamped to [207]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -112662,6 +114986,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_2_SPARE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "21": "16"
     },
     "debug": false,
@@ -112732,6 +115083,33 @@
     "id": "DAIHATSU_TT_SPARE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_SPARE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Spare tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -112962,6 +115340,59 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "",
     "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_SPARE",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D4",
+    "id": "FORTE_BMS_SOC",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Battery state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -113201,32 +115632,6 @@
     "pid": "22",
     "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 2,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_SOC",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "BMS State Of Charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 clamped to [100]",
-    "suggestedMetric": "",
     "unit": "percent"
   },
   {
@@ -114533,6 +116938,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_SPARE_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "18A0"
     },
     "debug": true,
@@ -115011,6 +117443,31 @@
       "unit": "liters"
     },
     "hdr": "7C6",
+    "id": "FORTE_FLI_VOL",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "7C6",
     "id": "KONA_FLI_VOL",
     "make": "Hyundai",
     "model": "Kona",
@@ -115089,31 +117546,6 @@
     "id": "ELANTRA_FLI_VOL",
     "make": "Hyundai",
     "model": "Elantra",
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "liters"
-    },
-    "hdr": "7C6",
-    "id": "FORTE_FLI_VOL",
-    "make": "Kia",
-    "model": "Forte",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "22",
@@ -116012,10 +118444,10 @@
       "unit": "scalar"
     },
     "hdr": "770",
-    "id": "VELOSTER_HAZARD_SW",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Hazard switch (raw)",
+    "id": "FORTE_HAZARD_SW",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Hazard switch",
     "path": "Lights",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -116028,7 +118460,7 @@
     "cmd": {
       "22": "BC05"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 32,
@@ -116037,10 +118469,10 @@
       "unit": "scalar"
     },
     "hdr": "770",
-    "id": "FORTE_HAZARD_SW",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Hazard Switch (Raw)",
+    "id": "VELOSTER_HAZARD_SW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Hazard switch (raw)",
     "path": "Lights",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -116130,60 +118562,6 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
-      "22": "BC08"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "len": 8,
-      "max": 1,
-      "nullmax": 1,
-      "nullmin": 0,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "FORTE_TURN_L",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Left turn signal on? (Raw >1)",
-    "path": "Lights",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "BC08"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "len": 8,
-      "max": 1,
-      "nullmax": 3,
-      "nullmin": 0,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "FORTE_TURN_R",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Right turn signal on? (Raw >3)",
-    "path": "Lights",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -116258,6 +118636,32 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "FORTE_TP_FL",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "psi"
   },
@@ -116519,32 +118923,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Tire pressure front left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "FORTE_TP_FL",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Pressure Front Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -116983,31 +119361,6 @@
   },
   {
     "bitLength": 8,
-    "bitOffset": 320,
-    "cmd": {
-      "22": "E004"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 320,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_AUX_SOC",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Aux Battery SOC",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
     "bitOffset": 328,
     "cmd": {
       "22": "E004"
@@ -117050,31 +119403,6 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Aux battery SOH",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 328,
-    "cmd": {
-      "22": "E004"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 328,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_AUX_SOH",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Aux Battery SOH",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
@@ -118770,6 +121098,33 @@
     "debug": true,
     "eax": "2A",
     "fmt": {
+      "add": -0.5,
+      "bix": 40,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_RL_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
       "add": -5.6969697,
       "bix": 40,
       "div": 4.125,
@@ -118810,34 +121165,6 @@
     "id": "PRIUSPRIME_TP_3",
     "make": "Toyota",
     "model": "Prius-Prime",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 40,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "RAV4HYBRID_TP_3",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -119917,6 +122244,32 @@
       "unit": "volts"
     },
     "hdr": "7C6",
+    "id": "FORTE_CLUSTER_VOLTAGE",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Cluster voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [18]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 12.8,
+      "len": 8,
+      "max": 18,
+      "unit": "volts"
+    },
+    "hdr": "7C6",
     "id": "KONA_CLUSTER_VOLTAGE",
     "make": "Hyundai",
     "model": "Kona",
@@ -119999,32 +122352,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Cluster voltage",
-    "path": "Electrical",
-    "pid": "22",
-    "scaling": "raw/12.8 clamped to [18]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 12.8,
-      "len": 8,
-      "max": 18,
-      "unit": "volts"
-    },
-    "hdr": "7C6",
-    "id": "FORTE_CLUSTER_VOLTAGE",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Cluster Voltage",
     "path": "Electrical",
     "pid": "22",
     "scaling": "raw/12.8 clamped to [18]",
@@ -120922,9 +123249,9 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DEFOG_LIGHT",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_DEFOG_LIGHT",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Defog light on",
     "path": "Climate",
     "pid": "22",
@@ -120938,7 +123265,7 @@
     "cmd": {
       "22": "BC07"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 40,
@@ -120947,10 +123274,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_DEFOG_LIGHT",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Defog Light On",
+    "id": "VELOSTER_DEFOG_LIGHT",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Defog light on",
     "path": "Climate",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -121009,6 +123336,33 @@
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 40,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "FORTE_TT_FL",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -121116,32 +123470,6 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Tire temperature front left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [-50, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "len": 8,
-      "max": 100,
-      "min": -50,
-      "unit": "celsius"
-    },
-    "hdr": "7A0",
-    "id": "FORTE_TT_FL",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Temperature Front Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [-50, 100]",
@@ -121637,6 +123965,31 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "FORTE_VSS_V3",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Vehicle speed",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -122474,6 +124827,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_VSS_AVG",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -122525,31 +124903,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "ABS speed (avg)",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_VSS_AVG",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "ABS Speed (Avg)",
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -123275,6 +125628,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
+    "id": "FORTE_TIRE_FL_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 48,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
     "id": "HYUNDAI_TIRE_FL_VSS_V2",
     "make": "Hyundai",
     "model": "Veloster",
@@ -123404,10 +125784,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_HL_SW",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Headlight switch (raw >2)",
+    "id": "FORTE_HL_SW",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Headlight switch",
     "path": "Lights",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -123420,7 +125800,7 @@
     "cmd": {
       "22": "BC05"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -123431,10 +125811,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_HL_SW",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Headlight Switch (Raw >2)",
+    "id": "VELOSTER_HL_SW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Headlight switch (raw >2)",
     "path": "Lights",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -123510,9 +125890,9 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_HL_HIGH",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_HL_HIGH",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Headlight high beam on",
     "path": "Lights",
     "pid": "22",
@@ -123526,7 +125906,7 @@
     "cmd": {
       "22": "BC09"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -123536,10 +125916,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_HL_HIGH",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Headlight High Beam On",
+    "id": "VELOSTER_HL_HIGH",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Headlight high beam on",
     "path": "Lights",
     "pid": "22",
     "scaling": "raw/12 clamped to [1]",
@@ -124026,6 +126406,33 @@
     "id": "LANDCRUISER_VVTOT",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Variable valve timing oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 56,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_VVTOT",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Variable valve timing oil temperature",
     "path": "Engine",
     "pid": "21",
@@ -125452,34 +127859,6 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 56,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "RAV4HYBRID_TP_4",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
       "22": "18A0"
     },
     "debug": true,
@@ -125649,6 +128028,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
+    "id": "FORTE_TIRE_FR_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 56,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
     "id": "HYUNDAI_TIRE_FR_VSS_V2",
     "make": "Hyundai",
     "model": "Veloster",
@@ -125751,11 +128157,11 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_DEFOG_SW",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Defog switch (raw >1)",
-    "path": "Windshield",
+    "id": "FORTE_DEFOG_SW",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Defogging?",
+    "path": "Climate",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -125767,7 +128173,7 @@
     "cmd": {
       "22": "BC03"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 56,
@@ -125778,11 +128184,11 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_DEFOG_SW",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Defogging?",
-    "path": "Climate",
+    "id": "VELOSTER_DEFOG_SW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Defog switch (raw >1)",
+    "path": "Windshield",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -125857,9 +128263,9 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "VELOSTER_HL_LOW",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_HL_LOW",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Headlight low beam on",
     "path": "Lights",
     "pid": "22",
@@ -125873,7 +128279,7 @@
     "cmd": {
       "22": "BC09"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 56,
@@ -125883,10 +128289,10 @@
       "unit": "noyes"
     },
     "hdr": "770",
-    "id": "FORTE_HL_LOW",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Headlight Low Beam On",
+    "id": "VELOSTER_HL_LOW",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Headlight low beam on",
     "path": "Lights",
     "pid": "22",
     "scaling": "raw/12 clamped to [1]",
@@ -125912,31 +128318,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Tire alert front left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "FORTE_TW_FL",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Alert Front Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -127669,6 +130050,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
+    "id": "FORTE_TIRE_RL_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 64,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
     "id": "HYUNDAI_TIRE_RL_VSS_V2",
     "make": "Hyundai",
     "model": "Veloster",
@@ -127678,6 +130086,32 @@
     "scaling": "raw+-50 clamped to [-50, 205]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "FORTE_TP_FR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -128177,6 +130611,33 @@
     "id": "LANDCRUISER_EOT_V2",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 72,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_EOT",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "21",
@@ -129435,6 +131896,33 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 72,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_SPARE_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "18A0"
     },
     "debug": true,
@@ -129660,6 +132148,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
+    "id": "FORTE_TIRE_RR_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 72,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
     "id": "HYUNDAI_TIRE_RR_VSS_V2",
     "make": "Hyundai",
     "model": "Veloster",
@@ -129669,6 +132184,33 @@
     "scaling": "raw+-50 clamped to [-50, 205]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 72,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "FORTE_TT_FR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -129939,32 +132481,6 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "FORTE_TP_FR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Pressure Front Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -130687,6 +133203,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_TIRE_FL_SPD",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "21": "15"
     },
     "debug": false,
@@ -130730,6 +133273,33 @@
     "id": "DAIHATSU_TP_2_FR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_2_FR",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -130811,6 +133381,33 @@
     "id": "DAIHATSU_TT_FR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_FR",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -130940,6 +133537,31 @@
     "id": "LANDCRUISER_CC_S",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Cruise control speed",
+    "path": "Cruise control",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "21"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_CC_S",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Cruise control speed",
     "path": "Cruise control",
     "pid": "21",
@@ -131175,6 +133797,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_FR",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "21": "47"
     },
     "debug": false,
@@ -131248,6 +133897,34 @@
     "id": "LANDCRUISER_LNG_G",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Longitudinal g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
+    "id": "RAV4HYBRID_LNG_G",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Longitudinal g",
     "path": "Orientation",
     "pid": "21",
@@ -131435,34 +134112,6 @@
       "add": -40,
       "bix": 8,
       "len": 8,
-      "max": 100,
-      "min": -30,
-      "nullmin": -30,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "RAV4HYBRID_TT_2",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-30, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 8,
-      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -131498,6 +134147,33 @@
     "id": "GRCOROLLA_TT_FR",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TT_FR_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -131680,6 +134356,33 @@
     "debug": true,
     "eax": "2A",
     "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_FL_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
       "add": -5.6969697,
       "bix": 8,
       "div": 4.125,
@@ -131725,34 +134428,6 @@
     "pid": "22",
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -5.6969697,
-      "bix": 8,
-      "div": 4.125,
-      "len": 8,
-      "max": 56.8,
-      "nullmin": 0,
-      "unit": "psi"
-    },
-    "hdr": "750",
-    "id": "RAV4HYBRID_TP_1",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
-    "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
   {
@@ -131905,6 +134580,32 @@
     "id": "LANDCRUISER_HVBAT_SOC_MAX",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "HV battery charge (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "106C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_HVBAT_SOC_MAX",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "HV battery charge (max)",
     "path": "Battery",
     "pid": "22",
@@ -132799,6 +135500,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_KICKDOWN",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_KICKDOWN",
     "make": "Rolls",
     "model": "Royce",
@@ -133070,6 +135796,55 @@
       }
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_TQ_CNVRT_LOCKUP",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_TQ_CNVRT_LOCKUP",
     "make": "Rolls",
     "model": "Royce",
@@ -133292,6 +136067,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "RAV4HYBRID_BRAKE_SWITCH",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Brake switch",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA28"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "SUPRA_BRAKE_SWITCH",
     "make": "Toyota",
     "model": "GR-Supra",
@@ -133461,6 +136261,31 @@
     "id": "LANDCRUISER_TIME_S",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Time in S",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "RAV4HYBRID_TIME_S",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Time in S",
     "path": "Engine",
     "pid": "22",
@@ -136442,32 +139267,6 @@
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "FORTE_TT_FR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Temperature Front Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [-50, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 80,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 80,
-      "len": 8,
-      "max": 100,
-      "min": -50,
-      "unit": "celsius"
-    },
-    "hdr": "7A0",
     "id": "KONA_TT_FR",
     "make": "Hyundai",
     "model": "Kona",
@@ -136502,6 +139301,31 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_FL_VSS",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -137415,6 +140239,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_FL_VSS",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -137466,31 +140315,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "ABS speed front left",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_FL_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "ABS Speed Front Left",
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -138031,6 +140855,31 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "22": "C101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "FORTE_TIRE_FL_SPD",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 96,
     "cmd": {
       "21": "01"
@@ -138053,6 +140902,31 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_FR_VSS",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -138928,6 +141802,31 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_FR_VSS",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -138979,31 +141878,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "ABS speed front right",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "0104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_FR_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "ABS Speed Front Right",
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -139433,6 +142307,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "FORTE_TP_RL",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "IONIQPHEV_TP_RR",
     "make": "Hyundai",
     "model": "IONIQ-Electric",
@@ -139668,31 +142568,6 @@
       "unit": "noyes"
     },
     "hdr": "7A0",
-    "id": "FORTE_TW_FR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "TPMS Alert Front Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
     "id": "KONA_TW_FR",
     "make": "Hyundai",
     "model": "Kona",
@@ -139758,6 +142633,59 @@
     "bitLength": 8,
     "bitOffset": 96,
     "cmd": {
+      "22": "C101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "FORTE_TIRE_FR_SPD",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_KNOCK_RETARD_1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Knock retard cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -139807,34 +142735,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "E00A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "div": 5,
-      "len": 8,
-      "max": 50,
-      "min": -50,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_KNOCK_RETARD_1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Knock Retard Cyl 1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "degrees"
   }
