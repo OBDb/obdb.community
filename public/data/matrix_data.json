@@ -10527,6 +10527,164 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_FR_WHEEL_VSS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_FR_WHEEL_VSS",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "unit": "rpm"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_RPM",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Motor RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-32768 clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "unit": "rpm"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_RPM",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Motor RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-32768 clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_RM_TQ_REQ",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear motor torque, requested",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-32768 clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_RM_TQ_REQ",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear motor torque, requested",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-32768 clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10CD"
     },
     "debug": false,
@@ -12065,6 +12223,166 @@
     "scaling": "raw/100 +-40 clamped to [-40, 615.35]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "15F7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -125,
+      "div": 10000,
+      "len": 16,
+      "max": 124,
+      "min": -125,
+      "mul": 38.147,
+      "unit": "amps"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_12V_C",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "12V battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*38.147 /10000 +-125 clamped to [-125, 124]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "15F7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -125,
+      "div": 10000,
+      "len": 16,
+      "max": 124,
+      "min": -125,
+      "mul": 38.147,
+      "unit": "amps"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_12V_C",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "12V battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*38.147 /10000 +-125 clamped to [-125, 124]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "15F8"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_12V_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "12V battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "15F8"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_12V_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "12V battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1609"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "volts"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_HVBAT_CHRG_V",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "HV battery charge voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1609"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "volts"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_HVBAT_CHRG_V",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "HV battery charge voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -33154,6 +33472,62 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_FL_WHEEL_VSS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_FL_WHEEL_VSS",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "182E"
     },
     "debug": false,
@@ -33290,6 +33664,60 @@
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1F9A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "mul": 156.25,
+      "unit": "volts"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_HVBAT_V",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1023]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1F9A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "mul": 156.25,
+      "unit": "volts"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_HVBAT_V",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1023]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -41933,6 +42361,62 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_RR_WHEEL_VSS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_RR_WHEEL_VSS",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "182E"
     },
     "debug": false,
@@ -41982,6 +42466,62 @@
     "scaling": "raw*5 /65535 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1F9A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_HVBAT_C",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1F9A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_HVBAT_C",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "amps"
   },
   {
     "bitLength": 16,
@@ -44709,6 +45249,174 @@
     "scaling": "raw*10 clamped to [655350]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_RL_WHEEL_VSS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_RL_WHEEL_VSS",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "10A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4096,
+      "bix": 48,
+      "div": 8,
+      "len": 16,
+      "max": 4095,
+      "min": -4096,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_TQ",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Motor torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/8 +-4096 clamped to [-4096, 4095]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "10A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4096,
+      "bix": 48,
+      "div": 8,
+      "len": 16,
+      "max": 4095,
+      "min": -4096,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_TQ",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Motor torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/8 +-4096 clamped to [-4096, 4095]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "10A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4096,
+      "bix": 48,
+      "div": 8,
+      "len": 16,
+      "max": 4095,
+      "min": -4096,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_RM_TQ",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear motor torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/8 +-4096 clamped to [-4096, 4095]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "10A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4096,
+      "bix": 48,
+      "div": 8,
+      "len": 16,
+      "max": 4095,
+      "min": -4096,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_RM_TQ",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear motor torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/8 +-4096 clamped to [-4096, 4095]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
   },
   {
     "bitLength": 16,
@@ -54057,6 +54765,31 @@
     "cmd": {
       "22": "0103"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_ODO_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -54144,6 +54877,31 @@
     "id": "LANDCRUISER_ODO_V6",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_ODO_V2",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -59192,6 +59950,58 @@
       "add": -0.5,
       "div": 58,
       "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_1_V1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #1",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_1_V1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #1",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "unknown"
     },
@@ -59243,8 +60053,9 @@
     "fmt": {
       "add": -40,
       "len": 8,
-      "max": 150,
-      "min": -20,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -59254,7 +60065,7 @@
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-20, 150]",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -59752,6 +60563,58 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_1_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #1",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_1_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #1",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -62254,6 +63117,204 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "10A5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_MIS_ALL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Misfire count, all",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_MIS_ALL",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Misfire count, all",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_RM_INVRT_COOL_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear motor inverter, coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_RM_INVRT_COOL_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear motor inverter, coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_MIS_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Misfire count, cylinder 1",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_MIS_1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Misfire count, cylinder 1",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10B2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_INVRT_COOLANT_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Inverter coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10B2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_INVRT_COOLANT_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Inverter coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1103"
     },
     "debug": false,
@@ -62929,6 +63990,58 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "15EE"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 0.0125,
+      "len": 8,
+      "max": 80.2,
+      "mul": 0.31448,
+      "unit": "volts"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_12V_V",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "12V battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.31448 +0.0125 clamped to [80.2]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "15EE"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 0.0125,
+      "len": 8,
+      "max": 80.2,
+      "mul": 0.31448,
+      "unit": "volts"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_12V_V",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "12V battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.31448 +0.0125 clamped to [80.2]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1638"
     },
     "debug": true,
@@ -63049,6 +64162,110 @@
     "scaling": "raw clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1829"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_HVBAT_MAX_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "HV battery maximum temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1829"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_HVBAT_MAX_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "HV battery maximum temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "182A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_HVBAT_MIN_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "HV battery minimum temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "182A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_HVBAT_MIN_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "HV battery minimum temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -65079,6 +66296,58 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_COOL_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_COOL_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F0D"
     },
     "debug": false,
@@ -65310,6 +66579,162 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F46"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_AAT",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Ambient temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F46"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_AAT",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Ambient temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F49"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_ACC_PEDAL_POS_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Accelerator pedal, position 1",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F49"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_ACC_PEDAL_POS_1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Accelerator pedal, position 1",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F4A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_ACC_PEDAL_POS_2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Accelerator pedal, position 2",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F4A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_ACC_PEDAL_POS_2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Accelerator pedal, position 2",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F5B"
     },
     "debug": false,
@@ -65488,6 +66913,58 @@
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_EOT_V3",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_EOT",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -86089,6 +87566,60 @@
       "bix": 16,
       "div": 58,
       "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_3_V1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #3",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_3_V1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #3",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "unknown"
     },
@@ -86142,8 +87673,9 @@
       "add": -40,
       "bix": 16,
       "len": 8,
-      "max": 150,
-      "min": -20,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -86153,7 +87685,7 @@
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-20, 150]",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -86380,6 +87912,60 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_3_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #3",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_3_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #3",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -86874,6 +88460,60 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "1040"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_TRANSAXLE_OIL_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Transaxle oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1040"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_TRANSAXLE_OIL_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Transaxle oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "106C"
     },
     "debug": false,
@@ -86974,6 +88614,110 @@
     "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "10A6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "DAIHATSU_M_INVRT_MAX_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Motor inverter, maximum temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "10A6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "RAV4HYBRID_M_INVRT_MAX_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Motor inverter, maximum temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_MIS_3",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Misfire count, cylinder 3",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_MIS_3",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Misfire count, cylinder 3",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -104838,6 +106582,60 @@
       "bix": 24,
       "div": 58,
       "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_4_V1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #4",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_4_V1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #4",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "unknown"
     },
@@ -104891,8 +106689,9 @@
       "add": -40,
       "bix": 24,
       "len": 8,
-      "max": 150,
-      "min": -20,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -104902,7 +106701,7 @@
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-20, 150]",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -105129,6 +106928,60 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_4_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #4",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_4_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #4",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -105759,6 +107612,56 @@
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_MIS_4",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Misfire count, cylinder 4",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_MIS_4",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Misfire count, cylinder 4",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -119072,6 +120975,60 @@
       "bix": 32,
       "div": 58,
       "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_5_V1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #5",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_5_V1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #5",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "unknown"
     },
@@ -119125,8 +121082,9 @@
       "add": -40,
       "bix": 32,
       "len": 8,
-      "max": 150,
-      "min": -20,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -119136,7 +121094,7 @@
     "name": "Spare tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-20, 150]",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -119363,6 +121321,60 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_5_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #5",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_5_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #5",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -137316,6 +139328,60 @@
       "bix": 8,
       "div": 58,
       "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_2_V1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #2",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_2_V1",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #2",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
       "max": 4,
       "unit": "unknown"
     },
@@ -137369,8 +139435,9 @@
       "add": -40,
       "bix": 8,
       "len": 8,
-      "max": 150,
-      "min": -20,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -137380,7 +139447,7 @@
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw+-40 clamped to [-20, 150]",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -137761,6 +139828,60 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_2_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Tire pressure #2",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_2_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Tire pressure #2",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -138608,6 +140729,56 @@
     "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_MIS_2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Misfire count, cylinder 2",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "RAV4HYBRID_MIS_2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Misfire count, cylinder 2",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
