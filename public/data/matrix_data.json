@@ -60366,14 +60366,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TP_1",
+    "id": "RAV4HYBRID_TP_FL_V1",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
-    "name": "Tire pressure #1",
+    "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
-    "suggestedMetric": "",
+    "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
   {
@@ -60557,14 +60557,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_1",
+    "id": "DAIHATSU_TP_FL_V1",
     "make": "Daihatsu",
     "model": "",
-    "name": "Tire pressure #1",
+    "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
-    "suggestedMetric": "",
+    "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
   {
@@ -87660,14 +87660,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TP_3",
+    "id": "RAV4HYBRID_TP_RL_V1",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
-    "name": "Tire pressure #3",
+    "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
-    "suggestedMetric": "",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
   },
   {
@@ -87858,14 +87858,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_3",
+    "id": "DAIHATSU_TP_RL_V1",
     "make": "Daihatsu",
     "model": "",
-    "name": "Tire pressure #3",
+    "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
-    "suggestedMetric": "",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
   },
   {
@@ -106624,14 +106624,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TP_4",
+    "id": "RAV4HYBRID_TP_RR_V1",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
-    "name": "Tire pressure #4",
+    "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
-    "suggestedMetric": "",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
   {
@@ -106822,14 +106822,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_4",
+    "id": "DAIHATSU_TP_RR_V1",
     "make": "Daihatsu",
     "model": "",
-    "name": "Tire pressure #4",
+    "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
-    "suggestedMetric": "",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
   {
@@ -107148,7 +107148,7 @@
       "bix": 24,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -107159,7 +107159,7 @@
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
@@ -107288,7 +107288,7 @@
       "bix": 24,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -107299,7 +107299,7 @@
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
@@ -107375,7 +107375,7 @@
       "unit": "psi"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_2_V2",
+    "id": "DAIHATSU_TP_2",
     "make": "Daihatsu",
     "model": "",
     "name": "Front left tire pressure",
@@ -120994,10 +120994,10 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TP_5",
+    "id": "RAV4HYBRID_TP_SPARE_V1",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
-    "name": "Tire pressure #5",
+    "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
@@ -121192,10 +121192,10 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_5",
+    "id": "DAIHATSU_TP_SPARE_V1",
     "make": "Daihatsu",
     "model": "",
-    "name": "Tire pressure #5",
+    "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
@@ -126880,7 +126880,7 @@
       "bix": 40,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -126891,7 +126891,7 @@
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
   },
@@ -127020,7 +127020,7 @@
       "bix": 40,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -127031,7 +127031,7 @@
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
   },
@@ -127107,7 +127107,7 @@
       "unit": "psi"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_3_V2",
+    "id": "DAIHATSU_TP_3",
     "make": "Daihatsu",
     "model": "",
     "name": "Rear right tire pressure",
@@ -133619,7 +133619,7 @@
       "bix": 56,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -133630,7 +133630,7 @@
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
@@ -133759,7 +133759,7 @@
       "bix": 56,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -133770,7 +133770,7 @@
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
@@ -133846,7 +133846,7 @@
       "unit": "psi"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_4_V2",
+    "id": "DAIHATSU_TP_4",
     "make": "Daihatsu",
     "model": "",
     "name": "Rear left tire pressure",
@@ -137880,7 +137880,7 @@
       "bix": 72,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -137891,7 +137891,7 @@
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "",
     "unit": "bars"
   },
@@ -137936,7 +137936,7 @@
       "bix": 72,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -137947,7 +137947,7 @@
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "",
     "unit": "bars"
   },
@@ -138023,7 +138023,7 @@
       "unit": "psi"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_5_V2",
+    "id": "DAIHATSU_TP_5",
     "make": "Daihatsu",
     "model": "",
     "name": "Spare tire pressure",
@@ -139675,14 +139675,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TP_2",
+    "id": "RAV4HYBRID_TP_FR_V1",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
-    "name": "Tire pressure #2",
+    "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
-    "suggestedMetric": "",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
   {
@@ -139873,14 +139873,14 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_2",
+    "id": "DAIHATSU_TP_FR_V1",
     "make": "Daihatsu",
     "model": "",
-    "name": "Tire pressure #2",
+    "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "21",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
-    "suggestedMetric": "",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
   {
@@ -140311,7 +140311,7 @@
       "bix": 8,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -140322,7 +140322,7 @@
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
@@ -140451,7 +140451,7 @@
       "bix": 8,
       "div": 58,
       "len": 8,
-      "max": 3.896552,
+      "max": 3.8,
       "nullmin": 0,
       "unit": "bars"
     },
@@ -140462,7 +140462,7 @@
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
@@ -140538,7 +140538,7 @@
       "unit": "psi"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_1_V2",
+    "id": "DAIHATSU_TP_1",
     "make": "Daihatsu",
     "model": "",
     "name": "Front right tire pressure",
