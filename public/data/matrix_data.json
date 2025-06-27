@@ -10011,6 +10011,32 @@
       "unit": "liters"
     },
     "hdr": "7C0",
+    "id": "LANDCRUISER_FLV",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655,
+      "nullmax": 655,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
     "id": "PRIUSPRIME_FLV",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -60327,31 +60353,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "21": "29"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2,
-      "len": 8,
-      "max": 127.5,
-      "unit": "liters"
-    },
-    "hdr": "7C0",
-    "id": "LANDCRUISER_FLI_VOL",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "21",
-    "scaling": "raw/2 clamped to [127.5]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "21": "30"
     },
     "debug": false,
@@ -88078,7 +88079,7 @@
     "id": "LANDCRUISER_TT_3",
     "make": "Toyota",
     "model": "Land-Cruiser",
-    "name": "Rear right tire temperature",
+    "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-30, 100]",
@@ -107147,7 +107148,8 @@
       "bix": 24,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896552,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
@@ -107157,7 +107159,7 @@
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
@@ -107182,11 +107184,11 @@
     "id": "LANDCRUISER_TP_2",
     "make": "Toyota",
     "model": "Land-Cruiser",
-    "name": "Front left tire pressure",
+    "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
-    "suggestedMetric": "frontLeftTirePressure",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
@@ -107272,6 +107274,34 @@
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 3.896552,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_FR_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -122750,6 +122780,34 @@
       "add": -40,
       "bix": 32,
       "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TT_5",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
       "max": 215,
       "min": -40,
       "unit": "celsius"
@@ -122762,6 +122820,34 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_5",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -126794,7 +126880,8 @@
       "bix": 40,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896552,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
@@ -126804,7 +126891,7 @@
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
   },
@@ -126829,11 +126916,11 @@
     "id": "LANDCRUISER_TP_3",
     "make": "Toyota",
     "model": "Land-Cruiser",
-    "name": "Rear right tire pressure",
+    "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
-    "suggestedMetric": "rearRightTirePressure",
+    "suggestedMetric": "frontLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -126919,6 +127006,34 @@
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 40,
+      "div": 58,
+      "len": 8,
+      "max": 3.896552,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_RL_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -133500,6 +133615,34 @@
     "debug": false,
     "eax": "2A",
     "fmt": {
+      "add": -0.5,
+      "bix": 56,
+      "div": 58,
+      "len": 8,
+      "max": 3.896552,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "RAV4HYBRID_TP_RR_V2",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
       "add": -5.6969697,
       "bix": 56,
       "div": 4.125,
@@ -133512,11 +133655,11 @@
     "id": "LANDCRUISER_TP_4",
     "make": "Toyota",
     "model": "Land-Cruiser",
-    "name": "Front right tire pressure",
+    "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
-    "suggestedMetric": "frontRightTirePressure",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -133602,6 +133745,34 @@
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 56,
+      "div": 58,
+      "len": 8,
+      "max": 3.896552,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_RR_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -137709,7 +137880,8 @@
       "bix": 72,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896552,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
@@ -137719,7 +137891,63 @@
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 72,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.121212,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "LANDCRUISER_TP_5",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 72,
+      "div": 58,
+      "len": 8,
+      "max": 3.896552,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_SPARE_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
     "suggestedMetric": "",
     "unit": "bars"
   },
@@ -137776,6 +138004,34 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "",
     "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 72,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.121212,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_5_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
+    "suggestedMetric": "",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -139842,7 +140098,7 @@
     "id": "LANDCRUISER_TT_2",
     "make": "Toyota",
     "model": "Land-Cruiser",
-    "name": "Front left tire temperature",
+    "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-30, 100]",
@@ -140055,7 +140311,8 @@
       "bix": 8,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896552,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
@@ -140065,7 +140322,7 @@
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
@@ -140090,11 +140347,11 @@
     "id": "LANDCRUISER_TP_1",
     "make": "Toyota",
     "model": "Land-Cruiser",
-    "name": "Rear left tire pressure",
+    "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.121212]",
-    "suggestedMetric": "rearLeftTirePressure",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
   {
@@ -140180,6 +140437,34 @@
     "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 3.896552,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_FL_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.896552]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
