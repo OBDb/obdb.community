@@ -11141,6 +11141,30 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "116A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_DPF_WARN_DIST",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Distance since DPF warning light flashing",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1183"
     },
     "debug": false,
@@ -12195,6 +12219,31 @@
     "scaling": "raw*3 /128 +-273 clamped to [-500, 500]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "12ED"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "gramsPerSecond"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_MAF_AVG",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Mass air flow, average",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "gramsPerSecond"
   },
   {
     "bitLength": 16,
@@ -60994,11 +61043,11 @@
       "min": -40,
       "unit": "celsius"
     },
-    "hdr": "7E0",
-    "id": "FORESTER_COOLANT_T",
+    "hdr": "7A2",
+    "id": "FORESTER_ECT",
     "make": "Subaru",
     "model": "Forester",
-    "name": "Coolant temperature",
+    "name": "Engine coolant temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-40, 215]",
@@ -61154,6 +61203,32 @@
     "pid": "22",
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "002F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_FLI",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
     "unit": "percent"
   },
   {
@@ -62923,6 +62998,7 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
       "unit": "psi"
     },
     "hdr": "753",
@@ -63042,32 +63118,6 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "106B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "len": 8,
-      "max": 205,
-      "min": -50,
-      "unit": "celsius"
-    },
-    "hdr": "7E6",
-    "id": "FORESTER_ATF_T",
-    "make": "Subaru",
-    "model": "Forester",
-    "name": "ATF temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 205]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
       "22": "10A5"
     },
     "debug": false,
@@ -63163,6 +63213,32 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_ACC_POS",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Accelerator pedal position",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -63266,6 +63342,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "10E7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_EOT",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1103"
     },
     "debug": false,
@@ -63338,6 +63440,82 @@
     "scaling": "Mapped values: {'162': {'description': 'Heater is on', 'value': 'HEATER_ON'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1135"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "milliamps"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_12V_C",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "12V battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "milliamps"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1136"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_12V_T",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "12V battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1149"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "percent"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_ASH_RATIO_TOT",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Cumulative ash ratio",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -63428,6 +63606,31 @@
     "scaling": "raw*100 clamped to [25500]",
     "suggestedMetric": "",
     "unit": "watts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1155"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 25500,
+      "mul": 100,
+      "unit": "kilometers"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_OIL_CHANGE_DIST",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Estimated distance to oil change",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 clamped to [25500]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
   },
   {
     "bitLength": 8,
@@ -88292,6 +88495,7 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
       "unit": "psi"
     },
     "hdr": "753",
@@ -107426,6 +107630,7 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
       "unit": "psi"
     },
     "hdr": "753",
@@ -140589,6 +140794,7 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
       "unit": "psi"
     },
     "hdr": "753",
