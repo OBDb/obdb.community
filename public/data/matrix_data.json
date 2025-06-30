@@ -1234,7 +1234,7 @@
     "bitLength": 1,
     "bitOffset": 150,
     "cmd": {
-      "22": "0104"
+      "21": "01"
     },
     "debug": false,
     "eax": "",
@@ -1250,7 +1250,7 @@
     "model": "Forte",
     "name": "Wheel traction control switch",
     "path": "Movement",
-    "pid": "22",
+    "pid": "21",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
@@ -29468,6 +29468,35 @@
       "unit": "milesPerHour"
     },
     "hdr": "7E2",
+    "id": "FORTE_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [-180, 180]",
+    "suggestedMetric": "speed",
+    "unit": "milesPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
+      "div": 100,
+      "len": 16,
+      "max": 180,
+      "min": -180,
+      "sign": true,
+      "unit": "milesPerHour"
+    },
+    "hdr": "7E2",
     "id": "KONAEV_VSS",
     "make": "Hyundai",
     "model": "Kona-Electric",
@@ -29485,28 +29514,25 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 104,
       "blsb": true,
-      "div": 100,
       "len": 16,
-      "max": 180,
-      "min": -180,
-      "sign": true,
-      "unit": "milesPerHour"
+      "max": 65535,
+      "unit": "scalar"
     },
-    "hdr": "7E2",
-    "id": "FORTE_VSS_V2",
+    "hdr": "7E0",
+    "id": "FORTE_MIS_4",
     "make": "Kia",
     "model": "Forte",
-    "name": "Vehicle speed",
-    "path": "Movement",
+    "name": "Misfire count #4",
+    "path": "Engine",
     "pid": "21",
-    "scaling": "raw/100 clamped to [-180, 180]",
-    "suggestedMetric": "speed",
-    "unit": "milesPerHour"
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -29537,32 +29563,6 @@
     "signalGroups": [],
     "suggestedMetric": "speed",
     "unit": "milesPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 104,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "blsb": true,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_MIS_4",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Misfire count #4",
-    "path": "Engine",
-    "pid": "21",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -33265,33 +33265,6 @@
     "scaling": "raw/8196 clamped to [7.999]",
     "suggestedMetric": "",
     "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
-      "01": "34"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 16,
-      "div": 32768,
-      "len": 16,
-      "max": 2,
-      "mul": 2,
-      "unit": "scalar"
-    },
-    "hdr": "7DF",
-    "id": "FORTE_SAE_LAMBDA_B1S1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "SAE lambda B1S1",
-    "path": "Engine",
-    "pid": "01",
-    "scaling": "raw*2 /32768 clamped to [2]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -37417,7 +37390,7 @@
     "id": "FORTE_INJ_DUR_1",
     "make": "Kia",
     "model": "Forte",
-    "name": "Injection duration cyl 1",
+    "name": "Injection duration cylinder 1",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1220.7 clamped to [53.686409]",
@@ -37630,7 +37603,7 @@
     "id": "FORTE_INJ_DUR_2",
     "make": "Kia",
     "model": "Forte",
-    "name": "Injection duration cyl 2",
+    "name": "Injection duration cylinder 2",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1220.7 clamped to [53.686409]",
@@ -37695,7 +37668,7 @@
     "bitLength": 16,
     "bitOffset": 200,
     "cmd": {
-      "22": "0104"
+      "21": "01"
     },
     "debug": false,
     "eax": "",
@@ -37714,7 +37687,7 @@
     "model": "Forte",
     "name": "Steering wheel angle",
     "path": "Control",
-    "pid": "22",
+    "pid": "21",
     "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
     "suggestedMetric": "",
     "unit": "degrees"
@@ -38061,7 +38034,7 @@
     "id": "FORTE_INJ_DUR_3",
     "make": "Kia",
     "model": "Forte",
-    "name": "Injection duration cyl 3",
+    "name": "Injection duration cylinder 3",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1220.7 clamped to [53.686409]",
@@ -38439,7 +38412,7 @@
     "id": "FORTE_INJ_DUR_4",
     "make": "Kia",
     "model": "Forte",
-    "name": "Injection duration cyl 4",
+    "name": "Injection duration cylinder 4",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1220.7 clamped to [53.686409]",
@@ -38518,9 +38491,9 @@
       "unit": "celsius"
     },
     "hdr": "7E1",
-    "id": "KONA_CLUTCH_1_T",
-    "make": "Hyundai",
-    "model": "Kona",
+    "id": "FORTE_CLUTCH_1_T",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Clutch #1 temperature",
     "path": "Transmission",
     "pid": "22",
@@ -38534,7 +38507,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -38546,9 +38519,9 @@
       "unit": "celsius"
     },
     "hdr": "7E1",
-    "id": "FORTE_CLUTCH_1_T",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "KONA_CLUTCH_1_T",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Clutch #1 temperature",
     "path": "Transmission",
     "pid": "22",
@@ -40224,9 +40197,9 @@
       "unit": "celsius"
     },
     "hdr": "7E1",
-    "id": "KONA_CLUTCH_2_T",
-    "make": "Hyundai",
-    "model": "Kona",
+    "id": "FORTE_CLUTCH_2_T",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Clutch #2 temperature",
     "path": "Transmission",
     "pid": "22",
@@ -40240,7 +40213,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -40252,9 +40225,9 @@
       "unit": "celsius"
     },
     "hdr": "7E1",
-    "id": "FORTE_CLUTCH_2_T",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "KONA_CLUTCH_2_T",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Clutch #2 temperature",
     "path": "Transmission",
     "pid": "22",
@@ -40266,7 +40239,7 @@
     "bitLength": 16,
     "bitOffset": 256,
     "cmd": {
-      "22": "0104"
+      "21": "01"
     },
     "debug": false,
     "eax": "",
@@ -40284,7 +40257,7 @@
     "model": "Forte",
     "name": "Brake pressure",
     "path": "Control",
-    "pid": "22",
+    "pid": "21",
     "scaling": "raw/86.7 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
@@ -44384,9 +44357,9 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_WG_VOLTAGE",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_WG_VOLTAGE",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Waste gate voltage",
     "path": "Engine",
     "pid": "22",
@@ -44400,7 +44373,7 @@
     "cmd": {
       "22": "E021"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 392,
@@ -44411,9 +44384,9 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "FORTE_WG_VOLTAGE",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "VELOSTER_WG_VOLTAGE",
+    "make": "Hyundai",
+    "model": "Veloster",
     "name": "Waste gate voltage",
     "path": "Engine",
     "pid": "22",
@@ -44623,32 +44596,6 @@
       "unit": "kilowatts"
     },
     "hdr": "7D4",
-    "id": "FORTE_BMS_CHG_PWR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Battery available charge power",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "kilowatts"
-    },
-    "hdr": "7D4",
     "id": "VELOSTER_BMS_CHG_PWR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -44834,9 +44781,9 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_WG_DUTY",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_WG_DUTY",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Waste gate duty",
     "path": "Engine",
     "pid": "22",
@@ -44850,7 +44797,7 @@
     "cmd": {
       "22": "E021"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 408,
@@ -44861,9 +44808,9 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "FORTE_WG_DUTY",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "VELOSTER_WG_DUTY",
+    "make": "Hyundai",
+    "model": "Veloster",
     "name": "Waste gate duty",
     "path": "Engine",
     "pid": "22",
@@ -44994,9 +44941,9 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_WG_POSITION",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_WG_POSITION",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Waste gate position",
     "path": "Engine",
     "pid": "22",
@@ -45010,7 +44957,7 @@
     "cmd": {
       "22": "E021"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 424,
@@ -45021,9 +44968,9 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "FORTE_WG_POSITION",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "VELOSTER_WG_POSITION",
+    "make": "Hyundai",
+    "model": "Veloster",
     "name": "Waste gate position",
     "path": "Engine",
     "pid": "22",
@@ -45102,9 +45049,9 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_WG_SETPOINT",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_WG_SETPOINT",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Waste gate setpoint",
     "path": "Engine",
     "pid": "22",
@@ -45118,7 +45065,7 @@
     "cmd": {
       "22": "E021"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 440,
@@ -45129,9 +45076,9 @@
       "unit": "percent"
     },
     "hdr": "7E0",
-    "id": "FORTE_WG_SETPOINT",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "VELOSTER_WG_SETPOINT",
+    "make": "Hyundai",
+    "model": "Veloster",
     "name": "Waste gate setpoint",
     "path": "Engine",
     "pid": "22",
@@ -46538,7 +46485,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 56,
@@ -46583,32 +46530,6 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "kilowatts"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_DISCHG_PWR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Battery available discharge power",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
   },
   {
     "bitLength": 16,
@@ -46706,9 +46627,9 @@
       "unit": "psi"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_TURBO_BOOST",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "FORTE_TURBO_BOOST",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Turbo boost pressure (gauge)",
     "path": "Engine",
     "pid": "22",
@@ -46722,7 +46643,7 @@
     "cmd": {
       "22": "E021"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -12,
@@ -46734,9 +46655,9 @@
       "unit": "psi"
     },
     "hdr": "7E0",
-    "id": "FORTE_TURBO_BOOST",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "VELOSTER_TURBO_BOOST",
+    "make": "Hyundai",
+    "model": "Veloster",
     "name": "Turbo boost pressure (gauge)",
     "path": "Engine",
     "pid": "22",
@@ -48973,6 +48894,60 @@
     "eax": "",
     "fmt": {
       "bix": 72,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "FORTE_MIS_2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Misfire count #2",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7D4",
+    "id": "FORTE_STEER_ANGLE_V2",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
       "div": 10,
       "len": 16,
       "max": 3276,
@@ -49007,32 +48982,6 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
-    "id": "FORTE_MIS_2",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Misfire count #2",
-    "path": "Engine",
-    "pid": "21",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 72,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "blsb": true,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "7E0",
     "id": "SOUL_MIS_2",
     "make": "Kia",
     "model": "Soul",
@@ -49042,34 +48991,6 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 72,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 10,
-      "len": 16,
-      "max": 3276,
-      "min": -3276,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_STEER_ANGLE_V2",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Steering wheel angle",
-    "path": "Control",
-    "pid": "21",
-    "scaling": "raw/10 clamped to [-3276, 3276]",
-    "suggestedMetric": "",
-    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -51476,7 +51397,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 88,
@@ -57774,9 +57695,9 @@
       "unit": "scalar"
     },
     "hdr": "7E1",
-    "id": "KONA_GEAR_CUR",
-    "make": "Hyundai",
-    "model": "Kona",
+    "id": "FORTE_GEAR_CUR",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Current gear",
     "path": "Transmission",
     "pid": "22",
@@ -57790,7 +57711,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 188,
@@ -57799,10 +57720,35 @@
       "unit": "scalar"
     },
     "hdr": "7E1",
-    "id": "FORTE_GEAR_CUR",
+    "id": "KONA_GEAR_CUR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 196,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 196,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7E1",
+    "id": "FORTE_GEAR_NXT",
     "make": "Kia",
     "model": "Forte",
-    "name": "Current gear",
+    "name": "Next gear",
     "path": "Transmission",
     "pid": "22",
     "scaling": "raw clamped to [15]",
@@ -57827,31 +57773,6 @@
     "id": "KONA_GEAR_NXT",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "Next gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw clamped to [15]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 4,
-    "bitOffset": 196,
-    "cmd": {
-      "22": "01A4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 196,
-      "len": 4,
-      "max": 15,
-      "unit": "scalar"
-    },
-    "hdr": "7E1",
-    "id": "FORTE_GEAR_NXT",
-    "make": "Kia",
-    "model": "Forte",
     "name": "Next gear",
     "path": "Transmission",
     "pid": "22",
@@ -73561,6 +73482,31 @@
     "cmd": {
       "21": "01"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_RR_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -73579,31 +73525,6 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_RL_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -73769,7 +73690,7 @@
     "cmd": {
       "21": "A0"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -74533,31 +74454,6 @@
     "cmd": {
       "22": "0104"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_RR_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "22": "0104"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -75162,31 +75058,6 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
-      "22": "C101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E7",
-    "id": "FORTE_TIRE_RL_SPD",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -75204,7 +75075,7 @@
     "id": "FORTE_KNOCK_RETARD_2",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock retard cyl 2",
+    "name": "Knock retard cylinder 2",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25.6, 25.4]",
@@ -75273,6 +75144,31 @@
     "cmd": {
       "21": "01"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_RL_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "21": "01"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -75291,31 +75187,6 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_RR_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -76275,31 +76146,6 @@
     "cmd": {
       "22": "0104"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_RL_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "0104"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -77060,31 +76906,6 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
-      "22": "C101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E7",
-    "id": "FORTE_TIRE_RR_SPD",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -77102,7 +76923,7 @@
     "id": "FORTE_KNOCK_RETARD_3",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock retard cyl 3",
+    "name": "Knock retard cylinder 3",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25.6, 25.4]",
@@ -77374,33 +77195,6 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_MIN_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Battery min temperature",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -78905,7 +78699,7 @@
     "id": "FORTE_KNOCK_RETARD_4",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock retard cyl 4",
+    "name": "Knock retard cylinder 4",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25.6, 25.4]",
@@ -79177,33 +78971,6 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_MOD1_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Battery module 1 temperature",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -80958,33 +80725,6 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_MOD2_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Battery module 2 temperature",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -83993,33 +83733,6 @@
       "unit": "celsius"
     },
     "hdr": "7D4",
-    "id": "FORTE_BMS_MOD3_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Battery module 3 temperature",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 144,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 144,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
     "id": "VELOSTER_BMS_MOD3_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -85429,7 +85142,7 @@
     "cmd": {
       "21": "A0"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 152,
@@ -85558,33 +85271,6 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_MOD4_TEMP",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Battery module 4 temperature",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -87106,6 +86792,31 @@
       "unit": "percent"
     },
     "hdr": "7E2",
+    "id": "FORTE_VPWR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "12V battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E2",
     "id": "SANTAFEHYB_VPWR",
     "make": "Hyundai",
     "model": "Santa-Fe-Hybrid",
@@ -87135,31 +86846,6 @@
     "id": "SPORTAGE_VPWR",
     "make": "Kia",
     "model": "Sportage-HEV",
-    "name": "12V battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "E004"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E2",
-    "id": "FORTE_VPWR",
-    "make": "Kia",
-    "model": "Forte",
     "name": "12V battery charge",
     "path": "Battery",
     "pid": "22",
@@ -89173,34 +88859,6 @@
     "id": "VELOSTER_ATF_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
-    "name": "Transmission fluid temperature",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw*9 /5 +-40 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "21A0"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "div": 5,
-      "len": 8,
-      "max": 255,
-      "mul": 9,
-      "unit": "fahrenheit"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_ATF_TEMP",
-    "make": "Kia",
-    "model": "Forte",
     "name": "Transmission fluid temperature",
     "path": "Transmission",
     "pid": "22",
@@ -91386,7 +91044,7 @@
     "id": "FORTE_KNOCK_LEARN_1",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock learn cyl 1",
+    "name": "Knock learn cylinder 1",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25.6, 25.4]",
@@ -92847,7 +92505,7 @@
     "id": "FORTE_KNOCK_LEARN_2",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock learn cyl 2",
+    "name": "Knock learn cylinder 2",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25.6, 25.4]",
@@ -94426,7 +94084,7 @@
     "id": "FORTE_KNOCK_LEARN_3",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock learn cyl 3",
+    "name": "Knock learn cylinder 3",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25.6, 25.4]",
@@ -96156,7 +95814,7 @@
     "id": "FORTE_KNOCK_LEARN_4",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock learn cyl 4",
+    "name": "Knock learn cylinder 4",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25.6, 25.4]",
@@ -96243,33 +95901,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw+-4 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 184,
-    "cmd": {
-      "22": "ED02"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -4,
-      "bix": 184,
-      "len": 8,
-      "max": 215,
-      "min": -4,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_EOT_V2",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-4 clamped to [-4, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -116507,7 +116138,7 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "FORTE_INTAKE_TEMP",
+    "id": "FORTE_IAT",
     "make": "Kia",
     "model": "Forte",
     "name": "Intake air temperature",
@@ -116755,33 +116386,6 @@
     "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 272,
-    "cmd": {
-      "21": "18"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -48,
-      "bix": 272,
-      "len": 8,
-      "max": 207,
-      "min": -48,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "FORTE_CVVT_T",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "CVVT temperature",
-    "path": "Engine",
-    "pid": "21",
-    "scaling": "raw+-48 clamped to [-48, 207]",
-    "suggestedMetric": "",
-    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -118021,7 +117625,7 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "FORTE_OIL_TEMP",
+    "id": "FORTE_EOT",
     "make": "Kia",
     "model": "Forte",
     "name": "Engine oil temperature",
@@ -121460,32 +121064,6 @@
     "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "",
     "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 2,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D4",
-    "id": "FORTE_BMS_SOC",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Battery state of charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -129992,6 +129570,31 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_VSS_AVG",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "21": "02"
     },
     "debug": false,
@@ -130150,7 +129753,7 @@
     "cmd": {
       "21": "A0"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -130163,7 +129766,7 @@
     "make": "Kia",
     "model": "Forte",
     "name": "Vehicle speed",
-    "path": "Transmission",
+    "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "speed",
@@ -131005,31 +130608,6 @@
     "cmd": {
       "22": "0104"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_VSS_AVG",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "0104"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -131779,9 +131357,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
-    "id": "KONA_TIRE_FL_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
+    "id": "FORTE_TIRE_FL_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -131795,7 +131373,7 @@
     "cmd": {
       "22": "4000"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -50,
@@ -131806,9 +131384,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
-    "id": "FORTE_TIRE_FL_VSS_V2",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "KONA_TIRE_FL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -134235,9 +133813,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
-    "id": "KONA_TIRE_FR_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
+    "id": "FORTE_TIRE_FR_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -134251,7 +133829,7 @@
     "cmd": {
       "22": "4000"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -50,
@@ -134262,9 +133840,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
-    "id": "FORTE_TIRE_FR_VSS_V2",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "KONA_TIRE_FR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -136257,9 +135835,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
-    "id": "KONA_TIRE_RL_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
+    "id": "FORTE_TIRE_RL_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -136273,7 +135851,7 @@
     "cmd": {
       "22": "4000"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -50,
@@ -136284,9 +135862,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
-    "id": "FORTE_TIRE_RL_VSS_V2",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "KONA_TIRE_RL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -138440,9 +138018,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
-    "id": "KONA_TIRE_RR_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
+    "id": "FORTE_TIRE_RR_VSS_V2",
+    "make": "Kia",
+    "model": "Forte",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -138456,7 +138034,7 @@
     "cmd": {
       "22": "4000"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -50,
@@ -138467,9 +138045,9 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
-    "id": "FORTE_TIRE_RR_VSS_V2",
-    "make": "Kia",
-    "model": "Forte",
+    "id": "KONA_TIRE_RR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -145561,6 +145139,31 @@
     "cmd": {
       "21": "01"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_FL_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -145579,31 +145182,6 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_FL_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -146517,31 +146095,6 @@
     "cmd": {
       "22": "0104"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_FL_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "22": "0104"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -147133,25 +146686,25 @@
   },
   {
     "bitLength": 8,
-    "bitOffset": 88,
+    "bitOffset": 96,
     "cmd": {
-      "22": "C101"
+      "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 88,
+      "bix": 96,
       "len": 8,
       "max": 255,
       "unit": "kilometersPerHour"
     },
-    "hdr": "7E7",
-    "id": "FORTE_TIRE_FL_SPD",
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_FR_VSS_V1",
     "make": "Kia",
     "model": "Forte",
-    "name": "Front left wheel speed",
+    "name": "Front right wheel speed",
     "path": "Movement",
-    "pid": "22",
+    "pid": "21",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
@@ -147180,31 +146733,6 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_FR_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -148080,31 +147608,6 @@
     "cmd": {
       "22": "0104"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_FR_VSS",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "0104"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -148911,31 +148414,6 @@
     "bitLength": 8,
     "bitOffset": 96,
     "cmd": {
-      "22": "C101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E7",
-    "id": "FORTE_TIRE_FR_SPD",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -148953,7 +148431,7 @@
     "id": "FORTE_KNOCK_RETARD_1",
     "make": "Kia",
     "model": "Forte",
-    "name": "Knock retard cyl 1",
+    "name": "Knock retard cylinder 1",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25.6, 25.4]",
