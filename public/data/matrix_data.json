@@ -681,6 +681,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 126,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 126,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "FORTE_RL_INVALID",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 13,
     "cmd": {
       "01": "01"
@@ -1275,6 +1300,31 @@
     "model": "Elantra",
     "name": "ABS traction control switch (raw)",
     "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 158,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 158,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "FORTE_RR_INVALID",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right tire reading invalid?",
+    "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -5046,6 +5096,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 62,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 62,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "FORTE_FL_INVALID",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 7,
     "cmd": {
       "01": "13"
@@ -6060,6 +6135,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "yesno"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 94,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 94,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "FORTE_FR_INVALID",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
   },
   {
     "bitLength": 16,
@@ -74932,13 +75032,14 @@
       "len": 8,
       "max": 205,
       "min": -50,
+      "nullmin": -50,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "FORTE_TT_RL",
+    "id": "FORTE_TT_RR",
     "make": "Kia",
     "model": "Forte",
-    "name": "Rear left tire temperature",
+    "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
@@ -80251,17 +80352,18 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "FORTE_TP_RR",
+    "id": "FORTE_TP_RL",
     "make": "Kia",
     "model": "Forte",
-    "name": "Rear right tire pressure",
+    "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearRightTirePressure",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -83333,13 +83435,14 @@
       "len": 8,
       "max": 205,
       "min": -50,
+      "nullmin": -50,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "FORTE_TT_RR",
+    "id": "FORTE_TT_RL",
     "make": "Kia",
     "model": "Forte",
-    "name": "Rear right tire temperature",
+    "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
@@ -124326,6 +124429,33 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "FORTE_TP_FL",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
       "unit": "psi"
     },
     "hdr": "7A0",
@@ -124363,32 +124493,6 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "FORTE_TP_FL",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "psi"
   },
@@ -129081,17 +129185,17 @@
       "len": 8,
       "max": 205,
       "min": -50,
+      "nullmin": -50,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "EV9_TT_FL",
+    "id": "FORTE_TT_FL",
     "make": "Kia",
-    "model": "EV9",
+    "model": "Forte",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
-    "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -129112,13 +129216,14 @@
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "FORTE_TT_FL",
+    "id": "EV9_TT_FL",
     "make": "Kia",
-    "model": "Forte",
+    "model": "EV9",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -135912,6 +136017,7 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
       "unit": "psi"
     },
     "hdr": "7A0",
@@ -138096,6 +138202,7 @@
       "len": 8,
       "max": 205,
       "min": -50,
+      "nullmin": -50,
       "unit": "celsius"
     },
     "hdr": "7A0",
@@ -148085,17 +148192,18 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "FORTE_TP_RL",
+    "id": "FORTE_TP_RR",
     "make": "Kia",
     "model": "Forte",
-    "name": "Rear left tire pressure",
+    "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearLeftTirePressure",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
