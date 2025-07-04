@@ -9969,6 +9969,56 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1017"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 3200,
+      "len": 16,
+      "max": 20.4,
+      "unit": "liters"
+    },
+    "hdr": "700",
+    "id": "CAMRY_INJ_VOL",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Injection volume",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/3200 clamped to [20.4]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1017"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 3200,
+      "len": 16,
+      "max": 20.4,
+      "unit": "liters"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_INJ_VOL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Injection volume",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/3200 clamped to [20.4]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1022"
     },
     "debug": false,
@@ -10575,6 +10625,243 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "105C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -1024,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "min": -1024,
+      "mul": 312.5,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "CAMRY_KNOCK_CORRECT_LEARNED_VALUE",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Knock correction, learned value",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*312.5 /10000 +-1024 clamped to [-1024, 1023]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "105C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -1024,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "min": -1024,
+      "mul": 312.5,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_KNOCK_CORRECT_LEARNED_VALUE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Knock correction, learned value",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*312.5 /10000 +-1024 clamped to [-1024, 1023]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1062"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 400,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "CAMRY_EXHAUST_VVT_OCV_CONTROL_DUTY",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Exhaust VVT oil control valve control duty",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [400]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1062"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 400,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_EXHAUST_VVT_OCV_CONTROL_DUTY",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Exhaust VVT oil control valve control duty",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [400]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "106F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "CAMRY_INTAKE_VVT_TARGET_ANGLE_B1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Intake VVT target angle B1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "106F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_INTAKE_VVT_TARGET_ANGLE_B1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Intake VVT target angle B1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1071"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "CAMRY_EXHAUST_VVT_TARGET_ANGLE_B1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Exhaust VVT target angle B1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1071"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_EXHAUST_VVT_TARGET_ANGLE_B1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Exhaust VVT target angle B1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1074"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 12.8,
+      "len": 16,
+      "max": 5119,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "CAMRY_EOP",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Engine oil pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [5119]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1074"
     },
     "debug": false,
@@ -10594,6 +10881,31 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*10 /128 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1074"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 12.8,
+      "len": 16,
+      "max": 5119,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_EOP",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Engine oil pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [5119]",
     "suggestedMetric": "",
     "unit": "kilopascal"
   },
@@ -10702,6 +11014,58 @@
     "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1087"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "CAMRY_INTAKE_VVT_CHANGE_ANGLE_BANK_1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Intake VVT change angle bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1087"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_INTAKE_VVT_CHANGE_ANGLE_BANK_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Intake VVT change angle bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -10831,6 +11195,58 @@
     "path": "Fuel",
     "pid": "22",
     "scaling": "raw/10 +-3276.75 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10CD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "CAMRY_LFP",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Low fuel pressure sensor",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 +-3276.8 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10CD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_LFP",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Low fuel pressure sensor",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 +-3276.8 clamped to [100]",
     "suggestedMetric": "",
     "unit": "kilopascal"
   },
@@ -12569,6 +12985,33 @@
     "eax": "",
     "fmt": {
       "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "701",
+    "id": "CAMRY_TFP_T",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Transmission fluid pan temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1627"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
       "len": 16,
       "max": 350,
       "min": -40,
@@ -12612,6 +13055,33 @@
     "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1627"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "701",
+    "id": "DAIHATSU_TFP_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Transmission fluid pan temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -13431,6 +13901,114 @@
     "scaling": "raw/4 +-511 clamped to [-200, 200]",
     "suggestedMetric": "",
     "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F3C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "CAMRY_CAT_T_BANK_1_SENSOR_1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Catalyst temperature, bank 1 sensor 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F3C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_CAT_T_BANK_1_SENSOR_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Catalyst temperature, bank 1 sensor 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F3E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "CAMRY_CAT_T_BANK_1_SENSOR_2",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Catalyst temperature, bank 1 sensor 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F3E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_CAT_T_BANK_1_SENSOR_2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Catalyst temperature, bank 1 sensor 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -16042,6 +16620,58 @@
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2848"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 4999,
+      "mul": 762.93,
+      "unit": "milliamps"
+    },
+    "hdr": "700",
+    "id": "CAMRY_EOP_CONTROL_VALVE",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Engine oil pressure control valve",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*762.93 /10000 clamped to [4999]",
+    "suggestedMetric": "",
+    "unit": "milliamps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2848"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 4999,
+      "mul": 762.93,
+      "unit": "milliamps"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_EOP_CONTROL_VALVE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Engine oil pressure control valve",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*762.93 /10000 clamped to [4999]",
+    "suggestedMetric": "",
+    "unit": "milliamps"
   },
   {
     "bitLength": 16,
@@ -33615,6 +34245,64 @@
     "scaling": "raw/256 +-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "105C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -1024,
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "min": -1024,
+      "mul": 312.5,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "CAMRY_KNOCK_FEEDBACK_VALUE",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Knock feedback value",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*312.5 /10000 +-1024 clamped to [-1024, 1023]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "105C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -1024,
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "min": -1024,
+      "mul": 312.5,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_KNOCK_FEEDBACK_VALUE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Knock feedback value",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*312.5 /10000 +-1024 clamped to [-1024, 1023]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -60103,9 +60791,9 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TT_FL",
+    "id": "CAMRY_TT_FL",
     "make": "Toyota",
-    "model": "RAV4-Hybrid",
+    "model": "Camry",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -60126,12 +60814,13 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "CAMRY_TT_FL",
+    "id": "RAV4HYBRID_TT_FL",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "RAV4-Hybrid",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -60162,6 +60851,33 @@
     "path": "Tires",
     "pid": "21",
     "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_FL_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -60458,17 +61174,18 @@
       "add": -0.5,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_FL",
+    "id": "CAMRY_TP_FL",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
@@ -60488,9 +61205,9 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_FL",
+    "id": "4RUNNER_TP_FL",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -63087,6 +63804,112 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "102A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "CAMRY_A_F_RATIO_LEARNED_IDLE_BANK_1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "A/F ratio learned idle, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_A_F_RATIO_LEARNED_IDLE_BANK_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "A/F ratio learned idle, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1043"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 6375,
+      "mul": 25,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "CAMRY_EWP_TARGET_VSS",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Electric water pump target speed",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*25 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1043"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 6375,
+      "mul": 25,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_EWP_TARGET_VSS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Electric water pump target speed",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*25 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1059"
     },
     "debug": true,
@@ -63139,6 +63962,110 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "105E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "CAMRY_ECU_INTERNAL_T",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "ECU internal temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "105E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_ECU_INTERNAL_T",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "ECU internal temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "CAMRY_IDLE_SAC_CYL_1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Idle spark advance control, cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_IDLE_SAC_CYL_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Idle spark advance control, cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10A5"
     },
     "debug": false,
@@ -63173,11 +64100,35 @@
       "unit": "scalar"
     },
     "hdr": "700",
-    "id": "DAIHATSU_MIS_ALL",
+    "id": "CAMRY_MISFIRE_COUNT",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Misfire, all cylinders counter",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_MISFIRE_COUNT",
     "make": "Daihatsu",
     "model": "",
-    "name": "Misfire count, all",
-    "path": "Engine.Misfires",
+    "name": "Misfire, all cylinders counter",
+    "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -63308,6 +64259,58 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 510,
+      "mul": 510,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "CAMRY_MISFIRE_LOAD",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Misfire load",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*510 /255 clamped to [510]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 510,
+      "mul": 510,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_MISFIRE_LOAD",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Misfire load",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*510 /255 clamped to [510]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -67133,10 +68136,36 @@
       "unit": "celsius"
     },
     "hdr": "700",
+    "id": "CAMRY_EOT_V2",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Engine oil temperature, variation 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
     "id": "DAIHATSU_EOT_V2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Engine oil temperature",
+    "name": "Engine oil temperature, variation 2",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-40, 215]",
@@ -70840,7 +71869,7 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "DAIHATSU_EOP",
+    "id": "DAIHATSU_EOP_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Engine oil pressure",
@@ -72400,7 +73429,7 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "DAIHATSU_EOT_V2",
+    "id": "DAIHATSU_EOT_V3",
     "make": "Daihatsu",
     "model": "",
     "name": "Engine oil temperature",
@@ -87570,9 +88599,9 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TT_RL",
+    "id": "CAMRY_TT_RL",
     "make": "Toyota",
-    "model": "RAV4-Hybrid",
+    "model": "Camry",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -87594,12 +88623,13 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "CAMRY_TT_RL",
+    "id": "RAV4HYBRID_TT_RL",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "RAV4-Hybrid",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -87631,6 +88661,34 @@
     "path": "Tires",
     "pid": "21",
     "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_RL_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -87675,17 +88733,18 @@
       "bix": 16,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_RL",
+    "id": "CAMRY_TP_RL",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
   },
@@ -87706,9 +88765,9 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_RL",
+    "id": "4RUNNER_TP_RL",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -88354,6 +89413,64 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "102A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "CAMRY_A_F_RATIO_LEARNED_MID_1_BANK_1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "A/F ratio learned mid 1, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_A_F_RATIO_LEARNED_MID_1_BANK_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "A/F ratio learned mid 1, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "1040"
     },
     "debug": false,
@@ -88508,6 +89625,60 @@
     "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "CAMRY_IDLE_SAC_CYL_3",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Idle spark advance control, cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_IDLE_SAC_CYL_3",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Idle spark advance control, cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -97479,6 +98650,60 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "107B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 192,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "CAMRY_EOT",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "107B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 192,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_EOT_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -106480,9 +107705,9 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TT_RR",
+    "id": "CAMRY_TT_RR",
     "make": "Toyota",
-    "model": "RAV4-Hybrid",
+    "model": "Camry",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -106504,12 +107729,13 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "CAMRY_TT_RR",
+    "id": "RAV4HYBRID_TT_RR",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "RAV4-Hybrid",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -106541,6 +107767,34 @@
     "path": "Tires",
     "pid": "21",
     "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_RR_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -106585,17 +107839,18 @@
       "bix": 24,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_RR",
+    "id": "CAMRY_TP_RR",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
@@ -106616,9 +107871,9 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_RR",
+    "id": "4RUNNER_TP_RR",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -107434,6 +108689,118 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "102A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 24,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "CAMRY_A_F_RATIO_LEARNED_MID_2_BANK_1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "A/F ratio learned mid 2, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 24,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_A_F_RATIO_LEARNED_MID_2_BANK_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "A/F ratio learned mid 2, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "CAMRY_IDLE_SAC_CYL_4",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Idle spark advance control, cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_IDLE_SAC_CYL_4",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Idle spark advance control, cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "10A7"
     },
     "debug": false,
@@ -107479,6 +108846,60 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 255,
+      "len": 8,
+      "max": 6375,
+      "mul": 6375,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "CAMRY_MISFIRE_RPM",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Misfire RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6375 /255 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 255,
+      "len": 8,
+      "max": 6375,
+      "mul": 6375,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_MISFIRE_RPM",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Misfire RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6375 /255 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
   },
   {
     "bitLength": 8,
@@ -120824,9 +122245,9 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TT_SPARE",
+    "id": "CAMRY_TT_SPARE",
     "make": "Toyota",
-    "model": "RAV4-Hybrid",
+    "model": "Camry",
     "name": "Spare tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -120848,12 +122269,13 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "CAMRY_TT_SPARE",
+    "id": "RAV4HYBRID_TT_SPARE",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "RAV4-Hybrid",
     "name": "Spare tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -120885,6 +122307,34 @@
     "path": "Tires",
     "pid": "21",
     "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_SPARE_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -120929,17 +122379,18 @@
       "bix": 32,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_SPARE",
+    "id": "CAMRY_TP_SPARE",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "",
     "unit": "bars"
   },
@@ -120960,9 +122411,9 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_SPARE",
+    "id": "4RUNNER_TP_SPARE",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -122790,6 +124241,118 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "102A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "CAMRY_A_F_RATIO_LEARNED_HIGH_BANK_1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "A/F ratio learned high, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_A_F_RATIO_LEARNED_HIGH_BANK_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "A/F ratio learned high, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 32,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "CAMRY_MISFIRE_MARGIN",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Misfire margin",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 32,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_MISFIRE_MARGIN",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Misfire margin",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "rpm"
   },
   {
     "bitLength": 8,
@@ -139329,9 +140892,9 @@
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "RAV4HYBRID_TT_FR",
+    "id": "CAMRY_TT_FR",
     "make": "Toyota",
-    "model": "RAV4-Hybrid",
+    "model": "Camry",
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -139353,12 +140916,13 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "750",
-    "id": "CAMRY_TT_FR",
+    "id": "RAV4HYBRID_TT_FR",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "RAV4-Hybrid",
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -139390,6 +140954,34 @@
     "path": "Tires",
     "pid": "21",
     "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_FR_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -139588,17 +141180,18 @@
       "bix": 8,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_FR",
+    "id": "CAMRY_TP_FR",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
@@ -139619,9 +141212,9 @@
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_FR",
+    "id": "4RUNNER_TP_FR",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -140549,6 +142142,116 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "102A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "CAMRY_A_F_RATIO_LEARNED_LOW_BANK_1",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "A/F ratio learned low, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_A_F_RATIO_LEARNED_LOW_BANK_1",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "A/F ratio learned low, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1043"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 6375,
+      "mul": 25,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "CAMRY_EWP_RPM",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Electric water pump RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*25 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1043"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 6375,
+      "mul": 25,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_EWP_RPM",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Electric water pump RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*25 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "106C"
     },
     "debug": false,
@@ -140649,6 +142352,60 @@
     "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "CAMRY_IDLE_SAC_CYL_2",
+    "make": "Toyota",
+    "model": "Camry",
+    "name": "Idle spark advance control, cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "DAIHATSU_IDLE_SAC_CYL_2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Idle spark advance control, cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
