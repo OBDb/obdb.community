@@ -10871,6 +10871,60 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0885"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -720,
+      "div": 10,
+      "len": 16,
+      "max": 720,
+      "min": -720,
+      "unit": "degrees"
+    },
+    "hdr": "DA30",
+    "id": "GRANDCHEROKEE_STEER_ANGLE",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/10 +-720 clamped to [-720, 720]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0885"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -720,
+      "div": 10,
+      "len": 16,
+      "max": 720,
+      "min": -720,
+      "unit": "degrees"
+    },
+    "hdr": "DA30",
+    "id": "ALFAROMEO_STEER_ANGLE",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/10 +-720 clamped to [-720, 720]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "08D2"
     },
     "debug": false,
