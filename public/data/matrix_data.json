@@ -2694,6 +2694,56 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 3,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 3,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_RRD_OPEN",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear right door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 3,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 3,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_RRD_OPEN",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 30,
     "cmd": {
       "01": "01"
@@ -3971,6 +4021,106 @@
     "bitLength": 1,
     "bitOffset": 4,
     "cmd": {
+      "22": "012F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TP_RL_INVALID",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear left tire pressure invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "012F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TP_RL_INVALID",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire pressure invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_RLD_OPEN",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear left door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_RLD_OPEN",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
       "22": "0805"
     },
     "debug": false,
@@ -4573,6 +4723,106 @@
     "bitLength": 1,
     "bitOffset": 5,
     "cmd": {
+      "22": "012F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TP_RR_INVALID",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear right tire pressure invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "22": "012F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TP_RR_INVALID",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire pressure invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_PASSENGER_DOOR_OPEN",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_PASSENGER_DOOR_OPEN",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
       "22": "0805"
     },
     "debug": false,
@@ -5048,6 +5298,106 @@
     "bitLength": 1,
     "bitOffset": 6,
     "cmd": {
+      "22": "012F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TP_FR_INVALID",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front right tire pressure invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "012F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TP_FR_INVALID",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire pressure invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_DRIVER_DOOR_OPEN",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_DRIVER_DOOR_OPEN",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
       "22": "0805"
     },
     "debug": false,
@@ -5518,6 +5868,106 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "012F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TP_FL_INVALID",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front left tire pressure invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "012F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TP_FL_INVALID",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire pressure invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TRUNK_OPEN",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Trunk open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TRUNK_OPEN",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Trunk open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
   },
   {
     "bitLength": 1,
@@ -6160,6 +6610,122 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 12,
+    "bitOffset": 20,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40.96,
+      "bix": 20,
+      "div": 50,
+      "len": 12,
+      "max": 40.94,
+      "min": -40.94,
+      "nullmax": 40,
+      "unit": "metersPerSecondSquared"
+    },
+    "hdr": "DA30",
+    "id": "GRANDCHEROKEE_LNG_G",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Longitudinal acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/50 +-40.96 clamped to [-40.94, 40.94]",
+    "suggestedMetric": "",
+    "unit": "metersPerSecondSquared"
+  },
+  {
+    "bitLength": 12,
+    "bitOffset": 20,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40.96,
+      "bix": 20,
+      "div": 50,
+      "len": 12,
+      "max": 40.94,
+      "min": -40.94,
+      "nullmax": 40,
+      "unit": "metersPerSecondSquared"
+    },
+    "hdr": "DA30",
+    "id": "ALFAROMEO_LNG_G",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Longitudinal acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/50 +-40.96 clamped to [-40.94, 40.94]",
+    "suggestedMetric": "",
+    "unit": "metersPerSecondSquared"
+  },
+  {
+    "bitLength": 12,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40.96,
+      "bix": 4,
+      "div": 50,
+      "len": 12,
+      "max": 40.94,
+      "min": -40.94,
+      "nullmax": 40,
+      "unit": "metersPerSecondSquared"
+    },
+    "hdr": "DA30",
+    "id": "GRANDCHEROKEE_LAT_G",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Lateral acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/50 +-40.96 clamped to [-40.94, 40.94]",
+    "suggestedMetric": "",
+    "unit": "metersPerSecondSquared"
+  },
+  {
+    "bitLength": 12,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40.96,
+      "bix": 4,
+      "div": 50,
+      "len": 12,
+      "max": 40.94,
+      "min": -40.94,
+      "nullmax": 40,
+      "unit": "metersPerSecondSquared"
+    },
+    "hdr": "DA30",
+    "id": "ALFAROMEO_LAT_G",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Lateral acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw/50 +-40.96 clamped to [-40.94, 40.94]",
+    "suggestedMetric": "",
+    "unit": "metersPerSecondSquared"
   },
   {
     "bitLength": 16,
@@ -7113,6 +7679,214 @@
     "scaling": "raw*500 /10000 clamped to [3276.75]",
     "suggestedMetric": "",
     "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "013C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TP_FL",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "013C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TP_FL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "013D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TP_FR",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "013D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TP_FR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "013E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TP_RL",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "013E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TP_RL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "013F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TP_RR",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "013F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TP_RR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 16,
@@ -30648,6 +31422,58 @@
     "bitLength": 16,
     "bitOffset": 112,
     "cmd": {
+      "22": "2962"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 16,
+      "len": 16,
+      "max": 4095,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA30",
+    "id": "GRANDCHEROKEE_FL_VSS",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [4095]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 16,
+      "len": 16,
+      "max": 4095,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA30",
+    "id": "ALFAROMEO_FL_VSS",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [4095]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 112,
+    "cmd": {
       "22": "6001"
     },
     "debug": false,
@@ -33459,6 +34285,58 @@
     "scaling": "raw/1000 clamped to [-32, 32]",
     "suggestedMetric": "",
     "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 16,
+      "len": 16,
+      "max": 4095,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA30",
+    "id": "GRANDCHEROKEE_RL_VSS",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [4095]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 16,
+      "len": 16,
+      "max": 4095,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA30",
+    "id": "ALFAROMEO_RL_VSS",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [4095]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -38084,6 +38962,58 @@
     "bitLength": 16,
     "bitOffset": 176,
     "cmd": {
+      "22": "2962"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 16,
+      "len": 16,
+      "max": 4095,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA30",
+    "id": "GRANDCHEROKEE_FR_VSS",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [4095]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 16,
+      "len": 16,
+      "max": 4095,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA30",
+    "id": "ALFAROMEO_FR_VSS",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [4095]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
       "22": "DFA0"
     },
     "debug": false,
@@ -38723,6 +39653,58 @@
     "scaling": "raw*5 /65535 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "div": 16,
+      "len": 16,
+      "max": 4095,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA30",
+    "id": "GRANDCHEROKEE_RR_VSS",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [4095]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "2962"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "div": 16,
+      "len": 16,
+      "max": 4095,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "DA30",
+    "id": "ALFAROMEO_RR_VSS",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [4095]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -49023,6 +50005,56 @@
     "bitLength": 16,
     "bitOffset": 64,
     "cmd": {
+      "22": "2024"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "len": 16,
+      "max": 65535,
+      "unit": "millimeters"
+    },
+    "hdr": "DA18",
+    "id": "GRANDCHEROKEE_TIRE_SIZE",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Tire size",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "millimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "2024"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "len": 16,
+      "max": 65535,
+      "unit": "millimeters"
+    },
+    "hdr": "DA18",
+    "id": "ALFAROMEO_TIRE_SIZE",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Tire size",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "millimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
       "22": "2611"
     },
     "debug": true,
@@ -55810,6 +56842,198 @@
     "scaling": "raw/10 clamped to [429496729.5]",
     "suggestedMetric": "",
     "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0123"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "hex"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TID_FL",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front left tire sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "",
+    "unit": "hex"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0123"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "hex"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TID_FL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "",
+    "unit": "hex"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0124"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "hex"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TID_FR",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front right tire sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "",
+    "unit": "hex"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0124"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "hex"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TID_FR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "",
+    "unit": "hex"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0125"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "hex"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TID_RL",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear left tire sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "",
+    "unit": "hex"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0125"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "hex"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TID_RL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "",
+    "unit": "hex"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0127"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "hex"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TID_RR",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear right tire sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "",
+    "unit": "hex"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0127"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "hex"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TID_RR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire sensor id",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "",
+    "unit": "hex"
   },
   {
     "bitLength": 32,
@@ -63105,6 +64329,94 @@
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "",
     "unit": "millimeters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "051A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "17": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "221": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "238": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "34": {
+          "description": "Manual",
+          "value": "MANUAL"
+        }
+      }
+    },
+    "hdr": "DA18",
+    "id": "GRANDCHEROKEE_GEAR",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '17': {'description': 'Drive', 'value': 'DRIVE'}, '34': {'description': 'Manual', 'value': 'MANUAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "051A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "17": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "221": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "238": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "34": {
+          "description": "Manual",
+          "value": "MANUAL"
+        }
+      }
+    },
+    "hdr": "DA18",
+    "id": "ALFAROMEO_GEAR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '17': {'description': 'Drive', 'value': 'DRIVE'}, '34': {'description': 'Manual', 'value': 'MANUAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -74264,6 +75576,56 @@
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F158"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": 2000,
+      "len": 8,
+      "max": 2225,
+      "unit": "scalar"
+    },
+    "hdr": "DA18",
+    "id": "GRANDCHEROKEE_MODEL_YEAR",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Model year",
+    "path": "Details",
+    "pid": "22",
+    "scaling": "raw+2000 clamped to [2225]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F158"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 2000,
+      "len": 8,
+      "max": 2225,
+      "unit": "scalar"
+    },
+    "hdr": "DA18",
+    "id": "ALFAROMEO_MODEL_YEAR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Model year",
+    "path": "Details",
+    "pid": "22",
+    "scaling": "raw+2000 clamped to [2225]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -89080,6 +90442,230 @@
     "scaling": "raw+-128 clamped to [-128, 127]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "013C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TT_FL",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "013C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TT_FL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "013D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TT_FR",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "013D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TT_FR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "013E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TT_RL",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "013E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TT_RL",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "013F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "DAC7",
+    "id": "GRANDCHEROKEE_TT_RR",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "013F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "DAC7",
+    "id": "ALFAROMEO_TT_RR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -110578,7 +112164,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "ALFAROMEO_TP_FL",
+    "id": "ALFAROMEO_TP_FL_V2",
     "make": "Alfa",
     "model": "Romeo",
     "name": "Front left tire pressure",
@@ -124697,7 +126283,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "ALFAROMEO_TP_FR",
+    "id": "ALFAROMEO_TP_FR_V2",
     "make": "Alfa",
     "model": "Romeo",
     "name": "Front right tire pressure",
@@ -129554,7 +131140,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "ALFAROMEO_TP_RL",
+    "id": "ALFAROMEO_TP_RL_V2",
     "make": "Alfa",
     "model": "Romeo",
     "name": "Rear left tire pressure",
@@ -133104,7 +134690,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "ALFAROMEO_TP_RR",
+    "id": "ALFAROMEO_TP_RR_V2",
     "make": "Alfa",
     "model": "Romeo",
     "name": "Rear right tire pressure",
