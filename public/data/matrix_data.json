@@ -60590,6 +60590,32 @@
   },
   {
     "bitLength": 4,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "051A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 4,
+      "max": 15,
+      "nullmax": 13,
+      "nullmin": 0,
+      "unit": "scalar"
+    },
+    "hdr": "DA18",
+    "id": "VAUXHALLOPEL_GEAR_DESIRED",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Desired gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
     "bitOffset": 188,
     "cmd": {
       "22": "01A4"
@@ -60735,6 +60761,33 @@
     "id": "ALFAROMEO_GEAR_CURRENT",
     "make": "Alfa",
     "model": "Romeo",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "051A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "max": 15,
+      "nullmax": 13,
+      "nullmin": 0,
+      "unit": "scalar"
+    },
+    "hdr": "DA18",
+    "id": "VAUXHALLOPEL_GEAR_CURRENT",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Current gear",
     "path": "Transmission",
     "pid": "22",
@@ -65531,10 +65584,6 @@
           "description": "Neutral",
           "value": "NEUTRAL"
         },
-        "17": {
-          "description": "Drive",
-          "value": "DRIVE"
-        },
         "221": {
           "description": "Park",
           "value": "PARK"
@@ -65542,21 +65591,17 @@
         "238": {
           "description": "Reverse",
           "value": "REVERSE"
-        },
-        "34": {
-          "description": "Manual",
-          "value": "MANUAL"
         }
       }
     },
     "hdr": "DA18",
-    "id": "VAUXHALLOPEL_GEAR",
-    "make": "VauxhallOpel",
-    "model": "",
-    "name": "Current gear",
+    "id": "ALFAROMEO_GEAR_SHFT",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Shift gear",
     "path": "Transmission",
     "pid": "22",
-    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '17': {'description': 'Drive', 'value': 'DRIVE'}, '34': {'description': 'Manual', 'value': 'MANUAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
     "suggestedMetric": "",
     "unit": ""
   },
@@ -65586,9 +65631,9 @@
       }
     },
     "hdr": "DA18",
-    "id": "ALFAROMEO_GEAR_SHFT",
-    "make": "Alfa",
-    "model": "Romeo",
+    "id": "VAUXHALLOPEL_GEAR_SHFT",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Shift gear",
     "path": "Transmission",
     "pid": "22",
