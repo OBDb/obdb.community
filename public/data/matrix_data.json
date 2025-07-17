@@ -131,6 +131,30 @@
     "bitLength": 1,
     "bitOffset": 0,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "707",
+    "id": "ALTIMA_TURN_SIGNAL_RIGHT",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Right turn signal",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1304"
     },
     "debug": false,
@@ -387,6 +411,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 1,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "707",
+    "id": "ALTIMA_TURN_SIGNAL_LEFT",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Left turn signal",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
   },
   {
     "bitLength": 1,
@@ -7967,6 +8016,112 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "723",
+    "id": "ALTIMA_YAW_RATE",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Yaw rate",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0107"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "meters"
+    },
+    "hdr": "723",
+    "id": "ALTIMA_RADAR_DISTANCE",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Radar distance",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "meters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0108"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "metersPerSecond"
+    },
+    "hdr": "723",
+    "id": "ALTIMA_RADAR_SPEED",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Relative speed",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "metersPerSecond"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0110"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "723",
+    "id": "ALTIMA_STEER_ANGLE",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "013C"
     },
     "debug": false,
@@ -13881,7 +14036,7 @@
     "cmd": {
       "22": "122B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -13949,34 +14104,6 @@
     "scaling": "raw clamped to [-32767, 32767]",
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1266"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -273,
-      "div": 128,
-      "len": 16,
-      "max": 500,
-      "min": -500,
-      "mul": 3,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "ALTIMA_VVTO_T",
-    "make": "Nissan",
-    "model": "Altima",
-    "name": "VVT oil temperature",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw*3 /128 +-273 clamped to [-500, 500]",
-    "suggestedMetric": "",
-    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -55106,6 +55233,30 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
+      "22": "0E01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "miles"
+    },
+    "hdr": "743",
+    "id": "ALTIMA_ODO",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
       "22": "101A"
     },
     "debug": true,
@@ -60387,6 +60538,58 @@
   },
   {
     "bitLength": 4,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "051A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 4,
+      "max": 15,
+      "nullmax": 13,
+      "nullmin": 0,
+      "unit": "scalar"
+    },
+    "hdr": "DA18",
+    "id": "GRANDCHEROKEE_GEAR_DESIRED",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Desired gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "051A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 4,
+      "max": 15,
+      "nullmax": 13,
+      "nullmin": 0,
+      "unit": "scalar"
+    },
+    "hdr": "DA18",
+    "id": "ALFAROMEO_GEAR_DESIRED",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Desired gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
     "bitOffset": 188,
     "cmd": {
       "22": "01A4"
@@ -60479,6 +60682,60 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "Next gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "051A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "max": 15,
+      "nullmax": 13,
+      "nullmin": 0,
+      "unit": "scalar"
+    },
+    "hdr": "DA18",
+    "id": "GRANDCHEROKEE_GEAR_CURRENT",
+    "make": "Jeep",
+    "model": "Grand-Cherokee",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "051A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "max": 15,
+      "nullmax": 13,
+      "nullmin": 0,
+      "unit": "scalar"
+    },
+    "hdr": "DA18",
+    "id": "ALFAROMEO_GEAR_CURRENT",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Current gear",
     "path": "Transmission",
     "pid": "22",
     "scaling": "raw clamped to [15]",
@@ -63942,6 +64199,206 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "0201"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 8,
+      "max": 63.75,
+      "unit": "psi"
+    },
+    "hdr": "758",
+    "id": "ALTIMA_TP_FL",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [63.75]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0202"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 8,
+      "max": 63.75,
+      "unit": "psi"
+    },
+    "hdr": "758",
+    "id": "ALTIMA_TP_FR",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [63.75]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0203"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 8,
+      "max": 63.75,
+      "unit": "psi"
+    },
+    "hdr": "758",
+    "id": "ALTIMA_TP_RR",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [63.75]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0204"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 8,
+      "max": 63.75,
+      "unit": "psi"
+    },
+    "hdr": "758",
+    "id": "ALTIMA_TP_RL",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [63.75]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "020D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 8,
+      "max": 63.75,
+      "unit": "psi"
+    },
+    "hdr": "758",
+    "id": "ALTIMA_TPW_FL",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Front left tire pressure, warning",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [63.75]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "020E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 8,
+      "max": 63.75,
+      "unit": "psi"
+    },
+    "hdr": "758",
+    "id": "ALTIMA_TPW_FR",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Front right tire pressure, warning",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [63.75]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "020F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 8,
+      "max": 63.75,
+      "unit": "psi"
+    },
+    "hdr": "758",
+    "id": "ALTIMA_TPW_RR",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Rear right tire pressure, warning",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [63.75]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0210"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 8,
+      "max": 63.75,
+      "unit": "psi"
+    },
+    "hdr": "758",
+    "id": "ALTIMA_TPW_RL",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Rear left tire pressure, warning",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [63.75]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "028C"
     },
     "debug": false,
@@ -65038,10 +65495,6 @@
           "description": "Neutral",
           "value": "NEUTRAL"
         },
-        "17": {
-          "description": "Drive",
-          "value": "DRIVE"
-        },
         "221": {
           "description": "Park",
           "value": "PARK"
@@ -65049,65 +65502,17 @@
         "238": {
           "description": "Reverse",
           "value": "REVERSE"
-        },
-        "34": {
-          "description": "Manual",
-          "value": "MANUAL"
         }
       }
     },
     "hdr": "DA18",
-    "id": "GRANDCHEROKEE_GEAR",
+    "id": "GRANDCHEROKEE_GEAR_SHFT",
     "make": "Jeep",
     "model": "Grand-Cherokee",
-    "name": "Current gear",
+    "name": "Shift gear",
     "path": "Transmission",
     "pid": "22",
-    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '17': {'description': 'Drive', 'value': 'DRIVE'}, '34': {'description': 'Manual', 'value': 'MANUAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "051A"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "0": {
-          "description": "Neutral",
-          "value": "NEUTRAL"
-        },
-        "17": {
-          "description": "Drive",
-          "value": "DRIVE"
-        },
-        "221": {
-          "description": "Park",
-          "value": "PARK"
-        },
-        "238": {
-          "description": "Reverse",
-          "value": "REVERSE"
-        },
-        "34": {
-          "description": "Manual",
-          "value": "MANUAL"
-        }
-      }
-    },
-    "hdr": "DA18",
-    "id": "ALFAROMEO_GEAR",
-    "make": "Alfa",
-    "model": "Romeo",
-    "name": "Current gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '17': {'description': 'Drive', 'value': 'DRIVE'}, '34': {'description': 'Manual', 'value': 'MANUAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
     "suggestedMetric": "",
     "unit": ""
   },
@@ -65152,6 +65557,42 @@
     "path": "Transmission",
     "pid": "22",
     "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '17': {'description': 'Drive', 'value': 'DRIVE'}, '34': {'description': 'Manual', 'value': 'MANUAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "051A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "221": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "238": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        }
+      }
+    },
+    "hdr": "DA18",
+    "id": "ALFAROMEO_GEAR_SHFT",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
     "suggestedMetric": "",
     "unit": ""
   },
@@ -66801,30 +67242,6 @@
     "scaling": "raw*0.9 +-40.9 clamped to [-36.81, 192.69]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1186"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "liters"
-    },
-    "hdr": "7E0",
-    "id": "ALTIMA_FLV",
-    "make": "Nissan",
-    "model": "Altima",
-    "name": "Fuel remaining",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "liters"
   },
   {
     "bitLength": 8,
@@ -73094,6 +73511,56 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "4007"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "offon"
+    },
+    "hdr": "744",
+    "id": "ALTIMA_AC_STATUS",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "A/C status",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4008"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "744",
+    "id": "ALTIMA_AAT",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "4051"
     },
     "debug": true,
@@ -76728,6 +77195,32 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F467"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "744",
+    "id": "ALTIMA_ECT",
+    "make": "Nissan",
+    "model": "Altima",
+    "name": "Engine coolant temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
