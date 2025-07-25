@@ -6696,10 +6696,10 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "4RUNNER_GEAR_LOCKUP",
+    "id": "4RUNNER_TQC_LOCKUP",
     "make": "Toyota",
     "model": "4Runner",
-    "name": "Gear lock-up",
+    "name": "Torque converter lock-up",
     "path": "Transmission",
     "pid": "21",
     "scaling": "raw clamped to [1]",
@@ -6775,10 +6775,10 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "DAIHATSU_GEAR_LOCKUP",
+    "id": "DAIHATSU_TQC_LOCKUP",
     "make": "Daihatsu",
     "model": "",
-    "name": "Gear lock-up",
+    "name": "Torque converter lock-up",
     "path": "Transmission",
     "pid": "21",
     "scaling": "raw clamped to [1]",
@@ -63118,8 +63118,8 @@
     "eax": "",
     "fmt": {
       "len": 8,
-      "max": 326,
-      "mul": 1.28,
+      "max": 323.85,
+      "mul": 1.35,
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
@@ -63129,7 +63129,7 @@
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "21",
-    "scaling": "raw*1.28 clamped to [326]",
+    "scaling": "raw*1.35 clamped to [323.85]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
   },
@@ -63193,12 +63193,37 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 323.85,
+      "mul": 1.35,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "DAIHATSU_VSS",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*1.35 clamped to [323.85]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "21"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 326,
       "mul": 1.28,
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "DAIHATSU_VSS",
+    "id": "DAIHATSU_VSS_V3",
     "make": "Daihatsu",
     "model": "",
     "name": "Vehicle speed",
@@ -63232,31 +63257,6 @@
     "scaling": "raw*1.28 clamped to [326]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "29"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 2,
-      "len": 8,
-      "max": 127.5,
-      "unit": "liters"
-    },
-    "hdr": "7C0",
-    "id": "4RUNNER_FLI_VOL",
-    "make": "Toyota",
-    "model": "4Runner",
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "21",
-    "scaling": "raw/2 clamped to [127.5]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
   },
   {
     "bitLength": 8,
@@ -63343,13 +63343,40 @@
     "cmd": {
       "21": "29"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 3785,
+      "len": 8,
+      "max": 21,
+      "mul": 500,
+      "unit": "gallons"
+    },
+    "hdr": "7C0",
+    "id": "4RUNNER_FLI_VOL",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw*500 /3785 clamped to [21]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "gallons"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "29"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
-      "div": 2,
+      "div": 3785,
       "len": 8,
-      "max": 127.5,
-      "unit": "liters"
+      "max": 21,
+      "mul": 500,
+      "unit": "gallons"
     },
     "hdr": "7C0",
     "id": "DAIHATSU_FLI_VOL",
@@ -63358,9 +63385,9 @@
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "21",
-    "scaling": "raw/2 clamped to [127.5]",
+    "scaling": "raw*500 /3785 clamped to [21]",
     "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
+    "unit": "gallons"
   },
   {
     "bitLength": 8,
@@ -63401,18 +63428,17 @@
       "add": -0.5,
       "div": 58,
       "len": 8,
-      "max": 3.896,
-      "nullmin": 0,
+      "max": 3.88,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_FL",
+    "id": "4RUNNER_TP_FL",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
@@ -63428,17 +63454,18 @@
       "add": -0.5,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_FL",
+    "id": "CAMRY_TP_FL",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
@@ -63593,6 +63620,32 @@
       "add": -0.5,
       "div": 58,
       "len": 8,
+      "max": 3.88,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_FL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
       "max": 3.896,
       "unit": "bars"
     },
@@ -63611,27 +63664,28 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "21": "30"
+      "21": "47"
     },
-    "debug": true,
-    "eax": "2A",
+    "debug": false,
+    "eax": "",
     "fmt": {
-      "add": -0.5,
-      "div": 58,
+      "div": 50,
       "len": 8,
-      "max": 4,
-      "unit": "bars"
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
     },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_FL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
+    "hdr": "7B0",
+    "id": "4RUNNER_LAT_G",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Lateral g",
+    "path": "Orientation",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
   },
   {
     "bitLength": 8,
@@ -63763,9 +63817,9 @@
       }
     },
     "hdr": "7D0",
-    "id": "4RUNNER_PARKING_BRAKE",
+    "id": "RAV4HYBRID_PARKING_BRAKE",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "RAV4-Hybrid",
     "name": "Parking brake",
     "path": "Control",
     "pid": "21",
@@ -63784,56 +63838,64 @@
     "fmt": {
       "len": 8,
       "map": {
-        "0": {
+        "1": {
           "description": "",
           "value": "Off"
         },
-        "2": {
+        "11": {
           "description": "",
           "value": "On"
+        },
+        "144": {
+          "description": "",
+          "value": "Off"
+        },
+        "16": {
+          "description": "",
+          "value": "Off"
+        },
+        "176": {
+          "description": "",
+          "value": "On"
+        },
+        "208": {
+          "description": "",
+          "value": "Off"
+        },
+        "240": {
+          "description": "",
+          "value": "On"
+        },
+        "3": {
+          "description": "",
+          "value": "On"
+        },
+        "48": {
+          "description": "",
+          "value": "On"
+        },
+        "5": {
+          "description": "",
+          "value": "Off"
+        },
+        "7": {
+          "description": "",
+          "value": "On"
+        },
+        "9": {
+          "description": "",
+          "value": "Off"
         }
       }
     },
     "hdr": "7D0",
-    "id": "RAV4HYBRID_PARKING_BRAKE",
+    "id": "4RUNNER_PARKING_BRAKE",
     "make": "Toyota",
-    "model": "RAV4-Hybrid",
+    "model": "4Runner",
     "name": "Parking brake",
     "path": "Control",
     "pid": "21",
-    "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "62"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "0": {
-          "description": "",
-          "value": "Off"
-        },
-        "2": {
-          "description": "",
-          "value": "On"
-        }
-      }
-    },
-    "hdr": "7D0",
-    "id": "DAIHATSU_PARKING_BRAKE",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Parking brake",
-    "path": "Control",
-    "pid": "21",
-    "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
+    "scaling": "Mapped values: {'1': {'description': '', 'value': 'Off'}, '3': {'description': '', 'value': 'On'}, '5': {'description': '', 'value': 'Off'}, '7': {'description': '', 'value': 'On'}, '9': {'description': '', 'value': 'Off'}, '11': {'description': '', 'value': 'On'}, '16': {'description': '', 'value': 'Off'}, '48': {'description': '', 'value': 'On'}, '144': {'description': '', 'value': 'Off'}, '176': {'description': '', 'value': 'On'}, '208': {'description': '', 'value': 'Off'}, '240': {'description': '', 'value': 'On'}}",
     "suggestedMetric": "",
     "unit": ""
   },
@@ -63866,6 +63928,78 @@
     "path": "Control",
     "pid": "21",
     "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "62"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "",
+          "value": "Off"
+        },
+        "11": {
+          "description": "",
+          "value": "On"
+        },
+        "144": {
+          "description": "",
+          "value": "Off"
+        },
+        "16": {
+          "description": "",
+          "value": "Off"
+        },
+        "176": {
+          "description": "",
+          "value": "On"
+        },
+        "208": {
+          "description": "",
+          "value": "Off"
+        },
+        "240": {
+          "description": "",
+          "value": "On"
+        },
+        "3": {
+          "description": "",
+          "value": "On"
+        },
+        "48": {
+          "description": "",
+          "value": "On"
+        },
+        "5": {
+          "description": "",
+          "value": "Off"
+        },
+        "7": {
+          "description": "",
+          "value": "On"
+        },
+        "9": {
+          "description": "",
+          "value": "Off"
+        }
+      }
+    },
+    "hdr": "7D0",
+    "id": "DAIHATSU_PARKING_BRAKE",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Parking brake",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "Mapped values: {'1': {'description': '', 'value': 'Off'}, '3': {'description': '', 'value': 'On'}, '5': {'description': '', 'value': 'Off'}, '7': {'description': '', 'value': 'On'}, '9': {'description': '', 'value': 'Off'}, '11': {'description': '', 'value': 'On'}, '16': {'description': '', 'value': 'Off'}, '48': {'description': '', 'value': 'On'}, '144': {'description': '', 'value': 'Off'}, '176': {'description': '', 'value': 'On'}, '208': {'description': '', 'value': 'Off'}, '240': {'description': '', 'value': 'On'}}",
     "suggestedMetric": "",
     "unit": ""
   },
@@ -91395,18 +91529,17 @@
       "bix": 16,
       "div": 58,
       "len": 8,
-      "max": 3.896,
-      "nullmin": 0,
+      "max": 3.88,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_RL",
+    "id": "4RUNNER_TP_RL",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
   },
@@ -91423,17 +91556,18 @@
       "bix": 16,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_RL",
+    "id": "CAMRY_TP_RL",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
   },
@@ -91594,6 +91728,33 @@
       "bix": 16,
       "div": 58,
       "len": 8,
+      "max": 3.88,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_RL",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
       "max": 3.896,
       "unit": "bars"
     },
@@ -91612,28 +91773,28 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "21": "30"
+      "21": "47"
     },
-    "debug": true,
-    "eax": "2A",
+    "debug": false,
+    "eax": "",
     "fmt": {
-      "add": -0.5,
+      "add": -128,
       "bix": 16,
-      "div": 58,
       "len": 8,
-      "max": 4,
-      "unit": "bars"
+      "max": 127,
+      "min": -128,
+      "unit": "degrees"
     },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_RL",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
+    "hdr": "7B0",
+    "id": "4RUNNER_YAW_RATE",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Yaw rate value (degrees/sec)",
+    "path": "Orientation",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 8,
@@ -91709,7 +91870,7 @@
     "id": "DAIHATSU_YAW_RATE",
     "make": "Daihatsu",
     "model": "",
-    "name": "Yaw rate value (degrees/se",
+    "name": "Yaw rate value (degrees/sec)",
     "path": "Orientation",
     "pid": "21",
     "scaling": "raw+-128 clamped to [-128, 127]",
@@ -110837,18 +110998,17 @@
       "bix": 24,
       "div": 58,
       "len": 8,
-      "max": 3.896,
-      "nullmin": 0,
+      "max": 3.88,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_RR",
+    "id": "4RUNNER_TP_RR",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
@@ -110865,17 +111025,18 @@
       "bix": 24,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_RR",
+    "id": "CAMRY_TP_RR",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
@@ -111036,17 +111197,17 @@
       "bix": 24,
       "div": 58,
       "len": 8,
-      "max": 3.896,
+      "max": 3.88,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "LANDCRUISER_TP_RR",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
+    "id": "DAIHATSU_TP_RR",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
@@ -111063,17 +111224,17 @@
       "bix": 24,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_RR",
-    "make": "Daihatsu",
-    "model": "",
+    "id": "LANDCRUISER_TP_RR",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
   },
@@ -125377,18 +125538,17 @@
       "bix": 32,
       "div": 58,
       "len": 8,
-      "max": 3.896,
-      "nullmin": 0,
+      "max": 3.88,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_SPARE",
+    "id": "4RUNNER_TP_SPARE",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "",
     "unit": "bars"
   },
@@ -125405,17 +125565,18 @@
       "bix": 32,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_SPARE",
+    "id": "CAMRY_TP_SPARE",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "",
     "unit": "bars"
   },
@@ -125576,17 +125737,17 @@
       "bix": 32,
       "div": 58,
       "len": 8,
-      "max": 3.896,
+      "max": 3.88,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "LANDCRUISER_TP_SPARE",
-    "make": "Toyota",
-    "model": "Land-Cruiser",
+    "id": "DAIHATSU_TP_SPARE",
+    "make": "Daihatsu",
+    "model": "",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "",
     "unit": "bars"
   },
@@ -125603,17 +125764,17 @@
       "bix": 32,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "DAIHATSU_TP_SPARE",
-    "make": "Daihatsu",
-    "model": "",
+    "id": "LANDCRUISER_TP_SPARE",
+    "make": "Toyota",
+    "model": "Land-Cruiser",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "",
     "unit": "bars"
   },
@@ -144178,18 +144339,17 @@
       "bix": 8,
       "div": 58,
       "len": 8,
-      "max": 3.896,
-      "nullmin": 0,
+      "max": 3.88,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "CAMRY_TP_FR",
+    "id": "4RUNNER_TP_FR",
     "make": "Toyota",
-    "model": "Camry",
+    "model": "4Runner",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [3.896]",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
@@ -144206,17 +144366,18 @@
       "bix": 8,
       "div": 58,
       "len": 8,
-      "max": 4,
+      "max": 3.896,
+      "nullmin": 0,
       "unit": "bars"
     },
     "hdr": "750",
-    "id": "4RUNNER_TP_FR",
+    "id": "CAMRY_TP_FR",
     "make": "Toyota",
-    "model": "4Runner",
+    "model": "Camry",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "scaling": "raw/58 +-0.5 clamped to [3.896]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
@@ -144377,6 +144538,33 @@
       "bix": 8,
       "div": 58,
       "len": 8,
+      "max": 3.88,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TP_FR",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
       "max": 3.896,
       "unit": "bars"
     },
@@ -144395,28 +144583,29 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "21": "30"
+      "21": "47"
     },
-    "debug": true,
-    "eax": "2A",
+    "debug": false,
+    "eax": "",
     "fmt": {
-      "add": -0.5,
       "bix": 8,
-      "div": 58,
+      "div": 50,
       "len": 8,
-      "max": 4,
-      "unit": "bars"
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
     },
-    "hdr": "750",
-    "id": "DAIHATSU_TP_FR",
-    "make": "Daihatsu",
-    "model": "",
-    "name": "Front right tire pressure",
-    "path": "Tires",
+    "hdr": "7B0",
+    "id": "4RUNNER_LNG_G",
+    "make": "Toyota",
+    "model": "4Runner",
+    "name": "Longitudinal g",
+    "path": "Orientation",
     "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
   },
   {
     "bitLength": 8,
