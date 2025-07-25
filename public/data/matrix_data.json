@@ -11207,6 +11207,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7E0",
+    "id": "JETTA_AC_COMP_T",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "A/C compressor torque, requested",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1003"
     },
     "debug": false,
@@ -13194,7 +13221,7 @@
     "make": "Volkswagen",
     "model": "Jetta",
     "name": "Oil level",
-    "path": "Engine",
+    "path": "Fluids",
     "pid": "22",
     "scaling": "raw/2500 clamped to [26.2]",
     "suggestedMetric": "",
@@ -13439,7 +13466,7 @@
     "cmd": {
       "22": "11BB"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 2500,
@@ -13476,6 +13503,31 @@
     "id": "CAYENNE_OIL_LEVEL_WARN",
     "make": "Porsche",
     "model": "Cayenne",
+    "name": "Oil level warning threshold",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/2500 clamped to [26.2]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BD"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2500,
+      "len": 16,
+      "max": 26.2,
+      "unit": "centimeters"
+    },
+    "hdr": "7E0",
+    "id": "JETTA_OIL_LEVEL_WARN",
+    "make": "Volkswagen",
+    "model": "Jetta",
     "name": "Oil level warning threshold",
     "path": "Fluids",
     "pid": "22",
@@ -13711,31 +13763,6 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "11C4"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2500,
-      "len": 16,
-      "max": 26.2,
-      "unit": "centimeters"
-    },
-    "hdr": "7E0",
-    "id": "JETTA_OIL_MAX",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Oil level (max)",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw/2500 clamped to [26.2]",
-    "suggestedMetric": "",
-    "unit": "centimeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
       "22": "11C5"
     },
     "debug": false,
@@ -13929,31 +13956,6 @@
     "path": "Fluids",
     "pid": "22",
     "scaling": "raw/250 clamped to [262]",
-    "suggestedMetric": "",
-    "unit": "centimeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "11C5"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2500,
-      "len": 16,
-      "max": 26.2,
-      "unit": "centimeters"
-    },
-    "hdr": "7E0",
-    "id": "JETTA_OIL_MIN",
-    "make": "Volkswagen",
-    "model": "Jetta",
-    "name": "Oil level (min)",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw/2500 clamped to [26.2]",
     "suggestedMetric": "",
     "unit": "centimeters"
   },
@@ -18041,6 +18043,33 @@
     "scaling": "raw*762.93 /10000 clamped to [4999]",
     "suggestedMetric": "",
     "unit": "milliamps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A07"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": 4,
+      "div": 1000,
+      "len": 16,
+      "max": 69.535,
+      "min": 4,
+      "unit": "volts"
+    },
+    "hdr": "710",
+    "id": "JETTA_SSB_V",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Start/stop battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 +4 clamped to [4, 69.535]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -31353,6 +31382,30 @@
       "unit": "seconds"
     },
     "hdr": "7E0",
+    "id": "JETTA_RUNTM",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Time since engine start",
+    "path": "Clocks",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F41F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_RUNTM",
     "make": "Porsche",
     "model": "Taycan",
@@ -31363,6 +31416,30 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F421"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "JETTA_MIL_DIST",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Distance traveled while mil was activated",
+    "path": "DTCs",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
   },
   {
     "bitLength": 16,
@@ -31403,6 +31480,30 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
+    "id": "JETTA_CLR_DIST",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Distance traveled since diagnostic trouble codes cleared",
+    "path": "DTCs",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "distanceSinceDTCsCleared",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F431"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_CLR_DIST",
     "make": "Porsche",
     "model": "Taycan",
@@ -31413,6 +31514,31 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F442"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "JETTA_VPWR",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Control module voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -57885,7 +58011,7 @@
     "cmd": {
       "22": "10E0"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 32,
@@ -58029,21 +58155,22 @@
     "cmd": {
       "22": "1160"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
+      "div": 1000,
       "len": 32,
-      "max": 4000000000,
+      "max": 4294967.295,
       "unit": "kilometers"
     },
     "hdr": "7E0",
-    "id": "JETTA_ODO_2",
+    "id": "JETTA_ODO_HD",
     "make": "Volkswagen",
     "model": "Jetta",
-    "name": "Odometer (alt)",
+    "name": "Odometer (high resolution)",
     "path": "Trips",
     "pid": "22",
-    "scaling": "raw clamped to [4000000000]",
+    "scaling": "raw/1000 clamped to [4294967.295]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -58388,6 +58515,32 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "2A09"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 32,
+      "max": 100,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "710",
+    "id": "JETTA_SSB_C",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Start/stop battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2A0A"
     },
     "debug": true,
@@ -58551,6 +58704,31 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A61"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 32,
+      "max": 100,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "JETTA_SSB_TOTAL_CHARGE",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Start/stop battery total charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
   },
   {
     "bitLength": 32,
@@ -59870,6 +60048,32 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/549.31642 clamped to [-3909350, 3909350]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "2A61"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 32,
+      "max": 100,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "JETTA_SSB_TOTAL_DISCHARGE",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Start/stop battery total discharge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "",
     "unit": "ampereHours"
   },
@@ -66228,6 +66432,33 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 77.5,
+      "min": -50,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "714",
+    "id": "JETTA_AAT",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.5 +-50 clamped to [-50, 77.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1014"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 8,
       "max": 255,
       "unit": "scalar"
@@ -71415,6 +71646,88 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "JETTA_ATF_T",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Automatic transmission fluid temperature",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "JETTA_GEAR",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "210F"
     },
     "debug": false,
@@ -71659,6 +71972,30 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "JETTA_CRASH_FRONT",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Crashes, front",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -71862,6 +72199,30 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "JETTA_CRASH_DRVR",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -72115,6 +72476,30 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "JETTA_CRASH_PASS",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -72342,6 +72727,30 @@
     "path": "Stats",
     "pid": "22",
     "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "JETTA_CRASH_REAR",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -72595,6 +73004,30 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "JETTA_ROLLOVER",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Rollovers",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -72829,6 +73262,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2431"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "767",
+    "id": "JETTA_GPS_SATS_VISIBLE",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Satellites, visible",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "248E"
     },
     "debug": true,
@@ -72920,6 +73377,33 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "26ED"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 12.7,
+      "min": -12.7,
+      "sign": true,
+      "unit": "scalar"
+    },
+    "hdr": "746",
+    "id": "JETTA_AIR_POLUTION",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Air pollution level",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-12.7, 12.7]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -73141,6 +73625,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2A00"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": 10.6,
+      "div": 10,
+      "len": 8,
+      "max": 36.1,
+      "unit": "volts"
+    },
+    "hdr": "710",
+    "id": "JETTA_SSB_VT",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Start/stop battery target voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 +10.6 clamped to [36.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2A05"
     },
     "debug": true,
@@ -73325,6 +73835,32 @@
     "cmd": {
       "22": "2A0B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "710",
+    "id": "JETTA_SSB_T",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Start/stop battery sensor temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -73362,6 +73898,30 @@
     "id": "CAYENNE_SSB_SOC",
     "make": "Porsche",
     "model": "Cayenne",
+    "name": "Start/stop battery state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "710",
+    "id": "JETTA_SSB_SOC",
+    "make": "Volkswagen",
+    "model": "Jetta",
     "name": "Start/stop battery state of charge",
     "path": "Battery",
     "pid": "22",
@@ -73470,6 +74030,58 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "ampereHours"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "JETTA_SSB_AH",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Start/stop battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A10"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": 9,
+      "div": 255,
+      "len": 8,
+      "max": 63,
+      "min": 9,
+      "mul": 54,
+      "unit": "volts"
+    },
+    "hdr": "710",
+    "id": "JETTA_SSB_V_REST",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Start/stop battery voltage (at rest)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*54 /255 +9 clamped to [9, 63]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 8,
@@ -77049,6 +77661,30 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E0",
+    "id": "JETTA_VSS",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F40D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_VSS",
     "make": "Porsche",
     "model": "Taycan",
@@ -77293,6 +77929,30 @@
     ],
     "name": "Fuel level (alternative)",
     "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F430"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "JETTA_WARM_UPS",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Number of warm-ups since diagnostic trouble codes cleared",
+    "path": "DTCs",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -146283,6 +146943,31 @@
     "scaling": "raw*0.01373 clamped to [5]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2431"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "767",
+    "id": "JETTA_GPS_SATS_TRACKED",
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "name": "Satellites, tracked",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
