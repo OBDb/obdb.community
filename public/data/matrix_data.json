@@ -589,6 +589,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 110,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 110,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_FR_INVALID",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front right tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 12,
     "cmd": {
       "01": "01"
@@ -1061,6 +1086,31 @@
     "bitLength": 1,
     "bitOffset": 140,
     "cmd": {
+      "22": "E001"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 140,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "744",
+    "id": "SPORTAGE_DC_CHRG_STATE",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "DC charging state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 140,
+    "cmd": {
       "22": "E003"
     },
     "debug": false,
@@ -1333,6 +1383,31 @@
     "bitLength": 1,
     "bitOffset": 150,
     "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 150,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7D1",
+    "id": "SPORTAGE_TC_SWITCH",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Wheel traction control switch",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 150,
+    "cmd": {
       "22": "0104"
     },
     "debug": true,
@@ -1349,6 +1424,31 @@
     "model": "Elantra",
     "name": "ABS traction control switch (raw)",
     "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 150,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 150,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_RL_INVALID",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear left tire reading invalid?",
+    "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -1729,6 +1829,31 @@
     "name": "A/C system refrigerant monitoring",
     "path": "DTCs.Generic.Status",
     "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 190,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 190,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_RR_INVALID",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear right tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
@@ -4395,6 +4520,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 405,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 405,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_IGN",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Ignition",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 41,
     "cmd": {
       "22": "BC03"
@@ -6371,6 +6521,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 70,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 70,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_FL_INVALID",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front left tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 72,
     "cmd": {
       "22": "0101"
@@ -6444,6 +6619,31 @@
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "signalGroups": [],
+    "suggestedMetric": "isCharging",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CHARGING",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery charging",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
     "suggestedMetric": "isCharging",
     "unit": "offon"
   },
@@ -6527,6 +6727,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 73,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 73,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_PLUG_RAPD",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rapid charge port state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "pluggedIn",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 74,
     "cmd": {
       "22": "0101"
@@ -6600,6 +6825,31 @@
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "signalGroups": [],
+    "suggestedMetric": "pluggedIn",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 74,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 74,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_PLUG_NORM",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Normal charge port state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
     "suggestedMetric": "pluggedIn",
     "unit": "offon"
   },
@@ -31800,6 +32050,35 @@
     "fmt": {
       "bix": 104,
       "blsb": true,
+      "div": 100,
+      "len": 16,
+      "max": 180,
+      "min": -180,
+      "sign": true,
+      "unit": "milesPerHour"
+    },
+    "hdr": "7E2",
+    "id": "SPORTAGE_VSS_V2",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [-180, 180]",
+    "suggestedMetric": "speed",
+    "unit": "milesPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
       "len": 16,
       "max": 65535,
       "unit": "scalar"
@@ -31808,6 +32087,32 @@
     "id": "SOUL_MIS_4",
     "make": "Kia",
     "model": "Soul",
+    "name": "Misfire count #4",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_MIS_4",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Misfire count #4",
     "path": "Engine",
     "pid": "21",
@@ -39970,6 +40275,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_INJ_DUR_1",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Injection duration cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 192,
     "cmd": {
       "22": "182E"
@@ -40183,6 +40515,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_INJ_DUR_2",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Injection duration cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 200,
     "cmd": {
       "21": "01"
@@ -40202,6 +40561,34 @@
     "id": "FORTE_STEER_ANGLE",
     "make": "Kia",
     "model": "Forte",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 200,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7D1",
+    "id": "SPORTAGE_STEER_ANGLE",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Steering wheel angle",
     "path": "Control",
     "pid": "21",
@@ -40369,6 +40756,32 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [100]",
     "signalGroups": [],
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 200,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_SOH",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery state of health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "stateOfHealth",
     "unit": "percent"
   },
@@ -40692,6 +41105,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_INJ_DUR_3",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Injection duration cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 224,
     "cmd": {
       "22": "0105"
@@ -40741,6 +41181,32 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [100]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_DET_MIN",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery min deteriation",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -40825,6 +41291,33 @@
     "pid": "22",
     "scaling": "raw*2 /1000 clamped to [100]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "div": 1000,
+      "len": 16,
+      "max": 100,
+      "mul": 2,
+      "unit": "kilowattHours"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_WH",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery remaining energy",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*2 /1000 clamped to [100]",
     "suggestedMetric": "",
     "unit": "kilowattHours"
   },
@@ -41070,6 +41563,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_INJ_DUR_4",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Injection duration cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 232,
     "cmd": {
       "22": "01A4"
@@ -41117,6 +41637,34 @@
     "id": "KONA_CLUTCH_1_T",
     "make": "Hyundai",
     "model": "Kona",
+    "name": "Clutch #1 temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*2 +-40 clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 232,
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "mul": 2,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "SPORTAGE_CLUTCH_1_T",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Clutch #1 temperature",
     "path": "Transmission",
     "pid": "22",
@@ -42832,6 +43380,34 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 248,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 248,
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "mul": 2,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "SPORTAGE_CLUTCH_2_T",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Clutch #2 temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*2 +-40 clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 256,
     "cmd": {
       "21": "01"
@@ -42850,6 +43426,33 @@
     "id": "FORTE_BRAKE_P",
     "make": "Kia",
     "model": "Forte",
+    "name": "Brake pressure",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/86.7 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "div": 86.7,
+      "len": 16,
+      "max": 100,
+      "sign": true,
+      "unit": "percent"
+    },
+    "hdr": "7D1",
+    "id": "SPORTAGE_BRAKE_P",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Brake pressure",
     "path": "Control",
     "pid": "21",
@@ -46991,6 +47594,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 392,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 392,
+      "div": 65535,
+      "len": 16,
+      "max": 10,
+      "mul": 10,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_WG_VOLTAGE",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Waste gate voltage",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /65535 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 40,
     "cmd": {
       "01": "70"
@@ -47255,6 +47885,32 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "SPORTAGE_BMS_CHG_PWR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "BMS available charge power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 400,
     "cmd": {
       "22": "182E"
@@ -47363,6 +48019,31 @@
     "bitLength": 16,
     "bitOffset": 408,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 408,
+      "len": 16,
+      "max": 65535,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_INVRT_CV",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Inverter capacitor voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 408,
+    "cmd": {
       "22": "E021"
     },
     "debug": false,
@@ -47406,6 +48087,33 @@
     "id": "VELOSTER_WG_DUTY",
     "make": "Hyundai",
     "model": "Veloster",
+    "name": "Waste gate duty",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*200 /65535 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 408,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 408,
+      "div": 65535,
+      "len": 16,
+      "max": 200,
+      "mul": 200,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_WG_DUTY",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Waste gate duty",
     "path": "Engine",
     "pid": "22",
@@ -47523,6 +48231,31 @@
     "bitLength": 16,
     "bitOffset": 424,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 424,
+      "len": 16,
+      "max": 65535,
+      "unit": "rpm"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_RPM",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Drive motor speed",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 424,
+    "cmd": {
       "22": "E021"
     },
     "debug": false,
@@ -47566,6 +48299,33 @@
     "id": "VELOSTER_WG_POSITION",
     "make": "Hyundai",
     "model": "Veloster",
+    "name": "Waste gate position",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [400]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 424,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 424,
+      "div": 65535,
+      "len": 16,
+      "max": 400,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_WG_POSITION",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Waste gate position",
     "path": "Engine",
     "pid": "22",
@@ -47683,6 +48443,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 440,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 440,
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_WG_SETPOINT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Waste gate setpoint",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 448,
     "cmd": {
       "22": "182E"
@@ -47784,6 +48571,31 @@
     "pid": "22",
     "scaling": "raw clamped to [65535]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "kiloohms"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 456,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 456,
+      "len": 16,
+      "max": 65535,
+      "unit": "kiloohms"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_ISO_R",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Isolation resistance",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "kiloohms"
   },
@@ -49130,6 +49942,32 @@
     "bitLength": 16,
     "bitOffset": 56,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_MIS_1",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Misfire count #1",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -49208,6 +50046,32 @@
     "bitLength": 16,
     "bitOffset": 56,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilowatts"
+    },
+    "hdr": "7D4",
+    "id": "SPORTAGE_BMS_DISCHG_PWR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "BMS available discharge power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
       "22": "E021"
     },
     "debug": false,
@@ -49253,6 +50117,34 @@
     "id": "VELOSTER_TURBO_BOOST",
     "make": "Hyundai",
     "model": "Veloster",
+    "name": "Turbo boost pressure (gauge)",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/831.55690902 +-12 clamped to [-10, 66.81]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -12,
+      "bix": 56,
+      "div": 831.55690902,
+      "len": 16,
+      "max": 66.81,
+      "min": -10,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_TURBO_BOOST",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Turbo boost pressure (gauge)",
     "path": "Engine",
     "pid": "22",
@@ -51626,6 +52518,34 @@
       "unit": "degrees"
     },
     "hdr": "7D4",
+    "id": "SPORTAGE_STEER_ANGLE_V2",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7D4",
     "id": "TUCSONHYB_STEER_ANGLE",
     "make": "Hyundai",
     "model": "Tucson-Hybrid",
@@ -51655,6 +52575,32 @@
     "id": "SOUL_MIS_2",
     "make": "Kia",
     "model": "Soul",
+    "name": "Misfire count #2",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_MIS_2",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Misfire count #2",
     "path": "Engine",
     "pid": "21",
@@ -53475,6 +54421,32 @@
     "bitLength": 16,
     "bitOffset": 80,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "amps"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CURR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
       "22": "182E"
     },
     "debug": false,
@@ -54115,6 +55087,32 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_MIS_3",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Misfire count #3",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 880,
     "cmd": {
       "22": "182E"
@@ -54461,6 +55459,32 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [6553.5]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_VDC",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery voltage (DC)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -56777,6 +57801,31 @@
       "unit": "kilometers"
     },
     "hdr": "7C6",
+    "id": "SPORTAGE_ODO_KM",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7C6",
     "id": "VELOSTER_ODO_KM",
     "make": "Hyundai",
     "model": "Veloster",
@@ -57137,6 +58186,31 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "Odometer (Imperial)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
+      "max": 16777215,
+      "unit": "miles"
+    },
+    "hdr": "7C6",
+    "id": "SPORTAGE_ODO_MI",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Odometer",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [16777215]",
@@ -59763,6 +60837,32 @@
   },
   {
     "bitLength": 32,
+    "bitOffset": 240,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 240,
+      "div": 10,
+      "len": 32,
+      "max": 429496729,
+      "unit": "ampereHours"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CHRG_TOT_C",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Total charge (current)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [429496729]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 32,
     "bitOffset": 272,
     "cmd": {
       "22": "0101"
@@ -59844,6 +60944,32 @@
   },
   {
     "bitLength": 32,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 272,
+      "div": 10,
+      "len": 32,
+      "max": 429496729,
+      "unit": "ampereHours"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_DSCH_TOT_C",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Total discharge (current)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [429496729]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 32,
     "bitOffset": 304,
     "cmd": {
       "22": "0101"
@@ -59920,6 +61046,32 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [429496729]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 304,
+      "div": 10,
+      "len": 32,
+      "max": 429496729,
+      "unit": "kilowattHours"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CHRG_TOT_E",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Total charge (energy)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [429496729]",
     "suggestedMetric": "",
     "unit": "kilowattHours"
   },
@@ -60535,6 +61687,32 @@
   },
   {
     "bitLength": 32,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 336,
+      "div": 10,
+      "len": 32,
+      "max": 429496729,
+      "unit": "kilowattHours"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_DSCH_TOT_E",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Total discharge (energy)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [429496729]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 32,
     "bitOffset": 368,
     "cmd": {
       "22": "0101"
@@ -60582,6 +61760,31 @@
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 368,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 368,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "seconds"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_DRIVE_TIME",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
     "suggestedMetric": "",
     "unit": "seconds"
   },
@@ -60870,6 +62073,31 @@
   },
   {
     "bitLength": 4,
+    "bitOffset": 188,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 188,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7E1",
+    "id": "SPORTAGE_GEAR_CUR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
     "bitOffset": 196,
     "cmd": {
       "22": "01A4"
@@ -60911,6 +62139,31 @@
     "id": "KONA_GEAR_NXT",
     "make": "Hyundai",
     "model": "Kona",
+    "name": "Next gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 196,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 196,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7E1",
+    "id": "SPORTAGE_GEAR_NXT",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Next gear",
     "path": "Transmission",
     "pid": "22",
@@ -77550,6 +78803,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_22E004",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Unknown",
+    "path": "Engine.Unknown",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "EE6F"
     },
     "debug": true,
@@ -78072,6 +79349,33 @@
     "fmt": {
       "bix": 104,
       "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "SPORTAGE_RL_VSS",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
       "max": 255,
       "unit": "kilometersPerHour"
     },
@@ -78327,6 +79631,33 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 104,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "SPORTAGE_ATF_T",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Automatic transmission fluid temperature",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -78544,6 +79875,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU010_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 010 voltage",
+    "path": "Battery.Modules.010",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -78851,6 +80208,32 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU042_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 042 voltage",
+    "path": "Battery.Modules.042",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -79030,6 +80413,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU074_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 074 voltage",
+    "path": "Battery.Modules.074",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -79644,6 +81053,31 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "22": "C101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "SPORTAGE_TIRE_RL_SPD",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -79723,6 +81157,61 @@
     "scaling": "raw/5 clamped to [-25, 25]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_KNOCK_RETARD_2",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Knock retard cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "SPORTAGE_RR_VSS",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -80020,6 +81509,33 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_T_MAX",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery temperature (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -80237,6 +81753,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU011_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 011 voltage",
+    "path": "Battery.Modules.011",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -80544,6 +82086,32 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU043_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 043 voltage",
+    "path": "Battery.Modules.043",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -80723,6 +82291,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU075_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 075 voltage",
+    "path": "Battery.Modules.075",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -81264,6 +82858,33 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TP_RL",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 51,
       "unit": "psi"
     },
     "hdr": "7A0",
@@ -81492,6 +83113,31 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
+      "22": "C101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "SPORTAGE_TIRE_RR_SPD",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -81569,6 +83215,34 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_KNOCK_RETARD_3",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Knock retard cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -81850,6 +83524,33 @@
     "fmt": {
       "bix": 120,
       "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_T_MIN",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery temperature (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
       "max": 80,
       "min": -40,
       "sign": true,
@@ -81887,6 +83588,33 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "BMS Battery Min Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "SPORTAGE_BMS_MIN_TEMP",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "BMS battery min temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -82114,6 +83842,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU012_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 012 voltage",
+    "path": "Battery.Modules.012",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -82421,6 +84175,32 @@
     "bitLength": 8,
     "bitOffset": 120,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU044_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 044 voltage",
+    "path": "Battery.Modules.044",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -82600,6 +84380,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU076_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 076 voltage",
+    "path": "Battery.Modules.076",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -83089,6 +84895,34 @@
       "len": 8,
       "max": 205,
       "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TT_RL",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 120,
+      "len": 8,
+      "max": 205,
+      "min": -50,
       "unit": "celsius"
     },
     "hdr": "7A0",
@@ -83345,6 +85179,34 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_KNOCK_RETARD_4",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Knock retard cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -83626,6 +85488,33 @@
     "fmt": {
       "bix": 128,
       "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_MOD1_T",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery temperature (module 1)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "len": 8,
       "max": 80,
       "min": -40,
       "sign": true,
@@ -83663,6 +85552,33 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "BMS Battery Mod 1 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "SPORTAGE_BMS_MOD1_TEMP",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "BMS battery mod 1 temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -83890,6 +85806,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU013_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 013 voltage",
+    "path": "Battery.Modules.013",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -84197,6 +86139,32 @@
     "bitLength": 8,
     "bitOffset": 128,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU045_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 045 voltage",
+    "path": "Battery.Modules.045",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -84376,6 +86344,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU077_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 077 voltage",
+    "path": "Battery.Modules.077",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -85030,6 +87024,47 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": ">3 V",
+          "value": "3V+"
+        },
+        "1": {
+          "description": "2.7 - 3 V",
+          "value": "27_3V"
+        },
+        "2": {
+          "description": "2.4 - 2.7 V",
+          "value": "2_4_2_7V"
+        },
+        "3": {
+          "description": "< 2.4",
+          "value": "2_4-"
+        }
+      }
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TB_RR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Tire battery rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '>3 V', 'value': '3V+'}, '1': {'description': '2.7 - 3 V', 'value': '27_3V'}, '2': {'description': '2.4 - 2.7 V', 'value': '2_4_2_7V'}, '3': {'description': '< 2.4', 'value': '2_4-'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -85381,6 +87416,33 @@
     "fmt": {
       "bix": 136,
       "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_MOD2_T",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery temperature (module 2)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
       "max": 80,
       "min": -40,
       "sign": true,
@@ -85418,6 +87480,33 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "BMS Battery Mod 2 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "SPORTAGE_BMS_MOD2_TEMP",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "BMS battery mod 2 temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -85645,6 +87734,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU014_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 014 voltage",
+    "path": "Battery.Modules.014",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -85952,6 +88067,32 @@
     "bitLength": 8,
     "bitOffset": 136,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU046_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 046 voltage",
+    "path": "Battery.Modules.046",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -86131,6 +88272,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU078_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 078 voltage",
+    "path": "Battery.Modules.078",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -88370,6 +90537,33 @@
     "fmt": {
       "bix": 144,
       "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_MOD3_T",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery temperature (module 3)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "len": 8,
       "max": 80,
       "min": -40,
       "sign": true,
@@ -88407,6 +90601,33 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "BMS Battery Mod 3 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "SPORTAGE_BMS_MOD3_TEMP",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "BMS battery mod 3 temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -88634,6 +90855,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU015_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 015 voltage",
+    "path": "Battery.Modules.015",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -88941,6 +91188,32 @@
     "bitLength": 8,
     "bitOffset": 144,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU047_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 047 voltage",
+    "path": "Battery.Modules.047",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -89120,6 +91393,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU079_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 079 voltage",
+    "path": "Battery.Modules.079",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -89810,6 +92109,47 @@
     "bitLength": 8,
     "bitOffset": 152,
     "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "2": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "3": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "4": {
+          "description": "Manual",
+          "value": "MANUAL"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "SPORTAGE_GEAR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "Mapped values: {'1': {'description': 'Neutral', 'value': 'NEUTRAL'}, '2': {'description': 'Reverse', 'value': 'REVERSE'}, '3': {'description': 'Park', 'value': 'PARK'}, '4': {'description': 'Manual', 'value': 'MANUAL'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -89928,6 +92268,33 @@
     "fmt": {
       "bix": 152,
       "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_MOD4_T",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery temperature (module 4)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
       "max": 80,
       "min": -40,
       "sign": true,
@@ -89965,6 +92332,33 @@
     "make": "Hyundai",
     "model": "Kona",
     "name": "BMS Battery Mod 4 Temp",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7D4",
+    "id": "SPORTAGE_BMS_MOD4_TEMP",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "BMS battery mod 4 temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -90192,6 +92586,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU016_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 016 voltage",
+    "path": "Battery.Modules.016",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -90499,6 +92919,32 @@
     "bitLength": 8,
     "bitOffset": 152,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU048_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 048 voltage",
+    "path": "Battery.Modules.048",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -90678,6 +93124,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU080_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 080 voltage",
+    "path": "Battery.Modules.080",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -91167,6 +93639,33 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TP_RR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 5,
+      "len": 8,
+      "max": 51,
       "unit": "psi"
     },
     "hdr": "7A0",
@@ -91434,6 +93933,31 @@
     "id": "SPORTAGE_VPWR",
     "make": "Kia",
     "model": "Sportage-HEV",
+    "name": "12V battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E2",
+    "id": "SPORTAGE_VPWR_V3",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "12V battery charge",
     "path": "Battery",
     "pid": "22",
@@ -94904,6 +97428,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU017_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 017 voltage",
+    "path": "Battery.Modules.017",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -95202,6 +97752,32 @@
     "bitLength": 8,
     "bitOffset": 160,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU049_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 049 voltage",
+    "path": "Battery.Modules.049",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -95390,6 +97966,32 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU081_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 081 voltage",
+    "path": "Battery.Modules.081",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -95473,6 +98075,32 @@
     "pid": "22",
     "scaling": "raw/50 clamped to [5.1]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_C_DEV_V",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV cell deviation (voltage)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -96049,6 +98677,34 @@
       "len": 8,
       "max": 205,
       "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TT_RR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 160,
+      "len": 8,
+      "max": 205,
+      "min": -50,
       "unit": "celsius"
     },
     "hdr": "7A0",
@@ -96197,6 +98853,34 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_KNOCK_LEARN_1",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Knock learn cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -96586,6 +99270,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU018_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 018 voltage",
+    "path": "Battery.Modules.018",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -96884,6 +99594,32 @@
     "bitLength": 8,
     "bitOffset": 168,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU050_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 050 voltage",
+    "path": "Battery.Modules.050",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -97063,6 +99799,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU082_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 082 voltage",
+    "path": "Battery.Modules.082",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -97581,6 +100343,47 @@
     "bitLength": 8,
     "bitOffset": 168,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": ">3 V",
+          "value": "3V+"
+        },
+        "1": {
+          "description": "2.7 - 3 V",
+          "value": "27_3V"
+        },
+        "2": {
+          "description": "2.4 - 2.7 V",
+          "value": "2_4_2_7V"
+        },
+        "3": {
+          "description": "< 2.4",
+          "value": "2_4-"
+        }
+      }
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TB_RL",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Tire battery rear left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '>3 V', 'value': '3V+'}, '1': {'description': '2.7 - 3 V', 'value': '27_3V'}, '2': {'description': '2.4 - 2.7 V', 'value': '2_4_2_7V'}, '3': {'description': '< 2.4', 'value': '2_4-'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -97658,6 +100461,34 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_KNOCK_LEARN_2",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Knock learn cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -97905,6 +100736,33 @@
     "bitLength": 8,
     "bitOffset": 176,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_INLET_T",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Battery inlet temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -98122,6 +100980,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU019_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 019 voltage",
+    "path": "Battery.Modules.019",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -98429,6 +101313,32 @@
     "bitLength": 8,
     "bitOffset": 176,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU051_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 051 voltage",
+    "path": "Battery.Modules.051",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -98608,6 +101518,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU083_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 083 voltage",
+    "path": "Battery.Modules.083",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -99242,6 +102178,34 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_KNOCK_LEARN_3",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Knock learn cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 184,
     "cmd": {
       "21": "02"
@@ -99481,6 +102445,32 @@
     "bitLength": 8,
     "bitOffset": 184,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_C_V_MAX",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Maximum cell voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -99698,6 +102688,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU020_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 020 voltage",
+    "path": "Battery.Modules.020",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -100005,6 +103021,32 @@
     "bitLength": 8,
     "bitOffset": 184,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU052_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 052 voltage",
+    "path": "Battery.Modules.052",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -100193,6 +103235,32 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU084_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 084 voltage",
+    "path": "Battery.Modules.084",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -100278,6 +103346,33 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_HTR1_T",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery heater 1 temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -100974,6 +104069,34 @@
     "bitLength": 8,
     "bitOffset": 184,
     "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_KNOCK_LEARN_4",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Knock learn cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
       "22": "ED02"
     },
     "debug": false,
@@ -100990,6 +104113,33 @@
     "id": "TUCSONHYB_EOT",
     "make": "Hyundai",
     "model": "Tucson-Hybrid",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-4 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "ED02"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4,
+      "bix": 184,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_EOT_V2",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -101235,6 +104385,31 @@
     "bitLength": 8,
     "bitOffset": 192,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_C_V_MAX_ID",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Maximum cell voltage id",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 192,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -101452,6 +104627,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU021_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 021 voltage",
+    "path": "Battery.Modules.021",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -101759,6 +104960,32 @@
     "bitLength": 8,
     "bitOffset": 192,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU053_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 053 voltage",
+    "path": "Battery.Modules.053",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 192,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -101947,6 +105174,32 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU085_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 085 voltage",
+    "path": "Battery.Modules.085",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -102032,6 +105285,33 @@
     "pid": "22",
     "scaling": "raw clamped to [-127, 127]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_HTR2_T",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery heater 2 temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [-127, 127]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -103949,6 +107229,32 @@
     "bitLength": 8,
     "bitOffset": 200,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_C_V_MIN",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Minimum cell voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 200,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -104166,6 +107472,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 200,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU022_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 022 voltage",
+    "path": "Battery.Modules.022",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -104473,6 +107805,32 @@
     "bitLength": 8,
     "bitOffset": 200,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU054_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 054 voltage",
+    "path": "Battery.Modules.054",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 200,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -104652,6 +108010,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 200,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU086_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 086 voltage",
+    "path": "Battery.Modules.086",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -105338,6 +108722,31 @@
     "bitLength": 8,
     "bitOffset": 208,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_C_V_MIN_ID",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Minimum cell voltage id",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 208,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -105555,6 +108964,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU023_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 023 voltage",
+    "path": "Battery.Modules.023",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -105862,6 +109297,32 @@
     "bitLength": 8,
     "bitOffset": 208,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU055_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 055 voltage",
+    "path": "Battery.Modules.055",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 208,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -106041,6 +109502,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU087_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 087 voltage",
+    "path": "Battery.Modules.087",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -106785,6 +110272,31 @@
     "bitLength": 8,
     "bitOffset": 216,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 216,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_FAN_STATUS",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery fan status",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 216,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -107002,6 +110514,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 216,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 216,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU024_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 024 voltage",
+    "path": "Battery.Modules.024",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -107309,6 +110847,32 @@
     "bitLength": 8,
     "bitOffset": 216,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 216,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU056_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 056 voltage",
+    "path": "Battery.Modules.056",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 216,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -107497,6 +111061,32 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 216,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU088_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 088 voltage",
+    "path": "Battery.Modules.088",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 216,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -107580,6 +111170,32 @@
     "pid": "22",
     "scaling": "raw clamped to [98]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 216,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 216,
+      "len": 8,
+      "max": 98,
+      "nullmax": 200,
+      "unit": "scalar"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_DET_MAX_ID",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery max deteriation cell id",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [98]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -108255,6 +111871,31 @@
     "bitLength": 8,
     "bitOffset": 224,
     "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "len": 8,
+      "max": 255,
+      "unit": "hertz"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_FAN",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery fan",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "hertz"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 224,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -108472,6 +112113,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU025_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 025 voltage",
+    "path": "Battery.Modules.025",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -108779,6 +112446,32 @@
     "bitLength": 8,
     "bitOffset": 224,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU057_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 057 voltage",
+    "path": "Battery.Modules.057",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 224,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -108958,6 +112651,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU089_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 089 voltage",
+    "path": "Battery.Modules.089",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -109718,6 +113437,31 @@
     "cmd": {
       "22": "0100"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B3",
+    "id": "SPORTAGE_VSS",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0100"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -109840,6 +113584,32 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [255]",
     "signalGroups": [],
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "div": 10,
+      "len": 8,
+      "max": 255,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_VPWR_V2",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Battery auxiliary voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
     "suggestedMetric": "starterBatteryVoltage",
     "unit": "volts"
   },
@@ -110064,6 +113834,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU026_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 026 voltage",
+    "path": "Battery.Modules.026",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -110371,6 +114167,32 @@
     "bitLength": 8,
     "bitOffset": 232,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU058_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 058 voltage",
+    "path": "Battery.Modules.058",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -110550,6 +114372,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU090_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 090 voltage",
+    "path": "Battery.Modules.090",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -115274,6 +119122,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 240,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU027_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 027 voltage",
+    "path": "Battery.Modules.027",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 240,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -115572,6 +119446,32 @@
     "bitLength": 8,
     "bitOffset": 240,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 240,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU059_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 059 voltage",
+    "path": "Battery.Modules.059",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 240,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -115760,6 +119660,32 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 240,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU091_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 091 voltage",
+    "path": "Battery.Modules.091",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 240,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -115843,6 +119769,32 @@
     "pid": "22",
     "scaling": "raw clamped to [98]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 240,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 240,
+      "len": 8,
+      "max": 98,
+      "nullmax": 200,
+      "unit": "scalar"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_DET_MIN_ID",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery min deteriation cell id",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [98]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -116629,6 +120581,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 248,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU028_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 028 voltage",
+    "path": "Battery.Modules.028",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 248,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -116927,6 +120905,32 @@
     "bitLength": 8,
     "bitOffset": 248,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 248,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU060_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 060 voltage",
+    "path": "Battery.Modules.060",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 248,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -117106,6 +121110,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 248,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 248,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU092_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 092 voltage",
+    "path": "Battery.Modules.092",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -117306,6 +121336,32 @@
     "pid": "22",
     "scaling": "raw*0.5 clamped to [100]",
     "signalGroups": [],
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 248,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 248,
+      "len": 8,
+      "max": 100,
+      "mul": 0.5,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_SOC_DISP",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.5 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
   },
@@ -119302,6 +123358,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU029_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 029 voltage",
+    "path": "Battery.Modules.029",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -119600,6 +123682,32 @@
     "bitLength": 8,
     "bitOffset": 256,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU061_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 061 voltage",
+    "path": "Battery.Modules.061",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 256,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -119779,6 +123887,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU093_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 093 voltage",
+    "path": "Battery.Modules.093",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -120576,6 +124710,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 264,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU030_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 030 voltage",
+    "path": "Battery.Modules.030",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -120874,6 +125034,32 @@
     "bitLength": 8,
     "bitOffset": 264,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 264,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU062_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 062 voltage",
+    "path": "Battery.Modules.062",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -121053,6 +125239,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 264,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU094_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 094 voltage",
+    "path": "Battery.Modules.094",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -121556,6 +125768,33 @@
     "fmt": {
       "add": -48,
       "bix": 264,
+      "div": 1.3333,
+      "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_IAT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Intake air temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 264,
       "div": 4,
       "len": 8,
       "max": 143,
@@ -121567,6 +125806,35 @@
     "id": "ELANTRA_EIT",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "Intake air temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*3 /4 +-48 clamped to [-48, 143]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 264,
+      "div": 4,
+      "len": 8,
+      "max": 143,
+      "min": -48,
+      "mul": 3,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_EIT",
+    "make": "Kia",
+    "model": "Sportage",
     "name": "Intake air temperature",
     "path": "Engine",
     "pid": "22",
@@ -121987,6 +126255,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 272,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU031_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 031 voltage",
+    "path": "Battery.Modules.031",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -122285,6 +126579,32 @@
     "bitLength": 8,
     "bitOffset": 272,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 272,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU063_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 063 voltage",
+    "path": "Battery.Modules.063",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -122473,6 +126793,32 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 272,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU095_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 095 voltage",
+    "path": "Battery.Modules.095",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -122540,6 +126886,33 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 272,
+      "div": 50,
+      "len": 8,
+      "max": 4.2,
+      "min": 2.8,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU097_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 097 voltage",
+    "path": "Battery.Modules.097",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -123043,6 +127416,33 @@
     "fmt": {
       "add": -48,
       "bix": 272,
+      "div": 1.3333,
+      "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_EOT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
       "div": 4,
       "len": 8,
       "max": 143,
@@ -123447,6 +127847,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 280,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU032_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 032 voltage",
+    "path": "Battery.Modules.032",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 280,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -123745,6 +128171,32 @@
     "bitLength": 8,
     "bitOffset": 280,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 280,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU064_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 064 voltage",
+    "path": "Battery.Modules.064",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 280,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -123933,6 +128385,32 @@
     "cmd": {
       "22": "0104"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 280,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU096_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 096 voltage",
+    "path": "Battery.Modules.096",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 280,
+    "cmd": {
+      "22": "0104"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -124000,6 +128478,33 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 280,
+    "cmd": {
+      "22": "0105"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 280,
+      "div": 50,
+      "len": 8,
+      "max": 4.2,
+      "min": 2.8,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU098_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 098 voltage",
+    "path": "Battery.Modules.098",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [2.8, 4.2]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -126719,6 +131224,32 @@
       "max": 100,
       "unit": "percent"
     },
+    "hdr": "7D4",
+    "id": "SPORTAGE_BMS_SOC",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "BMS state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
     "hdr": "7E4",
     "id": "NIROEV_HVBAT_SOC",
     "make": "Kia",
@@ -126728,6 +131259,32 @@
     "pid": "22",
     "scaling": "raw/2 clamped to [100]",
     "signalGroups": [],
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "0101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 100,
+      "mul": 0.5,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_SOC",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery charge (dash)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.5 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
   },
@@ -126952,6 +131509,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU001_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 001 voltage",
+    "path": "Battery.Modules.001",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -127259,6 +131842,32 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU033_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 033 voltage",
+    "path": "Battery.Modules.033",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -127476,6 +132085,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU065_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 065 voltage",
+    "path": "Battery.Modules.065",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -128705,6 +133340,31 @@
       "unit": "liters"
     },
     "hdr": "7C6",
+    "id": "SPORTAGE_FLI_VOL",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "7C6",
     "id": "TUCSON_FLI_VOL",
     "make": "Hyundai",
     "model": "Tucson",
@@ -129838,6 +134498,33 @@
       "div": 5,
       "len": 8,
       "max": 51,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TP_FL",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
       "unit": "psi"
     },
     "hdr": "7A0",
@@ -130574,6 +135261,31 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 320,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 320,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_AUX_SOC",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Aux battery state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 328,
     "cmd": {
       "22": "E004"
@@ -130620,6 +135332,31 @@
     "pid": "22",
     "scaling": "raw clamped to [100]",
     "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 328,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 328,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_AUX_SOH",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Aux battery state of health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
     "unit": "percent"
   },
   {
@@ -130921,6 +135658,34 @@
     "cmd": {
       "22": "0100"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "div": 2,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7B3",
+    "id": "SPORTAGE_TEMP_INT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Interior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0100"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -131164,6 +135929,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU002_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 002 voltage",
+    "path": "Battery.Modules.002",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -131471,6 +136262,32 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU034_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 034 voltage",
+    "path": "Battery.Modules.034",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -131688,6 +136505,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU066_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 066 voltage",
+    "path": "Battery.Modules.066",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -133564,6 +138407,32 @@
       "unit": "volts"
     },
     "hdr": "7C6",
+    "id": "SPORTAGE_VPWR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "12v battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [18]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 12.8,
+      "len": 8,
+      "max": 18,
+      "unit": "volts"
+    },
+    "hdr": "7C6",
     "id": "VELOSTER_CLUSTER_VOLTAGE",
     "make": "Hyundai",
     "model": "Veloster",
@@ -134595,6 +139464,34 @@
       "len": 8,
       "max": 205,
       "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TT_FL",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 40,
+      "len": 8,
+      "max": 205,
+      "min": -50,
       "unit": "celsius"
     },
     "hdr": "7A0",
@@ -135082,6 +139979,31 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "SPORTAGE_VSS_AVG",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "21": "02"
     },
     "debug": false,
@@ -135288,6 +140210,31 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SPORTAGE_VSS_V3",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "0100"
     },
     "debug": false,
@@ -135310,6 +140257,34 @@
     "pid": "22",
     "scaling": "raw/2 +-40 clamped to [-40, 80]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 48,
+      "div": 2,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7B3",
+    "id": "SPORTAGE_TEMP_EXT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Exterior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -135562,6 +140537,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "0102"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU003_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 003 voltage",
+    "path": "Battery.Modules.003",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -135869,6 +140870,32 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU035_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 035 voltage",
+    "path": "Battery.Modules.035",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -136086,6 +141113,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU067_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 067 voltage",
+    "path": "Battery.Modules.067",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -137214,6 +142267,47 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": ">3 V",
+          "value": "3V+"
+        },
+        "1": {
+          "description": "2.7 - 3 V",
+          "value": "27_3V"
+        },
+        "2": {
+          "description": "2.4 - 2.7 V",
+          "value": "2_4_2_7V"
+        },
+        "3": {
+          "description": "< 2.4",
+          "value": "2_4-"
+        }
+      }
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TB_FL",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Tire battery front left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '>3 V', 'value': '3V+'}, '1': {'description': '2.7 - 3 V', 'value': '27_3V'}, '2': {'description': '2.4 - 2.7 V', 'value': '2_4_2_7V'}, '3': {'description': '< 2.4', 'value': '2_4-'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "DCDD"
     },
     "debug": false,
@@ -137913,6 +143007,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU004_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 004 voltage",
+    "path": "Battery.Modules.004",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -138211,6 +143331,32 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU036_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 036 voltage",
+    "path": "Battery.Modules.036",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -138428,6 +143574,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU068_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 068 voltage",
+    "path": "Battery.Modules.068",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -140211,6 +145383,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU005_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 005 voltage",
+    "path": "Battery.Modules.005",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -140509,6 +145707,32 @@
     "bitLength": 8,
     "bitOffset": 64,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU037_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 037 voltage",
+    "path": "Battery.Modules.037",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -140726,6 +145950,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU069_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 069 voltage",
+    "path": "Battery.Modules.069",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -142175,6 +147425,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU006_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 006 voltage",
+    "path": "Battery.Modules.006",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -142473,6 +147749,32 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU038_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 038 voltage",
+    "path": "Battery.Modules.038",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -142690,6 +147992,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU070_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 070 voltage",
+    "path": "Battery.Modules.070",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -143651,6 +148979,33 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TP_FR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
@@ -148498,6 +153853,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU007_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 007 voltage",
+    "path": "Battery.Modules.007",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -148796,6 +154177,32 @@
     "bitLength": 8,
     "bitOffset": 80,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU039_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 039 voltage",
+    "path": "Battery.Modules.039",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -149013,6 +154420,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU071_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 071 voltage",
+    "path": "Battery.Modules.071",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -150802,6 +156235,34 @@
       "len": 8,
       "max": 205,
       "min": -50,
+      "nullmin": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TT_FR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 80,
+      "len": 8,
+      "max": 205,
+      "min": -50,
       "unit": "celsius"
     },
     "hdr": "7A0",
@@ -150868,6 +156329,33 @@
     "scaling": "raw clamped to [-50, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "SPORTAGE_FL_VSS",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127, 127]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 8,
@@ -151307,6 +156795,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU008_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 008 voltage",
+    "path": "Battery.Modules.008",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -151605,6 +157119,32 @@
     "bitLength": 8,
     "bitOffset": 88,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU040_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 040 voltage",
+    "path": "Battery.Modules.040",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -151822,6 +157362,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU072_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 072 voltage",
+    "path": "Battery.Modules.072",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -152398,6 +157964,47 @@
     "bitLength": 8,
     "bitOffset": 88,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": ">3 V",
+          "value": "3V+"
+        },
+        "1": {
+          "description": "2.7 - 3 V",
+          "value": "27_3V"
+        },
+        "2": {
+          "description": "2.4 - 2.7 V",
+          "value": "2_4_2_7V"
+        },
+        "3": {
+          "description": "< 2.4",
+          "value": "2_4-"
+        }
+      }
+    },
+    "hdr": "7A0",
+    "id": "SPORTAGE_TB_FR",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Tire battery front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '>3 V', 'value': '3V+'}, '1': {'description': '2.7 - 3 V', 'value': '27_3V'}, '2': {'description': '2.4 - 2.7 V', 'value': '2_4_2_7V'}, '3': {'description': '< 2.4', 'value': '2_4-'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
       "22": "C101"
     },
     "debug": false,
@@ -152417,6 +158024,58 @@
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "22": "C101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "SPORTAGE_TIRE_FL_SPD",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 127,
+      "min": -127,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "SPORTAGE_FR_VSS",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127, 127]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -152858,6 +158517,32 @@
     "cmd": {
       "22": "0102"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU009_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 009 voltage",
+    "path": "Battery.Modules.009",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "0102"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -153156,6 +158841,32 @@
     "bitLength": 8,
     "bitOffset": 96,
     "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU041_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 041 voltage",
+    "path": "Battery.Modules.041",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -153335,6 +159046,32 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "SPORTAGE_HVBAT_CMU073_VOLT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "HV battery module 073 voltage",
+    "path": "Battery.Modules.073",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -154151,6 +159888,31 @@
     "bitLength": 8,
     "bitOffset": 96,
     "cmd": {
+      "22": "C101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "SPORTAGE_TIRE_FR_SPD",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -154228,6 +159990,34 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/5 clamped to [-25, 25]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "SPORTAGE_KNOCK_RETARD_1",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Knock retard cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
     "suggestedMetric": "",
     "unit": "degrees"
   }
