@@ -2943,6 +2943,56 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 3,
+    "cmd": {
+      "22": "032D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 3,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "763",
+    "id": "DURANGO_HIGHBEAMS_ON",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "High beams",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 3,
+    "cmd": {
+      "22": "032D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 3,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "763",
+    "id": "ALFAROMEO_HIGHBEAMS_ON",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "High beams",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 30,
     "cmd": {
       "01": "01"
@@ -62023,6 +62073,88 @@
   },
   {
     "bitLength": 4,
+    "bitOffset": 12,
+    "cmd": {
+      "22": "032D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 12,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "1": {
+          "description": "Spray",
+          "value": "SPRAY"
+        },
+        "2": {
+          "description": "Auto",
+          "value": "AUTO"
+        },
+        "4": {
+          "description": "On",
+          "value": "ON"
+        }
+      }
+    },
+    "hdr": "763",
+    "id": "DURANGO_REAR_WIPER",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Rear wiper",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'OFF'}, '1': {'description': 'Spray', 'value': 'SPRAY'}, '2': {'description': 'Auto', 'value': 'AUTO'}, '4': {'description': 'On', 'value': 'ON'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 12,
+    "cmd": {
+      "22": "032D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 12,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "1": {
+          "description": "Spray",
+          "value": "SPRAY"
+        },
+        "2": {
+          "description": "Auto",
+          "value": "AUTO"
+        },
+        "4": {
+          "description": "On",
+          "value": "ON"
+        }
+      }
+    },
+    "hdr": "763",
+    "id": "ALFAROMEO_REAR_WIPER",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear wiper",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'OFF'}, '1': {'description': 'Spray', 'value': 'SPRAY'}, '2': {'description': 'Auto', 'value': 'AUTO'}, '4': {'description': 'On', 'value': 'ON'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
     "bitOffset": 188,
     "cmd": {
       "22": "01A4"
@@ -62175,6 +62307,80 @@
     "bitLength": 4,
     "bitOffset": 4,
     "cmd": {
+      "22": "032D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "1": {
+          "description": "On",
+          "value": "ON"
+        },
+        "2": {
+          "description": "Held",
+          "value": "HELD"
+        }
+      }
+    },
+    "hdr": "763",
+    "id": "DURANGO_HIGHBEAMS_MODE",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "High beam mode",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'OFF'}, '1': {'description': 'On', 'value': 'ON'}, '2': {'description': 'Held', 'value': 'HELD'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "032D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "1": {
+          "description": "On",
+          "value": "ON"
+        },
+        "2": {
+          "description": "Held",
+          "value": "HELD"
+        }
+      }
+    },
+    "hdr": "763",
+    "id": "ALFAROMEO_HIGHBEAMS_MODE",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "High beam mode",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'OFF'}, '1': {'description': 'On', 'value': 'ON'}, '2': {'description': 'Held', 'value': 'HELD'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
       "22": "051A"
     },
     "debug": false,
@@ -62251,6 +62457,314 @@
     "scaling": "raw clamped to [15]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "5503"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "11": {
+          "description": "Rear",
+          "value": "REAR"
+        },
+        "13": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "DURANGO_GEAR",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}, '11': {'description': 'Rear', 'value': 'REAR'}, '13': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "5503"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "11": {
+          "description": "Rear",
+          "value": "REAR"
+        },
+        "13": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "ALFAROMEO_GEAR",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}, '11': {'description': 'Rear', 'value': 'REAR'}, '13': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "5504"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "11": {
+          "description": "Rear",
+          "value": "REAR"
+        },
+        "13": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "DURANGO_GEAR_TARGET",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Target gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}, '11': {'description': 'Rear', 'value': 'REAR'}, '13': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "5504"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "11": {
+          "description": "Rear",
+          "value": "REAR"
+        },
+        "13": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "ALFAROMEO_GEAR_TARGET",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Target gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}, '11': {'description': 'Rear', 'value': 'REAR'}, '13': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 4,
@@ -67097,6 +67611,60 @@
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "04FE"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 300,
+      "min": -30,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E1",
+    "id": "DURANGO_ATF_T",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Transmission temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*1.8 +-40 clamped to [-30, 300]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "04FE"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 300,
+      "min": -30,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E1",
+    "id": "ALFAROMEO_ATF_T",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Transmission temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*1.8 +-40 clamped to [-30, 300]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
   },
   {
     "bitLength": 8,
@@ -76855,6 +77423,206 @@
     "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_FL",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_FL_V2",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F2"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_FR",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_FR_V2",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F3"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_RR",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_RR_V2",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_RL",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_RL_V2",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -118245,7 +119013,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "ALFAROMEO_TP_FL_V2",
+    "id": "ALFAROMEO_TP_FL_V3",
     "make": "Alfa",
     "model": "Romeo",
     "name": "Front left tire pressure",
@@ -133151,7 +133919,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "ALFAROMEO_TP_FR_V2",
+    "id": "ALFAROMEO_TP_FR_V3",
     "make": "Alfa",
     "model": "Romeo",
     "name": "Front right tire pressure",
@@ -138216,7 +138984,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "ALFAROMEO_TP_RL_V2",
+    "id": "ALFAROMEO_TP_RL_V3",
     "make": "Alfa",
     "model": "Romeo",
     "name": "Rear left tire pressure",
@@ -141976,7 +142744,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "ALFAROMEO_TP_RR_V2",
+    "id": "ALFAROMEO_TP_RR_V3",
     "make": "Alfa",
     "model": "Romeo",
     "name": "Rear right tire pressure",
@@ -152348,6 +153116,222 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TT_FL",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TT_FL_V2",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F2"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TT_FR",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TT_FR_V2",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F3"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TT_RR",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TT_RR_V2",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TT_RL",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TT_RL_V2",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
