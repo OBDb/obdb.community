@@ -2993,6 +2993,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 3,
+    "cmd": {
+      "22": "032D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 3,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "763",
+    "id": "VAUXHALLOPEL_HIGHBEAMS_ON",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "High beams",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 30,
     "cmd": {
       "01": "01"
@@ -62155,6 +62180,47 @@
   },
   {
     "bitLength": 4,
+    "bitOffset": 12,
+    "cmd": {
+      "22": "032D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 12,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "1": {
+          "description": "Spray",
+          "value": "SPRAY"
+        },
+        "2": {
+          "description": "Auto",
+          "value": "AUTO"
+        },
+        "4": {
+          "description": "On",
+          "value": "ON"
+        }
+      }
+    },
+    "hdr": "763",
+    "id": "VAUXHALLOPEL_REAR_WIPER",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Rear wiper",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'OFF'}, '1': {'description': 'Spray', 'value': 'SPRAY'}, '2': {'description': 'Auto', 'value': 'AUTO'}, '4': {'description': 'On', 'value': 'ON'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
     "bitOffset": 188,
     "cmd": {
       "22": "01A4"
@@ -62370,6 +62436,43 @@
     "id": "ALFAROMEO_HIGHBEAMS_MODE",
     "make": "Alfa",
     "model": "Romeo",
+    "name": "High beam mode",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'OFF'}, '1': {'description': 'On', 'value': 'ON'}, '2': {'description': 'Held', 'value': 'HELD'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "032D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "1": {
+          "description": "On",
+          "value": "ON"
+        },
+        "2": {
+          "description": "Held",
+          "value": "HELD"
+        }
+      }
+    },
+    "hdr": "763",
+    "id": "VAUXHALLOPEL_HIGHBEAMS_MODE",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "High beam mode",
     "path": "Control",
     "pid": "22",
@@ -62616,6 +62719,83 @@
     "bitLength": 4,
     "bitOffset": 4,
     "cmd": {
+      "22": "5503"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "11": {
+          "description": "Rear",
+          "value": "REAR"
+        },
+        "13": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "VAUXHALLOPEL_GEAR",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}, '11': {'description': 'Rear', 'value': 'REAR'}, '13': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
       "22": "5504"
     },
     "debug": false,
@@ -62759,6 +62939,83 @@
     "id": "ALFAROMEO_GEAR_TARGET",
     "make": "Alfa",
     "model": "Romeo",
+    "name": "Target gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}, '11': {'description': 'Rear', 'value': 'REAR'}, '13': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "5504"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 4,
+      "map": {
+        "0": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "11": {
+          "description": "Rear",
+          "value": "REAR"
+        },
+        "13": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "VAUXHALLOPEL_GEAR_TARGET",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Target gear",
     "path": "Transmission",
     "pid": "22",
@@ -67659,6 +67916,33 @@
     "id": "ALFAROMEO_ATF_T",
     "make": "Alfa",
     "model": "Romeo",
+    "name": "Transmission temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*1.8 +-40 clamped to [-30, 300]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "04FE"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 300,
+      "min": -30,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E1",
+    "id": "VAUXHALLOPEL_ATF_T",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Transmission temperature",
     "path": "Transmission",
     "pid": "22",
@@ -77478,6 +77762,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "A0F1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "VAUXHALLOPEL_TP_FL_V2",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "A0F2"
     },
     "debug": false,
@@ -77517,6 +77826,31 @@
     "id": "ALFAROMEO_TP_FR_V2",
     "make": "Alfa",
     "model": "Romeo",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "VAUXHALLOPEL_TP_FR_V2",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -77578,6 +77912,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "A0F3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "VAUXHALLOPEL_TP_RR_V2",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "A0F4"
     },
     "debug": false,
@@ -77617,6 +77976,31 @@
     "id": "ALFAROMEO_TP_RL_V2",
     "make": "Alfa",
     "model": "Romeo",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.398 clamped to [101.49]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0F4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 101.49,
+      "mul": 0.398,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "VAUXHALLOPEL_TP_RL_V2",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -119063,7 +119447,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "VAUXHALLOPEL_TP_FL_V2",
+    "id": "VAUXHALLOPEL_TP_FL_V3",
     "make": "VauxhallOpel",
     "model": "",
     "name": "Front left tire pressure",
@@ -133969,7 +134353,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "VAUXHALLOPEL_TP_FR_V2",
+    "id": "VAUXHALLOPEL_TP_FR_V3",
     "make": "VauxhallOpel",
     "model": "",
     "name": "Front right tire pressure",
@@ -139034,7 +139418,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "VAUXHALLOPEL_TP_RL_V2",
+    "id": "VAUXHALLOPEL_TP_RL_V3",
     "make": "VauxhallOpel",
     "model": "",
     "name": "Rear left tire pressure",
@@ -142794,7 +143178,7 @@
       "unit": "psi"
     },
     "hdr": "742",
-    "id": "VAUXHALLOPEL_TP_RR_V2",
+    "id": "VAUXHALLOPEL_TP_RR_V3",
     "make": "VauxhallOpel",
     "model": "",
     "name": "Rear right tire pressure",
@@ -153175,6 +153559,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "A0F1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "VAUXHALLOPEL_TT_FL_V2",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "A0F2"
     },
     "debug": false,
@@ -153218,6 +153629,33 @@
     "id": "ALFAROMEO_TT_FR_V2",
     "make": "Alfa",
     "model": "Romeo",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "VAUXHALLOPEL_TT_FR_V2",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -153283,6 +153721,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "A0F3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "VAUXHALLOPEL_TT_RR_V2",
+    "make": "VauxhallOpel",
+    "model": "",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "A0F4"
     },
     "debug": false,
@@ -153326,6 +153791,33 @@
     "id": "ALFAROMEO_TT_RL_V2",
     "make": "Alfa",
     "model": "Romeo",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0F4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "740",
+    "id": "VAUXHALLOPEL_TT_RL_V2",
+    "make": "VauxhallOpel",
+    "model": "",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
