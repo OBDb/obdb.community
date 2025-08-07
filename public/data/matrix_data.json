@@ -4468,6 +4468,56 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "A0A5"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_RL_VALID",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Rear left tire pressure, valid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "A0A5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_RL_VALID",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire pressure, valid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 40,
     "cmd": {
       "22": "BC03"
@@ -5245,6 +5295,56 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "22": "A0A5"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_RR_VALID",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Rear right tire pressure, valid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "22": "A0A5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_RR_VALID",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire pressure, valid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 52,
     "cmd": {
       "22": "BC04"
@@ -5870,6 +5970,56 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "A0A5"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_FR_VALID",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Front right tire pressure, valid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "A0A5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_FR_VALID",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire pressure, valid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 62,
     "cmd": {
       "22": "BC03"
@@ -6492,6 +6642,56 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "A0A5"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_FL_VALID",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Front left tire pressure, valid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "A0A5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_FL_VALID",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire pressure, valid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
   },
   {
     "bitLength": 1,
@@ -35949,6 +36149,56 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "2802"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 16,
+      "max": 65535,
+      "unit": "degrees"
+    },
+    "hdr": "7AB",
+    "id": "DURANGO_GPS_HEADING",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Heading",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "2802"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 16,
+      "max": 65535,
+      "unit": "degrees"
+    },
+    "hdr": "7AB",
+    "id": "ALFAROMEO_GPS_HEADING",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Heading",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 1520,
     "cmd": {
       "22": "182E"
@@ -62371,6 +62621,106 @@
   },
   {
     "bitLength": 4,
+    "bitOffset": 200,
+    "cmd": {
+      "22": "2802"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7AB",
+    "id": "DURANGO_GPS_SATS_TRACKED",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Satellites, tracked",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 200,
+    "cmd": {
+      "22": "2802"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7AB",
+    "id": "ALFAROMEO_GPS_SATS_TRACKED",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Satellites, tracked",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 204,
+    "cmd": {
+      "22": "2802"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 204,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7AB",
+    "id": "DURANGO_GPS_SATS_VISIBLE",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Satellites, visible",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 204,
+    "cmd": {
+      "22": "2802"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 204,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7AB",
+    "id": "ALFAROMEO_GPS_SATS_VISIBLE",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Satellites, visible",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
     "bitOffset": 4,
     "cmd": {
       "22": "032D"
@@ -77707,6 +78057,54 @@
     "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0A1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_FL_AC",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Front left tire pressure, altitude compensated",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A0A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_FL_AC",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front left tire pressure, altitude compensated",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -97659,6 +98057,56 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "A0A1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_RR_AC",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Rear right tire pressure, altitude compensated",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "A0A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_RR_AC",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear right tire pressure, altitude compensated",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -119455,6 +119903,56 @@
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "A0A1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_RL_AC",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Rear left tire pressure, altitude compensated",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "A0A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_RL_AC",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Rear left tire pressure, altitude compensated",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -153500,6 +153998,56 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0A1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "DURANGO_TP_FR_AC",
+    "make": "Dodge",
+    "model": "Durango",
+    "name": "Front right tire pressure, altitude compensated",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "A0A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "740",
+    "id": "ALFAROMEO_TP_FR_AC",
+    "make": "Alfa",
+    "model": "Romeo",
+    "name": "Front right tire pressure, altitude compensated",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
   },
   {
     "bitLength": 8,
