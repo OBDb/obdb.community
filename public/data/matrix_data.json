@@ -3193,31 +3193,6 @@
   },
   {
     "bitLength": 1,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_DOOR_RL",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Rear left door open?",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
     "bitOffset": 34,
     "cmd": {
       "22": "BC03"
@@ -3295,31 +3270,6 @@
     "bitLength": 1,
     "bitOffset": 34,
     "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 34,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_DOOR_FL",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Front left door open?",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 34,
-    "cmd": {
       "22": "BC04"
     },
     "debug": false,
@@ -3360,31 +3310,6 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Door lock front right (raw)",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 34,
-    "cmd": {
-      "22": "BC04"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 34,
-      "len": 1,
-      "max": 1,
-      "unit": "scalar"
-    },
-    "hdr": "770",
-    "id": "KONA_LOCK_FR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Door Lock Front Right (Raw)",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3470,31 +3395,6 @@
     "bitLength": 1,
     "bitOffset": 35,
     "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 35,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_HANDBRAKE",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Handbrake engaged?",
-    "path": "Control",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 35,
-    "cmd": {
       "22": "BC04"
     },
     "debug": false,
@@ -3560,31 +3460,6 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Door lock front left (raw)",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 35,
-    "cmd": {
-      "22": "BC04"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 35,
-      "len": 1,
-      "max": 1,
-      "unit": "scalar"
-    },
-    "hdr": "770",
-    "id": "KONA_LOCK_FL",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Door Lock Front Left (Raw)",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3670,31 +3545,6 @@
     "bitLength": 1,
     "bitOffset": 36,
     "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 36,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_DOOR_FR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Front right door open?",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 36,
-    "cmd": {
       "22": "BC04"
     },
     "debug": false,
@@ -3768,31 +3618,6 @@
   },
   {
     "bitLength": 1,
-    "bitOffset": 36,
-    "cmd": {
-      "22": "BC04"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 36,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_REVERSE_GEAR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Reverse Gear Selected",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
     "bitOffset": 37,
     "cmd": {
       "22": "BC03"
@@ -3860,31 +3685,6 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Door rear right open",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 37,
-    "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 37,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_DOOR_RR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Rear right door open?",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -3985,31 +3785,6 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Door trunk open",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 39,
-    "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 39,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_TRUNK",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Trunk open?",
     "path": "Doors",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -4593,31 +4368,6 @@
   },
   {
     "bitLength": 1,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_BELT_PASSENGER",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Passenger seatbelt latched?",
-    "path": "Seatbelts",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
     "bitOffset": 405,
     "cmd": {
       "22": "0101"
@@ -4737,31 +4487,6 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Seatbelt driver",
-    "path": "Seatbelts",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 41,
-    "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 41,
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_BELT_DRIVER",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Driver seatbelt latched?",
     "path": "Seatbelts",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -40655,6 +40380,33 @@
       "blsb": true,
       "div": 1220.7,
       "len": 16,
+      "max": 53,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INJ_DUR_1",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
       "max": 53.686409,
       "unit": "seconds"
     },
@@ -40690,33 +40442,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Injection duration cyl 1",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 176,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 176,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "KONA_INJ_DUR_1",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Injection Duration Cyl 1",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1220.7 clamped to [53]",
@@ -40895,6 +40620,33 @@
       "blsb": true,
       "div": 1220.7,
       "len": 16,
+      "max": 53,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INJ_DUR_2",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
       "max": 53.686409,
       "unit": "seconds"
     },
@@ -40930,33 +40682,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Injection duration cyl 2",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 192,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 192,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "KONA_INJ_DUR_2",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Injection Duration Cyl 2",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1220.7 clamped to [53]",
@@ -41485,6 +41210,33 @@
       "blsb": true,
       "div": 1220.7,
       "len": 16,
+      "max": 53,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INJ_DUR_3",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
       "max": 53.686409,
       "unit": "seconds"
     },
@@ -41520,33 +41272,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Injection duration cyl 3",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 208,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 208,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
-      "max": 53,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "KONA_INJ_DUR_3",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Injection Duration Cyl 3",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1220.7 clamped to [53]",
@@ -41943,6 +41668,33 @@
       "blsb": true,
       "div": 1220.7,
       "len": 16,
+      "max": 53,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "KONA_INJ_DUR_4",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Injection Duration Cyl 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
       "max": 53.686409,
       "unit": "seconds"
     },
@@ -41997,33 +41749,6 @@
       "blsb": true,
       "div": 1220.7,
       "len": 16,
-      "max": 53,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "KONA_INJ_DUR_4",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Injection Duration Cyl 4",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1220.7 clamped to [53]",
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 224,
-    "cmd": {
-      "22": "E002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 224,
-      "blsb": true,
-      "div": 1220.7,
-      "len": 16,
       "max": 53.686409,
       "unit": "seconds"
     },
@@ -42059,34 +41784,6 @@
     "id": "FORTE_CLUTCH_1_T",
     "make": "Kia",
     "model": "Forte",
-    "name": "Clutch #1 temperature",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw*2 +-40 clamped to [-40, 300]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 232,
-    "cmd": {
-      "22": "01A4"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 232,
-      "len": 16,
-      "max": 300,
-      "min": -40,
-      "mul": 2,
-      "unit": "celsius"
-    },
-    "hdr": "7E1",
-    "id": "KONA_CLUTCH_1_T",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Clutch #1 temperature",
     "path": "Transmission",
     "pid": "22",
@@ -43793,34 +43490,6 @@
     "id": "FORTE_CLUTCH_2_T",
     "make": "Kia",
     "model": "Forte",
-    "name": "Clutch #2 temperature",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw*2 +-40 clamped to [-40, 300]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 248,
-    "cmd": {
-      "22": "01A4"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 248,
-      "len": 16,
-      "max": 300,
-      "min": -40,
-      "mul": 2,
-      "unit": "celsius"
-    },
-    "hdr": "7E1",
-    "id": "KONA_CLUTCH_2_T",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Clutch #2 temperature",
     "path": "Transmission",
     "pid": "22",
@@ -48323,32 +47992,6 @@
       "unit": "kilowatts"
     },
     "hdr": "7D4",
-    "id": "KONA_BMS_CHG_PWR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "BMS Available Charge Power",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "kilowatts"
-    },
-    "hdr": "7D4",
     "id": "SPORTAGE_BMS_CHG_PWR",
     "make": "Kia",
     "model": "Sportage",
@@ -50460,32 +50103,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS available discharge power",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "kilowatts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "kilowatts"
-    },
-    "hdr": "7D4",
-    "id": "KONA_BMS_DISCHG_PWR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "BMS Available Discharge Power",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/100 clamped to [655.35]",
@@ -62625,31 +62242,6 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 188,
-      "len": 4,
-      "max": 15,
-      "unit": "scalar"
-    },
-    "hdr": "7E1",
-    "id": "KONA_GEAR_CUR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Current gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw clamped to [15]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 4,
-    "bitOffset": 188,
-    "cmd": {
-      "22": "01A4"
-    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -62687,31 +62279,6 @@
     "id": "FORTE_GEAR_NXT",
     "make": "Kia",
     "model": "Forte",
-    "name": "Next gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw clamped to [15]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 4,
-    "bitOffset": 196,
-    "cmd": {
-      "22": "01A4"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 196,
-      "len": 4,
-      "max": 15,
-      "unit": "scalar"
-    },
-    "hdr": "7E1",
-    "id": "KONA_GEAR_NXT",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Next gear",
     "path": "Transmission",
     "pid": "22",
@@ -80538,30 +80105,6 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
-    "id": "HYUNDAI_22E004",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Unknown",
-    "path": "Engine.Unknown",
-    "pid": "22",
-    "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "E004"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 100,
-      "unit": "scalar"
-    },
-    "hdr": "7E0",
     "id": "SPORTAGE_22E004",
     "make": "Kia",
     "model": "Sportage",
@@ -84611,6 +84154,33 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "KONA_TP_RR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Tire pressure rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "SPORTAGE_TP_RL",
     "make": "Kia",
     "model": "Sportage",
@@ -84778,32 +84348,6 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "KONA_TP_RR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Pressure Rear Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
@@ -85310,33 +84854,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS battery min temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 120,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 120,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "KONA_BMS_MIN_TEMP",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "BMS Battery Min Temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -86692,20 +86209,19 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 120,
       "len": 8,
       "max": 100,
       "min": -50,
-      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "VELOSTER_TPMS_TEMP_RR",
+    "id": "KONA_TT_RR",
     "make": "Hyundai",
-    "model": "Veloster",
+    "model": "Kona",
     "name": "Tire temperature rear right",
     "path": "Tires",
     "pid": "22",
@@ -86726,13 +86242,14 @@
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "KONA_TT_RR",
+    "id": "VELOSTER_TPMS_TEMP_RR",
     "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Temperature Rear Right",
+    "model": "Veloster",
+    "name": "Tire temperature rear right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [-50, 100]",
@@ -87274,33 +86791,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS battery mod 1 temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "KONA_BMS_MOD1_TEMP",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "BMS Battery Mod 1 Temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -89202,33 +88692,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS battery mod 2 temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "KONA_BMS_MOD2_TEMP",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "BMS Battery Mod 2 Temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -91909,6 +91372,31 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TW_RR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Tire alert rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -91957,31 +91445,6 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "KONA_TW_RR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Alert Rear Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
   },
   {
     "bitLength": 8,
@@ -92323,33 +91786,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "BMS battery mod 3 temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 144,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 144,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
-    "id": "KONA_BMS_MOD3_TEMP",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "BMS Battery Mod 3 Temp",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [-40, 80]",
@@ -94077,33 +93513,6 @@
       "unit": "celsius"
     },
     "hdr": "7D4",
-    "id": "KONA_BMS_MOD4_TEMP",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "BMS Battery Mod 4 Temp",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [-40, 80]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "len": 8,
-      "max": 80,
-      "min": -40,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7D4",
     "id": "SPORTAGE_BMS_MOD4_TEMP",
     "make": "Kia",
     "model": "Sportage",
@@ -95392,6 +94801,33 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "KONA_TP_RL",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Tire pressure rear left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "SPORTAGE_TP_RR",
     "make": "Kia",
     "model": "Sportage",
@@ -95559,32 +94995,6 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "KONA_TP_RL",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Pressure Rear Left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -100549,20 +99959,19 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 160,
       "len": 8,
       "max": 100,
       "min": -50,
-      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "VELOSTER_TPMS_TEMP_RL",
+    "id": "KONA_TT_RL",
     "make": "Hyundai",
-    "model": "Veloster",
+    "model": "Kona",
     "name": "Tire temperature rear left",
     "path": "Tires",
     "pid": "22",
@@ -100583,13 +99992,14 @@
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "KONA_TT_RL",
+    "id": "VELOSTER_TPMS_TEMP_RL",
     "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Temperature Rear Left",
+    "model": "Veloster",
+    "name": "Tire temperature rear left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [-50, 100]",
@@ -103872,7 +103282,7 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 176,
@@ -103884,7 +103294,7 @@
     "id": "KONA_TW_RL",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "TPMS Alert Rear Left",
+    "name": "Tire alert rear left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -115270,6 +114680,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B3",
+    "id": "KONA_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B3",
     "id": "SPORTAGE_VSS",
     "make": "Kia",
     "model": "Sportage",
@@ -115298,31 +114733,6 @@
     "id": "ELANTRA_VSS",
     "make": "Hyundai",
     "model": "Elantra",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 232,
-    "cmd": {
-      "22": "0100"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 232,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B3",
-    "id": "KONA_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -127619,10 +127029,10 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_INTAKE_TEMP",
+    "id": "KONA_INTAKE_TEMP",
     "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Intake air temperature",
+    "model": "Kona",
+    "name": "Intake Air Temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
@@ -127635,7 +127045,7 @@
     "cmd": {
       "22": "E001"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -48,
@@ -127646,10 +127056,10 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "KONA_INTAKE_TEMP",
+    "id": "VELOSTER_INTAKE_TEMP",
     "make": "Hyundai",
-    "model": "Kona",
-    "name": "Intake Air Temperature",
+    "model": "Veloster",
+    "name": "Intake air temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
@@ -129267,10 +128677,10 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_OIL_TEMP",
+    "id": "KONA_OIL_TEMP",
     "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Engine oil temperature",
+    "model": "Kona",
+    "name": "Engine Oil Temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
@@ -129283,7 +128693,7 @@
     "cmd": {
       "22": "E001"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -48,
@@ -129294,10 +128704,10 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "KONA_OIL_TEMP",
+    "id": "VELOSTER_OIL_TEMP",
     "make": "Hyundai",
-    "model": "Kona",
-    "name": "Engine Oil Temperature",
+    "model": "Veloster",
+    "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
@@ -133098,32 +132508,6 @@
       "unit": "percent"
     },
     "hdr": "7D4",
-    "id": "KONA_BMS_SOC",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "BMS State Of Charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "0101"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 2,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D4",
     "id": "SPORTAGE_BMS_SOC",
     "make": "Kia",
     "model": "Sportage",
@@ -136254,31 +135638,6 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
-      "22": "BC05"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "770",
-    "id": "KONA_HAZARD_SW",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Hazard Switch (Raw)",
-    "path": "Lights",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
       "22": "BC08"
     },
     "debug": false,
@@ -136378,6 +135737,33 @@
     "make": "Kia",
     "model": "Forte",
     "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TP_FL",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Tire pressure front left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -136722,32 +136108,6 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "Tire pressure front left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "KONA_TP_FL",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Pressure Front Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -137569,10 +136929,10 @@
       "unit": "celsius"
     },
     "hdr": "7B3",
-    "id": "SPORTAGE_TEMP_INT",
-    "make": "Kia",
-    "model": "Sportage",
-    "name": "Interior temperature",
+    "id": "KONA_TEMP_INT",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Interior Temperature",
     "path": "Climate",
     "pid": "22",
     "scaling": "raw/2 +-40 clamped to [-40, 80]",
@@ -137585,7 +136945,7 @@
     "cmd": {
       "22": "0100"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -137597,10 +136957,10 @@
       "unit": "celsius"
     },
     "hdr": "7B3",
-    "id": "KONA_TEMP_INT",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Interior Temperature",
+    "id": "SPORTAGE_TEMP_INT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Interior temperature",
     "path": "Climate",
     "pid": "22",
     "scaling": "raw/2 +-40 clamped to [-40, 80]",
@@ -141439,6 +140799,32 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TT_FL",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Tire temperature front left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -141509,32 +140895,6 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Tire temperature front left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [-50, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "len": 8,
-      "max": 100,
-      "min": -50,
-      "unit": "celsius"
-    },
-    "hdr": "7A0",
-    "id": "KONA_TT_FL",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Temperature Front Left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [-50, 100]",
@@ -142177,10 +141537,10 @@
       "unit": "celsius"
     },
     "hdr": "7B3",
-    "id": "SPORTAGE_TEMP_EXT",
-    "make": "Kia",
-    "model": "Sportage",
-    "name": "Exterior temperature",
+    "id": "KONA_TEMP_EXT",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Exterior Temperature",
     "path": "Climate",
     "pid": "22",
     "scaling": "raw/2 +-40 clamped to [-40, 80]",
@@ -142193,7 +141553,7 @@
     "cmd": {
       "22": "0100"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -142205,10 +141565,10 @@
       "unit": "celsius"
     },
     "hdr": "7B3",
-    "id": "KONA_TEMP_EXT",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Exterior Temperature",
+    "id": "SPORTAGE_TEMP_EXT",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Exterior temperature",
     "path": "Climate",
     "pid": "22",
     "scaling": "raw/2 +-40 clamped to [-40, 80]",
@@ -143815,11 +143175,9 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -50,
       "bix": 48,
       "len": 8,
-      "max": 205,
-      "min": -50,
+      "max": 255,
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
@@ -143829,7 +143187,7 @@
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 205]",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -144010,33 +143368,6 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Headlight switch (raw >2)",
-    "path": "Lights",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "BC05"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 8,
-      "max": 1,
-      "nullmax": 2,
-      "nullmin": 0,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_HL_SW",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Headlight Switch (Raw >2)",
     "path": "Lights",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -146390,11 +145721,9 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -50,
       "bix": 56,
       "len": 8,
-      "max": 205,
-      "min": -50,
+      "max": 255,
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
@@ -146404,7 +145733,7 @@
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 205]",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -146568,33 +145897,6 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
-      "22": "BC03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "len": 8,
-      "max": 1,
-      "nullmax": 1,
-      "nullmin": 0,
-      "unit": "noyes"
-    },
-    "hdr": "770",
-    "id": "KONA_DEFOG_SW",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Defogging?",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
       "22": "BC09"
     },
     "debug": false,
@@ -146700,7 +146002,7 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 56,
@@ -146712,7 +146014,7 @@
     "id": "KONA_TW_FL",
     "make": "Hyundai",
     "model": "Kona",
-    "name": "TPMS Alert Front Left",
+    "name": "Tire alert front left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -148490,11 +147792,9 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -50,
       "bix": 64,
       "len": 8,
-      "max": 205,
-      "min": -50,
+      "max": 255,
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
@@ -148504,7 +147804,7 @@
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 205]",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -150752,11 +150052,9 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -50,
       "bix": 72,
       "len": 8,
-      "max": 205,
-      "min": -50,
+      "max": 255,
       "unit": "kilometersPerHour"
     },
     "hdr": "7D1",
@@ -150766,7 +150064,7 @@
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 205]",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -150878,6 +150176,33 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TP_FR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Tire pressure front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
@@ -151121,32 +150446,6 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "KONA_TP_FR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Pressure Front Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -158581,20 +157880,19 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 80,
       "len": 8,
       "max": 100,
       "min": -50,
-      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "VELOSTER_TPMS_TEMP_FR",
+    "id": "KONA_TT_FR",
     "make": "Hyundai",
-    "model": "Veloster",
+    "model": "Kona",
     "name": "Tire temperature front right",
     "path": "Tires",
     "pid": "22",
@@ -158615,13 +157913,14 @@
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "KONA_TT_FR",
+    "id": "VELOSTER_TPMS_TEMP_FR",
     "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Temperature Front Right",
+    "model": "Veloster",
+    "name": "Tire temperature front right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [-50, 100]",
@@ -162033,6 +161332,31 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "KONA_TW_FR",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Tire alert front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -162105,31 +161429,6 @@
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "KONA_TW_FR",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "TPMS Alert Front Right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
   },
   {
     "bitLength": 8,
