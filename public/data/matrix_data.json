@@ -8817,6 +8817,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 4,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "MAZDA3_MAP",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Map voltage",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0301"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 5,
       "mul": 0.0009765625,
@@ -8876,31 +8901,6 @@
     "id": "CX90_MAP",
     "make": "Mazda",
     "model": "CX-90",
-    "name": "MAP voltage",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1000 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0301"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 1000,
-      "len": 16,
-      "max": 4,
-      "unit": "volts"
-    },
-    "hdr": "7E0",
-    "id": "MAZDA3_MAP",
-    "make": "Mazda",
-    "model": "3",
     "name": "MAP voltage",
     "path": "Engine",
     "pid": "22",
@@ -9221,6 +9221,32 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "MAZDA3_FP_LD",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Fuel pump load",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0307"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 100,
       "mul": 0.0030517578,
@@ -9281,32 +9307,6 @@
     "id": "CX90_FP_LD",
     "make": "Mazda",
     "model": "CX-90",
-    "name": "Fuel pump load",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw*100 /65535 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0307"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 65535,
-      "len": 16,
-      "max": 100,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E0",
-    "id": "MAZDA3_FP_LD",
-    "make": "Mazda",
-    "model": "3",
     "name": "Fuel pump load",
     "path": "Fuel",
     "pid": "22",
@@ -11047,7 +11047,7 @@
     "cmd": {
       "22": "03DF"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -11151,7 +11151,7 @@
     "cmd": {
       "22": "0415"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -11161,9 +11161,9 @@
       "unit": "kilopascal"
     },
     "hdr": "7E0",
-    "id": "CX90_EOP",
+    "id": "MAZDA3_EOP",
     "make": "Mazda",
-    "model": "CX-90",
+    "model": "3",
     "name": "Engine oil pressure",
     "path": "Engine",
     "pid": "22",
@@ -11187,9 +11187,9 @@
       "unit": "kilopascal"
     },
     "hdr": "7E0",
-    "id": "MAZDA3_EOP",
+    "id": "CX90_EOP",
     "make": "Mazda",
-    "model": "3",
+    "model": "CX-90",
     "name": "Engine oil pressure",
     "path": "Engine",
     "pid": "22",
@@ -14488,7 +14488,7 @@
     "cmd": {
       "22": "1310"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -14499,9 +14499,9 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "CX90_EOT",
+    "id": "MAZDA3_EOT",
     "make": "Mazda",
-    "model": "CX-90",
+    "model": "3",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -14526,9 +14526,9 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "MAZDA3_EOT",
+    "id": "CX90_EOT",
     "make": "Mazda",
-    "model": "3",
+    "model": "CX-90",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -68182,7 +68182,7 @@
     "cmd": {
       "22": "0522"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -75850,7 +75850,7 @@
     "cmd": {
       "22": "2A05"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 100000,
@@ -75876,7 +75876,7 @@
     "cmd": {
       "22": "2A06"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 100000,
@@ -75902,7 +75902,7 @@
     "cmd": {
       "22": "2A07"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 100000,
@@ -75928,7 +75928,7 @@
     "cmd": {
       "22": "2A08"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 100000,
@@ -77623,6 +77623,30 @@
     "cmd": {
       "22": "61B1"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 55,
+      "unit": "liters"
+    },
+    "hdr": "720",
+    "id": "MAZDA3_FUEL_LEVEL",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [55]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "61B1"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -77638,30 +77662,6 @@
     "path": "Fuel",
     "pid": "22",
     "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "61B1"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 55,
-      "unit": "liters"
-    },
-    "hdr": "720",
-    "id": "MAZDA3_FUEL_LEVEL",
-    "make": "Mazda",
-    "model": "3",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw clamped to [55]",
     "suggestedMetric": "",
     "unit": "liters"
   },
@@ -78516,6 +78516,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "C901"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_FL_PRESSURE",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "C902"
     },
     "debug": false,
@@ -78558,6 +78583,32 @@
     "make": "Mazda",
     "model": "MX-5-Miata",
     "name": "Front left tire Temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_FL_TEMP",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [200]",
@@ -78934,6 +78985,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "3_TP_FL",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D922"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "CX90_TP_FL",
     "make": "Mazda",
     "model": "CX-90",
@@ -78942,6 +79018,31 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D923"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "3_TP_FR",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
   {
@@ -78984,6 +79085,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "3_TP_RL",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D924"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "CX90_TP_RL",
     "make": "Mazda",
     "model": "CX-90",
@@ -78992,6 +79118,31 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D925"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "3_TP_RR",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
@@ -79035,10 +79186,62 @@
       "unit": "celsius"
     },
     "hdr": "726",
+    "id": "3_TT_FL",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D926"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
     "id": "CX90_TT_FL",
     "make": "Mazda",
     "model": "CX-90",
     "name": "Front left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D927"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "3_TT_FR",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front right temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
@@ -79087,10 +79290,62 @@
       "unit": "celsius"
     },
     "hdr": "726",
+    "id": "3_TT_RL",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D928"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
     "id": "CX90_TT_RL",
     "make": "Mazda",
     "model": "CX-90",
     "name": "Rear left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D929"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "3_TT_RR",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear right temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
@@ -97798,6 +98053,32 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "C901"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_RL_PRESSURE",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "C902"
     },
     "debug": false,
@@ -97842,6 +98123,33 @@
     "make": "Mazda",
     "model": "MX-5-Miata",
     "name": "Rear left tire Temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "bix": 16,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_RL_TEMP",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [200]",
@@ -119670,6 +119978,32 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "C901"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_RR_PRESSURE",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "C902"
     },
     "debug": false,
@@ -119714,6 +120048,33 @@
     "make": "Mazda",
     "model": "MX-5-Miata",
     "name": "Rear right tire Temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "bix": 24,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_RR_TEMP",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [200]",
@@ -154002,6 +154363,32 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "C901"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_FR_PRESSURE",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "C902"
     },
     "debug": false,
@@ -154056,9 +154443,36 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "22": "D901"
+      "22": "C902"
     },
     "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "bix": 8,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_FR_TEMP",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "D901"
+    },
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 8,
