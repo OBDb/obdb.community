@@ -8823,6 +8823,56 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "CX50_MAP",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Map voltage",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0301"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 4,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "CX5_MAP",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Map voltage",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0301"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 4,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_MAP",
     "make": "Mazda",
     "model": "3",
@@ -9202,6 +9252,31 @@
       "unit": "millimeters"
     },
     "hdr": "7E0",
+    "id": "CX5_EGR_OPEN_MM",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Exhaust gas recirculation open",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "millimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0306"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 100,
+      "unit": "millimeters"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_EGR_OPEN_MM",
     "make": "Mazda",
     "model": "3",
@@ -9211,6 +9286,58 @@
     "scaling": "raw/100 clamped to [100]",
     "suggestedMetric": "",
     "unit": "millimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0307"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "CX50_FP_LD",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Fuel pump load",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0307"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "CX5_FP_LD",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Fuel pump load",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -10956,6 +11083,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "CX5_EXH_DIFF_P",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Exhaust differential pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/200 clamped to [4.5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03DB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 16,
+      "max": 4.5,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_EXH_DIFF_P",
     "make": "Mazda",
     "model": "3",
@@ -11071,6 +11223,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "03DF"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "CX5_VGT_OPEN_PERC",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Variable geometry turbocharger open",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "03E8"
     },
     "debug": false,
@@ -11161,6 +11339,58 @@
       "unit": "kilopascal"
     },
     "hdr": "7E0",
+    "id": "CX50_EOP",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Engine oil pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0415"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "kilopascal"
+    },
+    "hdr": "7E0",
+    "id": "CX5_EOP",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Engine oil pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0415"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "kilopascal"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_EOP",
     "make": "Mazda",
     "model": "3",
@@ -11213,10 +11443,62 @@
       "unit": "gramsPerLiter"
     },
     "hdr": "7E0",
+    "id": "CX5_DPF_PM_ACC",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Diesel particulate filter particulate matter accumulation",
+    "path": "Engine.DPF",
+    "pid": "22",
+    "scaling": "raw*100 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "gramsPerLiter"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "042C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "gramsPerLiter"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_DPF_PM_ACC",
     "make": "Mazda",
     "model": "3",
     "name": "Diesel particulate filter particulate matter accumulation",
+    "path": "Engine.DPF",
+    "pid": "22",
+    "scaling": "raw*100 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "gramsPerLiter"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "042D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "gramsPerLiter"
+    },
+    "hdr": "7E0",
+    "id": "CX5_DPF_PM_GEN",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Diesel particulate filter particulate matter generation",
     "path": "Engine.DPF",
     "pid": "22",
     "scaling": "raw*100 /65535 clamped to [100]",
@@ -11263,10 +11545,58 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
+    "id": "CX5_DPF_REGEN_CNT",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Diesel particulate filter regeneration count",
+    "path": "Engine.DPF",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0432"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_DPF_REGEN_CNT",
     "make": "Mazda",
     "model": "3",
     "name": "Diesel particulate filter regeneration count",
+    "path": "Engine.DPF",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0433"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "CX5_DPF_LAMP_CNT",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Diesel particulate filter lamp count",
     "path": "Engine.DPF",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -11313,6 +11643,32 @@
       "unit": "gramsPerLiter"
     },
     "hdr": "7E0",
+    "id": "CX5_DPF_PM_ACC_DES",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Diesel particulate filter particulate matter accumulation (desired)",
+    "path": "Engine.DPF",
+    "pid": "22",
+    "scaling": "raw*100 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "gramsPerLiter"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "044B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "gramsPerLiter"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_DPF_PM_ACC_DES",
     "make": "Mazda",
     "model": "3",
@@ -11338,6 +11694,31 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
+    "id": "CX5_OIL_CHANGE_DIST",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Distance since oil changed",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw*4 clamped to [262140]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0519"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 262140,
+      "mul": 4,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_OIL_CHANGE_DIST",
     "make": "Mazda",
     "model": "3",
@@ -11345,6 +11726,30 @@
     "path": "Fluids",
     "pid": "22",
     "scaling": "raw*4 clamped to [262140]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0542"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "CX5_OIL_CHANGE_DIST_MAX",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Max distance to oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "kilometers"
   },
@@ -14481,6 +14886,60 @@
     "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
     "unit": "gramsPerSecond"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1310"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 100,
+      "len": 16,
+      "max": 615.35,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "CX50_EOT",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/100 +-40 clamped to [-40, 615.35]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1310"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 100,
+      "len": 16,
+      "max": 615.35,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "CX5_EOT",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/100 +-40 clamped to [-40, 615.35]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -58757,6 +59216,33 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
+    "id": "CX5_DPF_REGEN_DIST",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Diesel particulate filter regeneration distance",
+    "path": "Engine.DPF",
+    "pid": "22",
+    "scaling": "raw*100 /65535 clamped to [25600]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0434"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 65535,
+      "len": 24,
+      "max": 25600,
+      "mul": 100,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_DPF_REGEN_DIST",
     "make": "Mazda",
     "model": "3",
@@ -67803,6 +68289,30 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
+    "id": "CX5_DPF_REGEN",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Diesel particulate filter regeneration status",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0380"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_DPF_REGEN",
     "make": "Mazda",
     "model": "3",
@@ -67901,6 +68411,32 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "CX5_EGR_OPEN_PERC",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Exhaust gas recirculation open",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03FB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_EGR_OPEN_PERC",
     "make": "Mazda",
     "model": "3",
@@ -67925,6 +68461,30 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
+    "id": "CX5_OIL_DIL_CNT",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Oil dilution events",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0435"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
     "id": "MAZDA3_OIL_DIL_CNT",
     "make": "Mazda",
     "model": "3",
@@ -67934,6 +68494,32 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0451"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "CX5_OXY",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Oxygen concentration",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -68041,6 +68627,32 @@
     "scaling": "raw*1.8 +-40 clamped to [-30, 300]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "050F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "millimeters"
+    },
+    "hdr": "7E0",
+    "id": "CX5_VGT_OPEN",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Variable geometry turbocharger open",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "millimeters"
   },
   {
     "bitLength": 8,
@@ -68175,6 +68787,58 @@
     "scaling": "Mapped values: {'0': {'description': 'Neutral', 'value': 'NEUTRAL'}, '221': {'description': 'Park', 'value': 'PARK'}, '238': {'description': 'Reverse', 'value': 'REVERSE'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0522"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "CX50_FUEL_T",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Fuel temp",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0522"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "CX5_FUEL_T",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Fuel temp",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -75860,10 +76524,62 @@
       "unit": "bars"
     },
     "hdr": "720",
+    "id": "CX5_TP_1",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Wheel 1 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1373 /100000 clamped to [3.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100000,
+      "len": 8,
+      "max": 3.5,
+      "mul": 1373,
+      "unit": "bars"
+    },
+    "hdr": "720",
     "id": "MAZDA3_TP_1",
     "make": "Mazda",
     "model": "3",
     "name": "Wheel 1 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1373 /100000 clamped to [3.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A06"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100000,
+      "len": 8,
+      "max": 3.5,
+      "mul": 1373,
+      "unit": "bars"
+    },
+    "hdr": "720",
+    "id": "CX5_TP_2",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Wheel 2 pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1373 /100000 clamped to [3.5]",
@@ -75912,10 +76628,62 @@
       "unit": "bars"
     },
     "hdr": "720",
+    "id": "CX5_TP_3",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Wheel 3 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1373 /100000 clamped to [3.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A07"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100000,
+      "len": 8,
+      "max": 3.5,
+      "mul": 1373,
+      "unit": "bars"
+    },
+    "hdr": "720",
     "id": "MAZDA3_TP_3",
     "make": "Mazda",
     "model": "3",
     "name": "Wheel 3 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1373 /100000 clamped to [3.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A08"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100000,
+      "len": 8,
+      "max": 3.5,
+      "mul": 1373,
+      "unit": "bars"
+    },
+    "hdr": "720",
+    "id": "CX5_TP_4",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Wheel 4 pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1373 /100000 clamped to [3.5]",
@@ -75971,6 +76739,32 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "720",
+    "id": "CX5_TT_1",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Wheel 1 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -76058,6 +76852,32 @@
     "cmd": {
       "22": "2A0B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "720",
+    "id": "CX5_TT_2",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Wheel 2 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -76072,6 +76892,32 @@
     "make": "Mazda",
     "model": "3",
     "name": "Wheel 2 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "720",
+    "id": "CX5_TT_3",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Wheel 3 temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
@@ -76146,6 +76992,32 @@
     "make": "Mazda",
     "model": "3",
     "name": "Wheel 3 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "720",
+    "id": "CX5_TT_4",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Wheel 4 temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
@@ -77627,6 +78499,102 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "720",
+    "id": "CX50_FLV",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "61B1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "720",
+    "id": "CX5_FLV",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "61B1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 55,
+      "unit": "liters"
+    },
+    "hdr": "720",
+    "id": "CX50_FUEL_LEVEL",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [55]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "61B1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 55,
+      "unit": "liters"
+    },
+    "hdr": "720",
+    "id": "CX5_FUEL_LEVEL",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [55]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "61B1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 55,
       "unit": "liters"
     },
@@ -78541,6 +79509,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "C901"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "CX5_TIRE_FL_PRESSURE",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "C902"
     },
     "debug": false,
@@ -78608,6 +79601,32 @@
     "id": "3_TIRE_FL_TEMP",
     "make": "Mazda",
     "model": "3",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "CX5_TIRE_FL_TEMP",
+    "make": "Mazda",
+    "model": "CX-5",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -78976,6 +79995,31 @@
     "cmd": {
       "22": "D922"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "CX50_TP_FL",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Front left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D922"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -79010,6 +80054,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "CX5_TP_FL",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Front left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D922"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "CX90_TP_FL",
     "make": "Mazda",
     "model": "CX-90",
@@ -79018,6 +80087,31 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D923"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "CX50_TP_FR",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Front right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
   {
@@ -79060,6 +80154,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "CX5_TP_FR",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Front right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D923"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "CX90_TP_FR",
     "make": "Mazda",
     "model": "CX-90",
@@ -79068,6 +80187,31 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D924"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "CX50_TP_RL",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Rear left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -79110,6 +80254,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "CX5_TP_RL",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Rear left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D924"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "CX90_TP_RL",
     "make": "Mazda",
     "model": "CX-90",
@@ -79118,6 +80287,31 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D925"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "CX50_TP_RR",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Rear right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
@@ -79160,6 +80354,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "CX5_TP_RR",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Rear right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D925"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "CX90_TP_RR",
     "make": "Mazda",
     "model": "CX-90",
@@ -79169,6 +80388,32 @@
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D926"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "CX50_TT_FL",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Front left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -79212,10 +80457,62 @@
       "unit": "celsius"
     },
     "hdr": "726",
+    "id": "CX5_TT_FL",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Front left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D926"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
     "id": "CX90_TT_FL",
     "make": "Mazda",
     "model": "CX-90",
     "name": "Front left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D927"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "CX50_TT_FR",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Front right temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
@@ -79264,10 +80561,62 @@
       "unit": "celsius"
     },
     "hdr": "726",
+    "id": "CX5_TT_FR",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Front right temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D927"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
     "id": "CX90_TT_FR",
     "make": "Mazda",
     "model": "CX-90",
     "name": "Front right temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D928"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "CX50_TT_RL",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Rear left temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
@@ -79316,10 +80665,62 @@
       "unit": "celsius"
     },
     "hdr": "726",
+    "id": "CX5_TT_RL",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Rear left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D928"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
     "id": "CX90_TT_RL",
     "make": "Mazda",
     "model": "CX-90",
     "name": "Rear left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D929"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "CX50_TT_RR",
+    "make": "Mazda",
+    "model": "CX-50",
+    "name": "Rear right temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
@@ -79345,6 +80746,32 @@
     "id": "3_TT_RR",
     "make": "Mazda",
     "model": "3",
+    "name": "Rear right temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D929"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "CX5_TT_RR",
+    "make": "Mazda",
+    "model": "CX-5",
     "name": "Rear right temperature",
     "path": "Tires",
     "pid": "22",
@@ -98079,6 +99506,32 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "C901"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "CX5_TIRE_RL_PRESSURE",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "C902"
     },
     "debug": false,
@@ -98149,6 +99602,33 @@
     "id": "3_TIRE_RL_TEMP",
     "make": "Mazda",
     "model": "3",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "bix": 16,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "CX5_TIRE_RL_TEMP",
+    "make": "Mazda",
+    "model": "CX-5",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -120004,6 +121484,32 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "C901"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "CX5_TIRE_RR_PRESSURE",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "C902"
     },
     "debug": false,
@@ -120074,6 +121580,33 @@
     "id": "3_TIRE_RR_TEMP",
     "make": "Mazda",
     "model": "3",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "bix": 24,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "CX5_TIRE_RR_TEMP",
+    "make": "Mazda",
+    "model": "CX-5",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -154389,6 +155922,32 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "C901"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "CX5_TIRE_FR_PRESSURE",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "C902"
     },
     "debug": false,
@@ -154465,6 +156024,59 @@
     "scaling": "raw*1.8 +-58 clamped to [200]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "bix": 8,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "CX5_TIRE_FR_TEMP",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "D901"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 4,
+      "len": 8,
+      "max": 63.75,
+      "unit": "meters"
+    },
+    "hdr": "793",
+    "id": "CX5_CC_TGT_DIST",
+    "make": "Mazda",
+    "model": "CX-5",
+    "name": "Distance from bumper to target",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [63.75]",
+    "suggestedMetric": "",
+    "unit": "meters"
   },
   {
     "bitLength": 8,
