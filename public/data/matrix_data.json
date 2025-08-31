@@ -189,6 +189,30 @@
       "unit": "offon"
     },
     "hdr": "760",
+    "id": "F150LIGHTNING_PARKING_BRAKE",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Focus parking brake state",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B00"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "760",
     "id": "FOCUS_PARKING_BRAKE",
     "make": "Ford",
     "model": "Focus",
@@ -2032,6 +2056,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 2,
+    "cmd": {
+      "22": "61A5"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 2,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "720",
+    "id": "F150LIGHTNING_TPMS_WARN",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Tire pressure warning indicator",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
   },
   {
     "bitLength": 1,
@@ -15887,6 +15936,33 @@
       "unit": "celsius"
     },
     "hdr": "7E6",
+    "id": "F150LIGHTNING_TT",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Transmission temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [-300, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 300,
+      "min": -300,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E6",
     "id": "MACHE_TT",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -17101,6 +17177,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F150LIGHTNING_TP_FL",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "F150_TP_FL",
     "make": "Ford",
     "model": "F-150",
@@ -17437,6 +17538,31 @@
     "id": "EXPLORER_TP_FR",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "F150LIGHTNING_TP_FR",
+    "make": "Ford",
+    "model": "F-150-Lightning",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -17817,6 +17943,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F150LIGHTNING_TP_RR",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "F150_TP_RRO",
     "make": "Ford",
     "model": "F-150",
@@ -18154,6 +18305,31 @@
     "make": "Ford",
     "model": "Escape",
     "name": "Rear left outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "F150LIGHTNING_TP_RL",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
@@ -27722,6 +27898,31 @@
       "unit": "percent"
     },
     "hdr": "7E4",
+    "id": "F150LIGHTNING_HVBAT_SOC",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Hv battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/500 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4801"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 500,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
     "id": "MACHE_HVBAT_SOC",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -27756,6 +27957,31 @@
     "scaling": "raw/500 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "480D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "F150LIGHTNING_HVBAT_V",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Hv battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -27823,6 +28049,32 @@
       "unit": "hours"
     },
     "hdr": "7E4",
+    "id": "F150LIGHTNING_HVBAT_AGE",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Hv battery age",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*720 /200 clamped to [235926]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4810"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 16,
+      "max": 235926,
+      "mul": 720,
+      "unit": "hours"
+    },
+    "hdr": "7E4",
     "id": "MACHE_HVBAT_AGE",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -27858,6 +28110,31 @@
     "scaling": "raw*720 /200 clamped to [235926]",
     "suggestedMetric": "",
     "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4848"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 500,
+      "len": 16,
+      "max": 131.07,
+      "unit": "kilowattHours"
+    },
+    "hdr": "7E4",
+    "id": "F150LIGHTNING_HVBAT_KWH",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Hv battery energy",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/500 clamped to [131.07]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
   },
   {
     "bitLength": 16,
@@ -28493,6 +28770,34 @@
     "scaling": "raw clamped to [2]",
     "suggestedMetric": "",
     "unit": "offon"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A224"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 736,
+      "min": -736,
+      "mul": 3.6,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "764",
+    "id": "F150LIGHTNING_CC_TGT_VSS",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Target vehicle speed",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw*3.6 /10 clamped to [-736, 736]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -57458,6 +57763,31 @@
       "unit": "kilometers"
     },
     "hdr": "720",
+    "id": "F150LIGHTNING_ODO_HIGH_RES",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Odometer (instrument panel)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "404C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 24,
+      "max": 1677721,
+      "unit": "kilometers"
+    },
+    "hdr": "720",
     "id": "F150_ODO",
     "make": "Ford",
     "model": "F-150",
@@ -57719,6 +58049,30 @@
     "id": "EXPLORER_ODO",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "F150LIGHTNING_ODO",
+    "make": "Ford",
+    "model": "F-150-Lightning",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -68240,6 +68594,31 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "F150LIGHTNING_ACC_POS",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Accelerator pedal position",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "032B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "mul": 0.5,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "[ECU] Accelerator pedal position",
     "make": "Ford",
     "model": "Mustang",
@@ -73117,6 +73496,46 @@
     "cmd": {
       "22": "1E23"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "46": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "50": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "60": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "70": {
+          "description": "Park",
+          "value": "PARK"
+        }
+      }
+    },
+    "hdr": "7DF",
+    "id": "F150LIGHTNING_GEAR_SHFT",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -77304,6 +77723,33 @@
       "unit": "degrees"
     },
     "hdr": "760",
+    "id": "F150LIGHTNING_STEER_ANGLE",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*6.25 clamped to [-790, 790]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "3201"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 790,
+      "min": -790,
+      "mul": 6.25,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "760",
     "id": "RANGER_STEER_ANGLE",
     "make": "Ford",
     "model": "Ranger",
@@ -77769,6 +78215,32 @@
       "unit": "celsius"
     },
     "hdr": "7E4",
+    "id": "F150LIGHTNING_HVBAT_T",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Hv battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4800"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
     "id": "MACHE_HVBAT_T",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -77820,6 +78292,31 @@
       "unit": "percent"
     },
     "hdr": "7E4",
+    "id": "F150LIGHTNING_HVBAT_SOC_DISP",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Hv battery charge (displayed)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4845"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
     "id": "MACHE_HVBAT_SOC_DISP",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -77854,6 +78351,66 @@
     "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "484F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Not ready",
+          "value": "NOT_READY"
+        },
+        "1": {
+          "description": "Ready",
+          "value": "READY"
+        },
+        "2": {
+          "description": "Fault",
+          "value": "FAULT"
+        },
+        "3": {
+          "description": "Wait Check",
+          "value": "WAIT"
+        },
+        "4": {
+          "description": "Pre-condition",
+          "value": "PRE_COND"
+        },
+        "5": {
+          "description": "Charging",
+          "value": "CHARGING"
+        },
+        "6": {
+          "description": "Done",
+          "value": "DONE"
+        },
+        "7": {
+          "description": "External Charger",
+          "value": "EXT"
+        },
+        "8": {
+          "description": "Initializing",
+          "value": "INIT"
+        }
+      }
+    },
+    "hdr": "7E4",
+    "id": "F150LIGHTNING_CHRG_STATE",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Charging state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Not ready', 'value': 'NOT_READY'}, '1': {'description': 'Ready', 'value': 'READY'}, '2': {'description': 'Fault', 'value': 'FAULT'}, '3': {'description': 'Wait Check', 'value': 'WAIT'}, '4': {'description': 'Pre-condition', 'value': 'PRE_COND'}, '5': {'description': 'Charging', 'value': 'CHARGING'}, '6': {'description': 'Done', 'value': 'DONE'}, '7': {'description': 'External Charger', 'value': 'EXT'}, '8': {'description': 'Initializing', 'value': 'INIT'}}",
+    "suggestedMetric": "isCharging",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -78028,6 +78585,31 @@
     "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "490C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "F150LIGHTNING_HVBAT_SOH",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Hv battery state of health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -81637,6 +82219,32 @@
       "unit": "celsius"
     },
     "hdr": "7E2",
+    "id": "F150LIGHTNING_IAT",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Interior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
     "id": "MACHE_IAT",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -81667,6 +82275,32 @@
     "make": "Ford",
     "model": "Edge",
     "name": "Interior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
+    "id": "F150LIGHTNING_AAT",
+    "make": "Ford",
+    "model": "F-150-Lightning",
+    "name": "Exterior temperature",
     "path": "Climate",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-40, 215]",
