@@ -7199,6 +7199,31 @@
       "unit": "offon"
     },
     "hdr": "7E0",
+    "id": "IS_TQC_LOCKUP",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Torque converter lock-up",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
     "id": "LANDCRUISER_GEAR_LOCKUP",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -8325,6 +8350,33 @@
     "id": "DAIHATSU_ATF_PAN_T",
     "make": "Daihatsu",
     "model": "",
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "IS_ATF_PAN_T",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Transmission temperature (pan)",
     "path": "Transmission",
     "pid": "21",
@@ -12197,6 +12249,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 410,
+      "min": -410,
+      "mul": 1.5,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7B3",
+    "id": "IS_STEERING_ANGLE",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Steering angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*1.5 clamped to [-410, 410]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1017"
     },
     "debug": false,
@@ -12236,6 +12315,31 @@
     "id": "DAIHATSU_INJ_VOL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Injection volume",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/3200 clamped to [20.4]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1017"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 3200,
+      "len": 16,
+      "max": 20.4,
+      "unit": "liters"
+    },
+    "hdr": "700",
+    "id": "IS_INJ_VOL",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Injection volume",
     "path": "Engine",
     "pid": "22",
@@ -12366,6 +12470,32 @@
     "id": "DAIHATSU_FLV",
     "make": "Daihatsu",
     "model": "",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655,
+      "nullmax": 655,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "IS_FLV",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -12660,6 +12790,32 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B1",
+    "id": "IS_COUPLING_TEMP",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Coupling temperature",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw/128 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1026"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 65535,
       "unit": "scalar"
@@ -12909,6 +13065,34 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "105C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -1024,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "min": -1024,
+      "mul": 312.5,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "IS_KNOCK_CORRECT_LEARNED_VALUE",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Knock correction, learned value",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*312.5 /10000 +-1024 clamped to [-1024, 1023]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1062"
     },
     "debug": false,
@@ -12951,6 +13135,32 @@
     "make": "Daihatsu",
     "model": "",
     "name": "Exhaust VVT oil control valve control duty",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [400]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1062"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 400,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "IS_EXHAUST_VVT_OCV_CONTROL_DUTY",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Exhaust vvt oil control valve control duty",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*400 /65535 clamped to [400]",
@@ -13013,6 +13223,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "106F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "IS_INTAKE_VVT_TARGET_ANGLE_B1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Intake vvt target angle b1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1071"
     },
     "debug": false,
@@ -13055,6 +13291,32 @@
     "make": "Daihatsu",
     "model": "",
     "name": "Exhaust VVT target angle B1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1071"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "IS_EXHAUST_VVT_TARGET_ANGLE_B1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Exhaust vvt target angle b1",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*639.9 /65535 clamped to [639.9]",
@@ -13146,6 +13408,31 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 12.8,
+      "len": 16,
+      "max": 5119,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "IS_EOP",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Engine oil pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [5119]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1074"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "div": 128,
       "len": 16,
       "max": 1000,
@@ -13183,6 +13470,32 @@
     "make": "Toyota",
     "model": "GR-Corolla",
     "name": "Engine Oil Pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /128 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1074"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 1000,
+      "mul": 10,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "IS_ENG_OIL_PRESS",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Engine oil pressure",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*10 /128 clamped to [1000]",
@@ -13247,6 +13560,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "IS_FR_WHEEL_VSS",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1087"
     },
     "debug": false,
@@ -13289,6 +13629,32 @@
     "make": "Daihatsu",
     "model": "",
     "name": "Intake VVT change angle bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1087"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "IS_INTAKE_VVT_CHANGE_ANGLE_BANK_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Intake vvt change angle bank 1",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*639.9 /65535 clamped to [639.9]",
@@ -13351,6 +13717,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "10A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "unit": "rpm"
+    },
+    "hdr": "7D2",
+    "id": "IS_RPM",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Motor rpm",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-32768 clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10A2"
     },
     "debug": false,
@@ -13392,6 +13784,32 @@
     "id": "DAIHATSU_RM_TQ_REQ",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear motor torque, requested",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-32768 clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "IS_RM_TQ_REQ",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear motor torque, requested",
     "path": "Engine",
     "pid": "22",
@@ -13487,6 +13905,32 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "add": -3276.8,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "IS_LFP",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Low fuel pressure sensor",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 +-3276.8 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10CD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "div": 10,
       "len": 16,
       "max": 3276,
@@ -13525,6 +13969,33 @@
     "id": "DAIHATSU_LFPS",
     "make": "Daihatsu",
     "model": "",
+    "name": "Low fuel pressure sensor",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10CD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "IS_LFPS",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Low fuel pressure sensor",
     "path": "Fuel",
     "pid": "22",
@@ -15104,6 +15575,34 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "15F7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -125,
+      "div": 10000,
+      "len": 16,
+      "max": 124,
+      "min": -125,
+      "mul": 38.147,
+      "unit": "amps"
+    },
+    "hdr": "7D2",
+    "id": "IS_12V_C",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "12v battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*38.147 /10000 +-125 clamped to [-125, 124]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "15F8"
     },
     "debug": false,
@@ -15148,6 +15647,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "12V battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "15F8"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "IS_12V_T",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "12v battery temperature",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
@@ -15322,6 +15848,33 @@
     "eax": "",
     "fmt": {
       "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "701",
+    "id": "IS_TFP_T",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Transmission fluid pan temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1627"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
       "len": 16,
       "max": 350,
       "min": -40,
@@ -15360,6 +15913,33 @@
     "make": "Toyota",
     "model": "GR-Corolla",
     "name": "Transmission Fluid Pan Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1627"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "IS_TF1_PAN",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Transmission fluid pan temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
@@ -15468,6 +16048,33 @@
     "make": "Toyota",
     "model": "GR-Corolla",
     "name": "Transmission Fluid Post-Converter Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1628"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "IS_TF2_CONV",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Transmission fluid post-converter temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
@@ -16216,6 +16823,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F3C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "IS_CAT_T_BANK_1_SENSOR_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Catalyst temperature, bank 1 sensor 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F3E"
     },
     "debug": true,
@@ -16259,6 +16893,33 @@
     "id": "DAIHATSU_CAT_T_BANK_1_SENSOR_2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Catalyst temperature, bank 1 sensor 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F3E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "IS_CAT_T_BANK_1_SENSOR_2",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Catalyst temperature, bank 1 sensor 2",
     "path": "Engine",
     "pid": "22",
@@ -19022,6 +19683,32 @@
     "id": "DAIHATSU_EOP_CONTROL_VALVE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Engine oil pressure control valve",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*762.93 /10000 clamped to [4999]",
+    "suggestedMetric": "",
+    "unit": "milliamps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2848"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 4999,
+      "mul": 762.93,
+      "unit": "milliamps"
+    },
+    "hdr": "700",
+    "id": "IS_EOP_CONTROL_VALVE",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Engine oil pressure control valve",
     "path": "Engine",
     "pid": "22",
@@ -28527,6 +29214,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "IS_VSS2",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4AB1"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_VSS2",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -30222,6 +30934,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "IS_VSS_V2",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_VSS",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -30448,6 +31185,30 @@
     "id": "DAIHATSU_VSS_INSTR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Vehicle speed (instrument cluster)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D240"
+    },
+    "debug": true,
+    "eax": "0D",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "IS_VSS_INSTR",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Vehicle speed (instrument cluster)",
     "path": "Movement",
     "pid": "22",
@@ -31094,6 +31855,32 @@
       "unit": "rpm"
     },
     "hdr": "6F1",
+    "id": "IS_TQ_CNVRT_RPM",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_TQ_CNVRT_RPM",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -31255,6 +32042,33 @@
     "id": "DAIHATSU_AXLE_FRONT_ACTUAL_TORQUE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "IS_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front axle, actual torque",
     "path": "Tires",
     "pid": "22",
@@ -31606,6 +32420,33 @@
     "id": "I3_FL_SPD",
     "make": "BMW",
     "model": "I3s",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "IS_FL_SPD",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -32347,6 +33188,32 @@
     "id": "DAIHATSU_VGT_CAL_ANGLE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Variable geometry turbocharger calibration angle",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 156.25,
+      "unit": "degrees"
+    },
+    "hdr": "6F1",
+    "id": "IS_VGT_CAL_ANGLE",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Variable geometry turbocharger calibration angle",
     "path": "Engine",
     "pid": "22",
@@ -37131,6 +37998,34 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "IS_ATF_TQC_T",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "LANDCRUISER_ATF_TQC_T",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -37203,6 +38098,35 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "105C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -1024,
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "min": -1024,
+      "mul": 312.5,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "IS_KNOCK_FEEDBACK_VALUE",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Knock feedback value",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*312.5 /10000 +-1024 clamped to [-1024, 1023]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "1075"
     },
     "debug": false,
@@ -37248,6 +38172,34 @@
     "id": "DAIHATSU_FL_WHEEL_VSS",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "IS_FL_WHEEL_VSS",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -38771,6 +39723,33 @@
       "unit": "rpm"
     },
     "hdr": "6F1",
+    "id": "IS_TRANS_SHAFT_RPM",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_TRANS_SHAFT_RPM",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -39106,6 +40085,34 @@
     "id": "I3_FR_SPD",
     "make": "BMW",
     "model": "I3s",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "IS_FR_SPD",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -44030,6 +45037,34 @@
       "bix": 24,
       "div": 10,
       "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "IS_STEER_ANGLE",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 +-3276.8 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "bix": 24,
+      "div": 10,
+      "len": 16,
       "max": 3276.7,
       "min": -3276,
       "unit": "degrees"
@@ -46546,6 +47581,34 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "IS_RR_WHEEL_VSS",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "182E"
     },
     "debug": false,
@@ -47063,6 +48126,34 @@
       "unit": "newtonMeters"
     },
     "hdr": "6F1",
+    "id": "IS_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_AXLE_FRONT_SETPOINT_TORQUE",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -47402,6 +48493,34 @@
     "id": "I3_RL_SPD",
     "make": "BMW",
     "model": "I3s",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "IS_RL_SPD",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -48678,6 +49797,32 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
+    "id": "IS_PREV_TRIP_DST",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Previous trip distance",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
     "id": "LANDCRUISER_PREV_TRIP_DST",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -49596,6 +50741,34 @@
     "bitLength": 16,
     "bitOffset": 48,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "IS_RL_WHEEL_VSS",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
       "22": "10A1"
     },
     "debug": false,
@@ -49652,6 +50825,34 @@
     "bitLength": 16,
     "bitOffset": 48,
     "cmd": {
+      "22": "10A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4096,
+      "bix": 48,
+      "div": 8,
+      "len": 16,
+      "max": 4095,
+      "min": -4096,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "IS_TQ",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Motor torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/8 +-4096 clamped to [-4096, 4095]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
       "22": "10A2"
     },
     "debug": false,
@@ -49697,6 +50898,34 @@
     "id": "DAIHATSU_RM_TQ",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear motor torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/8 +-4096 clamped to [-4096, 4095]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "10A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4096,
+      "bix": 48,
+      "div": 8,
+      "len": 16,
+      "max": 4095,
+      "min": -4096,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "IS_RM_TQ",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear motor torque",
     "path": "Engine",
     "pid": "22",
@@ -50222,6 +51451,34 @@
     "id": "I3_RR_SPD",
     "make": "BMW",
     "model": "I3s",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": true,
+    "eax": "29",
+    "fmt": {
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "IS_RR_SPD",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -57152,6 +58409,30 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
+    "id": "IS_ODO_V3",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "28"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
     "id": "LANDCRUISER_ODO_V7",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -59468,6 +60749,31 @@
       "unit": "kilometers"
     },
     "hdr": "701",
+    "id": "IS_ODO",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "701",
     "id": "LANDCRUISER_ODO_V5",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -59518,6 +60824,31 @@
       "unit": "kilometers"
     },
     "hdr": "747",
+    "id": "IS_ODO_V6",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "747",
     "id": "LANDCRUISER_ODO_V6",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -59546,6 +60877,31 @@
     "id": "DAIHATSU_ODO_V2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7D2",
+    "id": "IS_ODO_V2",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -60196,6 +61552,30 @@
     "id": "DAIHATSU_ODO_2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Odometer variant",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1700"
+    },
+    "debug": true,
+    "eax": "40",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "IS_ODO_2",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Odometer variant",
     "path": "Trips",
     "pid": "22",
@@ -61117,6 +62497,30 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "IS_ODO1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_ODO",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -61317,6 +62721,31 @@
     "make": "Daihatsu",
     "model": "",
     "name": "[EGS] mileage/odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "IS_ODO_V3",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "[egs] mileage/odometer",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw*8 clamped to [1000000]",
@@ -62022,6 +63451,31 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "IS_OIL_CHANGE_DIST",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Distance since last oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 304,
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_OIL_CHANGE_DIST",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -62379,6 +63833,31 @@
     "id": "DAIHATSU_ODO2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "IS_ODO2",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Odometer #2",
     "path": "Trips",
     "pid": "22",
@@ -66073,6 +67552,32 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "IS_TIRE_FR_SPD",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "LANDCRUISER_TIRE_FR_SPD",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -66128,6 +67633,32 @@
     "id": "DAIHATSU_TP_2_FL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "IS_TP_2_FL",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -66234,6 +67765,32 @@
     "id": "DAIHATSU_TT_FL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "IS_TT_FL",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -66408,6 +67965,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "IS_VSS",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*1.28 clamped to [326]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "21"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 326,
+      "mul": 1.28,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "LANDCRUISER_VSS_V3",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -66542,6 +68124,32 @@
     "id": "DAIHATSU_FLI_VOL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw*500 /3785 clamped to [21]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "gallons"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "29"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 3785,
+      "len": 8,
+      "max": 21,
+      "mul": 500,
+      "unit": "gallons"
+    },
+    "hdr": "7C0",
+    "id": "IS_FLI_VOL",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "21",
@@ -66780,6 +68388,33 @@
       "add": -0.5,
       "div": 58,
       "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "IS_TP_FL_V1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
       "max": 3.88,
       "unit": "bars"
     },
@@ -66787,6 +68422,32 @@
     "id": "DAIHATSU_TP_FL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 3.88,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "IS_TP_FL",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -66921,6 +68582,33 @@
     "id": "DAIHATSU_LAT_G",
     "make": "Daihatsu",
     "model": "",
+    "name": "Lateral g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
+    "id": "IS_LAT_G",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Lateral g",
     "path": "Orientation",
     "pid": "21",
@@ -67167,6 +68855,78 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "62"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "",
+          "value": "Off"
+        },
+        "11": {
+          "description": "",
+          "value": "On"
+        },
+        "144": {
+          "description": "",
+          "value": "Off"
+        },
+        "16": {
+          "description": "",
+          "value": "Off"
+        },
+        "176": {
+          "description": "",
+          "value": "On"
+        },
+        "208": {
+          "description": "",
+          "value": "Off"
+        },
+        "240": {
+          "description": "",
+          "value": "On"
+        },
+        "3": {
+          "description": "",
+          "value": "On"
+        },
+        "48": {
+          "description": "",
+          "value": "On"
+        },
+        "5": {
+          "description": "",
+          "value": "Off"
+        },
+        "7": {
+          "description": "",
+          "value": "On"
+        },
+        "9": {
+          "description": "",
+          "value": "Off"
+        }
+      }
+    },
+    "hdr": "7D0",
+    "id": "IS_PARKING_BRAKE",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Parking brake",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "Mapped values: {'1': {'description': '', 'value': 'Off'}, '3': {'description': '', 'value': 'On'}, '5': {'description': '', 'value': 'Off'}, '7': {'description': '', 'value': 'On'}, '9': {'description': '', 'value': 'Off'}, '11': {'description': '', 'value': 'On'}, '16': {'description': '', 'value': 'Off'}, '48': {'description': '', 'value': 'On'}, '144': {'description': '', 'value': 'Off'}, '176': {'description': '', 'value': 'On'}, '208': {'description': '', 'value': 'Off'}, '240': {'description': '', 'value': 'On'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "85"
     },
     "debug": false,
@@ -67256,6 +69016,30 @@
     "id": "DAIHATSU_GEAR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "85"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 20,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "IS_GEAR",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Gear",
     "path": "Transmission",
     "pid": "21",
@@ -69523,6 +71307,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "IS_TT_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_1",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -69578,6 +71389,32 @@
     "id": "GRCOROLLA_TT_FL",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "IS_TT_FL_V3",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -69657,6 +71494,32 @@
     "make": "Toyota",
     "model": "GR-Corolla",
     "name": "Master Cylinder Sensor Temperature",
+    "path": "Brakes",
+    "pid": "22",
+    "scaling": "raw+-80 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1006"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -80,
+      "len": 8,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B0",
+    "id": "IS_MASTER_CYL_TEMP",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Master cylinder sensor temperature",
     "path": "Brakes",
     "pid": "22",
     "scaling": "raw+-80 clamped to [-20, 100]",
@@ -70000,6 +71863,34 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "IS_A_F_RATIO_LEARNED_IDLE_BANK_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "A/f ratio learned idle, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1043"
     },
     "debug": false,
@@ -70039,6 +71930,31 @@
     "id": "DAIHATSU_EWP_TARGET_VSS",
     "make": "Daihatsu",
     "model": "",
+    "name": "Electric water pump target speed",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*25 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1043"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 6375,
+      "mul": 25,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "IS_EWP_TARGET_VSS",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Electric water pump target speed",
     "path": "Engine",
     "pid": "22",
@@ -70102,6 +72018,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1059"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -41,
+      "div": 1.42,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "IS_ACCEL_PEDAL",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Accelerator pedal",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/1.42 +-41 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "105E"
     },
     "debug": false,
@@ -70154,6 +72096,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "105E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "IS_ECU_INTERNAL_T",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Ecu internal temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1078"
     },
     "debug": false,
@@ -70195,6 +72163,32 @@
     "id": "DAIHATSU_IDLE_SAC_CYL_1",
     "make": "Daihatsu",
     "model": "",
+    "name": "Idle spark advance control, cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "IS_IDLE_SAC_CYL_1",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Idle spark advance control, cylinder 1",
     "path": "Engine",
     "pid": "22",
@@ -70278,6 +72272,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "10A5"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "IS_MISFIRE_COUNT",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Misfire, all cylinders counter",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10A6"
     },
     "debug": false,
@@ -70319,6 +72337,32 @@
     "id": "DAIHATSU_RM_INVRT_COOL_T",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear motor inverter, coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "IS_RM_INVRT_COOL_T",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear motor inverter, coolant temperature",
     "path": "Engine",
     "pid": "22",
@@ -70404,6 +72448,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "IS_MIS_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Misfire count, cylinder 1",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10AA"
     },
     "debug": true,
@@ -70456,6 +72524,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "10AA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 510,
+      "mul": 510,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "IS_MISFIRE_LOAD",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Misfire load",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*510 /255 clamped to [510]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10B2"
     },
     "debug": false,
@@ -70495,6 +72589,31 @@
     "id": "DAIHATSU_INVRT_COOLANT_T",
     "make": "Daihatsu",
     "model": "",
+    "name": "Inverter coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10B2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "IS_INVRT_COOLANT_T",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Inverter coolant temperature",
     "path": "Engine",
     "pid": "22",
@@ -71336,6 +73455,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "15EE"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 0.0125,
+      "len": 8,
+      "max": 80.2,
+      "mul": 0.31448,
+      "unit": "volts"
+    },
+    "hdr": "7D2",
+    "id": "IS_12V_V",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "12v battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.31448 +0.0125 clamped to [80.2]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1638"
     },
     "debug": true,
@@ -71378,6 +73523,32 @@
     "make": "Toyota",
     "model": "GR-Corolla",
     "name": "Transmission Fluid Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1638"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "IS_ATF_TEMP",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Transmission fluid temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-40, 215]",
@@ -73682,6 +75853,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "IS_COOL_T",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F0D"
     },
     "debug": false,
@@ -73744,6 +75941,30 @@
     "id": "DAIHATSU_VSS_V2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F0D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "IS_VSS_V3",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -73899,6 +76120,32 @@
       "unit": "percent"
     },
     "hdr": "700",
+    "id": "IS_FLI",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F2F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
     "id": "RAV4_FLI",
     "make": "Toyota",
     "model": "RAV4",
@@ -73967,6 +76214,33 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F46"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "IS_AAT",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Ambient temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F49"
     },
     "debug": false,
@@ -74019,6 +76293,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F49"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "IS_ACC_PEDAL_POS_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Accelerator pedal, position 1",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F4A"
     },
     "debug": false,
@@ -74060,6 +76360,32 @@
     "id": "DAIHATSU_ACC_PEDAL_POS_2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Accelerator pedal, position 2",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F4A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "IS_ACC_PEDAL_POS_2",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Accelerator pedal, position 2",
     "path": "Control",
     "pid": "22",
@@ -74321,6 +76647,32 @@
     "id": "DAIHATSU_EOT_V2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Engine oil temperature, variation 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "IS_EOT_V3",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Engine oil temperature, variation 2",
     "path": "Engine",
     "pid": "22",
@@ -74601,6 +76953,46 @@
     "id": "GRCOROLLA_TID_1",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "IS_TID_1",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -78851,6 +81243,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "IS_EOP_V2",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Engine oil pressure",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "586F"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_EOP",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -81449,6 +83865,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "IS_ATF_TEMP_V2",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Atf temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA12"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_ATF_TEMP",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -81572,6 +84012,30 @@
     "id": "DAIHATSU_EOT_V3",
     "make": "Daihatsu",
     "model": "",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA25"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "IS_EOT_V3",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -81857,6 +84321,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "IS_GEAR_V2",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_GEAR",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -81981,6 +84469,30 @@
     "make": "Daihatsu",
     "model": "",
     "name": "Time in D",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "IS_TIME_D",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Time in d",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -97945,6 +100457,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "IS_TIRE_RR_SPD",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "LANDCRUISER_TIRE_RR_SPD",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -98002,6 +100541,33 @@
     "id": "DAIHATSU_TP_2_RL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "IS_TP_2_RL",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -98112,6 +100678,33 @@
     "id": "DAIHATSU_TT_RL",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "IS_TT_RL",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -98414,6 +101007,33 @@
       "bix": 16,
       "div": 58,
       "len": 8,
+      "max": 3.88,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "IS_TP_RL",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
       "max": 3.896,
       "unit": "bars"
     },
@@ -98529,6 +101149,33 @@
     "id": "DAIHATSU_YAW_RATE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Yaw rate value (degrees/sec)",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 16,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "IS_YAW_RATE",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Yaw rate value (degrees/sec)",
     "path": "Orientation",
     "pid": "21",
@@ -99084,6 +101731,34 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "IS_TT_3",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TT_3",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -99289,6 +101964,35 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "IS_A_F_RATIO_LEARNED_MID_1_BANK_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "A/f ratio learned mid 1, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "1040"
     },
     "debug": false,
@@ -99332,6 +102036,33 @@
     "id": "DAIHATSU_TRANSAXLE_OIL_T",
     "make": "Daihatsu",
     "model": "",
+    "name": "Transaxle oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1040"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "IS_TRANSAXLE_OIL_T",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Transaxle oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -99502,6 +102233,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "1078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "IS_IDLE_SAC_CYL_3",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Idle spark advance control, cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "10A6"
     },
     "debug": false,
@@ -99556,6 +102314,33 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "10A6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "IS_M_INVRT_MAX_T",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Motor inverter, maximum temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "10A7"
     },
     "debug": false,
@@ -99595,6 +102380,31 @@
     "id": "DAIHATSU_MIS_3",
     "make": "Daihatsu",
     "model": "",
+    "name": "Misfire count, cylinder 3",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "IS_MIS_3",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Misfire count, cylinder 3",
     "path": "Engine.Misfires",
     "pid": "22",
@@ -99882,6 +102692,47 @@
     "id": "GRCOROLLA_TID_3",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Tire 3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "IS_TID_3",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Tire 3 position",
     "path": "Tires",
     "pid": "22",
@@ -100314,6 +103165,31 @@
     "make": "Daihatsu",
     "model": "",
     "name": "Time in M",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "IS_TIME_M",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Time in m",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -109453,6 +112329,33 @@
     "id": "DAIHATSU_EOT_V2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "107B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 192,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "IS_EOT_V2",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -118919,6 +121822,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "IS_TIRE_RL_SPD",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "LANDCRUISER_TIRE_RL_SPD",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -118976,6 +121906,33 @@
     "id": "DAIHATSU_TP_2_RR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "IS_TP_2_RR",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -119086,6 +122043,33 @@
     "id": "DAIHATSU_TT_RR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "IS_TT_RR",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -119388,6 +122372,33 @@
       "bix": 24,
       "div": 58,
       "len": 8,
+      "max": 3.88,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "IS_TP_RR",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
       "max": 3.896,
       "unit": "bars"
     },
@@ -119562,6 +122573,34 @@
     "id": "DAIHATSU_TT_4",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "IS_TT_4",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -119919,6 +122958,34 @@
       "unit": "psi"
     },
     "hdr": "750",
+    "id": "IS_TP_2",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 24,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TP_2",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -120070,6 +123137,35 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 24,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "IS_A_F_RATIO_LEARNED_MID_2_BANK_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "A/f ratio learned mid 2, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "1078"
     },
     "debug": false,
@@ -120113,6 +123209,33 @@
     "id": "DAIHATSU_IDLE_SAC_CYL_4",
     "make": "Daihatsu",
     "model": "",
+    "name": "Idle spark advance control, cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "IS_IDLE_SAC_CYL_4",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Idle spark advance control, cylinder 4",
     "path": "Engine",
     "pid": "22",
@@ -120174,6 +123297,31 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "IS_MIS_4",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Misfire count, cylinder 4",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "10AA"
     },
     "debug": true,
@@ -120218,6 +123366,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "Misfire RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6375 /255 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 255,
+      "len": 8,
+      "max": 6375,
+      "mul": 6375,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "IS_MISFIRE_RPM",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Misfire rpm",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*6375 /255 clamped to [6375]",
@@ -121688,6 +124863,47 @@
     "id": "GRCOROLLA_TID_4",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Tire 4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "IS_TID_4",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Tire 4 position",
     "path": "Tires",
     "pid": "22",
@@ -134365,6 +137581,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "IS_TP_2_SPARE",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "21": "16"
     },
     "debug": false,
@@ -134464,6 +137707,33 @@
     "id": "DAIHATSU_TT_SPARE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "IS_TT_SPARE",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Spare tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -134746,6 +138016,33 @@
     "id": "DAIHATSU_TP_SPARE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 3.88,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "IS_TP_SPARE",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -136511,6 +139808,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "IS_TT_SPARE_V3",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "102A"
     },
     "debug": false,
@@ -136569,6 +139893,35 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "IS_A_F_RATIO_LEARNED_HIGH_BANK_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "A/f ratio learned high, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "10AA"
     },
     "debug": true,
@@ -136612,6 +139965,33 @@
     "id": "DAIHATSU_MISFIRE_MARGIN",
     "make": "Daihatsu",
     "model": "",
+    "name": "Misfire margin",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 32,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "IS_MISFIRE_MARGIN",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Misfire margin",
     "path": "Engine",
     "pid": "22",
@@ -141009,6 +144389,34 @@
     "id": "DAIHATSU_TP_3",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 40,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "IS_TP_3",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -146525,6 +149933,33 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "IS_VVTOT",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Variable valve timing oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 56,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "LANDCRUISER_VVTOT",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -148049,6 +151484,34 @@
     "id": "DAIHATSU_TP_4",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 56,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
+    "id": "IS_TP_4",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -150912,6 +154375,33 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "IS_EOT",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 72,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "LANDCRUISER_EOT_V2",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -152340,6 +155830,33 @@
     "debug": true,
     "eax": "2A",
     "fmt": {
+      "add": -0.5,
+      "bix": 72,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "IS_TP_SPARE_V2",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
       "add": -5.6969697,
       "bix": 72,
       "div": 4.125,
@@ -153683,6 +157200,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "IS_TIRE_FL_SPD",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "LANDCRUISER_TIRE_FL_SPD",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -153740,6 +157284,33 @@
     "id": "DAIHATSU_TP_2_FR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "IS_TP_2_FR",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -153850,6 +157421,33 @@
     "id": "DAIHATSU_TT_FR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "IS_TT_FR",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front right tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -154007,6 +157605,31 @@
     "id": "DAIHATSU_CC_S",
     "make": "Daihatsu",
     "model": "",
+    "name": "Cruise control speed",
+    "path": "Cruise control",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "21"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
+    "id": "IS_CC_S",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Cruise control speed",
     "path": "Cruise control",
     "pid": "21",
@@ -154306,6 +157929,33 @@
       "bix": 8,
       "div": 58,
       "len": 8,
+      "max": 3.88,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "IS_TP_FR",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.88]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
       "max": 3.896,
       "unit": "bars"
     },
@@ -154425,6 +158075,34 @@
     "id": "DAIHATSU_LNG_G",
     "make": "Daihatsu",
     "model": "",
+    "name": "Longitudinal g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
+    "id": "IS_LNG_G",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Longitudinal g",
     "path": "Orientation",
     "pid": "21",
@@ -154620,6 +158298,34 @@
     "id": "DAIHATSU_TT_2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "min": -30,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "IS_TT_2",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -154977,6 +158683,34 @@
       "unit": "psi"
     },
     "hdr": "750",
+    "id": "IS_TP_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4.125 +-5.6969697 clamped to [56.8]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -5.6969697,
+      "bix": 8,
+      "div": 4.125,
+      "len": 8,
+      "max": 56.8,
+      "nullmin": 0,
+      "unit": "psi"
+    },
+    "hdr": "750",
     "id": "PRIUSPRIME_TP_1",
     "make": "Toyota",
     "model": "Prius-Prime",
@@ -155128,6 +158862,35 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "102A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "IS_A_F_RATIO_LEARNED_LOW_BANK_1",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "A/f ratio learned low, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "1043"
     },
     "debug": false,
@@ -155170,6 +158933,32 @@
     "make": "Daihatsu",
     "model": "",
     "name": "Electric water pump RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*25 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1043"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 6375,
+      "mul": 25,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "IS_EWP_RPM",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Electric water pump rpm",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*25 clamped to [6375]",
@@ -155339,6 +159128,33 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "1078"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "IS_IDLE_SAC_CYL_2",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Idle spark advance control, cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "10A7"
     },
     "debug": false,
@@ -155378,6 +159194,31 @@
     "id": "DAIHATSU_MIS_2",
     "make": "Daihatsu",
     "model": "",
+    "name": "Misfire count, cylinder 2",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "IS_MIS_2",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Misfire count, cylinder 2",
     "path": "Engine.Misfires",
     "pid": "22",
@@ -155665,6 +159506,47 @@
     "id": "GRCOROLLA_TID_2",
     "make": "Toyota",
     "model": "GR-Corolla",
+    "name": "Tire 2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "IS_TID_2",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
@@ -156803,6 +160685,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "IS_KICKDOWN",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_KICKDOWN",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -157004,6 +160911,55 @@
     "id": "DAIHATSU_TQ_CNVRT_LOCKUP",
     "make": "Daihatsu",
     "model": "",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "IS_TQ_CNVRT_LOCKUP",
+    "make": "Lexus",
+    "model": "IS",
     "name": "Torque converter lockup",
     "path": "Transmission",
     "pid": "22",
@@ -157296,6 +161252,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "IS_BRAKE_SWITCH",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Brake switch",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA28"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "LANDCRUISER_BRAKE_SWITCH",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -157466,6 +161447,31 @@
     "make": "Daihatsu",
     "model": "",
     "name": "Time in S",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "IS_TIME_S",
+    "make": "Lexus",
+    "model": "IS",
+    "name": "Time in s",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
