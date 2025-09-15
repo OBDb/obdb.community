@@ -8823,6 +8823,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "PRIUS_ATF_PAN_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0010"
     },
     "debug": false,
@@ -12815,6 +12842,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 410,
+      "min": -410,
+      "mul": 1.5,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7B3",
+    "id": "PRIUS_STEERING_ANGLE",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Steering Angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*1.5 clamped to [-410, 410]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1017"
     },
     "debug": false,
@@ -12829,6 +12883,31 @@
     "id": "CAMRY_INJ_VOL",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Injection volume",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/3200 clamped to [20.4]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1017"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 3200,
+      "len": 16,
+      "max": 20.4,
+      "unit": "liters"
+    },
+    "hdr": "700",
+    "id": "PRIUS_INJ_VOL",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Injection volume",
     "path": "Engine",
     "pid": "22",
@@ -13087,6 +13166,32 @@
     "id": "PRIUSPRIME_FLV",
     "make": "Toyota",
     "model": "Prius-Prime",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1022"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655,
+      "nullmax": 655,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "PRIUS_FLV",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -13578,6 +13683,34 @@
     "cmd": {
       "22": "105C"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -1024,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "min": -1024,
+      "mul": 312.5,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "PRIUS_KNOCK_CORRECT_LEARNED_VALUE",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Knock correction, learned value",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*312.5 /10000 +-1024 clamped to [-1024, 1023]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "105C"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -13647,6 +13780,32 @@
     "id": "CAMRY_EXHAUST_VVT_OCV_CONTROL_DUTY",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Exhaust VVT oil control valve control duty",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [400]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1062"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 400,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "PRIUS_EXHAUST_VVT_OCV_CONTROL_DUTY",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Exhaust VVT oil control valve control duty",
     "path": "Engine",
     "pid": "22",
@@ -13738,6 +13897,32 @@
     "cmd": {
       "22": "106F"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "PRIUS_INTAKE_VVT_TARGET_ANGLE_B1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Intake VVT target angle B1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "106F"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -13803,6 +13988,32 @@
     "id": "CAMRY_EXHAUST_VVT_TARGET_ANGLE_B1",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Exhaust VVT target angle B1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1071"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "PRIUS_EXHAUST_VVT_TARGET_ANGLE_B1",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Exhaust VVT target angle B1",
     "path": "Engine",
     "pid": "22",
@@ -13884,6 +14095,32 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/12.8 clamped to [5119]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1074"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 1000,
+      "mul": 10,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "PRIUS_EOP",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Engine Oil Pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /128 clamped to [1000]",
     "suggestedMetric": "",
     "unit": "kilopascal"
   },
@@ -14126,6 +14363,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_FR_WHEEL_VSS",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1087"
     },
     "debug": false,
@@ -14141,6 +14405,32 @@
     "id": "CAMRY_INTAKE_VVT_CHANGE_ANGLE_BANK_1",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Intake VVT change angle bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*639.9 /65535 clamped to [639.9]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1087"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 639.9,
+      "mul": 639.9,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "PRIUS_INTAKE_VVT_CHANGE_ANGLE_BANK_1",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Intake VVT change angle bank 1",
     "path": "Engine",
     "pid": "22",
@@ -14282,6 +14572,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "10A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "unit": "rpm"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_RPM",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Motor RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-32768 clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10A2"
     },
     "debug": false,
@@ -14360,6 +14676,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "10A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -32768,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_RM_TQ_REQ",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear motor torque, requested",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-32768 clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "10CD"
     },
     "debug": false,
@@ -14380,6 +14722,59 @@
     "path": "Fuel",
     "pid": "22",
     "scaling": "raw/10 +-3276.75 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10CD"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "PRIUS_LFP",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Low fuel pressure sensor",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 +-3276.8 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10CD"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
+    "id": "PRIUS_LFPS",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Low fuel pressure sensor",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
     "suggestedMetric": "",
     "unit": "kilopascal"
   },
@@ -16072,6 +16467,34 @@
       "unit": "amps"
     },
     "hdr": "7D2",
+    "id": "PRIUS_12V_C",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "12V battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*38.147 /10000 +-125 clamped to [-125, 124]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "15F7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -125,
+      "div": 10000,
+      "len": 16,
+      "max": 124,
+      "min": -125,
+      "mul": 38.147,
+      "unit": "amps"
+    },
+    "hdr": "7D2",
     "id": "RAV4HYBRID_12V_C",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -16137,6 +16560,33 @@
     "scaling": "raw*38.147 /10000 +-125 clamped to [-125, 124]",
     "suggestedMetric": "",
     "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "15F8"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_12V_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "12V battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -16825,6 +17275,32 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C01_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #01 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C01_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -17310,6 +17786,33 @@
     "cmd": {
       "22": "1F3C"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "PRIUS_CAT_T_BANK_1_SENSOR_1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Catalyst temperature, bank 1 sensor 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F3C"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -17379,6 +17882,33 @@
     "make": "Lexus",
     "model": "IS",
     "name": "Catalyst temperature, bank 1 sensor 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F3E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 10,
+      "len": 16,
+      "max": 6513.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "PRIUS_CAT_T_BANK_1_SENSOR_2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Catalyst temperature, bank 1 sensor 2",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/10 +-40 clamped to [-40, 6513.5]",
@@ -20196,6 +20726,32 @@
     "id": "CAMRY_EOP_CONTROL_VALVE",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Engine oil pressure control valve",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*762.93 /10000 clamped to [4999]",
+    "suggestedMetric": "",
+    "unit": "milliamps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2848"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 4999,
+      "mul": 762.93,
+      "unit": "milliamps"
+    },
+    "hdr": "700",
+    "id": "PRIUS_EOP_CONTROL_VALVE",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Engine oil pressure control valve",
     "path": "Engine",
     "pid": "22",
@@ -34103,6 +34659,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C64_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #64 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1008,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1008,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C64_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -34134,6 +34717,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #64 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1024,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1024,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C65_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #65 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -34407,6 +35017,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C66_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #66 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1040,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1040,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C66_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -34438,6 +35075,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #66 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1056,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1056,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C67_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #67 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -34515,6 +35179,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C68_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #68 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1072,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1072,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C68_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -34546,6 +35237,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #68 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1088,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1088,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C69_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #69 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -34623,6 +35341,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C70_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #70 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1104,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1104,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C70_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -34654,6 +35399,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #70 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C08_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #08 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -34973,6 +35745,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C71_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #71 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1120,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1120,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C71_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -35004,6 +35803,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #71 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1136,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1136,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C72_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #72 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -35081,6 +35907,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C73_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #73 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1152,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1152,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C73_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -35135,6 +35988,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C74_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #74 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1168,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1168,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C74_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -35166,6 +36046,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #74 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1184,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1184,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C75_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #75 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -36459,6 +37366,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C76_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #76 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1200,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1200,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C76_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -36490,6 +37424,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #76 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1216,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1216,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C77_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #77 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -36567,6 +37528,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C78_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #78 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1232,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1232,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C78_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -36598,6 +37586,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #78 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1248,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1248,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C79_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #79 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -36675,6 +37690,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C80_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #80 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1264,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1264,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C80_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -36706,6 +37748,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #80 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C09_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #09 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -36975,6 +38044,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C81_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #81 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1280,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1280,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C81_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -37006,6 +38102,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #81 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1296,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1296,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C82_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #82 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -37083,6 +38206,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C83_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #83 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1312,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1312,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C83_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -37114,6 +38264,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #83 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1328,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1328,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C84_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #84 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -37191,6 +38368,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C85_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #85 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1344,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1344,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C85_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -37222,6 +38426,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #85 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1360,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1360,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C86_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #86 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -37299,6 +38530,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C87_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #87 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1376,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1376,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C87_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -37330,6 +38588,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #87 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1392,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1392,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C88_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #88 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -37407,6 +38692,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C89_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #89 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1408,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1408,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C89_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -37438,6 +38750,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #89 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1424,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1424,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C90_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #90 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -37521,6 +38860,33 @@
     "path": "Battery",
     "pid": "21",
     "scaling": "raw/100 clamped to [655]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C10_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #10 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37941,6 +39307,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C91_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #91 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1440,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1440,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C91_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -37972,6 +39365,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #91 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1456,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1456,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C92_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #92 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -38049,6 +39469,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C93_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #93 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1472,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1472,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C93_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -38103,6 +39550,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C94_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #94 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1488,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1488,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C94_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -38134,6 +39608,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #94 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1504,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1504,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C95_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #95 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -38293,6 +39794,33 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 1520,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1520,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C96_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #96 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -38656,6 +40184,34 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "PRIUS_ATF_TQC_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "105C"
     },
     "debug": false,
@@ -38674,6 +40230,35 @@
     "id": "CAMRY_KNOCK_FEEDBACK_VALUE",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Knock feedback value",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*312.5 /10000 +-1024 clamped to [-1024, 1023]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "105C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -1024,
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "min": -1024,
+      "mul": 312.5,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "PRIUS_KNOCK_FEEDBACK_VALUE",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Knock feedback value",
     "path": "Engine",
     "pid": "22",
@@ -38827,6 +40412,34 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_FL_WHEEL_VSS",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "182E"
     },
     "debug": false,
@@ -38857,6 +40470,33 @@
         "suggestedMetricGroup": "batteryModulesVoltage"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C02_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #02 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -38963,6 +40603,33 @@
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1F9A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 1023,
+      "mul": 156.25,
+      "unit": "volts"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_HVBAT_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1023]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -41213,6 +42880,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C11_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #11 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C11_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -41327,6 +43021,33 @@
     "scaling": "raw/10000 clamped to [6.5535]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C12_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #12 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -42905,6 +44626,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C13_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #13 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C13_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -43399,6 +45147,33 @@
     "signalGroups": [],
     "suggestedMetric": "stateOfHealth",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C14_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #14 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -43961,6 +45736,33 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C15_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #15 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -45593,6 +47395,34 @@
       "bix": 24,
       "div": 10,
       "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "PRIUS_STEER_ANGLE",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 +-3276.8 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -3276.8,
+      "bix": 24,
+      "div": 10,
+      "len": 16,
       "max": 3276.7,
       "min": -3276,
       "unit": "degrees"
@@ -45803,6 +47633,33 @@
     "scaling": "raw/627.6 clamped to [-52.21, 52.21]",
     "suggestedMetric": "",
     "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 240,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 240,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C16_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #16 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -46090,6 +47947,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C17_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #17 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C17_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -46308,6 +48192,33 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 272,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C18_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #18 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -46546,6 +48457,33 @@
     "scaling": "raw/10 clamped to [100]",
     "suggestedMetric": "stateOfHealth",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 288,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 288,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C19_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #19 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -48070,6 +50008,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C20_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #20 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 304,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C20_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -48277,6 +50242,61 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_RR_WHEEL_VSS",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C03_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #03 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "182E"
     },
     "debug": false,
@@ -48326,6 +50346,34 @@
     "scaling": "raw*5 /65535 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1F9A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_HVBAT_C",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "amps"
   },
   {
     "bitLength": 16,
@@ -49561,6 +51609,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C21_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #21 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 320,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 320,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C21_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -49651,6 +51726,33 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 336,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C22_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #22 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -49905,6 +52007,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C23_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #23 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 352,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 352,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C23_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -49936,6 +52065,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #23 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 368,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 368,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C24_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #24 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -50153,6 +52309,33 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 384,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 384,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C25_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #25 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -50505,6 +52688,32 @@
     "bitLength": 16,
     "bitOffset": 40,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "PRIUS_PREV_TRIP_DST",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Previous trip distance",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 40,
+    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -50578,6 +52787,33 @@
     "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
     "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 400,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 400,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C26_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #26 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -50808,6 +53044,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C27_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #27 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 416,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 416,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C27_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -51020,6 +53283,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C28_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #28 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 432,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 432,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C28_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -51155,6 +53445,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C29_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #29 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 448,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 448,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C29_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -51268,6 +53585,33 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "kiloohms"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 464,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 464,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C30_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #30 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -51437,6 +53781,34 @@
     "bitLength": 16,
     "bitOffset": 48,
     "cmd": {
+      "22": "1075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -327.68,
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_RL_WHEEL_VSS",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-327.68 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
       "22": "10A1"
     },
     "debug": false,
@@ -51510,6 +53882,34 @@
     "id": "IS_TQ",
     "make": "Lexus",
     "model": "IS",
+    "name": "Motor torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/8 +-4096 clamped to [-4096, 4095]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "10A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4096,
+      "bix": 48,
+      "div": 8,
+      "len": 16,
+      "max": 4095,
+      "min": -4096,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_TQ",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Motor torque",
     "path": "Engine",
     "pid": "22",
@@ -51600,6 +54000,61 @@
     "scaling": "raw/8 +-4096 clamped to [-4096, 4095]",
     "suggestedMetric": "",
     "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "10A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4096,
+      "bix": 48,
+      "div": 8,
+      "len": 16,
+      "max": 4095,
+      "min": -4096,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_RM_TQ",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear motor torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/8 +-4096 clamped to [-4096, 4095]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C04_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #04 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -52389,6 +54844,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C31_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #31 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 480,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 480,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C31_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -52420,6 +54902,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #31 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 496,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 496,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C32_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #32 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -52497,6 +55006,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C33_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #33 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 512,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 512,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C33_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -52551,6 +55087,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C34_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #34 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 528,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 528,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C34_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -52582,6 +55145,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #34 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 544,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 544,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C35_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #35 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -52925,6 +55515,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C36_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #36 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 560,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 560,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C36_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -52956,6 +55573,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #36 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 576,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 576,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C37_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #37 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -53033,6 +55677,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C38_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #38 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 592,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 592,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C38_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -53087,6 +55758,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C39_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #39 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 608,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 608,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C39_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -53118,6 +55816,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #39 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 624,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 624,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C40_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #40 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -53203,6 +55928,33 @@
     "scaling": "raw*10 clamped to [655350]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C05_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #05 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -54974,6 +57726,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C41_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #41 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 640,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 640,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C41_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -55005,6 +57784,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #41 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 656,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 656,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C42_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #42 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -55082,6 +57888,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C43_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #43 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 672,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 672,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C43_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -55136,6 +57969,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C44_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #44 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 688,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 688,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C44_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -55167,6 +58027,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #44 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 704,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 704,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C45_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #45 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -55462,6 +58349,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C46_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #46 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 720,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 720,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C46_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -55493,6 +58407,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #46 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 736,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 736,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C47_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #47 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -55570,6 +58511,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C48_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #48 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 752,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 752,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C48_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -55624,6 +58592,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C49_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #49 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 768,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 768,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C49_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -55655,6 +58650,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #49 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 784,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 784,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C50_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #50 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -57241,6 +60263,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C06_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #06 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C06_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -57561,6 +60610,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C51_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #51 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 800,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 800,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C51_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -57592,6 +60668,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #51 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 816,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 816,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C52_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #52 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -57669,6 +60772,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C53_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #53 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 832,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 832,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C53_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -57723,6 +60853,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C54_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #54 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 848,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 848,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C54_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -57754,6 +60911,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #54 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 864,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 864,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C55_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #55 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -57909,6 +61093,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C56_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #56 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 880,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 880,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C56_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -57940,6 +61151,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #56 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 896,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 896,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C57_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #57 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -58017,6 +61255,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C58_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #58 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 912,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 912,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C58_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -58071,6 +61336,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C59_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #59 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 928,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 928,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C59_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -58102,6 +61394,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #59 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 944,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 944,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C60_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #60 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -58266,6 +61585,33 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C07_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #07 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -58703,6 +62049,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C61_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #61 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 960,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 960,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C61_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -58757,6 +62130,33 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "PRIUS_HVBAT_C62_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #62 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 976,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 976,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "RAV4HYBRID_HVBAT_C62_V",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -58788,6 +62188,33 @@
     "make": "Daihatsu",
     "model": "",
     "name": "HV battery cell #62 voltage",
+    "path": "Battery.Cells",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 992,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 992,
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
+    "id": "PRIUS_HVBAT_C63_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery cell #63 voltage",
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
@@ -59129,6 +62556,30 @@
     "id": "LANDCRUISER_ODO_V7",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "21",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "28"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "PRIUS_ODO",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Odometer",
     "path": "Trips",
     "pid": "21",
@@ -61340,6 +64791,31 @@
       "max": 16777215,
       "unit": "kilometers"
     },
+    "hdr": "701",
+    "id": "PRIUS_ODO_V5",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
     "hdr": "747",
     "id": "BZ4X_ODO",
     "make": "Toyota",
@@ -61349,6 +64825,31 @@
     "pid": "22",
     "scaling": "raw clamped to [16777215]",
     "signalGroups": [],
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "747",
+    "id": "PRIUS_ODO_V6",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -61567,7 +65068,7 @@
       "unit": "kilometers"
     },
     "hdr": "7D2",
-    "id": "DAIHATSU_ODO_V2",
+    "id": "DAIHATSU_ODO_V2_V2",
     "make": "Daihatsu",
     "model": "",
     "name": "Odometer",
@@ -61595,6 +65096,31 @@
     "id": "IS_ODO_V2",
     "make": "Lexus",
     "model": "IS",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_ODO_V2_V2",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -68542,6 +72068,32 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "PRIUS_TIRE_FR_SPD",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "RAV4HYBRID_TIRE_FR_SPD",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -68809,6 +72361,32 @@
     "id": "4RUNNER_TT_FL",
     "make": "Toyota",
     "model": "4Runner",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_FL_V1",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "21",
@@ -69285,6 +72863,59 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "21": "29"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 3785,
+      "len": 8,
+      "max": 21,
+      "mul": 500,
+      "unit": "gallons"
+    },
+    "hdr": "7C0",
+    "id": "PRIUS_FLI_VOL",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw*500 /3785 clamped to [21]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "gallons"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_FL_V1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "21": "30"
     },
     "debug": false,
@@ -69676,6 +73307,33 @@
       "unit": "gravity"
     },
     "hdr": "7B0",
+    "id": "PRIUS_LAT_G",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Lateral g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
     "id": "RAV4HYBRID_LAT_G",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -70040,6 +73698,78 @@
     "id": "IS_PARKING_BRAKE",
     "make": "Lexus",
     "model": "IS",
+    "name": "Parking brake",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "Mapped values: {'1': {'description': '', 'value': 'Off'}, '3': {'description': '', 'value': 'On'}, '5': {'description': '', 'value': 'Off'}, '7': {'description': '', 'value': 'On'}, '9': {'description': '', 'value': 'Off'}, '11': {'description': '', 'value': 'On'}, '16': {'description': '', 'value': 'Off'}, '48': {'description': '', 'value': 'On'}, '144': {'description': '', 'value': 'Off'}, '176': {'description': '', 'value': 'On'}, '208': {'description': '', 'value': 'Off'}, '240': {'description': '', 'value': 'On'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "62"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "",
+          "value": "Off"
+        },
+        "11": {
+          "description": "",
+          "value": "On"
+        },
+        "144": {
+          "description": "",
+          "value": "Off"
+        },
+        "16": {
+          "description": "",
+          "value": "Off"
+        },
+        "176": {
+          "description": "",
+          "value": "On"
+        },
+        "208": {
+          "description": "",
+          "value": "Off"
+        },
+        "240": {
+          "description": "",
+          "value": "On"
+        },
+        "3": {
+          "description": "",
+          "value": "On"
+        },
+        "48": {
+          "description": "",
+          "value": "On"
+        },
+        "5": {
+          "description": "",
+          "value": "Off"
+        },
+        "7": {
+          "description": "",
+          "value": "On"
+        },
+        "9": {
+          "description": "",
+          "value": "Off"
+        }
+      }
+    },
+    "hdr": "7D0",
+    "id": "PRIUS_PARKING_BRAKE",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Parking brake",
     "path": "Control",
     "pid": "21",
@@ -72437,6 +76167,33 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_FL_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -72528,6 +76285,33 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_FL_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -72707,6 +76491,32 @@
     "make": "Lexus",
     "model": "IS",
     "name": "Master cylinder sensor temperature",
+    "path": "Brakes",
+    "pid": "22",
+    "scaling": "raw+-80 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1006"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -80,
+      "len": 8,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B0",
+    "id": "PRIUS_MASTER_CYL_TEMP",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Master Cylinder Sensor Temperature",
     "path": "Brakes",
     "pid": "22",
     "scaling": "raw+-80 clamped to [-20, 100]",
@@ -72918,6 +76728,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 20,
+      "unit": "volts"
+    },
+    "hdr": "7C0",
+    "id": "PRIUS_BATTERY_VOLTAGE",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "B+ Battery Voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1022"
     },
     "debug": false,
@@ -73024,6 +76859,34 @@
     "cmd": {
       "22": "102A"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "PRIUS_A_F_RATIO_LEARNED_IDLE_BANK_1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "A/F ratio learned idle, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "102A"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -73092,6 +76955,31 @@
     "id": "CAMRY_EWP_TARGET_VSS",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Electric water pump target speed",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*25 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1043"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 6375,
+      "mul": 25,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "PRIUS_EWP_TARGET_VSS",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Electric water pump target speed",
     "path": "Engine",
     "pid": "22",
@@ -73259,6 +77147,32 @@
     "cmd": {
       "22": "105E"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "PRIUS_ECU_INTERNAL_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "ECU internal temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "105E"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -73337,6 +77251,32 @@
     "cmd": {
       "22": "1078"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "PRIUS_IDLE_SAC_CYL_1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Idle spark advance control, cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1078"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -73382,6 +77322,30 @@
     "scaling": "raw*6.25 /100 clamped to [15.9375]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A5"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "PRIUS_MISFIRE_COUNT",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Misfire, all cylinders counter",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -73566,6 +77530,32 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_RM_INVRT_COOL_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear motor inverter, coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "div": 255,
       "len": 8,
       "max": 100,
@@ -73582,6 +77572,30 @@
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "PRIUS_MIS_1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Misfire count, cylinder 1",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -73661,6 +77675,32 @@
     "cmd": {
       "22": "10AA"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 510,
+      "mul": 510,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "PRIUS_MISFIRE_LOAD",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Misfire load",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*510 /255 clamped to [510]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10AA"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -73732,6 +77772,31 @@
     "scaling": "raw*510 /255 clamped to [510]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10B2"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_INVRT_COOLANT_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Inverter coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -74585,6 +78650,32 @@
     "scaling": "raw+-40 clamped to [215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "15EE"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": 0.0125,
+      "len": 8,
+      "max": 80.2,
+      "mul": 0.31448,
+      "unit": "volts"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_12V_V",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "12V battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.31448 +0.0125 clamped to [80.2]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
   },
   {
     "bitLength": 8,
@@ -77000,6 +81091,32 @@
       "unit": "celsius"
     },
     "hdr": "7D2",
+    "id": "PRIUS_COOL_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Coolant temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
     "id": "RAV4HYBRID_COOL_T",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -77084,6 +81201,30 @@
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F0D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_VSS_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
   },
@@ -77360,6 +81501,33 @@
       "unit": "celsius"
     },
     "hdr": "7D2",
+    "id": "PRIUS_AAT",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Ambient temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F46"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
     "id": "RAV4HYBRID_AAT",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -77440,6 +81608,32 @@
       "unit": "percent"
     },
     "hdr": "7D2",
+    "id": "PRIUS_ACC_PEDAL_POS_1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Accelerator pedal, position 1",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F49"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
     "id": "RAV4HYBRID_ACC_PEDAL_POS_1",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -77496,6 +81690,32 @@
     "make": "Lexus",
     "model": "IS",
     "name": "Accelerator pedal, position 1",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F4A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_ACC_PEDAL_POS_2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Accelerator pedal, position 2",
     "path": "Control",
     "pid": "22",
     "scaling": "raw*100 /255 clamped to [100]",
@@ -77767,6 +81987,58 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "1F5B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_SOC",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
+    "id": "PRIUS_EOT_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Engine oil temperature, variation 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1F5C"
     },
     "debug": false,
@@ -77940,6 +82212,46 @@
     "id": "LANDCRUISER_TID_1",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "PRIUS_TID_1",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -101654,6 +105966,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "PRIUS_TIRE_RR_SPD",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "RAV4HYBRID_TIRE_RR_SPD",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -101950,6 +106289,33 @@
       "add": -40,
       "bix": 16,
       "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_RL_V1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
       "max": 215,
       "min": -40,
       "nullmin": -40,
@@ -102075,6 +106441,34 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_RL_V1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -102432,6 +106826,33 @@
     "make": "Toyota",
     "model": "Corolla",
     "name": "Yaw rate value (degrees/se",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 16,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "degrees"
+    },
+    "hdr": "7B0",
+    "id": "PRIUS_YAW_RATE",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Yaw rate value (degrees/sec)",
     "path": "Orientation",
     "pid": "21",
     "scaling": "raw+-128 clamped to [-128, 127]",
@@ -103120,6 +107541,34 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_RL_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -103214,6 +107663,34 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_RL_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -103372,6 +107849,35 @@
     "id": "CAMRY_A_F_RATIO_LEARNED_MID_1_BANK_1",
     "make": "Toyota",
     "model": "Camry",
+    "name": "A/F ratio learned mid 1, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "102A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "PRIUS_A_F_RATIO_LEARNED_MID_1_BANK_1",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "A/F ratio learned mid 1, bank 1",
     "path": "Engine",
     "pid": "22",
@@ -103627,6 +108133,32 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "106C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_HVBAT_SOC_MIN",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery charge (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "1078"
     },
     "debug": false,
@@ -103643,6 +108175,33 @@
     "id": "CAMRY_IDLE_SAC_CYL_3",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Idle spark advance control, cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "PRIUS_IDLE_SAC_CYL_3",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Idle spark advance control, cylinder 3",
     "path": "Engine",
     "pid": "22",
@@ -103784,6 +108343,58 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "10A6"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_M_INVRT_MAX_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Motor inverter, maximum temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "PRIUS_MIS_3",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Misfire count, cylinder 3",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -103935,6 +108546,47 @@
     "id": "LANDCRUISER_TID_3",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Tire 3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "PRIUS_TID_3",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Tire 3 position",
     "path": "Tires",
     "pid": "22",
@@ -123156,6 +127808,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "PRIUS_TIRE_RL_SPD",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "RAV4HYBRID_TIRE_RL_SPD",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -123452,6 +128131,33 @@
       "add": -40,
       "bix": 24,
       "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_RR_V1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
       "max": 215,
       "min": -40,
       "nullmin": -40,
@@ -123577,6 +128283,34 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_RR_V1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -124012,6 +128746,34 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_RR_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 215,
+      "min": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -124123,6 +128885,34 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_RR_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 215,
+      "min": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -124162,6 +128952,34 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_FR_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -124583,6 +129401,35 @@
     "cmd": {
       "22": "102A"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 24,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "PRIUS_A_F_RATIO_LEARNED_MID_2_BANK_1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "A/F ratio learned mid 2, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "102A"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -124668,6 +129515,33 @@
     "cmd": {
       "22": "1078"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "PRIUS_IDLE_SAC_CYL_4",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Idle spark advance control, cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1078"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -124715,6 +129589,31 @@
     "scaling": "raw*6.25 /100 clamped to [15.9375]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "PRIUS_MIS_4",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Misfire count, cylinder 4",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -124790,6 +129689,33 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 255,
+      "len": 8,
+      "max": 6375,
+      "mul": 6375,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "PRIUS_MISFIRE_RPM",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Misfire RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6375 /255 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
   },
   {
     "bitLength": 8,
@@ -126131,6 +131057,47 @@
     "id": "LANDCRUISER_TID_4",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Tire 4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "PRIUS_TID_4",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Tire 4 position",
     "path": "Tires",
     "pid": "22",
@@ -139141,6 +144108,33 @@
       "add": -40,
       "bix": 32,
       "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_SPARE_V1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
       "max": 215,
       "min": -40,
       "nullmin": -40,
@@ -139266,6 +144260,34 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_SPARE_V1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -141207,6 +146229,34 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_SPARE_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -141245,6 +146295,34 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-30, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_SPARE_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -141364,6 +146442,35 @@
     "cmd": {
       "22": "102A"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 32,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "PRIUS_A_F_RATIO_LEARNED_HIGH_BANK_1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "A/F ratio learned high, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "102A"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -141415,6 +146522,33 @@
     "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "10AA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 32,
+      "len": 8,
+      "max": 127,
+      "min": -128,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "PRIUS_MISFIRE_MARGIN",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Misfire margin",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-128 clamped to [-128, 127]",
+    "suggestedMetric": "",
+    "unit": "rpm"
   },
   {
     "bitLength": 8,
@@ -145643,6 +150777,34 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 40,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_RL_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -151472,6 +156634,33 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 56,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "PRIUS_VVTOT",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Variable valve timing oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -152738,6 +157927,34 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 56,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_RR_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -155914,6 +161131,33 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "21": "51"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 72,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "PRIUS_EOT",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "0102"
     },
     "debug": false,
@@ -157180,6 +162424,34 @@
     ],
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 72,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_SPARE_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -158559,6 +163831,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "PRIUS_TIRE_FL_SPD",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "RAV4HYBRID_TIRE_FL_SPD",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -158855,6 +164154,33 @@
       "add": -40,
       "bix": 8,
       "len": 8,
+      "max": 150,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_FR_V1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-20, 150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "16"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
       "max": 215,
       "min": -40,
       "nullmin": -40,
@@ -159046,6 +164372,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E0",
+    "id": "PRIUS_CC_S",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Cruise control speed",
+    "path": "Cruise control",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "21"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
     "id": "RAV4HYBRID_CC_S",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -159159,6 +164510,34 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_FR_V1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -159542,6 +164921,34 @@
       "unit": "gravity"
     },
     "hdr": "7B0",
+    "id": "PRIUS_LNG_G",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Longitudinal g",
+    "path": "Orientation",
+    "pid": "21",
+    "scaling": "raw/50 clamped to [-2.5, 2.5]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "47"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 50,
+      "len": 8,
+      "max": 2.5,
+      "min": -2.5,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7B0",
     "id": "RAV4HYBRID_LNG_G",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -159762,6 +165169,34 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TT_FR_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "min": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -159873,6 +165308,34 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -30,
+      "unit": "celsius"
+    },
+    "hdr": "750",
+    "id": "DAIHATSU_TT_FR_V2",
+    "make": "Daihatsu",
+    "model": "",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "min": -40,
       "unit": "celsius"
     },
     "hdr": "750",
@@ -159912,6 +165375,34 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 3.8,
+      "nullmin": 0,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "PRIUS_TP_FL_V2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
   },
   {
     "bitLength": 8,
@@ -160333,6 +165824,35 @@
     "cmd": {
       "22": "102A"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "div": 255,
+      "len": 8,
+      "max": 50,
+      "min": -50,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
+    "id": "PRIUS_A_F_RATIO_LEARNED_LOW_BANK_1",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "A/F ratio learned low, bank 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 +-50 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "102A"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -160404,6 +165924,32 @@
     "id": "CAMRY_EWP_RPM",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Electric water pump RPM",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*25 clamped to [6375]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1043"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 6375,
+      "mul": 25,
+      "unit": "rpm"
+    },
+    "hdr": "700",
+    "id": "PRIUS_EWP_RPM",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Electric water pump RPM",
     "path": "Engine",
     "pid": "22",
@@ -160572,6 +166118,32 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "106C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
+    "id": "PRIUS_HVBAT_SOC_MAX",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "HV battery charge (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "1078"
     },
     "debug": false,
@@ -160588,6 +166160,33 @@
     "id": "CAMRY_IDLE_SAC_CYL_2",
     "make": "Toyota",
     "model": "Camry",
+    "name": "Idle spark advance control, cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*6.25 /100 clamped to [15.9375]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1078"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 100,
+      "len": 8,
+      "max": 15.9375,
+      "mul": 6.25,
+      "unit": "degrees"
+    },
+    "hdr": "700",
+    "id": "PRIUS_IDLE_SAC_CYL_2",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Idle spark advance control, cylinder 2",
     "path": "Engine",
     "pid": "22",
@@ -160648,6 +166247,31 @@
     "scaling": "raw*6.25 /100 clamped to [15.9375]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "10A7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "700",
+    "id": "PRIUS_MIS_2",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Misfire count, cylinder 2",
+    "path": "Engine.Misfires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -160799,6 +166423,47 @@
     "id": "LANDCRUISER_TID_2",
     "make": "Toyota",
     "model": "Land-Cruiser",
+    "name": "Tire 2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
+    "id": "PRIUS_TID_2",
+    "make": "Toyota",
+    "model": "Prius",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
