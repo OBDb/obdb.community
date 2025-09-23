@@ -26413,6 +26413,30 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_RANGE_ECO",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Estimated range remaining in economy mode",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "420C"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_RANGE_ECO",
     "make": "Rolls",
     "model": "Royce",
@@ -31127,6 +31151,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "I5_VSS2",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4AB1"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "IS_VSS2",
     "make": "Lexus",
     "model": "IS",
@@ -32747,6 +32796,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "6F1",
+    "id": "I5_VSS",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
     "id": "IX3_VSS",
     "make": "BMW",
     "model": "iX3",
@@ -33047,6 +33121,31 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_RANGE_E_CUR",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Current electric range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_RANGE_E_CUR",
     "make": "Rolls",
     "model": "Royce",
@@ -33098,6 +33197,30 @@
     "id": "DAIHATSU_VSS_INSTR",
     "make": "Daihatsu",
     "model": "",
+    "name": "Vehicle speed (instrument cluster)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D240"
+    },
+    "debug": true,
+    "eax": "0D",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "I5_VSS_INSTR",
+    "make": "BMW",
+    "model": "i5",
     "name": "Vehicle speed (instrument cluster)",
     "path": "Movement",
     "pid": "22",
@@ -33768,6 +33891,32 @@
       "unit": "rpm"
     },
     "hdr": "6F1",
+    "id": "I5_TQ_CNVRT_RPM",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
     "id": "IS_TQ_CNVRT_RPM",
     "make": "Lexus",
     "model": "IS",
@@ -33955,6 +34104,33 @@
     "id": "DAIHATSU_AXLE_FRONT_ACTUAL_TORQUE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "I5_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "BMW",
+    "model": "i5",
     "name": "Front axle, actual torque",
     "path": "Tires",
     "pid": "22",
@@ -34198,6 +34374,33 @@
     "id": "I3_FL_SPD",
     "make": "BMW",
     "model": "i3s",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "eax": "29",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "I5_FL_SPD",
+    "make": "BMW",
+    "model": "i5",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -34617,6 +34820,31 @@
       "unit": "volts"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_V",
+    "make": "BMW",
+    "model": "i5",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD68"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_V",
     "make": "Rolls",
     "model": "Royce",
@@ -34733,6 +34961,31 @@
     "cmd": {
       "22": "DDBC"
     },
+    "debug": false,
+    "eax": "07",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_SOC",
+    "make": "BMW",
+    "model": "i5",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DDBC"
+    },
     "debug": true,
     "eax": "07",
     "fmt": {
@@ -34799,6 +35052,33 @@
     "id": "I3_HVBAT_CT_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "HV battery cell temperature (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.67, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DDC0"
+    },
+    "debug": false,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.67,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_CT_MIN",
+    "make": "BMW",
+    "model": "i5",
     "name": "HV battery cell temperature (min)",
     "path": "Battery",
     "pid": "22",
@@ -34925,6 +35205,31 @@
       "unit": "percent"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_HVPM_SOC",
+    "make": "BMW",
+    "model": "i5",
+    "name": "State of charge (hvpm)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": true,
+    "eax": "1A",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_HVPM_SOC",
     "make": "Rolls",
     "model": "Royce",
@@ -34976,6 +35281,30 @@
     "id": "I3_HVBAT_C_CNT",
     "make": "BMW",
     "model": "i3s",
+    "name": "Number of cells",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_CNT",
+    "make": "BMW",
+    "model": "i5",
     "name": "Number of cells",
     "path": "Battery",
     "pid": "22",
@@ -35072,6 +35401,31 @@
       "unit": "ampereHours"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_C_CAP_MIN",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Cell capacity (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "ampereHours"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_C_CAP_MIN",
     "make": "Rolls",
     "model": "Royce",
@@ -35101,6 +35455,32 @@
     "id": "DAIHATSU_VGT_CAL_ANGLE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Variable geometry turbocharger calibration angle",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 156.25,
+      "unit": "degrees"
+    },
+    "hdr": "6F1",
+    "id": "I5_VGT_CAL_ANGLE",
+    "make": "BMW",
+    "model": "i5",
     "name": "Variable geometry turbocharger calibration angle",
     "path": "Engine",
     "pid": "22",
@@ -35211,6 +35591,31 @@
     "scaling": "raw*156.25 /10000 clamped to [1000]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "E5CE"
+    },
+    "debug": false,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_SOC_V2",
+    "make": "BMW",
+    "model": "i5",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -36511,6 +36916,34 @@
     "id": "I3_HVBAT_C_TEMP_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell temperature (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 112,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_TEMP_MAX",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell temperature (max)",
     "path": "Battery",
     "pid": "22",
@@ -38727,6 +39160,34 @@
       "unit": "celsius"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_C_TEMP_AVG",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Cell temperature (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 128,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_C_TEMP_AVG",
     "make": "Rolls",
     "model": "Royce",
@@ -39967,6 +40428,32 @@
     "id": "I3_HVBAT_C_RES_FACTOR_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell resistance factor (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 144,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_RES_FACTOR_MIN",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell resistance factor (min)",
     "path": "Battery",
     "pid": "22",
@@ -41777,6 +42264,31 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_RANGE_COMF",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Estimated range remaining in comfort mode",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "420C"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_RANGE_COMF",
     "make": "Rolls",
     "model": "Royce",
@@ -42743,6 +43255,32 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_RANGE_E_MAX",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Maximum electric range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 16,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_RANGE_E_MAX",
     "make": "Rolls",
     "model": "Royce",
@@ -42800,6 +43338,33 @@
     "id": "DAIHATSU_TRANS_SHAFT_RPM",
     "make": "Daihatsu",
     "model": "",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "I5_TRANS_SHAFT_RPM",
+    "make": "BMW",
+    "model": "i5",
     "name": "Transmission output shaft speed",
     "path": "Transmission",
     "pid": "22",
@@ -43046,6 +43611,34 @@
     "id": "I3_FR_SPD",
     "make": "BMW",
     "model": "i3s",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "eax": "29",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "I5_FR_SPD",
+    "make": "BMW",
+    "model": "i5",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -43471,6 +44064,32 @@
     "cmd": {
       "22": "DDBC"
     },
+    "debug": false,
+    "eax": "07",
+    "fmt": {
+      "bix": 16,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_SOC_MAX",
+    "make": "BMW",
+    "model": "i5",
+    "name": "HV battery charge (maximum)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DDBC"
+    },
     "debug": true,
     "eax": "07",
     "fmt": {
@@ -43540,6 +44159,34 @@
     "id": "I3_HVBAT_CT_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "HV battery cell temperature (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.67, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DDC0"
+    },
+    "debug": false,
+    "eax": "07",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.67,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_CT_MAX",
+    "make": "BMW",
+    "model": "i5",
     "name": "HV battery cell temperature (max)",
     "path": "Battery",
     "pid": "22",
@@ -43648,6 +44295,32 @@
     "id": "I3_HVBAT_C_CAP_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell capacity (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "ampereHours"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_CAP_MAX",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell capacity (max)",
     "path": "Battery",
     "pid": "22",
@@ -43807,6 +44480,32 @@
     "id": "I3_HVBAT_C_RES_FACTOR_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell resistance factor (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 160,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_RES_FACTOR_MAX",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell resistance factor (max)",
     "path": "Battery",
     "pid": "22",
@@ -45309,6 +46008,32 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_C_RES_FACTOR_AVG",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Cell resistance factor (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 176,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_C_RES_FACTOR_AVG",
     "make": "Rolls",
     "model": "Royce",
@@ -45553,6 +46278,32 @@
     "id": "I3_HVBAT_C_SOC_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell SoC (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 192,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_SOC_MIN",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell SoC (min)",
     "path": "Battery",
     "pid": "22",
@@ -46219,6 +46970,32 @@
       "unit": "percent"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_C_SOC_MAX",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Cell SoC (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 208,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_C_SOC_MAX",
     "make": "Rolls",
     "model": "Royce",
@@ -46681,6 +47458,32 @@
     "id": "I3_HVBAT_C_SOC_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell SoC (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 224,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_SOC_AVG",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell SoC (avg)",
     "path": "Battery",
     "pid": "22",
@@ -48601,6 +49404,32 @@
       "unit": "volts"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_C_OCV_MIN",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Cell OCV (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 240,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 240,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_C_OCV_MIN",
     "make": "Rolls",
     "model": "Royce",
@@ -48874,6 +49703,32 @@
     "id": "I3_HVBAT_C_OCV_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell OCV (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 256,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_OCV_MAX",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell OCV (max)",
     "path": "Battery",
     "pid": "22",
@@ -49191,6 +50046,32 @@
     "id": "I3_HVBAT_C_OCV_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell OCV (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 272,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_OCV_AVG",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell OCV (avg)",
     "path": "Battery",
     "pid": "22",
@@ -50695,6 +51576,32 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_IMPEDANCE_ALPHA",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Aging factor",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 288,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 288,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_IMPEDANCE_ALPHA",
     "make": "Rolls",
     "model": "Royce",
@@ -51495,6 +52402,31 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_RANGE",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Estimated range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "420C"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_RANGE",
     "make": "Rolls",
     "model": "Royce",
@@ -51552,6 +52484,33 @@
     "id": "I3_RANGE_F_CUR",
     "make": "BMW",
     "model": "i3s",
+    "name": "Current fuel range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "nullmax": 6553,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "I5_RANGE_F_CUR",
+    "make": "BMW",
+    "model": "i5",
     "name": "Current fuel range",
     "path": "Trips",
     "pid": "22",
@@ -51635,6 +52594,34 @@
     "id": "DAIHATSU_AXLE_FRONT_SETPOINT_TORQUE",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "I5_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "BMW",
+    "model": "i5",
     "name": "Front axle, setpoint torque",
     "path": "Tires",
     "pid": "22",
@@ -51887,6 +52874,34 @@
     "id": "I3_RL_SPD",
     "make": "BMW",
     "model": "i3s",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "eax": "29",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "I5_RL_SPD",
+    "make": "BMW",
+    "model": "i5",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -52312,6 +53327,32 @@
     "cmd": {
       "22": "DDBC"
     },
+    "debug": false,
+    "eax": "07",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_SOC_MIN",
+    "make": "BMW",
+    "model": "i5",
+    "name": "HV battery charge (minimum)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DDBC"
+    },
     "debug": true,
     "eax": "07",
     "fmt": {
@@ -52377,6 +53418,32 @@
     "id": "I3_HVBAT_C_CAP_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell capacity (average)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "ampereHours"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_CAP_AVG",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell capacity (average)",
     "path": "Battery",
     "pid": "22",
@@ -55165,6 +56232,34 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_RANGE_F_MAX",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Maximum fuel range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "nullmax": 6553,
+      "nullmin": 0,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_RANGE_F_MAX",
     "make": "Rolls",
     "model": "Royce",
@@ -55252,6 +56347,34 @@
     "id": "I3_RR_SPD",
     "make": "BMW",
     "model": "i3s",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "eax": "29",
+    "fmt": {
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "I5_RR_SPD",
+    "make": "BMW",
+    "model": "i5",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -55612,6 +56735,32 @@
     "id": "I3_HVBAT_C_V_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell voltage (min))",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 48,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_V_MIN",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell voltage (min))",
     "path": "Battery",
     "pid": "22",
@@ -58439,6 +59588,34 @@
       "unit": "kilowattHours"
     },
     "hdr": "6F1",
+    "id": "I5_RANGE_E_USE",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Electric consumption / 100km",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 64,
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmax": 65,
+      "nullmin": 0,
+      "unit": "kilowattHours"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_RANGE_E_USE",
     "make": "Rolls",
     "model": "Royce",
@@ -58494,6 +59671,32 @@
     "id": "I3_HVBAT_C_V_MAX",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell voltage (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 64,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_V_MAX",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell voltage (max)",
     "path": "Battery",
     "pid": "22",
@@ -61323,6 +62526,33 @@
       "unit": "kilowatts"
     },
     "hdr": "6F1",
+    "id": "I5_AUX_PWR",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Auxiliary power consumption",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 80,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "nullmax": 655,
+      "unit": "kilowatts"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_AUX_PWR",
     "make": "Rolls",
     "model": "Royce",
@@ -61378,6 +62608,32 @@
     "id": "I3_HVBAT_C_V_AVG",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell voltage (avg)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10000 clamped to [6.5535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 80,
+      "div": 10000,
+      "len": 16,
+      "max": 6.5535,
+      "unit": "volts"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_V_AVG",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell voltage (avg)",
     "path": "Battery",
     "pid": "22",
@@ -62815,6 +64071,34 @@
     "id": "I3_HVBAT_C_TEMP_MIN",
     "make": "BMW",
     "model": "i3s",
+    "name": "Cell temperature (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "DFA0"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 96,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_TEMP_MIN",
+    "make": "BMW",
+    "model": "i5",
     "name": "Cell temperature (min)",
     "path": "Battery",
     "pid": "22",
@@ -66760,6 +68044,30 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_ODO_2",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Odometer variant",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1700"
+    },
+    "debug": true,
+    "eax": "40",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "IS_ODO_2",
     "make": "Lexus",
     "model": "IS",
@@ -67588,6 +68896,30 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_ODO1",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "IX3_ODO1",
     "make": "BMW",
     "model": "iX3",
@@ -67929,6 +69261,56 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_ODO",
+    "make": "BMW",
+    "model": "i5",
+    "name": "[EGS] mileage/odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "I5_ODO_LOWRES",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Odometer, low resolution",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "IS_ODO_V3",
     "make": "Lexus",
     "model": "IS",
@@ -68137,6 +69519,33 @@
     "id": "COOPSE_HVBAT_CURR",
     "make": "MINI",
     "model": "Cooper-SE",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-10000, 10000]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD69"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "div": 100,
+      "len": 32,
+      "max": 10000,
+      "min": -10000,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C",
+    "make": "BMW",
+    "model": "i5",
     "name": "HV battery current",
     "path": "Battery",
     "pid": "22",
@@ -68638,6 +70047,31 @@
       "unit": "kilometers"
     },
     "hdr": "6F1",
+    "id": "I5_OIL_CHANGE_DIST",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Distance since last oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 304,
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
     "id": "IS_OIL_CHANGE_DIST",
     "make": "Lexus",
     "model": "IS",
@@ -68920,6 +70354,31 @@
     "id": "I4_ODO2",
     "make": "BMW",
     "model": "i4",
+    "name": "Odometer #2",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "I5_ODO2",
+    "make": "BMW",
+    "model": "i5",
     "name": "Odometer #2",
     "path": "Trips",
     "pid": "22",
@@ -87974,6 +89433,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_EOP",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Engine oil pressure",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "586F"
+    },
+    "debug": true,
+    "eax": "12",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "IS_EOP_V2",
     "make": "Lexus",
     "model": "IS",
@@ -89241,6 +90724,31 @@
     "cmd": {
       "22": "C901"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "MX5_TP_FL",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C901"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -89398,7 +90906,7 @@
     "hdr": "720",
     "id": "MX5_TP_FL",
     "make": "Mazda",
-    "model": "MX-5",
+    "model": "MX-5-Miata",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -89410,26 +90918,27 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "C901"
+      "22": "C902"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
+      "add": -58,
       "len": 8,
-      "max": 50,
-      "mul": 0.1991368143,
-      "unit": "psi"
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
     },
     "hdr": "720",
-    "id": "MX5_TP_FL",
+    "id": "MX5_TT_FL",
     "make": "Mazda",
-    "model": "MX-5-Miata",
-    "name": "Front left tire pressure",
+    "model": "MX-5",
+    "name": "Front left tire Temperature",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw*0.1991368143 clamped to [50]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
   },
   {
     "bitLength": 8,
@@ -89477,32 +90986,6 @@
     "make": "Mazda",
     "model": "CX-5",
     "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*1.8 +-58 clamped to [200]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "len": 8,
-      "max": 200,
-      "mul": 1.8,
-      "unit": "fahrenheit"
-    },
-    "hdr": "720",
-    "id": "MX5_TT_FL",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Front left tire Temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [200]",
@@ -89718,6 +91201,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_GEAR_V2",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D031"
+    },
+    "debug": true,
+    "eax": "63",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_GEAR_V2",
     "make": "Rolls",
     "model": "Royce",
@@ -89775,6 +91282,33 @@
     "id": "I3_AAT",
     "make": "BMW",
     "model": "i3s",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 87.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "I5_AAT",
+    "make": "BMW",
+    "model": "i5",
     "name": "Ambient air temperature",
     "path": "Climate",
     "pid": "22",
@@ -90768,6 +92302,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_ATF_TEMP",
+    "make": "BMW",
+    "model": "i5",
+    "name": "ATF temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA12"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "IS_ATF_TEMP_V2",
     "make": "Lexus",
     "model": "IS",
@@ -90915,6 +92473,30 @@
     "id": "DAIHATSU_EOT_V3",
     "make": "Daihatsu",
     "model": "",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA25"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_EOT",
+    "make": "BMW",
+    "model": "i5",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -91112,6 +92694,46 @@
       }
     },
     "hdr": "6F1",
+    "id": "I5_GEAR_SHIFT",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Park', 'value': 'PARK'}, '1': {'description': 'Reverse', 'value': 'REVERSE'}, '2': {'description': 'Neutral', 'value': 'NEUTRAL'}, '3': {'description': 'Drive', 'value': 'DRIVE'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "1": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "2": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "3": {
+          "description": "Drive",
+          "value": "DRIVE"
+        }
+      }
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_GEAR_SHIFT",
     "make": "Rolls",
     "model": "Royce",
@@ -91205,6 +92827,30 @@
     "model": "",
     "name": "Gear",
     "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_GEAR",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Gear",
+    "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -91392,6 +93038,30 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_TIME_D",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Time in D",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "IS_TIME_D",
     "make": "Lexus",
     "model": "IS",
@@ -91539,6 +93209,30 @@
     "id": "I3_DOOR_DRIVER",
     "make": "BMW",
     "model": "i3s",
+    "name": "Driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_DOOR_DRIVER",
+    "make": "BMW",
+    "model": "i5",
     "name": "Driver door open",
     "path": "Doors",
     "pid": "22",
@@ -110320,6 +112014,32 @@
     "cmd": {
       "22": "C901"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "MX5_TP_RL",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "C901"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -110384,7 +112104,7 @@
     "hdr": "720",
     "id": "MX5_TP_RL",
     "make": "Mazda",
-    "model": "MX-5",
+    "model": "MX-5-Miata",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -110396,27 +112116,28 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "22": "C901"
+      "22": "C902"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
+      "add": -58,
       "bix": 16,
       "len": 8,
-      "max": 50,
-      "mul": 0.1991368143,
-      "unit": "psi"
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
     },
     "hdr": "720",
-    "id": "MX5_TP_RL",
+    "id": "MX5_TT_RL",
     "make": "Mazda",
-    "model": "MX-5-Miata",
-    "name": "Rear left tire pressure",
+    "model": "MX-5",
+    "name": "Rear left tire Temperature",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw*0.1991368143 clamped to [50]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
   },
   {
     "bitLength": 8,
@@ -110466,33 +112187,6 @@
     "make": "Mazda",
     "model": "CX-5",
     "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*1.8 +-58 clamped to [200]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "bix": 16,
-      "len": 8,
-      "max": 200,
-      "mul": 1.8,
-      "unit": "fahrenheit"
-    },
-    "hdr": "720",
-    "id": "MX5_TT_RL",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Rear left tire Temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [200]",
@@ -110569,6 +112263,31 @@
     "id": "DAIHATSU_TIME_M",
     "make": "Daihatsu",
     "model": "",
+    "name": "Time in M",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_TIME_M",
+    "make": "BMW",
+    "model": "i5",
     "name": "Time in M",
     "path": "Engine",
     "pid": "22",
@@ -110766,6 +112485,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_DOOR_DRIVER_REAR",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Rear driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "X7_DOOR_DRIVER_REAR",
     "make": "BMW",
     "model": "X7",
@@ -110894,6 +112638,32 @@
       "unit": "percent"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_HVPM_MIN_SOC",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Minimum state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": true,
+    "eax": "1A",
+    "fmt": {
+      "bix": 16,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_HVPM_MIN_SOC",
     "make": "Rolls",
     "model": "Royce",
@@ -110947,6 +112717,31 @@
     "id": "I3_HVBAT_C_CNT_MOD",
     "make": "BMW",
     "model": "i3s",
+    "name": "Number of cells per module",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_C_CNT_MOD",
+    "make": "BMW",
+    "model": "i5",
     "name": "Number of cells per module",
     "path": "Battery",
     "pid": "22",
@@ -132812,6 +134607,31 @@
       "unit": "percent"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_SOH",
+    "make": "BMW",
+    "model": "i5",
+    "name": "HV battery health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "6335"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_SOH",
     "make": "Rolls",
     "model": "Royce",
@@ -133003,6 +134823,32 @@
     "cmd": {
       "22": "C901"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "MX5_TP_RR",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "C901"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -133067,7 +134913,7 @@
     "hdr": "720",
     "id": "MX5_TP_RR",
     "make": "Mazda",
-    "model": "MX-5",
+    "model": "MX-5-Miata",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -133079,27 +134925,28 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
-      "22": "C901"
+      "22": "C902"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
+      "add": -58,
       "bix": 24,
       "len": 8,
-      "max": 50,
-      "mul": 0.1991368143,
-      "unit": "psi"
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
     },
     "hdr": "720",
-    "id": "MX5_TP_RR",
+    "id": "MX5_TT_RR",
     "make": "Mazda",
-    "model": "MX-5-Miata",
-    "name": "Rear right tire pressure",
+    "model": "MX-5",
+    "name": "Rear right tire Temperature",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw*0.1991368143 clamped to [50]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
   },
   {
     "bitLength": 8,
@@ -133149,33 +134996,6 @@
     "make": "Mazda",
     "model": "CX-5",
     "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*1.8 +-58 clamped to [200]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "bix": 24,
-      "len": 8,
-      "max": 200,
-      "mul": 1.8,
-      "unit": "fahrenheit"
-    },
-    "hdr": "720",
-    "id": "MX5_TT_RR",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Rear right tire Temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [200]",
@@ -133252,6 +135072,31 @@
     "id": "I3_DOOR_PASSENGER_REAR",
     "make": "BMW",
     "model": "i3s",
+    "name": "Rear passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_DOOR_PASSENGER_REAR",
+    "make": "BMW",
+    "model": "i5",
     "name": "Rear passenger door open",
     "path": "Doors",
     "pid": "22",
@@ -133399,6 +135244,31 @@
       "unit": "noyes"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_CHG_CON",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Is charger connected",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "pluggedIn",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": true,
+    "eax": "1A",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_CHG_CON",
     "make": "Rolls",
     "model": "Royce",
@@ -133474,6 +135344,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_MOD_CNT",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Number of modules",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_MOD_CNT",
     "make": "Rolls",
     "model": "Royce",
@@ -133483,6 +135378,31 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "E5C7"
+    },
+    "debug": false,
+    "eax": "07",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_SOH_V2",
+    "make": "BMW",
+    "model": "i5",
+    "name": "HV battery health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -150078,6 +151998,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_HOOD",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Hood open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "X7_HOOD",
     "make": "BMW",
     "model": "X7",
@@ -150203,6 +152148,31 @@
       "unit": "noyes"
     },
     "hdr": "6F1",
+    "id": "I5_HVBAT_CHG_CON_EXT",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Is charging",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "isCharging",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": true,
+    "eax": "1A",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "6F1",
     "id": "ROLLSROYCE_HVBAT_CHG_CON_EXT",
     "make": "Rolls",
     "model": "Royce",
@@ -150256,6 +152226,31 @@
     "id": "I3_HVBAT_MOD_T_CNT",
     "make": "BMW",
     "model": "i3s",
+    "name": "Number of temperature sensors per module",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DF71"
+    },
+    "debug": true,
+    "eax": "07",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_MOD_T_CNT",
+    "make": "BMW",
+    "model": "i5",
     "name": "Number of temperature sensors per module",
     "path": "Battery",
     "pid": "22",
@@ -154842,6 +156837,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_TRUNK",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Trunk open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "X7_TRUNK",
     "make": "BMW",
     "model": "X7",
@@ -154945,6 +156965,31 @@
     "id": "I3_HVBAT_CHG_RDY",
     "make": "BMW",
     "model": "i3s",
+    "name": "Ready to drive",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "DE00"
+    },
+    "debug": true,
+    "eax": "1A",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "6F1",
+    "id": "I5_HVBAT_CHG_RDY",
+    "make": "BMW",
+    "model": "i5",
     "name": "Ready to drive",
     "path": "Battery",
     "pid": "22",
@@ -157455,6 +159500,31 @@
     "model": "i3s",
     "name": "Rear window open",
     "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_REAR_WINDOW",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Rear window open",
+    "path": "Windows",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -160075,6 +162145,31 @@
     "id": "I3_CENTRAL_LOCK",
     "make": "BMW",
     "model": "i3s",
+    "name": "Locked",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_CENTRAL_LOCK",
+    "make": "BMW",
+    "model": "i5",
     "name": "Locked",
     "path": "Doors",
     "pid": "22",
@@ -168938,6 +171033,32 @@
     "cmd": {
       "22": "C901"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 50,
+      "mul": 0.1991368143,
+      "unit": "psi"
+    },
+    "hdr": "720",
+    "id": "MX5_TP_FR",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*0.1991368143 clamped to [50]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "C901"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -169002,7 +171123,7 @@
     "hdr": "720",
     "id": "MX5_TP_FR",
     "make": "Mazda",
-    "model": "MX-5",
+    "model": "MX-5-Miata",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -169014,27 +171135,28 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "22": "C901"
+      "22": "C902"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
+      "add": -58,
       "bix": 8,
       "len": 8,
-      "max": 50,
-      "mul": 0.1991368143,
-      "unit": "psi"
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
     },
     "hdr": "720",
-    "id": "MX5_TP_FR",
+    "id": "MX5_TT_FR",
     "make": "Mazda",
-    "model": "MX-5-Miata",
-    "name": "Front right tire pressure",
+    "model": "MX-5",
+    "name": "Front right tire Temperature",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw*0.1991368143 clamped to [50]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
+    "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
   },
   {
     "bitLength": 8,
@@ -169084,33 +171206,6 @@
     "make": "Mazda",
     "model": "CX-5",
     "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*1.8 +-58 clamped to [200]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "bix": 8,
-      "len": 8,
-      "max": 200,
-      "mul": 1.8,
-      "unit": "fahrenheit"
-    },
-    "hdr": "720",
-    "id": "MX5_TT_FR",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Front right tire Temperature",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [200]",
@@ -169291,6 +171386,31 @@
     "id": "DAIHATSU_KICKDOWN",
     "make": "Daihatsu",
     "model": "",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_KICKDOWN",
+    "make": "BMW",
+    "model": "i5",
     "name": "Kickdown",
     "path": "Engine",
     "pid": "22",
@@ -169539,6 +171659,55 @@
     "id": "DAIHATSU_TQ_CNVRT_LOCKUP",
     "make": "Daihatsu",
     "model": "",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "I5_TQ_CNVRT_LOCKUP",
+    "make": "BMW",
+    "model": "i5",
     "name": "Torque converter lockup",
     "path": "Transmission",
     "pid": "22",
@@ -169880,6 +172049,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_BRAKE_SWITCH",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Brake switch",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA28"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "IS_BRAKE_SWITCH",
     "make": "Lexus",
     "model": "IS",
@@ -170096,6 +172290,31 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
+    "id": "I5_TIME_S",
+    "make": "BMW",
+    "model": "i5",
+    "name": "Time in S",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
     "id": "IS_TIME_S",
     "make": "Lexus",
     "model": "IS",
@@ -170249,6 +172468,31 @@
     "id": "I3_DOOR_PASSENGER",
     "make": "BMW",
     "model": "i3s",
+    "name": "Passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": false,
+    "eax": "56",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "I5_DOOR_PASSENGER",
+    "make": "BMW",
+    "model": "i5",
     "name": "Passenger door open",
     "path": "Doors",
     "pid": "22",
