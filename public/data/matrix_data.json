@@ -9532,6 +9532,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 4,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "MX5_MAP",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "MAP voltage",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0301"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 5,
       "mul": 0.0009765625,
@@ -9591,31 +9616,6 @@
     "id": "CX90_MAP",
     "make": "Mazda",
     "model": "CX-90",
-    "name": "MAP voltage",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw/1000 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0301"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 1000,
-      "len": 16,
-      "max": 4,
-      "unit": "volts"
-    },
-    "hdr": "7E0",
-    "id": "MX5_MAP",
-    "make": "Mazda",
-    "model": "MX-5",
     "name": "MAP voltage",
     "path": "Engine",
     "pid": "22",
@@ -12301,7 +12301,7 @@
     "cmd": {
       "22": "0415"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -12311,9 +12311,9 @@
       "unit": "kilopascal"
     },
     "hdr": "7E0",
-    "id": "CX90_EOP",
+    "id": "MX5_EOP",
     "make": "Mazda",
-    "model": "CX-90",
+    "model": "MX-5",
     "name": "Engine oil pressure",
     "path": "Engine",
     "pid": "22",
@@ -12337,9 +12337,9 @@
       "unit": "kilopascal"
     },
     "hdr": "7E0",
-    "id": "MX5_EOP",
+    "id": "CX90_EOP",
     "make": "Mazda",
-    "model": "MX-5",
+    "model": "CX-90",
     "name": "Engine oil pressure",
     "path": "Engine",
     "pid": "22",
@@ -16404,6 +16404,60 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "11BD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 32,
+      "div": 80,
+      "len": 16,
+      "max": 60.6875,
+      "mul": 9,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "MX5_TRANS_T_V1",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Transmission temperature v1",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*9 /80 +32 clamped to [60.6875]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 32,
+      "div": 80,
+      "len": 16,
+      "max": 60.6875,
+      "mul": 9,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E1",
+    "id": "MX5_TRANS_T_V4",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Transmission temperature v4",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*9 /80 +32 clamped to [60.6875]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "11BE"
     },
     "debug": false,
@@ -17084,7 +17138,7 @@
     "cmd": {
       "22": "1310"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -17095,9 +17149,9 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "CX90_EOT",
+    "id": "MX5_EOT",
     "make": "Mazda",
-    "model": "CX-90",
+    "model": "MX-5",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -17122,9 +17176,9 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "MX5_EOT",
+    "id": "CX90_EOT",
     "make": "Mazda",
-    "model": "MX-5",
+    "model": "CX-90",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -18358,6 +18412,60 @@
     "scaling": "raw/16 clamped to [-500, 500]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 32,
+      "div": 80,
+      "len": 16,
+      "max": 60.6875,
+      "mul": 9,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "MX5_TRANS_T_V3",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Transmission temperature v3",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*9 /80 +32 clamped to [60.6875]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 32,
+      "div": 80,
+      "len": 16,
+      "max": 60.6875,
+      "mul": 9,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E1",
+    "id": "MX5_TRANS_T_V6",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Transmission temperature v6",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*9 /80 +32 clamped to [60.6875]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
   },
   {
     "bitLength": 16,
@@ -79978,6 +80086,62 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "17B3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -57,
+      "div": 25,
+      "len": 8,
+      "max": 371.4,
+      "min": -57,
+      "mul": 42,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "MX5_TRANS_T_V2",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Transmission temperature v2",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*42 /25 +-57 clamped to [-57, 371.4]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "17B3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -57,
+      "div": 25,
+      "len": 8,
+      "max": 371.4,
+      "min": -57,
+      "mul": 42,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E1",
+    "id": "MX5_TRANS_T_V5",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Transmission temperature v5",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*42 /25 +-57 clamped to [-57, 371.4]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1829"
     },
     "debug": false,
@@ -88112,6 +88276,30 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "720",
+    "id": "MX5_FLV",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "61B1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 55,
       "unit": "liters"
     },
@@ -88191,30 +88379,6 @@
     "id": "CX90_FLV",
     "make": "Mazda",
     "model": "CX-90",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "61B1"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "liters"
-    },
-    "hdr": "720",
-    "id": "MX5_FLV",
-    "make": "Mazda",
-    "model": "MX-5",
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
