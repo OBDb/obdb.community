@@ -75,6 +75,30 @@
     "bitLength": 1,
     "bitOffset": 0,
     "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E0",
+    "id": "EGRTD_WR_SUP",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "EGR Temperature Sensor D (Bank 2, Sensor 2) Wide Range supported?",
+    "path": "Engine.Generic.Internal",
+    "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
       "01": "9A"
     },
     "debug": false,
@@ -155,33 +179,9 @@
     "bitLength": 1,
     "bitOffset": 0,
     "cmd": {
-      "22": "0968"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_GEN_CHRGLP",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Generator warning light",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 0,
-    "cmd": {
       "22": "1101"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 1,
@@ -189,34 +189,10 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_ACCS_SW",
+    "id": "MX5_PSP_SW",
     "make": "Mazda",
     "model": "MX-5",
-    "name": "A/C relay",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1104"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_AC_REQ_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "A/C refrigerant pressure switch",
+    "name": "Power steering position switch",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -242,78 +218,6 @@
     "model": "Leaf",
     "name": "Power switch",
     "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1631"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_O2S_HTR11_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "O2 sensor 1 heater control (front)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1706"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_HIDET_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "High detonation switch",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1718"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_FP_RELAY_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Fuel pump relay switch",
-    "path": "Fuel",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -461,30 +365,6 @@
     "bitLength": 1,
     "bitOffset": 0,
     "cmd": {
-      "22": "A211"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_CPP_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Clutch pedal position switch",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 0,
-    "cmd": {
       "22": "C154"
     },
     "debug": false,
@@ -583,6 +463,31 @@
     "bitLength": 1,
     "bitOffset": 1,
     "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 1,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E0",
+    "id": "EGRTB_WR_SUP",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "EGR Temperature Sensor B (Bank 2, Sensor 1) Wide Range supported?",
+    "path": "Engine.Generic.Internal",
+    "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 1,
+    "cmd": {
       "01": "9F"
     },
     "debug": false,
@@ -633,9 +538,9 @@
     "bitLength": 1,
     "bitOffset": 1,
     "cmd": {
-      "22": "1101"
+      "22": "1706"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 1,
@@ -644,85 +549,10 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_BOO_SW",
+    "id": "MX5_LAMBDA_MOD_SW",
     "make": "Mazda",
     "model": "MX-5",
-    "name": "Brake on/off switch",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 1,
-    "cmd": {
-      "22": "160D"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 1,
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_IMTV_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Variable intake air control",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 1,
-    "cmd": {
-      "22": "1631"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 1,
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_O2S_HTR12_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "O2 sensor 2 heater control (rear)",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 1,
-    "cmd": {
-      "22": "A211"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 1,
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_BPA_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Brake pressure applied switch",
+    "name": "Lambda modification switch",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -2254,6 +2084,31 @@
     "bitLength": 1,
     "bitOffset": 2,
     "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 2,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E0",
+    "id": "EGRTC_WR_SUP",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "EGR Temperature Sensor C (Bank 1, Sensor 2) Wide Range supported?",
+    "path": "Engine.Generic.Internal",
+    "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 2,
+    "cmd": {
       "01": "6D"
     },
     "debug": false,
@@ -2329,34 +2184,9 @@
     "bitLength": 1,
     "bitOffset": 2,
     "cmd": {
-      "22": "0967"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 2,
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_FAN3_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Cooling fan relay control",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 2,
-    "cmd": {
       "22": "1103"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 2,
@@ -2365,11 +2195,11 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_FAN1_SW",
+    "id": "MX5_MIL_SW",
     "make": "Mazda",
     "model": "MX-5",
-    "name": "Cooling fan relay control",
-    "path": "Engine",
+    "name": "Malfunction indicator lamp",
+    "path": "DTCs",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -2474,31 +2304,6 @@
     "model": "Fiesta",
     "name": "Tire pressure warning indicator",
     "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 2,
-    "cmd": {
-      "22": "A211"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 2,
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_PNP_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Park neutral position switch",
-    "path": "Transmission",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3187,6 +2992,31 @@
     "bitLength": 1,
     "bitOffset": 3,
     "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 3,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E0",
+    "id": "EGRTA_WR_SUP",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "EGR Temperature Sensor A (Bank 1, Sensor 1) Wide Range supported?",
+    "path": "Engine.Generic.Internal",
+    "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 3,
+    "cmd": {
       "01": "6D"
     },
     "debug": false,
@@ -3462,9 +3292,9 @@
     "bitLength": 1,
     "bitOffset": 3,
     "cmd": {
-      "22": "1101"
+      "22": "1103"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 3,
@@ -3473,11 +3303,11 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_INGEAR_SW",
+    "id": "MX5_IMRC_SW",
     "make": "Mazda",
     "model": "MX-5",
-    "name": "In gear switch",
-    "path": "Transmission",
+    "name": "Intake manifold runner control",
+    "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -3487,9 +3317,9 @@
     "bitLength": 1,
     "bitOffset": 3,
     "cmd": {
-      "22": "1103"
+      "22": "A211"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 3,
@@ -3498,10 +3328,10 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_FAN2_SW",
+    "id": "MX5_IVS_SW",
     "make": "Mazda",
     "model": "MX-5",
-    "name": "Cooling fan relay control",
+    "name": "Idle validation switch",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -4412,6 +4242,31 @@
     "bitLength": 1,
     "bitOffset": 4,
     "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E0",
+    "id": "EGRTD_SUP",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "EGR Temperature Sensor D (Bank 2, Sensor 2) supported?",
+    "path": "Engine.Generic.Internal",
+    "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
       "01": "6C"
     },
     "debug": false,
@@ -4787,9 +4642,9 @@
     "bitLength": 1,
     "bitOffset": 4,
     "cmd": {
-      "22": "1103"
+      "22": "1101"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 4,
@@ -4798,10 +4653,35 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_IMRC_SW",
+    "id": "MX5_INGEAR_SW",
     "make": "Mazda",
     "model": "MX-5",
-    "name": "Intake manifold runner control",
+    "name": "In gear switch",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_FAN2_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Cooling fan relay control",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -4907,31 +4787,6 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 4,
-    "cmd": {
-      "22": "A211"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 4,
-      "len": 1,
-      "max": 1,
-      "unit": "offon"
-    },
-    "hdr": "7E0",
-    "id": "MX5_IVS_SW",
-    "make": "Mazda",
-    "model": "MX-5",
-    "name": "Idle validation switch",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "offon"
   },
   {
     "bitLength": 1,
@@ -5304,6 +5159,31 @@
     "make": "SAEJ1979",
     "model": "",
     "name": "EGR A error supported",
+    "path": "Engine.Generic.Internal",
+    "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E0",
+    "id": "EGRTB_SUP",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "EGR Temperature Sensor B (Bank 2, Sensor 1) supported?",
     "path": "Engine.Generic.Internal",
     "pid": "01",
     "scaling": "raw clamped to [1]",
@@ -5714,9 +5594,9 @@
     "bitLength": 1,
     "bitOffset": 5,
     "cmd": {
-      "22": "1103"
+      "22": "0967"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 5,
@@ -5725,11 +5605,36 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_MIL_SW",
+    "id": "MX5_FAN3_SW",
     "make": "Mazda",
     "model": "MX-5",
-    "name": "Malfunction indicator lamp",
-    "path": "DTCs",
+    "name": "Cooling fan relay control",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "22": "1103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_FAN1_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Cooling fan relay control",
+    "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -5834,6 +5739,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "22": "A211"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_PNP_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Park neutral position switch",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
   },
   {
     "bitLength": 1,
@@ -6079,6 +6009,31 @@
     "make": "SAEJ1979",
     "model": "",
     "name": "Actual EGR A supported",
+    "path": "Engine.Generic.Internal",
+    "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E0",
+    "id": "EGRTC_SUP",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "EGR Temperature Sensor C (Bank 1, Sensor 2) supported?",
     "path": "Engine.Generic.Internal",
     "pid": "01",
     "scaling": "raw clamped to [1]",
@@ -6514,9 +6469,9 @@
     "bitLength": 1,
     "bitOffset": 6,
     "cmd": {
-      "22": "1706"
+      "22": "1101"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 6,
@@ -6525,10 +6480,60 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_LAMBDA_MOD_SW",
+    "id": "MX5_BOO_SW",
     "make": "Mazda",
     "model": "MX-5",
-    "name": "Lambda modification switch",
+    "name": "Brake on/off switch",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "160D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_IMTV_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Variable intake air control",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "1631"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_O2S_HTR12_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "O2 sensor 2 heater control (rear)",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -6634,6 +6639,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "A211"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_BPA_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Brake pressure applied switch",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
   },
   {
     "bitLength": 1,
@@ -6879,6 +6909,31 @@
     "make": "SAEJ1979",
     "model": "",
     "name": "Commanded EGR A supported",
+    "path": "Engine.Generic.Internal",
+    "pid": "01",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E0",
+    "id": "EGRTA_SUP",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "EGR Temperature Sensor A (Bank 1, Sensor 1) supported?",
     "path": "Engine.Generic.Internal",
     "pid": "01",
     "scaling": "raw clamped to [1]",
@@ -7314,9 +7369,9 @@
     "bitLength": 1,
     "bitOffset": 7,
     "cmd": {
-      "22": "1101"
+      "22": "0968"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 7,
@@ -7325,11 +7380,136 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_PSP_SW",
+    "id": "MX5_GEN_CHRGLP",
     "make": "Mazda",
     "model": "MX-5",
-    "name": "Power steering position switch",
+    "name": "Generator warning light",
     "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "1101"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_ACCS_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "A/C relay",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "1104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_AC_REQ_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "A/C refrigerant pressure switch",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "1631"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_O2S_HTR11_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "O2 sensor 1 heater control (front)",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "1706"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_HIDET_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "High detonation switch",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "1718"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_FP_RELAY_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Fuel pump relay switch",
+    "path": "Fuel",
     "pid": "22",
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
@@ -7434,6 +7614,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "A211"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E0",
+    "id": "MX5_CPP_SW",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Clutch pedal position switch",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
   },
   {
     "bitLength": 1,
@@ -8622,7 +8827,7 @@
       "unit": "scalar"
     },
     "hdr": "7E0",
-    "id": "LAMBDA11_WIDE",
+    "id": "LAMBDA11_VOLT",
     "make": "SAEJ1979",
     "model": "",
     "name": "Lambda value, Equivalence Ratio Bank 1, Sensor 1",
@@ -8682,6 +8887,31 @@
     "scaling": "raw/4000 clamped to [-8192, 8191.75]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "34"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 32768,
+      "len": 16,
+      "max": 1.99,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "LAMBDA11_CURRENT",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Lambda value, Equivalence Ratio Bank 1, Sensor 1",
+    "path": "Engine.Generic.OxygenSensors",
+    "pid": "01",
+    "scaling": "raw/32768 clamped to [1.99]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -13756,7 +13986,7 @@
     "cmd": {
       "22": "0914"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 1000,
@@ -13781,7 +14011,7 @@
     "cmd": {
       "22": "0915"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 1000,
@@ -13806,7 +14036,7 @@
     "cmd": {
       "22": "0917"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 1000,
@@ -13831,7 +14061,7 @@
     "cmd": {
       "22": "0918"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 1000,
@@ -13856,7 +14086,7 @@
     "cmd": {
       "22": "091A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 512,
@@ -13881,7 +14111,7 @@
     "cmd": {
       "22": "093C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 512,
@@ -13906,7 +14136,7 @@
     "cmd": {
       "22": "096E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 4,
@@ -13931,7 +14161,7 @@
     "cmd": {
       "22": "097C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 2048,
@@ -13956,7 +14186,7 @@
     "cmd": {
       "22": "098E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -16466,7 +16696,7 @@
     "cmd": {
       "22": "114A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 1000,
@@ -16491,7 +16721,7 @@
     "cmd": {
       "22": "114D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 1000,
@@ -16765,7 +16995,7 @@
     "cmd": {
       "22": "1169"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 64,
@@ -16814,7 +17044,7 @@
     "cmd": {
       "22": "1174"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 1024,
@@ -16839,7 +17069,7 @@
     "cmd": {
       "22": "1177"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 1000,
@@ -18111,7 +18341,7 @@
     "cmd": {
       "22": "1410"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 125,
@@ -18784,7 +19014,7 @@
     "cmd": {
       "22": "163E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 8192,
@@ -18810,7 +19040,7 @@
     "cmd": {
       "22": "16B3"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 1000,
@@ -18835,7 +19065,7 @@
     "cmd": {
       "22": "16CD"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 16,
@@ -18860,7 +19090,7 @@
     "cmd": {
       "22": "16CE"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 16,
@@ -18885,7 +19115,7 @@
     "cmd": {
       "22": "16CF"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -18911,7 +19141,7 @@
     "cmd": {
       "22": "16E8"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -18937,7 +19167,7 @@
     "cmd": {
       "22": "16E9"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 8,
@@ -18962,7 +19192,7 @@
     "cmd": {
       "22": "16F0"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -19036,7 +19266,7 @@
     "cmd": {
       "22": "17F4"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -19061,7 +19291,7 @@
     "cmd": {
       "22": "17F5"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -19086,7 +19316,7 @@
     "cmd": {
       "22": "17F7"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -19111,7 +19341,7 @@
     "cmd": {
       "22": "17F8"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -19161,7 +19391,7 @@
     "cmd": {
       "22": "17FA"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -32770,7 +33000,7 @@
     "cmd": {
       "22": "A216"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -42542,7 +42772,7 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "O2S11_WIDE",
+    "id": "O2S11_VOLT",
     "make": "SAEJ1979",
     "model": "",
     "name": "Wide Range O2S Voltage, O2 Sensor Bank 1, Sensor 1",
@@ -42551,6 +42781,34 @@
     "scaling": "raw/8196 clamped to [7.999]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "01": "34"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -128,
+      "bix": 16,
+      "div": 256,
+      "len": 16,
+      "max": 127.996,
+      "min": -128,
+      "unit": "milliamps"
+    },
+    "hdr": "7E0",
+    "id": "O2S11_CURRENT",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Wide Range O2S Current, O2 Sensor Bank 1, Sensor 1",
+    "path": "Engine.Generic.OxygenSensors",
+    "pid": "01",
+    "scaling": "raw/256 +-128 clamped to [-128, 127.996]",
+    "suggestedMetric": "",
+    "unit": "milliamps"
   },
   {
     "bitLength": 16,
@@ -74266,6 +74524,56 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "01": "18"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 1.275,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "O2S21",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "O2S Output Voltage Bank 2, Sensor 1",
+    "path": "Engine.Generic.OxygenSensors",
+    "pid": "01",
+    "scaling": "raw/200 clamped to [1.275]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "01": "19"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 1.275,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "O2S22",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "O2S Output Voltage Bank 2, Sensor 2",
+    "path": "Engine.Generic.OxygenSensors",
+    "pid": "01",
+    "scaling": "raw/200 clamped to [1.275]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "01": "1C"
     },
     "debug": false,
@@ -77862,7 +78170,7 @@
     "cmd": {
       "22": "0200"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -77936,7 +78244,7 @@
     "cmd": {
       "22": "0202"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -82660,7 +82968,7 @@
     "cmd": {
       "22": "1340"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -82966,7 +83274,7 @@
     "cmd": {
       "22": "1746"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 284,
@@ -110159,6 +110467,61 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EGRTC",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Exhaust Gas Recirculation Temp Sensor C (Bank 1, Sensor 2)",
+    "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 980,
+      "min": -40,
+      "mul": 4,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EGRTC_WIDE",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Exhaust Gas Recirculation Temp Sensor C (Bank 1, Sensor 2), wide",
+    "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw*4 +-40 clamped to [-40, 980]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "01": "6C"
     },
     "debug": false,
@@ -132132,6 +132495,61 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EGRTB",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Exhaust Gas Recirculation Temp Sensor B (Bank 2, Sensor 1)",
+    "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 980,
+      "min": -40,
+      "mul": 4,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EGRTB_WIDE",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Exhaust Gas Recirculation Temp Sensor B (Bank 2, Sensor 1), wide",
+    "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw*4 +-40 clamped to [-40, 980]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "01": "6C"
     },
     "debug": false,
@@ -148404,6 +148822,61 @@
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EGRTD",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Exhaust Gas Recirculation Temp Sensor D (Bank 2, Sensor 2)",
+    "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 980,
+      "min": -40,
+      "mul": 4,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EGRTD_WIDE",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Exhaust Gas Recirculation Temp Sensor D (Bank 2, Sensor 2), wide",
+    "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw*4 +-40 clamped to [-40, 980]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -168298,6 +168771,64 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "01": "18"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -100,
+      "bix": 8,
+      "div": 128,
+      "len": 8,
+      "max": 99.22,
+      "min": -100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "SHRTFT21",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "SHRTFT associated with O2S21",
+    "path": "Engine.Generic.OxygenSensors",
+    "pid": "01",
+    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "01": "19"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -100,
+      "bix": 8,
+      "div": 128,
+      "len": 8,
+      "max": 99.22,
+      "min": -100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "SHRTFT22",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "SHRTFT associated with O2S22",
+    "path": "Engine.Generic.OxygenSensors",
+    "pid": "01",
+    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "01": "4F"
     },
     "debug": false,
@@ -168426,6 +168957,61 @@
     "scaling": "raw*100 /255 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EGRTA",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Exhaust Gas Recirculation Temp Sensor A (Bank 1, Sensor 1)",
+    "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "01": "6B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 980,
+      "min": -40,
+      "mul": 4,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "EGRTA_WIDE",
+    "make": "SAEJ1979",
+    "model": "",
+    "name": "Exhaust Gas Recirculation Temp Sensor A (Bank 1, Sensor 1), wide",
+    "path": "Engine.Generic",
+    "pid": "01",
+    "scaling": "raw*4 +-40 clamped to [-40, 980]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
