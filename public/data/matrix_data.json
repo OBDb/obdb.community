@@ -1414,7 +1414,7 @@
     "cmd": {
       "22": "4373"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 15,
@@ -1448,7 +1448,7 @@
     "cmd": {
       "22": "4373"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 15,
@@ -24573,7 +24573,7 @@
     "cmd": {
       "22": "4181"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24610,7 +24610,7 @@
     "cmd": {
       "22": "4181"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24647,7 +24647,7 @@
     "cmd": {
       "22": "4182"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24684,7 +24684,7 @@
     "cmd": {
       "22": "4182"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24721,7 +24721,7 @@
     "cmd": {
       "22": "4183"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24758,7 +24758,7 @@
     "cmd": {
       "22": "4183"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24795,7 +24795,7 @@
     "cmd": {
       "22": "4184"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24832,7 +24832,7 @@
     "cmd": {
       "22": "4184"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24869,7 +24869,7 @@
     "cmd": {
       "22": "4185"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24906,7 +24906,7 @@
     "cmd": {
       "22": "4185"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24943,7 +24943,7 @@
     "cmd": {
       "22": "4186"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -24980,7 +24980,7 @@
     "cmd": {
       "22": "4186"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25017,7 +25017,7 @@
     "cmd": {
       "22": "4187"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25054,7 +25054,7 @@
     "cmd": {
       "22": "4187"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25091,7 +25091,7 @@
     "cmd": {
       "22": "4188"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25128,7 +25128,7 @@
     "cmd": {
       "22": "4188"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25165,7 +25165,7 @@
     "cmd": {
       "22": "4189"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25202,7 +25202,7 @@
     "cmd": {
       "22": "4189"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25239,7 +25239,7 @@
     "cmd": {
       "22": "418A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25276,7 +25276,7 @@
     "cmd": {
       "22": "418A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25313,7 +25313,7 @@
     "cmd": {
       "22": "418B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25350,7 +25350,7 @@
     "cmd": {
       "22": "418B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25387,7 +25387,7 @@
     "cmd": {
       "22": "418C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25424,7 +25424,7 @@
     "cmd": {
       "22": "418C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25461,7 +25461,7 @@
     "cmd": {
       "22": "418D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25498,7 +25498,7 @@
     "cmd": {
       "22": "418D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25535,7 +25535,7 @@
     "cmd": {
       "22": "418E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25572,7 +25572,7 @@
     "cmd": {
       "22": "418E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25609,7 +25609,7 @@
     "cmd": {
       "22": "418F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25646,7 +25646,7 @@
     "cmd": {
       "22": "418F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25683,7 +25683,7 @@
     "cmd": {
       "22": "4190"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25720,7 +25720,7 @@
     "cmd": {
       "22": "4190"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25757,7 +25757,7 @@
     "cmd": {
       "22": "4191"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25794,7 +25794,7 @@
     "cmd": {
       "22": "4191"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25831,7 +25831,7 @@
     "cmd": {
       "22": "4192"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25868,7 +25868,7 @@
     "cmd": {
       "22": "4192"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25905,7 +25905,7 @@
     "cmd": {
       "22": "4193"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25942,7 +25942,7 @@
     "cmd": {
       "22": "4193"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -25979,7 +25979,7 @@
     "cmd": {
       "22": "4194"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26016,7 +26016,7 @@
     "cmd": {
       "22": "4194"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26053,7 +26053,7 @@
     "cmd": {
       "22": "4195"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26090,7 +26090,7 @@
     "cmd": {
       "22": "4195"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26127,7 +26127,7 @@
     "cmd": {
       "22": "4196"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26164,7 +26164,7 @@
     "cmd": {
       "22": "4196"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26201,7 +26201,7 @@
     "cmd": {
       "22": "4197"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26238,7 +26238,7 @@
     "cmd": {
       "22": "4197"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26275,7 +26275,7 @@
     "cmd": {
       "22": "4198"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26312,7 +26312,7 @@
     "cmd": {
       "22": "4198"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26349,7 +26349,7 @@
     "cmd": {
       "22": "4199"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26386,7 +26386,7 @@
     "cmd": {
       "22": "4199"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26423,7 +26423,7 @@
     "cmd": {
       "22": "419A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26460,7 +26460,7 @@
     "cmd": {
       "22": "419A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26497,7 +26497,7 @@
     "cmd": {
       "22": "419B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26534,7 +26534,7 @@
     "cmd": {
       "22": "419B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26571,7 +26571,7 @@
     "cmd": {
       "22": "419C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26608,7 +26608,7 @@
     "cmd": {
       "22": "419C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26645,7 +26645,7 @@
     "cmd": {
       "22": "419D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26682,7 +26682,7 @@
     "cmd": {
       "22": "419D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26719,7 +26719,7 @@
     "cmd": {
       "22": "419E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26756,7 +26756,7 @@
     "cmd": {
       "22": "419E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26793,7 +26793,7 @@
     "cmd": {
       "22": "419F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26830,7 +26830,7 @@
     "cmd": {
       "22": "419F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26867,7 +26867,7 @@
     "cmd": {
       "22": "4200"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26904,7 +26904,7 @@
     "cmd": {
       "22": "4200"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26941,7 +26941,7 @@
     "cmd": {
       "22": "4201"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -26978,7 +26978,7 @@
     "cmd": {
       "22": "4201"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27015,7 +27015,7 @@
     "cmd": {
       "22": "4202"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27052,7 +27052,7 @@
     "cmd": {
       "22": "4202"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27089,7 +27089,7 @@
     "cmd": {
       "22": "4203"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27126,7 +27126,7 @@
     "cmd": {
       "22": "4203"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27163,7 +27163,7 @@
     "cmd": {
       "22": "4204"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27200,7 +27200,7 @@
     "cmd": {
       "22": "4204"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27237,7 +27237,7 @@
     "cmd": {
       "22": "4205"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27274,7 +27274,7 @@
     "cmd": {
       "22": "4205"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27311,7 +27311,7 @@
     "cmd": {
       "22": "4206"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27348,7 +27348,7 @@
     "cmd": {
       "22": "4206"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27385,7 +27385,7 @@
     "cmd": {
       "22": "4207"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27422,7 +27422,7 @@
     "cmd": {
       "22": "4207"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27459,7 +27459,7 @@
     "cmd": {
       "22": "4208"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27496,7 +27496,7 @@
     "cmd": {
       "22": "4208"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27533,7 +27533,7 @@
     "cmd": {
       "22": "4209"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27570,7 +27570,7 @@
     "cmd": {
       "22": "4209"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27607,7 +27607,7 @@
     "cmd": {
       "22": "420A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27644,7 +27644,7 @@
     "cmd": {
       "22": "420A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27681,7 +27681,7 @@
     "cmd": {
       "22": "420B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27718,7 +27718,7 @@
     "cmd": {
       "22": "420B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -27740,6 +27740,80 @@
         "id": "BOLT_HVBAT_CMU_VOLT",
         "matchDetails": {
           "group1": "CMU43"
+        },
+        "name": "HV battery pack voltage",
+        "path": "Battery.Modules",
+        "suggestedMetricGroup": "batteryModulesVoltage"
+      }
+    ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "420C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "7E7",
+    "id": "BOLT_HVBAT_CMU44_VOLT",
+    "make": "Chevrolet",
+    "model": "Bolt-EUV",
+    "name": "HV battery module 44 voltage",
+    "path": "Battery.Modules.44",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "signalGroups": [
+      {
+        "id": "BOLT_HVBAT_CMU_VOLT",
+        "matchDetails": {
+          "group1": "CMU44"
+        },
+        "name": "HV battery pack voltage",
+        "path": "Battery.Modules",
+        "suggestedMetricGroup": "batteryModulesVoltage"
+      }
+    ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "420C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 65535,
+      "len": 16,
+      "max": 5,
+      "mul": 5,
+      "unit": "volts"
+    },
+    "hdr": "7E7",
+    "id": "BOLT_HVBAT_CMU44_VOLT",
+    "make": "Chevrolet",
+    "model": "Bolt-EV",
+    "name": "HV battery module 44 voltage",
+    "path": "Battery.Modules.44",
+    "pid": "22",
+    "scaling": "raw*5 /65535 clamped to [5]",
+    "signalGroups": [
+      {
+        "id": "BOLT_HVBAT_CMU_VOLT",
+        "matchDetails": {
+          "group1": "CMU44"
         },
         "name": "HV battery pack voltage",
         "path": "Battery.Modules",
@@ -27852,80 +27926,6 @@
       "22": "420C"
     },
     "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 65535,
-      "len": 16,
-      "max": 5,
-      "mul": 5,
-      "unit": "volts"
-    },
-    "hdr": "7E7",
-    "id": "BOLT_HVBAT_CMU44_VOLT",
-    "make": "Chevrolet",
-    "model": "Bolt-EUV",
-    "name": "HV battery module 44 voltage",
-    "path": "Battery.Modules.44",
-    "pid": "22",
-    "scaling": "raw*5 /65535 clamped to [5]",
-    "signalGroups": [
-      {
-        "id": "BOLT_HVBAT_CMU_VOLT",
-        "matchDetails": {
-          "group1": "CMU44"
-        },
-        "name": "HV battery pack voltage",
-        "path": "Battery.Modules",
-        "suggestedMetricGroup": "batteryModulesVoltage"
-      }
-    ],
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "420C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 65535,
-      "len": 16,
-      "max": 5,
-      "mul": 5,
-      "unit": "volts"
-    },
-    "hdr": "7E7",
-    "id": "BOLT_HVBAT_CMU44_VOLT",
-    "make": "Chevrolet",
-    "model": "Bolt-EV",
-    "name": "HV battery module 44 voltage",
-    "path": "Battery.Modules.44",
-    "pid": "22",
-    "scaling": "raw*5 /65535 clamped to [5]",
-    "signalGroups": [
-      {
-        "id": "BOLT_HVBAT_CMU_VOLT",
-        "matchDetails": {
-          "group1": "CMU44"
-        },
-        "name": "HV battery pack voltage",
-        "path": "Battery.Modules",
-        "suggestedMetricGroup": "batteryModulesVoltage"
-      }
-    ],
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "420C"
-    },
-    "debug": true,
     "eax": "60",
     "fmt": {
       "len": 16,
@@ -27973,7 +27973,7 @@
     "cmd": {
       "22": "420D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28010,7 +28010,7 @@
     "cmd": {
       "22": "420D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28047,7 +28047,7 @@
     "cmd": {
       "22": "420E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28084,7 +28084,7 @@
     "cmd": {
       "22": "420E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28121,7 +28121,7 @@
     "cmd": {
       "22": "420F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28158,7 +28158,7 @@
     "cmd": {
       "22": "420F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28195,7 +28195,7 @@
     "cmd": {
       "22": "4210"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28232,7 +28232,7 @@
     "cmd": {
       "22": "4210"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28269,7 +28269,7 @@
     "cmd": {
       "22": "4211"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28306,7 +28306,7 @@
     "cmd": {
       "22": "4211"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28343,7 +28343,7 @@
     "cmd": {
       "22": "4212"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28380,7 +28380,7 @@
     "cmd": {
       "22": "4212"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28417,7 +28417,7 @@
     "cmd": {
       "22": "4213"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28454,7 +28454,7 @@
     "cmd": {
       "22": "4213"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28491,7 +28491,7 @@
     "cmd": {
       "22": "4214"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28528,7 +28528,7 @@
     "cmd": {
       "22": "4214"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28565,7 +28565,7 @@
     "cmd": {
       "22": "4215"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28602,7 +28602,7 @@
     "cmd": {
       "22": "4215"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28639,7 +28639,7 @@
     "cmd": {
       "22": "4216"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28676,7 +28676,7 @@
     "cmd": {
       "22": "4216"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28713,7 +28713,7 @@
     "cmd": {
       "22": "4217"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28750,7 +28750,7 @@
     "cmd": {
       "22": "4217"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28787,7 +28787,7 @@
     "cmd": {
       "22": "4218"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28824,7 +28824,7 @@
     "cmd": {
       "22": "4218"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28861,7 +28861,7 @@
     "cmd": {
       "22": "4219"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28898,7 +28898,7 @@
     "cmd": {
       "22": "4219"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28935,7 +28935,7 @@
     "cmd": {
       "22": "421A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -28972,7 +28972,7 @@
     "cmd": {
       "22": "421A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29009,7 +29009,7 @@
     "cmd": {
       "22": "421B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29046,7 +29046,7 @@
     "cmd": {
       "22": "421B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29083,7 +29083,7 @@
     "cmd": {
       "22": "421C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29120,7 +29120,7 @@
     "cmd": {
       "22": "421C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29157,7 +29157,7 @@
     "cmd": {
       "22": "421D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29194,7 +29194,7 @@
     "cmd": {
       "22": "421D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29231,7 +29231,7 @@
     "cmd": {
       "22": "421E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29268,7 +29268,7 @@
     "cmd": {
       "22": "421E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29305,7 +29305,7 @@
     "cmd": {
       "22": "421F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29342,7 +29342,7 @@
     "cmd": {
       "22": "421F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29379,7 +29379,7 @@
     "cmd": {
       "22": "4220"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29416,7 +29416,7 @@
     "cmd": {
       "22": "4220"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29453,7 +29453,7 @@
     "cmd": {
       "22": "4221"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29490,7 +29490,7 @@
     "cmd": {
       "22": "4221"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29527,7 +29527,7 @@
     "cmd": {
       "22": "4222"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29564,7 +29564,7 @@
     "cmd": {
       "22": "4222"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29601,7 +29601,7 @@
     "cmd": {
       "22": "4223"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29638,7 +29638,7 @@
     "cmd": {
       "22": "4223"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29675,7 +29675,7 @@
     "cmd": {
       "22": "4224"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29712,7 +29712,7 @@
     "cmd": {
       "22": "4224"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29749,7 +29749,7 @@
     "cmd": {
       "22": "4225"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29786,7 +29786,7 @@
     "cmd": {
       "22": "4225"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29823,7 +29823,7 @@
     "cmd": {
       "22": "4226"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29860,7 +29860,7 @@
     "cmd": {
       "22": "4226"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29897,7 +29897,7 @@
     "cmd": {
       "22": "4227"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29934,7 +29934,7 @@
     "cmd": {
       "22": "4227"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -29971,7 +29971,7 @@
     "cmd": {
       "22": "4228"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30008,7 +30008,7 @@
     "cmd": {
       "22": "4228"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30045,7 +30045,7 @@
     "cmd": {
       "22": "4229"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30082,7 +30082,7 @@
     "cmd": {
       "22": "4229"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30119,7 +30119,7 @@
     "cmd": {
       "22": "422A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30156,7 +30156,7 @@
     "cmd": {
       "22": "422A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30193,7 +30193,7 @@
     "cmd": {
       "22": "422B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30230,7 +30230,7 @@
     "cmd": {
       "22": "422B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30267,7 +30267,7 @@
     "cmd": {
       "22": "422C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30304,7 +30304,7 @@
     "cmd": {
       "22": "422C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30341,7 +30341,7 @@
     "cmd": {
       "22": "422D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30378,7 +30378,7 @@
     "cmd": {
       "22": "422D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30415,7 +30415,7 @@
     "cmd": {
       "22": "422E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30452,7 +30452,7 @@
     "cmd": {
       "22": "422E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30489,7 +30489,7 @@
     "cmd": {
       "22": "422F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30526,7 +30526,7 @@
     "cmd": {
       "22": "422F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30563,7 +30563,7 @@
     "cmd": {
       "22": "4230"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30600,7 +30600,7 @@
     "cmd": {
       "22": "4230"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30637,7 +30637,7 @@
     "cmd": {
       "22": "4231"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30674,7 +30674,7 @@
     "cmd": {
       "22": "4231"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30711,7 +30711,7 @@
     "cmd": {
       "22": "4232"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30748,7 +30748,7 @@
     "cmd": {
       "22": "4232"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30785,7 +30785,7 @@
     "cmd": {
       "22": "4233"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30822,7 +30822,7 @@
     "cmd": {
       "22": "4233"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30859,7 +30859,7 @@
     "cmd": {
       "22": "4234"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30896,7 +30896,7 @@
     "cmd": {
       "22": "4234"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30933,7 +30933,7 @@
     "cmd": {
       "22": "4235"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -30970,7 +30970,7 @@
     "cmd": {
       "22": "4235"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31007,7 +31007,7 @@
     "cmd": {
       "22": "4236"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31044,7 +31044,7 @@
     "cmd": {
       "22": "4236"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31081,7 +31081,7 @@
     "cmd": {
       "22": "4237"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31118,7 +31118,7 @@
     "cmd": {
       "22": "4237"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31155,7 +31155,7 @@
     "cmd": {
       "22": "4238"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31192,7 +31192,7 @@
     "cmd": {
       "22": "4238"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31229,7 +31229,7 @@
     "cmd": {
       "22": "4239"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31266,7 +31266,7 @@
     "cmd": {
       "22": "4239"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31303,7 +31303,7 @@
     "cmd": {
       "22": "423A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31340,7 +31340,7 @@
     "cmd": {
       "22": "423A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31377,7 +31377,7 @@
     "cmd": {
       "22": "423B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31414,7 +31414,7 @@
     "cmd": {
       "22": "423B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31451,7 +31451,7 @@
     "cmd": {
       "22": "423C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31488,7 +31488,7 @@
     "cmd": {
       "22": "423C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31525,7 +31525,7 @@
     "cmd": {
       "22": "423D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31562,7 +31562,7 @@
     "cmd": {
       "22": "423D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31599,7 +31599,7 @@
     "cmd": {
       "22": "423E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31636,7 +31636,7 @@
     "cmd": {
       "22": "423E"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31673,7 +31673,7 @@
     "cmd": {
       "22": "423F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31710,7 +31710,7 @@
     "cmd": {
       "22": "423F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31747,7 +31747,7 @@
     "cmd": {
       "22": "4240"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31784,7 +31784,7 @@
     "cmd": {
       "22": "4240"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -31821,7 +31821,7 @@
     "cmd": {
       "22": "436B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 2,
@@ -31847,7 +31847,7 @@
     "cmd": {
       "22": "436B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 2,
@@ -31873,7 +31873,7 @@
     "cmd": {
       "22": "436C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 20,
@@ -31901,7 +31901,7 @@
     "cmd": {
       "22": "436C"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 20,
@@ -31929,7 +31929,7 @@
     "cmd": {
       "22": "43A5"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -31954,7 +31954,7 @@
     "cmd": {
       "22": "43A5"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -31979,7 +31979,7 @@
     "cmd": {
       "22": "43AF"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -32006,7 +32006,7 @@
     "cmd": {
       "22": "43AF"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -32083,7 +32083,7 @@
     "cmd": {
       "22": "4801"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 500,
@@ -32311,7 +32311,7 @@
     "cmd": {
       "22": "4848"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 500,
@@ -67893,6 +67893,31 @@
     "cmd": {
       "22": "B002"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7C6",
+    "id": "TUCSON_ODO_KM",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "name": "Odometer (Metric)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "B002"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -67962,31 +67987,6 @@
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
     "signalGroups": [],
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7C6",
-    "id": "TUCSON_ODO_KM",
-    "make": "Hyundai",
-    "model": "Tucson",
-    "name": "Odometer (Metric)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -68299,6 +68299,31 @@
     "cmd": {
       "22": "B002"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "miles"
+    },
+    "hdr": "7C6",
+    "id": "TUCSON_ODO_MI",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "name": "Odometer (Imperial)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "B002"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -68342,31 +68367,6 @@
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
     "signalGroups": [],
-    "suggestedMetric": "odometer",
-    "unit": "miles"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "B002"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "len": 24,
-      "max": 4294967295,
-      "unit": "miles"
-    },
-    "hdr": "7C6",
-    "id": "TUCSON_ODO_MI",
-    "make": "Hyundai",
-    "model": "Tucson",
-    "name": "Odometer (Imperial)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
     "suggestedMetric": "odometer",
     "unit": "miles"
   },
@@ -77887,30 +77887,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E0",
-    "id": "SIERRA1500_VSS",
-    "make": "GMC",
-    "model": "Sierra-1500",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "000D"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E0",
     "id": "BOLT_VSS",
     "make": "Chevrolet",
     "model": "Bolt-EUV",
@@ -77928,7 +77904,7 @@
     "cmd": {
       "22": "000D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -77944,6 +77920,30 @@
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "000D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
+    "id": "SIERRA1500_VSS",
+    "make": "GMC",
+    "model": "Sierra-1500",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
   },
@@ -90213,7 +90213,7 @@
     "cmd": {
       "22": "434F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -90240,7 +90240,7 @@
     "cmd": {
       "22": "434F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -90267,7 +90267,7 @@
     "cmd": {
       "22": "4368"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -90293,7 +90293,7 @@
     "cmd": {
       "22": "4368"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -90319,7 +90319,7 @@
     "cmd": {
       "22": "4369"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 5,
@@ -90345,7 +90345,7 @@
     "cmd": {
       "22": "4369"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 5,
@@ -90371,7 +90371,7 @@
     "cmd": {
       "22": "4531"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -90412,7 +90412,7 @@
     "cmd": {
       "22": "4531"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -91565,7 +91565,7 @@
     "cmd": {
       "22": "8334"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -91592,7 +91592,7 @@
     "cmd": {
       "22": "8334"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -99378,6 +99378,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "TUCSON_TP_RL",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_PRESS_RR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -99466,32 +99492,6 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "TUCSON_TP_RL",
-    "make": "Hyundai",
-    "model": "Tucson",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
@@ -110025,6 +110025,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "TUCSON_TP_RR",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_PRESS_RL",
     "make": "Hyundai",
     "model": "Veloster",
@@ -110113,32 +110139,6 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "TUCSON_TP_RR",
-    "make": "Hyundai",
-    "model": "Tucson",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
@@ -152253,10 +152253,10 @@
       "unit": "liters"
     },
     "hdr": "7C6",
-    "id": "VELOSTER_FLI_VOL",
+    "id": "TUCSON_FLI_VOL",
     "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Fuel level",
+    "model": "Tucson",
+    "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -152269,7 +152269,7 @@
     "cmd": {
       "22": "B002"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 32,
@@ -152278,10 +152278,10 @@
       "unit": "liters"
     },
     "hdr": "7C6",
-    "id": "TUCSON_FLI_VOL",
+    "id": "VELOSTER_FLI_VOL",
     "make": "Hyundai",
-    "model": "Tucson",
-    "name": "Fuel level (volume)",
+    "model": "Veloster",
+    "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -153630,6 +153630,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "TUCSON_TP_FL",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_PRESS_FL",
     "make": "Hyundai",
     "model": "Veloster",
@@ -153740,32 +153766,6 @@
     "id": "Optima_TP_FL",
     "make": "Kia",
     "model": "Optima",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "TUCSON_TP_FL",
-    "make": "Hyundai",
-    "model": "Tucson",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -168386,6 +168386,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "TUCSON_TP_FR",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_PRESS_FR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -168474,32 +168500,6 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "TUCSON_TP_FR",
-    "make": "Hyundai",
-    "model": "Tucson",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
