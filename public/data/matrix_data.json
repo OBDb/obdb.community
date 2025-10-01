@@ -99294,7 +99294,7 @@
     "cmd": {
       "22": "3083"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -99562,7 +99562,7 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 112,
@@ -101422,12 +101422,13 @@
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "KONA_TT_RR",
+    "id": "VELOSTER_TPMS_TEMP_RR",
     "make": "Hyundai",
-    "model": "Kona",
+    "model": "Veloster",
     "name": "Tire temperature rear right",
     "path": "Tires",
     "pid": "22",
@@ -101441,20 +101442,19 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 120,
       "len": 8,
       "max": 100,
       "min": -50,
-      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "VELOSTER_TPMS_TEMP_RR",
+    "id": "KONA_TT_RR",
     "make": "Hyundai",
-    "model": "Veloster",
+    "model": "Kona",
     "name": "Tire temperature rear right",
     "path": "Tires",
     "pid": "22",
@@ -106603,6 +106603,31 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_RR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire alert rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -106651,31 +106676,6 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 136,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 136,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TPMS_ALERT_RR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Tire alert rear right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
   },
   {
     "bitLength": 8,
@@ -110209,7 +110209,7 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 152,
@@ -116115,7 +116115,7 @@
     "cmd": {
       "22": "3086"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 160,
@@ -116278,12 +116278,13 @@
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "KONA_TT_RL",
+    "id": "VELOSTER_TPMS_TEMP_RL",
     "make": "Hyundai",
-    "model": "Kona",
+    "model": "Veloster",
     "name": "Tire temperature rear left",
     "path": "Tires",
     "pid": "22",
@@ -116297,20 +116298,19 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 160,
       "len": 8,
       "max": 100,
       "min": -50,
-      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "VELOSTER_TPMS_TEMP_RL",
+    "id": "KONA_TT_RL",
     "make": "Hyundai",
-    "model": "Veloster",
+    "model": "Kona",
     "name": "Tire temperature rear left",
     "path": "Tires",
     "pid": "22",
@@ -119619,7 +119619,7 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 176,
@@ -153761,6 +153761,32 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire pressure front left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -153828,32 +153854,6 @@
     "make": "Kia",
     "model": "Soul",
     "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TPMS_PRESS_FL",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Tire pressure front left",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -158604,6 +158604,33 @@
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_TEMP_FL",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire temperature front left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 100,
+      "min": -50,
       "unit": "celsius"
     },
     "hdr": "7A0",
@@ -158669,33 +158696,6 @@
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
     "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "len": 8,
-      "max": 100,
-      "min": -50,
-      "sign": true,
-      "unit": "celsius"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TPMS_TEMP_FL",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Tire temperature front left",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [-50, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -158955,7 +158955,7 @@
     "cmd": {
       "22": "2615"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 400,
@@ -161023,31 +161023,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 48,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_FL_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "add": -50,
       "bix": 48,
       "len": 8,
@@ -161063,6 +161038,31 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_FL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -163704,31 +163704,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 56,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_FR_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "add": -50,
       "bix": 56,
       "len": 8,
@@ -163744,6 +163719,31 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_FR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -164010,7 +164010,7 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 56,
@@ -165800,31 +165800,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 64,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_RL_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 64,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "add": -50,
       "bix": 64,
       "len": 8,
@@ -165840,6 +165815,31 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_RL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -168169,31 +168169,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 72,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_RR_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "add": -50,
       "bix": 72,
       "len": 8,
@@ -168209,6 +168184,31 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_RR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -168515,6 +168515,32 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_PRESS_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire pressure front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -168563,32 +168589,6 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TPMS_PRESS_FR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Tire pressure front right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -177468,12 +177468,13 @@
       "len": 8,
       "max": 100,
       "min": -50,
+      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "KONA_TT_FR",
+    "id": "VELOSTER_TPMS_TEMP_FR",
     "make": "Hyundai",
-    "model": "Kona",
+    "model": "Veloster",
     "name": "Tire temperature front right",
     "path": "Tires",
     "pid": "22",
@@ -177487,20 +177488,19 @@
     "cmd": {
       "22": "C00B"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 80,
       "len": 8,
       "max": 100,
       "min": -50,
-      "sign": true,
       "unit": "celsius"
     },
     "hdr": "7A0",
-    "id": "VELOSTER_TPMS_TEMP_FR",
+    "id": "KONA_TT_FR",
     "make": "Hyundai",
-    "model": "Veloster",
+    "model": "Kona",
     "name": "Tire temperature front right",
     "path": "Tires",
     "pid": "22",
@@ -180938,6 +180938,31 @@
     "cmd": {
       "22": "C00B"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "VELOSTER_TPMS_ALERT_FR",
+    "make": "Hyundai",
+    "model": "Veloster",
+    "name": "Tire alert front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -181010,31 +181035,6 @@
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "7A0",
-    "id": "VELOSTER_TPMS_ALERT_FR",
-    "make": "Hyundai",
-    "model": "Veloster",
-    "name": "Tire alert front right",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
   },
   {
     "bitLength": 8,
