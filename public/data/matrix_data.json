@@ -103351,6 +103351,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "Optima_TP_RR",
+    "make": "Kia",
+    "model": "Optima",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "SANTAFEHYB_TP_RR",
     "make": "Hyundai",
     "model": "Santa-Fe-Hybrid",
@@ -103469,32 +103495,6 @@
     "scaling": "Mapped values: {'0': {'description': '>3 V', 'value': '3V+'}, '1': {'description': '2.7 - 3 V', 'value': '27_3V'}, '2': {'description': '2.4 - 2.7 V', 'value': '2_4_2_7V'}, '3': {'description': '< 2.4', 'value': '2_4-'}}",
     "suggestedMetric": "",
     "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 128,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 128,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "Optima_TP_RR",
-    "make": "Kia",
-    "model": "Optima",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
   },
   {
     "bitLength": 8,
@@ -153578,6 +153578,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "Optima_TP_FL",
+    "make": "Kia",
+    "model": "Optima",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "SANTAFEHYB_TP_FL",
     "make": "Hyundai",
     "model": "Santa-Fe-Hybrid",
@@ -153744,32 +153770,6 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "Optima_TP_FL",
-    "make": "Kia",
-    "model": "Optima",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "psi"
   },
@@ -165931,6 +165931,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "Optima_TP_FR",
+    "make": "Kia",
+    "model": "Optima",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "SANTAFEHYB_TP_FR",
     "make": "Hyundai",
     "model": "Santa-Fe-Hybrid",
@@ -165961,32 +165987,6 @@
     "id": "SOUL_TP_FR",
     "make": "Kia",
     "model": "Soul",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 64,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 64,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "Optima_TP_FR",
-    "make": "Kia",
-    "model": "Optima",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -180811,6 +180811,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "Optima_TP_RL",
+    "make": "Kia",
+    "model": "Optima",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "SANTAFEHYB_TP_RL",
     "make": "Hyundai",
     "model": "Santa-Fe-Hybrid",
@@ -180922,32 +180948,6 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "noyes"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
-    "id": "Optima_TP_RL",
-    "make": "Kia",
-    "model": "Optima",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
   },
   {
     "bitLength": 8,
