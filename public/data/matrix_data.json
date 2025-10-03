@@ -237,6 +237,30 @@
       "unit": "offon"
     },
     "hdr": "760",
+    "id": "BRONCOSPORT_PARKING_BRAKE",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Parking brake state",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B00"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "760",
     "id": "EDGE_PARKING_BRAKE",
     "make": "Ford",
     "model": "Edge",
@@ -10307,6 +10331,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_MAP_V",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Manifold absolute pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0009765625 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0301"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0009765625,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "EDGE_MAP_V",
     "make": "Ford",
     "model": "Edge",
@@ -10840,6 +10889,31 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_LPFP_DUTY",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Low pressure fuel pump commanded duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0307"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "EDGE_LPFP_DUTY",
     "make": "Ford",
     "model": "Edge",
@@ -11016,6 +11090,31 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_VCT_INT_DUTY",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "VCT intake camshaft solenoid duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0316"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "EDGE_VCT_INT_DUTY",
     "make": "Ford",
     "model": "Edge",
@@ -11070,6 +11169,31 @@
     "make": "Ford",
     "model": "Mustang",
     "name": "VCT intake camshaft solenoid duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0317"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_VCT_EXH_DUTY",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "VCT exhaust camshaft solenoid duty cycle",
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0030517578 clamped to [100]",
@@ -11167,6 +11291,32 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_VCT_INT_ACT",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "VCT intake camshaft actual",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 0]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0318"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 0,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "EDGE_VCT_INT_ACT",
     "make": "Ford",
     "model": "Edge",
@@ -11244,6 +11394,31 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_VCT_EXH_ACT",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "VCT exhaust camshaft actual",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0319"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "EDGE_VCT_EXH_ACT",
     "make": "Ford",
     "model": "Edge",
@@ -11301,6 +11476,32 @@
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0625 clamped to [50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "031A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_VCT_INT_ERR",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "VCT intake camshaft error",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "degrees"
   },
@@ -11398,6 +11599,32 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_VCT_EXH_ERR",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "VCT exhaust camshaft error",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "031B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "EDGE_VCT_EXH_ERR",
     "make": "Ford",
     "model": "Edge",
@@ -11459,6 +11686,31 @@
     "scaling": "raw*0.0625 clamped to [-50, 50]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0324"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 204.6,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_HPFP_V",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "High pressure fuel rail sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/204.6 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -11534,6 +11786,33 @@
     "scaling": "raw*0.0048875855 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0338"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 512,
+      "len": 16,
+      "max": 64,
+      "min": -63.9,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_ETC_TRIM_LEARNED",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Electronic throttle control learned trim angle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/512 clamped to [-63.9, 64]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -11622,6 +11901,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 204.8,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_TIP_V",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Throttle inlet pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/204.8 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "033C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 5,
       "mul": 0.0048828125,
@@ -11697,6 +12001,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 903.8107848,
+      "len": 16,
+      "max": 60,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_TIP_ABS",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Throttle inlet pressure absolute",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/903.8107848 clamped to [60]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "033E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 60,
       "mul": 0.0011064263,
@@ -11760,6 +12089,32 @@
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0011064263 clamped to [60]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0353"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 27.582114,
+      "len": 16,
+      "max": 20,
+      "min": 8,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_BARO",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Barometric pressure",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/27.582114 clamped to [8, 20]",
     "suggestedMetric": "",
     "unit": "psi"
   },
@@ -11856,6 +12211,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_BARO_V",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Barometric pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "035A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "EDGE_BARO_V",
     "make": "Ford",
     "model": "Edge",
@@ -11913,6 +12293,31 @@
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "035F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1,
+      "mul": 0.0009765625,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_RO2_V",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Rear O2 voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0009765625 clamped to [1]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -12000,6 +12405,32 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 5.0048876,
+      "len": 16,
+      "max": 5,
+      "sign": true,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_EVAP_V",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Evaporative vapor pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/5.0048876 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "038E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 5,
       "mul": 0.1998046869,
@@ -12065,6 +12496,33 @@
     "scaling": "raw*0.1998046869 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "038F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 64,
+      "len": 16,
+      "max": 148.889,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_ECT",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Engine coolant temperature",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/64 clamped to [-40, 148.889]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -12237,6 +12695,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_AAT_V",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Ambient air temperature sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "EDGE_AAT_V",
     "make": "Ford",
     "model": "Edge",
@@ -12296,6 +12779,31 @@
     "scaling": "raw*0.0048875855 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BB"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_VCT_EXH_DES",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "VCT exhaust cam, desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
   },
   {
     "bitLength": 16,
@@ -12381,6 +12889,33 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 40,
+      "min": -30,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_VCT_INT_DES",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "VCT intake cam, desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [-30, 40]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BC"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 0,
       "min": -50,
@@ -12449,6 +12984,33 @@
     "scaling": "raw*0.0625 clamped to [-50, 0]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BD"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 8192,
+      "len": 16,
+      "max": 3.99,
+      "min": -4,
+      "sign": true,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_CL_LC",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Closed loop lambda correction",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/8192 clamped to [-4, 3.99]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -12618,6 +13180,31 @@
       "unit": "psi"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_HPFP_DES",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "High pressure fuel pressure desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*1.4503773969 clamped to [3500]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03DC"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 3500,
+      "mul": 1.4503773969,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
     "id": "EDGE_HPFP_DES",
     "make": "Ford",
     "model": "Edge",
@@ -12755,6 +13342,32 @@
     "scaling": "raw*100 /65535 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03E8"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1,
+      "min": -1,
+      "mul": 6.10352e-05,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_OAR",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Octane adjust ratio",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*6.10352e-05 clamped to [-1, 1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -19544,6 +20157,33 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_TOT",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Transmission oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "BRONCO_TOT",
     "make": "Ford",
     "model": "Bronco",
@@ -20687,6 +21327,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "BRONCOSPORT_TP_FL",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "BRONCO_TP_FL",
     "make": "Ford",
     "model": "Bronco",
@@ -21053,6 +21718,31 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "BRONCOSPORT_TP_FR",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
   {
@@ -21478,6 +22168,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "BRONCOSPORT_TP_RR",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "BRONCO_TP_RRO",
     "make": "Ford",
     "model": "Bronco",
@@ -21861,6 +22576,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "BRONCOSPORT_TP_RL",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "BRONCO_TP_RLO",
     "make": "Ford",
     "model": "Bronco",
@@ -22219,6 +22959,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "BRONCOSPORT_TP_RRI",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Rear right inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2817"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "BRONCO_TP_RRI",
     "make": "Ford",
     "model": "Bronco",
@@ -22402,6 +23167,31 @@
     "make": "Ford",
     "model": "F-350",
     "name": "Rear right inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2818"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "BRONCOSPORT_TP_RLI",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Rear left inner tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
@@ -32557,6 +33347,34 @@
     "scaling": "raw*5 /65535 clamped to [5]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A224"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 736,
+      "min": -736,
+      "mul": 3.6,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "764",
+    "id": "BRONCOSPORT_CC_TGT_VSS",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Target vehicle speed",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw*3.6 /10 clamped to [-736, 736]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -66614,6 +67432,31 @@
       "unit": "kilometers"
     },
     "hdr": "720",
+    "id": "BRONCOSPORT_ODO_TRIP",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Trip distance",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 24,
+      "max": 1677721,
+      "unit": "kilometers"
+    },
+    "hdr": "720",
     "id": "EDGE_ODO_TRIP",
     "make": "Ford",
     "model": "Edge",
@@ -66739,6 +67582,30 @@
     "make": "Ford",
     "model": "Focus",
     "name": "Odometer (Instrument panel)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_ODO",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Odometer",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [16777215]",
@@ -78686,6 +79553,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_ACC_POS",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Accelerator pedal position",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "032B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 8,
       "max": 100,
       "mul": 0.5,
@@ -78848,6 +79740,30 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03CA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 148.889,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_MCT",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Manifold charge temperature",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw clamped to [148.889]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -83674,6 +84590,70 @@
       }
     },
     "hdr": "7E0",
+    "id": "BRONCOSPORT_GEAR",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E0",
     "id": "BRONCO_GEAR",
     "make": "Ford",
     "model": "Bronco",
@@ -84343,6 +85323,50 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "10": {
+          "description": "Manual",
+          "value": "MANUAL"
+        },
+        "46": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "50": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "60": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "70": {
+          "description": "Park",
+          "value": "PARK"
+        }
+      }
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_GEAR_SHFT",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -88591,6 +89615,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2A05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100000,
+      "len": 8,
+      "max": 3.5,
+      "mul": 1373,
+      "unit": "bars"
+    },
+    "hdr": "720",
+    "id": "MX5_TP_1_ND",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Wheel 1 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1373 /100000 clamped to [3.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2A06"
     },
     "debug": false,
@@ -88632,6 +89682,32 @@
     "id": "MAZDA3_TP_2",
     "make": "Mazda",
     "model": "3",
+    "name": "Wheel 2 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1373 /100000 clamped to [3.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A06"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100000,
+      "len": 8,
+      "max": 3.5,
+      "mul": 1373,
+      "unit": "bars"
+    },
+    "hdr": "720",
+    "id": "MX5_TP_2_ND",
+    "make": "Mazda",
+    "model": "MX-5",
     "name": "Wheel 2 pressure",
     "path": "Tires",
     "pid": "22",
@@ -88695,6 +89771,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2A07"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100000,
+      "len": 8,
+      "max": 3.5,
+      "mul": 1373,
+      "unit": "bars"
+    },
+    "hdr": "720",
+    "id": "MX5_TP_3_ND",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Wheel 3 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1373 /100000 clamped to [3.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2A08"
     },
     "debug": false,
@@ -88736,6 +89838,32 @@
     "id": "MAZDA3_TP_4",
     "make": "Mazda",
     "model": "3",
+    "name": "Wheel 4 pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1373 /100000 clamped to [3.5]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A08"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100000,
+      "len": 8,
+      "max": 3.5,
+      "mul": 1373,
+      "unit": "bars"
+    },
+    "hdr": "720",
+    "id": "MX5_TP_4_ND",
+    "make": "Mazda",
+    "model": "MX-5",
     "name": "Wheel 4 pressure",
     "path": "Tires",
     "pid": "22",
@@ -88814,6 +89942,32 @@
     "id": "MAZDA3_TT_1",
     "make": "Mazda",
     "model": "3",
+    "name": "Wheel 1 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "720",
+    "id": "MX5_TT_1_ND",
+    "make": "Mazda",
+    "model": "MX-5",
     "name": "Wheel 1 temperature",
     "path": "Tires",
     "pid": "22",
@@ -88929,6 +90083,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2A0B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "720",
+    "id": "MX5_TT_2_ND",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Wheel 2 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2A0C"
     },
     "debug": false,
@@ -88970,6 +90150,32 @@
     "id": "MAZDA3_TT_3",
     "make": "Mazda",
     "model": "3",
+    "name": "Wheel 3 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "720",
+    "id": "MX5_TT_3_ND",
+    "make": "Mazda",
+    "model": "MX-5",
     "name": "Wheel 3 temperature",
     "path": "Tires",
     "pid": "22",
@@ -89070,6 +90276,32 @@
     "id": "MAZDA3_TT_4",
     "make": "Mazda",
     "model": "3",
+    "name": "Wheel 4 temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "720",
+    "id": "MX5_TT_4_ND",
+    "make": "Mazda",
+    "model": "MX-5",
     "name": "Wheel 4 temperature",
     "path": "Tires",
     "pid": "22",
@@ -92557,6 +93789,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "D922"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "MX5_TP_FL_ND",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Front left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D923"
     },
     "debug": false,
@@ -92646,6 +93903,31 @@
     "id": "CX90_TP_FR",
     "make": "Mazda",
     "model": "CX-90",
+    "name": "Front right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D923"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "MX5_TP_FR_ND",
+    "make": "Mazda",
+    "model": "MX-5",
     "name": "Front right pressure",
     "path": "Tires",
     "pid": "22",
@@ -92757,6 +94039,31 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "D924"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "MX5_TP_RL_ND",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Rear left pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D925"
     },
     "debug": false,
@@ -92846,6 +94153,31 @@
     "id": "CX90_TP_RR",
     "make": "Mazda",
     "model": "CX-90",
+    "name": "Rear right pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D925"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "MX5_TP_RR_ND",
+    "make": "Mazda",
+    "model": "MX-5",
     "name": "Rear right pressure",
     "path": "Tires",
     "pid": "22",
@@ -92961,6 +94293,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "D926"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "MX5_TT_FL_ND",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Front left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D927"
     },
     "debug": false,
@@ -93054,6 +94412,32 @@
     "id": "CX90_TT_FR",
     "make": "Mazda",
     "model": "CX-90",
+    "name": "Front right temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D927"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "MX5_TT_FR_ND",
+    "make": "Mazda",
+    "model": "MX-5",
     "name": "Front right temperature",
     "path": "Tires",
     "pid": "22",
@@ -93169,6 +94553,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "D928"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "MX5_TT_RL_ND",
+    "make": "Mazda",
+    "model": "MX-5",
+    "name": "Rear left temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D929"
     },
     "debug": false,
@@ -93262,6 +94672,32 @@
     "id": "CX90_TT_RR",
     "make": "Mazda",
     "model": "CX-90",
+    "name": "Rear right temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D929"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "726",
+    "id": "MX5_TT_RR_ND",
+    "make": "Mazda",
+    "model": "MX-5",
     "name": "Rear right temperature",
     "path": "Tires",
     "pid": "22",
@@ -94743,6 +96179,32 @@
     "signalGroups": [],
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "BRONCOSPORT_FLI",
+    "make": "Ford",
+    "model": "Bronco-Sport",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
   },
   {
     "bitLength": 8,
