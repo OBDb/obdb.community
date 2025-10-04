@@ -21323,6 +21323,31 @@
     "fmt": {
       "div": 20,
       "len": 16,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FUSION_TP_FL",
+    "make": "Ford",
+    "model": "Fusion",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [255]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
       "max": 3276,
       "unit": "psi"
     },
@@ -21652,31 +21677,6 @@
     "fmt": {
       "div": 20,
       "len": 16,
-      "max": 255,
-      "unit": "psi"
-    },
-    "hdr": "726",
-    "id": "FUSION_TP_FL",
-    "make": "Ford",
-    "model": "Fusion",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [255]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2813"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
       "max": 3276,
       "unit": "psi"
     },
@@ -21718,6 +21718,31 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FUSION_TP_FR",
+    "make": "Ford",
+    "model": "Fusion",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [255]",
+    "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
   {
@@ -22060,31 +22085,6 @@
     "fmt": {
       "div": 20,
       "len": 16,
-      "max": 255,
-      "unit": "psi"
-    },
-    "hdr": "726",
-    "id": "FUSION_TP_FR",
-    "make": "Ford",
-    "model": "Fusion",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [255]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2814"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
       "max": 3276,
       "unit": "psi"
     },
@@ -22146,6 +22146,31 @@
     "id": "EXPLORER_TP_RR",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [255]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FUSION_TP_RR",
+    "make": "Ford",
+    "model": "Fusion",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -22468,31 +22493,6 @@
     "fmt": {
       "div": 20,
       "len": 16,
-      "max": 255,
-      "unit": "psi"
-    },
-    "hdr": "726",
-    "id": "FUSION_TP_RR",
-    "make": "Ford",
-    "model": "Fusion",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [255]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2815"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
       "max": 3276,
       "unit": "psi"
     },
@@ -22554,6 +22554,31 @@
     "id": "EXPLORER_TP_RL",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [255]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FUSION_TP_RL",
+    "make": "Ford",
+    "model": "Fusion",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -22862,31 +22887,6 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2816"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
-      "max": 255,
-      "unit": "psi"
-    },
-    "hdr": "726",
-    "id": "FUSION_TP_RL",
-    "make": "Ford",
-    "model": "Fusion",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [255]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
@@ -24905,7 +24905,7 @@
     "cmd": {
       "22": "4028"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 10,
@@ -67690,6 +67690,30 @@
     "cmd": {
       "22": "DD01"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "FUSION_ODO",
+    "make": "Ford",
+    "model": "Fusion",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -67705,30 +67729,6 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [1000000]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DD01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 16777215,
-      "unit": "kilometers"
-    },
-    "hdr": "7E0",
-    "id": "FUSION_ODO",
-    "make": "Ford",
-    "model": "Fusion",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -96011,7 +96011,7 @@
     "cmd": {
       "22": "EE6F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 255,
