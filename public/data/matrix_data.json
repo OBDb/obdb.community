@@ -19729,6 +19729,42 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "BZ4X_HVBAT_CMU01_VOLT",
+    "make": "Toyota",
+    "model": "bZ4X",
+    "name": "HV battery module 01 voltage",
+    "path": "Battery.Modules.01",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
+    "signalGroups": [
+      {
+        "id": "BZ4X_HVBAT_CMU_VOLT",
+        "matchDetails": {
+          "group1": "CMU01"
+        },
+        "name": "HV battery pack voltage",
+        "path": "Battery.Modules",
+        "suggestedMetricGroup": "batteryModulesVoltage"
+      }
+    ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "LANDCRUISER_HVBAT_CMU01_VOLT",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -19788,42 +19824,6 @@
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "182E"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 13107,
-      "len": 16,
-      "max": 5,
-      "unit": "volts"
-    },
-    "hdr": "747",
-    "id": "BZ4X_HVBAT_CMU01_VOLT",
-    "make": "Toyota",
-    "model": "bZ4X",
-    "name": "HV battery module 01 voltage",
-    "path": "Battery.Modules.01",
-    "pid": "22",
-    "scaling": "raw/13107 clamped to [5]",
-    "signalGroups": [
-      {
-        "id": "BZ4X_HVBAT_CMU_VOLT",
-        "matchDetails": {
-          "group1": "CMU01"
-        },
-        "name": "HV battery pack voltage",
-        "path": "Battery.Modules",
-        "suggestedMetricGroup": "batteryModulesVoltage"
-      }
-    ],
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -43716,6 +43716,43 @@
       "unit": "volts"
     },
     "hdr": "747",
+    "id": "BZ4X_HVBAT_CMU02_VOLT",
+    "make": "Toyota",
+    "model": "bZ4X",
+    "name": "HV battery module 02 voltage",
+    "path": "Battery.Modules.02",
+    "pid": "22",
+    "scaling": "raw/13107 clamped to [5]",
+    "signalGroups": [
+      {
+        "id": "BZ4X_HVBAT_CMU_VOLT",
+        "matchDetails": {
+          "group1": "CMU02"
+        },
+        "name": "HV battery pack voltage",
+        "path": "Battery.Modules",
+        "suggestedMetricGroup": "batteryModulesVoltage"
+      }
+    ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "182E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 13107,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "747",
     "id": "LANDCRUISER_HVBAT_CMU02_VOLT",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -43777,43 +43814,6 @@
     "path": "Battery.Cells",
     "pid": "22",
     "scaling": "raw*5 /65535 clamped to [5]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "182E"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 16,
-      "div": 13107,
-      "len": 16,
-      "max": 5,
-      "unit": "volts"
-    },
-    "hdr": "747",
-    "id": "BZ4X_HVBAT_CMU02_VOLT",
-    "make": "Toyota",
-    "model": "bZ4X",
-    "name": "HV battery module 02 voltage",
-    "path": "Battery.Modules.02",
-    "pid": "22",
-    "scaling": "raw/13107 clamped to [5]",
-    "signalGroups": [
-      {
-        "id": "BZ4X_HVBAT_CMU_VOLT",
-        "matchDetails": {
-          "group1": "CMU02"
-        },
-        "name": "HV battery pack voltage",
-        "path": "Battery.Modules",
-        "suggestedMetricGroup": "batteryModulesVoltage"
-      }
-    ],
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -68919,6 +68919,32 @@
       "unit": "kilometers"
     },
     "hdr": "747",
+    "id": "BZ4X_ODO",
+    "make": "Toyota",
+    "model": "bZ4X",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "signalGroups": [],
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "747",
     "id": "IS_ODO_V6",
     "make": "Lexus",
     "model": "IS",
@@ -69101,32 +69127,6 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [16777215]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "0103"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "len": 24,
-      "max": 16777215,
-      "unit": "kilometers"
-    },
-    "hdr": "747",
-    "id": "BZ4X_ODO",
-    "make": "Toyota",
-    "model": "bZ4X",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
-    "signalGroups": [],
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -83426,13 +83426,14 @@
       "unit": "percent"
     },
     "hdr": "745",
-    "id": "LANDCRUISER_HVBAT_SOC_DISPLAY",
+    "id": "BZ4X_HVBAT_SOC_DISPLAY",
     "make": "Toyota",
-    "model": "Land-Cruiser",
+    "model": "bZ4X",
     "name": "HV battery charge (displayed)",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
+    "signalGroups": [],
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
   },
@@ -83442,7 +83443,7 @@
     "cmd": {
       "22": "1739"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -83450,14 +83451,13 @@
       "unit": "percent"
     },
     "hdr": "745",
-    "id": "BZ4X_HVBAT_SOC_DISPLAY",
+    "id": "LANDCRUISER_HVBAT_SOC_DISPLAY",
     "make": "Toyota",
-    "model": "bZ4X",
+    "model": "Land-Cruiser",
     "name": "HV battery charge (displayed)",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
-    "signalGroups": [],
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
   },
@@ -85934,6 +85934,31 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7D2",
+    "id": "BZ4X_VSS",
+    "make": "Toyota",
+    "model": "bZ4X",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "signalGroups": [],
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F0D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D2",
     "id": "IS_VSS_V3",
     "make": "Lexus",
     "model": "IS",
@@ -86013,31 +86038,6 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [255]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1F0D"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D2",
-    "id": "BZ4X_VSS",
-    "make": "Toyota",
-    "model": "bZ4X",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "signalGroups": [],
     "suggestedMetric": "speed",
     "unit": "kilometersPerHour"
   },
@@ -86557,6 +86557,33 @@
       "unit": "percent"
     },
     "hdr": "7D2",
+    "id": "BZ4X_HVBAT_SOC",
+    "make": "Toyota",
+    "model": "bZ4X",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "signalGroups": [],
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F5B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
     "id": "COROLLAHYBRID_SOC",
     "make": "Toyota",
     "model": "Corolla-Hybrid",
@@ -86694,33 +86721,6 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1F5B"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 100,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D2",
-    "id": "BZ4X_HVBAT_SOC",
-    "make": "Toyota",
-    "model": "bZ4X",
-    "name": "HV battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [100]",
-    "signalGroups": [],
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
   },
@@ -113560,6 +113560,33 @@
       "unit": "percent"
     },
     "hdr": "7D2",
+    "id": "BZ4X_HVBAT_SOC_MIN",
+    "make": "Toyota",
+    "model": "bZ4X",
+    "name": "HV battery charge (min)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "106C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
     "id": "LANDCRUISER_HVBAT_SOC_MIN",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -113619,33 +113646,6 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/2 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "106C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 16,
-      "div": 2,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D2",
-    "id": "BZ4X_HVBAT_SOC_MIN",
-    "make": "Toyota",
-    "model": "bZ4X",
-    "name": "HV battery charge (min)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 clamped to [100]",
-    "signalGroups": [],
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -172175,6 +172175,33 @@
       "unit": "percent"
     },
     "hdr": "7D2",
+    "id": "BZ4X_HVBAT_SOC_MAX",
+    "make": "Toyota",
+    "model": "bZ4X",
+    "name": "HV battery charge (max)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "106C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7D2",
     "id": "LANDCRUISER_HVBAT_SOC_MAX",
     "make": "Toyota",
     "model": "Land-Cruiser",
@@ -172234,33 +172261,6 @@
     "path": "Battery",
     "pid": "22",
     "scaling": "raw/2 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "106C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "div": 2,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7D2",
-    "id": "BZ4X_HVBAT_SOC_MAX",
-    "make": "Toyota",
-    "model": "bZ4X",
-    "name": "HV battery charge (max)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 clamped to [100]",
-    "signalGroups": [],
     "suggestedMetric": "",
     "unit": "percent"
   },
