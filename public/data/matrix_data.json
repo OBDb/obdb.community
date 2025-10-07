@@ -14707,6 +14707,33 @@
       "unit": "degrees"
     },
     "hdr": "7B3",
+    "id": "GRCOROLLA_STEERING_ANGLE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Steering Angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*1.5 clamped to [-410, 410]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 410,
+      "min": -410,
+      "mul": 1.5,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7B3",
     "id": "IS_STEERING_ANGLE",
     "make": "Lexus",
     "model": "IS",
@@ -14791,33 +14818,6 @@
     "id": "DAIHATSU_STEERING_ANGLE",
     "make": "Daihatsu",
     "model": "",
-    "name": "Steering Angle",
-    "path": "Control",
-    "pid": "22",
-    "scaling": "raw*1.5 clamped to [-410, 410]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 16,
-      "max": 410,
-      "min": -410,
-      "mul": 1.5,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "7B3",
-    "id": "GRCOROLLA_STEERING_ANGLE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Steering Angle",
     "path": "Control",
     "pid": "22",
@@ -15349,6 +15349,32 @@
       "unit": "celsius"
     },
     "hdr": "7B1",
+    "id": "GRCOROLLA_COUPLING_TEMP",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Coupling Temperature",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw/128 clamped to [-20, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1026"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 100,
+      "min": -20,
+      "unit": "celsius"
+    },
+    "hdr": "7B1",
     "id": "IS_COUPLING_TEMP",
     "make": "Lexus",
     "model": "IS",
@@ -15426,32 +15452,6 @@
     "id": "DAIHATSU_COUPLING_TEMP",
     "make": "Daihatsu",
     "model": "",
-    "name": "Coupling Temperature",
-    "path": "Drivetrain",
-    "pid": "22",
-    "scaling": "raw/128 clamped to [-20, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1026"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 128,
-      "len": 16,
-      "max": 100,
-      "min": -20,
-      "unit": "celsius"
-    },
-    "hdr": "7B1",
-    "id": "GRCOROLLA_COUPLING_TEMP",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Coupling Temperature",
     "path": "Drivetrain",
     "pid": "22",
@@ -16099,6 +16099,32 @@
       "unit": "kilopascal"
     },
     "hdr": "700",
+    "id": "GRCOROLLA_ENG_OIL_PRESS",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Engine Oil Pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /128 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1074"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 1000,
+      "mul": 10,
+      "unit": "kilopascal"
+    },
+    "hdr": "700",
     "id": "IS_ENG_OIL_PRESS",
     "make": "Lexus",
     "model": "IS",
@@ -16205,32 +16231,6 @@
     "id": "DAIHATSU_ENG_OIL_PRESS",
     "make": "Daihatsu",
     "model": "",
-    "name": "Engine Oil Pressure",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw*10 /128 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilopascal"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1074"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 128,
-      "len": 16,
-      "max": 1000,
-      "mul": 10,
-      "unit": "kilopascal"
-    },
-    "hdr": "700",
-    "id": "GRCOROLLA_ENG_OIL_PRESS",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Engine Oil Pressure",
     "path": "Engine",
     "pid": "22",
@@ -18981,6 +18981,33 @@
       "unit": "fahrenheit"
     },
     "hdr": "701",
+    "id": "GRCOROLLA_TF1_PAN",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Transmission Fluid Pan Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1627"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
     "id": "IS_TF1_PAN",
     "make": "Lexus",
     "model": "IS",
@@ -19103,9 +19130,9 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "1627"
+      "22": "1628"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -19116,10 +19143,10 @@
       "unit": "fahrenheit"
     },
     "hdr": "701",
-    "id": "GRCOROLLA_TF1_PAN",
+    "id": "GRCOROLLA_TF2_CONV",
     "make": "Toyota",
     "model": "GR-Corolla",
-    "name": "Transmission Fluid Pan Temperature",
+    "name": "Transmission Fluid Post-Converter Temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
@@ -19227,33 +19254,6 @@
     "id": "DAIHATSU_TF2_CONV",
     "make": "Daihatsu",
     "model": "",
-    "name": "Transmission Fluid Post-Converter Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1628"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 16,
-      "max": 350,
-      "min": -40,
-      "mul": 0.00703125,
-      "unit": "fahrenheit"
-    },
-    "hdr": "701",
-    "id": "GRCOROLLA_TF2_CONV",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Transmission Fluid Post-Converter Temperature",
     "path": "Engine",
     "pid": "22",
@@ -76346,6 +76346,32 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "GRCOROLLA_TIRE_FR_SPD",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "IS300_TIRE_FR_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -76535,32 +76561,6 @@
     "id": "DAIHATSU_TIRE_FR_SPD",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
-    "id": "GRCOROLLA_TIRE_FR_SPD",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "21",
@@ -77751,6 +77751,38 @@
       }
     },
     "hdr": "7D0",
+    "id": "GRCOROLLA_PARKING_BRAKE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Parking Brake",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "62"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "",
+          "value": "Off"
+        },
+        "2": {
+          "description": "",
+          "value": "On"
+        }
+      }
+    },
+    "hdr": "7D0",
     "id": "RAV4HYBRID_PARKING_BRAKE",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -77974,38 +78006,6 @@
     "path": "Control",
     "pid": "21",
     "scaling": "Mapped values: {'1': {'description': '', 'value': 'Off'}, '3': {'description': '', 'value': 'On'}, '5': {'description': '', 'value': 'Off'}, '7': {'description': '', 'value': 'On'}, '9': {'description': '', 'value': 'Off'}, '11': {'description': '', 'value': 'On'}, '16': {'description': '', 'value': 'Off'}, '48': {'description': '', 'value': 'On'}, '144': {'description': '', 'value': 'Off'}, '176': {'description': '', 'value': 'On'}, '208': {'description': '', 'value': 'Off'}, '240': {'description': '', 'value': 'On'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "62"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "0": {
-          "description": "",
-          "value": "Off"
-        },
-        "2": {
-          "description": "",
-          "value": "On"
-        }
-      }
-    },
-    "hdr": "7D0",
-    "id": "GRCOROLLA_PARKING_BRAKE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Parking Brake",
-    "path": "Control",
-    "pid": "21",
-    "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
     "suggestedMetric": "",
     "unit": ""
   },
@@ -80804,6 +80804,32 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TT_FL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "IS_TT_FL_V3",
     "make": "Lexus",
     "model": "IS",
@@ -80924,25 +80950,25 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "1004"
+      "22": "1006"
     },
-    "debug": true,
-    "eax": "2A",
+    "debug": false,
+    "eax": "",
     "fmt": {
-      "add": -40,
+      "add": -80,
       "len": 8,
-      "max": 215,
-      "min": -40,
+      "max": 100,
+      "min": -20,
       "unit": "celsius"
     },
-    "hdr": "750",
-    "id": "GRCOROLLA_TT_FL",
+    "hdr": "7B0",
+    "id": "GRCOROLLA_MASTER_CYL_TEMP",
     "make": "Toyota",
     "model": "GR-Corolla",
-    "name": "Front left tire temperature",
-    "path": "Tires",
+    "name": "Master Cylinder Sensor Temperature",
+    "path": "Brakes",
     "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
+    "scaling": "raw+-80 clamped to [-20, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -81043,32 +81069,6 @@
     "id": "DAIHATSU_MASTER_CYL_TEMP",
     "make": "Daihatsu",
     "model": "",
-    "name": "Master Cylinder Sensor Temperature",
-    "path": "Brakes",
-    "pid": "22",
-    "scaling": "raw+-80 clamped to [-20, 100]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1006"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -80,
-      "len": 8,
-      "max": 100,
-      "min": -20,
-      "unit": "celsius"
-    },
-    "hdr": "7B0",
-    "id": "GRCOROLLA_MASTER_CYL_TEMP",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Master Cylinder Sensor Temperature",
     "path": "Brakes",
     "pid": "22",
@@ -81217,6 +81217,31 @@
       "unit": "volts"
     },
     "hdr": "7C0",
+    "id": "GRCOROLLA_BATTERY_VOLTAGE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "B+ Battery Voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [20]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 20,
+      "unit": "volts"
+    },
+    "hdr": "7C0",
     "id": "PRIUS_BATTERY_VOLTAGE",
     "make": "Toyota",
     "model": "Prius",
@@ -81270,31 +81295,6 @@
     "id": "DAIHATSU_BATTERY_VOLTAGE",
     "make": "Daihatsu",
     "model": "",
-    "name": "B+ Battery Voltage",
-    "path": "Electrical",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [20]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1021"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 8,
-      "max": 20,
-      "unit": "volts"
-    },
-    "hdr": "7C0",
-    "id": "GRCOROLLA_BATTERY_VOLTAGE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "B+ Battery Voltage",
     "path": "Electrical",
     "pid": "22",
@@ -81606,6 +81606,32 @@
       "unit": "percent"
     },
     "hdr": "700",
+    "id": "GRCOROLLA_ACCEL_PEDAL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Accelerator Pedal",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/1.42 +-41 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1059"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -41,
+      "div": 1.42,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
     "id": "IS_ACCEL_PEDAL",
     "make": "Lexus",
     "model": "IS",
@@ -81635,32 +81661,6 @@
     "id": "DAIHATSU_ACCEL_PEDAL",
     "make": "Daihatsu",
     "model": "",
-    "name": "Accelerator Pedal",
-    "path": "Control",
-    "pid": "22",
-    "scaling": "raw/1.42 +-41 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1059"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -41,
-      "div": 1.42,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "700",
-    "id": "GRCOROLLA_ACCEL_PEDAL",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Accelerator Pedal",
     "path": "Control",
     "pid": "22",
@@ -83350,6 +83350,32 @@
       "unit": "celsius"
     },
     "hdr": "700",
+    "id": "GRCOROLLA_ATF_TEMP",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Transmission Fluid Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1638"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "700",
     "id": "IS_ATF_TEMP",
     "make": "Lexus",
     "model": "IS",
@@ -83379,32 +83405,6 @@
     "id": "DAIHATSU_ATF_TEMP",
     "make": "Daihatsu",
     "model": "",
-    "name": "Transmission Fluid Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1638"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "700",
-    "id": "GRCOROLLA_ATF_TEMP",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Transmission Fluid Temperature",
     "path": "Engine",
     "pid": "22",
@@ -86107,6 +86107,32 @@
       "unit": "percent"
     },
     "hdr": "700",
+    "id": "GRCOROLLA_FLI",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1F2F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "700",
     "id": "IS_FLI",
     "make": "Lexus",
     "model": "IS",
@@ -86192,32 +86218,6 @@
     "id": "DAIHATSU_FLI",
     "make": "Daihatsu",
     "model": "",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1F2F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 100,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "700",
-    "id": "GRCOROLLA_FLI",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Fuel level",
     "path": "Fuel",
     "pid": "22",
@@ -86950,6 +86950,46 @@
       }
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TID_1",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Tire 1 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
     "id": "IS_TID_1",
     "make": "Lexus",
     "model": "IS",
@@ -87233,46 +87273,6 @@
     "id": "DAIHATSU_TID_1",
     "make": "Daihatsu",
     "model": "",
-    "name": "Tire 1 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TID_1",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Tire 1 position",
     "path": "Tires",
     "pid": "22",
@@ -111459,6 +111459,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "GRCOROLLA_TIRE_RR_SPD",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "IS300_TIRE_RR_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -111655,33 +111682,6 @@
     "id": "DAIHATSU_TIRE_RR_SPD",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 16,
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
-    "id": "GRCOROLLA_TIRE_RR_SPD",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "21",
@@ -113148,6 +113148,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TT_RL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "RAV4HYBRID_TT_RL_V2",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -113234,33 +113261,6 @@
     "id": "DAIHATSU_TT_RL_V3",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TT_RL",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Rear left tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -114063,6 +114063,47 @@
       }
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TID_3",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Tire 3 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
     "id": "IS_TID_3",
     "make": "Lexus",
     "model": "IS",
@@ -114353,47 +114394,6 @@
     "id": "DAIHATSU_TID_3",
     "make": "Daihatsu",
     "model": "",
-    "name": "Tire 3 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "bix": 16,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TID_3",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Tire 3 position",
     "path": "Tires",
     "pid": "22",
@@ -133460,6 +133460,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "GRCOROLLA_TIRE_RL_SPD",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "IS300_TIRE_RL_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -133656,33 +133683,6 @@
     "id": "DAIHATSU_TIRE_RL_SPD",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 24,
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
-    "id": "GRCOROLLA_TIRE_RL_SPD",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "21",
@@ -134512,6 +134512,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TT_RR",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 24,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "RAV4HYBRID_TT_RR_V2",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -134609,33 +134636,6 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 24,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TT_RR",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
       "22": "1005"
     },
     "debug": false,
@@ -134685,6 +134685,33 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GRCOROLLA_TP_FR",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
   },
@@ -134904,33 +134931,6 @@
     "id": "DAIHATSU_TP_FR_V2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 24,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TP_FR",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -136733,6 +136733,47 @@
       }
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TID_4",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Tire 4 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
     "id": "IS_TID_4",
     "make": "Lexus",
     "model": "IS",
@@ -137023,47 +137064,6 @@
     "id": "DAIHATSU_TID_4",
     "make": "Daihatsu",
     "model": "",
-    "name": "Tire 4 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "bix": 24,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TID_4",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Tire 4 position",
     "path": "Tires",
     "pid": "22",
@@ -152122,6 +152122,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TT_SPARE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Spare tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "IS_TT_SPARE_V3",
     "make": "Lexus",
     "model": "IS",
@@ -152235,33 +152262,6 @@
     "id": "DAIHATSU_TT_SPARE_V3",
     "make": "Daihatsu",
     "model": "",
-    "name": "Spare tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 32,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TT_SPARE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Spare tire temperature",
     "path": "Tires",
     "pid": "22",
@@ -156780,6 +156780,33 @@
     "debug": false,
     "eax": "2A",
     "fmt": {
+      "add": -0.5,
+      "bix": 40,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GRCOROLLA_TP_RL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
       "add": -5.6969697,
       "bix": 40,
       "div": 4.125,
@@ -156987,33 +157014,6 @@
     "id": "DAIHATSU_TP_RL_V2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 40,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TP_RL",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -164005,6 +164005,33 @@
     "debug": false,
     "eax": "2A",
     "fmt": {
+      "add": -0.5,
+      "bix": 56,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GRCOROLLA_TP_RR",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
       "add": -5.6969697,
       "bix": 56,
       "div": 4.125,
@@ -164212,33 +164239,6 @@
     "id": "DAIHATSU_TP_RR_V2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 56,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TP_RR",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -168535,6 +168535,33 @@
       "unit": "bars"
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TP_SPARE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Spare tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 72,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
     "id": "IS_TP_SPARE_V2",
     "make": "Lexus",
     "model": "IS",
@@ -168621,33 +168648,6 @@
     "id": "DAIHATSU_TP_SPARE_V2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Spare tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 72,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TP_SPARE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Spare tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -169954,6 +169954,33 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
+    "id": "GRCOROLLA_TIRE_FL_SPD",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
     "id": "IS300_TIRE_FL_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -170150,33 +170177,6 @@
     "id": "DAIHATSU_TIRE_FL_SPD",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
-    "id": "GRCOROLLA_TIRE_FL_SPD",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "21",
@@ -171406,6 +171406,33 @@
       "unit": "celsius"
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TT_FR",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -40,
+      "bix": 8,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "750",
     "id": "RAV4HYBRID_TT_FR_V2",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -171503,33 +171530,6 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
-      "22": "1004"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -40,
-      "bix": 8,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TT_FR",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
       "22": "1005"
     },
     "debug": false,
@@ -171579,6 +171579,33 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/58 +-0.5 clamped to [3.8]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "1005"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "bars"
+    },
+    "hdr": "750",
+    "id": "GRCOROLLA_TP_FL",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
   },
@@ -171798,33 +171825,6 @@
     "id": "DAIHATSU_TP_FL_V2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "1005"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 8,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "bars"
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TP_FL",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -172570,6 +172570,47 @@
       }
     },
     "hdr": "750",
+    "id": "GRCOROLLA_TID_2",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Tire 2 position",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2021"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Front left",
+          "value": "FL"
+        },
+        "2": {
+          "description": "Front right",
+          "value": "FR"
+        },
+        "3": {
+          "description": "Rear left",
+          "value": "RL"
+        },
+        "4": {
+          "description": "Rear right",
+          "value": "RR"
+        }
+      }
+    },
+    "hdr": "750",
     "id": "IS_TID_2",
     "make": "Lexus",
     "model": "IS",
@@ -172860,47 +172901,6 @@
     "id": "DAIHATSU_TID_2",
     "make": "Daihatsu",
     "model": "",
-    "name": "Tire 2 position",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "2021"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "bix": 8,
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "Front left",
-          "value": "FL"
-        },
-        "2": {
-          "description": "Front right",
-          "value": "FR"
-        },
-        "3": {
-          "description": "Rear left",
-          "value": "RL"
-        },
-        "4": {
-          "description": "Rear right",
-          "value": "RR"
-        }
-      }
-    },
-    "hdr": "750",
-    "id": "GRCOROLLA_TID_2",
-    "make": "Toyota",
-    "model": "GR-Corolla",
     "name": "Tire 2 position",
     "path": "Tires",
     "pid": "22",
