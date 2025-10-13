@@ -66351,7 +66351,7 @@
       "max": 131,
       "min": -131,
       "sign": true,
-      "unit": "kilowattHours"
+      "unit": "kilowattHoursPer100Miles"
     },
     "hdr": "714",
     "id": "TAYCAN_TRIP_USE_SHORT",
@@ -66363,7 +66363,7 @@
     "scaling": "raw/1000 clamped to [-131, 131]",
     "signalGroups": [],
     "suggestedMetric": "",
-    "unit": "kilowattHours"
+    "unit": "kilowattHoursPer100Miles"
   },
   {
     "bitLength": 2,
