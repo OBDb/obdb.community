@@ -153032,7 +153032,7 @@
     "path": "Fuel",
     "pid": "22",
     "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
+    "suggestedMetric": "fuelTankLevel",
     "unit": "liters"
   },
   {
