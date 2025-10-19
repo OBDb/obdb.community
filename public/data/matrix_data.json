@@ -28328,6 +28328,30 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "420C"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE_ECO",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Estimated range remaining in economy mode",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "420D"
     },
     "debug": false,
@@ -33069,6 +33093,31 @@
     "cmd": {
       "22": "4AB1"
     },
+    "debug": false,
+    "eax": "12",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "Z4_VSS2",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4AB1"
+    },
     "debug": true,
     "eax": "12",
     "fmt": {
@@ -34893,6 +34942,31 @@
     "cmd": {
       "22": "D107"
     },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "Z4_VSS",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D107"
+    },
     "debug": true,
     "eax": "60",
     "fmt": {
@@ -35030,6 +35104,31 @@
     "id": "I3_RANGE_E_CUR",
     "make": "BMW",
     "model": "i3s",
+    "name": "Current electric range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE_E_CUR",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Current electric range",
     "path": "Trips",
     "pid": "22",
@@ -35272,6 +35371,30 @@
     "id": "SUPRA_VSS_INSTR",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Vehicle speed (instrument cluster)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D240"
+    },
+    "debug": true,
+    "eax": "0D",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "Z4_VSS_INSTR",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Vehicle speed (instrument cluster)",
     "path": "Movement",
     "pid": "22",
@@ -35890,6 +36013,32 @@
     "cmd": {
       "22": "DA2A"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "Z4_TQ_CNVRT_RPM",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Torque converter speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2A"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -36235,6 +36384,33 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "Z4_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DBE4"
     },
     "debug": false,
@@ -36494,6 +36670,33 @@
     "id": "X7_FL_SPD",
     "make": "BMW",
     "model": "X7",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "eax": "29",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "Z4_FL_SPD",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -37516,6 +37719,32 @@
     "id": "SUPRA_VGT_CAL_ANGLE",
     "make": "Toyota",
     "model": "Supra",
+    "name": "Variable geometry turbocharger calibration angle",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 156.25,
+      "unit": "degrees"
+    },
+    "hdr": "6F1",
+    "id": "Z4_VGT_CAL_ANGLE",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Variable geometry turbocharger calibration angle",
     "path": "Engine",
     "pid": "22",
@@ -44262,6 +44491,31 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "420C"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE_COMF",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Estimated range remaining in comfort mode",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B001"
     },
     "debug": true,
@@ -45204,6 +45458,32 @@
     "cmd": {
       "22": "D111"
     },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 16,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE_E_MAX",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Maximum electric range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "D111"
+    },
     "debug": true,
     "eax": "60",
     "fmt": {
@@ -45378,6 +45658,33 @@
     "id": "X7_TRANS_SHAFT_RPM",
     "make": "BMW",
     "model": "X7",
+    "name": "Transmission output shaft speed",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [-32768, 32767]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA2A"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 32767,
+      "min": -32768,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "6F1",
+    "id": "Z4_TRANS_SHAFT_RPM",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Transmission output shaft speed",
     "path": "Transmission",
     "pid": "22",
@@ -45766,6 +46073,34 @@
     "id": "X7_FR_SPD",
     "make": "BMW",
     "model": "X7",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "eax": "29",
+    "fmt": {
+      "bix": 16,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "Z4_FR_SPD",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -54400,6 +54735,31 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "420C"
+    },
+    "debug": true,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Estimated range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "D111"
     },
     "debug": false,
@@ -54443,6 +54803,33 @@
     "id": "I3_RANGE_F_CUR",
     "make": "BMW",
     "model": "i3s",
+    "name": "Current fuel range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "nullmax": 6553,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE_F_CUR",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Current fuel range",
     "path": "Trips",
     "pid": "22",
@@ -54760,6 +55147,34 @@
     "bitLength": 16,
     "bitOffset": 32,
     "cmd": {
+      "22": "DB32"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "Z4_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
       "22": "DBE4"
     },
     "debug": false,
@@ -55029,6 +55444,34 @@
     "id": "X7_RL_SPD",
     "make": "BMW",
     "model": "X7",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "eax": "29",
+    "fmt": {
+      "bix": 32,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RL_SPD",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -58179,6 +58622,34 @@
     "cmd": {
       "22": "D111"
     },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "nullmax": 6553,
+      "nullmin": 0,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE_F_MAX",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Maximum fuel range",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "D111"
+    },
     "debug": true,
     "eax": "60",
     "fmt": {
@@ -58502,6 +58973,34 @@
     "id": "X7_RR_SPD",
     "make": "BMW",
     "model": "X7",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [-327.68, 327.67]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DBE4"
+    },
+    "debug": false,
+    "eax": "29",
+    "fmt": {
+      "bix": 48,
+      "div": 100,
+      "len": 16,
+      "max": 327.67,
+      "min": -327.68,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RR_SPD",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -61535,6 +62034,34 @@
     "cmd": {
       "22": "D111"
     },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 64,
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "nullmax": 65,
+      "nullmin": 0,
+      "unit": "kilowattHours"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE_E_USE",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Electric consumption / 100km",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "D111"
+    },
     "debug": true,
     "eax": "60",
     "fmt": {
@@ -64461,6 +64988,33 @@
     "id": "I3_AUX_PWR",
     "make": "BMW",
     "model": "i3s",
+    "name": "Auxiliary power consumption",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "D111"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 80,
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "nullmax": 655,
+      "unit": "kilowatts"
+    },
+    "hdr": "6F1",
+    "id": "Z4_AUX_PWR",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Auxiliary power consumption",
     "path": "Trips",
     "pid": "22",
@@ -70007,6 +70561,30 @@
     "cmd": {
       "22": "1700"
     },
+    "debug": false,
+    "eax": "40",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_ODO_2",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Odometer variant",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1700"
+    },
     "debug": true,
     "eax": "40",
     "fmt": {
@@ -70979,6 +71557,30 @@
     "cmd": {
       "22": "D10D"
     },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_ODO1",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Odometer #1",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D10D"
+    },
     "debug": true,
     "eax": "60",
     "fmt": {
@@ -71237,6 +71839,56 @@
     "id": "X7_ODO_LOWRES",
     "make": "BMW",
     "model": "X7",
+    "name": "Odometer, low resolution",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_ODO",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "[egs] mileage/odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw*8 clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA23"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "mul": 8,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_ODO_LOWRES",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Odometer, low resolution",
     "path": "Trips",
     "pid": "22",
@@ -72082,6 +72734,31 @@
   },
   {
     "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "DFE7"
+    },
+    "debug": true,
+    "eax": "19",
+    "fmt": {
+      "bix": 304,
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_OIL_CHANGE_DIST",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Distance since last oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
     "bitOffset": 32,
     "cmd": {
       "22": "1E32"
@@ -72453,6 +73130,31 @@
     "make": "BMW",
     "model": "X7",
     "name": "Odometer, alternative",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "D10D"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_ODO2",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Odometer #2",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
@@ -91731,6 +92433,30 @@
     "cmd": {
       "22": "586F"
     },
+    "debug": false,
+    "eax": "12",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_EOP",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Engine oil pressure",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "586F"
+    },
     "debug": true,
     "eax": "12",
     "fmt": {
@@ -93500,6 +94226,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "D031"
+    },
+    "debug": true,
+    "eax": "63",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_GEAR_V2",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "D112"
     },
     "debug": false,
@@ -93624,6 +94374,33 @@
     "id": "X7_AAT",
     "make": "BMW",
     "model": "X7",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 87.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "6F1",
+    "id": "Z4_AAT",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Ambient air temperature",
     "path": "Climate",
     "pid": "22",
@@ -94901,6 +95678,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "DA12"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_ATF_TEMP",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Atf temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DA25"
     },
     "debug": false,
@@ -94986,6 +95787,30 @@
     "id": "SUPRA_EOT",
     "make": "Toyota",
     "model": "GR-Supra",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA25"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_EOT",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -95179,6 +96004,46 @@
     "eax": "18",
     "fmt": {
       "len": 8,
+      "map": {
+        "0": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "1": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "2": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "3": {
+          "description": "Drive",
+          "value": "DRIVE"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "Z4_GEAR_SHIFT",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Park', 'value': 'PARK'}, '1': {'description': 'Reverse', 'value': 'REVERSE'}, '2': {'description': 'Neutral', 'value': 'NEUTRAL'}, '3': {'description': 'Drive', 'value': 'DRIVE'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
       "max": 255,
       "unit": "scalar"
     },
@@ -95260,6 +96125,30 @@
     "model": "GR-Supra",
     "name": "Gear",
     "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA2E"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_GEAR",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Gear",
+    "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
@@ -95637,6 +96526,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_TIME_D",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Time in d",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "DCDD"
     },
     "debug": false,
@@ -95770,6 +96683,30 @@
     "id": "ROLLSROYCE_DOOR_DRIVER",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_DOOR_DRIVER",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Driver door open",
     "path": "Doors",
     "pid": "22",
@@ -114973,6 +115910,31 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_TIME_M",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Time in m",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "DCDD"
     },
     "debug": false,
@@ -115112,6 +116074,31 @@
     "id": "ROLLSROYCE_DOOR_DRIVER_REAR",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Rear driver door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_DOOR_DRIVER_REAR",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Rear driver door open",
     "path": "Doors",
     "pid": "22",
@@ -137790,6 +138777,31 @@
     "bitLength": 8,
     "bitOffset": 24,
     "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_DOOR_PASSENGER_REAR",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Rear passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
       "22": "DE00"
     },
     "debug": false,
@@ -154749,6 +155761,31 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_HOOD",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Hood open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "DE00"
     },
     "debug": false,
@@ -159588,6 +160625,31 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_TRUNK",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Trunk open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "DE00"
     },
     "debug": false,
@@ -162269,6 +163331,31 @@
   },
   {
     "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_REAR_WINDOW",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Rear window open",
+    "path": "Windows",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
       "01": "9F"
@@ -164907,6 +165994,31 @@
     "id": "ROLLSROYCE_CENTRAL_LOCK",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Locked",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_CENTRAL_LOCK",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Locked",
     "path": "Doors",
     "pid": "22",
@@ -174226,6 +175338,31 @@
     "cmd": {
       "22": "DA1F"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 100,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_KICKDOWN",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Kickdown",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA1F"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -174571,6 +175708,55 @@
     "cmd": {
       "22": "DA22"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "1": {
+          "description": "Controlled low",
+          "value": "CONTROL_LOW"
+        },
+        "2": {
+          "description": "Controlled high",
+          "value": "CONTROL_HIGH"
+        },
+        "3": {
+          "description": "Closed low",
+          "value": "CLOSED_LOW"
+        },
+        "4": {
+          "description": "Closed high",
+          "value": "CLOSED_HIGH"
+        },
+        "8": {
+          "description": "Transition to open",
+          "value": "TRANSITION_OPEN"
+        }
+      }
+    },
+    "hdr": "6F1",
+    "id": "Z4_TQ_CNVRT_LOCKUP",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Torque converter lockup",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Open', 'value': 'OPEN'}, '1': {'description': 'Controlled low', 'value': 'CONTROL_LOW'}, '2': {'description': 'Controlled high', 'value': 'CONTROL_HIGH'}, '3': {'description': 'Closed low', 'value': 'CLOSED_LOW'}, '4': {'description': 'Closed high', 'value': 'CLOSED_HIGH'}, '8': {'description': 'Transition to open', 'value': 'TRANSITION_OPEN'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA22"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -174829,6 +176015,31 @@
     "id": "SUPRA_BRAKE_SWITCH",
     "make": "Toyota",
     "model": "GR-Supra",
+    "name": "Brake switch",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA28"
+    },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_BRAKE_SWITCH",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Brake switch",
     "path": "Control",
     "pid": "22",
@@ -175181,6 +176392,31 @@
     "bitLength": 8,
     "bitOffset": 8,
     "cmd": {
+      "22": "DA37"
+    },
+    "debug": true,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_TIME_S",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Time in s",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
       "22": "DCDD"
     },
     "debug": false,
@@ -175320,6 +176556,31 @@
     "id": "ROLLSROYCE_DOOR_PASSENGER",
     "make": "Rolls",
     "model": "Royce",
+    "name": "Passenger door open",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DCDD"
+    },
+    "debug": true,
+    "eax": "56",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_DOOR_PASSENGER",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Passenger door open",
     "path": "Doors",
     "pid": "22",
