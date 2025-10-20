@@ -25536,6 +25536,56 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "4028"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "D01A",
+    "id": "LOTUS_SOC",
+    "make": "Lotus",
+    "model": "",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4028"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "D01A",
+    "id": "XC40_SOC",
+    "make": "Volvo",
+    "model": "XC40-Recharge",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "4181"
     },
     "debug": false,
@@ -98650,6 +98700,58 @@
     "id": "POLESTAR2_APP_POS",
     "make": "Polestar",
     "model": "2",
+    "name": "Accelerator pedal position",
+    "path": "Control.Pedals",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "EE6F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "D016",
+    "id": "LOTUS_APP_POS",
+    "make": "Lotus",
+    "model": "",
+    "name": "Accelerator pedal position",
+    "path": "Control.Pedals",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "EE6F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "D016",
+    "id": "XC40_APP_POS",
+    "make": "Volvo",
+    "model": "XC40-Recharge",
     "name": "Accelerator pedal position",
     "path": "Control.Pedals",
     "pid": "22",
