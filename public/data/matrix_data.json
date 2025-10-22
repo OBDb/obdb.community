@@ -4637,6 +4637,31 @@
     "bitLength": 1,
     "bitOffset": 4,
     "cmd": {
+      "22": "0805"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_BRAKE_LIGHT_ON_VALID",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Brake light reading valid?",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
       "22": "1101"
     },
     "debug": false,
@@ -5589,6 +5614,31 @@
     "bitLength": 1,
     "bitOffset": 5,
     "cmd": {
+      "22": "0805"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_BRAKE_PRESSED_VALID",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Brake pressure reading valid?",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
       "22": "0967"
     },
     "debug": false,
@@ -6453,6 +6503,31 @@
     "id": "MACAN_BRAKE_PRESSED",
     "make": "Porsche",
     "model": "Macan",
+    "name": "Brake",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "0805"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_BRAKE_PRESSED",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Brake",
     "path": "Control",
     "pid": "22",
@@ -7353,6 +7428,31 @@
     "id": "MACAN_BRAKE_LIGHT_ON",
     "make": "Porsche",
     "model": "Macan",
+    "name": "Brake light",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "0805"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_BRAKE_LIGHT_ON",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Brake light",
     "path": "Control",
     "pid": "22",
@@ -10232,6 +10332,33 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "SQ7_ECU_TEMP",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Ecu temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "028D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_ECU_TEMP",
     "make": "Porsche",
     "model": "Taycan",
@@ -10740,6 +10867,31 @@
     "id": "SQ5_DRIVE_TIME",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Total drive time",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [16383]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0302"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 16383,
+      "unit": "hours"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_DRIVE_TIME",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Total drive time",
     "path": "Stats",
     "pid": "22",
@@ -14616,6 +14768,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_TIRE_FR_SPD_V3",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1002"
     },
     "debug": false,
@@ -14668,6 +14845,58 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_AC_COMP_T",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "A/c compressor torque, requested",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_TIRE_FL_SPD_V3",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1003"
     },
     "debug": false,
@@ -14682,6 +14911,31 @@
     "id": "MACAN_TIRE_RR_SPD",
     "make": "Porsche",
     "model": "Macan",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1003"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_TIRE_RR_SPD_V3",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -14713,6 +14967,33 @@
     "scaling": "raw/10 clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 255,
+      "min": -255,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_AAT_V2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Ambient temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/128 clamped to [-255, 255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -14849,6 +15130,31 @@
     "scaling": "raw*1.5 clamped to [-410, 410]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_TIRE_RL_SPD_V3",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -17456,6 +17762,33 @@
       "unit": "rpm"
     },
     "hdr": "7E0",
+    "id": "SQ7_EM_RPM_1",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Electric motor 1 rpm",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [-100, 100]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1151"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 16,
+      "max": 100,
+      "min": -100,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_EM_RPM_1",
     "make": "Porsche",
     "model": "Taycan",
@@ -17464,6 +17797,33 @@
     "pid": "22",
     "scaling": "raw/2 clamped to [-100, 100]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1152"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 16,
+      "max": 100,
+      "min": -100,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_EM_RPM_2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Electric motor 2 rpm",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [-100, 100]",
     "suggestedMetric": "",
     "unit": "rpm"
   },
@@ -17512,6 +17872,33 @@
       "unit": "newtonMeters"
     },
     "hdr": "7E0",
+    "id": "SQ7_EM_TORQ_1",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Elector motor 1 torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/32 clamped to [-1000, 1000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1153"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 32,
+      "len": 16,
+      "max": 1000,
+      "min": -1000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_EM_TORQ_1",
     "make": "Porsche",
     "model": "Taycan",
@@ -17540,6 +17927,33 @@
       "unit": "newtonMeters"
     },
     "hdr": "7E0",
+    "id": "SQ7_EM_TORQ_2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Elector motor 2 torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/32 clamped to [-1000, 1000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1154"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 32,
+      "len": 16,
+      "max": 1000,
+      "min": -1000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_EM_TORQ_2",
     "make": "Porsche",
     "model": "Taycan",
@@ -17548,6 +17962,33 @@
     "pid": "22",
     "scaling": "raw/32 clamped to [-1000, 1000]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1155"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 32,
+      "len": 16,
+      "max": 1000,
+      "min": -1000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_EM_TORQ_3",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Elector motor 3 torque",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/32 clamped to [-1000, 1000]",
     "suggestedMetric": "",
     "unit": "newtonMeters"
   },
@@ -17611,6 +18052,60 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1158"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3200,
+      "min": -3200,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_MAX_DCHA_CUR_2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Maximum discharge current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3200, 3200]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1159"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 3200,
+      "min": -3200,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_MAX_CHA_CUR_2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Maximum charge current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3200, 3200]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "1159"
     },
     "debug": false,
@@ -17660,6 +18155,33 @@
     "pid": "22",
     "scaling": "raw/64 clamped to [-512, 511]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "115B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 64,
+      "len": 16,
+      "max": 511,
+      "min": -512,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_VSS_DIR",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Vehicle speed (directional)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/64 clamped to [-512, 511]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -18003,6 +18525,31 @@
       "unit": "unknown"
     },
     "hdr": "7E0",
+    "id": "SQ7_OIL_LEVEL",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Oil level",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/250 clamped to [262]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 250,
+      "len": 16,
+      "max": 262,
+      "unit": "unknown"
+    },
+    "hdr": "7E0",
     "id": "TIGUAN_OIL_LEVEL",
     "make": "Volkswagen",
     "model": "Tiguan",
@@ -18175,6 +18722,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "11BB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2500,
+      "len": 16,
+      "max": 26.2,
+      "unit": "centimeters"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_OIL_CRIT",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Oil level (critical)",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/2500 clamped to [26.2]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "11BD"
     },
     "debug": false,
@@ -18225,6 +18797,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "11BD"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2500,
+      "len": 16,
+      "max": 26.2,
+      "unit": "centimeters"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_OIL_LEVEL_WARN",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Oil level warning threshold",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw/2500 clamped to [26.2]",
+    "suggestedMetric": "",
+    "unit": "centimeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "11BE"
     },
     "debug": false,
@@ -18238,6 +18835,30 @@
     "id": "CAYENNE_EOT",
     "make": "Porsche",
     "model": "Cayenne",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "11BE"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_EOT_V2",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -21203,6 +21824,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "2005"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "unit": "bars"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_BRAKE_BST_P",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Brake booster pressure",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2061"
     },
     "debug": false,
@@ -21229,6 +21875,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "2061"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_APP_POS1",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Accelerator pedal position sensor 1",
+    "path": "Control.Pedals",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2062"
     },
     "debug": false,
@@ -21248,6 +21919,31 @@
     "pid": "22",
     "scaling": "raw/1000 clamped to [65]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2062"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_APP_POS2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Accelerator pedal position sensor 2",
+    "path": "Control.Pedals",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -21686,6 +22382,30 @@
     "id": "EGOLF_RANGE_DSP",
     "make": "Volkswagen",
     "model": "e-Golf",
+    "name": "Range remaining (displayed)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "22E0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "714",
+    "id": "SQ7_RANGE_DSP",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Range remaining (displayed)",
     "path": "Trips",
     "pid": "22",
@@ -24151,6 +24871,33 @@
     "eax": "",
     "fmt": {
       "add": 4,
+      "div": 100,
+      "len": 16,
+      "max": 69.54,
+      "min": 4,
+      "unit": "volts"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_V",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Start/stop battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 +4 clamped to [4, 69.54]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A07"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": 4,
       "div": 1000,
       "len": 16,
       "max": 69.535,
@@ -24231,6 +24978,30 @@
       "unit": "miles"
     },
     "hdr": "710",
+    "id": "SQ7_RANGE_V2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2AB6"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "miles"
+    },
+    "hdr": "710",
     "id": "TAYCAN_RANGE",
     "make": "Porsche",
     "model": "Taycan",
@@ -24260,6 +25031,31 @@
     "id": "MACANEV_AVG_CSMP_CAT0",
     "make": "Porsche",
     "model": "Macan-Electric",
+    "name": "Average consumption (category 0)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
+    "id": "SQ7_AVG_CSMP_CAT0",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Average consumption (category 0)",
     "path": "Trips",
     "pid": "22",
@@ -24553,6 +25349,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_TIRE_FL_SPD_V2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "div": 160,
       "len": 16,
       "max": 1000,
@@ -24793,6 +25614,31 @@
     "id": "SQ5_TIRE_FR_SPD",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_TIRE_FR_SPD_V2",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -25065,6 +25911,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_TIRE_RL_SPD_V2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "div": 160,
       "len": 16,
       "max": 1000,
@@ -25321,6 +26192,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_TIRE_RR_SPD_V2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "div": 160,
       "len": 16,
       "max": 1000,
@@ -25367,6 +26263,33 @@
     "scaling": "raw/10 clamped to [1000]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B29"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 32.767,
+      "min": -32.768,
+      "sign": true,
+      "unit": "radians"
+    },
+    "hdr": "713",
+    "id": "SQ7_STEER_ANGLE",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [-32.768, 32.767]",
+    "suggestedMetric": "",
+    "unit": "radians"
   },
   {
     "bitLength": 16,
@@ -38523,6 +39446,30 @@
       "unit": "seconds"
     },
     "hdr": "7E0",
+    "id": "SQ7_RUNTM",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Time since engine start",
+    "path": "Clocks",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F41F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_RUNTM",
     "make": "Porsche",
     "model": "Taycan",
@@ -38551,6 +39498,30 @@
     "id": "JETTA_MIL_DIST",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Distance traveled while mil was activated",
+    "path": "DTCs",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F421"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_MIL_DIST",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Distance traveled while mil was activated",
     "path": "DTCs",
     "pid": "22",
@@ -38621,6 +39592,30 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
+    "id": "SQ7_CLR_DIST",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Distance traveled since dtcs cleared",
+    "path": "DTCs",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F431"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_CLR_DIST",
     "make": "Porsche",
     "model": "Taycan",
@@ -38655,6 +39650,31 @@
     "pid": "22",
     "scaling": "raw/1000 clamped to [65]",
     "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F442"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_VPWR",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Control module voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65]",
+    "suggestedMetric": "",
     "unit": "volts"
   },
   {
@@ -44994,6 +46014,32 @@
     "id": "MACANEV_AVG_CSMP_CAT1",
     "make": "Porsche",
     "model": "Macan-Electric",
+    "name": "Average consumption (category 1)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
+    "id": "SQ7_AVG_CSMP_CAT1",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Average consumption (category 1)",
     "path": "Trips",
     "pid": "22",
@@ -55343,6 +56389,32 @@
       "unit": "kilowattHours"
     },
     "hdr": "710",
+    "id": "SQ7_AVG_CSMP_CAT2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Average consumption (category 2)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
     "id": "TAYCAN_AVG_CSMP_CAT2",
     "make": "Porsche",
     "model": "Taycan",
@@ -59458,6 +60530,32 @@
       "unit": "kilowattHours"
     },
     "hdr": "710",
+    "id": "SQ7_AVG_CSMP_CAT3",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Average consumption (category 3)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
     "id": "TAYCAN_AVG_CSMP_CAT3",
     "make": "Porsche",
     "model": "Taycan",
@@ -62816,6 +63914,32 @@
       "unit": "kilowattHours"
     },
     "hdr": "710",
+    "id": "SQ7_AVG_CSMP_CAT4",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Average consumption (category 4)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
     "id": "TAYCAN_AVG_CSMP_CAT4",
     "make": "Porsche",
     "model": "Taycan",
@@ -65785,6 +66909,32 @@
       "unit": "kilowattHours"
     },
     "hdr": "710",
+    "id": "SQ7_AVG_CSMP_CAT5",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Average consumption (category 5)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
     "id": "TAYCAN_AVG_CSMP_CAT5",
     "make": "Porsche",
     "model": "Taycan",
@@ -67323,6 +68473,32 @@
       "unit": "kilowattHours"
     },
     "hdr": "710",
+    "id": "SQ7_AVG_CSMP_CAT6",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Average consumption (category 6)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "2AB7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 10,
+      "len": 16,
+      "max": 6553,
+      "unit": "kilowattHours"
+    },
+    "hdr": "710",
     "id": "TAYCAN_AVG_CSMP_CAT6",
     "make": "Porsche",
     "model": "Taycan",
@@ -67825,6 +69001,34 @@
     "pid": "22",
     "scaling": "raw/1000 clamped to [-131, 131]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "kilowattHoursPer100Miles"
+  },
+  {
+    "bitLength": 18,
+    "bitOffset": 238,
+    "cmd": {
+      "22": "0530"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 238,
+      "div": 1000,
+      "len": 18,
+      "max": 131,
+      "min": -131,
+      "sign": true,
+      "unit": "kilowattHoursPer100Miles"
+    },
+    "hdr": "714",
+    "id": "SQ7_TRIP_USE_SHORT",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Trip consumption (short)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [-131, 131]",
     "suggestedMetric": "",
     "unit": "kilowattHoursPer100Miles"
   },
@@ -71307,6 +72511,30 @@
     "eax": "",
     "fmt": {
       "len": 32,
+      "max": 4000000000,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_ODO_V3",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4000000000]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10E0"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 32,
       "max": 4294967295,
       "unit": "kilometers"
     },
@@ -71407,6 +72635,30 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
+    "id": "SQ7_ODO_2_V2",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "10E0"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
     "id": "TIGUAN_ODO",
     "make": "Volkswagen",
     "model": "Tiguan",
@@ -71435,6 +72687,31 @@
     "id": "JETTA_ODO_HD",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Odometer (high resolution)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [4294967.295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1160"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 32,
+      "max": 4294967.295,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_ODO_HD",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Odometer (high resolution)",
     "path": "Trips",
     "pid": "22",
@@ -71881,6 +73158,32 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "2A09"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 32,
+      "max": 100,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_C",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Start/stop battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2A0A"
     },
     "debug": false,
@@ -72049,6 +73352,30 @@
     "bitLength": 32,
     "bitOffset": 0,
     "cmd": {
+      "22": "2A0A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 255,
+      "unit": "kilometers"
+    },
+    "hdr": "710",
+    "id": "SQ7_ODO_3",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2A61"
     },
     "debug": false,
@@ -72063,6 +73390,31 @@
     "id": "JETTA_SSB_TOTAL_CHARGE",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Start/stop battery total charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A61"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 32,
+      "max": 100,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_TOTAL_CHARGE",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Start/stop battery total charge",
     "path": "Battery",
     "pid": "22",
@@ -72219,6 +73571,30 @@
     "pid": "22",
     "scaling": "raw clamped to [1000000]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "5200"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 1000000,
+      "unit": "scalar"
+    },
+    "hdr": "7E5",
+    "id": "SQ7_LAUNCH",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Launch control count",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -73787,6 +75163,32 @@
     "id": "JETTA_SSB_TOTAL_DISCHARGE",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Start/stop battery total discharge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "2A61"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10,
+      "len": 32,
+      "max": 100,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_TOTAL_DISCHARGE",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Start/stop battery total discharge",
     "path": "Battery",
     "pid": "22",
@@ -80906,6 +82308,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 2.5,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_DRIVE_TIME_ECO",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Driving time (eco)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0303"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 8,
       "max": 100,
       "mul": 0.4,
@@ -81160,6 +82587,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 2.5,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_DRIVE_TIME_SPORT",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 8,
       "max": 100,
       "unit": "percent"
@@ -81397,6 +82849,31 @@
     "id": "SQ5_DRIVE_TIME_MANUAL",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2.5,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_DRIVE_TIME_MANUAL",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Driving time (manual)",
     "path": "Stats",
     "pid": "22",
@@ -83089,6 +84566,31 @@
     "path": "Climate",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1014"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 215,
+      "unit": "celsius"
+    },
+    "hdr": "714",
+    "id": "SQ7_AAT",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [215]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -90025,6 +91527,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "SQ7_ATF_T",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Automatic transmission fluid temperature",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "210F"
     },
     "debug": false,
@@ -90145,6 +91673,58 @@
       "len": 8,
       "map": {
         "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "SQ7_GEAR",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
           "description": "Reverse",
           "value": "REVERSE"
         },
@@ -90162,6 +91742,42 @@
     "id": "CAYENNE_GEAR_SHFT",
     "make": "Porsche",
     "model": "Cayenne",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'Reverse', 'value': 'REVERSE'}, '2': {'description': 'Park', 'value': 'PARK'}, '3': {'description': 'Drive', 'value': 'DRIVE'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "210F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "2": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "3": {
+          "description": "Drive",
+          "value": "DRIVE"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "SQ7_GEAR_SHFT",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Shift gear",
     "path": "Transmission",
     "pid": "22",
@@ -91639,6 +93255,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2431"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "767",
+    "id": "SQ7_GPS_SATS_VISIBLE",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Satellites, visible",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "248E"
     },
     "debug": false,
@@ -91751,6 +93391,33 @@
     "id": "JETTA_AIR_POLUTION",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Air pollution level",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-12.7, 12.7]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "26ED"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 12.7,
+      "min": -12.7,
+      "sign": true,
+      "unit": "scalar"
+    },
+    "hdr": "746",
+    "id": "SQ7_AIR_POLUTION",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Air pollution level",
     "path": "Climate",
     "pid": "22",
@@ -91993,6 +93660,32 @@
     "id": "JETTA_SSB_VT",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Start/stop battery target voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 +10.6 clamped to [36.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A00"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": 10.6,
+      "div": 10,
+      "len": 8,
+      "max": 36.1,
+      "unit": "volts"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_VT",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Start/stop battery target voltage",
     "path": "Battery",
     "pid": "22",
@@ -92347,6 +94040,32 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_SENSOR_T",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Start/stop battery sensor temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "add": -50,
       "len": 8,
       "max": 205,
@@ -92461,6 +94180,32 @@
     "id": "JETTA_SSB_T",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Start/stop battery sensor temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_T",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Start/stop battery sensor temperature",
     "path": "Battery",
     "pid": "22",
@@ -92780,6 +94525,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2A0E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 100,
+      "mul": 2,
+      "unit": "milliohms"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_R",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Start/stop battery resistance",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*2 /10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "milliohms"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2A0F"
     },
     "debug": false,
@@ -92817,6 +94588,30 @@
     "id": "JETTA_SSB_AH",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Start/stop battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "ampereHours"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "ampereHours"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_AH",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Start/stop battery charge",
     "path": "Battery",
     "pid": "22",
@@ -92873,6 +94668,34 @@
     "id": "JETTA_SSB_V_REST",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Start/stop battery voltage (at rest)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*54 /255 +9 clamped to [9, 63]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A10"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": 9,
+      "div": 255,
+      "len": 8,
+      "max": 63,
+      "min": 9,
+      "mul": 54,
+      "unit": "volts"
+    },
+    "hdr": "710",
+    "id": "SQ7_SSB_V_REST",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Start/stop battery voltage (at rest)",
     "path": "Battery",
     "pid": "22",
@@ -98897,6 +100720,30 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E0",
+    "id": "SQ7_VSS",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F40D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
     "id": "TAYCAN_VSS",
     "make": "Porsche",
     "model": "Taycan",
@@ -99190,6 +101037,30 @@
     "make": "Volkswagen",
     "model": "Jetta",
     "name": "Number of warm-ups since diagnostic trouble codes cleared",
+    "path": "DTCs",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F430"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "SQ7_WARM_UPS",
+    "make": "Audi",
+    "model": "SQ7",
+    "name": "Number of warm-ups since dtcs cleared",
     "path": "DTCs",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -177081,6 +178952,31 @@
     "id": "JETTA_GPS_SATS_TRACKED",
     "make": "Volkswagen",
     "model": "Jetta",
+    "name": "Satellites, tracked",
+    "path": "GPS",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2431"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "767",
+    "id": "SQ7_GPS_SATS_TRACKED",
+    "make": "Audi",
+    "model": "SQ7",
     "name": "Satellites, tracked",
     "path": "GPS",
     "pid": "22",
