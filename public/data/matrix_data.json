@@ -21181,6 +21181,58 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "EQA_FL_VSS",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*562.5 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_FL_VSS",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*562.5 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 1000,
       "mul": 0.05625,
@@ -21815,6 +21867,60 @@
     "scaling": "raw clamped to [65535]",
     "suggestedMetric": "electricRange",
     "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2526"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 1250,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "EQA_HV_COOLANT_T",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "HV battery coolant temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*1250 /10000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2526"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 1250,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "MERCEDES_HV_COOLANT_T",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "HV battery coolant temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*1250 /10000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 16,
@@ -34311,6 +34417,260 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "6050"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E5",
+    "id": "EQA_HV_SOC",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "HV battery state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6050"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E5",
+    "id": "MERCEDES_HV_SOC",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "HV battery state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6053"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7E5",
+    "id": "EQA_HV_A",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "HV battery amperage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6053"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7E5",
+    "id": "MERCEDES_HV_A",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "HV battery amperage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6071"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 250,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "EQA_CNVRTR_REQ_V",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "DC converter requested voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*250 /10000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6071"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 250,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "MERCEDES_CNVRTR_REQ_V",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "DC converter requested voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*250 /10000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 100,
+      "mul": 25,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "EQA_HV_V",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*25 /1000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6075"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 100,
+      "mul": 25,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "MERCEDES_HV_V",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*25 /1000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6504"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "7E5",
+    "id": "EQA_SERVICE_DIST",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Distance to next service",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6504"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "7E5",
+    "id": "MERCEDES_SERVICE_DIST",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Distance to next service",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "7151"
     },
     "debug": false,
@@ -43498,6 +43858,58 @@
     "bitLength": 16,
     "bitOffset": 144,
     "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 1000,
+      "len": 16,
+      "max": 65,
+      "unit": "bars"
+    },
+    "hdr": "7E2",
+    "id": "EQA_VACUUM_BREAK_PRESSURE",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Vacuum break pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 144,
+      "div": 1000,
+      "len": 16,
+      "max": 65,
+      "unit": "bars"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_VACUUM_BREAK_PRESSURE",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Vacuum break pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 144,
+    "cmd": {
       "22": "2962"
     },
     "debug": false,
@@ -44737,6 +45149,60 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "0201"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 1000,
+      "unit": "volts"
+    },
+    "hdr": "624",
+    "id": "EQA_AUX_V_HD",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "12V system voltage, hd",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*1000 /10000 clamped to [100]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "0201"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 1000,
+      "unit": "volts"
+    },
+    "hdr": "624",
+    "id": "MERCEDES_AUX_V_HD",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "12V system voltage, hd",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*1000 /10000 clamped to [100]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "105C"
     },
     "debug": false,
@@ -45292,6 +45758,60 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "EQA_FR_VSS",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*562.5 /10000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_FR_VSS",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*562.5 /10000 clamped to [100]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -52622,6 +53142,64 @@
     "eax": "",
     "fmt": {
       "bix": 24,
+      "div": 1000,
+      "len": 16,
+      "max": 511,
+      "min": -512,
+      "mul": 15.625,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7E2",
+    "id": "EQA_LAT_ACC",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Lateral acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw*15.625 /1000 clamped to [-512, 511]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 1000,
+      "len": 16,
+      "max": 511,
+      "min": -512,
+      "mul": 15.625,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_LAT_ACC",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Lateral acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw*15.625 /1000 clamped to [-512, 511]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
       "div": 627.6,
       "len": 16,
       "max": 52.21,
@@ -55505,6 +56083,60 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw*0.05625 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "EQA_RL_VSS",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*562.5 /10000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_RL_VSS",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*562.5 /10000 clamped to [100]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -59568,6 +60200,60 @@
     "eax": "",
     "fmt": {
       "bix": 48,
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "EQA_RR_VSS",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*562.5 /10000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10000,
+      "len": 16,
+      "max": 100,
+      "mul": 562.5,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_RR_VSS",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw*562.5 /10000 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "2001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
       "len": 16,
       "max": 1000,
       "mul": 0.05625,
@@ -59612,6 +60298,35 @@
     "scaling": "raw*2 /32767 clamped to [-2, 2]",
     "suggestedMetric": "",
     "unit": "radians"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 10000,
+      "len": 16,
+      "max": 114,
+      "min": -114,
+      "mul": 34.97,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7E2",
+    "id": "EQA_YAW_RATE",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Yaw rate",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw*34.97 /10000 clamped to [-114, 114]",
+    "suggestedMetric": "",
+    "unit": "gravity"
   },
   {
     "bitLength": 16,
@@ -63969,6 +64684,35 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10000,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "mul": 1000,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E2",
+    "id": "EQA_STEER_ANGLE",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*1000 /10000 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 720,
     "cmd": {
       "22": "182E"
@@ -65691,6 +66435,64 @@
     "path": "Orientation",
     "pid": "22",
     "scaling": "raw/192747 clamped to [-0.17, 0.17]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 1000,
+      "len": 16,
+      "max": 1.63,
+      "min": -1.63,
+      "mul": 0.05,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7E2",
+    "id": "EQA_LON_ACC",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Longitudinal acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw*0.05 /1000 clamped to [-1.63, 1.63]",
+    "suggestedMetric": "",
+    "unit": "gravity"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 1000,
+      "len": 16,
+      "max": 1.63,
+      "min": -1.63,
+      "mul": 0.05,
+      "sign": true,
+      "unit": "gravity"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_LON_ACC",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Longitudinal acceleration",
+    "path": "Orientation",
+    "pid": "22",
+    "scaling": "raw*0.05 /1000 clamped to [-1.63, 1.63]",
     "suggestedMetric": "",
     "unit": "gravity"
   },
@@ -67435,6 +68237,64 @@
     "path": "Orientation",
     "pid": "22",
     "scaling": "raw/65.35883831 clamped to [-501.34, 501.34]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 10000,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "mul": 153,
+      "sign": true,
+      "unit": "bars"
+    },
+    "hdr": "7E2",
+    "id": "EQA_MASTER_BREAK_CYLINDER_PRESSURE",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Master break cylinder pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*153 /10000 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "2002"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 10000,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "mul": 153,
+      "sign": true,
+      "unit": "bars"
+    },
+    "hdr": "7E2",
+    "id": "MERCEDES_MASTER_BREAK_CYLINDER_PRESSURE",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Master break cylinder pressure",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*153 /10000 clamped to [-500, 500]",
     "suggestedMetric": "",
     "unit": "bars"
   },
@@ -72530,6 +73390,54 @@
     "scaling": "raw clamped to [1000000]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6502"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 1000,
+      "unit": "kilometers"
+    },
+    "hdr": "7E5",
+    "id": "EQA_HV_RANGE",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "HV battery remaining distance",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6502"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 1000,
+      "unit": "kilometers"
+    },
+    "hdr": "7E5",
+    "id": "MERCEDES_HV_RANGE",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "HV battery remaining distance",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
   },
   {
     "bitLength": 32,
@@ -89498,6 +90406,58 @@
     "scaling": "raw+-40 clamped to [-40, 215]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2005"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 25.9,
+      "mul": 25.9,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "EQA_AUX_V",
+    "make": "Mercedes",
+    "model": "Benz-EQA",
+    "name": "Auxiliary battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*25.9 /255 clamped to [25.9]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2005"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 25.9,
+      "mul": 25.9,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "MERCEDES_AUX_V",
+    "make": "Mercedes",
+    "model": "Benz",
+    "name": "Auxiliary battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*25.9 /255 clamped to [25.9]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
   },
   {
     "bitLength": 8,
