@@ -20576,6 +20576,31 @@
       "unit": "celsius"
     },
     "hdr": "7DF",
+    "id": "F350_TOT",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Transmission oil temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "7DF",
     "id": "FOCUS_TOT",
     "make": "Ford",
     "model": "Focus",
@@ -20797,31 +20822,6 @@
     "path": "Engine",
     "pid": "22",
     "scaling": "raw/16 clamped to [-500, 500]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1E1C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 16,
-      "len": 16,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "7DF",
-    "id": "F350_TOT",
-    "make": "Ford",
-    "model": "F-350",
-    "name": "Transmission oil temperature",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw/16 clamped to [255]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -22261,6 +22261,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F350_TP_FL",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "FIESTA_TP_FL",
     "make": "Ford",
     "model": "Fiesta",
@@ -22364,31 +22389,6 @@
     "id": "TRANSITC_TP_FL",
     "make": "Ford",
     "model": "Transit-Connect",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2813"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
-      "max": 3276,
-      "unit": "psi"
-    },
-    "hdr": "726",
-    "id": "F350_TP_FL",
-    "make": "Ford",
-    "model": "F-350",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -22669,6 +22669,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F350_TP_FR",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "FIESTA_TP_FR",
     "make": "Ford",
     "model": "Fiesta",
@@ -22772,31 +22797,6 @@
     "id": "TRANSITC_TP_FR",
     "make": "Ford",
     "model": "Transit-Connect",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2814"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
-      "max": 3276,
-      "unit": "psi"
-    },
-    "hdr": "726",
-    "id": "F350_TP_FR",
-    "make": "Ford",
-    "model": "F-350",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -23077,6 +23077,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F350_TP_RRO",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Rear right outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "FIESTA_TP_RR",
     "make": "Ford",
     "model": "Fiesta",
@@ -23180,31 +23205,6 @@
     "id": "TRANSITC_TP_RR",
     "make": "Ford",
     "model": "Transit-Connect",
-    "name": "Rear right outer tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2815"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
-      "max": 3276,
-      "unit": "psi"
-    },
-    "hdr": "726",
-    "id": "F350_TP_RRO",
-    "make": "Ford",
-    "model": "F-350",
     "name": "Rear right outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -23485,6 +23485,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "F350_TP_RLO",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Rear left outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "FIESTA_TP_RL",
     "make": "Ford",
     "model": "Fiesta",
@@ -23588,31 +23613,6 @@
     "id": "TRANSITC_TP_RL",
     "make": "Ford",
     "model": "Transit-Connect",
-    "name": "Rear left outer tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2816"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
-      "max": 3276,
-      "unit": "psi"
-    },
-    "hdr": "726",
-    "id": "F350_TP_RLO",
-    "make": "Ford",
-    "model": "F-350",
     "name": "Rear left outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -23843,31 +23843,6 @@
       "unit": "psi"
     },
     "hdr": "726",
-    "id": "FOCUS_TP_RRI",
-    "make": "Ford",
-    "model": "Focus",
-    "name": "Rear right inner tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2817"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
-      "max": 3276,
-      "unit": "psi"
-    },
-    "hdr": "726",
     "id": "F350_TP_RRI",
     "make": "Ford",
     "model": "F-350",
@@ -23876,6 +23851,31 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2817"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FOCUS_TP_RRI",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Rear right inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
@@ -24072,31 +24072,6 @@
       "unit": "psi"
     },
     "hdr": "726",
-    "id": "FOCUS_TP_RLI",
-    "make": "Ford",
-    "model": "Focus",
-    "name": "Rear left inner tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/20 clamped to [3276]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2818"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 20,
-      "len": 16,
-      "max": 3276,
-      "unit": "psi"
-    },
-    "hdr": "726",
     "id": "F350_TP_RLI",
     "make": "Ford",
     "model": "F-350",
@@ -24105,6 +24080,31 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2818"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FOCUS_TP_RLI",
+    "make": "Ford",
+    "model": "Focus",
+    "name": "Rear left inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -25786,7 +25786,7 @@
     "cmd": {
       "22": "3201"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -1638.4,
@@ -25864,7 +25864,7 @@
     "cmd": {
       "22": "4028"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 10,
@@ -25873,9 +25873,9 @@
       "unit": "percent"
     },
     "hdr": "D01A",
-    "id": "LOTUS_SOC",
-    "make": "Lotus",
-    "model": "",
+    "id": "XC40_SOC",
+    "make": "Volvo",
+    "model": "XC40-Recharge",
     "name": "State of charge",
     "path": "Battery",
     "pid": "22",
@@ -25898,9 +25898,9 @@
       "unit": "percent"
     },
     "hdr": "D01A",
-    "id": "XC40_SOC",
-    "make": "Volvo",
-    "model": "XC40-Recharge",
+    "id": "LOTUS_SOC",
+    "make": "Lotus",
+    "model": "",
     "name": "State of charge",
     "path": "Battery",
     "pid": "22",
@@ -29266,6 +29266,30 @@
     "cmd": {
       "22": "420C"
     },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE_ECO",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Estimated range remaining in economy mode",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "420C"
+    },
     "debug": true,
     "eax": "60",
     "fmt": {
@@ -29301,30 +29325,6 @@
     "id": "ROLLSROYCE_RANGE_ECO",
     "make": "Rolls",
     "model": "Royce",
-    "name": "Estimated range remaining in economy mode",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "electricRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "420C"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "len": 16,
-      "max": 65535,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "Z4_RANGE_ECO",
-    "make": "BMW",
-    "model": "Z4",
     "name": "Estimated range remaining in economy mode",
     "path": "Trips",
     "pid": "22",
@@ -34499,7 +34499,7 @@
     "cmd": {
       "22": "A224"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 10,
@@ -36272,6 +36272,30 @@
     "cmd": {
       "22": "D240"
     },
+    "debug": false,
+    "eax": "0D",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "6F1",
+    "id": "Z4_VSS_INSTR",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Vehicle speed (instrument cluster)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1000]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D240"
+    },
     "debug": true,
     "eax": "0D",
     "fmt": {
@@ -36355,30 +36379,6 @@
     "id": "SUPRA_VSS_INSTR",
     "make": "Toyota",
     "model": "Supra",
-    "name": "Vehicle speed (instrument cluster)",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [1000]",
-    "suggestedMetric": "speed",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "D240"
-    },
-    "debug": true,
-    "eax": "0D",
-    "fmt": {
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "6F1",
-    "id": "Z4_VSS_INSTR",
-    "make": "BMW",
-    "model": "Z4",
     "name": "Vehicle speed (instrument cluster)",
     "path": "Movement",
     "pid": "22",
@@ -37262,6 +37262,33 @@
     "cmd": {
       "22": "DB32"
     },
+    "debug": false,
+    "eax": "19",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "Z4_AXLE_FRONT_ACTUAL_TORQUE",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Front axle, actual torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DB32"
+    },
     "debug": true,
     "eax": "19",
     "fmt": {
@@ -37357,33 +37384,6 @@
     "id": "SUPRA_AXLE_FRONT_ACTUAL_TORQUE",
     "make": "Toyota",
     "model": "Supra",
-    "name": "Front axle, actual torque",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4 clamped to [-8000, 8000]",
-    "suggestedMetric": "",
-    "unit": "newtonMeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DB32"
-    },
-    "debug": true,
-    "eax": "19",
-    "fmt": {
-      "div": 4,
-      "len": 16,
-      "max": 8000,
-      "min": -8000,
-      "sign": true,
-      "unit": "newtonMeters"
-    },
-    "hdr": "6F1",
-    "id": "Z4_AXLE_FRONT_ACTUAL_TORQUE",
-    "make": "BMW",
-    "model": "Z4",
     "name": "Front axle, actual torque",
     "path": "Tires",
     "pid": "22",
@@ -38638,6 +38638,32 @@
     "cmd": {
       "22": "DFE7"
     },
+    "debug": false,
+    "eax": "19",
+    "fmt": {
+      "div": 10000,
+      "len": 16,
+      "max": 1000,
+      "mul": 156.25,
+      "unit": "degrees"
+    },
+    "hdr": "6F1",
+    "id": "Z4_VGT_CAL_ANGLE",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Variable geometry turbocharger calibration angle",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*156.25 /10000 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DFE7"
+    },
     "debug": true,
     "eax": "19",
     "fmt": {
@@ -38703,32 +38729,6 @@
     "id": "SUPRA_VGT_CAL_ANGLE",
     "make": "Toyota",
     "model": "Supra",
-    "name": "Variable geometry turbocharger calibration angle",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw*156.25 /10000 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DFE7"
-    },
-    "debug": true,
-    "eax": "19",
-    "fmt": {
-      "div": 10000,
-      "len": 16,
-      "max": 1000,
-      "mul": 156.25,
-      "unit": "degrees"
-    },
-    "hdr": "6F1",
-    "id": "Z4_VGT_CAL_ANGLE",
-    "make": "BMW",
-    "model": "Z4",
     "name": "Variable geometry turbocharger calibration angle",
     "path": "Engine",
     "pid": "22",
@@ -45558,6 +45558,31 @@
     "cmd": {
       "22": "420C"
     },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 16,
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE_COMF",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Estimated range remaining in comfort mode",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "420C"
+    },
     "debug": true,
     "eax": "60",
     "fmt": {
@@ -45595,31 +45620,6 @@
     "id": "ROLLSROYCE_RANGE_COMF",
     "make": "Rolls",
     "model": "Royce",
-    "name": "Estimated range remaining in comfort mode",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "electricRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "420C"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "bix": 16,
-      "len": 16,
-      "max": 65535,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "Z4_RANGE_COMF",
-    "make": "BMW",
-    "model": "Z4",
     "name": "Estimated range remaining in comfort mode",
     "path": "Trips",
     "pid": "22",
@@ -55745,6 +55745,31 @@
     "cmd": {
       "22": "420C"
     },
+    "debug": false,
+    "eax": "60",
+    "fmt": {
+      "bix": 32,
+      "len": 16,
+      "max": 65535,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_RANGE",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Estimated range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "electricRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "420C"
+    },
     "debug": true,
     "eax": "60",
     "fmt": {
@@ -55782,31 +55807,6 @@
     "id": "ROLLSROYCE_RANGE",
     "make": "Rolls",
     "model": "Royce",
-    "name": "Estimated range remaining",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "electricRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "420C"
-    },
-    "debug": true,
-    "eax": "60",
-    "fmt": {
-      "bix": 32,
-      "len": 16,
-      "max": 65535,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "Z4_RANGE",
-    "make": "BMW",
-    "model": "Z4",
     "name": "Estimated range remaining",
     "path": "Trips",
     "pid": "22",
@@ -56095,6 +56095,34 @@
     "cmd": {
       "22": "DB32"
     },
+    "debug": false,
+    "eax": "19",
+    "fmt": {
+      "bix": 32,
+      "div": 4,
+      "len": 16,
+      "max": 8000,
+      "min": -8000,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "6F1",
+    "id": "Z4_AXLE_FRONT_SETPOINT_TORQUE",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Front axle, setpoint torque",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [-8000, 8000]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "DB32"
+    },
     "debug": true,
     "eax": "19",
     "fmt": {
@@ -56194,34 +56222,6 @@
     "id": "SUPRA_AXLE_FRONT_SETPOINT_TORQUE",
     "make": "Toyota",
     "model": "Supra",
-    "name": "Front axle, setpoint torque",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/4 clamped to [-8000, 8000]",
-    "suggestedMetric": "",
-    "unit": "newtonMeters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "DB32"
-    },
-    "debug": true,
-    "eax": "19",
-    "fmt": {
-      "bix": 32,
-      "div": 4,
-      "len": 16,
-      "max": 8000,
-      "min": -8000,
-      "sign": true,
-      "unit": "newtonMeters"
-    },
-    "hdr": "6F1",
-    "id": "Z4_AXLE_FRONT_SETPOINT_TORQUE",
-    "make": "BMW",
-    "model": "Z4",
     "name": "Front axle, setpoint torque",
     "path": "Tires",
     "pid": "22",
@@ -57574,7 +57574,7 @@
     "cmd": {
       "22": "2660"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 368,
@@ -57582,14 +57582,10 @@
       "max": 65535,
       "unit": "seconds"
     },
-    "hdr": "DA10",
-    "id": "ACCORD_RUNTM",
+    "hdr": "DA11",
+    "id": "CIVIC_RUNTM_V2",
     "make": "Honda",
-    "model": "Accord",
-    "modelYears": [
-      2010,
-      2013
-    ],
+    "model": "Civic",
     "name": "Time since engine start",
     "path": "Clocks",
     "pid": "22",
@@ -57611,10 +57607,14 @@
       "max": 65535,
       "unit": "seconds"
     },
-    "hdr": "DA11",
-    "id": "CIVIC_RUNTM_V2",
+    "hdr": "DA10",
+    "id": "ACCORD_RUNTM",
     "make": "Honda",
-    "model": "Civic",
+    "model": "Accord",
+    "modelYears": [
+      2010,
+      2013
+    ],
     "name": "Time since engine start",
     "path": "Clocks",
     "pid": "22",
@@ -62920,7 +62920,7 @@
     "cmd": {
       "22": "2611"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 64,
@@ -67472,7 +67472,7 @@
     "cmd": {
       "22": "2662"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -69052,31 +69052,6 @@
       "unit": "kilometers"
     },
     "hdr": "720",
-    "id": "FIESTA_ODO",
-    "make": "Ford",
-    "model": "Fiesta",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1677721]",
-    "suggestedMetric": "",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "404C"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 24,
-      "max": 1677721,
-      "unit": "kilometers"
-    },
-    "hdr": "720",
     "id": "F350_ODO",
     "make": "Ford",
     "model": "F-350",
@@ -69085,6 +69060,31 @@
     "pid": "22",
     "scaling": "raw/10 clamped to [1677721]",
     "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "404C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 24,
+      "max": 1677721,
+      "unit": "kilometers"
+    },
+    "hdr": "720",
+    "id": "FIESTA_ODO",
+    "make": "Ford",
+    "model": "Fiesta",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "",
     "unit": "kilometers"
   },
   {
@@ -69645,6 +69645,31 @@
     "fmt": {
       "bix": 344,
       "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "DA1D",
+    "id": "CIVIC_ODO_V2",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 344,
+    "cmd": {
+      "22": "2660"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 344,
+      "len": 24,
       "max": 4294967295,
       "unit": "kilometers"
     },
@@ -69681,31 +69706,6 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 344,
-    "cmd": {
-      "22": "2660"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 344,
-      "len": 24,
-      "max": 16777215,
-      "unit": "kilometers"
-    },
-    "hdr": "DA1D",
-    "id": "CIVIC_ODO_V2",
-    "make": "Honda",
-    "model": "Civic",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -73955,6 +73955,31 @@
     "cmd": {
       "22": "DFE7"
     },
+    "debug": false,
+    "eax": "19",
+    "fmt": {
+      "bix": 304,
+      "len": 32,
+      "max": 1000000,
+      "unit": "kilometers"
+    },
+    "hdr": "6F1",
+    "id": "Z4_OIL_CHANGE_DIST",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Distance since last oil change",
+    "path": "Fluids",
+    "pid": "22",
+    "scaling": "raw clamped to [1000000]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 304,
+    "cmd": {
+      "22": "DFE7"
+    },
     "debug": true,
     "eax": "19",
     "fmt": {
@@ -74017,31 +74042,6 @@
     "id": "SUPRA_OIL_CHANGE_DIST",
     "make": "Toyota",
     "model": "Supra",
-    "name": "Distance since last oil change",
-    "path": "Fluids",
-    "pid": "22",
-    "scaling": "raw clamped to [1000000]",
-    "suggestedMetric": "",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 304,
-    "cmd": {
-      "22": "DFE7"
-    },
-    "debug": true,
-    "eax": "19",
-    "fmt": {
-      "bix": 304,
-      "len": 32,
-      "max": 1000000,
-      "unit": "kilometers"
-    },
-    "hdr": "6F1",
-    "id": "Z4_OIL_CHANGE_DIST",
-    "make": "BMW",
-    "model": "Z4",
     "name": "Distance since last oil change",
     "path": "Fluids",
     "pid": "22",
@@ -77098,7 +77098,7 @@
     "cmd": {
       "01": "2F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -87506,6 +87506,70 @@
       }
     },
     "hdr": "7E0",
+    "id": "F350_GEAR",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E0",
     "id": "FOCUS_GEAR",
     "make": "Ford",
     "model": "Focus",
@@ -87667,70 +87731,6 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1E12"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "1": {
-          "description": "First gear",
-          "value": "1"
-        },
-        "10": {
-          "description": "Tenth gear",
-          "value": "10"
-        },
-        "2": {
-          "description": "Second gear",
-          "value": "2"
-        },
-        "3": {
-          "description": "Third gear",
-          "value": "3"
-        },
-        "4": {
-          "description": "Fourth gear",
-          "value": "4"
-        },
-        "5": {
-          "description": "Fifth gear",
-          "value": "5"
-        },
-        "6": {
-          "description": "Sixth gear",
-          "value": "6"
-        },
-        "7": {
-          "description": "Seventh gear",
-          "value": "7"
-        },
-        "8": {
-          "description": "Eighth gear",
-          "value": "8"
-        },
-        "9": {
-          "description": "Ninth gear",
-          "value": "9"
-        }
-      }
-    },
-    "hdr": "7E0",
-    "id": "F350_GEAR",
-    "make": "Ford",
-    "model": "F-350",
-    "name": "Current gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
-    "suggestedMetric": "",
-    "unit": ""
   },
   {
     "bitLength": 8,
@@ -88134,6 +88134,50 @@
       }
     },
     "hdr": "7E0",
+    "id": "F350_GEAR_SHFT",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Shift gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "10": {
+          "description": "Manual",
+          "value": "MANUAL"
+        },
+        "46": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "50": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "60": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "70": {
+          "description": "Park",
+          "value": "PARK"
+        }
+      }
+    },
+    "hdr": "7E0",
     "id": "RANGER_GEAR_SHFT",
     "make": "Ford",
     "model": "Ranger",
@@ -88207,50 +88251,6 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1E23"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "10": {
-          "description": "Manual",
-          "value": "MANUAL"
-        },
-        "46": {
-          "description": "Drive",
-          "value": "DRIVE"
-        },
-        "50": {
-          "description": "Neutral",
-          "value": "NEUTRAL"
-        },
-        "60": {
-          "description": "Reverse",
-          "value": "REVERSE"
-        },
-        "70": {
-          "description": "Park",
-          "value": "PARK"
-        }
-      }
-    },
-    "hdr": "7E0",
-    "id": "F350_GEAR_SHFT",
-    "make": "Ford",
-    "model": "F-350",
-    "name": "Shift gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
-    "suggestedMetric": "",
-    "unit": ""
   },
   {
     "bitLength": 8,
@@ -96334,6 +96334,30 @@
     "cmd": {
       "22": "D031"
     },
+    "debug": false,
+    "eax": "63",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_GEAR_V2",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D031"
+    },
     "debug": true,
     "eax": "63",
     "fmt": {
@@ -96369,30 +96393,6 @@
     "id": "ROLLSROYCE_GEAR_V2",
     "make": "Rolls",
     "model": "Royce",
-    "name": "Current gear",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "D031"
-    },
-    "debug": true,
-    "eax": "63",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "Z4_GEAR_V2",
-    "make": "BMW",
-    "model": "Z4",
     "name": "Current gear",
     "path": "Transmission",
     "pid": "22",
@@ -97738,6 +97738,30 @@
     "cmd": {
       "22": "DA12"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_ATF_TEMP",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Atf temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA12"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -97822,30 +97846,6 @@
     "make": "Toyota",
     "model": "Supra",
     "name": "ATF temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DA12"
-    },
-    "debug": true,
-    "eax": "18",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "Z4_ATF_TEMP",
-    "make": "BMW",
-    "model": "Z4",
-    "name": "Atf temperature",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -98586,6 +98586,30 @@
     "cmd": {
       "22": "DA37"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_TIME_D",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Time in d",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DA37"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -98670,30 +98694,6 @@
     "make": "Toyota",
     "model": "Supra",
     "name": "Time in D",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DA37"
-    },
-    "debug": true,
-    "eax": "18",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "Z4_TIME_D",
-    "make": "BMW",
-    "model": "Z4",
-    "name": "Time in d",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -98826,7 +98826,7 @@
     "cmd": {
       "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "eax": "56",
     "fmt": {
       "len": 8,
@@ -98834,9 +98834,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_DOOR_DRIVER",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "Z4_DOOR_DRIVER",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Driver door open",
     "path": "Doors",
     "pid": "22",
@@ -98858,9 +98858,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "Z4_DOOR_DRIVER",
-    "make": "BMW",
-    "model": "Z4",
+    "id": "ROLLSROYCE_DOOR_DRIVER",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Driver door open",
     "path": "Doors",
     "pid": "22",
@@ -99128,7 +99128,7 @@
     "cmd": {
       "22": "EE6F"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -99138,9 +99138,9 @@
       "unit": "percent"
     },
     "hdr": "D016",
-    "id": "LOTUS_APP_POS",
-    "make": "Lotus",
-    "model": "",
+    "id": "XC40_APP_POS",
+    "make": "Volvo",
+    "model": "XC40-Recharge",
     "name": "Accelerator pedal position",
     "path": "Control.Pedals",
     "pid": "22",
@@ -99164,9 +99164,9 @@
       "unit": "percent"
     },
     "hdr": "D016",
-    "id": "XC40_APP_POS",
-    "make": "Volvo",
-    "model": "XC40-Recharge",
+    "id": "LOTUS_APP_POS",
+    "make": "Lotus",
+    "model": "",
     "name": "Accelerator pedal position",
     "path": "Control.Pedals",
     "pid": "22",
@@ -99498,6 +99498,32 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "F350_FLI",
+    "make": "Ford",
+    "model": "F-350",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 255,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "RANGER_FLI",
     "make": "Ford",
     "model": "Ranger",
@@ -99531,32 +99557,6 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "F42F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 255,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E0",
-    "id": "F350_FLI",
-    "make": "Ford",
-    "model": "F-350",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [255]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "percent"
   },
   {
     "bitLength": 8,
@@ -118104,6 +118104,31 @@
     "cmd": {
       "22": "DA37"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_TIME_M",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Time in m",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "DA37"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -118192,31 +118217,6 @@
     "make": "Toyota",
     "model": "Supra",
     "name": "Time in M",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "DA37"
-    },
-    "debug": true,
-    "eax": "18",
-    "fmt": {
-      "bix": 16,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "Z4_TIME_M",
-    "make": "BMW",
-    "model": "Z4",
-    "name": "Time in m",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -118354,7 +118354,7 @@
     "cmd": {
       "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "eax": "56",
     "fmt": {
       "bix": 16,
@@ -118363,9 +118363,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_DOOR_DRIVER_REAR",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "Z4_DOOR_DRIVER_REAR",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Rear driver door open",
     "path": "Doors",
     "pid": "22",
@@ -118388,9 +118388,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "Z4_DOOR_DRIVER_REAR",
-    "make": "BMW",
-    "model": "Z4",
+    "id": "ROLLSROYCE_DOOR_DRIVER_REAR",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Rear driver door open",
     "path": "Doors",
     "pid": "22",
@@ -140691,7 +140691,7 @@
     "cmd": {
       "22": "A077"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 24,
@@ -141131,7 +141131,7 @@
     "cmd": {
       "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "eax": "56",
     "fmt": {
       "bix": 24,
@@ -141140,9 +141140,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_DOOR_PASSENGER_REAR",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "Z4_DOOR_PASSENGER_REAR",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Rear passenger door open",
     "path": "Doors",
     "pid": "22",
@@ -141165,9 +141165,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "Z4_DOOR_PASSENGER_REAR",
-    "make": "BMW",
-    "model": "Z4",
+    "id": "ROLLSROYCE_DOOR_PASSENGER_REAR",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Rear passenger door open",
     "path": "Doors",
     "pid": "22",
@@ -156349,7 +156349,7 @@
     "cmd": {
       "22": "A077"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 32,
@@ -158198,7 +158198,7 @@
     "cmd": {
       "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "eax": "56",
     "fmt": {
       "bix": 32,
@@ -158207,9 +158207,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_HOOD",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "Z4_HOOD",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Hood open",
     "path": "Doors",
     "pid": "22",
@@ -158232,9 +158232,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "Z4_HOOD",
-    "make": "BMW",
-    "model": "Z4",
+    "id": "ROLLSROYCE_HOOD",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Hood open",
     "path": "Doors",
     "pid": "22",
@@ -161574,7 +161574,7 @@
     "cmd": {
       "22": "A077"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 40,
@@ -163090,7 +163090,7 @@
     "cmd": {
       "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "eax": "56",
     "fmt": {
       "bix": 40,
@@ -163099,9 +163099,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_TRUNK",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "Z4_TRUNK",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Trunk open",
     "path": "Doors",
     "pid": "22",
@@ -163124,9 +163124,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "Z4_TRUNK",
-    "make": "BMW",
-    "model": "Z4",
+    "id": "ROLLSROYCE_TRUNK",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Trunk open",
     "path": "Doors",
     "pid": "22",
@@ -165351,7 +165351,7 @@
     "cmd": {
       "22": "A077"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -165742,7 +165742,7 @@
     "cmd": {
       "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "eax": "56",
     "fmt": {
       "bix": 48,
@@ -165751,9 +165751,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_REAR_WINDOW",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "Z4_REAR_WINDOW",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Rear window open",
     "path": "Windows",
     "pid": "22",
@@ -165776,9 +165776,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "Z4_REAR_WINDOW",
-    "make": "BMW",
-    "model": "Z4",
+    "id": "ROLLSROYCE_REAR_WINDOW",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Rear window open",
     "path": "Windows",
     "pid": "22",
@@ -168444,7 +168444,7 @@
     "cmd": {
       "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "eax": "56",
     "fmt": {
       "bix": 56,
@@ -168453,9 +168453,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_CENTRAL_LOCK",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "Z4_CENTRAL_LOCK",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Locked",
     "path": "Doors",
     "pid": "22",
@@ -168478,9 +168478,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "Z4_CENTRAL_LOCK",
-    "make": "BMW",
-    "model": "Z4",
+    "id": "ROLLSROYCE_CENTRAL_LOCK",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Locked",
     "path": "Doors",
     "pid": "22",
@@ -178905,6 +178905,31 @@
     "cmd": {
       "22": "DA37"
     },
+    "debug": false,
+    "eax": "18",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "6F1",
+    "id": "Z4_TIME_S",
+    "make": "BMW",
+    "model": "Z4",
+    "name": "Time in s",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "DA37"
+    },
     "debug": true,
     "eax": "18",
     "fmt": {
@@ -178993,31 +179018,6 @@
     "make": "Toyota",
     "model": "Supra",
     "name": "Time in S",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "DA37"
-    },
-    "debug": true,
-    "eax": "18",
-    "fmt": {
-      "bix": 8,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "6F1",
-    "id": "Z4_TIME_S",
-    "make": "BMW",
-    "model": "Z4",
-    "name": "Time in s",
     "path": "Engine",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -179155,7 +179155,7 @@
     "cmd": {
       "22": "DCDD"
     },
-    "debug": true,
+    "debug": false,
     "eax": "56",
     "fmt": {
       "bix": 8,
@@ -179164,9 +179164,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "ROLLSROYCE_DOOR_PASSENGER",
-    "make": "Rolls",
-    "model": "Royce",
+    "id": "Z4_DOOR_PASSENGER",
+    "make": "BMW",
+    "model": "Z4",
     "name": "Passenger door open",
     "path": "Doors",
     "pid": "22",
@@ -179189,9 +179189,9 @@
       "unit": "scalar"
     },
     "hdr": "6F1",
-    "id": "Z4_DOOR_PASSENGER",
-    "make": "BMW",
-    "model": "Z4",
+    "id": "ROLLSROYCE_DOOR_PASSENGER",
+    "make": "Rolls",
+    "model": "Royce",
     "name": "Passenger door open",
     "path": "Doors",
     "pid": "22",
@@ -181849,33 +181849,6 @@
       "bix": 80,
       "div": 255,
       "len": 8,
-      "max": 2,
-      "mul": 2,
-      "unit": "unknown"
-    },
-    "hdr": "DA10",
-    "id": "CIVIC_KNOCK_CONTROL",
-    "make": "Honda",
-    "model": "Civic",
-    "name": "Knock control",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw*2 /255 clamped to [2]",
-    "suggestedMetric": "",
-    "unit": "unknown"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 80,
-    "cmd": {
-      "22": "2662"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 80,
-      "div": 255,
-      "len": 8,
       "max": 1.99,
       "mul": 1.99,
       "unit": "scalar"
@@ -181890,6 +181863,33 @@
     "scaling": "raw*1.99 /255 clamped to [1.99]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "2662"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "div": 255,
+      "len": 8,
+      "max": 2,
+      "mul": 2,
+      "unit": "unknown"
+    },
+    "hdr": "DA10",
+    "id": "CIVIC_KNOCK_CONTROL",
+    "make": "Honda",
+    "model": "Civic",
+    "name": "Knock control",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*2 /255 clamped to [2]",
+    "suggestedMetric": "",
+    "unit": "unknown"
   },
   {
     "bitLength": 8,
