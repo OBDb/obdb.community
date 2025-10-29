@@ -7956,6 +7956,31 @@
     "bitLength": 1,
     "bitOffset": 7,
     "cmd": {
+      "22": "B048"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CHARGING",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery is charging?",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
       "22": "D928"
     },
     "debug": false,
@@ -36693,6 +36718,32 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "add": -409.6,
+      "len": 16,
+      "max": 250,
+      "mul": 0.2,
+      "unit": "amps"
+    },
+    "hdr": "7E4",
+    "id": "ZSEV_EVCC_CURRENT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Current",
+    "path": "Battery.EVCC",
+    "pid": "22",
+    "scaling": "raw*0.2 +-409.6 clamped to [250]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "add": 1,
       "len": 16,
       "max": 10,
@@ -36717,6 +36768,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "ZSEV_HVBAT_CMU01_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 01 min voltage",
+    "path": "Battery.Modules.01",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -36760,6 +36837,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B009"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU02_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 02 min voltage",
+    "path": "Battery.Modules.02",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B010"
     },
     "debug": true,
@@ -36779,6 +36882,31 @@
     "pid": "22",
     "scaling": "raw*0.0103092783 clamped to [25000]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B010"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 675.618553,
+      "mul": 0.0103092783,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "ZSEV_EVCC_VOLTAGE",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Voltage",
+    "path": "Battery.EVCC",
+    "pid": "22",
+    "scaling": "raw*0.0103092783 clamped to [675.618553]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -36822,6 +36950,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B011"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU03_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 03 min voltage",
+    "path": "Battery.Modules.03",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B019"
     },
     "debug": true,
@@ -36851,6 +37005,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B019"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU04_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 04 min voltage",
+    "path": "Battery.Modules.04",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -36894,6 +37074,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU05_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 05 min voltage",
+    "path": "Battery.Modules.05",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B029"
     },
     "debug": true,
@@ -36930,6 +37136,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B029"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU06_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 06 min voltage",
+    "path": "Battery.Modules.06",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B041"
     },
     "debug": true,
@@ -36956,6 +37188,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B041"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "mul": 0.25,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_BUS_VOLTAGE",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery bus voltage",
+    "path": "Battery.Internal",
+    "pid": "22",
+    "scaling": "raw*0.25 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B042"
     },
     "debug": true,
@@ -36975,6 +37232,31 @@
     "pid": "22",
     "scaling": "raw*0.25 clamped to [500]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B042"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 500,
+      "mul": 0.25,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_VOLTAGE",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.25 clamped to [500]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37009,6 +37291,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B043"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -1000,
+      "len": 16,
+      "max": 250,
+      "mul": 0.025,
+      "unit": "amps"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CURRENT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.025 +-1000 clamped to [250]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B045"
     },
     "debug": true,
@@ -37030,6 +37338,56 @@
     "signalGroups": [],
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B045"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 32767.5,
+      "mul": 0.5,
+      "unit": "scalar"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_RESISTANCE",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery internal resistance",
+    "path": "Battery.Internal",
+    "pid": "22",
+    "scaling": "raw*0.5 clamped to [32767.5]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B046"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_SOC",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -37087,6 +37445,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B061"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.01,
+      "unit": "percent"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_SOH",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.01 clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B0A3"
     },
     "debug": true,
@@ -37116,6 +37499,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B0A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU07_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 07 min voltage",
+    "path": "Battery.Modules.07",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37159,6 +37568,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B0AB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU08_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 08 min voltage",
+    "path": "Battery.Modules.08",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B0B3"
     },
     "debug": true,
@@ -37188,6 +37623,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B0B3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU09_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 09 min voltage",
+    "path": "Battery.Modules.09",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37231,6 +37692,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B0BB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU10_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 10 min voltage",
+    "path": "Battery.Modules.10",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B0C3"
     },
     "debug": true,
@@ -37260,6 +37747,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B0C3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU11_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 11 min voltage",
+    "path": "Battery.Modules.11",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37303,6 +37816,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B0CB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU12_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 12 min voltage",
+    "path": "Battery.Modules.12",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B0DB"
     },
     "debug": true,
@@ -37332,6 +37871,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B0DB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU13_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 13 min voltage",
+    "path": "Battery.Modules.13",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37375,6 +37940,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B0DC"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU14_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 14 min voltage",
+    "path": "Battery.Modules.14",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B0DD"
     },
     "debug": true,
@@ -37404,6 +37995,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B0DD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU15_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 15 min voltage",
+    "path": "Battery.Modules.15",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37447,6 +38064,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B0DE"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU16_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 16 min voltage",
+    "path": "Battery.Modules.16",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B10E"
     },
     "debug": true,
@@ -37476,6 +38119,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B10E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU17_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 17 min voltage",
+    "path": "Battery.Modules.17",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37519,6 +38188,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B10F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU18_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 18 min voltage",
+    "path": "Battery.Modules.18",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B110"
     },
     "debug": true,
@@ -37548,6 +38243,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B110"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU19_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 19 min voltage",
+    "path": "Battery.Modules.19",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37591,6 +38312,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B111"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU20_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 20 min voltage",
+    "path": "Battery.Modules.20",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B112"
     },
     "debug": true,
@@ -37620,6 +38367,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU21_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 21 min voltage",
+    "path": "Battery.Modules.21",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37663,6 +38436,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B113"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU22_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 22 min voltage",
+    "path": "Battery.Modules.22",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B114"
     },
     "debug": true,
@@ -37699,6 +38498,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "B114"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU23_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 23 min voltage",
+    "path": "Battery.Modules.23",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B115"
     },
     "debug": true,
@@ -37728,6 +38553,32 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B115"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU24_MINVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 24 min voltage",
+    "path": "Battery.Modules.24",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48019,6 +48870,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "ZSEV_HVBAT_CMU01_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 01 max voltage",
+    "path": "Battery.Modules.01",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B009"
     },
     "debug": true,
@@ -48049,6 +48927,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B009"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU02_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 02 max voltage",
+    "path": "Battery.Modules.02",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48093,6 +48998,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B011"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU03_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 03 max voltage",
+    "path": "Battery.Modules.03",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B019"
     },
     "debug": true,
@@ -48123,6 +49055,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B019"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU04_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 04 max voltage",
+    "path": "Battery.Modules.04",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48167,6 +49126,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU05_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 05 max voltage",
+    "path": "Battery.Modules.05",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B029"
     },
     "debug": true,
@@ -48197,6 +49183,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B029"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU06_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 06 max voltage",
+    "path": "Battery.Modules.06",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48241,6 +49254,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B0A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU07_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 07 max voltage",
+    "path": "Battery.Modules.07",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B0AB"
     },
     "debug": true,
@@ -48271,6 +49311,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B0AB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU08_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 08 max voltage",
+    "path": "Battery.Modules.08",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48315,6 +49382,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B0B3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU09_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 09 max voltage",
+    "path": "Battery.Modules.09",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B0BB"
     },
     "debug": true,
@@ -48345,6 +49439,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B0BB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU10_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 10 max voltage",
+    "path": "Battery.Modules.10",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48389,6 +49510,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B0C3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU11_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 11 max voltage",
+    "path": "Battery.Modules.11",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B0CB"
     },
     "debug": true,
@@ -48419,6 +49567,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B0CB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU12_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 12 max voltage",
+    "path": "Battery.Modules.12",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48463,6 +49638,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B0DB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU13_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 13 max voltage",
+    "path": "Battery.Modules.13",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B0DC"
     },
     "debug": true,
@@ -48493,6 +49695,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B0DC"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU14_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 14 max voltage",
+    "path": "Battery.Modules.14",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48537,6 +49766,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B0DD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU15_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 15 max voltage",
+    "path": "Battery.Modules.15",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B0DE"
     },
     "debug": true,
@@ -48567,6 +49823,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B0DE"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU16_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 16 max voltage",
+    "path": "Battery.Modules.16",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48611,6 +49894,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B10E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU17_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 17 max voltage",
+    "path": "Battery.Modules.17",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B10F"
     },
     "debug": true,
@@ -48641,6 +49951,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B10F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU18_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 18 max voltage",
+    "path": "Battery.Modules.18",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48685,6 +50022,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B110"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU19_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 19 max voltage",
+    "path": "Battery.Modules.19",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B111"
     },
     "debug": true,
@@ -48715,6 +50079,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B111"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU20_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 20 max voltage",
+    "path": "Battery.Modules.20",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48759,6 +50150,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU21_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 21 max voltage",
+    "path": "Battery.Modules.21",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B113"
     },
     "debug": true,
@@ -48789,6 +50207,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B113"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU22_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 22 max voltage",
+    "path": "Battery.Modules.22",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -48833,6 +50278,33 @@
     "bitLength": 16,
     "bitOffset": 16,
     "cmd": {
+      "22": "B114"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU23_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 23 max voltage",
+    "path": "Battery.Modules.23",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
       "22": "B115"
     },
     "debug": true,
@@ -48863,6 +50335,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B115"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 1,
+      "bix": 16,
+      "len": 16,
+      "max": 10,
+      "mul": 0.0005,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU24_MAXVOLT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 24 max voltage",
+    "path": "Battery.Modules.24",
+    "pid": "22",
+    "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -72345,6 +73844,30 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B921"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "710",
+    "id": "ZSEV_GWM_ODO",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -99460,6 +100983,31 @@
     "eax": "",
     "fmt": {
       "len": 8,
+      "max": 110.869565,
+      "mul": 0.434782609,
+      "unit": "amps"
+    },
+    "hdr": "7E4",
+    "id": "ZSEV_EVCC_MAX_CURRENT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Max Current",
+    "path": "Battery.EVCC",
+    "pid": "22",
+    "scaling": "raw*0.434782609 clamped to [110.869565]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B003"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
       "max": 250,
       "mul": 0.434782609,
       "unit": "amps"
@@ -99498,6 +101046,30 @@
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B00F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7E4",
+    "id": "ZSEV_EVCC_CHARGING",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Charging",
+    "path": "Battery.EVCC",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -99557,6 +101129,32 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "B056"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_TEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B05C"
     },
     "debug": true,
@@ -99577,6 +101175,32 @@
     "pid": "22",
     "scaling": "raw*0.5 +-40 clamped to [100]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B05C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 100,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_COOLANT_TEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery coolant temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [100]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -100065,6 +101689,30 @@
     "pid": "22",
     "scaling": "raw clamped to [255]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "D001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "710",
+    "id": "ZSEV_GWM_STATUS",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Vehicle gateway status",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
   },
@@ -161168,6 +162816,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "ZSEV_HVBAT_CMU01_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 01 min temperature",
+    "path": "Battery.Modules.01",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B002"
     },
     "debug": false,
@@ -161407,6 +163082,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B009"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU02_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 02 min temperature",
+    "path": "Battery.Modules.02",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B011"
     },
     "debug": true,
@@ -161437,6 +163139,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B011"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU03_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 03 min temperature",
+    "path": "Battery.Modules.03",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -161481,6 +163210,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B019"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU04_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 04 min temperature",
+    "path": "Battery.Modules.04",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B021"
     },
     "debug": true,
@@ -161511,6 +163267,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU05_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 05 min temperature",
+    "path": "Battery.Modules.05",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -161555,6 +163338,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B029"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU06_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 06 min temperature",
+    "path": "Battery.Modules.06",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B0A3"
     },
     "debug": true,
@@ -161585,6 +163395,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B0A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU07_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 07 min temperature",
+    "path": "Battery.Modules.07",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -161629,6 +163466,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B0AB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU08_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 08 min temperature",
+    "path": "Battery.Modules.08",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B0B3"
     },
     "debug": true,
@@ -161659,6 +163523,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B0B3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU09_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 09 min temperature",
+    "path": "Battery.Modules.09",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -161703,6 +163594,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B0BB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU10_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 10 min temperature",
+    "path": "Battery.Modules.10",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B0C3"
     },
     "debug": true,
@@ -161733,6 +163651,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B0C3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU11_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 11 min temperature",
+    "path": "Battery.Modules.11",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -161777,6 +163722,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B0CB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU12_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 12 min temperature",
+    "path": "Battery.Modules.12",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B0DB"
     },
     "debug": true,
@@ -161807,6 +163779,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B0DB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU13_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 13 min temperature",
+    "path": "Battery.Modules.13",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -161851,6 +163850,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B0DC"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU14_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 14 min temperature",
+    "path": "Battery.Modules.14",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B0DD"
     },
     "debug": true,
@@ -161881,6 +163907,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B0DD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU15_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 15 min temperature",
+    "path": "Battery.Modules.15",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -161925,6 +163978,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B0DE"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU16_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 16 min temperature",
+    "path": "Battery.Modules.16",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B10E"
     },
     "debug": true,
@@ -161955,6 +164035,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B10E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU17_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 17 min temperature",
+    "path": "Battery.Modules.17",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -161999,6 +164106,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B10F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU18_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 18 min temperature",
+    "path": "Battery.Modules.18",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B110"
     },
     "debug": true,
@@ -162029,6 +164163,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B110"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU19_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 19 min temperature",
+    "path": "Battery.Modules.19",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -162073,6 +164234,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B111"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU20_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 20 min temperature",
+    "path": "Battery.Modules.20",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B112"
     },
     "debug": true,
@@ -162103,6 +164291,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU21_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 21 min temperature",
+    "path": "Battery.Modules.21",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -162147,6 +164362,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B113"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU22_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 22 min temperature",
+    "path": "Battery.Modules.22",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B114"
     },
     "debug": true,
@@ -162184,6 +164426,33 @@
     "bitLength": 8,
     "bitOffset": 32,
     "cmd": {
+      "22": "B114"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU23_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 23 min temperature",
+    "path": "Battery.Modules.23",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
       "22": "B115"
     },
     "debug": true,
@@ -162214,6 +164483,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B115"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 32,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU24_MINTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 24 min temperature",
+    "path": "Battery.Modules.24",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -166524,6 +168820,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "ZSEV_HVBAT_CMU01_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 01 max temperature",
+    "path": "Battery.Modules.01",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B002"
     },
     "debug": false,
@@ -166743,6 +169066,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B009"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU02_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 02 max temperature",
+    "path": "Battery.Modules.02",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B011"
     },
     "debug": true,
@@ -166773,6 +169123,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B011"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU03_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 03 max temperature",
+    "path": "Battery.Modules.03",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -166817,6 +169194,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B019"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU04_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 04 max temperature",
+    "path": "Battery.Modules.04",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B021"
     },
     "debug": true,
@@ -166847,6 +169251,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B021"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU05_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 05 max temperature",
+    "path": "Battery.Modules.05",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -166891,6 +169322,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B029"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU06_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 06 max temperature",
+    "path": "Battery.Modules.06",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B0A3"
     },
     "debug": true,
@@ -166921,6 +169379,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B0A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU07_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 07 max temperature",
+    "path": "Battery.Modules.07",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -166965,6 +169450,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B0AB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU08_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 08 max temperature",
+    "path": "Battery.Modules.08",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B0B3"
     },
     "debug": true,
@@ -166995,6 +169507,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B0B3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU09_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 09 max temperature",
+    "path": "Battery.Modules.09",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -167039,6 +169578,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B0BB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU10_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 10 max temperature",
+    "path": "Battery.Modules.10",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B0C3"
     },
     "debug": true,
@@ -167069,6 +169635,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B0C3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU11_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 11 max temperature",
+    "path": "Battery.Modules.11",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -167113,6 +169706,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B0CB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU12_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 12 max temperature",
+    "path": "Battery.Modules.12",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B0DB"
     },
     "debug": true,
@@ -167143,6 +169763,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B0DB"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU13_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 13 max temperature",
+    "path": "Battery.Modules.13",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -167187,6 +169834,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B0DC"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU14_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 14 max temperature",
+    "path": "Battery.Modules.14",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B0DD"
     },
     "debug": true,
@@ -167217,6 +169891,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B0DD"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU15_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 15 max temperature",
+    "path": "Battery.Modules.15",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -167261,6 +169962,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B0DE"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU16_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 16 max temperature",
+    "path": "Battery.Modules.16",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B10E"
     },
     "debug": true,
@@ -167291,6 +170019,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B10E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU17_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 17 max temperature",
+    "path": "Battery.Modules.17",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -167335,6 +170090,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B10F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU18_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 18 max temperature",
+    "path": "Battery.Modules.18",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B110"
     },
     "debug": true,
@@ -167365,6 +170147,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B110"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU19_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 19 max temperature",
+    "path": "Battery.Modules.19",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -167409,6 +170218,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B111"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU20_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 20 max temperature",
+    "path": "Battery.Modules.20",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B112"
     },
     "debug": true,
@@ -167439,6 +170275,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU21_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 21 max temperature",
+    "path": "Battery.Modules.21",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -167483,6 +170346,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B113"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU22_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 22 max temperature",
+    "path": "Battery.Modules.22",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B114"
     },
     "debug": true,
@@ -167520,6 +170410,33 @@
     "bitLength": 8,
     "bitOffset": 40,
     "cmd": {
+      "22": "B114"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU23_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 23 max temperature",
+    "path": "Battery.Modules.23",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
       "22": "B115"
     },
     "debug": true,
@@ -167550,6 +170467,33 @@
         "path": "Battery.Modules"
       }
     ],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B115"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "len": 8,
+      "max": 150,
+      "mul": 0.5,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_CMU24_MAXTEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery module 24 max temperature",
+    "path": "Battery.Modules.24",
+    "pid": "22",
+    "scaling": "raw*0.5 +-40 clamped to [150]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
