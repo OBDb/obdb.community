@@ -323,6 +323,30 @@
     "bitLength": 1,
     "bitOffset": 0,
     "cmd": {
+      "22": "2B00"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "760",
+    "id": "FUSIONENERGI_PARKING_BRAKE",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Parking brake state",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
       "22": "407E"
     },
     "debug": false,
@@ -917,6 +941,31 @@
     "id": "FORTE_RL_INVALID",
     "make": "Kia",
     "model": "Forte",
+    "name": "Rear left tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 126,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 126,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_RL_INVALID",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Rear left tire reading invalid?",
     "path": "Tires",
     "pid": "22",
@@ -1554,6 +1603,31 @@
     "bitLength": 1,
     "bitOffset": 150,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 150,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TC_SWITCH",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Wheel traction control switch",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 150,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -1569,6 +1643,31 @@
     "make": "Hyundai",
     "model": "Elantra",
     "name": "ABS traction control switch (raw)",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 150,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 150,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TC_SWITCH_V2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Traction control switch (raw)",
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [1]",
@@ -1618,6 +1717,31 @@
     "id": "FORTE_RR_INVALID",
     "make": "Kia",
     "model": "Forte",
+    "name": "Rear right tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 158,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 158,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_RR_INVALID",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Rear right tire reading invalid?",
     "path": "Tires",
     "pid": "22",
@@ -2268,6 +2392,31 @@
     "id": "FIESTA_TPMS_WARN",
     "make": "Ford",
     "model": "Fiesta",
+    "name": "Tire pressure warning indicator",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 2,
+    "cmd": {
+      "22": "61A5"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 2,
+      "len": 1,
+      "max": 1,
+      "unit": "offon"
+    },
+    "hdr": "720",
+    "id": "FUSIONENERGI_TPMS_WARN",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Tire pressure warning indicator",
     "path": "Tires",
     "pid": "22",
@@ -3390,6 +3539,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_DOOR_RL",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear left door open?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_DOOR_RL_OPEN",
     "make": "Hyundai",
     "model": "Veloster",
@@ -3465,6 +3639,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_DOOR_FL",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Front left door open?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 34,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 34,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_DOOR_FL_OPEN",
     "make": "Hyundai",
     "model": "Veloster",
@@ -3493,6 +3692,31 @@
     "id": "FORTE_LOCK_FR",
     "make": "Kia",
     "model": "Forte",
+    "name": "Door lock front right",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 34,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 34,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_LOCK_FR",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Door lock front right",
     "path": "Doors",
     "pid": "22",
@@ -3590,6 +3814,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_HANDBRAKE",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Handbrake engaged?",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_HANDBRAKE",
     "make": "Hyundai",
     "model": "Veloster",
@@ -3643,6 +3892,31 @@
     "id": "FORTE_LOCK_FL",
     "make": "Kia",
     "model": "Forte",
+    "name": "Door lock front left ",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 35,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 35,
+      "len": 1,
+      "max": 1,
+      "unit": "scalar"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_LOCK_FL",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Door lock front left ",
     "path": "Doors",
     "pid": "22",
@@ -3740,6 +4014,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_DOOR_FR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Front right door open?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_DOOR_FR_OPEN",
     "make": "Hyundai",
     "model": "Veloster",
@@ -3768,6 +4067,31 @@
     "id": "FORTE_REVERSE_GEAR",
     "make": "Kia",
     "model": "Forte",
+    "name": "Reverse gear selected",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 36,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 36,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_REVERSE_GEAR",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Reverse gear selected",
     "path": "Transmission",
     "pid": "22",
@@ -3890,6 +4214,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_DOOR_RR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear right door open?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 37,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 37,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_DOOR_RR_OPEN",
     "make": "Hyundai",
     "model": "Veloster",
@@ -3968,6 +4317,31 @@
     "id": "FORTE_TRUNK",
     "make": "Kia",
     "model": "Forte",
+    "name": "Trunk open?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 39,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 39,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_TRUNK",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Trunk open?",
     "path": "Doors",
     "pid": "22",
@@ -4665,6 +5039,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_BELT_PASSENGER",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Passenger seatbelt latched?",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_BELT_PASSENGER",
     "make": "Hyundai",
     "model": "Veloster",
@@ -4792,6 +5191,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_BELT_DRIVER",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Driver seatbelt latched?",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 41,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 41,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_BELT_DRIVER",
     "make": "Hyundai",
     "model": "Veloster",
@@ -4829,6 +5253,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 45,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 45,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_BELT_PASS",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Passenger seatbelt latched?",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 46,
     "cmd": {
       "22": "BC03"
@@ -4854,6 +5303,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 46,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 46,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_BELT_DRIV",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Driver seatbelt latched?",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 47,
     "cmd": {
       "22": "BC03"
@@ -4870,6 +5344,31 @@
     "id": "ELANTRA_HOOD",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "Hood latched?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 47,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 47,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_HOOD",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Hood latched?",
     "path": "Doors",
     "pid": "22",
@@ -5579,6 +6078,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 52,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 52,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_BELT_RM",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear middle seatbelt latched?",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 53,
     "cmd": {
       "22": "BC04"
@@ -5604,6 +6128,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 53,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 53,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_BELT_RL",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear left seatbelt latched?",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 54,
     "cmd": {
       "22": "BC04"
@@ -5620,6 +6169,31 @@
     "id": "ELANTRA_BELT_RR",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "Rear right seatbelt latched?",
+    "path": "Seatbelts",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 54,
+    "cmd": {
+      "22": "BC04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 54,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_BELT_RR",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Rear right seatbelt latched?",
     "path": "Seatbelts",
     "pid": "22",
@@ -6445,6 +7019,31 @@
     "id": "FORTE_FL_INVALID",
     "make": "Kia",
     "model": "Forte",
+    "name": "Front left tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 62,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 62,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_FL_INVALID",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Front left tire reading invalid?",
     "path": "Tires",
     "pid": "22",
@@ -8087,6 +8686,31 @@
     "id": "FORTE_FR_INVALID",
     "make": "Kia",
     "model": "Forte",
+    "name": "Front right tire reading invalid?",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 94,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 94,
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_FR_INVALID",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Front right tire reading invalid?",
     "path": "Tires",
     "pid": "22",
@@ -10015,6 +10639,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_MAP_V",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Manifold absolute pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0009765625 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0301"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0009765625,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] MAP voltage",
     "make": "Ford",
     "model": "Mustang",
@@ -10598,6 +11247,31 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_LPFP_DUTY",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Low pressure fuel pump commanded duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0307"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "[ECU] LPFP duty cycle",
     "make": "Ford",
     "model": "Mustang",
@@ -10799,6 +11473,31 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_VCT_INT_DUTY",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Vct intake camshaft solenoid duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0316"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "[ECU] VCT intake duty cycle",
     "make": "Ford",
     "model": "Mustang",
@@ -10878,6 +11577,31 @@
     "make": "Ford",
     "model": "Explorer",
     "name": "VCT exhaust camshaft solenoid duty cycle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0030517578 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0317"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 100,
+      "mul": 0.0030517578,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_VCT_EXH_DUTY",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Vct exhaust camshaft solenoid duty cycle",
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0030517578 clamped to [100]",
@@ -11003,6 +11727,32 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_VCT_INT_ACT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Vct intake camshaft actual",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 0]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0318"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 0,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "[ECU] VCT intake actual",
     "make": "Ford",
     "model": "Mustang",
@@ -11082,6 +11832,31 @@
     "make": "Ford",
     "model": "Explorer",
     "name": "VCT exhaust camshaft actual",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0319"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_VCT_EXH_ACT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Vct exhaust camshaft actual",
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0625 clamped to [50]",
@@ -11185,6 +11960,32 @@
     "make": "Ford",
     "model": "Explorer",
     "name": "VCT intake camshaft error",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "031A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_VCT_INT_ERR",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Vct intake camshaft error",
     "path": "",
     "pid": "22",
     "scaling": "raw*0.0625 clamped to [-50, 50]",
@@ -11311,6 +12112,32 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_VCT_EXH_ERR",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Vct exhaust camshaft error",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "031B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "[ECU] VCT exhaust error",
     "make": "Ford",
     "model": "Mustang",
@@ -11339,6 +12166,31 @@
     "id": "BRONCOSPORT_HPFP_V",
     "make": "Ford",
     "model": "Bronco-Sport",
+    "name": "High pressure fuel rail sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/204.6 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0324"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 204.6,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_HPFP_V",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "High pressure fuel rail sensor voltage",
     "path": "",
     "pid": "22",
@@ -11411,6 +12263,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] HPFP SENSOR VOLTAGE",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "High pressure fuel rail sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0324"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] HPFP sensor voltage",
     "make": "Ford",
     "model": "Mustang",
@@ -11441,6 +12318,33 @@
     "id": "BRONCOSPORT_ETC_TRIM_LEARNED",
     "make": "Ford",
     "model": "Bronco-Sport",
+    "name": "Electronic throttle control learned trim angle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/512 clamped to [-63.9, 64]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0338"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 512,
+      "len": 16,
+      "max": 64,
+      "min": -63.9,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_ETC_TRIM_LEARNED",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Electronic throttle control learned trim angle",
     "path": "",
     "pid": "22",
@@ -11516,6 +12420,32 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] ETC LEARNED TRIM",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Electronic throttle control learned trim angle",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.001953125 clamped to [-90, 90]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0338"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 90,
+      "min": -90,
+      "mul": 0.001953125,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "[ECU] ETC learned trim",
     "make": "Ford",
     "model": "Mustang",
@@ -11544,6 +12474,31 @@
     "id": "BRONCOSPORT_TIP_V",
     "make": "Ford",
     "model": "Bronco-Sport",
+    "name": "Throttle inlet pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/204.8 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "033C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 204.8,
+      "len": 16,
+      "max": 5,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_TIP_V",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Throttle inlet pressure sensor voltage",
     "path": "",
     "pid": "22",
@@ -11616,6 +12571,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] TIP SENSOR VOLTAGE",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Throttle inlet pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048828125 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "033C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048828125,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] TIP sensor voltage",
     "make": "Ford",
     "model": "Mustang",
@@ -11644,6 +12624,31 @@
     "id": "BRONCOSPORT_TIP_ABS",
     "make": "Ford",
     "model": "Bronco-Sport",
+    "name": "Throttle inlet pressure absolute",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/903.8107848 clamped to [60]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "033E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 903.8107848,
+      "len": 16,
+      "max": 60,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_TIP_ABS",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Throttle inlet pressure absolute",
     "path": "",
     "pid": "22",
@@ -11716,6 +12721,31 @@
       "unit": "psi"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] TIP ACTUAL ABS",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Throttle inlet pressure absolute",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0011064263 clamped to [60]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "033E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 60,
+      "mul": 0.0011064263,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
     "id": "[ECU] TIP actual abs",
     "make": "Ford",
     "model": "Mustang",
@@ -11745,6 +12775,32 @@
     "id": "BRONCOSPORT_BARO",
     "make": "Ford",
     "model": "Bronco-Sport",
+    "name": "Barometric pressure",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/27.582114 clamped to [8, 20]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0353"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 27.582114,
+      "len": 16,
+      "max": 20,
+      "min": 8,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_BARO",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Barometric pressure",
     "path": "",
     "pid": "22",
@@ -11797,6 +12853,32 @@
     "id": "EXPLORER_BARO",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Barometric pressure",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0362553791 clamped to [8, 20]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0353"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 20,
+      "min": 8,
+      "mul": 0.0362553791,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] BARO",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Barometric pressure",
     "path": "",
     "pid": "22",
@@ -11920,6 +13002,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_BARO_V",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Barometric pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "035A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] Baro Sensor V",
     "make": "Ford",
     "model": "Mustang",
@@ -12020,6 +13127,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_RO2_V",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Rear o2 voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0009765625 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "035F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1,
+      "mul": 0.0009765625,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] Rear O2 V",
     "make": "Ford",
     "model": "Mustang",
@@ -12049,6 +13181,32 @@
     "id": "BRONCOSPORT_EVAP_V",
     "make": "Ford",
     "model": "Bronco-Sport",
+    "name": "Evaporative vapor pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/5.0048876 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "038E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 5.0048876,
+      "len": 16,
+      "max": 5,
+      "sign": true,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_EVAP_V",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Evaporative vapor pressure sensor voltage",
     "path": "",
     "pid": "22",
@@ -12121,6 +13279,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] EVAP PRES SENSOR V",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Evaporative vapor pressure sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.1998046869 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "038E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.1998046869,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] Evap Pres Sensor V",
     "make": "Ford",
     "model": "Mustang",
@@ -12151,6 +13334,33 @@
     "id": "BRONCOSPORT_ECT",
     "make": "Ford",
     "model": "Bronco-Sport",
+    "name": "Engine coolant temperature",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/64 clamped to [-40, 148.889]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "038F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 64,
+      "len": 16,
+      "max": 148.889,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_ECT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Engine coolant temperature",
     "path": "",
     "pid": "22",
@@ -12203,6 +13413,32 @@
     "id": "EXPLORER_ECT",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Engine coolant temperature",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.015625 clamped to [-40, 148.889]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "038F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 148.889,
+      "min": -40,
+      "mul": 0.015625,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] ECT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Engine coolant temperature",
     "path": "",
     "pid": "22",
@@ -12281,6 +13517,32 @@
     "id": "EXPLORER_AC_P",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Air conditioning compressor pressure",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.2900754962 clamped to [-100, 1000]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0393"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1000,
+      "min": -100,
+      "mul": 0.2900754962,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_AC_P",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Air conditioning compressor pressure",
     "path": "",
     "pid": "22",
@@ -12404,6 +13666,31 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_AAT_V",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Ambient air temperature sensor voltage",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0048875855 clamped to [5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "mul": 0.0048875855,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "[ECU] AAT Sensor V",
     "make": "Ford",
     "model": "Mustang",
@@ -12504,6 +13791,31 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_VCT_EXH_DES",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Vct exhaust cam, desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [50]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BB"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "[ECU] VCT Exh Des",
     "make": "Ford",
     "model": "Mustang",
@@ -12535,6 +13847,33 @@
     "make": "Ford",
     "model": "Bronco-Sport",
     "name": "VCT intake cam, desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [-30, 40]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BC"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 40,
+      "min": -30,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_VCT_INT_DES",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Vct intake cam, desired",
     "path": "",
     "pid": "22",
     "scaling": "raw/16 clamped to [-30, 40]",
@@ -12609,6 +13948,32 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] VCT INT DES",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Vct intake cam desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0625 clamped to [-50, 0]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BC"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 0,
+      "min": -50,
+      "mul": 0.0625,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "[ECU] VCT Int Des",
     "make": "Ford",
     "model": "Mustang",
@@ -12639,6 +14004,33 @@
     "id": "BRONCOSPORT_CL_LC",
     "make": "Ford",
     "model": "Bronco-Sport",
+    "name": "Closed loop lambda correction",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/8192 clamped to [-4, 3.99]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BD"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 8192,
+      "len": 16,
+      "max": 3.99,
+      "min": -4,
+      "sign": true,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_CL_LC",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Closed loop lambda correction",
     "path": "",
     "pid": "22",
@@ -12691,6 +14083,32 @@
     "id": "EXPLORER_CL_LC",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Closed loop lambda correction",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.0001220703 clamped to [-5, 5]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03BD"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 5,
+      "min": -5,
+      "mul": 0.0001220703,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] CL LAMBDA CORR",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Closed loop lambda correction",
     "path": "",
     "pid": "22",
@@ -12889,6 +14307,31 @@
       "unit": "psi"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_HPFP_DES",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "High pressure fuel pressure desired",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*1.4503773969 clamped to [3500]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03DC"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 3500,
+      "mul": 1.4503773969,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
     "id": "[ECU] HPFP Desired",
     "make": "Ford",
     "model": "Mustang",
@@ -13048,6 +14491,32 @@
     "id": "EXPLORER_OAR",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Octane adjust ratio",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*6.10352e-05 clamped to [-1, 1]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03E8"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1,
+      "min": -1,
+      "mul": 6.10352e-05,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_OAR",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Octane adjust ratio",
     "path": "",
     "pid": "22",
@@ -20625,6 +22094,31 @@
       "max": 255,
       "unit": "celsius"
     },
+    "hdr": "7DF",
+    "id": "FUSIONENERGI_TOT_V2",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Transmission oil temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 255,
+      "unit": "celsius"
+    },
     "hdr": "7E0",
     "id": "RANGER_TOT",
     "make": "Ford",
@@ -20683,6 +22177,33 @@
     "id": "F150LIGHTNING_TT",
     "make": "Ford",
     "model": "F-150-Lightning",
+    "name": "Transmission temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [-300, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 300,
+      "min": -300,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E6",
+    "id": "FUSIONENERGI_TT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Transmission temperature",
     "path": "Transmission",
     "pid": "22",
@@ -20818,6 +22339,33 @@
     "id": "EXPLORER_TOT",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Transmission oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/16 clamped to [-500, 500]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E1C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 16,
+      "len": 16,
+      "max": 500,
+      "min": -500,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_TOT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Transmission oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -22442,6 +23990,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "FUSIONENERGI_TP_FL",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2813"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "MACHE_TP_FL",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -22850,6 +24423,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "FUSIONENERGI_TP_FR",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2814"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "MACHE_TP_FR",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -22957,6 +24555,31 @@
     "id": "EXPLORER_TP_RR",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [255]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FUSIONENERGI_TP_RR",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -23258,6 +24881,31 @@
       "unit": "psi"
     },
     "hdr": "726",
+    "id": "FUSIONENERGI_TP_RRO",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Rear right outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2815"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
     "id": "MACHE_TP_RR",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -23365,6 +25013,31 @@
     "id": "EXPLORER_TP_RL",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [255]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 255,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FUSIONENERGI_TP_RL",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -23644,6 +25317,31 @@
     "id": "FOCUS_TP_RLO",
     "make": "Ford",
     "model": "Focus",
+    "name": "Rear left outer tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2816"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FUSIONENERGI_TP_RLO",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Rear left outer tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -23988,6 +25686,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "2817"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FUSIONENERGI_TP_RRI",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Rear right inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2818"
     },
     "debug": false,
@@ -24211,6 +25934,31 @@
     "pid": "22",
     "scaling": "raw/20 clamped to [3276]",
     "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2818"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 3276,
+      "unit": "psi"
+    },
+    "hdr": "726",
+    "id": "FUSIONENERGI_TP_RLI",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Rear left inner tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [3276]",
+    "suggestedMetric": "",
     "unit": "psi"
   },
   {
@@ -34885,6 +36633,34 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "A224"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 736,
+      "min": -736,
+      "mul": 3.6,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "764",
+    "id": "FUSIONENERGI_CC_TGT_VSS",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Target vehicle speed",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw*3.6 /10 clamped to [-736, 736]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B001"
     },
     "debug": true,
@@ -39817,6 +41593,61 @@
     "id": "SPORTAGE_MIS_4",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Misfire count #4",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
+      "div": 100,
+      "len": 16,
+      "max": 180,
+      "min": -180,
+      "sign": true,
+      "unit": "milesPerHour"
+    },
+    "hdr": "7E2",
+    "id": "TELLURIDE_VSS_V2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [-180, 180]",
+    "suggestedMetric": "speed",
+    "unit": "milesPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_MIS_4",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Misfire count #4",
     "path": "Engine",
     "pid": "21",
@@ -50057,6 +51888,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_INJ_DUR_1",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Injection duration cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 192,
     "cmd": {
       "22": "182E"
@@ -50350,6 +52208,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 192,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 192,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_INJ_DUR_2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Injection duration cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 200,
     "cmd": {
       "21": "01"
@@ -50408,6 +52293,34 @@
     "bitLength": 16,
     "bitOffset": 200,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_STEER_ANGLE",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 200,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -50425,6 +52338,34 @@
     "id": "ELANTRA_STEER_ANGLE",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-3276.8, 3276.7]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 200,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 200,
+      "div": 10,
+      "len": 16,
+      "max": 3276.7,
+      "min": -3276.8,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_STEER_ANGLE_V2",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Steering wheel angle",
     "path": "Control",
     "pid": "22",
@@ -50993,6 +52934,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 208,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 208,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_INJ_DUR_3",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Injection duration cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 224,
     "cmd": {
       "22": "0105"
@@ -51504,6 +53472,33 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 224,
+    "cmd": {
+      "22": "E002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 224,
+      "blsb": true,
+      "div": 1220.7,
+      "len": 16,
+      "max": 53.686409,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_INJ_DUR_4",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Injection duration cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1220.7 clamped to [53.686409]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 232,
     "cmd": {
       "22": "01A4"
@@ -51551,6 +53546,34 @@
     "id": "SPORTAGE_CLUTCH_1_T",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Clutch #1 temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*2 +-40 clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 232,
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "mul": 2,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "TELLURIDE_CLUTCH_1_T",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Clutch #1 temperature",
     "path": "Transmission",
     "pid": "22",
@@ -53461,6 +55484,34 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 248,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 248,
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "mul": 2,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "TELLURIDE_CLUTCH_2_T",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Clutch #2 temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*2 +-40 clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 256,
     "cmd": {
       "21": "01"
@@ -53517,6 +55568,33 @@
     "bitLength": 16,
     "bitOffset": 256,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "div": 86.7,
+      "len": 16,
+      "max": 100,
+      "sign": true,
+      "unit": "percent"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_BRAKE_P",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Brake pressure",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/86.7 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
       "22": "0104"
     },
     "debug": false,
@@ -53533,6 +55611,33 @@
     "id": "ELANTRA_BRAKE_P",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "Brake pressure",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw/86.7 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 256,
+    "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 256,
+      "div": 86.7,
+      "len": 16,
+      "max": 100,
+      "sign": true,
+      "unit": "percent"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_BRAKE_P_V2",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Brake pressure",
     "path": "Control",
     "pid": "22",
@@ -58406,6 +60511,33 @@
       "unit": "volts"
     },
     "hdr": "7E0",
+    "id": "TELLURIDE_WG_VOLTAGE",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Waste gate voltage",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*10 /65535 clamped to [10]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 392,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 392,
+      "div": 65535,
+      "len": 16,
+      "max": 10,
+      "mul": 10,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_WG_VOLTAGE",
     "make": "Hyundai",
     "model": "Veloster",
@@ -58987,6 +61119,33 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "TELLURIDE_WG_DUTY",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Waste gate duty",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*200 /65535 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 408,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 408,
+      "div": 65535,
+      "len": 16,
+      "max": 200,
+      "mul": 200,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_WG_DUTY",
     "make": "Hyundai",
     "model": "Veloster",
@@ -59226,6 +61385,33 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "TELLURIDE_WG_POSITION",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Waste gate position",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [400]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 424,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 424,
+      "div": 65535,
+      "len": 16,
+      "max": 400,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_WG_POSITION",
     "make": "Hyundai",
     "model": "Veloster",
@@ -59364,6 +61550,33 @@
     "id": "SPORTAGE_WG_SETPOINT",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Waste gate setpoint",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*400 /65535 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 440,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 440,
+      "div": 65535,
+      "len": 16,
+      "max": 100,
+      "mul": 400,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_WG_SETPOINT",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Waste gate setpoint",
     "path": "Engine",
     "pid": "22",
@@ -61641,6 +63854,32 @@
     "bitLength": 16,
     "bitOffset": 56,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_MIS_1",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Misfire count #1",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -61764,6 +64003,34 @@
     "id": "SPORTAGE_TURBO_BOOST",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Turbo boost pressure (gauge)",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/831.55690902 +-12 clamped to [-10, 66.81]",
+    "suggestedMetric": "",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "E021"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -12,
+      "bix": 56,
+      "div": 831.55690902,
+      "len": 16,
+      "max": 66.81,
+      "min": -10,
+      "unit": "psi"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_TURBO_BOOST",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Turbo boost pressure (gauge)",
     "path": "Engine",
     "pid": "22",
@@ -64619,6 +66886,60 @@
     "id": "TUCSONHYB_STEER_ANGLE",
     "make": "Hyundai",
     "model": "Tucson-Hybrid",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "raw/10 clamped to [-3276, 3276]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_MIS_2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Misfire count #2",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 10,
+      "len": 16,
+      "max": 3276,
+      "min": -3276,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7D4",
+    "id": "TELLURIDE_STEER_ANGLE_V3",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Steering wheel angle",
     "path": "Control",
     "pid": "21",
@@ -67621,6 +69942,32 @@
   },
   {
     "bitLength": 16,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_MIS_3",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Misfire count #3",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
     "bitOffset": 880,
     "cmd": {
       "22": "182E"
@@ -69953,6 +72300,31 @@
     "cmd": {
       "22": "404C"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 24,
+      "max": 1677721,
+      "unit": "kilometers"
+    },
+    "hdr": "720",
+    "id": "FUSIONENERGI_ODO_V3",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Odometer (instrument panel)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "404C"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -70085,6 +72457,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 10,
+      "len": 24,
+      "max": 1677721,
+      "unit": "kilometers"
+    },
+    "hdr": "720",
+    "id": "FUSIONENERGI_ODO_TRIP",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Trip distance",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1677721]",
+    "suggestedMetric": "",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 24,
       "max": 1000000,
       "unit": "kilometers"
@@ -70185,6 +72582,30 @@
       "max": 16777215,
       "unit": "kilometers"
     },
+    "hdr": "726",
+    "id": "FUSIONENERGI_ODO_V2",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Odometer (instrument panel)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
     "hdr": "7E0",
     "id": "BRONCOSPORT_ODO",
     "make": "Ford",
@@ -70261,6 +72682,30 @@
     "id": "F150LIGHTNING_ODO",
     "make": "Ford",
     "model": "F-150-Lightning",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_ODO",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -70969,6 +73414,31 @@
       "unit": "kilometers"
     },
     "hdr": "7C6",
+    "id": "TELLURIDE_ODO_KM",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Odometer (metric)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7C6",
     "id": "TUCSONHYB_ODO_KM",
     "make": "Hyundai",
     "model": "Tucson-Hybrid",
@@ -71331,6 +73801,31 @@
     "pid": "22",
     "scaling": "raw clamped to [4294967295]",
     "signalGroups": [],
+    "suggestedMetric": "odometer",
+    "unit": "miles"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 24,
+      "max": 4294967295,
+      "unit": "miles"
+    },
+    "hdr": "7C6",
+    "id": "TELLURIDE_ODO_MI",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Odometer (imperial)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
     "suggestedMetric": "odometer",
     "unit": "miles"
   },
@@ -76079,6 +78574,31 @@
   },
   {
     "bitLength": 4,
+    "bitOffset": 188,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 188,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7E1",
+    "id": "TELLURIDE_GEAR_CUR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
     "bitOffset": 196,
     "cmd": {
       "22": "01A4"
@@ -76120,6 +78640,31 @@
     "id": "SPORTAGE_GEAR_NXT",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Next gear",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 4,
+    "bitOffset": 196,
+    "cmd": {
+      "22": "01A4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 196,
+      "len": 4,
+      "max": 15,
+      "unit": "scalar"
+    },
+    "hdr": "7E1",
+    "id": "TELLURIDE_GEAR_NXT",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Next gear",
     "path": "Transmission",
     "pid": "22",
@@ -82599,6 +85144,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_ACC_POS",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Accelerator pedal position",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "032B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
       "len": 8,
       "max": 100,
       "mul": 0.5,
@@ -82658,6 +85228,31 @@
     "id": "F150LIGHTNING_ACC_POS",
     "make": "Ford",
     "model": "F-150-Lightning",
+    "name": "Accelerator pedal position",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw*0.5 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "032B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "mul": 0.5,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_[ECU] ACCELERATOR PEDAL POSITION",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Accelerator pedal position",
     "path": "",
     "pid": "22",
@@ -82827,6 +85422,30 @@
     "id": "EXPLORER_MCT",
     "make": "Ford",
     "model": "Explorer",
+    "name": "Manifold charge temperature",
+    "path": "",
+    "pid": "22",
+    "scaling": "raw clamped to [148.889]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "03CA"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 148.889,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "FUSIONENERGI_MCT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Manifold charge temperature",
     "path": "",
     "pid": "22",
@@ -88542,6 +91161,70 @@
       }
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_GEAR",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Current gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "Mapped values: {'1': {'description': 'First gear', 'value': '1'}, '2': {'description': 'Second gear', 'value': '2'}, '3': {'description': 'Third gear', 'value': '3'}, '4': {'description': 'Fourth gear', 'value': '4'}, '5': {'description': 'Fifth gear', 'value': '5'}, '6': {'description': 'Sixth gear', 'value': '6'}, '7': {'description': 'Seventh gear', 'value': '7'}, '8': {'description': 'Eighth gear', 'value': '8'}, '9': {'description': 'Ninth gear', 'value': '9'}, '10': {'description': 'Tenth gear', 'value': '10'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "First gear",
+          "value": "1"
+        },
+        "10": {
+          "description": "Tenth gear",
+          "value": "10"
+        },
+        "2": {
+          "description": "Second gear",
+          "value": "2"
+        },
+        "3": {
+          "description": "Third gear",
+          "value": "3"
+        },
+        "4": {
+          "description": "Fourth gear",
+          "value": "4"
+        },
+        "5": {
+          "description": "Fifth gear",
+          "value": "5"
+        },
+        "6": {
+          "description": "Sixth gear",
+          "value": "6"
+        },
+        "7": {
+          "description": "Seventh gear",
+          "value": "7"
+        },
+        "8": {
+          "description": "Eighth gear",
+          "value": "8"
+        },
+        "9": {
+          "description": "Ninth gear",
+          "value": "9"
+        }
+      }
+    },
+    "hdr": "7E0",
     "id": "RANGER_GEAR",
     "make": "Ford",
     "model": "Ranger",
@@ -88633,6 +91316,30 @@
     "id": "EDGE_GEAR",
     "make": "Ford",
     "model": "Edge",
+    "name": "Current gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "FUSIONENERGI_GEAR_V2",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Current gear",
     "path": "Engine",
     "pid": "22",
@@ -89086,6 +91793,50 @@
       }
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_GEAR_SHFT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Shift gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "Mapped values: {'10': {'description': 'Manual', 'value': 'MANUAL'}, '46': {'description': 'Drive', 'value': 'DRIVE'}, '50': {'description': 'Neutral', 'value': 'NEUTRAL'}, '60': {'description': 'Reverse', 'value': 'REVERSE'}, '70': {'description': 'Park', 'value': 'PARK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "10": {
+          "description": "Manual",
+          "value": "MANUAL"
+        },
+        "46": {
+          "description": "Drive",
+          "value": "DRIVE"
+        },
+        "50": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "60": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "70": {
+          "description": "Park",
+          "value": "PARK"
+        }
+      }
+    },
+    "hdr": "7E0",
     "id": "RANGER_GEAR_SHFT",
     "make": "Ford",
     "model": "Ranger",
@@ -89153,6 +91904,30 @@
     "id": "EDGE_GEAR_SHFT",
     "make": "Ford",
     "model": "Edge",
+    "name": "Shift gear",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E23"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "FUSIONENERGI_GEAR_SHFT_V2",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Shift gear",
     "path": "Engine",
     "pid": "22",
@@ -94519,6 +97294,33 @@
     "cmd": {
       "22": "3201"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 790,
+      "min": -790,
+      "mul": 6.25,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "760",
+    "id": "FUSIONENERGI_STEER_ANGLE",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*6.25 clamped to [-790, 790]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "3201"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -95856,6 +98658,32 @@
     "id": "FOCUS_FLI",
     "make": "Ford",
     "model": "Focus",
+    "name": "Fuel tank level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "6185"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "720",
+    "id": "FUSIONENERGI_FLI_V2",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Fuel tank level",
     "path": "Fuel",
     "pid": "22",
@@ -99896,6 +102724,32 @@
       "unit": "celsius"
     },
     "hdr": "7E2",
+    "id": "FUSIONENERGI_IAT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Interior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD04"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
     "id": "MACHE_IAT",
     "make": "Ford",
     "model": "Mustang-Mach-E",
@@ -99951,6 +102805,32 @@
     "id": "F150LIGHTNING_AAT",
     "make": "Ford",
     "model": "F-150-Lightning",
+    "name": "Exterior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
+    "id": "FUSIONENERGI_AAT",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Exterior temperature",
     "path": "Climate",
     "pid": "22",
@@ -100484,6 +103364,32 @@
       "unit": "percent"
     },
     "hdr": "7E0",
+    "id": "FUSIONENERGI_FLI",
+    "make": "Ford",
+    "model": "Fusion-Energi",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 255,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
     "id": "RANGER_FLI",
     "make": "Ford",
     "model": "Ranger",
@@ -100511,6 +103417,30 @@
     "id": "EDGE_FLI_V2",
     "make": "Ford",
     "model": "Edge",
+    "name": "Fuel level (alternative)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F42F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "7DF",
+    "id": "FUSIONENERGI_FLI_V3",
+    "make": "Ford",
+    "model": "Fusion-Energi",
     "name": "Fuel level (alternative)",
     "path": "Fuel",
     "pid": "22",
@@ -100780,6 +103710,33 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 127.5,
+      "min": -127.5,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_RL_VSS",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "21": "02"
     },
     "debug": false,
@@ -101006,6 +103963,33 @@
     "id": "SPORTAGE_ATF_T",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Automatic transmission fluid temperature",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 104,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E1",
+    "id": "TELLURIDE_ATF_T",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Automatic transmission fluid temperature",
     "path": "Transmission",
     "pid": "21",
@@ -101868,6 +104852,31 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TIRE_RR_VSS_V2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -102386,6 +105395,33 @@
     "bitLength": 8,
     "bitOffset": 104,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 104,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TT_RR_PRE21",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire temperature rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
       "22": "C101"
     },
     "debug": false,
@@ -102426,6 +105462,31 @@
     "id": "SPORTAGE_TIRE_RL_SPD",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "C101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "TELLURIDE_TIRE_RL_SPD",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -102510,6 +105571,34 @@
     "id": "SPORTAGE_KNOCK_RETARD_2",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Knock retard cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_KNOCK_RETARD_2",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Knock retard cylinder 2",
     "path": "Engine",
     "pid": "22",
@@ -102621,6 +105710,33 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 127.5,
+      "min": -127.5,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_RR_VSS",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127.5, 127.5]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -103746,6 +106862,31 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TIRE_RL_VSS_V2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -104381,6 +107522,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "TELLURIDE_TPMS_PRESS_RR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire pressure rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "TUCSONHYB_TP_RL",
     "make": "Hyundai",
     "model": "Tucson-Hybrid",
@@ -104498,6 +107665,31 @@
     "bitLength": 8,
     "bitOffset": 112,
     "cmd": {
+      "22": "C101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "TELLURIDE_TIRE_RR_SPD",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -104571,6 +107763,34 @@
     "id": "SPORTAGE_KNOCK_RETARD_3",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Knock retard cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_KNOCK_RETARD_3",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Knock retard cylinder 3",
     "path": "Engine",
     "pid": "22",
@@ -106287,6 +109507,33 @@
       "unit": "celsius"
     },
     "hdr": "7A0",
+    "id": "TELLURIDE_TPMS_TEMP_RR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire temperature rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_TEMP_RR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -106508,6 +109755,34 @@
     "id": "SPORTAGE_KNOCK_RETARD_4",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Knock retard cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 120,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 120,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_KNOCK_RETARD_4",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Knock retard cylinder 4",
     "path": "Engine",
     "pid": "22",
@@ -108437,6 +111712,47 @@
     "id": "SPORTAGE_TB_RR",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Tire battery rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '>3 V', 'value': '3V+'}, '1': {'description': '2.7 - 3 V', 'value': '27_3V'}, '2': {'description': '2.4 - 2.7 V', 'value': '2_4_2_7V'}, '3': {'description': '< 2.4', 'value': '2_4-'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 128,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 128,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": ">3 V",
+          "value": "3V+"
+        },
+        "1": {
+          "description": "2.7 - 3 V",
+          "value": "27_3V"
+        },
+        "2": {
+          "description": "2.4 - 2.7 V",
+          "value": "2_4_2_7V"
+        },
+        "3": {
+          "description": "< 2.4",
+          "value": "2_4-"
+        }
+      }
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TB_RR",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Tire battery rear right",
     "path": "Tires",
     "pid": "22",
@@ -111497,6 +114813,31 @@
       "unit": "noyes"
     },
     "hdr": "7A0",
+    "id": "TELLURIDE_TW_RR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire alert rear right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 136,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 136,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_ALERT_RR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -113371,6 +116712,47 @@
     "bitLength": 8,
     "bitOffset": 152,
     "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "map": {
+        "1": {
+          "description": "Neutral",
+          "value": "NEUTRAL"
+        },
+        "2": {
+          "description": "Reverse",
+          "value": "REVERSE"
+        },
+        "3": {
+          "description": "Park",
+          "value": "PARK"
+        },
+        "4": {
+          "description": "Manual",
+          "value": "MANUAL"
+        }
+      }
+    },
+    "hdr": "7E1",
+    "id": "TELLURIDE_GEAR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Current gear",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "Mapped values: {'1': {'description': 'Neutral', 'value': 'NEUTRAL'}, '2': {'description': 'Reverse', 'value': 'REVERSE'}, '3': {'description': 'Park', 'value': 'PARK'}, '4': {'description': 'Manual', 'value': 'MANUAL'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
       "22": "0101"
     },
     "debug": false,
@@ -114997,6 +118379,32 @@
       "unit": "psi"
     },
     "hdr": "7A0",
+    "id": "TELLURIDE_TPMS_PRESS_RL",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire pressure rear left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
     "id": "TUCSONHYB_TP_RR",
     "make": "Hyundai",
     "model": "Tucson-Hybrid",
@@ -115154,6 +118562,31 @@
     "make": "Kia",
     "model": "Sportage",
     "name": "12V battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E2",
+    "id": "TELLURIDE_VPWR_V3",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "12v battery charge",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
@@ -118647,6 +122080,34 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
+      "22": "21A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 5,
+      "len": 8,
+      "max": 255,
+      "mul": 9,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_ATF_TEMP",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Transmission fluid temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*9 /5 +-40 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
       "22": "4A7A"
     },
     "debug": false,
@@ -121256,6 +124717,33 @@
       "unit": "celsius"
     },
     "hdr": "7A0",
+    "id": "TELLURIDE_TPMS_TEMP_RL",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire temperature rear left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_TEMP_RL",
     "make": "Hyundai",
     "model": "Veloster",
@@ -121369,6 +124857,34 @@
     "id": "SPORTAGE_KNOCK_LEARN_1",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Knock learn cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 160,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 160,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_KNOCK_LEARN_1",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Knock learn cylinder 1",
     "path": "Engine",
     "pid": "22",
@@ -122904,6 +126420,47 @@
     "bitLength": 8,
     "bitOffset": 168,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": ">3 V",
+          "value": "3V+"
+        },
+        "1": {
+          "description": "2.7 - 3 V",
+          "value": "27_3V"
+        },
+        "2": {
+          "description": "2.4 - 2.7 V",
+          "value": "2_4_2_7V"
+        },
+        "3": {
+          "description": "< 2.4",
+          "value": "2_4-"
+        }
+      }
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TB_RL",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire battery rear left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '>3 V', 'value': '3V+'}, '1': {'description': '2.7 - 3 V', 'value': '27_3V'}, '2': {'description': '2.4 - 2.7 V', 'value': '2_4_2_7V'}, '3': {'description': '< 2.4', 'value': '2_4-'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
       "22": "E00A"
     },
     "debug": false,
@@ -122977,6 +126534,34 @@
     "id": "SPORTAGE_KNOCK_LEARN_2",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Knock learn cylinder 2",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 168,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 168,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_KNOCK_LEARN_2",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Knock learn cylinder 2",
     "path": "Engine",
     "pid": "22",
@@ -124602,6 +128187,31 @@
       "unit": "noyes"
     },
     "hdr": "7A0",
+    "id": "TELLURIDE_TW_RL",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire alert rear left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_ALERT_RL",
     "make": "Hyundai",
     "model": "Veloster",
@@ -124689,6 +128299,34 @@
     "id": "SPORTAGE_KNOCK_LEARN_3",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Knock learn cylinder 3",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 176,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 176,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_KNOCK_LEARN_3",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Knock learn cylinder 3",
     "path": "Engine",
     "pid": "22",
@@ -126543,6 +130181,34 @@
       "unit": "degrees"
     },
     "hdr": "7E0",
+    "id": "TELLURIDE_KNOCK_LEARN_4",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Knock learn cylinder 4",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 184,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_KNOCK_LEARN_4",
     "make": "Hyundai",
     "model": "Veloster",
@@ -126600,6 +130266,33 @@
     "id": "TUCSONHYB_EOT",
     "make": "Hyundai",
     "model": "Tucson-Hybrid",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-4 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 184,
+    "cmd": {
+      "22": "ED02"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -4,
+      "bix": 184,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_EOT_V2",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -135951,6 +139644,31 @@
     "id": "SPORTAGE_VSS",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 232,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 232,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B3",
+    "id": "TELLURIDE_VSS",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Vehicle speed",
     "path": "Movement",
     "pid": "22",
@@ -149448,6 +153166,33 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
+    "id": "TELLURIDE_IAT",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Intake air temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 264,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 264,
+      "div": 1.3333,
+      "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
     "id": "VELOSTER_INTAKE_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -149693,6 +153438,33 @@
     "make": "Kia",
     "model": "Soul",
     "name": "CVVT temperature",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw+-48 clamped to [-48, 207]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "21": "18"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "len": 8,
+      "max": 207,
+      "min": -48,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_CVVT_T",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Cvvt temperature",
     "path": "Engine",
     "pid": "21",
     "scaling": "raw+-48 clamped to [-48, 207]",
@@ -151072,6 +154844,33 @@
     "id": "SPORTAGE_EOT",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/1.3333 +-48 clamped to [143.254781]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 272,
+    "cmd": {
+      "22": "E001"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -48,
+      "bix": 272,
+      "div": 1.3333,
+      "len": 8,
+      "max": 143.254781,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_EOT",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -157507,6 +161306,31 @@
       "unit": "liters"
     },
     "hdr": "7C6",
+    "id": "TELLURIDE_FLI_VOL",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "7C6",
     "id": "TUCSON_FLI_VOL",
     "make": "Hyundai",
     "model": "Tucson",
@@ -158458,6 +162282,31 @@
       "unit": "scalar"
     },
     "hdr": "770",
+    "id": "TELLURIDE_HAZARD_SW",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Hazard switch",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "770",
     "id": "VELOSTER_HAZARD_SW",
     "make": "Hyundai",
     "model": "Veloster",
@@ -158488,6 +162337,33 @@
     "id": "ELANTRA_TURN_L",
     "make": "Hyundai",
     "model": "Elantra",
+    "name": "Left turn signal on? (raw >1)",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "BC08"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "len": 8,
+      "max": 1,
+      "nullmax": 1,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_TURN_L",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Left turn signal on? (raw >1)",
     "path": "Lights",
     "pid": "22",
@@ -158942,6 +162818,32 @@
     "id": "SOUL_TP_FL",
     "make": "Kia",
     "model": "Soul",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TP_FL",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -159894,6 +163796,34 @@
     "id": "SPORTAGE_TEMP_INT",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Interior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 40,
+      "div": 2,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7B3",
+    "id": "TELLURIDE_TEMP_INT",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Interior temperature",
     "path": "Climate",
     "pid": "22",
@@ -162736,6 +166666,32 @@
       "unit": "volts"
     },
     "hdr": "7C6",
+    "id": "TELLURIDE_CLUSTER_VOLTAGE",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Cluster voltage",
+    "path": "Electrical",
+    "pid": "22",
+    "scaling": "raw/12.8 clamped to [18]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "B002"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 12.8,
+      "len": 8,
+      "max": 18,
+      "unit": "volts"
+    },
+    "hdr": "7C6",
     "id": "VELOSTER_CLUSTER_VOLTAGE",
     "make": "Hyundai",
     "model": "Veloster",
@@ -163662,6 +167618,31 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_DEFOG_LIGHT",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Defog light on",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "BC07"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_DEFOG_LIGHT",
     "make": "Hyundai",
     "model": "Veloster",
@@ -163863,6 +167844,33 @@
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TPMS_TEMP_FL",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire temperature front left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -164356,6 +168364,31 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_VSS_AVG",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "21": "02"
     },
     "debug": false,
@@ -164587,6 +168620,31 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "21": "A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "TELLURIDE_VSS_V3",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "0100"
     },
     "debug": false,
@@ -164661,6 +168719,34 @@
     "id": "SPORTAGE_TEMP_EXT",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Exterior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 80]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "0100"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 48,
+      "div": 2,
+      "len": 8,
+      "max": 80,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7B3",
+    "id": "TELLURIDE_TEMP_EXT",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Exterior temperature",
     "path": "Climate",
     "pid": "22",
@@ -165561,6 +169647,31 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_VSS_AVG_V2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Average wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -166259,6 +170370,33 @@
     "bitLength": 8,
     "bitOffset": 48,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 48,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TIRE_FL_VSS_V3",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
       "22": "A022"
     },
     "debug": true,
@@ -166401,6 +170539,33 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_HL_SW",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Headlight switch",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "BC05"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 1,
+      "nullmax": 2,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_HL_SW",
     "make": "Hyundai",
     "model": "Veloster",
@@ -166456,6 +170621,32 @@
     "id": "FORTE_HL_HIGH",
     "make": "Kia",
     "model": "Forte",
+    "name": "Headlight high beam on",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw/12 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "BC09"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "div": 12,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_HL_HIGH",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Headlight high beam on",
     "path": "Lights",
     "pid": "22",
@@ -166564,6 +170755,47 @@
     "id": "SPORTAGE_TB_FL",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Tire battery front left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '>3 V', 'value': '3V+'}, '1': {'description': '2.7 - 3 V', 'value': '27_3V'}, '2': {'description': '2.4 - 2.7 V', 'value': '2_4_2_7V'}, '3': {'description': '< 2.4', 'value': '2_4-'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": ">3 V",
+          "value": "3V+"
+        },
+        "1": {
+          "description": "2.7 - 3 V",
+          "value": "27_3V"
+        },
+        "2": {
+          "description": "2.4 - 2.7 V",
+          "value": "2_4_2_7V"
+        },
+        "3": {
+          "description": "< 2.4",
+          "value": "2_4-"
+        }
+      }
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TB_FL",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Tire battery front left",
     "path": "Tires",
     "pid": "22",
@@ -169020,6 +173252,33 @@
     "bitLength": 8,
     "bitOffset": 56,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 56,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TIRE_FR_VSS_V3",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
       "22": "A022"
     },
     "debug": true,
@@ -169086,6 +173345,33 @@
     "id": "FORTE_DEFOG_SW",
     "make": "Kia",
     "model": "Forte",
+    "name": "Defogging?",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "BC03"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "nullmax": 1,
+      "nullmin": 0,
+      "unit": "noyes"
+    },
+    "hdr": "770",
+    "id": "TELLURIDE_DEFOG_SW",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Defogging?",
     "path": "Climate",
     "pid": "22",
@@ -169188,6 +173474,32 @@
       "unit": "noyes"
     },
     "hdr": "770",
+    "id": "TELLURIDE_HL_LOW",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Headlight low beam on",
+    "path": "Lights",
+    "pid": "22",
+    "scaling": "raw/12 clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "BC09"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "div": 12,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "770",
     "id": "VELOSTER_HL_LOW",
     "make": "Hyundai",
     "model": "Veloster",
@@ -169241,6 +173553,31 @@
     "id": "KONA_TW_FL",
     "make": "Hyundai",
     "model": "Kona",
+    "name": "Tire alert front left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TW_FL",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Tire alert front left",
     "path": "Tires",
     "pid": "22",
@@ -171116,6 +175453,33 @@
     "bitLength": 8,
     "bitOffset": 64,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 64,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TIRE_RL_VSS_V3",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -171344,6 +175708,32 @@
     "make": "Kia",
     "model": "Soul",
     "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TP_FR_PRE21",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire pressure front right",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -173485,6 +177875,33 @@
     "bitLength": 8,
     "bitOffset": 72,
     "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 72,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TIRE_RR_VSS_V3",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
       "22": "C00B"
     },
     "debug": false,
@@ -173778,6 +178195,32 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "signalGroups": [],
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TP_FR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "psi"
   },
@@ -182951,6 +187394,33 @@
       "unit": "celsius"
     },
     "hdr": "7A0",
+    "id": "TELLURIDE_TPMS_TEMP_FR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire temperature front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [-50, 100]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 80,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 80,
+      "len": 8,
+      "max": 100,
+      "min": -50,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_TEMP_FR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -183063,6 +187533,33 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 127.5,
+      "min": -127.5,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_FL_VSS",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127.5, 127.5]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -184115,6 +188612,31 @@
     "bitLength": 8,
     "bitOffset": 88,
     "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TIRE_FL_VSS_V2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -184604,6 +189126,47 @@
     "bitLength": 8,
     "bitOffset": 88,
     "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "map": {
+        "0": {
+          "description": ">3 V",
+          "value": "3V+"
+        },
+        "1": {
+          "description": "2.7 - 3 V",
+          "value": "27_3V"
+        },
+        "2": {
+          "description": "2.4 - 2.7 V",
+          "value": "2_4_2_7V"
+        },
+        "3": {
+          "description": "< 2.4",
+          "value": "2_4-"
+        }
+      }
+    },
+    "hdr": "7A0",
+    "id": "TELLURIDE_TB_FR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire battery front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': '>3 V', 'value': '3V+'}, '1': {'description': '2.7 - 3 V', 'value': '27_3V'}, '2': {'description': '2.4 - 2.7 V', 'value': '2_4_2_7V'}, '3': {'description': '< 2.4', 'value': '2_4-'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
       "22": "C101"
     },
     "debug": false,
@@ -184644,6 +189207,31 @@
     "id": "SPORTAGE_TIRE_FL_SPD",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "22": "C101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "TELLURIDE_TIRE_FL_SPD",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -184727,6 +189315,33 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 127.5,
+      "min": -127.5,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_FR_VSS",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [-127.5, 127.5]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -185741,6 +190356,31 @@
     "bitLength": 8,
     "bitOffset": 96,
     "cmd": {
+      "22": "0104"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "TELLURIDE_TIRE_FR_VSS_V2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
       "22": "010A"
     },
     "debug": false,
@@ -186447,6 +191087,31 @@
       "unit": "noyes"
     },
     "hdr": "7A0",
+    "id": "TELLURIDE_TW_FR",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Tire alert front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "7A0",
     "id": "VELOSTER_TPMS_ALERT_FR",
     "make": "Hyundai",
     "model": "Veloster",
@@ -186501,6 +191166,31 @@
     "id": "SPORTAGE_TIRE_FR_SPD",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "C101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E7",
+    "id": "TELLURIDE_TIRE_FR_SPD",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -186585,6 +191275,34 @@
     "id": "SPORTAGE_KNOCK_RETARD_1",
     "make": "Kia",
     "model": "Sportage",
+    "name": "Knock retard cylinder 1",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [-25.6, 25.4]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "22": "E00A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "div": 5,
+      "len": 8,
+      "max": 25.4,
+      "min": -25.6,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_KNOCK_RETARD_1",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Knock retard cylinder 1",
     "path": "Engine",
     "pid": "22",
