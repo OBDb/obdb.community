@@ -84236,6 +84236,31 @@
     "fmt": {
       "div": 2,
       "len": 8,
+      "max": 127,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "CROSSTREK_FLI",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw/2 clamped to [127]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "29"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
       "max": 127.5,
       "unit": "liters"
     },
@@ -84407,31 +84432,6 @@
     "scaling": "raw*500 /3785 clamped to [21]",
     "suggestedMetric": "fuelTankLevel",
     "unit": "gallons"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "29"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "div": 2,
-      "len": 8,
-      "max": 127,
-      "unit": "liters"
-    },
-    "hdr": "7C0",
-    "id": "CROSSTREK_FLI",
-    "make": "Subaru",
-    "model": "Crosstrek",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "21",
-    "scaling": "raw/2 clamped to [127]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
   },
   {
     "bitLength": 8,
