@@ -2426,6 +2426,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 2,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 2,
+      "len": 1,
+      "max": 1,
+      "unit": "yesno"
+    },
+    "hdr": "7E3",
+    "id": "ZSEV_DOOR_BOOT",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Door open, boot",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "yesno"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 20,
     "cmd": {
       "01": "01"
@@ -3373,6 +3398,31 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 3,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 3,
+      "len": 1,
+      "max": 1,
+      "unit": "yesno"
+    },
+    "hdr": "7E3",
+    "id": "ZSEV_DOOR_BONNET",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Door open, bonnet",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "yesno"
   },
   {
     "bitLength": 1,
@@ -5001,6 +5051,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 4,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 4,
+      "len": 1,
+      "max": 1,
+      "unit": "yesno"
+    },
+    "hdr": "7E3",
+    "id": "ZSEV_DOOR_RH_REAR",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Door open, RH rear",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "yesno"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 40,
     "cmd": {
       "22": "BC03"
@@ -6053,6 +6128,31 @@
   },
   {
     "bitLength": 1,
+    "bitOffset": 5,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 5,
+      "len": 1,
+      "max": 1,
+      "unit": "yesno"
+    },
+    "hdr": "7E3",
+    "id": "ZSEV_DOOR_LH_REAR",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Door open, LH rear",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "yesno"
+  },
+  {
+    "bitLength": 1,
     "bitOffset": 52,
     "cmd": {
       "22": "BC04"
@@ -6975,6 +7075,56 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "offon"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "B048"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "yesno"
+    },
+    "hdr": "781",
+    "id": "ZSEV_IS_CHARGING",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Is charging",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "isCharging",
+    "unit": "yesno"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 6,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 6,
+      "len": 1,
+      "max": 1,
+      "unit": "yesno"
+    },
+    "hdr": "7E3",
+    "id": "ZSEV_DOOR_PASSENGER",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Door open, passenger",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "yesno"
   },
   {
     "bitLength": 1,
@@ -7976,6 +8126,56 @@
     "scaling": "raw clamped to [1]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "B048"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "yesno"
+    },
+    "hdr": "781",
+    "id": "ZSEV_IS_DCFC",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Is DC fast charging",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "yesno"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 7,
+    "cmd": {
+      "22": "D112"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 7,
+      "len": 1,
+      "max": 1,
+      "unit": "yesno"
+    },
+    "hdr": "7E3",
+    "id": "ZSEV_DOOR_DRIVER",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Door open, driver",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "yesno"
   },
   {
     "bitLength": 1,
@@ -16482,7 +16682,7 @@
     "id": "CROSSTREK_FR_VSS",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Front right tire speed",
+    "name": "Front right wheel speed",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -16556,7 +16756,7 @@
     "id": "CROSSTREK_FL_VSS",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Front left tire speed",
+    "name": "Front left wheel speed",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -16682,7 +16882,7 @@
     "id": "CROSSTREK_RR_VSS",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Rear right tire speed",
+    "name": "Rear right wheel speed",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -16782,7 +16982,7 @@
     "id": "CROSSTREK_RL_VSS",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Rear left tire speed",
+    "name": "Rear left wheel speed",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -16857,7 +17057,7 @@
     "id": "CROSSTREK_STEER_ANGLE",
     "make": "Subaru",
     "model": "Crosstrek",
-    "name": "Steering wheel angle (ABS)",
+    "name": "Steering wheel angle",
     "path": "Control",
     "pid": "22",
     "scaling": "raw clamped to [65535]",
@@ -37167,6 +37367,56 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 1000,
+      "unit": "volts"
+    },
+    "hdr": "781",
+    "id": "ZSEV_HVBAT_BUS_VOLTAGE_GEN1",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery bus voltage",
+    "path": "Battery.Internal",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B041"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 4,
+      "len": 16,
+      "max": 1000,
+      "unit": "volts"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_BUS_VOLTAGE",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery bus voltage",
+    "path": "Battery.Internal",
+    "pid": "22",
+    "scaling": "raw/4 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B041"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "len": 16,
       "max": 1000,
       "mul": 0.25,
@@ -37188,24 +37438,25 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "B041"
+      "22": "B042"
     },
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 4,
       "len": 16,
-      "max": 1000,
-      "mul": 0.25,
+      "max": 450,
+      "min": 300,
       "unit": "volts"
     },
-    "hdr": "7E5",
-    "id": "ZSEV_HVBAT_BUS_VOLTAGE",
+    "hdr": "781",
+    "id": "ZSEV_HBAT_V",
     "make": "MG",
     "model": "ZS-EV",
-    "name": "HV battery bus voltage",
-    "path": "Battery.Internal",
+    "name": "High voltage battery voltage",
+    "path": "Battery",
     "pid": "22",
-    "scaling": "raw*0.25 clamped to [1000]",
+    "scaling": "raw/4 clamped to [300, 450]",
     "suggestedMetric": "",
     "unit": "volts"
   },
@@ -37259,6 +37510,33 @@
     "scaling": "raw*0.25 clamped to [500]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B043"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -1000,
+      "div": 40,
+      "len": 16,
+      "max": 638.375,
+      "min": -1000,
+      "unit": "milliamps"
+    },
+    "hdr": "781",
+    "id": "ZSEV_HBAT_C",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "High voltage battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/40 +-1000 clamped to [-1000, 638.375]",
+    "suggestedMetric": "",
+    "unit": "milliamps"
   },
   {
     "bitLength": 16,
@@ -37378,7 +37656,7 @@
       "max": 100,
       "unit": "percent"
     },
-    "hdr": "7E5",
+    "hdr": "781",
     "id": "ZSEV_SOC",
     "make": "MG",
     "model": "ZS-EV",
@@ -37424,20 +37702,44 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 100,
       "len": 16,
       "max": 100,
-      "mul": 0.01,
       "unit": "percent"
     },
-    "hdr": "7DF",
-    "id": "MG4_HVBAT_SOH",
+    "hdr": "781",
+    "id": "ZSEV_SOH",
     "make": "MG",
-    "model": "MG4",
+    "model": "ZS-EV",
+    "name": "State of health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B061"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_SOH",
+    "make": "MG",
+    "model": "ZS-EV",
     "name": "HV battery health",
     "path": "Battery",
     "pid": "22",
-    "scaling": "raw*0.01 clamped to [100]",
-    "signalGroups": [],
+    "scaling": "raw/100 clamped to [100]",
     "suggestedMetric": "stateOfHealth",
     "unit": "percent"
   },
@@ -37455,14 +37757,15 @@
       "mul": 0.01,
       "unit": "percent"
     },
-    "hdr": "7E5",
-    "id": "ZSEV_HVBAT_SOH",
+    "hdr": "7DF",
+    "id": "MG4_HVBAT_SOH",
     "make": "MG",
-    "model": "ZS-EV",
+    "model": "MG4",
     "name": "HV battery health",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw*0.01 clamped to [100]",
+    "signalGroups": [],
     "suggestedMetric": "stateOfHealth",
     "unit": "percent"
   },
@@ -38581,6 +38884,33 @@
     "scaling": "raw*0.0005 +1 clamped to [10]",
     "suggestedMetric": "",
     "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "BA00"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -200,
+      "div": 100,
+      "len": 16,
+      "max": 455.35,
+      "min": -200,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E3",
+    "id": "ZSEV_VSS",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Vehicle reported speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/100 +-200 clamped to [-200, 455.35]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
   },
   {
     "bitLength": 16,
@@ -73851,6 +74181,30 @@
     "bitLength": 24,
     "bitOffset": 0,
     "cmd": {
+      "22": "B101"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "760",
+    "id": "ZSEV_ODO_V2",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B921"
     },
     "debug": true,
@@ -84063,6 +84417,31 @@
     "debug": true,
     "eax": "",
     "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 127,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "CROSSTREK_FLI",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw/2 clamped to [127]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "29"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "div": 3785,
       "len": 8,
       "max": 21,
@@ -85443,32 +85822,6 @@
     "path": "Fuel",
     "pid": "22",
     "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "002F"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 255,
-      "mul": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E0",
-    "id": "CROSSTREK_FLI",
-    "make": "Subaru",
-    "model": "Crosstrek",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [255]",
     "suggestedMetric": "fuelTankLevel",
     "unit": "percent"
   },
@@ -100977,6 +101330,56 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "B001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 1020,
+      "mul": 4,
+      "unit": "kilopascal"
+    },
+    "hdr": "724",
+    "id": "ZSEV_TP_FL",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*4 clamped to [1020]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B003"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "unit": "celsius"
+    },
+    "hdr": "724",
+    "id": "ZSEV_TT_FL",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Front left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "B003"
     },
     "debug": true,
@@ -101108,6 +101511,60 @@
     "eax": "",
     "fmt": {
       "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 87.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "781",
+    "id": "ZSEV_HVBAT_TEMP_GEN1",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B056"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 87.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E5",
+    "id": "ZSEV_HVBAT_TEMP",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B056"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
       "len": 8,
       "max": 100,
       "mul": 0.5,
@@ -101129,25 +101586,53 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "B056"
+      "22": "B05C"
     },
     "debug": true,
     "eax": "",
     "fmt": {
       "add": -40,
+      "div": 2,
       "len": 8,
-      "max": 100,
-      "mul": 0.5,
+      "max": 87.5,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "781",
+    "id": "ZSEV_HVBAT_COOLANT_TEMP_GEN1",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "HV battery coolant temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "B05C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 2,
+      "len": 8,
+      "max": 87.5,
+      "min": -40,
       "unit": "celsius"
     },
     "hdr": "7E5",
-    "id": "ZSEV_HVBAT_TEMP",
+    "id": "ZSEV_HVBAT_COOLANT_TEMP",
     "make": "MG",
     "model": "ZS-EV",
-    "name": "HV battery temperature",
+    "name": "HV battery coolant temperature",
     "path": "Battery",
     "pid": "22",
-    "scaling": "raw*0.5 +-40 clamped to [100]",
+    "scaling": "raw/2 +-40 clamped to [-40, 87.5]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -101182,25 +101667,25 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "B05C"
+      "22": "BB05"
     },
     "debug": true,
     "eax": "",
     "fmt": {
       "add": -40,
       "len": 8,
-      "max": 100,
-      "mul": 0.5,
+      "max": 80,
+      "min": -40,
       "unit": "celsius"
     },
-    "hdr": "7E5",
-    "id": "ZSEV_HVBAT_COOLANT_TEMP",
+    "hdr": "7E3",
+    "id": "ZSEV_AAT",
     "make": "MG",
     "model": "ZS-EV",
-    "name": "HV battery coolant temperature",
-    "path": "Battery",
+    "name": "External temperature",
+    "path": "Climate",
     "pid": "22",
-    "scaling": "raw*0.5 +-40 clamped to [100]",
+    "scaling": "raw+-40 clamped to [-40, 80]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
@@ -123851,6 +124336,58 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "len": 8,
+      "max": 1020,
+      "mul": 4,
+      "unit": "kilopascal"
+    },
+    "hdr": "724",
+    "id": "ZSEV_TP_RR",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*4 clamped to [1020]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "B003"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "unit": "celsius"
+    },
+    "hdr": "724",
+    "id": "ZSEV_TT_RR",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -147110,6 +147647,58 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "B001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "len": 8,
+      "max": 1020,
+      "mul": 4,
+      "unit": "kilopascal"
+    },
+    "hdr": "724",
+    "id": "ZSEV_TP_RL",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*4 clamped to [1020]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "B003"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "unit": "celsius"
+    },
+    "hdr": "724",
+    "id": "ZSEV_TT_RL",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [127.5]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -185869,6 +186458,58 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "B001"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 8,
+      "max": 1020,
+      "mul": 4,
+      "unit": "kilopascal"
+    },
+    "hdr": "724",
+    "id": "ZSEV_TP_FR",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*4 clamped to [1020]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "kilopascal"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "B003"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 2,
+      "len": 8,
+      "max": 127.5,
+      "unit": "celsius"
+    },
+    "hdr": "724",
+    "id": "ZSEV_TT_FR",
+    "make": "MG",
+    "model": "ZS-EV",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [127.5]",
     "suggestedMetric": "",
     "unit": "celsius"
   },
