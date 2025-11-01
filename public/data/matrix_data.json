@@ -83753,6 +83753,32 @@
       "unit": "unknown"
     },
     "hdr": "750",
+    "id": "GR86_TP_2_FL",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
     "id": "IS_TP_2_FL",
     "make": "Lexus",
     "model": "IS",
@@ -83782,32 +83808,6 @@
     "id": "DAIHATSU_TP_2_FL",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "unknown"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "15"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_2_FL",
-    "make": "Toyota",
-    "model": "GR86",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -84737,6 +84737,32 @@
     "cmd": {
       "21": "30"
     },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "GR86_TP_FL",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "30"
+    },
     "debug": true,
     "eax": "2A",
     "fmt": {
@@ -84783,32 +84809,6 @@
     "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "frontLeftTirePressure",
     "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_FL",
-    "make": "Toyota",
-    "model": "GR86",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
@@ -121367,6 +121367,33 @@
       "unit": "unknown"
     },
     "hdr": "750",
+    "id": "GR86_TP_2_RL",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
     "id": "IS_TP_2_RL",
     "make": "Lexus",
     "model": "IS",
@@ -121397,33 +121424,6 @@
     "id": "DAIHATSU_TP_2_RL",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "unknown"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "15"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 16,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_2_RL",
-    "make": "Toyota",
-    "model": "GR86",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -121883,6 +121883,33 @@
     "cmd": {
       "21": "30"
     },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 16,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "GR86_TP_RL",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "30"
+    },
     "debug": true,
     "eax": "2A",
     "fmt": {
@@ -121931,33 +121958,6 @@
     "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "rearLeftTirePressure",
     "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 16,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_RL",
-    "make": "Toyota",
-    "model": "GR86",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
@@ -143754,6 +143754,33 @@
       "unit": "unknown"
     },
     "hdr": "750",
+    "id": "GR86_TP_2_RR",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
     "id": "IS_TP_2_RR",
     "make": "Lexus",
     "model": "IS",
@@ -143784,33 +143811,6 @@
     "id": "DAIHATSU_TP_2_RR",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "unknown"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "15"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 24,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_2_RR",
-    "make": "Toyota",
-    "model": "GR86",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -144270,6 +144270,33 @@
     "cmd": {
       "21": "30"
     },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 24,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "GR86_TP_RR",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "30"
+    },
     "debug": true,
     "eax": "2A",
     "fmt": {
@@ -144318,33 +144345,6 @@
     "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "rearRightTirePressure",
     "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 24,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_RR",
-    "make": "Toyota",
-    "model": "GR86",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
@@ -160252,6 +160252,33 @@
       "unit": "unknown"
     },
     "hdr": "750",
+    "id": "GR86_TP_2_SPARE",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
     "id": "IS_TP_2_SPARE",
     "make": "Lexus",
     "model": "IS",
@@ -160282,33 +160309,6 @@
     "id": "DAIHATSU_TP_2_SPARE",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "unknown"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "21": "15"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 32,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_2_SPARE",
-    "make": "Toyota",
-    "model": "GR86",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -160768,6 +160768,33 @@
     "cmd": {
       "21": "30"
     },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 32,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "GR86_TP_SPARE",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "21": "30"
+    },
     "debug": true,
     "eax": "2A",
     "fmt": {
@@ -160816,33 +160843,6 @@
     "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "",
     "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 32,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_SPARE",
-    "make": "Toyota",
-    "model": "GR86",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
@@ -182711,6 +182711,33 @@
       "unit": "unknown"
     },
     "hdr": "750",
+    "id": "GR86_TP_2_FR",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "15"
+    },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
     "id": "IS_TP_2_FR",
     "make": "Lexus",
     "model": "IS",
@@ -182741,33 +182768,6 @@
     "id": "DAIHATSU_TP_2_FR",
     "make": "Daihatsu",
     "model": "",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "unknown"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "21": "15"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 8,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_2_FR",
-    "make": "Toyota",
-    "model": "GR86",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "21",
@@ -183456,6 +183456,33 @@
     "cmd": {
       "21": "30"
     },
+    "debug": false,
+    "eax": "2A",
+    "fmt": {
+      "add": -0.5,
+      "bix": 8,
+      "div": 58,
+      "len": 8,
+      "max": 4,
+      "unit": "unknown"
+    },
+    "hdr": "750",
+    "id": "GR86_TP_FR",
+    "make": "Toyota",
+    "model": "GR86",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "21",
+    "scaling": "raw/58 +-0.5 clamped to [4]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "unknown"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "30"
+    },
     "debug": true,
     "eax": "2A",
     "fmt": {
@@ -183504,33 +183531,6 @@
     "scaling": "raw/58 +-0.5 clamped to [3.88]",
     "suggestedMetric": "frontRightTirePressure",
     "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "21": "30"
-    },
-    "debug": true,
-    "eax": "2A",
-    "fmt": {
-      "add": -0.5,
-      "bix": 8,
-      "div": 58,
-      "len": 8,
-      "max": 4,
-      "unit": "unknown"
-    },
-    "hdr": "750",
-    "id": "GR86_TP_FR",
-    "make": "Toyota",
-    "model": "GR86",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "21",
-    "scaling": "raw/58 +-0.5 clamped to [4]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "unknown"
   },
   {
     "bitLength": 8,
