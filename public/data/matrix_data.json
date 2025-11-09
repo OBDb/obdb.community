@@ -9782,7 +9782,7 @@
     "id": "MIL_DIST",
     "make": "SAEJ1979",
     "model": "",
-    "name": "Distance travelled while MIL was activated",
+    "name": "Distance traveled while MIL was activated",
     "path": "DTCs.Generic",
     "pid": "01",
     "scaling": "raw clamped to [65535]",
@@ -82703,7 +82703,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "div": 128,
       "len": 8,
       "max": 99.2,
@@ -82718,7 +82718,7 @@
     "name": "Short term fuel trim (bank 1)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.2]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.2]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -82731,7 +82731,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "div": 128,
       "len": 8,
       "max": 99.2,
@@ -82746,7 +82746,7 @@
     "name": "Long term fuel trim (bank 1)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.2]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.2]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -82759,7 +82759,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "div": 128,
       "len": 8,
       "max": 99.2,
@@ -82774,7 +82774,7 @@
     "name": "Short term fuel trim (bank 2)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.2]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.2]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -82787,7 +82787,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "div": 128,
       "len": 8,
       "max": 99.2,
@@ -82802,7 +82802,7 @@
     "name": "Long term fuel trim (bank 2)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.2]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.2]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -83375,7 +83375,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "div": 128,
       "len": 8,
       "max": 99.22,
@@ -83390,7 +83390,7 @@
     "name": "EGR error",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -83993,7 +83993,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "div": 128,
       "len": 8,
       "max": 99.22,
@@ -84008,7 +84008,7 @@
     "name": "Short term secondary O2 sensor fuel trim (bank 1)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -84021,7 +84021,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "div": 128,
       "len": 8,
       "max": 99.22,
@@ -84036,7 +84036,7 @@
     "name": "Long term secondary O2 sensor fuel trim (bank 1)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -84049,7 +84049,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "div": 128,
       "len": 8,
       "max": 99.22,
@@ -84064,7 +84064,7 @@
     "name": "Short term secondary O2 sensor fuel trim (bank 2)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -84077,7 +84077,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "div": 128,
       "len": 8,
       "max": 99.22,
@@ -84092,7 +84092,7 @@
     "name": "Long term secondary O2 sensor fuel trim (bank 2)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -143908,7 +143908,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "bix": 24,
       "div": 128,
       "len": 8,
@@ -143924,7 +143924,7 @@
     "name": "EGR A error",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -172398,7 +172398,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "bix": 48,
       "div": 128,
       "len": 8,
@@ -172414,7 +172414,7 @@
     "name": "EGR B error",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -182507,7 +182507,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "bix": 8,
       "div": 128,
       "len": 8,
@@ -182523,7 +182523,7 @@
     "name": "Short term fuel trim (bank 4)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.2]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.2]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -182536,7 +182536,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "bix": 8,
       "div": 128,
       "len": 8,
@@ -182552,7 +182552,7 @@
     "name": "Long term fuel trim (bank 4)",
     "path": "Engine.Generic",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.2]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.2]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -182565,7 +182565,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "bix": 8,
       "div": 128,
       "len": 8,
@@ -182581,7 +182581,7 @@
     "name": "SHRTFT associated with O2S11",
     "path": "Engine.Generic.OxygenSensors",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -182594,7 +182594,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "bix": 8,
       "div": 128,
       "len": 8,
@@ -182610,7 +182610,7 @@
     "name": "SHRTFT associated with O2S12",
     "path": "Engine.Generic.OxygenSensors",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -182623,7 +182623,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "bix": 8,
       "div": 128,
       "len": 8,
@@ -182639,7 +182639,7 @@
     "name": "SHRTFT associated with O2S21",
     "path": "Engine.Generic.OxygenSensors",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -182652,7 +182652,7 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "add": -100,
+      "add": -128,
       "bix": 8,
       "div": 128,
       "len": 8,
@@ -182668,7 +182668,7 @@
     "name": "SHRTFT associated with O2S22",
     "path": "Engine.Generic.OxygenSensors",
     "pid": "01",
-    "scaling": "raw*100 /128 +-100 clamped to [-100, 99.22]",
+    "scaling": "raw*100 /128 +-128 clamped to [-100, 99.22]",
     "suggestedMetric": "",
     "unit": "percent"
   },
