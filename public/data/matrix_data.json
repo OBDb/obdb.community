@@ -9738,7 +9738,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
+    "suggestedMetric": "massAirFlow",
     "unit": "gramsPerSecond"
   },
   {
@@ -9861,7 +9861,7 @@
     "path": "Engine.Generic.OxygenSensors",
     "pid": "01",
     "scaling": "raw/32768 clamped to [1.99]",
-    "suggestedMetric": "",
+    "suggestedMetric": "o2Lambda",
     "unit": "scalar"
   },
   {
@@ -9937,7 +9937,7 @@
     "path": "Engine.Generic.OxygenSensors",
     "pid": "01",
     "scaling": "raw/32768 clamped to [1.99]",
-    "suggestedMetric": "",
+    "suggestedMetric": "o2Lambda",
     "unit": "scalar"
   },
   {
@@ -10122,7 +10122,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw*2 /65535 clamped to [1.99]",
-    "suggestedMetric": "",
+    "suggestedMetric": "commandedLambda",
     "unit": "scalar"
   },
   {
@@ -10289,7 +10289,7 @@
       "div": 20,
       "len": 16,
       "max": 3212.75,
-      "unit": "liters"
+      "unit": "litersPerHour"
     },
     "hdr": "7E0",
     "id": "FUEL_RATE",
@@ -10299,8 +10299,8 @@
     "path": "Fuel.Generic",
     "pid": "01",
     "scaling": "raw/20 clamped to [3212.75]",
-    "suggestedMetric": "",
-    "unit": "liters"
+    "suggestedMetric": "fuelRate",
+    "unit": "litersPerHour"
   },
   {
     "bitLength": 16,
@@ -57701,7 +57701,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw/32 clamped to [2047.96875]",
-    "suggestedMetric": "",
+    "suggestedMetric": "massAirFlow",
     "unit": "gramsPerSecond"
   },
   {
@@ -70341,7 +70341,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw/32 clamped to [2047.96875]",
-    "suggestedMetric": "",
+    "suggestedMetric": "massAirFlow",
     "unit": "gramsPerSecond"
   },
   {
@@ -82665,7 +82665,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "",
+    "suggestedMetric": "engineLoad",
     "unit": "percent"
   },
   {
@@ -82691,7 +82691,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
+    "suggestedMetric": "engineCoolantTemperature",
     "unit": "celsius"
   },
   {
@@ -82719,7 +82719,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw*100 /128 +-128 clamped to [-100, 99.2]",
-    "suggestedMetric": "",
+    "suggestedMetric": "shortTermFuelTrim",
     "unit": "percent"
   },
   {
@@ -82775,7 +82775,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw*100 /128 +-128 clamped to [-100, 99.2]",
-    "suggestedMetric": "",
+    "suggestedMetric": "shortTermFuelTrim",
     "unit": "percent"
   },
   {
@@ -82981,7 +82981,7 @@
     "path": "Control.Generic",
     "pid": "01",
     "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "",
+    "suggestedMetric": "throttlePosition",
     "unit": "percent"
   },
   {
@@ -83624,7 +83624,7 @@
     "path": "Control.Generic",
     "pid": "01",
     "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "",
+    "suggestedMetric": "throttlePosition",
     "unit": "percent"
   },
   {
@@ -83650,7 +83650,7 @@
     "path": "Control.Generic",
     "pid": "01",
     "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "",
+    "suggestedMetric": "throttlePosition",
     "unit": "percent"
   },
   {
@@ -84197,7 +84197,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw+-40 clamped to [-40, 210]",
-    "suggestedMetric": "",
+    "suggestedMetric": "engineOilTemperature",
     "unit": "celsius"
   },
   {
@@ -84367,7 +84367,7 @@
     "path": "Engine.Generic",
     "pid": "01",
     "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "",
+    "suggestedMetric": "throttlePosition",
     "unit": "percent"
   },
   {
@@ -121527,6 +121527,7 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "7E0",
@@ -143886,6 +143887,7 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "7E0",
@@ -160505,6 +160507,7 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "7E0",
@@ -166955,6 +166958,7 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "7E0",
@@ -172376,6 +172380,7 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "7E0",
@@ -182765,6 +182770,7 @@
       "len": 8,
       "max": 215,
       "min": -40,
+      "nullmin": -40,
       "unit": "celsius"
     },
     "hdr": "7E0",
