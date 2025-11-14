@@ -1332,7 +1332,7 @@
     "cmd": {
       "22": "E001"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 140,
@@ -1654,7 +1654,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 150,
@@ -10526,60 +10526,6 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "PRIUS_ATF_PAN_T",
-    "make": "Toyota",
-    "model": "Prius",
-    "name": "Transmission temperature (pan)",
-    "path": "Transmission",
-    "pid": "21",
-    "scaling": "raw/256 +-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "82"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "div": 256,
-      "len": 16,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "RAV4HYBRID_ATF_PAN_T",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
-    "name": "Transmission temperature (pan)",
-    "path": "Transmission",
-    "pid": "21",
-    "scaling": "raw/256 +-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "82"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "div": 256,
-      "len": 16,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
     "id": "RAV4_ATF_PAN_T",
     "make": "Toyota",
     "model": "RAV4",
@@ -10641,6 +10587,60 @@
     "id": "HILUX_ATF_PAN_T",
     "make": "Toyota",
     "model": "Hilux",
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "PRIUS_ATF_PAN_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Transmission temperature (pan)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_ATF_PAN_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Transmission temperature (pan)",
     "path": "Transmission",
     "pid": "21",
@@ -11733,7 +11733,7 @@
     "cmd": {
       "22": "0306"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 100,
@@ -14872,7 +14872,7 @@
     "cmd": {
       "22": "03DB"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 200,
@@ -15385,7 +15385,7 @@
     "cmd": {
       "22": "042C"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -15437,7 +15437,7 @@
     "cmd": {
       "22": "042D"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -15489,7 +15489,7 @@
     "cmd": {
       "22": "0432"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -15537,7 +15537,7 @@
     "cmd": {
       "22": "0433"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -15585,7 +15585,7 @@
     "cmd": {
       "22": "044B"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 65535,
@@ -15637,7 +15637,7 @@
     "cmd": {
       "22": "0519"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -15687,7 +15687,7 @@
     "cmd": {
       "22": "0542"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -16142,7 +16142,7 @@
     "cmd": {
       "22": "091A"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 8192,
@@ -16218,7 +16218,7 @@
     "cmd": {
       "22": "093C"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 8192,
@@ -21453,7 +21453,7 @@
     "cmd": {
       "22": "1505"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 128,
@@ -24336,7 +24336,7 @@
     "cmd": {
       "22": "2203"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -24441,30 +24441,6 @@
       "unit": "kilometers"
     },
     "hdr": "714",
-    "id": "GOLF_RANGE",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Range remaining",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "fuelRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2294"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 16,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
     "id": "POLO_RANGE",
     "make": "Volkswagen",
     "model": "Polo",
@@ -24529,7 +24505,31 @@
     "cmd": {
       "22": "2294"
     },
-    "debug": false,
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 255,
+      "unit": "kilometers"
+    },
+    "hdr": "714",
+    "id": "GOLF_RANGE",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -24637,31 +24637,6 @@
       "unit": "liters"
     },
     "hdr": "714",
-    "id": "GOLF_FLV",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Fuel remaining",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/8 clamped to [255]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "229A"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 8,
-      "len": 16,
-      "max": 255,
-      "unit": "liters"
-    },
-    "hdr": "714",
     "id": "POLO_FLV",
     "make": "Volkswagen",
     "model": "Polo",
@@ -24726,9 +24701,34 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 8,
+      "len": 16,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "714",
+    "id": "GOLF_FLV",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "22E0"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -24914,31 +24914,6 @@
       "unit": "celsius"
     },
     "hdr": "714",
-    "id": "GOLF_IAT",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Interior air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2613"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 255,
-      "unit": "celsius"
-    },
-    "hdr": "714",
     "id": "POLO_IAT",
     "make": "Volkswagen",
     "model": "Polo",
@@ -24992,6 +24967,31 @@
     "id": "SQ5_IAT",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Interior air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2613"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 255,
+      "unit": "celsius"
+    },
+    "hdr": "714",
+    "id": "GOLF_IAT",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Interior air temperature",
     "path": "Climate",
     "pid": "22",
@@ -27866,31 +27866,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7E1",
-    "id": "GOLF_TIRE_FL_SPD",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1B"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
     "id": "POLO_TIRE_FL_SPD",
     "make": "Volkswagen",
     "model": "Polo",
@@ -28036,6 +28011,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "2B1B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "GOLF_TIRE_FL_SPD",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2B1C"
     },
     "debug": false,
@@ -28125,31 +28125,6 @@
     "id": "CAYENNE_TIRE_FR_SPD",
     "make": "Porsche",
     "model": "Cayenne",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1C"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "GOLF_TIRE_FR_SPD",
-    "make": "Volkswagen",
-    "model": "Golf",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -28317,6 +28292,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "2B1C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "GOLF_TIRE_FR_SPD",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2B1D"
     },
     "debug": false,
@@ -28406,31 +28406,6 @@
     "id": "CAYENNE_TIRE_RL_SPD",
     "make": "Porsche",
     "model": "Cayenne",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1D"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "GOLF_TIRE_RL_SPD",
-    "make": "Volkswagen",
-    "model": "Golf",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -28598,6 +28573,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "2B1D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "GOLF_TIRE_RL_SPD",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2B1E"
     },
     "debug": false,
@@ -28687,31 +28687,6 @@
     "id": "CAYENNE_TIRE_RR_SPD",
     "make": "Porsche",
     "model": "Cayenne",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [1000]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2B1E"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 1000,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7E1",
-    "id": "GOLF_TIRE_RR_SPD",
-    "make": "Volkswagen",
-    "model": "Golf",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -28868,6 +28843,31 @@
       2017,
       2017
     ],
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [1000]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2B1E"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 1000,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E1",
+    "id": "GOLF_TIRE_RR_SPD",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "22",
@@ -36806,7 +36806,7 @@
     "cmd": {
       "22": "4809"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 100,
@@ -36831,7 +36831,7 @@
     "cmd": {
       "22": "480B"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 50,
@@ -37524,7 +37524,7 @@
     "cmd": {
       "22": "4899"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 100,
@@ -37549,7 +37549,7 @@
     "cmd": {
       "22": "489D"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 10,
@@ -44141,6 +44141,30 @@
       "unit": "seconds"
     },
     "hdr": "7E0",
+    "id": "MACHE_RUN_TIME",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Engine run time",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F41F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
     "id": "SQ7_RUNTM",
     "make": "Audi",
     "model": "SQ7",
@@ -44173,30 +44197,6 @@
     "pid": "22",
     "scaling": "raw clamped to [65535]",
     "signalGroups": [],
-    "suggestedMetric": "",
-    "unit": "seconds"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "F41F"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 16,
-      "max": 65535,
-      "unit": "seconds"
-    },
-    "hdr": "7E0",
-    "id": "MACHE_RUN_TIME",
-    "make": "Ford",
-    "model": "Mustang-Mach-E",
-    "name": "Engine run time",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "seconds"
   },
@@ -44684,64 +44684,6 @@
     "fmt": {
       "bix": 104,
       "blsb": true,
-      "div": 100,
-      "len": 16,
-      "max": 180,
-      "min": -180,
-      "sign": true,
-      "unit": "milesPerHour"
-    },
-    "hdr": "7E2",
-    "id": "SPORTAGE_VSS_V2",
-    "make": "Kia",
-    "model": "Sportage",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw/100 clamped to [-180, 180]",
-    "suggestedMetric": "speed",
-    "unit": "milesPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 104,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "blsb": true,
-      "div": 100,
-      "len": 16,
-      "max": 180,
-      "min": -180,
-      "sign": true,
-      "unit": "milesPerHour"
-    },
-    "hdr": "7E2",
-    "id": "TELLURIDE_VSS_V2",
-    "make": "Kia",
-    "model": "Telluride",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw/100 clamped to [-180, 180]",
-    "suggestedMetric": "speed",
-    "unit": "milesPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 104,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "blsb": true,
       "len": 16,
       "max": 65535,
       "unit": "scalar"
@@ -44815,7 +44757,65 @@
     "cmd": {
       "21": "01"
     },
-    "debug": false,
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
+      "div": 100,
+      "len": 16,
+      "max": 180,
+      "min": -180,
+      "sign": true,
+      "unit": "milesPerHour"
+    },
+    "hdr": "7E2",
+    "id": "SPORTAGE_VSS_V2",
+    "make": "Kia",
+    "model": "Sportage",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [-180, 180]",
+    "suggestedMetric": "speed",
+    "unit": "milesPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
+      "div": 100,
+      "len": 16,
+      "max": 180,
+      "min": -180,
+      "sign": true,
+      "unit": "milesPerHour"
+    },
+    "hdr": "7E2",
+    "id": "TELLURIDE_VSS_V2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [-180, 180]",
+    "suggestedMetric": "speed",
+    "unit": "milesPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 104,
@@ -50030,62 +50030,6 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "PRIUS_ATF_TQC_T",
-    "make": "Toyota",
-    "model": "Prius",
-    "name": "Transmission temperature (torque converter)",
-    "path": "Transmission",
-    "pid": "21",
-    "scaling": "raw/256 +-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "82"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "div": 256,
-      "len": 16,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
-    "id": "RAV4HYBRID_ATF_TQC_T",
-    "make": "Toyota",
-    "model": "RAV4-Hybrid",
-    "name": "Transmission temperature (torque converter)",
-    "path": "Transmission",
-    "pid": "21",
-    "scaling": "raw/256 +-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "82"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "div": 256,
-      "len": 16,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E0",
     "id": "RAV4_ATF_TQC_T",
     "make": "Toyota",
     "model": "RAV4",
@@ -50149,6 +50093,62 @@
     "id": "HILUX_ATF_TQC_T",
     "make": "Toyota",
     "model": "Hilux",
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "PRIUS_ATF_TQC_T",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Transmission temperature (torque converter)",
+    "path": "Transmission",
+    "pid": "21",
+    "scaling": "raw/256 +-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "82"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 256,
+      "len": 16,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E0",
+    "id": "RAV4HYBRID_ATF_TQC_T",
+    "make": "Toyota",
+    "model": "RAV4-Hybrid",
     "name": "Transmission temperature (torque converter)",
     "path": "Transmission",
     "pid": "21",
@@ -56123,7 +56123,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 200,
@@ -57387,7 +57387,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -59316,7 +59316,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -59398,7 +59398,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 256,
@@ -63783,32 +63783,6 @@
       "unit": "liters"
     },
     "hdr": "714",
-    "id": "GOLF_FLI_VOL",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 336,
-    "cmd": {
-      "22": "22B0"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 336,
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "unit": "liters"
-    },
-    "hdr": "714",
     "id": "POLO_FLI_VOL",
     "make": "Volkswagen",
     "model": "Polo",
@@ -63864,6 +63838,32 @@
     "id": "SQ5_FLI_VOL",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 336,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "liters"
+    },
+    "hdr": "714",
+    "id": "GOLF_FLI_VOL",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "22",
@@ -67684,7 +67684,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 56,
@@ -70647,32 +70647,6 @@
     "eax": "",
     "fmt": {
       "bix": 72,
-      "blsb": true,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "7E0",
-    "id": "TELLURIDE_MIS_2",
-    "make": "Kia",
-    "model": "Telluride",
-    "name": "Misfire count #2",
-    "path": "Engine",
-    "pid": "21",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 72,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
       "div": 10,
       "len": 16,
       "max": 3276,
@@ -70725,7 +70699,33 @@
     "cmd": {
       "21": "01"
     },
-    "debug": false,
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_MIS_2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Misfire count #2",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 72,
@@ -73774,7 +73774,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 88,
@@ -75759,30 +75759,6 @@
       "unit": "kilometers"
     },
     "hdr": "714",
-    "id": "GOLF_ODO_DASH",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Odometer (dash)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2203"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
     "id": "POLO_ODO_DASH",
     "make": "Volkswagen",
     "model": "Polo",
@@ -75834,6 +75810,30 @@
     "id": "SQ5_ODO_DASH",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 255,
+      "unit": "kilometers"
+    },
+    "hdr": "714",
+    "id": "GOLF_ODO_DASH",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Odometer (dash)",
     "path": "Trips",
     "pid": "22",
@@ -76482,6 +76482,30 @@
       "max": 16777215,
       "unit": "kilometers"
     },
+    "hdr": "760",
+    "id": "MACHE_ODO_BCM",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Odometer, battery control module",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
     "hdr": "7E0",
     "id": "BRONCOSPORT_ODO",
     "make": "Ford",
@@ -76619,6 +76643,30 @@
     "cmd": {
       "22": "DD01"
     },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "MACHE_ODO_ECM",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Odometer, engine control module",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
     "debug": true,
     "eax": "",
     "fmt": {
@@ -76634,54 +76682,6 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw clamped to [1000000]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DD01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 16777215,
-      "unit": "kilometers"
-    },
-    "hdr": "760",
-    "id": "MACHE_ODO_BCM",
-    "make": "Ford",
-    "model": "Mustang-Mach-E",
-    "name": "Odometer, battery control module",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DD01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 16777215,
-      "unit": "kilometers"
-    },
-    "hdr": "7E0",
-    "id": "MACHE_ODO_ECM",
-    "make": "Ford",
-    "model": "Mustang-Mach-E",
-    "name": "Odometer, engine control module",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
     "suggestedMetric": "odometer",
     "unit": "kilometers"
   },
@@ -77892,31 +77892,6 @@
       "max": 16777215,
       "unit": "kilometers"
     },
-    "hdr": "701",
-    "id": "PRIUS_ODO_V5",
-    "make": "Toyota",
-    "model": "Prius",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [16777215]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "0103"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "len": 24,
-      "max": 16777215,
-      "unit": "kilometers"
-    },
     "hdr": "747",
     "id": "BZ4X_ODO",
     "make": "Toyota",
@@ -78168,6 +78143,31 @@
       "max": 16777215,
       "unit": "kilometers"
     },
+    "hdr": "701",
+    "id": "PRIUS_ODO_V5",
+    "make": "Toyota",
+    "model": "Prius",
+    "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "0103"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
     "hdr": "747",
     "id": "DAIHATSU_ODO_V6",
     "make": "Daihatsu",
@@ -78235,7 +78235,7 @@
     "cmd": {
       "22": "0434"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 8,
@@ -79451,30 +79451,6 @@
       "unit": "kilometers"
     },
     "hdr": "710",
-    "id": "GOLF_ODO_2",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Odometer (alternative)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2A0A"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 32,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "710",
     "id": "POLO_ODO",
     "make": "Volkswagen",
     "model": "Polo",
@@ -79551,6 +79527,30 @@
     "make": "Audi",
     "model": "SQ7",
     "name": "Odometer",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 255,
+      "unit": "kilometers"
+    },
+    "hdr": "710",
+    "id": "GOLF_ODO_2",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Odometer (alternative)",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -82475,7 +82475,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 188,
@@ -82550,7 +82550,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 196,
@@ -86256,31 +86256,6 @@
     "fmt": {
       "div": 2,
       "len": 8,
-      "max": 127,
-      "unit": "liters"
-    },
-    "hdr": "7C0",
-    "id": "CROSSTREK_FLI",
-    "make": "Subaru",
-    "model": "Crosstrek",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "21",
-    "scaling": "raw/2 clamped to [127]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "29"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 2,
-      "len": 8,
       "max": 127.5,
       "unit": "liters"
     },
@@ -86452,6 +86427,31 @@
     "scaling": "raw*500 /3785 clamped to [21]",
     "suggestedMetric": "fuelTankLevel",
     "unit": "gallons"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "29"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 127,
+      "unit": "liters"
+    },
+    "hdr": "7C0",
+    "id": "CROSSTREK_FLI",
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "21",
+    "scaling": "raw/2 clamped to [127]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
   },
   {
     "bitLength": 8,
@@ -88594,31 +88594,6 @@
       "unit": "percent"
     },
     "hdr": "7E1",
-    "id": "GOLF_DRIVE_TIME_SPORT",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Driving time (sport)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0304"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
     "id": "POLO_DRIVE_TIME_SPORT",
     "make": "Volkswagen",
     "model": "Polo",
@@ -88725,6 +88700,31 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0304"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2.5,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E1",
+    "id": "GOLF_DRIVE_TIME_SPORT",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Driving time (sport)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -88872,31 +88872,6 @@
       "unit": "percent"
     },
     "hdr": "7E1",
-    "id": "GOLF_DRIVE_TIME_MANUAL",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Driving time (manual)",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw/2.5 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "0305"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 2.5,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E1",
     "id": "POLO_DRIVE_TIME_MANUAL",
     "make": "Volkswagen",
     "model": "Polo",
@@ -89003,6 +88978,31 @@
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "0305"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2.5,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E1",
+    "id": "GOLF_DRIVE_TIME_MANUAL",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Driving time (manual)",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw/2.5 clamped to [100]",
     "suggestedMetric": "",
     "unit": "percent"
   },
@@ -89187,7 +89187,7 @@
     "cmd": {
       "22": "0380"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -89355,7 +89355,7 @@
     "cmd": {
       "22": "03FB"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -89407,7 +89407,7 @@
     "cmd": {
       "22": "0435"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -89455,7 +89455,7 @@
     "cmd": {
       "22": "0451"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -89615,7 +89615,7 @@
     "cmd": {
       "22": "050F"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -89879,7 +89879,7 @@
     "cmd": {
       "22": "0580"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "div": 255,
@@ -90618,32 +90618,6 @@
       "add": -50,
       "len": 8,
       "max": 215,
-      "min": -50,
-      "unit": "celsius"
-    },
-    "hdr": "714",
-    "id": "TIGUAN_AAT",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Ambient air temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1014"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "len": 8,
-      "max": 215,
       "unit": "celsius"
     },
     "hdr": "714",
@@ -90756,6 +90730,32 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1014"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 215,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "714",
+    "id": "TIGUAN_AAT",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Ambient air temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -97638,32 +97638,6 @@
       "add": -58,
       "len": 8,
       "max": 197,
-      "min": -58,
-      "unit": "celsius"
-    },
-    "hdr": "714",
-    "id": "TIGUAN_EOT",
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "name": "Engine oil temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw+-58 clamped to [-58, 197]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "202F"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "len": 8,
-      "max": 197,
       "unit": "celsius"
     },
     "hdr": "714",
@@ -97745,31 +97719,6 @@
     "id": "AMAROK_EOT",
     "make": "Volkswagen",
     "model": "Amarok",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-58 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "202F"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "714",
-    "id": "GOLF_EOT",
-    "make": "Volkswagen",
-    "model": "Golf",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -97899,6 +97848,57 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "len": 8,
+      "max": 197,
+      "min": -58,
+      "unit": "celsius"
+    },
+    "hdr": "714",
+    "id": "TIGUAN_EOT",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "name": "Engine oil temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [-58, 197]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "714",
+    "id": "GOLF_EOT",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
   },
   {
     "bitLength": 8,
@@ -98468,30 +98468,6 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "GOLF_CRSH_FRONT",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Crashes, front",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2353"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
     "id": "MACANEV_CRASH_CNT_FRONT",
     "make": "Porsche",
     "model": "Macan-Electric",
@@ -98567,6 +98543,30 @@
     "id": "SQ5_CRSH_FRONT",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "GOLF_CRSH_FRONT",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Crashes, front",
     "path": "Trips",
     "pid": "22",
@@ -98732,30 +98732,6 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "GOLF_CRASH_CNT_DRVR",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Crashes, driver side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2354"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
     "id": "MACANEV_CRASH_CNT_DRVR",
     "make": "Porsche",
     "model": "Macan-Electric",
@@ -98831,6 +98807,30 @@
     "id": "SQ5_CRASH_CNT_DRVR",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "GOLF_CRASH_CNT_DRVR",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Crashes, driver side",
     "path": "Stats",
     "pid": "22",
@@ -98996,30 +98996,6 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "GOLF_CRASH_CNT_PSNGR",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Crashes, passenger side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2355"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
     "id": "MACANEV_CRASH_CNT_PSNGR",
     "make": "Porsche",
     "model": "Macan-Electric",
@@ -99095,6 +99071,30 @@
     "id": "SQ5_CRASH_CNT_PSNGR",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "GOLF_CRASH_CNT_PSNGR",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Crashes, passenger side",
     "path": "Stats",
     "pid": "22",
@@ -99260,30 +99260,6 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "GOLF_CRASH_CNT_REAR",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Crashes, rear",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2356"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
     "id": "MACANEV_CRASH_CNT_REAR",
     "make": "Porsche",
     "model": "Macan-Electric",
@@ -99359,6 +99335,30 @@
     "id": "SQ5_CRASH_CNT_REAR",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "GOLF_CRASH_CNT_REAR",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Crashes, rear",
     "path": "Stats",
     "pid": "22",
@@ -99524,30 +99524,6 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "GOLF_CRASH_CNT_ROLL",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Crashes, rollover",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2357"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
     "id": "MACANEV_CRASH_CNT_ROLL",
     "make": "Porsche",
     "model": "Macan-Electric",
@@ -99634,6 +99610,30 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "GOLF_CRASH_CNT_ROLL",
+    "make": "Volkswagen",
+    "model": "Golf",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "2431"
     },
     "debug": false,
@@ -99684,7 +99684,7 @@
     "cmd": {
       "22": "248E"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -99708,7 +99708,7 @@
     "cmd": {
       "22": "248F"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -99732,7 +99732,7 @@
     "cmd": {
       "22": "2490"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -99756,7 +99756,7 @@
     "cmd": {
       "22": "2491"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -99953,33 +99953,6 @@
       "unit": "celsius"
     },
     "hdr": "746",
-    "id": "GOLF_WNDSHLD_TEMP",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Windshield temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "27C4"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -38.8,
-      "len": 8,
-      "max": 108.08,
-      "min": -38.8,
-      "mul": 0.576,
-      "unit": "celsius"
-    },
-    "hdr": "746",
     "id": "POLO_WNDSHLD_TEMP",
     "make": "Volkswagen",
     "model": "Polo",
@@ -100037,6 +100010,33 @@
     "id": "SQ5_WNDSHLD_TEMP",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -38.8,
+      "len": 8,
+      "max": 108.08,
+      "min": -38.8,
+      "mul": 0.576,
+      "unit": "celsius"
+    },
+    "hdr": "746",
+    "id": "GOLF_WNDSHLD_TEMP",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Windshield temperature",
     "path": "Climate",
     "pid": "22",
@@ -101411,7 +101411,7 @@
     "cmd": {
       "22": "4028"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -101435,7 +101435,7 @@
     "cmd": {
       "22": "402A"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": 6,
@@ -101487,7 +101487,7 @@
     "cmd": {
       "22": "4051"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -101511,7 +101511,7 @@
     "cmd": {
       "22": "4052"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -101535,7 +101535,7 @@
     "cmd": {
       "22": "4053"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -101559,7 +101559,7 @@
     "cmd": {
       "22": "4054"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -101901,7 +101901,7 @@
     "cmd": {
       "22": "4808"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -50,
@@ -101927,7 +101927,7 @@
     "cmd": {
       "22": "4815"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 100,
@@ -104785,7 +104785,7 @@
     "cmd": {
       "22": "C901"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -104809,7 +104809,7 @@
     "cmd": {
       "22": "C901"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -104833,7 +104833,7 @@
     "cmd": {
       "22": "C901"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -104857,7 +104857,7 @@
     "cmd": {
       "22": "C901"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -104881,7 +104881,7 @@
     "cmd": {
       "22": "C901"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -104936,32 +104936,6 @@
     "fmt": {
       "add": -58,
       "len": 8,
-      "max": 200,
-      "mul": 1.8,
-      "unit": "fahrenheit"
-    },
-    "hdr": "720",
-    "id": "3_TIRE_FL_TEMP",
-    "make": "Mazda",
-    "model": "3",
-    "name": "Front left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*1.8 +-58 clamped to [200]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "len": 8,
       "max": 401,
       "min": -58,
       "mul": 1.8,
@@ -104984,93 +104958,23 @@
     "cmd": {
       "22": "C902"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
+      "add": -58,
       "len": 8,
-      "max": 255,
+      "max": 200,
+      "mul": 1.8,
       "unit": "fahrenheit"
     },
-    "hdr": "7E0",
-    "id": "SIERRA1500_TP_T1",
-    "make": "GMC",
-    "model": "Sierra-1500",
-    "name": "Tire 1 Temp",
+    "hdr": "720",
+    "id": "3_TIRE_FL_TEMP",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front left tire temperature",
     "path": "Tires",
     "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "fahrenheit"
-    },
-    "hdr": "7E0",
-    "id": "SIERRA1500_TP_T2",
-    "make": "GMC",
-    "model": "Sierra-1500",
-    "name": "Tire 2 Temp",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "fahrenheit"
-    },
-    "hdr": "7E0",
-    "id": "SIERRA1500_TP_T3",
-    "make": "GMC",
-    "model": "Sierra-1500",
-    "name": "Tire 3 Temp",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "fahrenheit"
-    },
-    "hdr": "7E0",
-    "id": "SIERRA1500_TP_T4",
-    "make": "GMC",
-    "model": "Sierra-1500",
-    "name": "Tire 4 Temp",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
   },
@@ -105097,6 +105001,102 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [200]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "SIERRA1500_TP_T1",
+    "make": "GMC",
+    "model": "Sierra-1500",
+    "name": "Tire 1 Temp",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "SIERRA1500_TP_T2",
+    "make": "GMC",
+    "model": "Sierra-1500",
+    "name": "Tire 2 Temp",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "SIERRA1500_TP_T3",
+    "make": "GMC",
+    "model": "Sierra-1500",
+    "name": "Tire 3 Temp",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "SIERRA1500_TP_T4",
+    "make": "GMC",
+    "model": "Sierra-1500",
+    "name": "Tire 4 Temp",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
   },
@@ -107539,7 +107539,7 @@
     "cmd": {
       "22": "DD02"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 10,
@@ -108594,6 +108594,31 @@
     "fmt": {
       "bix": 104,
       "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_RR_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
       "max": 127.5,
       "min": -127.5,
       "sign": true,
@@ -108607,31 +108632,6 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_RR_VSS_V1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -108878,7 +108878,7 @@
     "cmd": {
       "21": "A0"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -110377,7 +110377,7 @@
     "cmd": {
       "22": "C101"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 104,
@@ -110601,6 +110601,31 @@
     "fmt": {
       "bix": 112,
       "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_RL_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
       "max": 127.5,
       "min": -127.5,
       "sign": true,
@@ -110614,31 +110639,6 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_RL_VSS_V1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -112569,7 +112569,7 @@
     "cmd": {
       "22": "C101"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 112,
@@ -121616,7 +121616,7 @@
     "cmd": {
       "21": "A0"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 152,
@@ -123384,31 +123384,6 @@
       "unit": "percent"
     },
     "hdr": "7E2",
-    "id": "FORTE_VPWR",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "12V battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "E004"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E2",
     "id": "SANTAFEHYB_VPWR",
     "make": "Hyundai",
     "model": "Santa-Fe-Hybrid",
@@ -123489,6 +123464,31 @@
     "make": "Kia",
     "model": "Telluride",
     "name": "12v battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "E004"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E2",
+    "id": "FORTE_VPWR",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "12V battery charge",
     "path": "Battery",
     "pid": "22",
     "scaling": "raw clamped to [100]",
@@ -126969,34 +126969,6 @@
       "unit": "fahrenheit"
     },
     "hdr": "7E0",
-    "id": "TELLURIDE_ATF_TEMP",
-    "make": "Kia",
-    "model": "Telluride",
-    "name": "Transmission fluid temperature",
-    "path": "Transmission",
-    "pid": "22",
-    "scaling": "raw*9 /5 +-40 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "21A0"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "bix": 16,
-      "div": 5,
-      "len": 8,
-      "max": 255,
-      "mul": 9,
-      "unit": "fahrenheit"
-    },
-    "hdr": "7E0",
     "id": "VELOSTER_ATF_TEMP",
     "make": "Hyundai",
     "model": "Veloster",
@@ -127011,9 +126983,37 @@
     "bitLength": 8,
     "bitOffset": 16,
     "cmd": {
-      "22": "4808"
+      "22": "21A0"
     },
     "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "bix": 16,
+      "div": 5,
+      "len": 8,
+      "max": 255,
+      "mul": 9,
+      "unit": "fahrenheit"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_ATF_TEMP",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Transmission fluid temperature",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "raw*9 /5 +-40 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "4808"
+    },
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -50,
@@ -127220,7 +127220,7 @@
     "cmd": {
       "22": "C901"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 16,
@@ -127278,33 +127278,6 @@
       "add": -58,
       "bix": 16,
       "len": 8,
-      "max": 200,
-      "mul": 1.8,
-      "unit": "fahrenheit"
-    },
-    "hdr": "720",
-    "id": "3_TIRE_RL_TEMP",
-    "make": "Mazda",
-    "model": "3",
-    "name": "Rear left tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*1.8 +-58 clamped to [200]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "bix": 16,
-      "len": 8,
       "max": 401,
       "min": -58,
       "mul": 1.8,
@@ -127318,6 +127291,33 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [-58, 401]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "bix": 16,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_RL_TEMP",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear left tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
   },
@@ -135181,7 +135181,7 @@
     "cmd": {
       "22": "ED02"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -4,
@@ -150074,7 +150074,7 @@
     "cmd": {
       "22": "4808"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -50,
@@ -150506,7 +150506,7 @@
     "cmd": {
       "22": "C901"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 24,
@@ -150564,33 +150564,6 @@
       "add": -58,
       "bix": 24,
       "len": 8,
-      "max": 200,
-      "mul": 1.8,
-      "unit": "fahrenheit"
-    },
-    "hdr": "720",
-    "id": "3_TIRE_RR_TEMP",
-    "make": "Mazda",
-    "model": "3",
-    "name": "Rear right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*1.8 +-58 clamped to [200]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "bix": 24,
-      "len": 8,
       "max": 401,
       "min": -58,
       "mul": 1.8,
@@ -150604,6 +150577,33 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [-58, 401]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "bix": 24,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_RR_TEMP",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Rear right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
   },
@@ -158406,7 +158406,7 @@
     "cmd": {
       "21": "18"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -48,
@@ -171218,32 +171218,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "GOLF_TP_FR",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A0"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "POLO_TP_FR",
     "make": "Volkswagen",
     "model": "Polo",
@@ -171299,6 +171273,32 @@
     "id": "SQ5_TP_FR",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "GOLF_TP_FR",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -171454,32 +171454,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "GOLF_TP_FL",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A1"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "POLO_TP_FL",
     "make": "Volkswagen",
     "model": "Polo",
@@ -171535,6 +171509,32 @@
     "id": "SQ5_TP_FL",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "GOLF_TP_FL",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -171690,32 +171690,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "GOLF_TP_RL",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A2"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "POLO_TP_RL",
     "make": "Volkswagen",
     "model": "Polo",
@@ -171771,6 +171745,32 @@
     "id": "SQ5_TP_RL",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "GOLF_TP_RL",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -171926,32 +171926,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "GOLF_TP_RR",
-    "make": "Volkswagen",
-    "model": "Golf",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A3"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "POLO_TP_RR",
     "make": "Volkswagen",
     "model": "Polo",
@@ -172007,6 +171981,32 @@
     "id": "SQ5_TP_RR",
     "make": "Audi",
     "model": "SQ5",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "GOLF_TP_RR",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -174621,7 +174621,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -174877,7 +174877,7 @@
     "cmd": {
       "21": "A0"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -176605,6 +176605,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_FL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "add": -50,
       "bix": 48,
       "len": 8,
@@ -176620,31 +176645,6 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 48,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_FL_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -179487,6 +179487,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_FR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "add": -50,
       "bix": 56,
       "len": 8,
@@ -179502,31 +179527,6 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 56,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_FR_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -181688,6 +181688,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "bix": 64,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_RL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "add": -50,
       "bix": 64,
       "len": 8,
@@ -181703,31 +181728,6 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 64,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 64,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_RL_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -184110,6 +184110,31 @@
     "debug": false,
     "eax": "",
     "fmt": {
+      "bix": 72,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_RR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
       "add": -50,
       "bix": 72,
       "len": 8,
@@ -184125,31 +184150,6 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_RR_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -188766,7 +188766,7 @@
     "cmd": {
       "22": "4808"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -50,
@@ -189297,7 +189297,7 @@
     "cmd": {
       "22": "C901"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 8,
@@ -189355,33 +189355,6 @@
       "add": -58,
       "bix": 8,
       "len": 8,
-      "max": 200,
-      "mul": 1.8,
-      "unit": "fahrenheit"
-    },
-    "hdr": "720",
-    "id": "3_TIRE_FR_TEMP",
-    "make": "Mazda",
-    "model": "3",
-    "name": "Front right tire temperature",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw*1.8 +-58 clamped to [200]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "22": "C902"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "bix": 8,
-      "len": 8,
       "max": 401,
       "min": -58,
       "mul": 1.8,
@@ -189395,6 +189368,33 @@
     "path": "Tires",
     "pid": "22",
     "scaling": "raw*1.8 +-58 clamped to [-58, 401]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "C902"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "bix": 8,
+      "len": 8,
+      "max": 200,
+      "mul": 1.8,
+      "unit": "fahrenheit"
+    },
+    "hdr": "720",
+    "id": "3_TIRE_FR_TEMP",
+    "make": "Mazda",
+    "model": "3",
+    "name": "Front right tire temperature",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw*1.8 +-58 clamped to [200]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
   },
@@ -193804,6 +193804,31 @@
     "fmt": {
       "bix": 88,
       "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_FL_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
       "max": 127.5,
       "min": -127.5,
       "sign": true,
@@ -193817,31 +193842,6 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_FL_VSS_V1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -195502,7 +195502,7 @@
     "cmd": {
       "22": "C101"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 88,
@@ -195586,6 +195586,31 @@
     "fmt": {
       "bix": 96,
       "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_FR_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
       "max": 127.5,
       "min": -127.5,
       "sign": true,
@@ -195599,31 +195624,6 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_FR_VSS_V1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -197461,7 +197461,7 @@
     "cmd": {
       "22": "C101"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 96,
