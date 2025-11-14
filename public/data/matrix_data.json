@@ -16140,6 +16140,32 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "091A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 8192,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "MACHE_THROTTLE_POS_DES",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Throttle position desired",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /8192 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "093C"
     },
     "debug": false,
@@ -16185,6 +16211,32 @@
     "scaling": "raw/512 clamped to [127.9]",
     "suggestedMetric": "",
     "unit": "degrees"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "093C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 8192,
+      "len": 16,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "MACHE_THROTTLE_POS_ACT",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Throttle position actual",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /8192 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
   },
   {
     "bitLength": 16,
@@ -21399,6 +21451,31 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "1505"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 128,
+      "len": 16,
+      "max": 200,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7E0",
+    "id": "MACHE_VSS_HD",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Vehicle speed, high resolution",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw/128 clamped to [200]",
+    "suggestedMetric": "speed",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "15F7"
     },
     "debug": false,
@@ -23623,6 +23700,32 @@
     "scaling": "raw/16 clamped to [-500, 500]",
     "suggestedMetric": "",
     "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E2C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 12000,
+      "min": -6000,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "7E6",
+    "id": "MACHE_PRI_MOTOR_RPM",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Primary motor speed",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw clamped to [-6000, 12000]",
+    "suggestedMetric": "",
+    "unit": "rpm"
   },
   {
     "bitLength": 16,
@@ -28937,6 +29040,31 @@
     "scaling": "raw*100 /10000 clamped to [655.35]",
     "suggestedMetric": "",
     "unit": "kilopascal"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4027"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 1572840,
+      "mul": 24,
+      "unit": "hours"
+    },
+    "hdr": "726",
+    "id": "MACHE_12V_AGE",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Aux 12V battery age",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*24 clamped to [1572840]",
+    "suggestedMetric": "",
+    "unit": "hours"
   },
   {
     "bitLength": 16,
@@ -36576,6 +36704,158 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "4803"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HV_POS_LEAK_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV positive leakage voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4804"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HV_NEG_LEAK_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV negative leakage voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4805"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 300,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_CONTACTOR_V_POS",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Contactor voltage positive",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [300]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4806"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 300,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_CONTACTOR_V_NEG",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Contactor voltage negative",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [300]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4809"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 300,
+      "unit": "amps"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_CHR_A",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery current high range",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [300]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "480B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 50,
+      "len": 16,
+      "max": 300,
+      "min": -300,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_A_ALT",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery current (alternate)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [-300, 300]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "480D"
     },
     "debug": false,
@@ -36729,6 +37009,344 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
+      "22": "481A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 200,
+      "min": -200,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7E7",
+    "id": "MACHE_SEC_MOTOR_TQ",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Secondary motor torque",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-200, 200]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "481C"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 200,
+      "min": -200,
+      "sign": true,
+      "unit": "newtonMeters"
+    },
+    "hdr": "7E6",
+    "id": "MACHE_PRI_MOTOR_TQ",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Primary motor torque",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-200, 200]",
+    "suggestedMetric": "",
+    "unit": "newtonMeters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "481D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 400,
+      "min": -400,
+      "sign": true,
+      "unit": "volts"
+    },
+    "hdr": "7E6",
+    "id": "MACHE_PRI_MOTOR_INV_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Primary motor inverter voltage",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-400, 400]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "481E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E7",
+    "id": "MACHE_SEC_MOTOR_INV_T",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Secondary motor inverter temperature",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "481F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E6",
+    "id": "MACHE_PRI_MOTOR_COIL_T",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Primary motor coil temperature",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4820"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E7",
+    "id": "MACHE_SEC_MOTOR_COIL_T",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Secondary motor coil temperature",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4821"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 12000,
+      "min": -6000,
+      "sign": true,
+      "unit": "rpm"
+    },
+    "hdr": "7E7",
+    "id": "MACHE_SEC_MOTOR_RPM",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Secondary motor speed",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw clamped to [-6000, 12000]",
+    "suggestedMetric": "",
+    "unit": "rpm"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4823"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 400,
+      "min": -400,
+      "sign": true,
+      "unit": "volts"
+    },
+    "hdr": "7E7",
+    "id": "MACHE_SEC_MOTOR_INV_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Secondary motor inverter voltage",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-400, 400]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4824"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 300,
+      "min": -40,
+      "sign": true,
+      "unit": "celsius"
+    },
+    "hdr": "7E6",
+    "id": "MACHE_PRI_MOTOR_INV_T",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Primary motor inverter temperature",
+    "path": "Drivetrain",
+    "pid": "22",
+    "scaling": "raw clamped to [-40, 300]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "483F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_MOD_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery modules voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4840"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_MIN_MOD_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery minimum module voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4841"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 50,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_AVG_MOD_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery average module voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [50]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4842"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 600,
+      "unit": "amps"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_CCR",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery charge current requested",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [600]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
       "22": "4848"
     },
     "debug": false,
@@ -36799,6 +37417,283 @@
     "scaling": "raw/500 clamped to [131.07]",
     "suggestedMetric": "",
     "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "484A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 600,
+      "unit": "volts"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_CHG_OUT_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV charger output voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [600]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "484E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 16,
+      "max": 327.675,
+      "unit": "kilowatts"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_CHG_PWR_AVAIL",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV charger input power available",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/200 clamped to [327.675]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4850"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 600,
+      "unit": "amps"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_CHG_OUT_A",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV charger output current measured",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [600]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "485E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 300,
+      "unit": "volts"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_AC_CHG_IN_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV AC charger input voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [300]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4899"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 16,
+      "max": 655.35,
+      "unit": "amps"
+    },
+    "hdr": "6F5",
+    "id": "MACHE_HVDC_CHG_MAX_C",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV DC charger maximum current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/100 clamped to [655.35]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "489D"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "volts"
+    },
+    "hdr": "6F5",
+    "id": "MACHE_HVDC_CHG_MAX_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV DC charger maximum voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48BC"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 15,
+      "unit": "amps"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_HVBAT_MAX_CHG_A",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery maximum charge current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48C4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 20,
+      "len": 16,
+      "max": 500,
+      "unit": "kilowatts"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_CHG_MAX_PWR",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV charger maximum power",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/20 clamped to [500]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48DE"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 1000,
+      "len": 16,
+      "max": 65.535,
+      "unit": "kilowatts"
+    },
+    "hdr": "7E6",
+    "id": "MACHE_COOLANT_HTR_PWR",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Coolant heater power",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw/1000 clamped to [65.535]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48F9"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 600,
+      "min": -600,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_A",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [-600, 600]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48FB"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 300,
+      "unit": "kilowatts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_CHG_PWR_LIM",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery charge power limit",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [300]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
   },
   {
     "bitLength": 16,
@@ -37713,6 +38608,34 @@
     "scaling": "raw clamped to [2]",
     "suggestedMetric": "",
     "unit": "offon"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "99AB"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 32767,
+      "len": 16,
+      "max": 100,
+      "min": -100,
+      "mul": 100,
+      "sign": true,
+      "unit": "amps"
+    },
+    "hdr": "7C7",
+    "id": "MACHE_AC_COMP_A",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "A/C compressor current",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*100 /32767 clamped to [-100, 100]",
+    "suggestedMetric": "",
+    "unit": "amps"
   },
   {
     "bitLength": 16,
@@ -43250,6 +44173,30 @@
     "pid": "22",
     "scaling": "raw clamped to [65535]",
     "signalGroups": [],
+    "suggestedMetric": "",
+    "unit": "seconds"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "F41F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 65535,
+      "unit": "seconds"
+    },
+    "hdr": "7E0",
+    "id": "MACHE_RUN_TIME",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Engine run time",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw clamped to [65535]",
     "suggestedMetric": "",
     "unit": "seconds"
   },
@@ -75692,6 +76639,54 @@
   },
   {
     "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "760",
+    "id": "MACHE_ODO_BCM",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Odometer, battery control module",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD01"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 16777215,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "MACHE_ODO_ECM",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Odometer, engine control module",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [16777215]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
     "bitOffset": 24,
     "cmd": {
       "22": "1028"
@@ -88882,6 +89877,56 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "0580"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E0",
+    "id": "MACHE_GRILL_SHUTTER_POSITION",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Grill shutter position",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "05A1"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_TARGET_SOC",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Target/desired state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "0E25"
     },
     "debug": false,
@@ -93379,6 +94424,58 @@
     "path": "Transmission",
     "pid": "22",
     "scaling": "Mapped values: {'1': {'description': 'Neutral', 'value': 'NEUTRAL'}, '2': {'description': 'Park', 'value': 'PARK'}, '3': {'description': 'Reverse', 'value': 'REVERSE'}, '4': {'description': 'Drive, gear 1', 'value': 'D1'}, '5': {'description': 'Drive, gear 2', 'value': 'D2'}, '6': {'description': 'Drive, gear 3', 'value': 'D3'}, '7': {'description': 'Drive, gear 4', 'value': 'D4'}, '8': {'description': 'Drive, gear 5', 'value': 'D5'}, '9': {'description': 'Drive, gear 6', 'value': 'D6'}, '10': {'description': 'Drive, gear 7', 'value': 'D7'}, '11': {'description': 'Drive, gear 8', 'value': 'D8'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1E12"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Unknown",
+          "value": "UNKNOWN"
+        },
+        "20": {
+          "description": "L",
+          "value": "L"
+        },
+        "255": {
+          "description": "Fault",
+          "value": "FAULT"
+        },
+        "40": {
+          "description": "D",
+          "value": "D"
+        },
+        "50": {
+          "description": "N",
+          "value": "N"
+        },
+        "60": {
+          "description": "R",
+          "value": "R"
+        },
+        "70": {
+          "description": "P",
+          "value": "P"
+        }
+      }
+    },
+    "hdr": "7E6",
+    "id": "MACHE_GEAR_CMD",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Gear commanded",
+    "path": "Transmission",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Unknown', 'value': 'UNKNOWN'}, '20': {'description': 'L', 'value': 'L'}, '40': {'description': 'D', 'value': 'D'}, '50': {'description': 'N', 'value': 'N'}, '60': {'description': 'R', 'value': 'R'}, '70': {'description': 'P', 'value': 'P'}, '255': {'description': 'Fault', 'value': 'FAULT'}}",
     "suggestedMetric": "",
     "unit": ""
   },
@@ -100312,6 +101409,82 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "4028"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "726",
+    "id": "MACHE_12V_SOC",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Aux 12V battery state of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "402A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": 6,
+      "div": 20,
+      "len": 8,
+      "max": 18.75,
+      "unit": "volts"
+    },
+    "hdr": "726",
+    "id": "MACHE_12V_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Aux 12V battery voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/20 +6 clamped to [18.75]",
+    "suggestedMetric": "starterBatteryVoltage",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "402B"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -127,
+      "len": 8,
+      "max": 128,
+      "min": -127,
+      "unit": "amps"
+    },
+    "hdr": "726",
+    "id": "MACHE_12V_A",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Aux 12V battery current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-127 clamped to [-127, 128]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "4051"
     },
     "debug": false,
@@ -100726,6 +101899,164 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
+      "22": "4808"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_T_RANGE_MAX",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery temperature range, maximum",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4815"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 100,
+      "len": 8,
+      "max": 63.75,
+      "mul": 25,
+      "unit": "kilowatts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_MAX_DISCH_PWR_LIM",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Maximum discharge power limit",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*25 /100 clamped to [63.75]",
+    "suggestedMetric": "",
+    "unit": "kilowatts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4836"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "amps"
+    },
+    "hdr": "746",
+    "id": "MACHE_DCDC_LV_A",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "LV DC-DC converter low voltage current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "483A"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 25,
+      "unit": "amps"
+    },
+    "hdr": "746",
+    "id": "MACHE_DCDC_HV_A",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "LV DC-DC converter high voltage current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [25]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "483D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Disabled",
+          "value": "DISABLED"
+        },
+        "1": {
+          "description": "Enabled",
+          "value": "ENABLED"
+        }
+      }
+    },
+    "hdr": "746",
+    "id": "MACHE_DCDC_ENABLE",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "LV DC-DC converter enable",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Disabled', 'value': 'DISABLED'}, '1': {'description': 'Enabled', 'value': 'ENABLED'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4844"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 500,
+      "mul": 2,
+      "unit": "volts"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_CVR",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery charge voltage requested",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*2 clamped to [500]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
       "22": "4845"
     },
     "debug": false,
@@ -100796,6 +102127,80 @@
     "scaling": "raw/2 clamped to [100]",
     "suggestedMetric": "stateOfCharge",
     "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4846"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_COOLANT_INLET_T",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery coolant inlet temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "484D"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Not ready",
+          "value": "NOT_READY"
+        },
+        "1": {
+          "description": "Wait",
+          "value": "WAIT"
+        },
+        "2": {
+          "description": "Ready",
+          "value": "READY"
+        },
+        "3": {
+          "description": "Charging",
+          "value": "CHARGING"
+        },
+        "4": {
+          "description": "Done",
+          "value": "DONE"
+        },
+        "5": {
+          "description": "Fault",
+          "value": "FAULT"
+        }
+      }
+    },
+    "hdr": "7E4",
+    "id": "MACHE_HVBAT_CHG_STATUS",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery charging status",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Not ready', 'value': 'NOT_READY'}, '1': {'description': 'Wait', 'value': 'WAIT'}, '2': {'description': 'Ready', 'value': 'READY'}, '3': {'description': 'Charging', 'value': 'CHARGING'}, '4': {'description': 'Done', 'value': 'DONE'}, '5': {'description': 'Fault', 'value': 'FAULT'}}",
+    "suggestedMetric": "",
+    "unit": ""
   },
   {
     "bitLength": 8,
@@ -100975,6 +102380,637 @@
     "pid": "22",
     "scaling": "Mapped values: {'0': {'description': 'Not ready', 'value': 'NOT_READY'}, '1': {'description': 'Ready', 'value': 'READY'}, '2': {'description': 'Fault', 'value': 'FAULT'}, '3': {'description': 'Wait Check', 'value': 'WAIT'}, '4': {'description': 'Pre-condition', 'value': 'PRE_COND'}, '5': {'description': 'Charging', 'value': 'CHARGING'}, '6': {'description': 'Done', 'value': 'DONE'}, '7': {'description': 'External Charger', 'value': 'EXT'}, '8': {'description': 'Initializing', 'value': 'INIT'}}",
     "suggestedMetric": "isCharging",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4851"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "None",
+          "value": "NONE"
+        },
+        "1": {
+          "description": "Level 1",
+          "value": "LEVEL_1"
+        },
+        "10": {
+          "description": "No communication",
+          "value": "NO_COMM"
+        },
+        "11": {
+          "description": "Fault",
+          "value": "FAULT"
+        },
+        "12": {
+          "description": "Handshake end",
+          "value": "HANDSHAKE_END"
+        },
+        "2": {
+          "description": "Level 2",
+          "value": "LEVEL_2"
+        },
+        "3": {
+          "description": "DC",
+          "value": "DC"
+        },
+        "4": {
+          "description": "Basic",
+          "value": "BASIC"
+        },
+        "5": {
+          "description": "High Level",
+          "value": "HIGH_LEVEL"
+        },
+        "6": {
+          "description": "Basic AC",
+          "value": "BASIC_AC"
+        },
+        "7": {
+          "description": "High Level AC",
+          "value": "HIGH_LEVEL_AC"
+        },
+        "8": {
+          "description": "High Level DC",
+          "value": "HIGH_LEVEL_DC"
+        }
+      }
+    },
+    "hdr": "7E2",
+    "id": "MACHE_EVSE_TYPE",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Charger type",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'None', 'value': 'NONE'}, '1': {'description': 'Level 1', 'value': 'LEVEL_1'}, '2': {'description': 'Level 2', 'value': 'LEVEL_2'}, '3': {'description': 'DC', 'value': 'DC'}, '4': {'description': 'Basic', 'value': 'BASIC'}, '5': {'description': 'High Level', 'value': 'HIGH_LEVEL'}, '6': {'description': 'Basic AC', 'value': 'BASIC_AC'}, '7': {'description': 'High Level AC', 'value': 'HIGH_LEVEL_AC'}, '8': {'description': 'High Level DC', 'value': 'HIGH_LEVEL_DC'}, '10': {'description': 'No communication', 'value': 'NO_COMM'}, '11': {'description': 'Fault', 'value': 'FAULT'}, '12': {'description': 'Handshake end', 'value': 'HANDSHAKE_END'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "485F"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "amps"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_AC_CHG_IN_A",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV AC charger input current",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "amps"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4860"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 90,
+      "min": 30,
+      "unit": "hertz"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_AC_CHG_IN_FREQ",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV AC charger input frequency",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [30, 90]",
+    "suggestedMetric": "",
+    "unit": "hertz"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4861"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_CHG_PILOT_DUTY",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV charger pilot duty cycle",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4862"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "1": {
+          "description": "On S3",
+          "value": "ON_S3"
+        },
+        "16": {
+          "description": "DC",
+          "value": "DC"
+        },
+        "17": {
+          "description": "Open",
+          "value": "OPEN"
+        },
+        "18": {
+          "description": "Short",
+          "value": "SHORT"
+        },
+        "19": {
+          "description": "Short to power",
+          "value": "SHORT_PWR"
+        },
+        "2": {
+          "description": "On",
+          "value": "ON"
+        },
+        "20": {
+          "description": "Out of range",
+          "value": "OUT_OF_RANGE"
+        },
+        "21": {
+          "description": "Open circuit",
+          "value": "OPEN_CIRCUIT"
+        },
+        "3": {
+          "description": "10 A",
+          "value": "10A"
+        },
+        "4": {
+          "description": "13 A",
+          "value": "13A"
+        },
+        "5": {
+          "description": "16 A",
+          "value": "16A"
+        },
+        "6": {
+          "description": "20 A",
+          "value": "20A"
+        },
+        "7": {
+          "description": "Fault",
+          "value": "FAULT"
+        },
+        "8": {
+          "description": "32 A",
+          "value": "32A"
+        },
+        "9": {
+          "description": "63 A",
+          "value": "63A"
+        }
+      }
+    },
+    "hdr": "7E2",
+    "id": "MACHE_CHG_PROX_STATUS",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV charger proximity status",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'OFF'}, '1': {'description': 'On S3', 'value': 'ON_S3'}, '2': {'description': 'On', 'value': 'ON'}, '3': {'description': '10 A', 'value': '10A'}, '4': {'description': '13 A', 'value': '13A'}, '5': {'description': '16 A', 'value': '16A'}, '6': {'description': '20 A', 'value': '20A'}, '7': {'description': 'Fault', 'value': 'FAULT'}, '8': {'description': '32 A', 'value': '32A'}, '9': {'description': '63 A', 'value': '63A'}, '16': {'description': 'DC', 'value': 'DC'}, '17': {'description': 'Open', 'value': 'OPEN'}, '18': {'description': 'Short', 'value': 'SHORT'}, '19': {'description': 'Short to power', 'value': 'SHORT_PWR'}, '20': {'description': 'Out of range', 'value': 'OUT_OF_RANGE'}, '21': {'description': 'Open circuit', 'value': 'OPEN_CIRCUIT'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4888"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_AC_CHG_COUPLER_T",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV AC charger coupler temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4897"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_DC_CHG_COUPLER_T1",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV DC charger coupler temperature 1",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "489E"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Not ready",
+          "value": "NOT_READY"
+        },
+        "1": {
+          "description": "Initialize",
+          "value": "INIT"
+        },
+        "10": {
+          "description": "Fault",
+          "value": "FAULT"
+        },
+        "11": {
+          "description": "Charger check",
+          "value": "CHARGER_CHECK"
+        },
+        "2": {
+          "description": "Ready",
+          "value": "READY"
+        },
+        "3": {
+          "description": "Wait check",
+          "value": "WAIT_CHECK"
+        },
+        "4": {
+          "description": "Pre-condition",
+          "value": "PRE_CONDITION"
+        },
+        "5": {
+          "description": "Charging",
+          "value": "CHARGING"
+        },
+        "6": {
+          "description": "Done",
+          "value": "DONE"
+        },
+        "8": {
+          "description": "Wait",
+          "value": "WAIT"
+        },
+        "9": {
+          "description": "Not capable",
+          "value": "NOT_CAPABLE"
+        }
+      }
+    },
+    "hdr": "7E2",
+    "id": "MACHE_DC_CHG_STATUS",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV DC charger status",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Not ready', 'value': 'NOT_READY'}, '1': {'description': 'Initialize', 'value': 'INIT'}, '2': {'description': 'Ready', 'value': 'READY'}, '3': {'description': 'Wait check', 'value': 'WAIT_CHECK'}, '4': {'description': 'Pre-condition', 'value': 'PRE_CONDITION'}, '5': {'description': 'Charging', 'value': 'CHARGING'}, '6': {'description': 'Done', 'value': 'DONE'}, '8': {'description': 'Wait', 'value': 'WAIT'}, '9': {'description': 'Not capable', 'value': 'NOT_CAPABLE'}, '10': {'description': 'Fault', 'value': 'FAULT'}, '11': {'description': 'Charger check', 'value': 'CHARGER_CHECK'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48A0"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 50,
+      "len": 8,
+      "max": 5.1,
+      "unit": "volts"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_CHG_PROX_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV charger proximity voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/50 clamped to [5.1]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48A4"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_DC_CHG_COUPLER_T3",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV DC charger coupler temperature 3",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48A5"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_CHG_OUT_REDUCT_T",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV charger output reduction temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48B6"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 15,
+      "unit": "volts"
+    },
+    "hdr": "7E2",
+    "id": "MACHE_CHG_PILOT_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV charger pilot voltage",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [15]",
+    "suggestedMetric": "",
+    "unit": "volts"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48B7"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "None",
+          "value": "NONE"
+        },
+        "1": {
+          "description": "DC E-",
+          "value": "DC_E_MINUS"
+        },
+        "10": {
+          "description": "Fault",
+          "value": "FAULT"
+        },
+        "2": {
+          "description": "DC -P",
+          "value": "DC_MINUS_P"
+        },
+        "3": {
+          "description": "DC EP",
+          "value": "DC_EP"
+        },
+        "4": {
+          "description": "AC E-",
+          "value": "AC_E_MINUS"
+        },
+        "5": {
+          "description": "AC -P",
+          "value": "AC_MINUS_P"
+        },
+        "6": {
+          "description": "AC EP",
+          "value": "AC_EP"
+        },
+        "7": {
+          "description": "Reset",
+          "value": "RESET"
+        },
+        "8": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "9": {
+          "description": "Establish",
+          "value": "ESTABLISH"
+        }
+      }
+    },
+    "hdr": "7E2",
+    "id": "MACHE_EVSE_DIGITAL_MODE",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Charger digital mode",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'None', 'value': 'NONE'}, '1': {'description': 'DC E-', 'value': 'DC_E_MINUS'}, '2': {'description': 'DC -P', 'value': 'DC_MINUS_P'}, '3': {'description': 'DC EP', 'value': 'DC_EP'}, '4': {'description': 'AC E-', 'value': 'AC_E_MINUS'}, '5': {'description': 'AC -P', 'value': 'AC_MINUS_P'}, '6': {'description': 'AC EP', 'value': 'AC_EP'}, '7': {'description': 'Reset', 'value': 'RESET'}, '8': {'description': 'Off', 'value': 'OFF'}, '9': {'description': 'Establish', 'value': 'ESTABLISH'}, '10': {'description': 'Fault', 'value': 'FAULT'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48DF"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "1": {
+          "description": "On",
+          "value": "ON"
+        },
+        "2": {
+          "description": "Degraded",
+          "value": "DEGRADED"
+        },
+        "3": {
+          "description": "Shutdown",
+          "value": "SHUTDOWN"
+        },
+        "4": {
+          "description": "Short",
+          "value": "SHORT"
+        },
+        "5": {
+          "description": "No response",
+          "value": "NO_RESPONSE"
+        },
+        "6": {
+          "description": "Unknown",
+          "value": "UNKNOWN"
+        },
+        "7": {
+          "description": "Stop",
+          "value": "STOP"
+        }
+      }
+    },
+    "hdr": "7E6",
+    "id": "MACHE_COOLANT_HTR_OP_MODE",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Coolant heater operation mode",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'OFF'}, '1': {'description': 'On', 'value': 'ON'}, '2': {'description': 'Degraded', 'value': 'DEGRADED'}, '3': {'description': 'Shutdown', 'value': 'SHUTDOWN'}, '4': {'description': 'Short', 'value': 'SHORT'}, '5': {'description': 'No response', 'value': 'NO_RESPONSE'}, '6': {'description': 'Unknown', 'value': 'UNKNOWN'}, '7': {'description': 'Stop', 'value': 'STOP'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "48E0"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Off",
+          "value": "OFF"
+        },
+        "1": {
+          "description": "Equalize",
+          "value": "EQUALIZE"
+        },
+        "15": {
+          "description": "Heat",
+          "value": "HEAT"
+        },
+        "2": {
+          "description": "Coolant flow",
+          "value": "COOLANT_FLOW"
+        },
+        "3": {
+          "description": "Coolant fan",
+          "value": "COOLANT_FAN"
+        },
+        "4": {
+          "description": "Coolant moderate",
+          "value": "COOLANT_MODERATE"
+        },
+        "5": {
+          "description": "Coolant maximum",
+          "value": "COOLANT_MAX"
+        }
+      }
+    },
+    "hdr": "7E6",
+    "id": "MACHE_HVBAT_THERMAL_OP_MODE",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery thermal operation mode",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Off', 'value': 'OFF'}, '1': {'description': 'Equalize', 'value': 'EQUALIZE'}, '2': {'description': 'Coolant flow', 'value': 'COOLANT_FLOW'}, '3': {'description': 'Coolant fan', 'value': 'COOLANT_FAN'}, '4': {'description': 'Coolant moderate', 'value': 'COOLANT_MODERATE'}, '5': {'description': 'Coolant maximum', 'value': 'COOLANT_MAX'}, '15': {'description': 'Heat', 'value': 'HEAT'}}",
+    "suggestedMetric": "",
     "unit": ""
   },
   {
@@ -105496,6 +107532,31 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD02"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 8,
+      "max": 100,
+      "unit": "volts"
+    },
+    "hdr": "7E0",
+    "id": "MACHE_ECU_V",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "Main ECU voltage supply",
+    "path": "ECU",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "volts"
   },
   {
     "bitLength": 8,
@@ -124945,6 +127006,33 @@
     "scaling": "raw*9 /5 +-40 clamped to [255]",
     "suggestedMetric": "",
     "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "22": "4808"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 16,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_T_RANGE",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery temperature range",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -147979,6 +150067,33 @@
     "scaling": "Mapped values: {'1': {'description': 'Front left', 'value': 'FL'}, '2': {'description': 'Front right', 'value': 'FR'}, '3': {'description': 'Rear left', 'value': 'RL'}, '4': {'description': 'Rear right', 'value': 'RR'}}",
     "suggestedMetric": "",
     "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "22": "4808"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 24,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_T_RANGE_AVG",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery temperature range, average",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
@@ -186644,6 +188759,33 @@
     "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "22": "4808"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "bix": 8,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "MACHE_T_RANGE_MIN",
+    "make": "Ford",
+    "model": "Mustang-Mach-E",
+    "name": "HV battery temperature range, minimum",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
   },
   {
     "bitLength": 8,
