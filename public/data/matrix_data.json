@@ -1654,7 +1654,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 150,
@@ -43766,6 +43766,35 @@
     "fmt": {
       "bix": 104,
       "blsb": true,
+      "div": 100,
+      "len": 16,
+      "max": 180,
+      "min": -180,
+      "sign": true,
+      "unit": "milesPerHour"
+    },
+    "hdr": "7E2",
+    "id": "TELLURIDE_VSS_V2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Vehicle speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw/100 clamped to [-180, 180]",
+    "suggestedMetric": "speed",
+    "unit": "milesPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "blsb": true,
       "len": 16,
       "max": 65535,
       "unit": "scalar"
@@ -43839,36 +43868,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "blsb": true,
-      "div": 100,
-      "len": 16,
-      "max": 180,
-      "min": -180,
-      "sign": true,
-      "unit": "milesPerHour"
-    },
-    "hdr": "7E2",
-    "id": "TELLURIDE_VSS_V2",
-    "make": "Kia",
-    "model": "Telluride",
-    "name": "Vehicle speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw/100 clamped to [-180, 180]",
-    "suggestedMetric": "speed",
-    "unit": "milesPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 104,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 104,
@@ -55176,7 +55176,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 200,
@@ -56440,7 +56440,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -58369,7 +58369,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -58451,7 +58451,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 256,
@@ -66737,7 +66737,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 56,
@@ -69700,6 +69700,32 @@
     "eax": "",
     "fmt": {
       "bix": 72,
+      "blsb": true,
+      "len": 16,
+      "max": 65535,
+      "unit": "scalar"
+    },
+    "hdr": "7E0",
+    "id": "TELLURIDE_MIS_2",
+    "make": "Kia",
+    "model": "Telluride",
+    "name": "Misfire count #2",
+    "path": "Engine",
+    "pid": "21",
+    "scaling": "raw clamped to [65535]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 72,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
       "div": 10,
       "len": 16,
       "max": 3276,
@@ -69764,41 +69790,15 @@
       "unit": "degrees"
     },
     "hdr": "7D4",
-    "id": "TUCSONHYB_STEER_ANGLE",
-    "make": "Hyundai",
-    "model": "Tucson-Hybrid",
+    "id": "TELLURIDE_STEER_ANGLE_V3",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Steering wheel angle",
     "path": "Control",
     "pid": "21",
     "scaling": "raw/10 clamped to [-3276, 3276]",
     "suggestedMetric": "",
     "unit": "degrees"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 72,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "blsb": true,
-      "len": 16,
-      "max": 65535,
-      "unit": "scalar"
-    },
-    "hdr": "7E0",
-    "id": "TELLURIDE_MIS_2",
-    "make": "Kia",
-    "model": "Telluride",
-    "name": "Misfire count #2",
-    "path": "Engine",
-    "pid": "21",
-    "scaling": "raw clamped to [65535]",
-    "suggestedMetric": "",
-    "unit": "scalar"
   },
   {
     "bitLength": 16,
@@ -69818,9 +69818,9 @@
       "unit": "degrees"
     },
     "hdr": "7D4",
-    "id": "TELLURIDE_STEER_ANGLE_V3",
-    "make": "Kia",
-    "model": "Telluride",
+    "id": "TUCSONHYB_STEER_ANGLE",
+    "make": "Hyundai",
+    "model": "Tucson-Hybrid",
     "name": "Steering wheel angle",
     "path": "Control",
     "pid": "21",
@@ -72827,7 +72827,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 88,
@@ -76368,9 +76368,9 @@
       "unit": "kilometers"
     },
     "hdr": "7C6",
-    "id": "TUCSONHYB_ODO_KM",
+    "id": "TUCSON_ODO_KM",
     "make": "Hyundai",
-    "model": "Tucson-Hybrid",
+    "model": "Tucson",
     "name": "Odometer (Metric)",
     "path": "Trips",
     "pid": "22",
@@ -76384,7 +76384,7 @@
     "cmd": {
       "22": "B002"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -76393,9 +76393,9 @@
       "unit": "kilometers"
     },
     "hdr": "7C6",
-    "id": "TUCSON_ODO_KM",
+    "id": "TUCSONHYB_ODO_KM",
     "make": "Hyundai",
-    "model": "Tucson",
+    "model": "Tucson-Hybrid",
     "name": "Odometer (Metric)",
     "path": "Trips",
     "pid": "22",
@@ -76773,9 +76773,9 @@
       "unit": "miles"
     },
     "hdr": "7C6",
-    "id": "TUCSONHYB_ODO_MI",
+    "id": "TUCSON_ODO_MI",
     "make": "Hyundai",
-    "model": "Tucson-Hybrid",
+    "model": "Tucson",
     "name": "Odometer (Imperial)",
     "path": "Trips",
     "pid": "22",
@@ -76789,7 +76789,7 @@
     "cmd": {
       "22": "B002"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 72,
@@ -76798,9 +76798,9 @@
       "unit": "miles"
     },
     "hdr": "7C6",
-    "id": "TUCSON_ODO_MI",
+    "id": "TUCSONHYB_ODO_MI",
     "make": "Hyundai",
-    "model": "Tucson",
+    "model": "Tucson-Hybrid",
     "name": "Odometer (Imperial)",
     "path": "Trips",
     "pid": "22",
@@ -81480,7 +81480,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 188,
@@ -81555,7 +81555,7 @@
     "cmd": {
       "22": "01A4"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 196,
@@ -106533,31 +106533,6 @@
     "fmt": {
       "bix": 104,
       "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_RR_VSS_V1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 104,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 104,
-      "len": 8,
       "max": 127.5,
       "min": -127.5,
       "sign": true,
@@ -106571,6 +106546,31 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 104,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 104,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_RR_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -106817,7 +106817,7 @@
     "cmd": {
       "21": "A0"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -108316,7 +108316,7 @@
     "cmd": {
       "22": "C101"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 104,
@@ -108540,31 +108540,6 @@
     "fmt": {
       "bix": 112,
       "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_RL_VSS_V1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "len": 8,
       "max": 127.5,
       "min": -127.5,
       "sign": true,
@@ -108578,6 +108553,31 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_RL_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -110389,32 +110389,6 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "TUCSONHYB_TP_RL",
-    "make": "Hyundai",
-    "model": "Tucson-Hybrid",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 112,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 112,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
     "id": "TUCSON_TP_RL",
     "make": "Hyundai",
     "model": "Tucson",
@@ -110449,6 +110423,32 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 112,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 112,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "TUCSONHYB_TP_RL",
+    "make": "Hyundai",
+    "model": "Tucson-Hybrid",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearLeftTirePressure",
     "unit": "psi"
   },
   {
@@ -110508,7 +110508,7 @@
     "cmd": {
       "22": "C101"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 112,
@@ -119555,7 +119555,7 @@
     "cmd": {
       "21": "A0"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 152,
@@ -121246,32 +121246,6 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "TUCSONHYB_TP_RR",
-    "make": "Hyundai",
-    "model": "Tucson-Hybrid",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 152,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 152,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
     "id": "TUCSON_TP_RR",
     "make": "Hyundai",
     "model": "Tucson",
@@ -121306,6 +121280,32 @@
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
     "suggestedMetric": "rearLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 152,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 152,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "TUCSONHYB_TP_RR",
+    "make": "Hyundai",
+    "model": "Tucson-Hybrid",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "rearRightTirePressure",
     "unit": "psi"
   },
   {
@@ -121415,7 +121415,7 @@
     "cmd": {
       "22": "E004"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 152,
@@ -124908,9 +124908,9 @@
       "unit": "fahrenheit"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_ATF_TEMP",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "TELLURIDE_ATF_TEMP",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Transmission fluid temperature",
     "path": "Transmission",
     "pid": "22",
@@ -124924,7 +124924,7 @@
     "cmd": {
       "22": "21A0"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -124936,9 +124936,9 @@
       "unit": "fahrenheit"
     },
     "hdr": "7E0",
-    "id": "TELLURIDE_ATF_TEMP",
-    "make": "Kia",
-    "model": "Telluride",
+    "id": "VELOSTER_ATF_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
     "name": "Transmission fluid temperature",
     "path": "Transmission",
     "pid": "22",
@@ -133104,9 +133104,9 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "TUCSONHYB_EOT",
-    "make": "Hyundai",
-    "model": "Tucson-Hybrid",
+    "id": "TELLURIDE_EOT_V2",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -133131,9 +133131,9 @@
       "unit": "celsius"
     },
     "hdr": "7E0",
-    "id": "TELLURIDE_EOT_V2",
-    "make": "Kia",
-    "model": "Telluride",
+    "id": "TUCSONHYB_EOT",
+    "make": "Hyundai",
+    "model": "Tucson-Hybrid",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -156291,7 +156291,7 @@
     "cmd": {
       "21": "18"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "add": -48,
@@ -166357,32 +166357,6 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "TUCSONHYB_TP_FL",
-    "make": "Hyundai",
-    "model": "Tucson-Hybrid",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 32,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 32,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
     "id": "TUCSON_TP_FL",
     "make": "Hyundai",
     "model": "Tucson",
@@ -166413,6 +166387,32 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Tire pressure front left",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 32,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 32,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "TUCSONHYB_TP_FL",
+    "make": "Hyundai",
+    "model": "Tucson-Hybrid",
+    "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -172506,7 +172506,7 @@
     "cmd": {
       "21": "01"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -172762,7 +172762,7 @@
     "cmd": {
       "21": "A0"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 48,
@@ -174490,31 +174490,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 48,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_FL_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 48,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "add": -50,
       "bix": 48,
       "len": 8,
@@ -174530,6 +174505,31 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 48,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 48,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_FL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -177372,31 +177372,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 56,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_FR_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 56,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "add": -50,
       "bix": 56,
       "len": 8,
@@ -177412,6 +177387,31 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 56,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 56,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_FR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -179573,31 +179573,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 64,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_RL_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 64,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "add": -50,
       "bix": 64,
       "len": 8,
@@ -179613,6 +179588,31 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 64,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 64,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_RL_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -181995,31 +181995,6 @@
     "debug": false,
     "eax": "",
     "fmt": {
-      "bix": 72,
-      "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "KONA_TIRE_RR_VSS",
-    "make": "Hyundai",
-    "model": "Kona",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "4000"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
       "add": -50,
       "bix": 72,
       "len": 8,
@@ -182035,6 +182010,31 @@
     "path": "Movement",
     "pid": "22",
     "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "4000"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "KONA_TIRE_RR_VSS",
+    "make": "Hyundai",
+    "model": "Kona",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -182380,32 +182380,6 @@
       "unit": "psi"
     },
     "hdr": "7A0",
-    "id": "TUCSONHYB_TP_FR",
-    "make": "Hyundai",
-    "model": "Tucson-Hybrid",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/5 clamped to [51]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "psi"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 72,
-    "cmd": {
-      "22": "C00B"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 72,
-      "div": 5,
-      "len": 8,
-      "max": 51,
-      "unit": "psi"
-    },
-    "hdr": "7A0",
     "id": "TUCSON_TP_FR",
     "make": "Hyundai",
     "model": "Tucson",
@@ -182436,6 +182410,32 @@
     "make": "Hyundai",
     "model": "Veloster",
     "name": "Tire pressure front right",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/5 clamped to [51]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "psi"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 72,
+    "cmd": {
+      "22": "C00B"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 72,
+      "div": 5,
+      "len": 8,
+      "max": 51,
+      "unit": "psi"
+    },
+    "hdr": "7A0",
+    "id": "TUCSONHYB_TP_FR",
+    "make": "Hyundai",
+    "model": "Tucson-Hybrid",
+    "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
     "scaling": "raw/5 clamped to [51]",
@@ -191662,31 +191662,6 @@
     "fmt": {
       "bix": 88,
       "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_FL_VSS_V1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 88,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 88,
-      "len": 8,
       "max": 127.5,
       "min": -127.5,
       "sign": true,
@@ -191700,6 +191675,31 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 88,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 88,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_FL_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -193360,7 +193360,7 @@
     "cmd": {
       "22": "C101"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 88,
@@ -193444,31 +193444,6 @@
     "fmt": {
       "bix": 96,
       "len": 8,
-      "max": 255,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7D1",
-    "id": "FORTE_TIRE_FR_VSS_V1",
-    "make": "Kia",
-    "model": "Forte",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 96,
-    "cmd": {
-      "21": "01"
-    },
-    "debug": true,
-    "eax": "",
-    "fmt": {
-      "bix": 96,
-      "len": 8,
       "max": 127.5,
       "min": -127.5,
       "sign": true,
@@ -193482,6 +193457,31 @@
     "path": "Movement",
     "pid": "21",
     "scaling": "raw clamped to [-127.5, 127.5]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 96,
+    "cmd": {
+      "21": "01"
+    },
+    "debug": false,
+    "eax": "",
+    "fmt": {
+      "bix": 96,
+      "len": 8,
+      "max": 255,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7D1",
+    "id": "FORTE_TIRE_FR_VSS_V1",
+    "make": "Kia",
+    "model": "Forte",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw clamped to [255]",
     "suggestedMetric": "",
     "unit": "kilometersPerHour"
   },
@@ -195319,7 +195319,7 @@
     "cmd": {
       "22": "C101"
     },
-    "debug": true,
+    "debug": false,
     "eax": "",
     "fmt": {
       "bix": 96,
