@@ -390,9 +390,9 @@
       }
     },
     "hdr": "726",
-    "id": "EDGE_EXTERIOR_LIGHT_STATE",
+    "id": "FOCUS_EXTERIOR_LIGHT_STATE",
     "make": "Ford",
-    "model": "Edge",
+    "model": "Focus",
     "name": "Focus Exterior Lighting State",
     "path": "Lights",
     "pid": "22",
@@ -406,7 +406,7 @@
     "cmd": {
       "22": "407E"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 0,
@@ -423,39 +423,15 @@
       }
     },
     "hdr": "726",
-    "id": "FOCUS_EXTERIOR_LIGHT_STATE",
+    "id": "EDGE_EXTERIOR_LIGHT_STATE",
     "make": "Ford",
-    "model": "Focus",
+    "model": "Edge",
     "name": "Focus Exterior Lighting State",
     "path": "Lights",
     "pid": "22",
     "scaling": "Mapped values: {'0': {'description': '0', 'value': '0'}, '216': {'description': '1', 'value': '1'}}",
     "suggestedMetric": "",
     "unit": ""
-  },
-  {
-    "bitLength": 1,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "C154"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 1,
-      "max": 1,
-      "unit": "noyes"
-    },
-    "hdr": "726",
-    "id": "EDGE_HOOD_OPEN",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "Hood Ajar?",
-    "path": "Doors",
-    "pid": "22",
-    "scaling": "raw clamped to [1]",
-    "suggestedMetric": "",
-    "unit": "noyes"
   },
   {
     "bitLength": 1,
@@ -474,6 +450,30 @@
     "id": "FOCUS_HOOD_OPEN",
     "make": "Ford",
     "model": "Focus",
+    "name": "Hood Ajar?",
+    "path": "Doors",
+    "pid": "22",
+    "scaling": "raw clamped to [1]",
+    "suggestedMetric": "",
+    "unit": "noyes"
+  },
+  {
+    "bitLength": 1,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "C154"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 1,
+      "max": 1,
+      "unit": "noyes"
+    },
+    "hdr": "726",
+    "id": "EDGE_HOOD_OPEN",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Hood Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -771,9 +771,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "EDGE_TRUNK_OPEN",
+    "id": "FOCUS_TRUNK_OPEN",
     "make": "Ford",
-    "model": "Edge",
+    "model": "Focus",
     "name": "Trunk Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -787,7 +787,7 @@
     "cmd": {
       "22": "C150"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 11,
@@ -796,9 +796,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "FOCUS_TRUNK_OPEN",
+    "id": "EDGE_TRUNK_OPEN",
     "make": "Ford",
-    "model": "Focus",
+    "model": "Edge",
     "name": "Trunk Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -937,9 +937,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "EDGE_RRD_OPEN",
+    "id": "FOCUS_RRD_OPEN",
     "make": "Ford",
-    "model": "Edge",
+    "model": "Focus",
     "name": "Rear Right Door Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -953,7 +953,7 @@
     "cmd": {
       "22": "C150"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 12,
@@ -962,9 +962,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "FOCUS_RRD_OPEN",
+    "id": "EDGE_RRD_OPEN",
     "make": "Ford",
-    "model": "Focus",
+    "model": "Edge",
     "name": "Rear Right Door Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -1112,9 +1112,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "EDGE_RLD_OPEN",
+    "id": "FOCUS_RLD_OPEN",
     "make": "Ford",
-    "model": "Edge",
+    "model": "Focus",
     "name": "Rear Left Door Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -1128,7 +1128,7 @@
     "cmd": {
       "22": "C150"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 13,
@@ -1137,9 +1137,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "FOCUS_RLD_OPEN",
+    "id": "EDGE_RLD_OPEN",
     "make": "Ford",
-    "model": "Focus",
+    "model": "Edge",
     "name": "Rear Left Door Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -1863,9 +1863,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "EDGE_DRIVER_DOOR_OPEN",
+    "id": "FOCUS_DRIVER_DOOR_OPEN",
     "make": "Ford",
-    "model": "Edge",
+    "model": "Focus",
     "name": "Driver Door Ajar",
     "path": "Doors",
     "pid": "22",
@@ -1879,7 +1879,7 @@
     "cmd": {
       "22": "C150"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 16,
@@ -1888,9 +1888,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "FOCUS_DRIVER_DOOR_OPEN",
+    "id": "EDGE_DRIVER_DOOR_OPEN",
     "make": "Ford",
-    "model": "Focus",
+    "model": "Edge",
     "name": "Driver Door Ajar",
     "path": "Doors",
     "pid": "22",
@@ -1963,9 +1963,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "EDGE_PASSENGER_DOOR_OPEN",
+    "id": "FOCUS_PASSENGER_DOOR_OPEN",
     "make": "Ford",
-    "model": "Edge",
+    "model": "Focus",
     "name": "Passenger Door Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -1979,7 +1979,7 @@
     "cmd": {
       "22": "C150"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 17,
@@ -1988,9 +1988,9 @@
       "unit": "noyes"
     },
     "hdr": "726",
-    "id": "FOCUS_PASSENGER_DOOR_OPEN",
+    "id": "EDGE_PASSENGER_DOOR_OPEN",
     "make": "Ford",
-    "model": "Focus",
+    "model": "Edge",
     "name": "Passenger Door Ajar?",
     "path": "Doors",
     "pid": "22",
@@ -6165,9 +6165,9 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "CX5_FAN3_SW",
+    "id": "MX5_FAN3_SW",
     "make": "Mazda",
-    "model": "CX-5",
+    "model": "MX-5",
     "name": "Cooling fan relay control",
     "path": "Engine",
     "pid": "22",
@@ -6181,7 +6181,7 @@
     "cmd": {
       "22": "0967"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 5,
@@ -6190,9 +6190,9 @@
       "unit": "offon"
     },
     "hdr": "7E0",
-    "id": "MX5_FAN3_SW",
+    "id": "CX5_FAN3_SW",
     "make": "Mazda",
-    "model": "MX-5",
+    "model": "CX-5",
     "name": "Cooling fan relay control",
     "path": "Engine",
     "pid": "22",
@@ -15851,9 +15851,9 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "CX5_MAP_V",
+    "id": "MX5_MAP_V",
     "make": "Mazda",
-    "model": "CX-5",
+    "model": "MX-5",
     "name": "Manifold absolute pressure voltage",
     "path": "Engine",
     "pid": "22",
@@ -15867,7 +15867,7 @@
     "cmd": {
       "22": "0900"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 1000,
@@ -15876,9 +15876,9 @@
       "unit": "volts"
     },
     "hdr": "7E0",
-    "id": "MX5_MAP_V",
+    "id": "CX5_MAP_V",
     "make": "Mazda",
-    "model": "MX-5",
+    "model": "CX-5",
     "name": "Manifold absolute pressure voltage",
     "path": "Engine",
     "pid": "22",
@@ -19987,7 +19987,7 @@
     "cmd": {
       "22": "116A"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -20827,9 +20827,9 @@
       "unit": "centimeters"
     },
     "hdr": "7E0",
-    "id": "SQ5_OIL_MAX",
-    "make": "Audi",
-    "model": "SQ5",
+    "id": "TIGUAN_OIL_MAX",
+    "make": "Volkswagen",
+    "model": "Tiguan",
     "name": "Oil level (max)",
     "path": "Fluids",
     "pid": "22",
@@ -20843,7 +20843,7 @@
     "cmd": {
       "22": "11C4"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 250,
@@ -20852,9 +20852,9 @@
       "unit": "centimeters"
     },
     "hdr": "7E0",
-    "id": "TIGUAN_OIL_MAX",
-    "make": "Volkswagen",
-    "model": "Tiguan",
+    "id": "SQ5_OIL_MAX",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Oil level (max)",
     "path": "Fluids",
     "pid": "22",
@@ -21027,9 +21027,9 @@
       "unit": "centimeters"
     },
     "hdr": "7E0",
-    "id": "SQ5_OIL_MIN",
-    "make": "Audi",
-    "model": "SQ5",
+    "id": "TIGUAN_OIL_MIN",
+    "make": "Volkswagen",
+    "model": "Tiguan",
     "name": "Oil level (min)",
     "path": "Fluids",
     "pid": "22",
@@ -21043,7 +21043,7 @@
     "cmd": {
       "22": "11C5"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 250,
@@ -21052,9 +21052,9 @@
       "unit": "centimeters"
     },
     "hdr": "7E0",
-    "id": "TIGUAN_OIL_MIN",
-    "make": "Volkswagen",
-    "model": "Tiguan",
+    "id": "SQ5_OIL_MIN",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Oil level (min)",
     "path": "Fluids",
     "pid": "22",
@@ -22111,33 +22111,6 @@
       "unit": "fahrenheit"
     },
     "hdr": "701",
-    "id": "GRCOROLLA_TF2_CONV",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Transmission Fluid Post-Converter Temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
-    "suggestedMetric": "",
-    "unit": "fahrenheit"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "1628"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 16,
-      "max": 350,
-      "min": -40,
-      "mul": 0.00703125,
-      "unit": "fahrenheit"
-    },
-    "hdr": "701",
     "id": "IS_TF2_CONV",
     "make": "Lexus",
     "model": "IS",
@@ -22222,6 +22195,33 @@
     "id": "DAIHATSU_TF2_CONV",
     "make": "Daihatsu",
     "model": "",
+    "name": "Transmission Fluid Post-Converter Temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw*0.00703125 +-40 clamped to [-40, 350]",
+    "suggestedMetric": "",
+    "unit": "fahrenheit"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "1628"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 16,
+      "max": 350,
+      "min": -40,
+      "mul": 0.00703125,
+      "unit": "fahrenheit"
+    },
+    "hdr": "701",
+    "id": "GRCOROLLA_TF2_CONV",
+    "make": "Toyota",
+    "model": "GR-Corolla",
     "name": "Transmission Fluid Post-Converter Temperature",
     "path": "Engine",
     "pid": "22",
@@ -24393,30 +24393,6 @@
       "unit": "kilometers"
     },
     "hdr": "714",
-    "id": "A6_RANGE",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Range remaining",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "fuelRange",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2294"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 16,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
     "id": "AMAROK_RANGE",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -24481,7 +24457,7 @@
     "cmd": {
       "22": "2294"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -24489,9 +24465,9 @@
       "unit": "kilometers"
     },
     "hdr": "714",
-    "id": "SQ5_RANGE",
+    "id": "A6_RANGE",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Range remaining",
     "path": "Trips",
     "pid": "22",
@@ -24516,6 +24492,30 @@
     "id": "GOLF_RANGE",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Range remaining",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "fuelRange",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2294"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 16,
+      "max": 255,
+      "unit": "kilometers"
+    },
+    "hdr": "714",
+    "id": "SQ5_RANGE",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Range remaining",
     "path": "Trips",
     "pid": "22",
@@ -24565,31 +24565,6 @@
     "id": "A4_FLV",
     "make": "Audi",
     "model": "A4",
-    "name": "Fuel remaining",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/8 clamped to [255]",
-    "suggestedMetric": "fuelTankLevel",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "229A"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 8,
-      "len": 16,
-      "max": 255,
-      "unit": "liters"
-    },
-    "hdr": "714",
-    "id": "A6_FLV",
-    "make": "Audi",
-    "model": "A6",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -24678,7 +24653,7 @@
     "cmd": {
       "22": "229A"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 8,
@@ -24687,9 +24662,9 @@
       "unit": "liters"
     },
     "hdr": "714",
-    "id": "SQ5_FLV",
+    "id": "A6_FLV",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -24715,6 +24690,31 @@
     "id": "GOLF_FLV",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Fuel remaining",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/8 clamped to [255]",
+    "suggestedMetric": "fuelTankLevel",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "229A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 8,
+      "len": 16,
+      "max": 255,
+      "unit": "liters"
+    },
+    "hdr": "714",
+    "id": "SQ5_FLV",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Fuel remaining",
     "path": "Fuel",
     "pid": "22",
@@ -24955,7 +24955,7 @@
     "cmd": {
       "22": "2613"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "div": 10,
@@ -24964,9 +24964,9 @@
       "unit": "celsius"
     },
     "hdr": "714",
-    "id": "SQ5_IAT",
-    "make": "Audi",
-    "model": "SQ5",
+    "id": "GOLF_IAT",
+    "make": "Volkswagen",
+    "model": "Golf",
     "name": "Interior air temperature",
     "path": "Climate",
     "pid": "22",
@@ -24989,9 +24989,9 @@
       "unit": "celsius"
     },
     "hdr": "714",
-    "id": "GOLF_IAT",
-    "make": "Volkswagen",
-    "model": "Golf",
+    "id": "SQ5_IAT",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Interior air temperature",
     "path": "Climate",
     "pid": "22",
@@ -29081,31 +29081,6 @@
       "unit": "percent"
     },
     "hdr": "D01A",
-    "id": "POLESTAR2_SOC",
-    "make": "Polestar",
-    "model": "2",
-    "name": "State of charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4028"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "D01A",
     "id": "XC40_SOC",
     "make": "Volvo",
     "model": "XC40-Recharge",
@@ -29134,6 +29109,31 @@
     "id": "LOTUS_SOC",
     "make": "Lotus",
     "model": "",
+    "name": "State of charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [100]",
+    "suggestedMetric": "",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4028"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "D01A",
+    "id": "POLESTAR2_SOC",
+    "make": "Polestar",
+    "model": "2",
     "name": "State of charge",
     "path": "Battery",
     "pid": "22",
@@ -36640,31 +36640,6 @@
       "unit": "percent"
     },
     "hdr": "7E4",
-    "id": "EDGE_HVBAT_SOC",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "HV battery charge",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/500 clamped to [100]",
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4801"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 500,
-      "len": 16,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E4",
     "id": "F150LIGHTNING_HVBAT_SOC",
     "make": "Ford",
     "model": "F-150-Lightning",
@@ -36693,6 +36668,31 @@
     "id": "MACHE_HVBAT_SOC",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery charge",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/500 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4801"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 500,
+      "len": 16,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_SOC",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery charge",
     "path": "Battery",
     "pid": "22",
@@ -36867,31 +36867,6 @@
       "unit": "volts"
     },
     "hdr": "7E4",
-    "id": "EDGE_HVBAT_V",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "HV battery voltage",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/100 clamped to [655.35]",
-    "suggestedMetric": "",
-    "unit": "volts"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "480D"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 100,
-      "len": 16,
-      "max": 655.35,
-      "unit": "volts"
-    },
-    "hdr": "7E4",
     "id": "F150LIGHTNING_HVBAT_V",
     "make": "Ford",
     "model": "F-150-Lightning",
@@ -36931,27 +36906,26 @@
     "bitLength": 16,
     "bitOffset": 0,
     "cmd": {
-      "22": "4810"
+      "22": "480D"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
-      "div": 200,
+      "div": 100,
       "len": 16,
-      "max": 235926,
-      "mul": 720,
-      "unit": "hours"
+      "max": 655.35,
+      "unit": "volts"
     },
     "hdr": "7E4",
-    "id": "EDGE_HVBAT_AGE",
+    "id": "EDGE_HVBAT_V",
     "make": "Ford",
     "model": "Edge",
-    "name": "HV battery age",
+    "name": "HV battery voltage",
     "path": "Battery",
     "pid": "22",
-    "scaling": "raw*720 /200 clamped to [235926]",
+    "scaling": "raw/100 clamped to [655.35]",
     "suggestedMetric": "",
-    "unit": "hours"
+    "unit": "volts"
   },
   {
     "bitLength": 16,
@@ -36998,6 +36972,32 @@
     "id": "MACHE_HVBAT_AGE",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery age",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw*720 /200 clamped to [235926]",
+    "suggestedMetric": "",
+    "unit": "hours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4810"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 16,
+      "max": 235926,
+      "mul": 720,
+      "unit": "hours"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_AGE",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery age",
     "path": "Battery",
     "pid": "22",
@@ -37358,31 +37358,6 @@
       "unit": "kilowattHours"
     },
     "hdr": "7E4",
-    "id": "EDGE_HVBAT_KWH",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "HV battery energy",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/500 clamped to [131.07]",
-    "suggestedMetric": "",
-    "unit": "kilowattHours"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4848"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 500,
-      "len": 16,
-      "max": 131.07,
-      "unit": "kilowattHours"
-    },
-    "hdr": "7E4",
     "id": "F150LIGHTNING_HVBAT_KWH",
     "make": "Ford",
     "model": "F-150-Lightning",
@@ -37411,6 +37386,31 @@
     "id": "MACHE_HVBAT_KWH",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery energy",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/500 clamped to [131.07]",
+    "suggestedMetric": "",
+    "unit": "kilowattHours"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4848"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 500,
+      "len": 16,
+      "max": 131.07,
+      "unit": "kilowattHours"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_KWH",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery energy",
     "path": "Battery",
     "pid": "22",
@@ -38575,9 +38575,9 @@
       "unit": "offon"
     },
     "hdr": "726",
-    "id": "EDGE_HIGHBEAM_STATUS",
+    "id": "FOCUS_HIGHBEAM_STATUS",
     "make": "Ford",
-    "model": "Edge",
+    "model": "Focus",
     "name": "Highbeam Status",
     "path": "Lights",
     "pid": "22",
@@ -38591,7 +38591,7 @@
     "cmd": {
       "22": "7151"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 16,
@@ -38599,9 +38599,9 @@
       "unit": "offon"
     },
     "hdr": "726",
-    "id": "FOCUS_HIGHBEAM_STATUS",
+    "id": "EDGE_HIGHBEAM_STATUS",
     "make": "Ford",
-    "model": "Focus",
+    "model": "Edge",
     "name": "Highbeam Status",
     "path": "Lights",
     "pid": "22",
@@ -38735,34 +38735,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "764",
-    "id": "EDGE_CC_TGT_VSS",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "Target vehicle speed",
-    "path": "Cruise control",
-    "pid": "22",
-    "scaling": "raw*3.6 /10 clamped to [-736, 736]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "A224"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 10,
-      "len": 16,
-      "max": 736,
-      "min": -736,
-      "mul": 3.6,
-      "sign": true,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "764",
     "id": "F150LIGHTNING_CC_TGT_VSS",
     "make": "Ford",
     "model": "F-150-Lightning",
@@ -38850,6 +38822,34 @@
     "id": "FUSIONENERGI_CC_TGT_VSS",
     "make": "Ford",
     "model": "Fusion-Energi",
+    "name": "Target vehicle speed",
+    "path": "Cruise control",
+    "pid": "22",
+    "scaling": "raw*3.6 /10 clamped to [-736, 736]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "A224"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 10,
+      "len": 16,
+      "max": 736,
+      "min": -736,
+      "mul": 3.6,
+      "sign": true,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "764",
+    "id": "EDGE_CC_TGT_VSS",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Target vehicle speed",
     "path": "Cruise control",
     "pid": "22",
@@ -63731,32 +63731,6 @@
       "unit": "liters"
     },
     "hdr": "714",
-    "id": "A6_FLI_VOL",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Fuel level (volume)",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw/10 clamped to [6553.5]",
-    "suggestedMetric": "",
-    "unit": "liters"
-  },
-  {
-    "bitLength": 16,
-    "bitOffset": 336,
-    "cmd": {
-      "22": "22B0"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 336,
-      "div": 10,
-      "len": 16,
-      "max": 6553.5,
-      "unit": "liters"
-    },
-    "hdr": "714",
     "id": "AMAROK_FLI_VOL",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -63825,7 +63799,7 @@
     "cmd": {
       "22": "22B0"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 336,
@@ -63835,9 +63809,9 @@
       "unit": "liters"
     },
     "hdr": "714",
-    "id": "SQ5_FLI_VOL",
+    "id": "A6_FLI_VOL",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "22",
@@ -63864,6 +63838,32 @@
     "id": "GOLF_FLI_VOL",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Fuel level (volume)",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw/10 clamped to [6553.5]",
+    "suggestedMetric": "",
+    "unit": "liters"
+  },
+  {
+    "bitLength": 16,
+    "bitOffset": 336,
+    "cmd": {
+      "22": "22B0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 336,
+      "div": 10,
+      "len": 16,
+      "max": 6553.5,
+      "unit": "liters"
+    },
+    "hdr": "714",
+    "id": "SQ5_FLI_VOL",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Fuel level (volume)",
     "path": "Fuel",
     "pid": "22",
@@ -75711,30 +75711,6 @@
       "unit": "kilometers"
     },
     "hdr": "714",
-    "id": "A6_ODO_DASH",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Odometer (dash)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 24,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2203"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 24,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "714",
     "id": "AMAROK_ODO_DASH",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -75799,7 +75775,7 @@
     "cmd": {
       "22": "2203"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 24,
@@ -75807,9 +75783,9 @@
       "unit": "kilometers"
     },
     "hdr": "714",
-    "id": "SQ5_ODO_DASH",
+    "id": "A6_ODO_DASH",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Odometer (dash)",
     "path": "Trips",
     "pid": "22",
@@ -75834,6 +75810,30 @@
     "id": "GOLF_ODO_DASH",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Odometer (dash)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 24,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2203"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 24,
+      "max": 255,
+      "unit": "kilometers"
+    },
+    "hdr": "714",
+    "id": "SQ5_ODO_DASH",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Odometer (dash)",
     "path": "Trips",
     "pid": "22",
@@ -79231,30 +79231,6 @@
       "unit": "kilometers"
     },
     "hdr": "7E0",
-    "id": "A6_ODO_2",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Odometer (alternative)",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [4294967295]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "295A"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 32,
-      "max": 4294967295,
-      "unit": "kilometers"
-    },
-    "hdr": "7E0",
     "id": "POLO_ODO_2",
     "make": "Volkswagen",
     "model": "Polo",
@@ -79295,7 +79271,31 @@
     "cmd": {
       "22": "295A"
     },
-    "debug": false,
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 4294967295,
+      "unit": "kilometers"
+    },
+    "hdr": "7E0",
+    "id": "A6_ODO_2",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [4294967295]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "295A"
+    },
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 32,
@@ -79403,30 +79403,6 @@
       "unit": "kilometers"
     },
     "hdr": "710",
-    "id": "A6_ODO",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Odometer",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "odometer",
-    "unit": "kilometers"
-  },
-  {
-    "bitLength": 32,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2A0A"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 32,
-      "max": 255,
-      "unit": "kilometers"
-    },
-    "hdr": "710",
     "id": "AMAROK_ODO_2",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -79499,9 +79475,9 @@
       "unit": "kilometers"
     },
     "hdr": "710",
-    "id": "SQ5_ODO",
+    "id": "SQ7_ODO_3",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "SQ7",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -79515,7 +79491,7 @@
     "cmd": {
       "22": "2A0A"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 32,
@@ -79523,9 +79499,9 @@
       "unit": "kilometers"
     },
     "hdr": "710",
-    "id": "SQ7_ODO_3",
+    "id": "A6_ODO",
     "make": "Audi",
-    "model": "SQ7",
+    "model": "A6",
     "name": "Odometer",
     "path": "Trips",
     "pid": "22",
@@ -79551,6 +79527,30 @@
     "make": "Volkswagen",
     "model": "Golf",
     "name": "Odometer (alternative)",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "odometer",
+    "unit": "kilometers"
+  },
+  {
+    "bitLength": 32,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2A0A"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 32,
+      "max": 255,
+      "unit": "kilometers"
+    },
+    "hdr": "710",
+    "id": "SQ5_ODO",
+    "make": "Audi",
+    "model": "SQ5",
+    "name": "Odometer",
     "path": "Trips",
     "pid": "22",
     "scaling": "raw clamped to [255]",
@@ -85535,32 +85535,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "GRCOROLLA_TIRE_FR_SPD",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Front right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
     "id": "IS300_TIRE_FR_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -85750,6 +85724,32 @@
     "id": "DAIHATSU_TIRE_FR_SPD",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "GRCOROLLA_TIRE_FR_SPD",
+    "make": "Toyota",
+    "model": "GR-Corolla",
     "name": "Front right wheel speed",
     "path": "Movement",
     "pid": "21",
@@ -87068,38 +87068,6 @@
       }
     },
     "hdr": "7D0",
-    "id": "GRCOROLLA_PARKING_BRAKE",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Parking Brake",
-    "path": "Control",
-    "pid": "21",
-    "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
-    "suggestedMetric": "",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "21": "62"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "0": {
-          "description": "",
-          "value": "Off"
-        },
-        "2": {
-          "description": "",
-          "value": "On"
-        }
-      }
-    },
-    "hdr": "7D0",
     "id": "RAV4HYBRID_PARKING_BRAKE",
     "make": "Toyota",
     "model": "RAV4-Hybrid",
@@ -87409,6 +87377,38 @@
     "fmt": {
       "len": 8,
       "map": {
+        "0": {
+          "description": "",
+          "value": "Off"
+        },
+        "2": {
+          "description": "",
+          "value": "On"
+        }
+      }
+    },
+    "hdr": "7D0",
+    "id": "GRCOROLLA_PARKING_BRAKE",
+    "make": "Toyota",
+    "model": "GR-Corolla",
+    "name": "Parking Brake",
+    "path": "Control",
+    "pid": "21",
+    "scaling": "Mapped values: {'0': {'description': '', 'value': 'Off'}, '2': {'description': '', 'value': 'On'}}",
+    "suggestedMetric": "",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "21": "62"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
         "1": {
           "description": "",
           "value": "Off"
@@ -87648,7 +87648,7 @@
     "cmd": {
       "22": "0005"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -87808,32 +87808,6 @@
       "mul": 100,
       "unit": "percent"
     },
-    "hdr": "7A2",
-    "id": "FORESTER_FLI",
-    "make": "Subaru",
-    "model": "Forester",
-    "name": "Fuel level",
-    "path": "Fuel",
-    "pid": "22",
-    "scaling": "raw*100 /255 clamped to [100]",
-    "suggestedMetric": "",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "002F"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 255,
-      "len": 8,
-      "max": 100,
-      "mul": 100,
-      "unit": "percent"
-    },
     "hdr": "DA11",
     "id": "CORVETTE_FLI",
     "make": "Chevrolet",
@@ -87869,6 +87843,32 @@
     "pid": "22",
     "scaling": "raw*100 /255 clamped to [255]",
     "suggestedMetric": "fuelTankLevel",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "002F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 255,
+      "len": 8,
+      "max": 100,
+      "mul": 100,
+      "unit": "percent"
+    },
+    "hdr": "7A2",
+    "id": "FORESTER_FLI",
+    "make": "Subaru",
+    "model": "Forester",
+    "name": "Fuel level",
+    "path": "Fuel",
+    "pid": "22",
+    "scaling": "raw*100 /255 clamped to [100]",
+    "suggestedMetric": "",
     "unit": "percent"
   },
   {
@@ -92217,7 +92217,7 @@
     "cmd": {
       "22": "10E7"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -92372,7 +92372,7 @@
     "cmd": {
       "22": "1149"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -92486,7 +92486,7 @@
     "cmd": {
       "22": "1155"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -92850,7 +92850,7 @@
     "cmd": {
       "22": "1310"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -93392,9 +93392,9 @@
       "unit": "fahrenheit"
     },
     "hdr": "7E1",
-    "id": "CX5_TRANS_T_V5",
+    "id": "MX5_TRANS_T_V5",
     "make": "Mazda",
-    "model": "CX-5",
+    "model": "MX-5",
     "name": "Transmission temperature v5",
     "path": "Transmission",
     "pid": "22",
@@ -93408,7 +93408,7 @@
     "cmd": {
       "22": "17B3"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -57,
@@ -93420,9 +93420,9 @@
       "unit": "fahrenheit"
     },
     "hdr": "7E1",
-    "id": "MX5_TRANS_T_V5",
+    "id": "CX5_TRANS_T_V5",
     "make": "Mazda",
-    "model": "MX-5",
+    "model": "CX-5",
     "name": "Transmission temperature v5",
     "path": "Transmission",
     "pid": "22",
@@ -97691,31 +97691,6 @@
       "unit": "scalar"
     },
     "hdr": "714",
-    "id": "A6_EOT",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-58 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "202F"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "714",
     "id": "AMAROK_EOT",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -97769,31 +97744,6 @@
     "id": "RS3_EOT",
     "make": "Audi",
     "model": "RS-3",
-    "name": "Engine oil temperature",
-    "path": "Engine",
-    "pid": "22",
-    "scaling": "raw+-58 clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "202F"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -58,
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "714",
-    "id": "SQ5_EOT",
-    "make": "Audi",
-    "model": "SQ5",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -97890,9 +97840,59 @@
       "unit": "scalar"
     },
     "hdr": "714",
+    "id": "A6_EOT",
+    "make": "Audi",
+    "model": "A6",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "714",
     "id": "GOLF_EOT",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Engine oil temperature",
+    "path": "Engine",
+    "pid": "22",
+    "scaling": "raw+-58 clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "202F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -58,
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "714",
+    "id": "SQ5_EOT",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Engine oil temperature",
     "path": "Engine",
     "pid": "22",
@@ -98420,30 +98420,6 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "A6_CRSH_FRONT",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Crashes, front",
-    "path": "Trips",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2353"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
     "id": "AMAROK_CRSH_FRONT",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -98532,7 +98508,7 @@
     "cmd": {
       "22": "2353"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -98540,9 +98516,9 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "SQ5_CRSH_FRONT",
+    "id": "A6_CRSH_FRONT",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Crashes, front",
     "path": "Trips",
     "pid": "22",
@@ -98567,6 +98543,30 @@
     "id": "GOLF_CRSH_FRONT",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Crashes, front",
+    "path": "Trips",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2353"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "SQ5_CRSH_FRONT",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Crashes, front",
     "path": "Trips",
     "pid": "22",
@@ -98639,30 +98639,6 @@
     "id": "A4_CRASH_CNT_DRVR",
     "make": "Audi",
     "model": "A4",
-    "name": "Crashes, driver side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2354"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "A6_CRASH_CNT_DRVR",
-    "make": "Audi",
-    "model": "A6",
     "name": "Crashes, driver side",
     "path": "Stats",
     "pid": "22",
@@ -98796,7 +98772,7 @@
     "cmd": {
       "22": "2354"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -98804,9 +98780,9 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "SQ5_CRASH_CNT_DRVR",
+    "id": "A6_CRASH_CNT_DRVR",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Crashes, driver side",
     "path": "Stats",
     "pid": "22",
@@ -98831,6 +98807,30 @@
     "id": "GOLF_CRASH_CNT_DRVR",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Crashes, driver side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2354"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "SQ5_CRASH_CNT_DRVR",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Crashes, driver side",
     "path": "Stats",
     "pid": "22",
@@ -98903,30 +98903,6 @@
     "id": "A4_CRASH_CNT_PSNGR",
     "make": "Audi",
     "model": "A4",
-    "name": "Crashes, passenger side",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2355"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "A6_CRASH_CNT_PSNGR",
-    "make": "Audi",
-    "model": "A6",
     "name": "Crashes, passenger side",
     "path": "Stats",
     "pid": "22",
@@ -99060,7 +99036,7 @@
     "cmd": {
       "22": "2355"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -99068,9 +99044,9 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "SQ5_CRASH_CNT_PSNGR",
+    "id": "A6_CRASH_CNT_PSNGR",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Crashes, passenger side",
     "path": "Stats",
     "pid": "22",
@@ -99095,6 +99071,30 @@
     "id": "GOLF_CRASH_CNT_PSNGR",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Crashes, passenger side",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2355"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "SQ5_CRASH_CNT_PSNGR",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Crashes, passenger side",
     "path": "Stats",
     "pid": "22",
@@ -99167,30 +99167,6 @@
     "id": "A4_CRASH_CNT_REAR",
     "make": "Audi",
     "model": "A4",
-    "name": "Crashes, rear",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2356"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "A6_CRASH_CNT_REAR",
-    "make": "Audi",
-    "model": "A6",
     "name": "Crashes, rear",
     "path": "Stats",
     "pid": "22",
@@ -99324,7 +99300,7 @@
     "cmd": {
       "22": "2356"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -99332,9 +99308,9 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "SQ5_CRASH_CNT_REAR",
+    "id": "A6_CRASH_CNT_REAR",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Crashes, rear",
     "path": "Stats",
     "pid": "22",
@@ -99359,6 +99335,30 @@
     "id": "GOLF_CRASH_CNT_REAR",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Crashes, rear",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2356"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "SQ5_CRASH_CNT_REAR",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Crashes, rear",
     "path": "Stats",
     "pid": "22",
@@ -99431,30 +99431,6 @@
     "id": "A4_CRASH_CNT_ROLL",
     "make": "Audi",
     "model": "A4",
-    "name": "Crashes, rollover",
-    "path": "Stats",
-    "pid": "22",
-    "scaling": "raw clamped to [255]",
-    "suggestedMetric": "",
-    "unit": "scalar"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "2357"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 255,
-      "unit": "scalar"
-    },
-    "hdr": "715",
-    "id": "A6_CRASH_CNT_ROLL",
-    "make": "Audi",
-    "model": "A6",
     "name": "Crashes, rollover",
     "path": "Stats",
     "pid": "22",
@@ -99588,7 +99564,7 @@
     "cmd": {
       "22": "2357"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -99596,9 +99572,9 @@
       "unit": "scalar"
     },
     "hdr": "715",
-    "id": "SQ5_CRASH_CNT_ROLL",
+    "id": "A6_CRASH_CNT_ROLL",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Crashes, rollover",
     "path": "Stats",
     "pid": "22",
@@ -99623,6 +99599,30 @@
     "id": "GOLF_CRASH_CNT_ROLL",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Crashes, rollover",
+    "path": "Stats",
+    "pid": "22",
+    "scaling": "raw clamped to [255]",
+    "suggestedMetric": "",
+    "unit": "scalar"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "2357"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 255,
+      "unit": "scalar"
+    },
+    "hdr": "715",
+    "id": "SQ5_CRASH_CNT_ROLL",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Crashes, rollover",
     "path": "Stats",
     "pid": "22",
@@ -99872,33 +99872,6 @@
       "unit": "celsius"
     },
     "hdr": "746",
-    "id": "A6_WNDSHLD_TEMP",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Windshield temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "27C4"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -38.8,
-      "len": 8,
-      "max": 108.08,
-      "min": -38.8,
-      "mul": 0.576,
-      "unit": "celsius"
-    },
-    "hdr": "746",
     "id": "AMAROK_WNDSHLD_TEMP",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -99996,7 +99969,7 @@
     "cmd": {
       "22": "27C4"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -38.8,
@@ -100007,9 +99980,9 @@
       "unit": "celsius"
     },
     "hdr": "746",
-    "id": "SQ5_WNDSHLD_TEMP",
+    "id": "A6_WNDSHLD_TEMP",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Windshield temperature",
     "path": "Climate",
     "pid": "22",
@@ -100037,6 +100010,33 @@
     "id": "GOLF_WNDSHLD_TEMP",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Windshield temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw*0.576 +-38.8 clamped to [-38.8, 108.08]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "27C4"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -38.8,
+      "len": 8,
+      "max": 108.08,
+      "min": -38.8,
+      "mul": 0.576,
+      "unit": "celsius"
+    },
+    "hdr": "746",
+    "id": "SQ5_WNDSHLD_TEMP",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Windshield temperature",
     "path": "Climate",
     "pid": "22",
@@ -101211,33 +101211,6 @@
       "unit": "degrees"
     },
     "hdr": "760",
-    "id": "F150LIGHTNING_STEER_ANGLE",
-    "make": "Ford",
-    "model": "F-150-Lightning",
-    "name": "Steering wheel angle",
-    "path": "Control",
-    "pid": "22",
-    "scaling": "raw*6.25 clamped to [-790, 790]",
-    "suggestedMetric": "",
-    "unit": "degrees"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "3201"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "max": 790,
-      "min": -790,
-      "mul": 6.25,
-      "sign": true,
-      "unit": "degrees"
-    },
-    "hdr": "760",
     "id": "FOCUS_STEER_ANGLE",
     "make": "Ford",
     "model": "Focus",
@@ -101268,6 +101241,33 @@
     "id": "FUSIONENERGI_STEER_ANGLE",
     "make": "Ford",
     "model": "Fusion-Energi",
+    "name": "Steering wheel angle",
+    "path": "Control",
+    "pid": "22",
+    "scaling": "raw*6.25 clamped to [-790, 790]",
+    "suggestedMetric": "",
+    "unit": "degrees"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "3201"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "max": 790,
+      "min": -790,
+      "mul": 6.25,
+      "sign": true,
+      "unit": "degrees"
+    },
+    "hdr": "760",
+    "id": "F150LIGHTNING_STEER_ANGLE",
+    "make": "Ford",
+    "model": "F-150-Lightning",
     "name": "Steering wheel angle",
     "path": "Control",
     "pid": "22",
@@ -101833,32 +101833,6 @@
       "unit": "celsius"
     },
     "hdr": "7E4",
-    "id": "EDGE_HVBAT_T",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "HV battery temperature",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw+-50 clamped to [-50, 205]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4800"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -50,
-      "len": 8,
-      "max": 205,
-      "min": -50,
-      "unit": "celsius"
-    },
-    "hdr": "7E4",
     "id": "F150LIGHTNING_HVBAT_T",
     "make": "Ford",
     "model": "F-150-Lightning",
@@ -101888,6 +101862,32 @@
     "id": "MACHE_HVBAT_T",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery temperature",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw+-50 clamped to [-50, 205]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4800"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -50,
+      "len": 8,
+      "max": 205,
+      "min": -50,
+      "unit": "celsius"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_T",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery temperature",
     "path": "Battery",
     "pid": "22",
@@ -102068,31 +102068,6 @@
       "unit": "percent"
     },
     "hdr": "7E4",
-    "id": "EDGE_HVBAT_SOC_DISP",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "HV battery charge (displayed)",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 clamped to [100]",
-    "suggestedMetric": "stateOfCharge",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "4845"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 2,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E4",
     "id": "F150LIGHTNING_HVBAT_SOC_DISP",
     "make": "Ford",
     "model": "F-150-Lightning",
@@ -102121,6 +102096,31 @@
     "id": "MACHE_HVBAT_SOC_DISP",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery charge (displayed)",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "stateOfCharge",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "4845"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_SOC_DISP",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery charge (displayed)",
     "path": "Battery",
     "pid": "22",
@@ -102252,66 +102252,6 @@
       }
     },
     "hdr": "7E4",
-    "id": "EDGE_CHRG_STATE",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "Charging state",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "Mapped values: {'0': {'description': 'Not ready', 'value': 'NOT_READY'}, '1': {'description': 'Ready', 'value': 'READY'}, '2': {'description': 'Fault', 'value': 'FAULT'}, '3': {'description': 'Wait Check', 'value': 'WAIT'}, '4': {'description': 'Pre-condition', 'value': 'PRE_COND'}, '5': {'description': 'Charging', 'value': 'CHARGING'}, '6': {'description': 'Done', 'value': 'DONE'}, '7': {'description': 'External Charger', 'value': 'EXT'}, '8': {'description': 'Initializing', 'value': 'INIT'}}",
-    "suggestedMetric": "isCharging",
-    "unit": ""
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "484F"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "len": 8,
-      "map": {
-        "0": {
-          "description": "Not ready",
-          "value": "NOT_READY"
-        },
-        "1": {
-          "description": "Ready",
-          "value": "READY"
-        },
-        "2": {
-          "description": "Fault",
-          "value": "FAULT"
-        },
-        "3": {
-          "description": "Wait Check",
-          "value": "WAIT"
-        },
-        "4": {
-          "description": "Pre-condition",
-          "value": "PRE_COND"
-        },
-        "5": {
-          "description": "Charging",
-          "value": "CHARGING"
-        },
-        "6": {
-          "description": "Done",
-          "value": "DONE"
-        },
-        "7": {
-          "description": "External Charger",
-          "value": "EXT"
-        },
-        "8": {
-          "description": "Initializing",
-          "value": "INIT"
-        }
-      }
-    },
-    "hdr": "7E4",
     "id": "F150LIGHTNING_CHRG_STATE",
     "make": "Ford",
     "model": "F-150-Lightning",
@@ -102375,6 +102315,66 @@
     "id": "MACHE_CHRG_STATE",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "Charging state",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "Mapped values: {'0': {'description': 'Not ready', 'value': 'NOT_READY'}, '1': {'description': 'Ready', 'value': 'READY'}, '2': {'description': 'Fault', 'value': 'FAULT'}, '3': {'description': 'Wait Check', 'value': 'WAIT'}, '4': {'description': 'Pre-condition', 'value': 'PRE_COND'}, '5': {'description': 'Charging', 'value': 'CHARGING'}, '6': {'description': 'Done', 'value': 'DONE'}, '7': {'description': 'External Charger', 'value': 'EXT'}, '8': {'description': 'Initializing', 'value': 'INIT'}}",
+    "suggestedMetric": "isCharging",
+    "unit": ""
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "484F"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "len": 8,
+      "map": {
+        "0": {
+          "description": "Not ready",
+          "value": "NOT_READY"
+        },
+        "1": {
+          "description": "Ready",
+          "value": "READY"
+        },
+        "2": {
+          "description": "Fault",
+          "value": "FAULT"
+        },
+        "3": {
+          "description": "Wait Check",
+          "value": "WAIT"
+        },
+        "4": {
+          "description": "Pre-condition",
+          "value": "PRE_COND"
+        },
+        "5": {
+          "description": "Charging",
+          "value": "CHARGING"
+        },
+        "6": {
+          "description": "Done",
+          "value": "DONE"
+        },
+        "7": {
+          "description": "External Charger",
+          "value": "EXT"
+        },
+        "8": {
+          "description": "Initializing",
+          "value": "INIT"
+        }
+      }
+    },
+    "hdr": "7E4",
+    "id": "EDGE_CHRG_STATE",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Charging state",
     "path": "Battery",
     "pid": "22",
@@ -103082,31 +103082,6 @@
       "unit": "percent"
     },
     "hdr": "7E4",
-    "id": "EDGE_HVBAT_SOH",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "HV battery state of health",
-    "path": "Battery",
-    "pid": "22",
-    "scaling": "raw/2 clamped to [100]",
-    "suggestedMetric": "stateOfHealth",
-    "unit": "percent"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "490C"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "div": 2,
-      "len": 8,
-      "max": 100,
-      "unit": "percent"
-    },
-    "hdr": "7E4",
     "id": "F150LIGHTNING_HVBAT_SOH",
     "make": "Ford",
     "model": "F-150-Lightning",
@@ -103135,6 +103110,31 @@
     "id": "MACHE_HVBAT_SOH",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "HV battery state of health",
+    "path": "Battery",
+    "pid": "22",
+    "scaling": "raw/2 clamped to [100]",
+    "suggestedMetric": "stateOfHealth",
+    "unit": "percent"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "490C"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "div": 2,
+      "len": 8,
+      "max": 100,
+      "unit": "percent"
+    },
+    "hdr": "7E4",
+    "id": "EDGE_HVBAT_SOH",
+    "make": "Ford",
+    "model": "Edge",
     "name": "HV battery state of health",
     "path": "Battery",
     "pid": "22",
@@ -104710,9 +104710,9 @@
       }
     },
     "hdr": "726",
-    "id": "EDGE_CENTRAL_LOCK_STATUS",
+    "id": "FOCUS_CENTRAL_LOCK_STATUS",
     "make": "Ford",
-    "model": "Edge",
+    "model": "Focus",
     "name": "Lock Status",
     "path": "Doors",
     "pid": "22",
@@ -104726,7 +104726,7 @@
     "cmd": {
       "22": "C259"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -104742,9 +104742,9 @@
       }
     },
     "hdr": "726",
-    "id": "FOCUS_CENTRAL_LOCK_STATUS",
+    "id": "EDGE_CENTRAL_LOCK_STATUS",
     "make": "Ford",
-    "model": "Focus",
+    "model": "Edge",
     "name": "Lock Status",
     "path": "Doors",
     "pid": "22",
@@ -107574,32 +107574,6 @@
       "unit": "celsius"
     },
     "hdr": "7E2",
-    "id": "EDGE_IAT",
-    "make": "Ford",
-    "model": "Edge",
-    "name": "Interior temperature",
-    "path": "Climate",
-    "pid": "22",
-    "scaling": "raw+-40 clamped to [-40, 215]",
-    "suggestedMetric": "",
-    "unit": "celsius"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 0,
-    "cmd": {
-      "22": "DD04"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "add": -40,
-      "len": 8,
-      "max": 215,
-      "min": -40,
-      "unit": "celsius"
-    },
-    "hdr": "7E2",
     "id": "F150LIGHTNING_IAT",
     "make": "Ford",
     "model": "F-150-Lightning",
@@ -107666,9 +107640,9 @@
     "bitLength": 8,
     "bitOffset": 0,
     "cmd": {
-      "22": "DD05"
+      "22": "DD04"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -107678,10 +107652,10 @@
       "unit": "celsius"
     },
     "hdr": "7E2",
-    "id": "EDGE_AAT",
+    "id": "EDGE_IAT",
     "make": "Ford",
     "model": "Edge",
-    "name": "Exterior temperature",
+    "name": "Interior temperature",
     "path": "Climate",
     "pid": "22",
     "scaling": "raw+-40 clamped to [-40, 215]",
@@ -107759,6 +107733,32 @@
     "id": "MACHE_AAT",
     "make": "Ford",
     "model": "Mustang-Mach-E",
+    "name": "Exterior temperature",
+    "path": "Climate",
+    "pid": "22",
+    "scaling": "raw+-40 clamped to [-40, 215]",
+    "suggestedMetric": "",
+    "unit": "celsius"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 0,
+    "cmd": {
+      "22": "DD05"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "add": -40,
+      "len": 8,
+      "max": 215,
+      "min": -40,
+      "unit": "celsius"
+    },
+    "hdr": "7E2",
+    "id": "EDGE_AAT",
+    "make": "Ford",
+    "model": "Edge",
     "name": "Exterior temperature",
     "path": "Climate",
     "pid": "22",
@@ -108457,7 +108457,7 @@
     "cmd": {
       "22": "F45C"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "len": 8,
@@ -123890,33 +123890,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "GRCOROLLA_TIRE_RR_SPD",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Rear right wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 16,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 16,
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
     "id": "IS300_TIRE_RR_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -124113,6 +124086,33 @@
     "id": "DAIHATSU_TIRE_RR_SPD",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear right wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 16,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 16,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "GRCOROLLA_TIRE_RR_SPD",
+    "make": "Toyota",
+    "model": "GR-Corolla",
     "name": "Rear right wheel speed",
     "path": "Movement",
     "pid": "21",
@@ -126957,7 +126957,7 @@
     "cmd": {
       "22": "21A0"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -40,
@@ -126969,9 +126969,9 @@
       "unit": "fahrenheit"
     },
     "hdr": "7E0",
-    "id": "VELOSTER_ATF_TEMP",
-    "make": "Hyundai",
-    "model": "Veloster",
+    "id": "TELLURIDE_ATF_TEMP",
+    "make": "Kia",
+    "model": "Telluride",
     "name": "Transmission fluid temperature",
     "path": "Transmission",
     "pid": "22",
@@ -126997,9 +126997,9 @@
       "unit": "fahrenheit"
     },
     "hdr": "7E0",
-    "id": "TELLURIDE_ATF_TEMP",
-    "make": "Kia",
-    "model": "Telluride",
+    "id": "VELOSTER_ATF_TEMP",
+    "make": "Hyundai",
+    "model": "Veloster",
     "name": "Transmission fluid temperature",
     "path": "Transmission",
     "pid": "22",
@@ -146252,33 +146252,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "GRCOROLLA_TIRE_RL_SPD",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Rear left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 24,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 24,
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
     "id": "IS300_TIRE_RL_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -146475,6 +146448,33 @@
     "id": "DAIHATSU_TIRE_RL_SPD",
     "make": "Daihatsu",
     "model": "",
+    "name": "Rear left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 24,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 24,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "GRCOROLLA_TIRE_RL_SPD",
+    "make": "Toyota",
+    "model": "GR-Corolla",
     "name": "Rear left wheel speed",
     "path": "Movement",
     "pid": "21",
@@ -158379,7 +158379,7 @@
     "cmd": {
       "21": "18"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "add": -48,
@@ -171166,32 +171166,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "A6_TP_FR",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Front right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A0"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "AMAROK_TP_FR",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -171260,7 +171234,7 @@
     "cmd": {
       "22": "18A0"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 40,
@@ -171270,9 +171244,9 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "SQ5_TP_FR",
+    "id": "A6_TP_FR",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -171299,6 +171273,32 @@
     "id": "GOLF_TP_FR",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Front right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A0"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "SQ5_TP_FR",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Front right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -171402,32 +171402,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "A6_TP_FL",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Front left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "frontLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A1"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "AMAROK_TP_FL",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -171496,7 +171470,7 @@
     "cmd": {
       "22": "18A1"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 40,
@@ -171506,9 +171480,9 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "SQ5_TP_FL",
+    "id": "A6_TP_FL",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -171535,6 +171509,32 @@
     "id": "GOLF_TP_FL",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Front left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "frontLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A1"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "SQ5_TP_FL",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Front left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -171638,32 +171638,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "A6_TP_RL",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Rear left tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearLeftTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A2"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "AMAROK_TP_RL",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -171732,7 +171706,7 @@
     "cmd": {
       "22": "18A2"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 40,
@@ -171742,9 +171716,9 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "SQ5_TP_RL",
+    "id": "A6_TP_RL",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -171771,6 +171745,32 @@
     "id": "GOLF_TP_RL",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Rear left tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearLeftTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A2"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "SQ5_TP_RL",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Rear left tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -171874,32 +171874,6 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "A6_TP_RR",
-    "make": "Audi",
-    "model": "A6",
-    "name": "Rear right tire pressure",
-    "path": "Tires",
-    "pid": "22",
-    "scaling": "raw/40 clamped to [6.375]",
-    "suggestedMetric": "rearRightTirePressure",
-    "unit": "bars"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 40,
-    "cmd": {
-      "22": "18A3"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 40,
-      "div": 40,
-      "len": 8,
-      "max": 6.375,
-      "unit": "bars"
-    },
-    "hdr": "70B",
     "id": "AMAROK_TP_RR",
     "make": "Volkswagen",
     "model": "Amarok",
@@ -171968,7 +171942,7 @@
     "cmd": {
       "22": "18A3"
     },
-    "debug": false,
+    "debug": true,
     "eax": "",
     "fmt": {
       "bix": 40,
@@ -171978,9 +171952,9 @@
       "unit": "bars"
     },
     "hdr": "70B",
-    "id": "SQ5_TP_RR",
+    "id": "A6_TP_RR",
     "make": "Audi",
-    "model": "SQ5",
+    "model": "A6",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -172007,6 +171981,32 @@
     "id": "GOLF_TP_RR",
     "make": "Volkswagen",
     "model": "Golf",
+    "name": "Rear right tire pressure",
+    "path": "Tires",
+    "pid": "22",
+    "scaling": "raw/40 clamped to [6.375]",
+    "suggestedMetric": "rearRightTirePressure",
+    "unit": "bars"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 40,
+    "cmd": {
+      "22": "18A3"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 40,
+      "div": 40,
+      "len": 8,
+      "max": 6.375,
+      "unit": "bars"
+    },
+    "hdr": "70B",
+    "id": "SQ5_TP_RR",
+    "make": "Audi",
+    "model": "SQ5",
     "name": "Rear right tire pressure",
     "path": "Tires",
     "pid": "22",
@@ -185187,33 +185187,6 @@
       "unit": "kilometersPerHour"
     },
     "hdr": "7B0",
-    "id": "GRCOROLLA_TIRE_FL_SPD",
-    "make": "Toyota",
-    "model": "GR-Corolla",
-    "name": "Front left wheel speed",
-    "path": "Movement",
-    "pid": "21",
-    "scaling": "raw*256 /200 clamped to [326.4]",
-    "suggestedMetric": "",
-    "unit": "kilometersPerHour"
-  },
-  {
-    "bitLength": 8,
-    "bitOffset": 8,
-    "cmd": {
-      "21": "03"
-    },
-    "debug": false,
-    "eax": "",
-    "fmt": {
-      "bix": 8,
-      "div": 200,
-      "len": 8,
-      "max": 326.4,
-      "mul": 256,
-      "unit": "kilometersPerHour"
-    },
-    "hdr": "7B0",
     "id": "IS300_TIRE_FL_SPD",
     "make": "Lexus",
     "model": "IS-300",
@@ -185410,6 +185383,33 @@
     "id": "DAIHATSU_TIRE_FL_SPD",
     "make": "Daihatsu",
     "model": "",
+    "name": "Front left wheel speed",
+    "path": "Movement",
+    "pid": "21",
+    "scaling": "raw*256 /200 clamped to [326.4]",
+    "suggestedMetric": "",
+    "unit": "kilometersPerHour"
+  },
+  {
+    "bitLength": 8,
+    "bitOffset": 8,
+    "cmd": {
+      "21": "03"
+    },
+    "debug": true,
+    "eax": "",
+    "fmt": {
+      "bix": 8,
+      "div": 200,
+      "len": 8,
+      "max": 326.4,
+      "mul": 256,
+      "unit": "kilometersPerHour"
+    },
+    "hdr": "7B0",
+    "id": "GRCOROLLA_TIRE_FL_SPD",
+    "make": "Toyota",
+    "model": "GR-Corolla",
     "name": "Front left wheel speed",
     "path": "Movement",
     "pid": "21",
