@@ -104,18 +104,11 @@ jobs:
       - name: Commit and push changes
         if: steps.check_changes.outputs.changed == 'true'
         run: |
-          # Run validation script one more time to ensure consistent formatting
+          # Run validation script on matrix_data.json to ensure consistent formatting
           python scripts/validate_json.py --input public/data/matrix_data.json --output public/data/matrix_data.json
 
-          # Validate model years data if it exists
-          if [ -f public/data/model_years_data.json ]; then
-            python scripts/validate_json.py --input public/data/model_years_data.json --output public/data/model_years_data.json
-          fi
-
-          # Validate generations data if it exists
-          if [ -f public/data/generations_data.json ]; then
-            python scripts/validate_json.py --input public/data/generations_data.json --output public/data/generations_data.json
-          fi
+          # Note: model_years_data.json and generations_data.json are already properly formatted
+          # by extract_data.py (minified, sorted), so no validation needed
 
           git add public/data/matrix_data.json public/data/model_years_data.json public/data/generations_data.json
           git commit -m "Update matrix data from OBDb repositories [skip ci]"
