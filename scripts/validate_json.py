@@ -63,9 +63,9 @@ def validate_and_normalize_json(input_path, output_path, schema_path=None):
     # Add metadata as a comment at the top of the file
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # Write the sorted data with metadata
+    # Write the sorted data (minified for serving)
     with open(output_path, 'w') as f:
-        json.dump(sorted_data, f, indent=2)
+        json.dump(sorted_data, f, separators=(',', ':'))
 
     print(f"✅ Normalized JSON written to {output_path}")
     return True

@@ -5,6 +5,7 @@ import shutil
 import subprocess
 import argparse
 import re
+import yaml
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import multiprocessing
@@ -343,6 +344,42 @@ def load_model_year_data(repo_dir, make, model):
         print(f"Error loading model year data for {make}-{model}: {e}")
         return None
 
+def load_generations_data(repo_dir, repo_name):
+    """Load generation data from generations.yml or generations.yaml if it exists."""
+    # Check for both .yml and .yaml extensions
+    generations_path = repo_dir / 'generations.yml'
+    if not generations_path.exists():
+        generations_path = repo_dir / 'generations.yaml'
+        if not generations_path.exists():
+            return None
+
+    try:
+        with open(generations_path) as f:
+            data = yaml.safe_load(f)
+
+        # Validate structure
+        if not data or 'generations' not in data:
+            return None
+
+        # Transform to match output format (convert snake_case to camelCase)
+        generations = []
+        for gen in data['generations']:
+            generation = {
+                'name': gen.get('name', ''),
+                'startYear': gen.get('start_year'),
+                'endYear': gen.get('end_year'),  # Can be null
+                'description': gen.get('description', '')
+            }
+            generations.append(generation)
+
+        return {
+            'repo': repo_name,
+            'generations': generations
+        }
+    except Exception as e:
+        print(f"Error loading generations data for {repo_name}: {e}")
+        return None
+
 def calculate_hash(data):
     """Calculate a hash from the sorted and normalized data for easy comparison."""
     # Sort the data deterministically
@@ -355,9 +392,11 @@ def extract_data(workspace_dir, output_dir, force=False):
     """Extract matrix data from all repositories."""
     matrix_data = []
     model_year_data = []
+    generations_data = {}
     temp_output_path = Path(output_dir) / 'matrix_data_temp.json'
     final_output_path = Path(output_dir) / 'matrix_data.json'
     model_years_output_path = Path(output_dir) / 'model_years_data.json'
+    generations_output_path = Path(output_dir) / 'generations_data.json'
 
     # Process each repository
     for repo_dir in Path(workspace_dir).iterdir():
@@ -409,15 +448,21 @@ def extract_data(workspace_dir, output_dir, force=False):
             model_year_data.append(my_data)
             print(f"  Found model year PID data for {make} {model}")
 
+        # Check for generations data
+        gen_data = load_generations_data(repo_dir, repo_dir.name)
+        if gen_data:
+            generations_data[gen_data['repo']] = gen_data['generations']
+            print(f"  Found generations data for {repo_dir.name}")
+
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
 
     # Check if we need to update the file
     current_hash = calculate_hash(matrix_data)
 
-    # Write to temporary file first
+    # Write to temporary file first (minified for serving)
     with open(temp_output_path, 'w') as f:
-        json.dump(matrix_data, f, indent=2, sort_keys=True)
+        json.dump(matrix_data, f, sort_keys=True, separators=(',', ':'))
 
     # Run the validation and normalization process
     print("Running validation and normalization...")
@@ -443,26 +488,21 @@ def extract_data(workspace_dir, output_dir, force=False):
             # Fall back to raw output if validation fails
             shutil.move(temp_output_path, final_output_path)
 
-    # Save model year data with custom formatting
+    # Save model year data (minified for serving)
     if model_year_data:
         with open(model_years_output_path, 'w') as f:
-            # Use custom JSON encoder to format arrays on single lines
-            class CompactJSONEncoder(json.JSONEncoder):
-                def encode(self, obj):
-                    if isinstance(obj, list) and all(isinstance(x, str) for x in obj):
-                        # For arrays of strings (PID arrays), keep them on one line
-                        parts = [self.encode(item) for item in obj]
-                        return "[" + ", ".join(parts) + "]"
-                    return super().encode(obj)
-
-            json_str = json.dumps(model_year_data, cls=CompactJSONEncoder, indent=2, sort_keys=True)
-            # Further compact ECU command arrays by regex replacing multi-line arrays
-            import re
-            json_str = re.sub(r'\[\n\s+("[0-9A-F]{2}",?\s*)+\n\s+\]', lambda m: m.group(0).replace('\n', ' ').replace('  ', ''), json_str)
-            f.write(json_str)
+            json.dump(model_year_data, f, sort_keys=True, separators=(',', ':'))
         print(f"Saved model year data to {model_years_output_path} ({len(model_year_data)} vehicles)")
     else:
         print("No model year data found.")
+
+    # Save generations data (minified for serving)
+    if generations_data:
+        with open(generations_output_path, 'w') as f:
+            json.dump(generations_data, f, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+        print(f"Saved generations data to {generations_output_path} ({len(generations_data)} vehicles)")
+    else:
+        print("No generations data found.")
 
     print(f"Saved matrix data to {final_output_path} ({len(matrix_data)} parameters total)")
 

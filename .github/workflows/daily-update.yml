@@ -29,7 +29,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install jsonschema
+          pip install jsonschema pyyaml
 
       - name: Install GitHub CLI
         run: |
@@ -87,11 +87,11 @@ jobs:
           }
 
           # Check if there are changes to commit
-          if git diff --quiet public/data/matrix_data.json; then
-            echo "No changes detected in matrix_data.json"
+          if git diff --quiet public/data/matrix_data.json public/data/model_years_data.json public/data/generations_data.json; then
+            echo "No changes detected in data files"
             echo "changed=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected in matrix_data.json"
+            echo "Changes detected in data files"
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
@@ -107,7 +107,17 @@ jobs:
           # Run validation script one more time to ensure consistent formatting
           python scripts/validate_json.py --input public/data/matrix_data.json --output public/data/matrix_data.json
 
-          git add public/data/matrix_data.json
+          # Validate model years data if it exists
+          if [ -f public/data/model_years_data.json ]; then
+            python scripts/validate_json.py --input public/data/model_years_data.json --output public/data/model_years_data.json
+          fi
+
+          # Validate generations data if it exists
+          if [ -f public/data/generations_data.json ]; then
+            python scripts/validate_json.py --input public/data/generations_data.json --output public/data/generations_data.json
+          fi
+
+          git add public/data/matrix_data.json public/data/model_years_data.json public/data/generations_data.json
           git commit -m "Update matrix data from OBDb repositories [skip ci]"
           git push
           echo "commit_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
