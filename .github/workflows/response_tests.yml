@@ -1,0 +1,65 @@
+name: Response tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run tests in devcontainer
+        id: test
+        uses: devcontainers/ci@v0.3
+        with:
+          imageName: ghcr.io/obdb/devcontainer
+          push: never
+          env: |
+            GITHUB_SERVER_URL=${{ github.server_url }}
+            GITHUB_REPOSITORY=${{ github.repository }}
+            GITHUB_SHA=${{ github.sha }}
+            GITHUB_RUN_ID=${{ github.run_id }}
+          runCmd: |
+            pytest tests/ --ignore=tests/schemas -xvs -n auto > ./test-output.txt 2>&1
+            TEST_EXIT=$?
+            cat ./test-output.txt
+
+            # Format results for PR comment with all required arguments
+            /usr/local/bin/format-test-results.sh \
+              test-output.txt \
+              $TEST_EXIT \
+              "$GITHUB_SERVER_URL" \
+              "$GITHUB_REPOSITORY" \
+              "$GITHUB_SHA" \
+              "$GITHUB_RUN_ID" \
+              > ./test-results.md || true
+
+            # Exit with the actual test result
+            exit $TEST_EXIT
+
+      - name: Set test results output
+        if: always() && github.event_name == 'pull_request'
+        run: |
+          if [ -f test-results.md ]; then
+            {
+              echo 'TEST_RESULTS<<EOFMARKER'
+              cat test-results.md
+              echo 'EOFMARKER'
+            } >> $GITHUB_ENV
+          fi
+
+      - name: Comment test results on PR
+        if: always() && github.event_name == 'pull_request'
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: ${{ env.TEST_RESULTS }}
+          comment_tag: response-tests
