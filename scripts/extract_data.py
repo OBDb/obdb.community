@@ -380,6 +380,25 @@ def load_generations_data(repo_dir, repo_name):
         print(f"Error loading generations data for {repo_name}: {e}")
         return None
 
+def load_ecu_entries(signalset_path, years=None):
+    """Load the `ecu` list a signalset uses to name the module behind each address."""
+    try:
+        with open(signalset_path) as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"Error loading ECU entries from {signalset_path}: {e}")
+        return []
+
+    entries = []
+    for ecu in data.get('ecu', []):
+        if not ecu.get('hdr') or not ecu.get('type'):
+            continue
+        entry = {key: ecu[key] for key in ('hdr', 'eax', 'rax', 'type', 'filter') if key in ecu}
+        if years:
+            entry['modelYears'] = list(years)
+        entries.append(entry)
+    return entries
+
 def calculate_hash(data):
     """Calculate a hash from the sorted and normalized data for easy comparison."""
     # Sort the data deterministically
@@ -393,10 +412,12 @@ def extract_data(workspace_dir, output_dir, force=False):
     matrix_data = []
     model_year_data = []
     generations_data = {}
+    ecu_data = {}
     temp_output_path = Path(output_dir) / 'matrix_data_temp.json'
     final_output_path = Path(output_dir) / 'matrix_data.json'
     model_years_output_path = Path(output_dir) / 'model_years_data.json'
     generations_output_path = Path(output_dir) / 'generations_data.json'
+    ecu_output_path = Path(output_dir) / 'ecu_data.json'
 
     # Process each repository
     for repo_dir in Path(workspace_dir).iterdir():
@@ -441,6 +462,11 @@ def extract_data(workspace_dir, output_dir, force=False):
             # Parse the signalset file
             parameters = parse_signalset(signalset_path, make, model, years)
             matrix_data.extend(parameters)
+
+            for entry in load_ecu_entries(signalset_path, years):
+                entries = ecu_data.setdefault(repo_dir.name, [])
+                if entry not in entries:
+                    entries.append(entry)
 
         # Check for model year PID support data
         my_data = load_model_year_data(repo_dir, make, model)
@@ -503,6 +529,16 @@ def extract_data(workspace_dir, output_dir, force=False):
         print(f"Saved generations data to {generations_output_path} ({len(generations_data)} vehicles)")
     else:
         print("No generations data found.")
+
+    # Save ECU data (minified for serving), keyed by repo like generations data
+    if ecu_data:
+        for entries in ecu_data.values():
+            entries.sort(key=lambda e: json.dumps(e, sort_keys=True))
+        with open(ecu_output_path, 'w') as f:
+            json.dump(ecu_data, f, sort_keys=True, separators=(',', ':'))
+        print(f"Saved ECU data to {ecu_output_path} ({len(ecu_data)} vehicles)")
+    else:
+        print("No ECU data found.")
 
     print(f"Saved matrix data to {final_output_path} ({len(matrix_data)} parameters total)")
 
